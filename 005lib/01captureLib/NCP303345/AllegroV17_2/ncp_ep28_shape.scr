@@ -1,0 +1,38 @@
+# NCP303345MNTWG Pin 28 stepped PGND land from CASE 483BV
+version 17.2.048
+setwindow pcb
+new
+newdrawfillin "ncp_ep28_shape.dra" "Shape Symbol"
+generaledit
+prmed
+setwindow Form.prmedit
+FORM prmedit design
+FORM prmedit units Millimeter
+FORM prmedit accuracy 4
+FORM prmedit size Other
+FORM prmedit width 6
+FORM prmedit height 4
+FORM prmedit Apply
+FORM prmedit x -3
+FORM prmedit y -2
+FORM prmedit done
+setwindow pcb
+shape add
+setwindow Form.mini
+FORM mini class ETCH
+FORM mini subclass TOP
+FORM mini dyns_fill_type Static solid
+FORM mini dyns_grid None
+FORM mini dyns_lock_mode Line
+setwindow pcb
+pick -1.76 0.71
+pick -0.51 0.71
+pick -0.51 0.58
+pick 1.76 0.58
+pick 1.76 -0.71
+pick -1.76 -0.71
+pick -1.76 0.71
+done
+zoom fit
+save
+exit

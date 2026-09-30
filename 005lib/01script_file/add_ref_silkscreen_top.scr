@@ -1,0 +1,36 @@
+# Allegro script
+#	file: D:/001DIY/005lib/01script_file/add_ref_silkscreen_top.scr
+#	start time: Sat Sep 02 16:14:16 2023
+#	Version: 17.2-2016 S045 (3732898) Windows SPB 64-bit Edition
+version 17.2
+
+setwindow pcb
+trapsize 904
+add text 
+setwindow form.mini
+FORM mini class PACKAGE GEOMETRY 
+FORM mini class REF DES 
+setwindow pcb
+setwindow pcb
+prepopup 0.0208 -0.0335
+setwindow pcb
+pick 0.0000 0.0000
+text ref
+done 
+setwindow pcb
+add text 
+setwindow form.mini
+FORM mini class COMPONENT VALUE 
+FORM mini subclass SILKSCREEN_TOP 
+setwindow pcb
+setwindow pcb
+prepopup 3.8722 -1.3535
+setwindow pcb
+pick 0.0000 0.0000
+text value
+done 
+setwindow pcb
+save 
+fillin yes 
+
+#	stop time: Sat Sep 02 16:15:16 2023

@@ -1,0 +1,21 @@
+# Allegro script
+#	file: D:/001DIY/005lib/01script_file/pdf.scr
+#	start time: Sat Jun 18 16:19:28 2022
+#	Version: 17.2-2016 S045 (3732898) Windows SPB 64-bit Edition
+version 17.2
+
+setwindow pcb
+trapsize 7521
+placementedit
+pdf out 
+setwindow form.pdf_out
+FORM pdf_out pdftree 'MULTISEL YES' PDFTOP 
+FORM pdf_out pdftree  PDFTOP 
+FORM pdf_out pdftree 'MULTISEL YES' PDFBOTTOM 
+FORM pdf_out pdftree  PDFBOTTOM 
+FORM pdf_out export  
+FORM pdf_out cancel  
+setwindow pcb
+placementedit 
+
+#	stop time: Sat Jun 18 16:19:53 2022

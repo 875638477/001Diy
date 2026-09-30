@@ -1,0 +1,102 @@
+# Allegro script — Gerber / NC for a MIL design.
+# Same flow as gerber.scr (mm). Physical sizes match: 1 mm = 39.3700787 mil.
+# mm integer places 5 covers 99999 mm = 3936968.5 mil, so mil integer places = 7.
+version 17.2
+
+setwindow pcb
+trapsize 163067
+placementedit
+ncdrill customization 
+placementedit 
+setwindow form.nc_drillcustomization
+FORM nc_drillcustomization auto_symbols  
+fillin yes 
+FORM nc_drillcustomization merge  
+fillin yes 
+FORM nc_drillcustomization done  
+fillin yes 
+setwindow pcb
+ncdrill legend 
+setwindow form.nc_drilllegend
+FORM nc_drilllegend done  
+setwindow pcb
+pick grid -11811.0236 -11811.0236
+placementedit 
+save 
+fillin yes 
+placementedit 
+nctape_full 
+setwindow form.nc_drill
+FORM nc_drill auto_tool_select YES 
+FORM nc_drill parameters  
+setwindow form.nc_parameters
+FORM nc_parameters suppress_trail_zeroes YES 
+FORM nc_parameters enhanced_format YES 
+FORM nc_parameters integer_places 7 
+FORM nc_parameters done  
+setwindow form.nc_drill
+FORM nc_drill parameters  
+setwindow form.nc_parameters
+FORM nc_parameters done  
+setwindow form.nc_drill
+FORM nc_drill execute  
+FORM nc_drill close  
+setwindow pcb
+placementedit 
+ncroute 
+setwindow form.nc_route
+FORM nc_route execute  
+FORM nc_route parameters  
+setwindow form.nc_parameters
+FORM nc_parameters cancel  
+setwindow form.nc_route
+FORM nc_route close  
+setwindow pcb
+placementedit 
+keepin photo 
+pick grid -39370.0787 39370.0787
+
+trapsize 163067
+setwindow pcb
+roam start
+roam end
+setwindow pcb
+placementedit
+keepin photo 
+pick grid -39370.0787 39370.0787
+pick grid 39370.0787 -39370.0787
+done 
+placementedit 
+save 
+fillin yes 
+placementedit 
+artwork 
+setwindow form.film_control
+FORM film_control general_parameters  
+FORM film_control format_int_places 7 
+FORM film_control film_control  
+FORM film_control select_all  
+FORM film_control filmtree 'MULTISEL NO' DisAll 
+FORM film_control filmtree  DisAll 
+FORM film_control filmtree 'MULTISEL NO' DisBOTTOM 
+FORM film_control filmtree  DisBOTTOM 
+FORM film_control filmtree 'MULTISEL NO' DisTOP 
+FORM film_control filmtree  DisTOP 
+FORM film_control filmtree 'MULTISEL NO' PDFBOTTOM 
+FORM film_control filmtree  PDFBOTTOM 
+FORM film_control filmtree 'MULTISEL NO' PDFTOP 
+FORM film_control filmtree  PDFTOP 
+FORM film_control create  
+fillin yes 
+setwindow pcb
+setwindow text
+close
+setwindow form.film_control
+FORM film_control ok  
+setwindow pcb
+placementedit 
+prepopup 11330.6417 -740.1220
+pick grid 6872.3386 2737.3543
+save 
+fillin yes 
+placementedit 

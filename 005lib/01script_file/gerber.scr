@@ -1,0 +1,105 @@
+# Allegro script
+#	file: D:/011job/001Enabot/05EBO_X/05HW/36EBOXBMS/02pcb/gerber.scr
+#	start time: Wed Jul 27 15:02:43 2022
+#	Version: 17.2-2016 S045 (3732898) Windows SPB 64-bit Edition
+version 17.2
+
+setwindow pcb
+trapsize 163067
+placementedit
+ncdrill customization 
+placementedit 
+setwindow form.nc_drillcustomization
+FORM nc_drillcustomization auto_symbols  
+fillin yes 
+FORM nc_drillcustomization merge  
+fillin yes 
+FORM nc_drillcustomization done  
+fillin yes 
+setwindow pcb
+ncdrill legend 
+setwindow form.nc_drilllegend
+FORM nc_drilllegend done  
+setwindow pcb
+pick grid -300.0000 -300.0000
+placementedit 
+save 
+fillin yes 
+placementedit 
+nctape_full 
+setwindow form.nc_drill
+FORM nc_drill auto_tool_select YES 
+FORM nc_drill parameters  
+setwindow form.nc_parameters
+FORM nc_parameters suppress_trail_zeroes YES 
+FORM nc_parameters enhanced_format YES 
+FORM nc_parameters integer_places 5 
+FORM nc_parameters done  
+setwindow form.nc_drill
+FORM nc_drill parameters  
+setwindow form.nc_parameters
+FORM nc_parameters done  
+setwindow form.nc_drill
+FORM nc_drill execute  
+FORM nc_drill close  
+setwindow pcb
+placementedit 
+ncroute 
+setwindow form.nc_route
+FORM nc_route execute  
+FORM nc_route parameters  
+setwindow form.nc_parameters
+FORM nc_parameters cancel  
+setwindow form.nc_route
+FORM nc_route close  
+setwindow pcb
+placementedit 
+keepin photo 
+pick grid -1000.0000 1000.0000
+
+trapsize 163067
+setwindow pcb
+roam start
+roam end
+setwindow pcb
+placementedit
+keepin photo 
+pick grid -1000.0000 1000.0000
+pick grid 1000.0000 -1000.0000
+done 
+placementedit 
+save 
+fillin yes 
+placementedit 
+artwork 
+setwindow form.film_control
+FORM film_control general_parameters  
+FORM film_control format_int_places 5 
+FORM film_control film_control  
+FORM film_control select_all  
+FORM film_control filmtree 'MULTISEL NO' DisAll 
+FORM film_control filmtree  DisAll 
+FORM film_control filmtree 'MULTISEL NO' DisBOTTOM 
+FORM film_control filmtree  DisBOTTOM 
+FORM film_control filmtree 'MULTISEL NO' DisTOP 
+FORM film_control filmtree  DisTOP 
+FORM film_control filmtree 'MULTISEL NO' PDFBOTTOM 
+FORM film_control filmtree  PDFBOTTOM 
+FORM film_control filmtree 'MULTISEL NO' PDFTOP 
+FORM film_control filmtree  PDFTOP 
+FORM film_control create  
+fillin yes 
+setwindow pcb
+setwindow text
+close
+setwindow form.film_control
+FORM film_control ok  
+setwindow pcb
+placementedit 
+prepopup 287.7983 -18.7991
+pick grid 174.5574 69.5288
+save 
+fillin yes 
+placementedit 
+
+#	stop time: Wed Jul 27 15:04:39 2022

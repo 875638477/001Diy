@@ -1,0 +1,20 @@
+# Allegro script
+#	file: D:/001DIY/005lib/01script_file/reports.scr
+#	start time: Sat Jun 18 16:25:49 2022
+#	Version: 17.2-2016 S045 (3732898) Windows SPB 64-bit Edition
+version 17.2
+
+setwindow pcb
+trapsize 7521
+placementedit
+reports 
+QtSignal StdRep StdRepAvailableReports currentRowChanged 0
+placementedit 
+QtSignal StdRep StdRepAvailableReports currentRowChanged 62
+QtSignal StdRep StdRepAvailableReports itemSelectionChanged ./reports.txt
+QtSignal StdRep StdRepAvailableReports itemDoubleClicked ./reports.txt
+QtSignal StdRep StdRepGenerateButton clicked
+###fillin "menu_cancel"
+###QtSignal StdRep StdRepSelectedReports currentRowChanged 0
+
+#	stop time: Sat Jun 18 16:26:48 2022

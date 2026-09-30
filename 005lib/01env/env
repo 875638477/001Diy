@@ -1,0 +1,174 @@
+source $TELENV
+
+alias ~Z undo
+alias ~N new 
+### Ctrl+O 留给 mil Gerber，见下方 funckey ~O / ~o
+alias ~S save
+
+alias Del delete
+alias F2 change
+### 给选择好的铜皮指定网络
+### alias F3 shape assign net
+alias F4 show measure
+alias F5 redisplay
+alias F6 shape edit
+### 自动捕捉过孔中心（原点）
+funckey F3 "prepopup; pop dyn_option_select 'Snap pick to@:@Via'"
+funckey f3 "prepopup; pop dyn_option_select 'Snap pick to@:@Via'"
+### 更改板框倒角为直角
+funckey F8 replay D:\001DIY\005lib\01script_file\Manufacture_Drafting_Chamfer.scr
+### 移动线段
+alias F9 vertex
+### 给选择好的过孔指定网络
+funckey F10 via assign net
+### 显示板框机械长度
+###funckey F11 replay D:\001DIY\005lib\01script_file\Dimension_Environment.scr
+
+funckey A add connect
+funckey a add connect
+### Shape_Compuse_Shape
+funckey B replay D:\001DIY\005lib\01script_file\Shape_Compuse_Shape.scr
+funckey b replay D:\001DIY\005lib\01script_file\Shape_Compuse_Shape.scr
+funckey C copy
+funckey c copy
+funckey D delay tune
+funckey d delay tune
+### 自动捕抓焊盘的中心：
+funckey E "prepopup; pop dyn_option_select 'Snap pick to@:@Pin'"
+funckey e "prepopup; pop dyn_option_select 'Snap pick to@:@Pin'"
+funckey F advanced mirror
+funckey f mirror
+funckey G define grid 
+funckey g define grid 
+### 自动捕抓线段最近的顶点：
+funckey H "prepopup; pop dyn_option_select 'Snap pick to@:@Segment Vertex'"
+funckey h "prepopup; pop dyn_option_select 'Snap pick to@:@Segment Vertex'"
+### 导入网表
+funckey i replay D:\001DIY\005lib\01script_file\import_netlist.scr
+funckey I replay D:\001DIY\005lib\01script_file\import_netlist.scr
+### 自动捕抓器件的原点：
+funckey J "prepopup; pop dyn_option_select 'Snap pick to@:@Symbol Origin'"
+funckey j "prepopup; pop dyn_option_select 'Snap pick to@:@Symbol Origin'"
+
+### funckey X 
+### funckey x 
+funckey L replay D:\001DIY\005lib\01script_file\add_line_Package.scr
+funckey l replay D:\001DIY\005lib\01script_file\add_line_Board.scr
+funckey M move
+funckey m move
+funckey N rats all
+funckey n rats net
+### gerber：O 为 mm 板，Ctrl+O 为 mil 板（尺寸已按 1mm=39.3700787mil 换算）
+funckey O replay D:\001DIY\005lib\01script_file\gerber.scr
+funckey o replay D:\001DIY\005lib\01script_file\gerber.scr
+funckey ~O replay D:\001DIY\005lib\01script_file\gerber_mil.scr
+funckey ~o replay D:\001DIY\005lib\01script_file\gerber_mil.scr
+### PDF
+funckey P replay D:\001DIY\005lib\01script_file\pdf.scr
+funckey p replay D:\001DIY\005lib\01script_file\pdf.scr
+### 自动捕抓线段的中点：
+funckey Q "prepopup; pop dyn_option_select 'Snap pick to@:@Segment Midpoint'" 
+funckey q "prepopup; pop dyn_option_select 'Snap pick to@:@Segment Midpoint'" 
+### reports
+funckey R replay D:\001DIY\005lib\01script_file\reports.scr
+funckey r replay D:\001DIY\005lib\01script_file\reports.scr
+funckey S slide
+funckey s slide
+funckey T text edit
+funckey t add text 
+funckey U unrats all
+funckey u unrats net
+funckey V color192
+funckey v color192
+### 自动捕抓圆或圆弧的圆心：
+funckey W "prepopup; pop dyn_option_select 'Snap pick to@:@Arc/Circle Center'"
+funckey w "prepopup; pop dyn_option_select 'Snap pick to@:@Arc/Circle Center'"
+
+### 大十字鼠标与小十字鼠标的切换：
+funckey Y  "settoggle pcb_cursor infinite cross;redraw"
+funckey y  "settoggle pcb_cursor infinite cross;redraw"
+### funckey y Dehighlight
+funckey Z replay D:\001DIY\005lib\01script_file\Z_copy_Route_Keepout.scr
+funckey z replay D:\001DIY\005lib\01script_file\Z_copy_Route_Keepin.scr
+funckey + subclass -+
+funckey - subclass --
+### 单独显示蚀刻层: 只用 Ctrl 组合
+funckey tab spin
+funckey ~T replay D:\001DIY\005lib\01script_file\iso_etch_top.scr
+funckey ~t replay D:\001DIY\005lib\01script_file\iso_etch_top.scr
+funckey ~B replay D:\001DIY\005lib\01script_file\iso_etch_bottom.scr
+funckey ~b replay D:\001DIY\005lib\01script_file\iso_etch_bottom.scr
+funckey ~2 replay D:\001DIY\005lib\01script_file\iso_etch_2.scr
+funckey ~3 replay D:\001DIY\005lib\01script_file\iso_etch_3.scr
+funckey ~4 replay D:\001DIY\005lib\01script_file\iso_etch_4.scr
+funckey ~5 replay D:\001DIY\005lib\01script_file\iso_etch_5.scr
+funckey ~6 replay D:\001DIY\005lib\01script_file\iso_etch_6.scr
+funckey ~7 replay D:\001DIY\005lib\01script_file\iso_etch_7.scr
+funckey ~8 replay D:\001DIY\005lib\01script_file\iso_etch_8.scr
+funckey ~9 replay D:\001DIY\005lib\01script_file\iso_etch_9.scr
+funckey ~0 replay D:\001DIY\005lib\01script_file\iso_etch_0.scr
+funckey " " iangle 90
+funckey / iangle 45
+funckey . iangle -1
+funckey , iangle 1
+funckey > iangle -0.1
+funckey < iangle 0.1
+
+### 网格精度0.00001
+funckey 0 replay D:\001DIY\005lib\01script_file\grid-0d0001.scr
+### 网格精度0.01
+funckey 1 replay D:\001DIY\005lib\01script_file\grid-0d01.scr
+### 网格精度0.05
+funckey 2 replay D:\001DIY\005lib\01script_file\grid-0d05.scr
+### 显示3D效果
+# funckey 3 replay D:\001DIY\005lib\01script_file\view_3d.scr
+funckey 3 3D
+### 更改器件的3D模型
+funckey 4 replay D:\001DIY\005lib\01script_file\setup_step_package_mapping.scr
+### 更新所有器件的封装 
+funckey 5 replay D:\001DIY\005lib\01script_file\place_updata_symbols.scr
+### 添加TXTadd_ref_silkscreen_top
+funckey 6 replay D:\001DIY\005lib\01script_file\add_text_ref_value.scr
+### 合并 shape
+funckey 7 replay D:\001DIY\005lib\01script_file\Merge_shape.scr
+###  切割 shape
+funckey 8 replay D:\001DIY\005lib\01script_file\polygon_shape.scr
+###  更改板框倒角1mm
+funckey 9 replay D:\001DIY\005lib\01script_file\Manufacture_Fillet.scr
+
+
+
+### 鼠标滚轮精度
+set buttonfactor = 0.2
+### 自动保存时间
+set autosave_time = 1
+### 默认Gerber创建在当前pcb文件夹里面
+set ads_sdart = Gerber
+### 库路径设置
+set steppath = D:/001DIY/005lib/01_3d_step_lib
+set techpath = D:/001DIY/005lib/01script_file
+set step_mapping_path = D:/001DIY/005lib/01_3d_step_lib/
+set padpath = D:/001DIY/005lib/01Pad_lib/ 
+set psmpath = D:/001DIY/005lib/01Psm_lib/ 
+set step_facet_path = D:/001DIY/005lib/01_3d_step_lib/
+
+### User Preferences section
+### This section is computer generated.
+### Please do not modify to the end of the file.
+### Place your hand edits above this section.
+###
+set infinite_cursor_bug_nt
+set pcb_cursor = cross
+set showmeasure_altunits = millimeters
+set noshow_current_selections
+set hide_heuristic_dialog
+set autosave_dbcheck
+set autosave
+set autosave_name = atuto
+set logic_edit_enabled
+unset netrev_forbid_precision
+unset telskill_notty
+unset telskill_nomsg
+unset telskill
+set ads_sdart = Gerber
+set allegro_etch_length_on

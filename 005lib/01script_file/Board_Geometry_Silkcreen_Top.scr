@@ -1,0 +1,26 @@
+# Allegro script
+#	file: D:/001DIY/005lib/01script_file/Board_Geometry_Silkcreen_Top.scr
+#	start time: Sat Jan 18 17:44:16 2020
+#	Version: 17.2-2016 S045 (3732898) Windows SPB 64-bit Edition
+version 17.2
+
+setwindow pcb
+trapsize 4133
+generaledit
+setwindow form.mini
+FORM mini class COMPONENT VALUE 
+FORM mini class BOARD GEOMETRY 
+FORM mini subclass SILKSCREEN_TOP 
+FORM mini subcolor 1 
+trapsize 7143
+color192 
+generaledit 
+QtSignal CVDLayerSplitter CVDLayersTree itemSelectionChanged Geometry "Board geometry"
+QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
+QtSignal CVDLayerTable CVDLayerTableDelegate clickedBox 23 0
+QtSignal CVDLayerSplitter CVDLayerTable dataChanged 23 0
+QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
+QtSignal ColorVisibilityDialog CVDOkButton clicked
+
+
+#	stop time: Sat Jan 18 17:45:00 2020

@@ -1,0 +1,30 @@
+# Allegro script
+#	file: D:/001DIY/005lib/01script_file/setup_step_package_mapping.scr
+#	start time: Wed Oct 10 17:12:19 2018
+#	Version: 17.0 P011 (v17-0-118F) Windows SPB 64-bit Edition
+version 17.0
+
+setwindow pcb
+trapsize 4307
+placementedit
+pick grid 6.0977 15.4919
+gloss param 
+placementedit 
+setwindow form.glp_main
+FORM glp_main run_eliminate NO 
+FORM glp_main run_eliminate YES 
+FORM glp_main run_smoothing NO 
+FORM glp_main run_smoothing YES 
+FORM glp_main run_centering NO 
+FORM glp_main run_centering YES 
+FORM glp_main run_line_entry NO 
+FORM glp_main run_line_entry YES 
+FORM glp_main gloss  
+setwindow pcb
+gloss execute 
+placementedit 
+save 
+fillin yes 
+placementedit 
+
+#	stop time: Wed Oct 10 17:12:41 2018
