@@ -307,4 +307,3 @@ PC PCIe Host → MT7621DA PCIe Host
 ### Cadence转换
 
 - [Cadence官方PADS到Allegro转换说明](https://community.cadence.com/cadence_blogs_8/b/pcb/posts/customer-support-recommended-working-with-pads-to-allegro-pcb-editor-translator)
-
