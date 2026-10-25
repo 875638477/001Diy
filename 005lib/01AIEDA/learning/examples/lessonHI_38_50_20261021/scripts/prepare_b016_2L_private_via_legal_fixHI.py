@@ -1,0 +1,7 @@
+from pathlib import Path
+import json,runpy,sys,subprocess
+sys.dont_write_bytecode=True
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');d=json.loads((R/'batches/clearance_remaining_2L_b016_tail_cleanup.json').read_text());B=runpy.run_path(str(R/'scripts/scoped_rule_builderHI_v2.py'))['ScopedRuleBuilder'];b=B('2L',R/'inventory/checkpoints/source_2L_b015_DRC_PENDING/base_net_rules.json',prefix='HI_B016_VF');p,w=b.existing_physical_template_at('GPIO_PB15','BOTTOM',[38.5,20.7]);assert p=='HI_JS_P006_2L';b.via_point_permission(b.newname('R'),'GPIO_PB15',[38.5,20.7],'BOTTOM',p);d['constraintOperations']+=b.operations;d['scopeAudit']+=b.audit;d['PB15ExistingViaPermissionRepair']={'nativeFailureEvidence':'logs/clearance_remaining_2L_b016_DRC_PENDING_try10/changed_nets_scoped_drc.txt','actualFailure':'BOTTOM Via List expected L28 only actual HI_VIA026_C052_TENT','onlyDelta':'approvedVias at.02 finite actualcenter pointbox, preserve allcopiedkeys/layers and globalrules','existingTemplate':p,'resolverEvidence':w,'rootAuthorization':'Explicit PB15 BOTTOM only, no expansion elsewhere.'}
+for c in d['postChecks']:
+ if c['type']=='changedNetworks':c['nets']=sorted(set(c['nets'])|{'GPIO_PB1'})
+p=R/'batches/clearance_remaining_2L_b016_tail_cleanup_viafix.json';p.write_text(json.dumps(d,indent=2),encoding='utf8');subprocess.run([sys.executable,str(R/'scripts/prepare_b016_retryHI_v3.py'),'--variant','2L','--try-number','11','--compiler','33','--plan',str(p)],check=True)

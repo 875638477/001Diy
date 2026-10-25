@@ -1,0 +1,1106 @@
+{
+  "status": "SCHEMATIC_INPUT_NOT_NATIVE_PLACEMENT",
+  "components": [
+    {
+      "id": "U_MCU",
+      "ref": "U1",
+      "model": "STM32F103C8T6",
+      "value": "STM32F103C8T6",
+      "mpn": "STM32F103C8T6",
+      "page": "MCU_SUPPLY",
+      "pins": {
+        "1": "V3V3",
+        "2": "GPIO_PC13",
+        "3": "GPIO_PC14",
+        "4": "GPIO_PC15",
+        "5": "OSC_IN",
+        "6": "OSC_OUT",
+        "7": "NRST",
+        "8": "GND",
+        "9": "VDDA",
+        "10": "ADC0",
+        "11": "GPIO_PA1",
+        "12": "GPIO_PA2",
+        "13": "GPIO_PA3",
+        "14": "PA4_SPI_NSS",
+        "15": "PA5_SPI_SCK",
+        "16": "PA6_SPI_MISO",
+        "17": "PA7_SPI_MOSI",
+        "18": "VBUS_PRESENT_N",
+        "19": "GPIO_PB1",
+        "20": "BOOT1",
+        "21": "GPIO_PB10",
+        "22": "GPIO_PB11",
+        "23": "GND",
+        "24": "V3V3",
+        "25": "GPIO_PB12",
+        "26": "GPIO_PB13",
+        "27": "GPIO_PB14",
+        "28": "GPIO_PB15",
+        "29": "USB_ATTACH_N",
+        "30": "PA9_UART_TX",
+        "31": "PA10_UART_RX",
+        "32": "PA11_SHARED",
+        "33": "PA12_SHARED",
+        "34": "SWDIO",
+        "35": "GND",
+        "36": "V3V3",
+        "37": "SWCLK",
+        "38": "GPIO_PA15",
+        "39": "SWO",
+        "40": "GPIO_PB4",
+        "41": "GPIO_PB5",
+        "42": "I2C_SCL",
+        "43": "I2C_SDA",
+        "44": "BOOT0",
+        "45": "GPIO_PB8",
+        "46": "GPIO_PB9",
+        "47": "GND",
+        "48": "V3V3"
+      },
+      "populate": "yes",
+      "properties": {
+        "MODULE_ID": "U_MCU",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "REAL_PART",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": "STM32F103C8T6"
+      }
+    },
+    {
+      "id": "C_VDD24",
+      "ref": "C13",
+      "model": "CAP",
+      "value": "100nF",
+      "mpn": "",
+      "page": "MCU_SUPPLY",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "X7R >=10V; own pin-local return loop at VDD24",
+        "MODULE_ID": "C_VDD24",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "X7R >=10V; own pin-local return loop at VDD24",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "C_VDD36",
+      "ref": "C14",
+      "model": "CAP",
+      "value": "100nF",
+      "mpn": "",
+      "page": "MCU_SUPPLY",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "X7R >=10V; own pin-local return loop at VDD36",
+        "MODULE_ID": "C_VDD36",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "X7R >=10V; own pin-local return loop at VDD36",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "C_VDD48",
+      "ref": "C15",
+      "model": "CAP",
+      "value": "100nF",
+      "mpn": "",
+      "page": "MCU_SUPPLY",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "X7R >=10V; own pin-local return loop at VDD48",
+        "MODULE_ID": "C_VDD48",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "X7R >=10V; own pin-local return loop at VDD48",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "C_MCU_BULK",
+      "ref": "C16",
+      "model": "CAP0805",
+      "value": "10uF",
+      "mpn": "",
+      "page": "MCU_SUPPLY",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "Effective >=4.7uF; at VDD3 pin48 per DS5319 Figure14",
+        "MODULE_ID": "C_MCU_BULK",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "Effective >=4.7uF; at VDD3 pin48 per DS5319 Figure14",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "C_VBAT",
+      "ref": "C17",
+      "model": "CAP",
+      "value": "100nF",
+      "mpn": "",
+      "page": "MCU_SUPPLY",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "No battery; VBAT1 tied to V3V3, local capacitor",
+        "MODULE_ID": "C_VBAT",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "No battery; VBAT1 tied to V3V3, local capacitor",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "R_VDDA_LINK",
+      "ref": "R26",
+      "model": "RES",
+      "value": "0R",
+      "mpn": "",
+      "page": "MCU_SUPPLY",
+      "pins": {
+        "1": "V3V3",
+        "2": "VDDA"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "Default zero-ohm link; no automatic ferrite substitution; continuous GND",
+        "MODULE_ID": "R_VDDA_LINK",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "Default zero-ohm link; no automatic ferrite substitution; continuous GND",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "C_VDDA_HF",
+      "ref": "C18",
+      "model": "CAP",
+      "value": "10nF",
+      "mpn": "",
+      "page": "MCU_SUPPLY",
+      "pins": {
+        "1": "VDDA",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "Local VDDA9/VSSA8 loop; bulk effective>=1uF",
+        "MODULE_ID": "C_VDDA_HF",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "Local VDDA9/VSSA8 loop; bulk effective>=1uF",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "C_VDDA_MID",
+      "ref": "C19",
+      "model": "CAP",
+      "value": "100nF",
+      "mpn": "",
+      "page": "MCU_SUPPLY",
+      "pins": {
+        "1": "VDDA",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "Local VDDA9/VSSA8 loop; bulk effective>=1uF",
+        "MODULE_ID": "C_VDDA_MID",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "Local VDDA9/VSSA8 loop; bulk effective>=1uF",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "C_VDDA_BULK",
+      "ref": "C20",
+      "model": "CAP0805",
+      "value": "2.2uF",
+      "mpn": "",
+      "page": "MCU_SUPPLY",
+      "pins": {
+        "1": "VDDA",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "Local VDDA9/VSSA8 loop; bulk effective>=1uF",
+        "MODULE_ID": "C_VDDA_BULK",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "Local VDDA9/VSSA8 loop; bulk effective>=1uF",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "R_NRST",
+      "ref": "R27",
+      "model": "RES",
+      "value": "10k",
+      "mpn": "",
+      "page": "CLOCK_RESET",
+      "pins": {
+        "1": "V3V3",
+        "2": "NRST"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "External optional pull-up; internal pull-up remains",
+        "MODULE_ID": "R_NRST",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "External optional pull-up; internal pull-up remains",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "C_NRST",
+      "ref": "C21",
+      "model": "CAP",
+      "value": "100nF",
+      "mpn": "",
+      "page": "CLOCK_RESET",
+      "pins": {
+        "1": "NRST",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "Does not guarantee reset release delay; debugger must sink reset",
+        "MODULE_ID": "C_NRST",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "Does not guarantee reset release delay; debugger must sink reset",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "J_RESET",
+      "ref": "J7",
+      "model": "HEADER2",
+      "value": "RESET_SHUNT",
+      "mpn": "",
+      "page": "CLOCK_RESET",
+      "pins": {
+        "1": "NRST",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "Normally open service shunt; >=20us low; not pushbutton footprint",
+        "MODULE_ID": "J_RESET",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "Normally open service shunt; >=20us low; not pushbutton footprint",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "R_BOOT0_PD",
+      "ref": "R28",
+      "model": "RES",
+      "value": "10k",
+      "mpn": "",
+      "page": "CLOCK_RESET",
+      "pins": {
+        "1": "BOOT0",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "MODULE_ID": "R_BOOT0_PD",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "R_BOOT1_PD",
+      "ref": "R29",
+      "model": "RES",
+      "value": "10k",
+      "mpn": "",
+      "page": "CLOCK_RESET",
+      "pins": {
+        "1": "BOOT1",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "MODULE_ID": "R_BOOT1_PD",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "R_BOOT_SERVICE",
+      "ref": "R30",
+      "model": "RES",
+      "value": "1k",
+      "mpn": "",
+      "page": "CLOCK_RESET",
+      "pins": {
+        "1": "V3V3",
+        "2": "BOOT_SERVICE"
+      },
+      "populate": "yes",
+      "properties": {
+        "MODULE_ID": "R_BOOT_SERVICE",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "J_BOOT",
+      "ref": "J8",
+      "model": "HEADER2",
+      "value": "BOOT0_SERVICE",
+      "mpn": "",
+      "page": "CLOCK_RESET",
+      "pins": {
+        "1": "BOOT_SERVICE",
+        "2": "BOOT0"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "Open=flash default; short with BOOT1 low=USART1 ROM loader; no USB ROM DFU",
+        "MODULE_ID": "J_BOOT",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "Open=flash default; short with BOOT1 low=USART1 ROM loader; no USB ROM DFU",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "J_SWD",
+      "ref": "J9",
+      "model": "HEADER6",
+      "value": "SWD_LOCAL_1X6",
+      "mpn": "",
+      "page": "CLOCK_RESET",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND",
+        "3": "SWDIO",
+        "4": "SWCLK",
+        "5": "NRST",
+        "6": "SWO"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "Local labelled 2.54mm header, not standard keyed ARM10; pin1 VTREF output/sense only; no back-power",
+        "MODULE_ID": "J_SWD",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "Local labelled 2.54mm header, not standard keyed ARM10; pin1 VTREF output/sense only; no back-power",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "Y_HSE",
+      "ref": "Y1",
+      "model": "XTAL_ABM3B",
+      "value": "8MHz",
+      "mpn": "ABM3B-8.000MHZ-D2Y-T",
+      "page": "CLOCK_RESET",
+      "pins": {
+        "1": "OSC_IN",
+        "2": "GND",
+        "3": "XTAL_OUT",
+        "4": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "MODULE_ID": "Y_HSE",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "REAL_PART",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": "ABM3B-8.000MHZ-D2Y-T"
+      }
+    },
+    {
+      "id": "R_HSE_SER",
+      "ref": "R31",
+      "model": "RES",
+      "value": "0R",
+      "mpn": "",
+      "page": "CLOCK_RESET",
+      "pins": {
+        "1": "OSC_OUT",
+        "2": "XTAL_OUT"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "Drive-level tuning position; do not raise without startup/drive measurement",
+        "MODULE_ID": "R_HSE_SER",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "Drive-level tuning position; do not raise without startup/drive measurement",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "C_HSE_IN",
+      "ref": "C22",
+      "model": "CAP",
+      "value": "16pF",
+      "mpn": "",
+      "page": "CLOCK_RESET",
+      "pins": {
+        "1": "OSC_IN",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "C0G +/-5%; stray10pF assumption, prototype tuning required",
+        "MODULE_ID": "C_HSE_IN",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "C0G +/-5%; stray10pF assumption, prototype tuning required",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "C_HSE_OUT",
+      "ref": "C23",
+      "model": "CAP",
+      "value": "16pF",
+      "mpn": "",
+      "page": "CLOCK_RESET",
+      "pins": {
+        "1": "XTAL_OUT",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "Same as C_HSE_IN",
+        "MODULE_ID": "C_HSE_OUT",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "Same as C_HSE_IN",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "J_ADC",
+      "ref": "J10",
+      "model": "HEADER2",
+      "value": "ADC_0_TO_3V0",
+      "mpn": "",
+      "page": "ADC_GPIO",
+      "pins": {
+        "1": "ADC_IN",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "Only controlled <=1Hz 0..3.0V source, Rout<=1k, board powered, no hotplug/negative input",
+        "MODULE_ID": "J_ADC",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "Only controlled <=1Hz 0..3.0V source, Rout<=1k, board powered, no hotplug/negative input",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "R_ADC",
+      "ref": "R32",
+      "model": "RES",
+      "value": "1k",
+      "mpn": "",
+      "page": "ADC_GPIO",
+      "pins": {
+        "1": "ADC_IN",
+        "2": "ADC0"
+      },
+      "populate": "yes",
+      "properties": {
+        "MODULE_ID": "R_ADC",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": ""
+      }
+    },
+    {
+      "id": "C_ADC",
+      "ref": "C24",
+      "model": "CAP",
+      "value": "100nF",
+      "mpn": "",
+      "page": "ADC_GPIO",
+      "pins": {
+        "1": "ADC0",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "properties": {
+        "requirements": "X7R >=10V, low-frequency source only; not 100Sps anti-alias filter",
+        "MODULE_ID": "C_ADC",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "SPEC_ONLY_PROCUREMENT_PENDING",
+        "REQUIREMENTS": "X7R >=10V, low-frequency source only; not 100Sps anti-alias filter",
+        "Manufacturer Part Number": ""
+      }
+    }
+  ],
+  "mcu_pin_source": [
+    {
+      "number": 1,
+      "name": "VBAT",
+      "symbol_electrical_type": "POWER",
+      "capture_type": 7,
+      "proposed_net": "3V3",
+      "role": "backup_no_battery",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 2,
+      "name": "PC13-TAMPER-RTC",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PC13",
+      "role": "spare_limited_drive",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 3,
+      "name": "PC14-OSC32_IN",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PC14",
+      "role": "LSE_not_fitted",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 4,
+      "name": "PC15-OSC32_OUT",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PC15",
+      "role": "LSE_not_fitted",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 5,
+      "name": "PD0-OSC_IN",
+      "symbol_electrical_type": "INPUT",
+      "capture_type": 0,
+      "proposed_net": "OSC_IN",
+      "role": "HSE_8MHz",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 6,
+      "name": "PD1-OSC_OUT",
+      "symbol_electrical_type": "OUTPUT",
+      "capture_type": 2,
+      "proposed_net": "OSC_OUT",
+      "role": "HSE_8MHz",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 7,
+      "name": "NRST",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "NRST",
+      "role": "reset_SWD",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 8,
+      "name": "VSSA",
+      "symbol_electrical_type": "POWER",
+      "capture_type": 7,
+      "proposed_net": "GND",
+      "role": "analog_ground",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 9,
+      "name": "VDDA",
+      "symbol_electrical_type": "POWER",
+      "capture_type": 7,
+      "proposed_net": "VDDA_3V3",
+      "role": "analog_supply",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 10,
+      "name": "PA0-WKUP",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "ADC0",
+      "role": "ADC12_IN0",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 11,
+      "name": "PA1",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PA1",
+      "role": "spare",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 12,
+      "name": "PA2",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PA2",
+      "role": "spare_UART2_TX",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 13,
+      "name": "PA3",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PA3",
+      "role": "spare_UART2_RX",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 14,
+      "name": "PA4",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "SPI1_CS_N",
+      "role": "software_chip_select",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 15,
+      "name": "PA5",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "SPI1_SCK",
+      "role": "SPI1_default",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 16,
+      "name": "PA6",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "SPI1_MISO",
+      "role": "SPI1_default",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 17,
+      "name": "PA7",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "SPI1_MOSI",
+      "role": "SPI1_default",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 18,
+      "name": "PB0",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "VBUS_PRESENT_N",
+      "role": "digital_sense_from_transistor",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 19,
+      "name": "PB1",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PB1",
+      "role": "spare_ADC9",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 20,
+      "name": "PB2-BOOT1",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "BOOT1",
+      "role": "boot_strap_low",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 21,
+      "name": "PB10",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PB10",
+      "role": "spare",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 22,
+      "name": "PB11",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PB11",
+      "role": "spare",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 23,
+      "name": "VSS_1",
+      "symbol_electrical_type": "POWER",
+      "capture_type": 7,
+      "proposed_net": "GND",
+      "role": "digital_ground",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 24,
+      "name": "VDD_1",
+      "symbol_electrical_type": "POWER",
+      "capture_type": 7,
+      "proposed_net": "3V3",
+      "role": "digital_supply",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 25,
+      "name": "PB12",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PB12",
+      "role": "spare",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 26,
+      "name": "PB13",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PB13",
+      "role": "spare",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 27,
+      "name": "PB14",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PB14",
+      "role": "spare",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 28,
+      "name": "PB15",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PB15",
+      "role": "spare",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 29,
+      "name": "PA8",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "USB_ATTACH_N",
+      "role": "P_channel_switch_control_high_off",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 30,
+      "name": "PA9",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "UART1_TX",
+      "role": "USART1_default",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 31,
+      "name": "PA10",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "UART1_RX",
+      "role": "USART1_default",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 32,
+      "name": "PA11",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "PA11_SHARED",
+      "role": "USB_DM_or_CAN_RX_population_exclusive",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 33,
+      "name": "PA12",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "PA12_SHARED",
+      "role": "USB_DP_or_CAN_TX_population_exclusive",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 34,
+      "name": "PA13-JTMS-SWDIO",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "SWDIO",
+      "role": "SWD",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 35,
+      "name": "VSS_2",
+      "symbol_electrical_type": "POWER",
+      "capture_type": 7,
+      "proposed_net": "GND",
+      "role": "digital_ground",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 36,
+      "name": "VDD_2",
+      "symbol_electrical_type": "POWER",
+      "capture_type": 7,
+      "proposed_net": "3V3",
+      "role": "digital_supply",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 37,
+      "name": "PA14-JTCK-SWCLK",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "SWCLK",
+      "role": "SWD",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 38,
+      "name": "PA15-JTDI",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PA15",
+      "role": "JTAG_default_reserved_until_disabled",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 39,
+      "name": "PB3-JTDO-TRACESWO",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "SWO",
+      "role": "optional_trace",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 40,
+      "name": "PB4-JNTRST",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PB4",
+      "role": "JTAG_default_reserved_until_disabled",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 41,
+      "name": "PB5",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PB5",
+      "role": "spare",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 42,
+      "name": "PB6",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "I2C1_SCL",
+      "role": "I2C1_default",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 43,
+      "name": "PB7",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "I2C1_SDA",
+      "role": "I2C1_default",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 44,
+      "name": "BOOT0",
+      "symbol_electrical_type": "INPUT",
+      "capture_type": 0,
+      "proposed_net": "BOOT0",
+      "role": "boot_selector",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 45,
+      "name": "PB8",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PB8",
+      "role": "spare_CAN_remap_not_selected",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 46,
+      "name": "PB9",
+      "symbol_electrical_type": "BIDIRECTIONAL",
+      "capture_type": 1,
+      "proposed_net": "GPIO_PB9",
+      "role": "spare_CAN_remap_not_selected",
+      "five_volt_tolerant_digital": true,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 47,
+      "name": "VSS_3",
+      "symbol_electrical_type": "POWER",
+      "capture_type": 7,
+      "proposed_net": "GND",
+      "role": "digital_ground",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    },
+    {
+      "number": 48,
+      "name": "VDD_3",
+      "symbol_electrical_type": "POWER",
+      "capture_type": 7,
+      "proposed_net": "3V3",
+      "role": "digital_supply_bulk_at_VDD3",
+      "five_volt_tolerant_digital": false,
+      "source": "DS5319 Rev20 Figure8 PDF26 / Table5 PDF28-33",
+      "all_power_pins_visible": true
+    }
+  ]
+}

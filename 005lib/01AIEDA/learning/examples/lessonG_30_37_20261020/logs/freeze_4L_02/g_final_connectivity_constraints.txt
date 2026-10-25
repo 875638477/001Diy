@@ -1,0 +1,47 @@
+NATIVE_CONNECTIVITY	"U1"	"24"	"C13"	"1"	targetReached=t	objects=3
+NATIVE_CONNECTIVITY	"U1"	"23"	"C13"	"2"	targetReached=t	objects=99
+NATIVE_REFERENCE_REACHED	"U1"	"23"	"ETCH/L2"	count=1
+NATIVE_CONNECTIVITY	"U1"	"36"	"C14"	"1"	targetReached=t	objects=3
+NATIVE_CONNECTIVITY	"U1"	"35"	"C14"	"2"	targetReached=t	objects=99
+NATIVE_REFERENCE_REACHED	"U1"	"35"	"ETCH/L2"	count=1
+NATIVE_CONNECTIVITY	"U1"	"48"	"C15"	"1"	targetReached=t	objects=5
+NATIVE_CONNECTIVITY	"U1"	"47"	"C15"	"2"	targetReached=t	objects=99
+NATIVE_REFERENCE_REACHED	"U1"	"47"	"ETCH/L2"	count=1
+NATIVE_CONNECTIVITY	"C15"	"1"	"C16"	"1"	targetReached=t	objects=5
+NATIVE_CONNECTIVITY	"C15"	"2"	"C16"	"2"	targetReached=t	objects=99
+NATIVE_REFERENCE_REACHED	"C15"	"2"	"ETCH/L2"	count=1
+REGIONS=(dbid:000001FC789D5238)
+REGION (objType "group" readOnly t type "REGION" name "G31_U1_ESCAPE" prop nil parentGroups nil groupMembers (dbid:000001FC789D55C8 dbid:000001FC789D57C8 dbid:000001FC789D59C8))
+REGION_SHAPE (prop nil bBox ((34.2 23.5) (36.5 25.5)) readOnly t net nil objType "polygon" segments (dbid:000001FC789D5658 dbid:000001FC789D56A8 dbid:000001FC789D56F8 dbid:000001FC789D5748) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:000001FC789D5238)) vertices=(((34.2 23.5) 0.0) ((36.5 23.5) 0.0) ((36.5 25.5) 0.0) ((34.2 25.5) 0.0))
+REGION_SHAPE (prop nil bBox ((41.5 21.2) (43.5 23.5)) readOnly t net nil objType "polygon" segments (dbid:000001FC789D5858 dbid:000001FC789D58A8 dbid:000001FC789D58F8 dbid:000001FC789D5948) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:000001FC789D5238)) vertices=(((41.5 21.2) 0.0) ((43.5 21.2) 0.0) ((43.5 23.5) 0.0) ((41.5 23.5) 0.0))
+REGION_SHAPE (prop nil bBox ((43.5 28.5) (45.8 30.5)) readOnly t net nil objType "polygon" segments (dbid:000001FC789D5A58 dbid:000001FC789D5AA8 dbid:000001FC789D5AF8 dbid:000001FC789D5B48) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:000001FC789D5238)) vertices=(((43.5 28.5) 0.0) ((45.8 28.5) 0.0) ((45.8 30.5) 0.0) ((43.5 30.5) 0.0))
+TABLE class1="G31_GND_P" class2=nil region="G31_U1_ESCAPE" physical="G31_GND_ESCAPE" spacing=nil attrs=(objType "classTable" readOnly t prop propList:000001FC7BB46020 assembly nil sameNet nil spacing nil physical "G31_GND_ESCAPE" region dbid:000001FC789D5238 netclass2 nil netclass1 dbid:000001FC789D5BC8)
+TABLE class1="NC_POWER_LV_P" class2=nil region="G31_U1_ESCAPE" physical="G31_POWER_ESCAPE" spacing=nil attrs=(objType "classTable" readOnly t prop propList:000001FC7BB46038 assembly nil sameNet nil spacing nil physical "G31_POWER_ESCAPE" region dbid:000001FC789D5238 netclass2 nil netclass1 dbid:000001FC78991C58)
+TABLE class1="NC_POWER_LV_S" class2=nil region="G31_U1_ESCAPE" physical=nil spacing="G31_PIN_ESCAPE" attrs=(objType "classTable" readOnly t prop propList:000001FC7BB46050 assembly nil sameNet nil physical nil spacing "G31_PIN_ESCAPE" region dbid:000001FC789D5238 netclass2 nil netclass1 dbid:000001FC789920A0)
+TABLE class1="NC_USB_FS_S" class2="NC_DIGITAL_GENERAL_S" region=nil physical=nil spacing="S_USB_OTHER_050" attrs=(objType "classTable" readOnly t prop propList:000001FC7BB46068 assembly nil sameNet nil physical nil spacing "S_USB_OTHER_050" region nil netclass2 dbid:000001FC78998468 netclass1 dbid:000001FC78995540)
+TABLE class1="NC_SWITCHING_S" class2="NC_USB_FS_S" region=nil physical=nil spacing="S_ISOLATE_100" attrs=(objType "classTable" readOnly t prop propList:000001FC7BB46080 assembly nil sameNet nil physical nil spacing "S_ISOLATE_100" region nil netclass2 dbid:000001FC78995540 netclass1 dbid:000001FC78992DF8)
+TABLE class1="NC_SWITCHING_S" class2="NC_OSCILLATOR_S" region=nil physical=nil spacing="S_ISOLATE_100" attrs=(objType "classTable" readOnly t prop propList:000001FC7BB46098 assembly nil sameNet nil physical nil spacing "S_ISOLATE_100" region nil netclass2 dbid:000001FC789947E8 netclass1 dbid:000001FC78992DF8)
+TABLE class1="NC_SWITCHING_S" class2="NC_ANALOG_SENSITIVE_S" region=nil physical=nil spacing="S_ISOLATE_100" attrs=(objType "classTable" readOnly t prop propList:000001FC7BB460B0 assembly nil sameNet nil physical nil spacing "S_ISOLATE_100" region nil netclass2 dbid:000001FC78993AC0 netclass1 dbid:000001FC78992DF8)
+PHYSICAL_CSET "P_POWER_060" width_min 0.6
+PHYSICAL_CSET "P_POWER_060" neckwidth_min 0.25
+PHYSICAL_CSET "P_POWER_060" necklength_max 1.0
+PHYSICAL_CSET "P_POWER_060" vias "L28_VIA030_C060:"
+PHYSICAL_CSET "P_POWER_060" allow_etch t
+PHYSICAL_CSET "P_GND_PLANE" width_min 0.6
+PHYSICAL_CSET "P_GND_PLANE" neckwidth_min 0.25
+PHYSICAL_CSET "P_GND_PLANE" necklength_max 1.0
+PHYSICAL_CSET "P_GND_PLANE" vias "L28_VIA030_C060:"
+PHYSICAL_CSET "P_GND_PLANE" allow_etch t
+PHYSICAL_CSET "G31_POWER_ESCAPE" width_min 0.6
+PHYSICAL_CSET "G31_POWER_ESCAPE" neckwidth_min 0.25
+PHYSICAL_CSET "G31_POWER_ESCAPE" necklength_max 1.4
+PHYSICAL_CSET "G31_POWER_ESCAPE" vias "L28_VIA030_C060:"
+PHYSICAL_CSET "G31_POWER_ESCAPE" allow_etch t
+PHYSICAL_CSET "G31_GND_ESCAPE" width_min 0.6
+PHYSICAL_CSET "G31_GND_ESCAPE" neckwidth_min 0.25
+PHYSICAL_CSET "G31_GND_ESCAPE" necklength_max 1.4
+PHYSICAL_CSET "G31_GND_ESCAPE" vias "L28_VIA030_C060:"
+PHYSICAL_CSET "G31_GND_ESCAPE" allow_etch t
+DYNAMIC_OOD=0
+DRC_STATUS	G_FINAL	0	t
+G_FINAL_NATIVE_PROOF_COMPLETE

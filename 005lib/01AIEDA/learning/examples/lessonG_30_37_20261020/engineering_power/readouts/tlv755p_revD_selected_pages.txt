@@ -1,0 +1,255 @@
+===== PDF page 3 =====
+4 Pin Configuration and Functions
+1
+OUT
+2
+GND
+5
+3
+EN
+4
+IN
+Not to scale
+Figure 4-1. DQN Package, 4-Pin X2SON (Top View) 
+1
+IN
+2
+GND
+3
+EN
+4
+NC
+5
+OUT
+Not to scale
+Figure 4-2. DBV Package, 5-Pin SOT-23 (Top View) 
+OUT
+NC
+IN
+1
+2
+3
+4
+5
+Thermal 
+Pad
+Not to scale
+GND
+EN
+Figure 4-3. DYD Package, 5-Pin SOT-23 With 
+Exposed Thermal Pad (Top View) 
+1
+OUT
+6
+ IN
+2
+NC
+5
+ NC
+3
+GND
+4
+ EN
+Not to scale
+Thermal
+Pad
+NC = no internal connection.
+Figure 4-4. DRV Package, 6-Pin WSON With 
+Exposed Thermal Pad (Top View) 
+Table 4-1. Pin Functions
+PIN
+TYPE(2)
+DESCRIPTION
+NAME
+DQN
+DBV
+DYD
+DRV
+EN
+3
+3
+3
+4
+I
+Enable pin. Drive EN greater than VHI to turn on the regulator.
+Drive EN less than VLO to place the low-dropout regulator (LDO) 
+into shutdown mode.
+GND
+2
+2
+2
+3
+—
+Ground pin.
+IN
+4
+1
+1
+6
+I
+Input pin. A capacitor with a value of 1µF or larger is required from 
+this pin to ground.(1) See the Input and Output Capacitor Selection 
+section for more information.
+NC
+—
+4
+4
+2, 5
+—
+No internal connection.
+OUT
+1
+5
+5
+1
+O
+Regulated output voltage pin. A capacitor with a value of 1µF or 
+larger is required from this pin to ground.(1) See the Input and 
+Output Capacitor Selection section for more information.
+Thermal pad
+Pad
+—
+Pad
+Pad
+—
+Connect the thermal pad to a large-area ground plane.
+The thermal pad is internally connected to GND.
+(1)
+Make sure the nominal input and output capacitance is greater than 0.47µF. Throughout this document the nominal derating on these 
+capacitors is 50%. Make sure the effective capacitance at the pin is greater than 0.47µF.
+(2)
+I = Input; O = Output
+www.ti.com
+TLV755P
+SBVS320D – NOVEMBER 2017 – REVISED SEPTEMBER 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+3
+Product Folder Links: TLV755P
+
+===== PDF page 17 =====
+Output Voltage in 
+normal regulation
+Dropout 
+VOUT = VIN - VDO
+Transient response 
+time of the LDO
+Load current 
+discharges 
+output 
+voltage
+Voltage
+Time
+VGS voltage for 
+normal operation
+VGS voltage in 
+dropout (pass device 
+fully on)
+VDO
+Gate Voltage
+Input Voltage
+VGS voltage for 
+normal operation
+Input Voltage
+Output Voltage
+VGS voltage 
+(pass device 
+fully off)
+Figure 7-2. Line Transients From Dropout
+7.1.4 Reverse Current
+As with most LDOs, excessive reverse current potentially damages this device.
+Reverse current flows through the body diode on the pass transistor instead of the normal conducting channel. 
+At high magnitudes, this current flow degrades the long-term reliability of the device, as a result of one of the 
+following conditions:
+•
+Degradation caused by electromigration
+•
+Excessive heat dissipation
+•
+Potential for a latch-up condition
+Conditions where reverse current occur are outlined in this section, all of which exceed the absolute maximum 
+rating of VOUT > VIN + 0.3V:
+•
+If the device has a large COUT and the input supply collapses with little or no load current
+•
+The output is biased when the input supply is not established
+•
+The output is biased above the input supply
+www.ti.com
+TLV755P
+SBVS320D – NOVEMBER 2017 – REVISED SEPTEMBER 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+17
+Product Folder Links: TLV755P
+
+===== PDF page 21 =====
+7.4 Layout
+7.4.1 Layout Guidelines
+•
+Place input and output capacitors as close as possible to the device.
+•
+Use copper planes for device connections to optimize thermal performance.
+•
+Place thermal vias around the device to distribute the heat.
+•
+For packages with thermal pads, solder the thermal pad to copper to achieve best thermal resistance. 
+Thermal resistance increases significantly when the thermal pad is not soldered.
+7.4.2 Layout Examples
+  
+  
+  
+OUT
+IN
+GND PLANE
+Represents via used for application 
+specific connections
+1
+2
+3
+4
+CIN
+COUT
+EN
+Figure 7-6. Layout Example for the DQN Package
+  
+  
+  
+VOUT
+VIN
+GND PLANE
+Represents via used for 
+application specific connections
+1
+2
+3
+4
+5
+COUT
+CIN
+EN
+Figure 7-7. Layout Example for the DBV Package
+  
+  
+VIN
+VOUT
+GND PLANE
+Represents via used for 
+application specific connections
+1
+2
+3
+4
+6
+CIN
+COUT
+EN
+5
+Figure 7-8. Layout Example for the DRV Package
+www.ti.com
+TLV755P
+SBVS320D – NOVEMBER 2017 – REVISED SEPTEMBER 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+21
+Product Folder Links: TLV755P

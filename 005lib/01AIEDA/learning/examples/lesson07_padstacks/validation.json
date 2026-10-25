@@ -1,0 +1,2637 @@
+{
+  "lesson": 7,
+  "date": "2026-10-18",
+  "status": "completed_geometry_and_layer_mapping",
+  "allChecksPass": true,
+  "checkCount": 650,
+  "failures": [],
+  "summary": {
+    "reopen_package": {
+      "pins": 6,
+      "padRows": 72,
+      "polygons": 12,
+      "stackRows": 5
+    },
+    "reopen_board": {
+      "pins": 6,
+      "padRows": 120,
+      "polygons": 24,
+      "stackRows": 9
+    }
+  },
+  "scope": "Three accepted educational padstacks and persisted 0/90 degree package/4-layer mapping, not production qualification.",
+  "failedVariants": [
+    "eda_l07_npth_200",
+    "eda_l07_npth_200_ko",
+    "eda_l07_npth_200_spot"
+  ],
+  "notValidated": [
+    "Pure no-copper NPTH unattended clean import",
+    "Dynamic shape voiding and board-level keepout effect",
+    "Negative-plane spoked thermal flash/artwork",
+    "Manufacturing drill copper subtraction/output and solderability"
+  ],
+  "ringMeaning": "Non-plated barrel with nominal copper rings. No plated barrel or interlayer electrical connection inferred.",
+  "checks": [
+    {
+      "ok": true,
+      "check": "reopen_package completed"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package mm accuracy 3"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package six pins"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package three accepted padstacks"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package expected pin position/name {'padstack': 'EDA_L07_PTH_080_C160', 'number': '1', 'x': '-5.0', 'y': '4.0', 'rotation': '0.0', 'mechanical': 'nil', 'through': 't', 'hole_type': 'circle_drill', 'plating': 'PLATED', 'drill_diameter': '0.8', 'drill_x': '0.0', 'drill_y': '0.0', 'start_end': '(\"ETCH/TOP\" \"ETCH/BOTTOM\")'}"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 rotation"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 mechanical status"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 geometric through span"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 plating"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 hole type"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 round diameter"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 pin number"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package expected pin position/name {'padstack': 'EDA_L07_PTH_080_C160', 'number': '2', 'x': '5.0', 'y': '4.0', 'rotation': '90.0', 'mechanical': 'nil', 'through': 't', 'hole_type': 'circle_drill', 'plating': 'PLATED', 'drill_diameter': '0.8', 'drill_x': '0.0', 'drill_y': '0.0', 'start_end': '(\"ETCH/TOP\" \"ETCH/BOTTOM\")'}"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 rotation"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 mechanical status"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 geometric through span"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 plating"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 hole type"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 round diameter"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 pin number"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package expected pin position/name {'padstack': 'EDA_L07_NPTH_200_RING', 'number': '', 'x': '-5.0', 'y': '0.0', 'rotation': '0.0', 'mechanical': 't', 'through': 't', 'hole_type': 'circle_drill', 'plating': 'NON_PLATED', 'drill_diameter': '2.0', 'drill_x': '0.0', 'drill_y': '0.0', 'start_end': '(\"ETCH/TOP\" \"ETCH/BOTTOM\")'}"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 rotation"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 mechanical status"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 geometric through span"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 plating"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 hole type"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 round diameter"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package expected pin position/name {'padstack': 'EDA_L07_NPTH_200_RING', 'number': '', 'x': '5.0', 'y': '0.0', 'rotation': '90.0', 'mechanical': 't', 'through': 't', 'hole_type': 'circle_drill', 'plating': 'NON_PLATED', 'drill_diameter': '2.0', 'drill_x': '0.0', 'drill_y': '0.0', 'start_end': '(\"ETCH/TOP\" \"ETCH/BOTTOM\")'}"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 rotation"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 mechanical status"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 geometric through span"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 plating"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 hole type"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 round diameter"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package expected pin position/name {'padstack': 'EDA_L07_PLATED_SLOT_200X100', 'number': '5', 'x': '-5.0', 'y': '-4.0', 'rotation': '0.0', 'mechanical': 'nil', 'through': 't', 'hole_type': 'oval slot', 'plating': 'PLATED', 'drill_diameter': '1.0', 'drill_x': '2.0', 'drill_y': '1.0', 'start_end': '(\"ETCH/TOP\" \"ETCH/BOTTOM\")'}"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 rotation"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 mechanical status"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 geometric through span"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 plating"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 hole type"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 padstack-local slot X/Y"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 pin number"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package expected pin position/name {'padstack': 'EDA_L07_PLATED_SLOT_200X100', 'number': '6', 'x': '5.0', 'y': '-4.0', 'rotation': '90.0', 'mechanical': 'nil', 'through': 't', 'hole_type': 'oval slot', 'plating': 'PLATED', 'drill_diameter': '1.0', 'drill_x': '2.0', 'drill_y': '1.0', 'start_end': '(\"ETCH/TOP\" \"ETCH/BOTTOM\")'}"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 rotation"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 mechanical status"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 geometric through span"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 plating"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 hole type"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 padstack-local slot X/Y"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 pin number"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package all cases seen"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package all pad layer/type queries recorded"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/TOP ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/TOP ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/TOP THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/TOP THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/TOP KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/BOTTOM ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/BOTTOM ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/BOTTOM THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/BOTTOM THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/BOTTOM KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 ETCH/BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 PIN/SOLDERMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 PIN/SOLDERMASK_TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 PIN/SOLDERMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 PIN/SOLDERMASK_BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 PIN/PASTEMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 PIN/PASTEMASK_TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 PIN/PASTEMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 PIN/PASTEMASK_BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/TOP ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/TOP ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/TOP THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/TOP THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/TOP KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/BOTTOM ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/BOTTOM ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/BOTTOM THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/BOTTOM THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/BOTTOM KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 ETCH/BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 PIN/SOLDERMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 PIN/SOLDERMASK_TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 PIN/SOLDERMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 PIN/SOLDERMASK_BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 PIN/PASTEMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 PIN/PASTEMASK_TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 PIN/PASTEMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 PIN/PASTEMASK_BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/TOP ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/TOP THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/TOP KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/TOP KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/BOTTOM ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/BOTTOM THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/BOTTOM KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 ETCH/BOTTOM KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 PIN/SOLDERMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 PIN/SOLDERMASK_TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 PIN/SOLDERMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 PIN/SOLDERMASK_BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 PIN/PASTEMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 PIN/PASTEMASK_TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 PIN/PASTEMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 PIN/PASTEMASK_BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/TOP ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/TOP THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/TOP KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/TOP KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/BOTTOM ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/BOTTOM THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/BOTTOM KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 ETCH/BOTTOM KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 PIN/SOLDERMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 PIN/SOLDERMASK_TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 PIN/SOLDERMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 PIN/SOLDERMASK_BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 PIN/PASTEMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 PIN/PASTEMASK_TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 PIN/PASTEMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 PIN/PASTEMASK_BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/TOP ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/TOP ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/TOP THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/TOP THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/TOP KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/TOP KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/BOTTOM ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/BOTTOM ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/BOTTOM THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/BOTTOM THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/BOTTOM KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 ETCH/BOTTOM KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 PIN/SOLDERMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 PIN/SOLDERMASK_TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 PIN/SOLDERMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 PIN/SOLDERMASK_BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 PIN/PASTEMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 PIN/PASTEMASK_TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 PIN/PASTEMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 PIN/PASTEMASK_BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/TOP ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/TOP ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/TOP THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/TOP THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/TOP KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/TOP KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/BOTTOM ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/BOTTOM ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/BOTTOM THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/BOTTOM THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/BOTTOM KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 ETCH/BOTTOM KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 PIN/SOLDERMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 PIN/SOLDERMASK_TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 PIN/SOLDERMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 PIN/SOLDERMASK_BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 PIN/PASTEMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 PIN/PASTEMASK_TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 PIN/PASTEMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 PIN/PASTEMASK_BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package known persisted padstack"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package eda_l07_pth_080_c160 plating API agrees"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package eda_l07_pth_080_c160 drill offset"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package eda_l07_pth_080_c160 persisted usage"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package eda_l07_pth_080_c160 persisted round diameter"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package known persisted padstack"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package eda_l07_npth_200_ring plating API agrees"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package eda_l07_npth_200_ring drill offset"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package eda_l07_npth_200_ring persisted usage"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package eda_l07_npth_200_ring persisted round diameter"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package known persisted padstack"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package eda_l07_plated_slot_200x100 plating API agrees"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package eda_l07_plated_slot_200x100 drill offset"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package eda_l07_plated_slot_200x100 persisted usage"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package eda_l07_plated_slot_200x100 persisted slot axes"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PTH_080_C160 default REGULAR extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PTH_080_C160 default ANTI extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PTH_080_C160 default THERMAL extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PTH_080_C160 default KEEPOUT absent"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PTH_080_C160 default REGULAR extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PTH_080_C160 default ANTI extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PTH_080_C160 default THERMAL extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PTH_080_C160 default KEEPOUT absent"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_NPTH_200_RING default REGULAR extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_NPTH_200_RING default ANTI absent"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_NPTH_200_RING default THERMAL absent"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_NPTH_200_RING default KEEPOUT extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_NPTH_200_RING default REGULAR extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_NPTH_200_RING default ANTI absent"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_NPTH_200_RING default THERMAL absent"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_NPTH_200_RING default KEEPOUT extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PLATED_SLOT_200X100 default REGULAR extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PLATED_SLOT_200X100 default ANTI extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PLATED_SLOT_200X100 default THERMAL extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PLATED_SLOT_200X100 default KEEPOUT extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PLATED_SLOT_200X100 default REGULAR extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PLATED_SLOT_200X100 default ANTI extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PLATED_SLOT_200X100 default THERMAL extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package EDA_L07_PLATED_SLOT_200X100 default KEEPOUT extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package default internal all 3x4 kinds"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 world polygon extents ETCH/TOP"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 world polygon extents ETCH/BOTTOM"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 world polygon extents ETCH/TOP"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 world polygon extents ETCH/BOTTOM"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package PTH_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 world polygon extents ETCH/TOP"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 world polygon extents ETCH/BOTTOM"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 world polygon extents ETCH/TOP"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 world polygon extents ETCH/BOTTOM"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package NPTH_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 world polygon extents ETCH/TOP"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 world polygon extents ETCH/BOTTOM"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 world polygon extents ETCH/TOP"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 world polygon extents ETCH/BOTTOM"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package SLOT_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package one regular polygon per pin per copper layer"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package native normal exit"
+    },
+    {
+      "ok": true,
+      "check": "reopen_package readonly hash unchanged"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board completed"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board mm accuracy 3"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board six pins"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board three accepted padstacks"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board expected pin position/name {'padstack': 'EDA_L07_PLATED_SLOT_200X100', 'number': '6', 'x': '5.0', 'y': '-4.0', 'rotation': '90.0', 'mechanical': 'nil', 'through': 't', 'hole_type': 'oval slot', 'plating': 'PLATED', 'drill_diameter': '1.0', 'drill_x': '2.0', 'drill_y': '1.0', 'start_end': '(\"ETCH/TOP\" \"ETCH/BOTTOM\")'}"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 rotation"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 mechanical status"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 geometric through span"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 plating"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 hole type"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 padstack-local slot X/Y"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 pin number"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board expected pin position/name {'padstack': 'EDA_L07_PLATED_SLOT_200X100', 'number': '5', 'x': '-5.0', 'y': '-4.0', 'rotation': '0.0', 'mechanical': 'nil', 'through': 't', 'hole_type': 'oval slot', 'plating': 'PLATED', 'drill_diameter': '1.0', 'drill_x': '2.0', 'drill_y': '1.0', 'start_end': '(\"ETCH/TOP\" \"ETCH/BOTTOM\")'}"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 rotation"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 mechanical status"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 geometric through span"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 plating"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 hole type"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 padstack-local slot X/Y"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 pin number"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board expected pin position/name {'padstack': 'EDA_L07_NPTH_200_RING', 'number': '', 'x': '5.0', 'y': '0.0', 'rotation': '90.0', 'mechanical': 't', 'through': 't', 'hole_type': 'circle_drill', 'plating': 'NON_PLATED', 'drill_diameter': '2.0', 'drill_x': '0.0', 'drill_y': '0.0', 'start_end': '(\"ETCH/TOP\" \"ETCH/BOTTOM\")'}"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 rotation"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 mechanical status"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 geometric through span"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 plating"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 hole type"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 round diameter"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board expected pin position/name {'padstack': 'EDA_L07_NPTH_200_RING', 'number': '', 'x': '-5.0', 'y': '0.0', 'rotation': '0.0', 'mechanical': 't', 'through': 't', 'hole_type': 'circle_drill', 'plating': 'NON_PLATED', 'drill_diameter': '2.0', 'drill_x': '0.0', 'drill_y': '0.0', 'start_end': '(\"ETCH/TOP\" \"ETCH/BOTTOM\")'}"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 rotation"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 mechanical status"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 geometric through span"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 plating"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 hole type"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 round diameter"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board expected pin position/name {'padstack': 'EDA_L07_PTH_080_C160', 'number': '2', 'x': '5.0', 'y': '4.0', 'rotation': '90.0', 'mechanical': 'nil', 'through': 't', 'hole_type': 'circle_drill', 'plating': 'PLATED', 'drill_diameter': '0.8', 'drill_x': '0.0', 'drill_y': '0.0', 'start_end': '(\"ETCH/TOP\" \"ETCH/BOTTOM\")'}"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 rotation"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 mechanical status"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 geometric through span"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 plating"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 hole type"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 round diameter"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 pin number"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board expected pin position/name {'padstack': 'EDA_L07_PTH_080_C160', 'number': '1', 'x': '-5.0', 'y': '4.0', 'rotation': '0.0', 'mechanical': 'nil', 'through': 't', 'hole_type': 'circle_drill', 'plating': 'PLATED', 'drill_diameter': '0.8', 'drill_x': '0.0', 'drill_y': '0.0', 'start_end': '(\"ETCH/TOP\" \"ETCH/BOTTOM\")'}"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 rotation"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 mechanical status"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 geometric through span"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 plating"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 hole type"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 round diameter"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 pin number"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board all cases seen"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board all pad layer/type queries recorded"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/TOP ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/TOP ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/TOP THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/TOP THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/TOP KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/TOP KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/BOTTOM ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/BOTTOM ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/BOTTOM THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/BOTTOM THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/BOTTOM KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/BOTTOM KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L2 REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L2 REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L2 ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L2 ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L2 THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L2 THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L2 KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L2 KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L3 REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L3 REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L3 ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L3 ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L3 THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L3 THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L3 KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 ETCH/L3 KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 PIN/SOLDERMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 PIN/SOLDERMASK_TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 PIN/SOLDERMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 PIN/SOLDERMASK_BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 PIN/PASTEMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 PIN/PASTEMASK_TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 PIN/PASTEMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 PIN/PASTEMASK_BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/TOP ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/TOP ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/TOP THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/TOP THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/TOP KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/TOP KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/BOTTOM ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/BOTTOM ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/BOTTOM THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/BOTTOM THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/BOTTOM KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/BOTTOM KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L2 REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L2 REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L2 ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L2 ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L2 THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L2 THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L2 KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L2 KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L3 REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L3 REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L3 ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L3 ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L3 THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L3 THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L3 KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 ETCH/L3 KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 PIN/SOLDERMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 PIN/SOLDERMASK_TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 PIN/SOLDERMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 PIN/SOLDERMASK_BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 PIN/PASTEMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 PIN/PASTEMASK_TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 PIN/PASTEMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 PIN/PASTEMASK_BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/TOP ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/TOP THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/TOP KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/TOP KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/BOTTOM ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/BOTTOM THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/BOTTOM KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/BOTTOM KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L2 REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L2 REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L2 ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L2 absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L2 THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L2 absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L2 KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L2 KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L3 REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L3 REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L3 ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L3 absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L3 THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L3 absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L3 KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 ETCH/L3 KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 PIN/SOLDERMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 PIN/SOLDERMASK_TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 PIN/SOLDERMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 PIN/SOLDERMASK_BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 PIN/PASTEMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 PIN/PASTEMASK_TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 PIN/PASTEMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 PIN/PASTEMASK_BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/TOP ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/TOP THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/TOP KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/TOP KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/BOTTOM ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/BOTTOM THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/BOTTOM KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/BOTTOM KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L2 REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L2 REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L2 ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L2 absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L2 THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L2 absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L2 KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L2 KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L3 REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L3 REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L3 ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L3 absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L3 THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L3 absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L3 KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 ETCH/L3 KEEPOUT rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 PIN/SOLDERMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 PIN/SOLDERMASK_TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 PIN/SOLDERMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 PIN/SOLDERMASK_BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 PIN/PASTEMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 PIN/PASTEMASK_TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 PIN/PASTEMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 PIN/PASTEMASK_BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/TOP ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/TOP ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/TOP THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/TOP THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/TOP KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/BOTTOM ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/BOTTOM ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/BOTTOM THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/BOTTOM THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/BOTTOM KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L2 REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L2 REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L2 ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L2 ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L2 THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L2 THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L2 KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L2 absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L3 REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L3 REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L3 ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L3 ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L3 THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L3 THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L3 KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 ETCH/L3 absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 PIN/SOLDERMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 PIN/SOLDERMASK_TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 PIN/SOLDERMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 PIN/SOLDERMASK_BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 PIN/PASTEMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 PIN/PASTEMASK_TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 PIN/PASTEMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 PIN/PASTEMASK_BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/TOP ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/TOP ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/TOP THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/TOP THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/TOP KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/BOTTOM ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/BOTTOM ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/BOTTOM THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/BOTTOM THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/BOTTOM KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L2 REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L2 REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L2 ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L2 ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L2 THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L2 THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L2 KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L2 absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L3 REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L3 REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L3 ANTI presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L3 ANTI rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L3 THERMAL presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L3 THERMAL rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L3 KEEPOUT presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 ETCH/L3 absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 PIN/SOLDERMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 PIN/SOLDERMASK_TOP REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 PIN/SOLDERMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 PIN/SOLDERMASK_BOTTOM REGULAR rotated extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 PIN/PASTEMASK_TOP REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 PIN/PASTEMASK_TOP absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 PIN/PASTEMASK_BOTTOM REGULAR presence"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 PIN/PASTEMASK_BOTTOM absent geometry"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board known persisted padstack"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board eda_l07_pth_080_c160 plating API agrees"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board eda_l07_pth_080_c160 drill offset"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board eda_l07_pth_080_c160 persisted usage"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board eda_l07_pth_080_c160 persisted round diameter"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board known persisted padstack"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board eda_l07_npth_200_ring plating API agrees"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board eda_l07_npth_200_ring drill offset"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board eda_l07_npth_200_ring persisted usage"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board eda_l07_npth_200_ring persisted round diameter"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board known persisted padstack"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board eda_l07_plated_slot_200x100 plating API agrees"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board eda_l07_plated_slot_200x100 drill offset"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board eda_l07_plated_slot_200x100 persisted usage"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board eda_l07_plated_slot_200x100 persisted slot axes"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PLATED_SLOT_200X100 default REGULAR extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PLATED_SLOT_200X100 default ANTI extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PLATED_SLOT_200X100 default THERMAL extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PLATED_SLOT_200X100 default KEEPOUT extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PLATED_SLOT_200X100 default REGULAR extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PLATED_SLOT_200X100 default ANTI extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PLATED_SLOT_200X100 default THERMAL extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PLATED_SLOT_200X100 default KEEPOUT extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_NPTH_200_RING default REGULAR extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_NPTH_200_RING default ANTI absent"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_NPTH_200_RING default THERMAL absent"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_NPTH_200_RING default KEEPOUT extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_NPTH_200_RING default REGULAR extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_NPTH_200_RING default ANTI absent"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_NPTH_200_RING default THERMAL absent"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_NPTH_200_RING default KEEPOUT extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PTH_080_C160 default REGULAR extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PTH_080_C160 default ANTI extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PTH_080_C160 default THERMAL extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PTH_080_C160 default KEEPOUT absent"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PTH_080_C160 default REGULAR extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PTH_080_C160 default ANTI extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PTH_080_C160 default THERMAL extents"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board EDA_L07_PTH_080_C160 default KEEPOUT absent"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board default internal all 3x4 kinds"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 world polygon extents ETCH/TOP"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 world polygon extents ETCH/BOTTOM"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 world polygon extents ETCH/L2"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 world polygon extents ETCH/L3"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 world polygon extents ETCH/TOP"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 world polygon extents ETCH/BOTTOM"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 world polygon extents ETCH/L2"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 world polygon extents ETCH/L3"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board SLOT_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 world polygon extents ETCH/TOP"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 world polygon extents ETCH/BOTTOM"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 world polygon extents ETCH/L2"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 world polygon extents ETCH/L3"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 world polygon extents ETCH/TOP"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 world polygon extents ETCH/BOTTOM"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 world polygon extents ETCH/L2"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 world polygon extents ETCH/L3"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board NPTH_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 world polygon extents ETCH/TOP"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 world polygon extents ETCH/BOTTOM"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 world polygon extents ETCH/L2"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 world polygon extents ETCH/L3"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_90 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 world polygon extents ETCH/TOP"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 world polygon extents ETCH/BOTTOM"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 world polygon extents ETCH/L2"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 world polygon extents ETCH/L3"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board PTH_0 world polygon center"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board one regular polygon per pin per copper layer"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board TOP-L2-L3-BOTTOM order"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board native normal exit"
+    },
+    {
+      "ok": true,
+      "check": "reopen_board readonly hash unchanged"
+    },
+    {
+      "ok": true,
+      "check": "eda_l07_pth_080_c160 accepted import log has no warnings/errors"
+    },
+    {
+      "ok": true,
+      "check": "eda_l07_npth_200_ring accepted import log has no warnings/errors"
+    },
+    {
+      "ok": true,
+      "check": "eda_l07_plated_slot_200x100 accepted import log has no warnings/errors"
+    }
+  ]
+}

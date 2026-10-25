@@ -1,0 +1,20 @@
+COMPONENT	"J901"	(functions (dbid:000002987B799290) pins (dbid:000002987B7990C0 dbid:000002987B7991F0) prop nil readOnly t objType "component" package "F29_PAIR_ENDPOINT" class "IO" deviceType "F29_PAIR_ENDPOINT" compdef dbid:000002987B798E48 symbol nil name "J901" parentGroups nil)
+COMPONENT	"J902"	(functions (dbid:000002987B7995F0) pins (dbid:000002987B799420 dbid:000002987B799550) prop nil readOnly t objType "component" package "F29_PAIR_ENDPOINT" class "IO" deviceType "F29_PAIR_ENDPOINT" compdef dbid:000002987B798E48 symbol nil name "J902" parentGroups nil)
+PIN	"J901"	"2"	(5.0 9.8)	"CAL_N"
+PIN	"J901"	"1"	(5.0 10.2)	"CAL_P"
+PIN	"J902"	"2"	(25.0 9.8)	"CAL_N"
+PIN	"J902"	"1"	(25.0 10.2)	"CAL_P"
+ECSET=((Maximum_Via_Count "2") (Differential_Pair_Max_Uncoupled_Length "6 MM") (Differential_Pair_Phase_Tolerance "1 MM"))
+MODE=((Minimum_Line_Width on) (Maximum_Line_Width on) (Relative_Propagation_Delay off) (Propagation_Delay off) (Maximum_Via_Count on) (Match_Via_Count off) (Maximum_Stub_Length off) (Parallelism off) (Impedance off) (Maximum_Crosstalk off) (Maximum_Peak_Crosstalk off) (Maximum_Exposed_Length off) (Total_Etch_Length off) (Differential_Pair_Primary_Gap on) (LayerSet_group off) (Impedance_Fanout_Max_Length off) (Max_Ignored_Reference_Path_Deviation_Length off))
+CAL_P=(unplaced 0 rpd nil isBundled nil scheduleLocked nil xnet dbid:000002987B7996A0 diffpair dbid:000002987B79B2F0 ratsnestOn t unconnected 0 ratsnest (dbid:000002987B79B798) ratT nil pinpair (dbid:000002987B79CB78) prop nil readOnly t objType "net" nBranches 1 branches (dbid:000002987B799528) parentGroups (dbid:000002987B79B2F0) name "CAL_P")
+CAL_N=(unplaced 0 rpd nil isBundled nil scheduleLocked nil xnet dbid:000002987B799708 diffpair dbid:000002987B79B2F0 ratsnestOn t unconnected 0 ratsnest (dbid:000002987B79BA70) ratT nil pinpair (dbid:000002987B79CAB0) prop nil readOnly t objType "net" nBranches 1 branches (dbid:000002987B7993F8) parentGroups (dbid:000002987B79B2F0) name "CAL_N")
+BAD_UPDATE=3
+DRC_STATUS	PHASE_UNEQUAL	3	t
+DRC_DETAIL	PHASE_UNEQUAL	(prop nil bBox ((4.682 9.882) (5.318 10.518)) readOnly t objType "drc" waived nil layer "DRC ERROR CLASS/ALL" xy (5.0 10.2) violations (dbid:000002987B79CAB0 dbid:000002987B79CB78) type "NET ELECTRICAL CONSTRAINTS" source "E_USB_FS_BUDGET" fixed t parent dbid:00000298692F1830 expected "6 MM" actual "10 MM" name "Differential Pair Max Uncoupled Length")
+DRC_DETAIL	PHASE_UNEQUAL	(prop nil bBox ((4.682 9.482) (5.318 10.118)) readOnly t objType "drc" waived nil layer "DRC ERROR CLASS/ALL" xy (5.0 9.8) violations (dbid:000002987B79CB78 dbid:000002987B79CAB0) type "NET ELECTRICAL CONSTRAINTS" source "E_USB_FS_BUDGET" fixed t parent dbid:00000298692F1830 expected "6 MM" actual "17.6 MM" name "Differential Pair Max Uncoupled Length")
+DRC_DETAIL	PHASE_UNEQUAL	(prop nil bBox ((4.682 9.482) (5.318 10.118)) readOnly t objType "drc" waived nil layer "DRC ERROR CLASS/ALL" xy (5.0 9.8) violations (dbid:000002987B79CB78 dbid:000002987B79CAB0) type "NET ELECTRICAL CONSTRAINTS" source "E_USB_FS_BUDGET" fixed t parent dbid:00000298692F1830 expected "1 MM" actual "7.6 MM" name "Differential Pair Phase Tolerance")
+CAL_P=(unplaced 0 rpd nil isBundled nil scheduleLocked nil xnet dbid:000002987B7996A0 diffpair dbid:000002987B79B2F0 ratsnestOn t unconnected 0 ratsnest (dbid:000002987B79F7B0) ratT nil pinpair nil prop nil readOnly t objType "net" name "CAL_P" nBranches 1 branches (dbid:000002987B799528) parentGroups (dbid:000002987B79B2F0))
+CAL_N=(unplaced 0 rpd nil isBundled nil scheduleLocked nil xnet dbid:000002987B799708 diffpair dbid:000002987B79B2F0 ratsnestOn t unconnected 0 ratsnest (dbid:000002987B79F948) ratT nil pinpair nil prop nil readOnly t objType "net" name "CAL_N" nBranches 1 branches (dbid:000002987B7993F8) parentGroups (dbid:000002987B79B2F0))
+GOOD_UPDATE=0
+DRC_STATUS	PHASE_EQUAL	0	t
+COUPON_BUILD_COMPLETE

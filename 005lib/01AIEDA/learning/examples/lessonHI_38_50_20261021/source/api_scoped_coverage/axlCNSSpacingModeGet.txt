@@ -1,0 +1,58 @@
+
+  NAME
+         axlCNSSpacingModeGet - inquire constraint spacing modes  (on/off)
+  FUNCTION
+         axlCNSSpacingModeGet(
+                 nil
+         ) ==> ls_constraints
+ 
+         axlCNSSpacingModeGet(
+                 'all
+         ) ==> lls_constraintNModes
+ 
+         axlCNSSpacingModeGet(
+                 s_name/t_name
+         ) ==> s_mode/nil
+ 
+         axlCNSSpacingModeGet(
+                 s_name/t_name
+                 'print
+         ) ==> t_name/nil
+  SYNOPSIS
+         This fetches the current spacing drc mode(s). Modes determine
+         if a particular constraint is on or off.  These modes apply to 
+         the entire board. To determine the set currently supported spacing 
+         modes do a axlCNSSpacingModeGet(nil).
+ 
+         The spacing mode set may be a subset of spacing values since
+         the implementation may associate certain values under a master
+         mode.
+         
+         The 'print mode offers the name shown in reports like show element.
+  CAUTION
+         Future releases may add or subtract constraint checks. The
+         axl interface does guarantee the checks returned by this
+         interface will remain constant from release to release.
+  NEEDS
+         nil: returns all modes that are in spacing domain
+         'all: returns all checks and current mode
+         s_name: symbol name of check.
+         t_name: string name of check
+         'print: printable constraint name option
+  RETURNS
+         ls_names: - list of checks (s_name ...)
+         lls_names: - list of checks and their mode ((s_name s_mode) ...)
+         s_mode: mode 'on, or 'off 
+         t_name:  the printable constraint name
+  SEE ALSO
+         axlCNSSpacingModeSet, axlCNSGetSpacing
+  EXAMPLES
+         1) get current list of design constraints
+                 axlCNSSpacingModeGet(nil)
+         2) get list of settings for all design constraints
+                 axlCNSSpacingModeGet('all)
+         3) get current setting of line to line
+                 axlCNSSpacingModeGet('line_line)
+         4) get current setting of line to shape using a string
+                 axlCNSSpacingModeGet("line_shape")
+

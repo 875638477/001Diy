@@ -1,0 +1,37 @@
+
+  NAME
+         axlShapeRaisePriority - raise voiding priority of dynamic shape
+  FUNCTION
+         axlShapeRaisePriority(
+                 o_shapeId
+         ) -> x_priority/nil
+  SYNOPSIS
+         This will raise the voiding priority of dynamic shape (o_shapeId) to 
+         the highest on that layer. This means that if this shape overlaps
+         other dynamic shapes on a layer then the other shapes will be voided 
+         away from this shape.
+ 
+         The priority number is relative. Allegro will adjust the numbers 
+         as needed. You should only use the priority number for comparison 
+         with other dynamic shape priority numbers.
+ 
+         For a dynamic shape (those on CLASS=BOUNDARY) the attribute
+         "priority" will reflect current priority (e.g. dbid->priority).
+  TIP
+         If raising priority on multiple shapes or doing multiple operations
+         on a single shape (e.g. convert then raise priority) consider wrapping 
+         the code in axlDBCloak to batch updates.
+  NEEDS
+         o_shapeId - dynamic shape id.
+  RETURNS
+         x_priority > 0: then new priority of shape
+                     -1: already at highest priority
+                     nil: not a dynamc shape
+ 
+  SEE ALSO
+         axlShapeChangeDynamicType
+  EXAMPLES
+         See <cdsroot>/share/pcb/examples/skill/axlcore/ashshape.il
+ 
+         axlShapeRaisePriority(shape)
+

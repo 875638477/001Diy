@@ -1,0 +1,4 @@
+set NOCONFIRM
+skill let((f r) f=outfile("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/readonly_writemodel_pilot_01/result.txt") fprintf(f "READONLY_WRITE_MODEL_PILOT_START current=%L\n" axlCurrentDesign()) drain(f) r=axlSaveDesign(?design "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native_candidates/READONLY_WRITEMODEL_PILOT.brd" ?writeModel t ?noMru t ?noConfirm t) fprintf(f "OFFICIAL_WRITE_MODEL_RESULT=%L currentAfter=%L\n" r axlCurrentDesign()) close(f))
+quit
+fillin "yes"

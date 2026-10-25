@@ -1,0 +1,173 @@
+{
+  "lesson": 7,
+  "date": "2026-10-18",
+  "purpose": "Teaching only; isolated hole/padstack database and rotation/mapping exercise, not a production footprint.",
+  "revision": 2,
+  "units": "millimeters",
+  "accuracy": 3,
+  "padstacks": [
+    {
+      "name": "eda_l07_pth_080_c160",
+      "usage": "THRU_PIN",
+      "hole": "CIRCLE",
+      "plating": "Y",
+      "drill": [
+        0.8,
+        0.8
+      ],
+      "regular": [
+        1.6,
+        1.6
+      ],
+      "mask": [
+        1.8,
+        1.8
+      ],
+      "thermal": [
+        1.8,
+        1.8
+      ],
+      "anti": [
+        2,
+        2
+      ],
+      "keepout": null
+    },
+    {
+      "name": "eda_l07_npth_200_ko",
+      "usage": "MECH_HOLE",
+      "hole": "CIRCLE",
+      "plating": "N",
+      "drill": [
+        2,
+        2
+      ],
+      "regular": null,
+      "mask": [
+        2.2,
+        2.2
+      ],
+      "thermal": null,
+      "anti": null,
+      "keepout": [
+        2.5,
+        2.5
+      ]
+    },
+    {
+      "name": "eda_l07_plated_slot_200x100",
+      "usage": "SLOT",
+      "hole": "OVAL_SLOT",
+      "plating": "Y",
+      "drill": [
+        2,
+        1
+      ],
+      "regular": [
+        2.8,
+        1.8
+      ],
+      "mask": [
+        3,
+        2
+      ],
+      "thermal": [
+        3,
+        2
+      ],
+      "anti": [
+        3.2,
+        2.2
+      ],
+      "keepout": [
+        3.2,
+        2.2
+      ]
+    }
+  ],
+  "packageName": "eda_l07_padstack_coupon",
+  "cases": [
+    {
+      "id": "PTH_0",
+      "pad": 0,
+      "number": "1",
+      "xy": [
+        -5,
+        4
+      ],
+      "rotation": 0,
+      "mechanical": false
+    },
+    {
+      "id": "PTH_90",
+      "pad": 0,
+      "number": "2",
+      "xy": [
+        5,
+        4
+      ],
+      "rotation": 90,
+      "mechanical": false
+    },
+    {
+      "id": "NPTH_0",
+      "pad": 1,
+      "number": null,
+      "xy": [
+        -5,
+        0
+      ],
+      "rotation": 0,
+      "mechanical": true
+    },
+    {
+      "id": "NPTH_90",
+      "pad": 1,
+      "number": null,
+      "xy": [
+        5,
+        0
+      ],
+      "rotation": 90,
+      "mechanical": true
+    },
+    {
+      "id": "SLOT_0",
+      "pad": 2,
+      "number": "5",
+      "xy": [
+        -5,
+        -4
+      ],
+      "rotation": 0,
+      "mechanical": false
+    },
+    {
+      "id": "SLOT_90",
+      "pad": 2,
+      "number": "6",
+      "xy": [
+        5,
+        -4
+      ],
+      "rotation": 90,
+      "mechanical": false
+    }
+  ],
+  "boardName": "eda_l07_mapping_4layer",
+  "boardConductorLayers": [
+    "TOP",
+    "L07_IN1",
+    "L07_IN2",
+    "BOTTOM"
+  ],
+  "scopeLimits": [
+    "Original NPTH antipad-without-thermal warning and blocked importer retained as failed evidence, not accepted.",
+    "NPTH revised name has NULL REGULAR + KEEPOUT, no ANTI or THERMAL; no connecting copper added.",
+    "NPTH padstack keepout geometry presence does not prove copper voiding/DRC effectiveness: 17.2 documentation says same-layer keepout requires a regular pad; NULL behavior is not resolved by library readback.",
+    "Slot THERMAL OBLONG is a data category/extent for this exercise, not verified spoked negative artwork.",
+    "No negative-plane Gerber, solderability, fabrication tolerances or routing quality qualified.",
+    "Keepout over plated slot copper is retained to observe stored geometry; board rule applicability and connection behavior require a later deliberate test.",
+    "All masks are teaching choices. No paste geometry."
+  ]
+}

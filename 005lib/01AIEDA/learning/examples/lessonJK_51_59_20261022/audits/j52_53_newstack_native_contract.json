@@ -1,0 +1,46 @@
+{
+    "status":  "NEW_DEFAULT_ENGINEERING_CONTRACT_NOT_YET_PHYSICALLY_APPLIED",
+    "sourceBoard":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native_candidates\\HI_4L_padentry_normalized_b019_DRC_PENDING.brd",
+    "sourceSHA256":  "B7A32330992F49609339E33C00BE92D989D0EA0C4AF64ED2763D0678DE14B501",
+    "destination":  "New isolated JK derived board; HI originals unchanged",
+    "fixedNames":  [
+                       "TOP",
+                       "L2",
+                       "L3",
+                       "BOTTOM"
+                   ],
+    "required":  {
+                     "TOP":  "components+signals+retained outer local power",
+                     "L2":  "continuous common GND, retire old HSE reference island/moat, no signal bridges",
+                     "L3":  "single actual V3V3 power plane, not GND",
+                     "BOTTOM":  "signals, reference actual L3 V3V3"
+                 },
+    "preserve":  "physical materials/thickness/Dk/no physicalMASK, all80poses/272pins/69nets, full17Films/options, mask apertures, root+OUTLINE, originalmechanics",
+    "nativeActions":  [
+                          "Inventory exact L2 static HSE island/voids and L3 GND mothers/planes by net+real polygon identity; archive definitions first.",
+                          "Replace L2 isolated reference structure with true continuous common GND; retain mechanical and real antipad clearances. Do not broadly delete TOP stage voids.",
+                          "Delete L3 GND mothers and actual planes, create actual dynamic single-net V3V3 plane and verify native connection to existing V3 vias and supply terminals. GND via annuli remain valid GND, not unwanted planes.",
+                          "Allow only intended V3V3 plane on L3 as necessary; L2 and ordinary inner signal etch stay forbidden. Do not silently change spacing/neck/via budgets.",
+                          "Refill and fresh readback actual plane layers/nets/polygons/voids/thermal/antipads and all original physical edges. Record remaining7GPIO, USB4 and wholeDRC limits separately."
+                      ],
+    "newHSEExpectation":  [
+                              "C22.2/C23.2/guards/case grounds reach continuousL2.",
+                              "Retire previous delete-anchor-must-disconnect test. If temporarily deleting oldanchor46.35,29.4, cap/guard GND should remain common under new architecture; rollback exact.",
+                              "No oscillator margin/hardware/EMI approval implied."
+                          ],
+    "requiredReturnChecks":  [
+                                 "TOP full trace footprint to actualL2 commonGND including antipads.",
+                                 "BOTTOM full footprint to actualL3 V3V3; all prior L3GND screens are legacy only.",
+                                 "TOP-to-BOTTOM changes reference GND-to-power: real populated V3/GND decoupler cap1-to-L3 and cap2-to-L2, actual short traces/vias/thermal and effective capacitance required. GNDstitchvia alone does not connect the power reference.",
+                                 "Existing candidate capacitors C9,C11,C12,C13,C14,C15,C16,C17 must each be checked by actual pin/net/path. VDDA and VBUS caps are not V3/GND reference-conversion caps.",
+                                 "Where return cannot be established, stayTOP or deliberately redesign short crossover/decoupler with full geometry; do not treat nearest1.5mm as universal approval.",
+                                 "V5,VIN,VDDA remain separate outer supplies; local CIN/SW/BOOT/COUT/FB and MCUdecoupling loops remain actual and require load/thermal review."
+                             ],
+    "requiredEvidence":  [
+                             "Actual filledL2 GND and L3 V3V3 shapes with native layer/net/polygon, source/destinationSHA.",
+                             "All56GNDpins/all actualGNDvias and V3terminals common to their own planes, noGND-V3short, noorphan/OOD; newHSE expectation.",
+                             "All original pin edges,69net/272identity, embedded paddefinitions/mechanics/complete17Films preserved.",
+                             "Recomputed TOP/L2 and BOTTOM/L3 footprints, transition decoupler real paths, all P/S/E differences and scoped/wholeDRC scope."
+                         ],
+    "releaseLimit":  "Layer-function exercise only; not completion of HI7GPIO/USB4/wholeDRC/SI/PI/EMI/manufacturing/hardware acceptance."
+}

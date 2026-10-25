@@ -1,0 +1,12 @@
+set NOCONFIRM
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/scripts/de_board_read.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/scripts/build29_v2.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/scripts/read29.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/scripts/extra_read29.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/scripts/specific_proof.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019/scripts/more28.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019/scripts/mechanical28.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonF_stack_artwork_correction_20261019/scripts/correction.il") t)
+skill errset(fcorFix(4 "D:/001DIY/005lib/01AIEDA/learning/examples/lessonF_stack_artwork_correction_20261019/current/F28_4L_USERFIX.brd" "D:/001DIY/005lib/01AIEDA/learning/examples/lessonF_stack_artwork_correction_20261019/logs/fix_F28_4L" "D:/001DIY/005lib/01AIEDA/learning/examples/lessonF_stack_artwork_correction_20261019") t)
+quit
+fillin "yes"

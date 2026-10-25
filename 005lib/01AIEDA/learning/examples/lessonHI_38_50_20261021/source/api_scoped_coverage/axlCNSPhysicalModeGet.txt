@@ -1,0 +1,60 @@
+
+  NAME
+         axlCNSPhysicalModeGet - inquire constraint physical modes  (on/off)
+  FUNCTION
+         axlCNSPhysicalModeGet(
+                 nil
+         ) ==> ls_constraints
+ 
+         axlCNSPhysicalModeGet(
+                 'all
+         ) ==> lls_constraintNModes
+ 
+         axlCNSPhysicalModeGet(
+                 s_name/t_name
+         ) ==> s_mode/nil
+ 
+         axlCNSPhysicalModeGet(
+                 s_name/t_name
+                 'print
+         ) ==> t_name/nil
+ 
+  SYNOPSIS
+         This fetches the current physical drc mode(s). Modes determine
+         if a particular constraint is on or off.  These modes apply to 
+         the entire board. To determine the set currently supported physical 
+         modes do a axlCNSPhysicalModeGet(nil).
+ 
+         The physical mode set may be a subset of physical values since
+         the implementation may associate certain values under a master
+         mode. For example, via_list is not a constraint and the diff pair
+         mode is under the ecset domain.
+         
+         The 'print mode offers the name shown in reports like show element.
+  CAUTION
+         Future releases may add or subtract constraint checks. The
+         axl interface does guarantee the checks returned by this
+         interface will remain constant from release to release.
+  NEEDS
+         nil: returns all modes that are in spacing domain
+         'all: returns all checks and current mode
+         s_name: symbol name of check.
+         t_name: string name of check
+         'print: printable constraint name option
+  RETURNS
+         ls_names: - list of checks (s_name ...)
+         lls_names: - list of checks and their mode ((s_name s_mode) ...)
+         s_mode: mode 'on, or 'off 
+         t_name:  the printable constraint name
+  SEE ALSO
+         axlCNSPhysicalModeSet, axlCNSGetPhysical
+  EXAMPLES
+         1) get current list of physical constraints
+                 axlCNSPhysicalModeGet(nil)
+         2) get list of settings for all physical constraints
+                 axlCNSPhysicalModeGet('all)
+         3) get current mode of max line with
+                 axlCNSPhysicalModeGet('width_max)
+         4) get current setting of allow Ts using a string
+                 axlCNSPhysicalModeGet("allow_ts")
+

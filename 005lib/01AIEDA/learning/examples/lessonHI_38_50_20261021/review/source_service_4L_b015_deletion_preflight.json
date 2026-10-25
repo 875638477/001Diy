@@ -1,0 +1,1379 @@
+{
+  "status": "PASS_NORMALIZED_CONTROLLED_DELETION_PREFLIGHT_NATIVE_UNIQUENESS_PENDING",
+  "variant": "4L",
+  "plan": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\batches\\source_service_4L_b015.json",
+  "planSHA256": "5B6893A2096FD9A190063524380527342C3B58D4396A80A1D05955227A89AD92",
+  "sourceBoard": {
+    "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native\\HI_4L_USB_aux_4L_b014.brd",
+    "sha256": "873A3BE37F23723CFDB65A86DD38C0358B00D11D96C64146C9E7276817E90A9B",
+    "readback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_4L_b014_stored_only",
+    "checkpointDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\USB_aux_4L_b014",
+    "summary": {
+      "netCount": 69,
+      "nettedTerminalCount": 266.0,
+      "nativeRemainingConnections": 46.0,
+      "graphMinTerminalJoins": 46.0,
+      "netsNeedingConnection": 36,
+      "nativeDRC": 0,
+      "drcEvidenceScope": "BUILD_REQUESTED_FULL_DRC_ZERO; FRESH_STORED_STATE_ONLY; FINAL_FULL_RECOMPUTE_PENDING",
+      "nativeTerminalFreeBranches": 0
+    }
+  },
+  "inputNormalizedSnapshot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\USB_aux_4L_b014\\normalized.json",
+  "checks": [
+    {
+      "operation": "NSS01_DEL_VIA_[39, 26.2]",
+      "index": 0,
+      "type": "deleteVia",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteVia",
+        "id": "NSS01_DEL_VIA_[39, 26.2]",
+        "net": "PA4_SPI_NSS",
+        "xy": [
+          39,
+          26.2
+        ],
+        "padstack": "L28_VIA030_C060"
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_VIA_[32.2, 22]",
+      "index": 1,
+      "type": "deleteVia",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteVia",
+        "id": "NSS01_DEL_VIA_[32.2, 22]",
+        "net": "PA4_SPI_NSS",
+        "xy": [
+          32.2,
+          22
+        ],
+        "padstack": "L28_VIA030_C060"
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "OLD_PC14",
+      "index": 2,
+      "type": "deleteVia",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteVia",
+        "id": "OLD_PC14",
+        "net": "GPIO_PC14",
+        "xy": [
+          45.6,
+          25.2
+        ],
+        "padstack": "L28_VIA030_C060",
+        "purpose": "Exact unique native via removal before net disconnect, preserve unrelated vias"
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "OLD_PC14_GND",
+      "index": 3,
+      "type": "deleteVia",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteVia",
+        "id": "OLD_PC14_GND",
+        "net": "GND",
+        "xy": [
+          46.95,
+          24.9
+        ],
+        "padstack": "L28_VIA030_C060",
+        "purpose": "Exact unique native via removal before net disconnect, preserve unrelated vias"
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "OLD_HSE_ANCHOR",
+      "index": 4,
+      "type": "deleteVia",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteVia",
+        "id": "OLD_HSE_ANCHOR",
+        "net": "GND",
+        "xy": [
+          45.45,
+          28.85
+        ],
+        "padstack": "L28_VIA030_C060",
+        "purpose": "Exact unique native via removal before net disconnect, preserve unrelated vias"
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "OLD_C15_COMMON_GND",
+      "index": 5,
+      "type": "deleteVia",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteVia",
+        "id": "OLD_C15_COMMON_GND",
+        "net": "GND",
+        "xy": [
+          47.45,
+          28.7252
+        ],
+        "padstack": "L28_VIA030_C060",
+        "purpose": "Exact unique native via removal before net disconnect, preserve unrelated vias"
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "GPIO_NORTH_RIP_PC15_VERTICAL",
+      "index": 6,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "GPIO_NORTH_RIP_PC15_VERTICAL",
+        "net": "GPIO_PC15",
+        "layer": "BOTTOM",
+        "points": [
+          [
+            40.3,
+            28.9
+          ],
+          [
+            40.3,
+            30.3
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "GPIO_NORTH_RIP_PC15_WEST",
+      "index": 7,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "GPIO_NORTH_RIP_PC15_WEST",
+        "net": "GPIO_PC15",
+        "layer": "BOTTOM",
+        "points": [
+          [
+            40.3,
+            30.3
+          ],
+          [
+            35.4,
+            30.3
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "SOUTH_RIP_C14_GND_0",
+      "index": 8,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "SOUTH_RIP_C14_GND_0",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            42.25,
+            22.75
+          ],
+          [
+            42.25,
+            21.95
+          ]
+        ],
+        "width": 0.25,
+        "purpose": "Shorten existing direct VSS35-C14 TOP return to release SWDIO; retained cap-ground globalvia unchanged."
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "SOUTH_RIP_C14_GND_1",
+      "index": 9,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "SOUTH_RIP_C14_GND_1",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            42.25,
+            21.95
+          ],
+          [
+            41.85,
+            21.55
+          ]
+        ],
+        "width": 0.25,
+        "purpose": "Shorten existing direct VSS35-C14 TOP return to release SWDIO; retained cap-ground globalvia unchanged."
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "SOUTH_RIP_C14_GND_2",
+      "index": 10,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "SOUTH_RIP_C14_GND_2",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            41.85,
+            21.55
+          ],
+          [
+            42.3252,
+            21.0748
+          ]
+        ],
+        "width": 0.6,
+        "purpose": "Shorten existing direct VSS35-C14 TOP return to release SWDIO; retained cap-ground globalvia unchanged."
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "SOUTH_RIP_C14_GND_3",
+      "index": 11,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "SOUTH_RIP_C14_GND_3",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            42.3252,
+            21.0748
+          ],
+          [
+            42.3252,
+            20.3
+          ]
+        ],
+        "width": 0.6,
+        "purpose": "Shorten existing direct VSS35-C14 TOP return to release SWDIO; retained cap-ground globalvia unchanged."
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "LEFT_RIP_0",
+      "index": 12,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "LEFT_RIP_0",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            35.75,
+            24.75
+          ],
+          [
+            34.95,
+            24.75
+          ]
+        ],
+        "width": 0.25
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "LEFT_RIP_1",
+      "index": 13,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "LEFT_RIP_1",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            34.95,
+            24.75
+          ],
+          [
+            34.55,
+            25.15
+          ]
+        ],
+        "width": 0.25
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "LEFT_RIP_2",
+      "index": 14,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "LEFT_RIP_2",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            34.55,
+            25.15
+          ],
+          [
+            33.4,
+            25.2748
+          ]
+        ],
+        "width": 0.6
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "LEFT_RIP_3",
+      "index": 15,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "LEFT_RIP_3",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            33.4,
+            25.2748
+          ],
+          [
+            32.45,
+            25.2748
+          ]
+        ],
+        "width": 0.6
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "LEFT_RIP_4",
+      "index": 16,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "LEFT_RIP_4",
+        "net": "V3V3",
+        "layer": "TOP",
+        "points": [
+          [
+            35.75,
+            24.25
+          ],
+          [
+            34.95,
+            24.25
+          ]
+        ],
+        "width": 0.25
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "LEFT_RIP_5",
+      "index": 17,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "LEFT_RIP_5",
+        "net": "V3V3",
+        "layer": "TOP",
+        "points": [
+          [
+            34.95,
+            24.25
+          ],
+          [
+            34.55,
+            23.85
+          ]
+        ],
+        "width": 0.25
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "LEFT_RIP_6",
+      "index": 18,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "LEFT_RIP_6",
+        "net": "V3V3",
+        "layer": "TOP",
+        "points": [
+          [
+            34.55,
+            23.85
+          ],
+          [
+            33.4,
+            23.7
+          ]
+        ],
+        "width": 0.6
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "LEFT_RIP_7",
+      "index": 19,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "LEFT_RIP_7",
+        "net": "V3V3",
+        "layer": "TOP",
+        "points": [
+          [
+            33.3,
+            22.5
+          ],
+          [
+            33.3,
+            24
+          ]
+        ],
+        "width": 0.6
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "LEFT_RIP_8",
+      "index": 20,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "LEFT_RIP_8",
+        "net": "V3V3",
+        "layer": "TOP",
+        "points": [
+          [
+            33.3,
+            24
+          ],
+          [
+            37,
+            24
+          ]
+        ],
+        "width": 0.6
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_0",
+      "index": 21,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_0",
+        "net": "PA4_SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            35.75,
+            29.25
+          ],
+          [
+            36.8,
+            29.25
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_1",
+      "index": 22,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_1",
+        "net": "PA4_SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            36.8,
+            29.25
+          ],
+          [
+            39,
+            27.05
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_2",
+      "index": 23,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_2",
+        "net": "PA4_SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            39,
+            27.05
+          ],
+          [
+            39,
+            26.2
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_3",
+      "index": 24,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_3",
+        "net": "PA4_SPI_NSS",
+        "layer": "BOTTOM",
+        "points": [
+          [
+            39,
+            26.2
+          ],
+          [
+            39,
+            21.3
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_4",
+      "index": 25,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_4",
+        "net": "PA4_SPI_NSS",
+        "layer": "BOTTOM",
+        "points": [
+          [
+            39,
+            21.3
+          ],
+          [
+            32.2,
+            21.3
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_5",
+      "index": 26,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_5",
+        "net": "PA4_SPI_NSS",
+        "layer": "BOTTOM",
+        "points": [
+          [
+            32.2,
+            21.3
+          ],
+          [
+            32.2,
+            22
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_6",
+      "index": 27,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_6",
+        "net": "PA4_SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            32.2,
+            22
+          ],
+          [
+            32,
+            21
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_9",
+      "index": 28,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_9",
+        "net": "PA4_SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            32.93,
+            33.02
+          ],
+          [
+            32.7984,
+            33.02
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_10",
+      "index": 29,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_10",
+        "net": "PA4_SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            34.8,
+            31.15
+          ],
+          [
+            32.93,
+            33.02
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_13",
+      "index": 30,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_13",
+        "net": "PA5_SPI_SCK",
+        "layer": "TOP",
+        "points": [
+          [
+            34.385,
+            30.215
+          ],
+          [
+            33.6,
+            31
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_15",
+      "index": 31,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_15",
+        "net": "ADC0",
+        "layer": "TOP",
+        "points": [
+          [
+            32.8,
+            35
+          ],
+          [
+            32.6764,
+            35
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_16",
+      "index": 32,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_16",
+        "net": "ADC0",
+        "layer": "TOP",
+        "points": [
+          [
+            34.8,
+            33
+          ],
+          [
+            32.8,
+            35
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_17",
+      "index": 33,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_17",
+        "net": "ADC_IN",
+        "layer": "TOP",
+        "points": [
+          [
+            29.8,
+            34
+          ],
+          [
+            26.27,
+            34
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_18",
+      "index": 34,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_18",
+        "net": "ADC_IN",
+        "layer": "TOP",
+        "points": [
+          [
+            30.8,
+            35
+          ],
+          [
+            29.8,
+            34
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_DEL_19",
+      "index": 35,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_DEL_19",
+        "net": "ADC_IN",
+        "layer": "TOP",
+        "points": [
+          [
+            31.1016,
+            35
+          ],
+          [
+            30.8,
+            35
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_4L_DEL_0",
+      "index": 36,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_4L_DEL_0",
+        "net": "SPI_SCK",
+        "layer": "TOP",
+        "points": [
+          [
+            32.05,
+            31
+          ],
+          [
+            31,
+            29.95
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_4L_DEL_1",
+      "index": 37,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_4L_DEL_1",
+        "net": "SPI_SCK",
+        "layer": "TOP",
+        "points": [
+          [
+            32.0252,
+            31
+          ],
+          [
+            32.05,
+            31
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_4L_DEL_3",
+      "index": 38,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_4L_DEL_3",
+        "net": "SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            30.5,
+            33
+          ],
+          [
+            29.8,
+            32.3
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_4L_DEL_4",
+      "index": 39,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_4L_DEL_4",
+        "net": "SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            31.2,
+            33
+          ],
+          [
+            30.5,
+            33
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "NSS01_4L_DEL_5",
+      "index": 40,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "NSS01_4L_DEL_5",
+        "net": "SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            31.2236,
+            33.02
+          ],
+          [
+            31.2,
+            33
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "RIGHT_RIP_0",
+      "index": 41,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "RIGHT_RIP_0",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            45.05,
+            29.25
+          ],
+          [
+            45.45,
+            28.85
+          ]
+        ],
+        "width": 0.25
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "RIGHT_RIP_1",
+      "index": 42,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "RIGHT_RIP_1",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            44.25,
+            29.25
+          ],
+          [
+            45.05,
+            29.25
+          ]
+        ],
+        "width": 0.25
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "RIGHT_RIP_2",
+      "index": 43,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "RIGHT_RIP_2",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            45.45,
+            28.85
+          ],
+          [
+            46.5,
+            28.7252
+          ]
+        ],
+        "width": 0.6
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "RIGHT_RIP_3",
+      "index": 44,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "RIGHT_RIP_3",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            46.5,
+            28.7252
+          ],
+          [
+            47.45,
+            28.7252
+          ]
+        ],
+        "width": 0.6
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "RIGHT_RIP_4",
+      "index": 45,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "RIGHT_RIP_4",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            47.9428,
+            28.7252
+          ],
+          [
+            47.45,
+            28.7252
+          ]
+        ],
+        "width": 0.6
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "RIGHT_RIP_5",
+      "index": 46,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "RIGHT_RIP_5",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            48.4,
+            28.268
+          ],
+          [
+            47.9428,
+            28.7252
+          ]
+        ],
+        "width": 0.6
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "RIGHT_RIP_6",
+      "index": 47,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "RIGHT_RIP_6",
+        "net": "GND",
+        "layer": "TOP",
+        "points": [
+          [
+            49.5,
+            28.268
+          ],
+          [
+            48.4,
+            28.268
+          ]
+        ],
+        "width": 0.6
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "RIGHT_RIP_7",
+      "index": 48,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "RIGHT_RIP_7",
+        "net": "V3V3",
+        "layer": "TOP",
+        "points": [
+          [
+            45.45,
+            30.15
+          ],
+          [
+            46.5,
+            30.3
+          ]
+        ],
+        "width": 0.6
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "RIGHT_RIP_8",
+      "index": 49,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "RIGHT_RIP_8",
+        "net": "V3V3",
+        "layer": "TOP",
+        "points": [
+          [
+            45.05,
+            29.75
+          ],
+          [
+            45.45,
+            30.15
+          ]
+        ],
+        "width": 0.25
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "RIGHT_RIP_9",
+      "index": 50,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "RIGHT_RIP_9",
+        "net": "V3V3",
+        "layer": "TOP",
+        "points": [
+          [
+            44.25,
+            29.75
+          ],
+          [
+            45.05,
+            29.75
+          ]
+        ],
+        "width": 0.25
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "RIGHT_RIP_10",
+      "index": 51,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "RIGHT_RIP_10",
+        "net": "V3V3",
+        "layer": "TOP",
+        "points": [
+          [
+            49.5,
+            30.3
+          ],
+          [
+            46.5,
+            30.3
+          ]
+        ],
+        "width": 0.6
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    },
+    {
+      "operation": "RIGHT_RIP_11",
+      "index": 52,
+      "type": "deleteSegment",
+      "normalizedCandidateMatches": 1,
+      "duplicateDestructionRequest": false,
+      "pass": true,
+      "target": {
+        "type": "deleteSegment",
+        "id": "RIGHT_RIP_11",
+        "net": "GPIO_PC14",
+        "layer": "BOTTOM",
+        "points": [
+          [
+            43.6,
+            25.2
+          ],
+          [
+            45.6,
+            25.2
+          ]
+        ],
+        "width": 0.2
+      },
+      "nativeDBIDUniqueCheckStillRequired": true
+    }
+  ],
+  "destructiveOperations": 53,
+  "allDeleteViasBeforeDeleteSegments": true,
+  "deletionsFormInitialPrefix": true,
+  "placementSequence": "AFTER_INITIAL_DELETIONS",
+  "allPosesUnique": true,
+  "scope": [
+    "Read-only candidate preflight against immutable normalized actual geometry. No native process launched and no board changed.",
+    "Normalizer can collapse same-coordinate duplicate vias; native hiUniqueVia still must verify unique DBID and preserve all other via identities at execution.",
+    "Actual native cline topology may split/merge; native exact old segment matching and source SHA before execution remain mandatory."
+  ]
+}

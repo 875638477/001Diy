@@ -1,0 +1,240 @@
+{
+  "batchId": "CAN_RXD_2L_engineered_04",
+  "variant": "2L",
+  "status": "EXPLICIT_ENGINEERED_CANDIDATE_REQUIRES_NATIVE_AND_ACTUAL_RETURN_REVIEW",
+  "operations": [
+    {
+      "type": "via",
+      "id": "CAN2L_PHY_V",
+      "net": "CAN_RXD",
+      "xy": [
+        61.45,
+        12.2
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "CAN2L_PHY_TOP",
+      "net": "CAN_RXD",
+      "layer": "TOP",
+      "points": [
+        [
+          64,
+          12.19
+        ],
+        [
+          64,
+          12.2
+        ],
+        [
+          61.45,
+          12.2
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "CAN2L_BOTTOM_PERIMETER",
+      "net": "CAN_RXD",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          61.45,
+          12.2
+        ],
+        [
+          55.8,
+          12.2
+        ],
+        [
+          45,
+          1.4
+        ],
+        [
+          43.4,
+          1.4
+        ],
+        [
+          42.6,
+          2.2
+        ],
+        [
+          37,
+          2.2
+        ],
+        [
+          36.2,
+          1.4
+        ],
+        [
+          35,
+          1.4
+        ],
+        [
+          34.45,
+          1.95
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_USB_WEST_V",
+      "net": "CAN_RXD",
+      "xy": [
+        34.45,
+        1.95
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "CAN2L_WEST_TOP_DNP",
+      "net": "CAN_RXD",
+      "layer": "TOP",
+      "points": [
+        [
+          34.45,
+          1.95
+        ],
+        [
+          33.3,
+          3.1
+        ],
+        [
+          33.3,
+          15.3
+        ],
+        [
+          36.3,
+          18.3
+        ],
+        [
+          36.3236,
+          18.3
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_PHY_RETURN",
+      "net": "GND",
+      "xy": [
+        61.7,
+        11.2
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_WEST_RETURN",
+      "net": "GND",
+      "xy": [
+        33.4,
+        1.9
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_REFERENCE_CROSS_LEFT",
+      "net": "GND",
+      "xy": [
+        33.6,
+        16.6
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_REFERENCE_CROSS_RIGHT",
+      "net": "GND",
+      "xy": [
+        35.3,
+        18.4
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "CAN2L_REFERENCE_COPLANAR_BRIDGE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          33.6,
+          16.6
+        ],
+        [
+          35.2,
+          18.2
+        ],
+        [
+          35.2,
+          18.3
+        ]
+      ],
+      "width": 0.6
+    }
+  ],
+  "proofs": [
+    {
+      "from": "U5.4",
+      "to": "R13.2",
+      "connected": true
+    },
+    {
+      "from": "U1.35",
+      "toAlias": "CAN2L_PHY_RETURN",
+      "connected": true
+    },
+    {
+      "from": "U1.35",
+      "toAlias": "CAN2L_WEST_RETURN",
+      "connected": true
+    },
+    {
+      "from": "U1.35",
+      "toAlias": "CAN2L_REFERENCE_CROSS_LEFT",
+      "connected": true
+    },
+    {
+      "from": "U1.35",
+      "toAlias": "CAN2L_REFERENCE_CROSS_RIGHT",
+      "connected": true
+    }
+  ],
+  "engineering": {
+    "bodyAndEdge": "CAN passes USB housing onBOTTOM. Two short y1.4 edge passages avoid realTH shield pads; central underside moves inward to2.2. TOP west legx33.3 outside housing and1.25away from futureVBUSsenseBOTTOMx34.55.",
+    "referenceCross": "Only finite TOPCAN diagonal crosses futureBOTTOMVBUSsense at34.55,16.55. Explicit.6TOPcoplanarGND parallel bridge, .3071copper gap, ties actual commonGND on both sides of BOTTOMslot via33.6,16.6 and35.3,18.4. Actual generated plane/width/nativegraph and return-corridor geometry must be measured; not wholepath continuousmicrostrip.",
+    "transitions": [
+      {
+        "signalVia": [
+          61.45,
+          12.2
+        ],
+        "groundVia": [
+          61.7,
+          11.2
+        ],
+        "distanceMM": 1.0307764064044151
+      },
+      {
+        "signalVia": [
+          34.45,
+          1.95
+        ],
+        "groundVia": [
+          33.4,
+          1.9
+        ],
+        "distanceMM": 1.051189802081436
+      }
+    ],
+    "unusedViaRemoved": "No receiverDNPvia: TOP end goes directly toR13.2, only two genuine signal layer transitions.",
+    "interfaceConditions": "500kbpsCAN bench assumption is not outputedge specification. Logic routing reference/return and actualMPN outputedge/cable remain separate; no SI/EMI certification."
+  }
+}

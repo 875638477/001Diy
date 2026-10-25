@@ -1,0 +1,39 @@
+
+  NAME
+         axlRegionAdd  - add shapes to a region group
+  FUNCTION
+         axlRegionAdd(
+                 o_regiondbid/t_regionName
+                 o_dbid/lo_dbid
+         )==> t/nil
+  SYNOPSIS
+         Adds members to a region group. Eligible members are:
+                 - shapes
+                 - rectangles
+         Only objects on the CONS_REGION class may be added to
+         a region.  See region discussion in axlRegionCreate.
+ 
+         This will mark DRC out of date. It is up to the
+         application to update the DRC system
+  TIP
+         Using dbids is faster then using names.
+  NEEDS
+         o_regiondbid: dbid of a region group
+         t_regionName: name of a region group
+         o_dbid:   legal database dbid to add to region
+         lo_dbid:  list of legal database dbids to add to region 
+  RETURNS
+         t   - added elements
+         nil - failed one or more element adds; object might already 
+                 be a member of a region or not legal dbid to add to 
+                 a region
+  SEE ALSO
+         axlRegionAdd
+  EXAMPLES
+         - To region group created in axlRegionCreate add a shape
+             nc = car(axlSelectByName("REGION" "BGA"))
+             lyr = "CONSTRAINT REGION/OUTER_LAYERS"
+             shape = axlDBCreateRectangle( list(100:100 200:200) nil lyr)
+             shape = car(shape)
+             axlRegionAdd(nc shape)
+

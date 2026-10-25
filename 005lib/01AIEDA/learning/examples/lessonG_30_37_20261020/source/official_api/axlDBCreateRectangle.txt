@@ -1,0 +1,64 @@
+
+  NAME
+         axlDBCreateRectangle - add rectangle to the database
+  FUNCTION
+         axlDBCreateRectangle(
+             l_bBox
+             [g_fill]
+             [t_layer]
+             [t_netname]
+             [o_parent]
+         )
+         ==> l_result/nil
+  SYNOPSIS
+         Creates a rectangle with coordinates specified by l_bBox. If the 
+         rectangle cannot be created, the function returns nil.
+ 
+         If t_netname is non-null, then the rectangle becomes a member of
+         that net.  axlDBCreateRectangle ignores t_netname if the rectangle 
+         is unfilled.
+ 
+         axlDBCreateRectangle does not create the rectangle and returns nil
+         (error) if:
+         * The net does not exist.
+         * You try to create a filled rectangle on an Allegro layer 
+           requiring an unfilled rectangle.
+         * You try to create an unfilled rectangle on an Allegro layer 
+           requiring a filled rectangle.
+ 
+         See axlDBCreateSymDefSkeleton on notes about restrictions on
+         shapes that are part of symbol definitions.
+  NEEDS
+         l_bBox:         Bounding box of rectangle: Lower left and upper 
+                         right corners of rectangle
+         g_fill:         If t then fill is solid. If nil (default) then the
+                         rectangle is unfilled.
+                         or optional line font, may have
+                                  'SOLID 'HIDDEN 'PHANTOM 'DOTTED 'CENTER
+                            Line fonts can only be used with unfilled shapes.
+                            Only certain Allegro layers support fonted unfilled shapes.
+         t_layer:        Layer to which to add the rectangle. Default is 
+                         current active layer.
+         t_netname:      Name of net of which this rectangle is to be a 
+                         part. This argument is meaningful only if the 
+                         rectangle is being added on an Etch layer.
+         o_parent:       dbid of object of which the rectangle is to be a
+                         part. This can be either the dbid of a symbol 
+                         instance or nil for the design itself.
+  RETURNS
+         l_result/nil:   nil if nothing was created. Otherwise it returns nil
+         list:           * (car) rectangle dbid
+                         * (cadr) t if DRCs created. Otherwise returns nil
+ 
+  EXAMPLE
+         - Unfilled shape indicated layer
+             axlDBCreateRectangle(list(100:100 200:200) nil "BOARD GEOMETRY/OUTLINE")
+         - Filled shape on active layer 
+             axlDBCreateRectangle(list(200:200 400:300) t)
+ 
+         - Filled shape on ETCH/TOP assigned to NET_1 using user supplied picks
+            axlDBCreateRectangle( axlEnterBox() t "ETCH/TOP" "GND")
+ 
+         - Fonted dotted line shape on indicated layer
+            axlDBCreateRectangle(list(400:100 500:300) 'DOTTED "BOARD GEOMETRY/OUTLINE" )
+

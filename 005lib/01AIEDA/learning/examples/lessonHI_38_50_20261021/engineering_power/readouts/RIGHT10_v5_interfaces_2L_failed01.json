@@ -1,0 +1,107 @@
+{
+  "status": "REVISE_FULL_GROUP",
+  "variant": "2L",
+  "tests": 61088,
+  "issueCount": 3,
+  "issues": [
+    {
+      "a": "R30.2",
+      "b": "RIGHT_SCL_EXPLICIT:4",
+      "netA": "BOOT_SERVICE",
+      "netB": "I2C_SCL",
+      "layer": "TOP",
+      "gap": 0.0,
+      "overlap": 0.037723,
+      "required": 0.16
+    },
+    {
+      "a": "R30.2",
+      "b": "RIGHT_SCL_EXPLICIT:5",
+      "netA": "BOOT_SERVICE",
+      "netB": "I2C_SCL",
+      "layer": "TOP",
+      "gap": 0.100817,
+      "overlap": 0.0,
+      "required": 0.16
+    },
+    {
+      "a": "RIGHT_PC14_FINAL",
+      "b": "RIGHT_SDA_EXPLICIT_BOTTOM:2",
+      "netA": "GPIO_PC14",
+      "netB": "I2C_SDA",
+      "layer": "BOTTOM",
+      "gap": 0.1,
+      "overlap": 0.0,
+      "required": 0.2
+    }
+  ],
+  "shadowViolations": [],
+  "placementOverlaps": [],
+  "uniqueDeleteProofs": [
+    {
+      "id": "OLD_PC14",
+      "unique": true
+    },
+    {
+      "id": "OLD_PC14_GND",
+      "unique": true
+    },
+    {
+      "id": "OLD_HSE_ANCHOR",
+      "unique": true
+    },
+    {
+      "id": "OLD_C15_COMMON_GND",
+      "unique": true
+    },
+    {
+      "id": "RIGHT_RIP_0",
+      "unique": true
+    },
+    {
+      "id": "RIGHT_RIP_1",
+      "unique": true
+    },
+    {
+      "id": "RIGHT_RIP_2",
+      "unique": true
+    },
+    {
+      "id": "RIGHT_RIP_3",
+      "unique": true
+    },
+    {
+      "id": "RIGHT_RIP_4",
+      "unique": true
+    },
+    {
+      "id": "RIGHT_RIP_5",
+      "unique": true
+    },
+    {
+      "id": "RIGHT_RIP_6",
+      "unique": true
+    },
+    {
+      "id": "RIGHT_RIP_7",
+      "unique": true
+    },
+    {
+      "id": "RIGHT_RIP_8",
+      "unique": true
+    },
+    {
+      "id": "RIGHT_RIP_9",
+      "unique": true
+    },
+    {
+      "id": "RIGHT_RIP_10",
+      "unique": true
+    },
+    {
+      "id": "RIGHT_RIP_11",
+      "unique": true
+    }
+  ],
+  "scope": "Actual SPIb012 manual copper/vias and true pad AABB. Dynamic thermal clines excluded because placement/void changes regenerate. Exact deleted objects removed only in-memory. Proposed new quiet island/void not yet native. Existing G31 right.2 spacing retained; right10 private.16 signal/.20ground-via exception only explicitregion."
+}

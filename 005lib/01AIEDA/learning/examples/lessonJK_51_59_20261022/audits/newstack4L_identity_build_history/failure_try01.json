@@ -1,0 +1,9 @@
+﻿{
+  "status": "FAILED_OUTPUT_LINK_ORDER_NO_NATIVE_EXECUTION",
+  "attempt": 1,
+  "error": "AssertionError: note_link_../examples/lessonJK_51_59_20261022/audits/jk_newstack4L_assembly_identity_review.json pass:false",
+  "cause": "The generator checked a link to its own audit before that audit was written. It had already emitted the separate new identity CSV/README/note; no source or sealed file was modified.",
+  "correction": "Create the new audit BUILDING marker before checking the note links, replace it with the final audit, and independently validate all final links/manifest records after generation.",
+  "cadenceExecuted": false,
+  "oldSealedFilesModified": false
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PLANNED_PLACEMENT_ROUTING_TRADEOFF_NOT_PI_CERT",
+  "baseline": {
+    "VDDcenterline_mm": 2.426345596729057,
+    "VSScenterline_mm": 2.423076100149277,
+    "pairedCenterlineTotal_mm": 4.849421696878334,
+    "closedPlanarCenterlineLoopArea_mm2": 2.269269999999998
+  },
+  "source4": {
+    "VDDcenterline_mm": 3.9489997935635768,
+    "VSScenterline_mm": 4.090712024380935,
+    "pairedCenterlineTotal_mm": 8.039711817944513,
+    "closedPlanarCenterlineLoopArea_mm2": 3.4996224800000064
+  },
+  "delta": {
+    "totalLength_mm": 3.1902901210661785,
+    "area_mm2": 1.2303524800000085
+  },
+  "interpretation": [
+    "C15 moved to free PB9 and permit normal-width TOP exit without unusedvia or quietshadow crossing. Both .25 short necks remain original1.4budget; normal feed/return.6 retained.",
+    "Centerline area is a 2D geometric proxy, not actual current/inductance/PI simulation. Adjacent TOP return remains explicit, but loop is larger and exact MPN/thermal/decoupling performance unverified.",
+    "C16bulk is shifted.3 for placement spacing; all MCUpower domains and other local caps unchanged. Native fullfill/DRC/negative and actual loop readback mandatory."
+  ]
+}

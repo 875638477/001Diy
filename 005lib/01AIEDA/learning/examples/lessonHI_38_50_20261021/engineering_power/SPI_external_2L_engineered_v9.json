@@ -1,0 +1,608 @@
+{
+  "status": "DRAFT_ENGINEERING_CANDIDATE_NOT_NATIVE",
+  "batchId": "SPI_external_2L_engineered_v9",
+  "variant": "2L",
+  "sourceExpectedSHA256": "76ED85DA3999A7DAFBDF9EB99EEC425B480A5EAEB49843BF970F8664707DE0AF",
+  "operations": [
+    {
+      "type": "deleteSegment",
+      "id": "SPI_RIP_PREFILTER_0",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          29.8,
+          30.95
+        ],
+        [
+          28.4,
+          32.35
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Move low-current prefilter row +0.20mm to permit grounded guard return, no long BOTTOM power bridge"
+    },
+    {
+      "type": "deleteSegment",
+      "id": "SPI_RIP_PREFILTER_1",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          28.4,
+          32.35
+        ],
+        [
+          22,
+          32.35
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Move low-current prefilter row +0.20mm to permit grounded guard return, no long BOTTOM power bridge"
+    },
+    {
+      "type": "deleteSegment",
+      "id": "SPI_RIP_PREFILTER_2",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          22,
+          32.35
+        ],
+        [
+          22,
+          37
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Move low-current prefilter row +0.20mm to permit grounded guard return, no long BOTTOM power bridge"
+    },
+    {
+      "type": "route",
+      "id": "SPI_PREFILTER_ROW_SHIFT",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          29.8,
+          30.95
+        ],
+        [
+          28.2,
+          32.55
+        ],
+        [
+          22,
+          32.55
+        ],
+        [
+          22,
+          37
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Low-current pre-10ohm feed only, retains local VDDA filter and ADC topology"
+    },
+    {
+      "type": "via",
+      "id": "SPI_SCK_EAST",
+      "net": "SPI_SCK",
+      "xy": [
+        30.8,
+        29.95
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "via",
+      "id": "SPI_SCK_WEST",
+      "net": "SPI_SCK",
+      "xy": [
+        21.85,
+        29.95
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "route",
+      "id": "SPI_SCK_EAST_TOP",
+      "net": "SPI_SCK",
+      "layer": "TOP",
+      "points": [
+        [
+          32.0252,
+          31
+        ],
+        [
+          31.85,
+          31
+        ],
+        [
+          30.8,
+          29.95
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual source-ordered SPI route"
+    },
+    {
+      "type": "route",
+      "id": "SPI_SCK_BOTTOM_BRIDGE",
+      "net": "SPI_SCK",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          30.8,
+          29.95
+        ],
+        [
+          21.85,
+          29.95
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual source-ordered SPI route"
+    },
+    {
+      "type": "route",
+      "id": "SPI_SCK_WEST_TOP",
+      "net": "SPI_SCK",
+      "layer": "TOP",
+      "points": [
+        [
+          21.85,
+          29.95
+        ],
+        [
+          21.65,
+          30.15
+        ],
+        [
+          16.2,
+          30.15
+        ],
+        [
+          14.59,
+          28.54
+        ],
+        [
+          7,
+          28.54
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual source-ordered SPI route"
+    },
+    {
+      "type": "via",
+      "id": "SPI_MOSI_EAST",
+      "net": "SPI_MOSI",
+      "xy": [
+        31.65,
+        27.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "via",
+      "id": "SPI_MOSI_WEST",
+      "net": "SPI_MOSI",
+      "xy": [
+        14,
+        29.3
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "route",
+      "id": "SPI_MOSI_EAST_TOP",
+      "net": "SPI_MOSI",
+      "layer": "TOP",
+      "points": [
+        [
+          32.0252,
+          27
+        ],
+        [
+          32.0252,
+          27.4248
+        ],
+        [
+          31.65,
+          27.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual source-ordered SPI route"
+    },
+    {
+      "type": "route",
+      "id": "SPI_MOSI_BOTTOM_BRIDGE",
+      "net": "SPI_MOSI",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          31.65,
+          27.8
+        ],
+        [
+          31.15,
+          28.3
+        ],
+        [
+          26.6,
+          28.3
+        ],
+        [
+          26.4,
+          28.5
+        ],
+        [
+          14.8,
+          28.5
+        ],
+        [
+          14,
+          29.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual source-ordered SPI route"
+    },
+    {
+      "type": "route",
+      "id": "SPI_MOSI_WEST_TOP",
+      "net": "SPI_MOSI",
+      "layer": "TOP",
+      "points": [
+        [
+          14,
+          29.3
+        ],
+        [
+          12.22,
+          31.08
+        ],
+        [
+          7,
+          31.08
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual source-ordered SPI route"
+    },
+    {
+      "type": "via",
+      "id": "SPI_MISO_EAST",
+      "net": "SPI_MISO",
+      "xy": [
+        31.65,
+        29.77
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "via",
+      "id": "SPI_MISO_WEST",
+      "net": "SPI_MISO",
+      "xy": [
+        20.5,
+        30.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "route",
+      "id": "SPI_MISO_EAST_TOP",
+      "net": "SPI_MISO",
+      "layer": "TOP",
+      "points": [
+        [
+          32.0252,
+          29
+        ],
+        [
+          31.65,
+          29.3752
+        ],
+        [
+          31.65,
+          29.77
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual source-ordered SPI route"
+    },
+    {
+      "type": "route",
+      "id": "SPI_MISO_BOTTOM_BRIDGE",
+      "net": "SPI_MISO",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          31.65,
+          29.77
+        ],
+        [
+          31.42,
+          30
+        ],
+        [
+          31.42,
+          30.23
+        ],
+        [
+          30.85,
+          30.8
+        ],
+        [
+          20.5,
+          30.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual source-ordered SPI route"
+    },
+    {
+      "type": "route",
+      "id": "SPI_MISO_WEST_TOP",
+      "net": "SPI_MISO",
+      "layer": "TOP",
+      "points": [
+        [
+          20.5,
+          30.8
+        ],
+        [
+          17.68,
+          33.62
+        ],
+        [
+          7,
+          33.62
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual source-ordered SPI route"
+    },
+    {
+      "type": "via",
+      "id": "SPI_NSS_EAST",
+      "net": "SPI_NSS",
+      "xy": [
+        29.8,
+        32.3
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "via",
+      "id": "SPI_NSS_WEST",
+      "net": "SPI_NSS",
+      "xy": [
+        20.3,
+        32.4
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "route",
+      "id": "SPI_NSS_EAST_TOP",
+      "net": "SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          31.2236,
+          33.02
+        ],
+        [
+          30.52,
+          33.02
+        ],
+        [
+          29.8,
+          32.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual source-ordered SPI route"
+    },
+    {
+      "type": "route",
+      "id": "SPI_NSS_BOTTOM_BRIDGE",
+      "net": "SPI_NSS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          29.8,
+          32.3
+        ],
+        [
+          20.4,
+          32.3
+        ],
+        [
+          20.3,
+          32.4
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual source-ordered SPI route"
+    },
+    {
+      "type": "route",
+      "id": "SPI_NSS_WEST_TOP",
+      "net": "SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          20.3,
+          32.4
+        ],
+        [
+          16.54,
+          36.16
+        ],
+        [
+          7,
+          36.16
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual source-ordered SPI route"
+    },
+    {
+      "type": "via",
+      "id": "SPI_RETURN_SCK_E",
+      "net": "GND",
+      "xy": [
+        30.9,
+        29.1
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "via",
+      "id": "SPI_RETURN_SCK_W",
+      "net": "GND",
+      "xy": [
+        20.5,
+        29.32
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "via",
+      "id": "SPI_RETURN_MOSI_E",
+      "net": "GND",
+      "xy": [
+        32.8,
+        25.3
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "via",
+      "id": "SPI_RETURN_MOSI_W",
+      "net": "GND",
+      "xy": [
+        14,
+        30.6
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "via",
+      "id": "SPI_RETURN_MISO_E",
+      "net": "GND",
+      "xy": [
+        32.85,
+        28.1
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "via",
+      "id": "SPI_RETURN_GUARD_E",
+      "net": "GND",
+      "xy": [
+        27.1,
+        31.55
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "via",
+      "id": "SPI_RETURN_GUARD_W",
+      "net": "GND",
+      "xy": [
+        21,
+        31.55
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "via",
+      "id": "SPI_RETURN_NSS_E",
+      "net": "GND",
+      "xy": [
+        29,
+        33.2
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "via",
+      "id": "SPI_RETURN_NSS_W",
+      "net": "GND",
+      "xy": [
+        20.8,
+        33.75
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Explicit signal/ground layer transition; verify native filled ground attachment"
+    },
+    {
+      "type": "route",
+      "id": "SPI_GUARD_CLOCK_MOSI",
+      "net": "GND",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          28.6,
+          29
+        ],
+        [
+          28.85,
+          29.25
+        ],
+        [
+          22.8,
+          29.25
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Connect existing C9 GND via to guard; same-layer ground beside SCK across missing TOP LDO reference"
+    },
+    {
+      "type": "route",
+      "id": "SPI_GUARD_MISO_NSS",
+      "net": "GND",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          27.1,
+          31.55
+        ],
+        [
+          21,
+          31.55
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Explicit continuous GND guard across C8 positive pad reference gap and below prefilter"
+    }
+  ],
+  "assumptions": [
+    "SPI teaching initially <=1MHz, lowest adequate GPIO speed, receiver waveform verification before increasing rate; edge rate rather than clock alone determines reflection risk",
+    "TOP power pads beneath local BOTTOM bridges preclude continuous opposite reference. Grounded coplanar rails and actual plane attachment are deliberate return paths, not impedance or EMI certification",
+    "0.2mm signals, 0.6mm guard copper; original VDDA prefilter TOP row moved +0.20mm, original08 not used"
+  ]
+}

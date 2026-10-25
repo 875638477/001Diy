@@ -1,0 +1,140 @@
+{
+  "status": "READ_ONLY_COMPARISON_REFERENCE_POTENTIAL_NOT_ACTUAL_FILL_OR_ACCEPTANCE",
+  "variant": "2L",
+  "sourceSHA": "AA3BFC0E01B06CB1058462439C71E56BC316F1F2929859B6A224320BE1013420",
+  "plan": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\USB_RETURN_SOURCE_COMPARE_2L_03.json",
+  "planSHA": "4bcdde0dad8e68602e3a6b0197f46c587c4224f8a3c5807c991c3aa291956f7f",
+  "netMetrics": [
+    {
+      "net": "PA11_SHARED",
+      "reference": "BOTTOM",
+      "actualBefore": {
+        "centerlineLengthMM": 6.453146923741189,
+        "missingCenterlineMM": 3.823476339966639,
+        "footprintAreaMM2": 1.2906293847482597,
+        "missingFootprintMM2": 0.7690515784637427
+      },
+      "booleanPotentialAfter": {
+        "centerlineLengthMM": 6.453146923741189,
+        "missingCenterlineMM": 2.967170437648658,
+        "footprintAreaMM2": 1.2906293847482597,
+        "missingFootprintMM2": 0.5962253997027214
+      }
+    },
+    {
+      "net": "PA12_SHARED",
+      "reference": "BOTTOM",
+      "actualBefore": {
+        "centerlineLengthMM": 6.380354717605402,
+        "missingCenterlineMM": 4.620782928957031,
+        "footprintAreaMM2": 1.2760709435210993,
+        "missingFootprintMM2": 0.9224342789846106
+      },
+      "booleanPotentialAfter": {
+        "centerlineLengthMM": 6.380354717605402,
+        "missingCenterlineMM": 4.038780903335121,
+        "footprintAreaMM2": 1.2760709435210993,
+        "missingFootprintMM2": 0.8369470687659384
+      }
+    }
+  ],
+  "nearestOtherViaCopperGaps": [
+    {
+      "net": "USB_ATTACH_N",
+      "xy": [
+        39.0,
+        21.2
+      ],
+      "copperGapMM": 0.5299523798725325
+    },
+    {
+      "net": "PA9_UART_TX",
+      "xy": [
+        39.7,
+        21.7
+      ],
+      "copperGapMM": 0.6642297074469963
+    },
+    {
+      "net": "GND",
+      "xy": [
+        38.8,
+        19.7
+      ],
+      "copperGapMM": 0.7732130528261769
+    },
+    {
+      "net": "GPIO_PB15",
+      "xy": [
+        38.5,
+        20.7
+      ],
+      "copperGapMM": 0.7924023773218305
+    },
+    {
+      "net": "SWDIO",
+      "xy": [
+        41.52,
+        21.25
+      ],
+      "copperGapMM": 1.348502073854889
+    },
+    {
+      "net": "GND",
+      "xy": [
+        38.0,
+        20.0
+      ],
+      "copperGapMM": 1.3536061485808561
+    },
+    {
+      "net": "GPIO_PB14",
+      "xy": [
+        38.0,
+        21.25
+      ],
+      "copperGapMM": 1.4223954283306965
+    },
+    {
+      "net": "GPIO_PB13",
+      "xy": [
+        37.5,
+        20.75
+      ],
+      "copperGapMM": 1.7914713928578017
+    }
+  ],
+  "nearestGroundVias": [
+    {
+      "net": "GND",
+      "xy": [
+        38.8,
+        19.7
+      ],
+      "copperGapMM": 0.7732130528261769
+    },
+    {
+      "net": "GND",
+      "xy": [
+        38.0,
+        20.0
+      ],
+      "copperGapMM": 1.3536061485808561
+    },
+    {
+      "net": "GND",
+      "xy": [
+        42.3252,
+        19.35
+      ],
+      "copperGapMM": 2.2230801353895693
+    }
+  ],
+  "limits": [
+    "ActualBefore is native b019; booleanPotentialAfter is only localfree-space upper-bound .3002GND expansion, noCadencesmoothing/minaperture/thermal/directCNS/joinorHFmodel",
+    "SourceUART_RX/TXphysicalpinsmustremain; removedoldviaaliasmustbeexplicitlyretired,newallconductorapprovedpointneedsadaptation",
+    "Allmanufacturingdrill/padspacingsunchanged; no0.5globalUSBspacingloweringclaimed, existinglimiteddenseescapeexceptionsneednativeeffectiveCNS",
+    "TOPCOP/neck/groundreachmaychangeafterfill: native actuals mandatory beforeacceptance",
+    "NoCADchangeapplied, criticalUSB/C14/HSEunchanged; otherSouthfuturecandidatesnotyetmerged"
+  ]
+}

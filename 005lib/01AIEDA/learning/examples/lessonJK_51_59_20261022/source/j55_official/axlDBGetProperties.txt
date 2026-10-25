@@ -1,0 +1,57 @@
+
+  NAME
+         axlDBGetProperties
+  FUNCTION
+         axlDBGetProperties(
+                 o_dbid
+                 [lt_type]
+                 )
+         ==> l_result/nil
+  SYNOPSIS
+         Returns the properties attached to a specified object in an 
+         associated list, that is, a list of lists, each of which 
+         contains a name and a value. The SKILL assoc function can
+         operate using this list.
+ 
+         Due to legacy considerations, lt_type is not used, this interface
+         will return all properties, even invisible. If you do not want
+         invisible properties then use
+             '("user" "allegro")
+ 
+         Normally you should not generically access invisible properties. 
+         Applications have choosen to hide them to minimize side-effects
+         due to uncontrolled changes. 
+  NEEDS
+         o_dbid:         dbid of the object from which to get the properties.
+         lt_type:        Optional list of strings qualifying the types of 
+                         properties to be retrieved from o_dbid.
+                 "user"       - retrieve user-defined properties only
+                 "allegro"    - retrieve Allegro defined properties
+                 "electrical" - retrieve electrical properties on net objects
+                 "invisible"  - retrieve invisible properties in type(s) 
+                                selected
+  RETURNS
+         l_result/nil:   Returns a list of name value pairs.For each name
+             value pair:
+                 * (car) is the property name
+                 * (cadr) is the property value, including units.
+ 
+         If axlDBGetProperties finds no properties, it returns nil.
+  SEE ALSO
+         axlDBAddProp
+  EXAMPLES
+         The following example selects the component with refdes "U1," 
+         gets its properties using axlDBGetProperties, and prints the assoc 
+         property list it returns. The properties happen to be: ROOM with 
+         value D, DFA_DEV_CLASS with value DIP, and LEAD_DIAMETER with
+         value 23 mil.
+ 
+         axlClearSelSet()
+         axlSetFindFilter(?enabled '("noall" "alltypes") ?onButtons "alltypes")
+         axlSingleSelectName("component" "U1")
+         myprops = axlDBGetProperties(car(axlGetSelSet()) '("user" "allegro"))
+         print myprops
+         ==> ((ROOM "D")
+                 (DFA_DEV_CLASS "DIP")
+                         (LEAD_DIAMETER "23 MIL"))
+

@@ -1,0 +1,40 @@
+HI_CLASS_REASSIGN net="VDDA" domain=physical old="NC_POWER_LV_P" new="HI_VDDA_P" baseCSet="P_VDDA_030" directNetProperties=((LOGICAL_PATH "@de_control.top(sch_1):vdda") (PHYSICAL_CONSTRAINT_SET "P_VDDA_030"))
+HI_CSET_COPY domain=physical name="HI_U1_INNER_LEFT_P_4L" copyTemplate="P_POWER_060" changes=((necklength_max "1.4 MM"))
+HI_CSET_COPY domain=spacing name="HI_U1_INNER_LEFT_S_POWER_4L" copyTemplate="S_POWER_030" changes=((smdpin_line "0.2 MM") (line_line "0.2 MM"))
+HI_REGION_CLASS region="HI_U1_INNER_LEFT" class="NC_POWER_LV_P" domain=physical cset="HI_U1_INNER_LEFT_P_4L" table=(objType "classTable" readOnly t prop propList:000002BE03880020 assembly nil sameNet nil spacing nil physical "HI_U1_INNER_LEFT_P_4L" region dbid:000002BE0FE366E8 netclass2 nil netclass1 dbid:000002BE0FDAFBC0)
+HI_REGION_CLASS region="HI_U1_INNER_LEFT" class="NC_POWER_LV_S" domain=spacing cset="HI_U1_INNER_LEFT_S_POWER_4L" table=(objType "classTable" readOnly t prop propList:000002BE03880038 assembly nil sameNet nil physical nil spacing "HI_U1_INNER_LEFT_S_POWER_4L" region dbid:000002BE0FE366E8 netclass2 nil netclass1 dbid:000002BE0FDB0008)
+HI_REGION_GEOMETRY (prop nil bBox ((35.1 23.8) (37.3 25.1)) readOnly t net nil objType "polygon" segments (dbid:000002BE0FE36B08 dbid:000002BE0FE36B58 dbid:000002BE0FE36BA8 dbid:000002BE0FE36BF8) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:000002BE0FE366E8))
+HI_CSET_COPY domain=physical name="HI_U1_INNER_SOUTH_P_4L" copyTemplate="P_POWER_060" changes=((necklength_max "1.4 MM"))
+HI_CSET_COPY domain=spacing name="HI_U1_INNER_SOUTH_S_POWER_4L" copyTemplate="S_POWER_030" changes=((smdpin_line "0.2 MM") (line_line "0.2 MM"))
+HI_REGION_CLASS region="HI_U1_INNER_SOUTH" class="NC_POWER_LV_P" domain=physical cset="HI_U1_INNER_SOUTH_P_4L" table=(objType "classTable" readOnly t prop propList:000002BE03880050 assembly nil sameNet nil spacing nil physical "HI_U1_INNER_SOUTH_P_4L" region dbid:000002BE0FE379B8 netclass2 nil netclass1 dbid:000002BE0FDAFBC0)
+HI_REGION_CLASS region="HI_U1_INNER_SOUTH" class="NC_POWER_LV_S" domain=spacing cset="HI_U1_INNER_SOUTH_S_POWER_4L" table=(objType "classTable" readOnly t prop propList:000002BE03880068 assembly nil sameNet nil physical nil spacing "HI_U1_INNER_SOUTH_S_POWER_4L" region dbid:000002BE0FE379B8 netclass2 nil netclass1 dbid:000002BE0FDB0008)
+HI_REGION_GEOMETRY (prop nil bBox ((41.95 22.1) (43.55 24.3)) readOnly t net nil objType "polygon" segments (dbid:000002BE0FE37DD8 dbid:000002BE0FE37E28 dbid:000002BE0FE37E78 dbid:000002BE0FE37EC8) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:000002BE0FE379B8))
+HI_CSET_COPY domain=physical name="HI_U1_INNER_NE_P_4L" copyTemplate="P_POWER_060" changes=((necklength_max "1.5 MM"))
+HI_CSET_COPY domain=spacing name="HI_U1_INNER_NE_S_POWER_4L" copyTemplate="S_POWER_030" changes=((smdpin_line "0.2 MM") (line_line "0.2 MM"))
+HI_REGION_CLASS region="HI_U1_INNER_NE" class="NC_POWER_LV_P" domain=physical cset="HI_U1_INNER_NE_P_4L" table=(objType "classTable" readOnly t prop propList:000002BE03880080 assembly nil sameNet nil spacing nil physical "HI_U1_INNER_NE_P_4L" region dbid:000002BE0FE38C88 netclass2 nil netclass1 dbid:000002BE0FDAFBC0)
+HI_REGION_CLASS region="HI_U1_INNER_NE" class="NC_POWER_LV_S" domain=spacing cset="HI_U1_INNER_NE_S_POWER_4L" table=(objType "classTable" readOnly t prop propList:000002BE03880098 assembly nil sameNet nil physical nil spacing "HI_U1_INNER_NE_S_POWER_4L" region dbid:000002BE0FE38C88 netclass2 nil netclass1 dbid:000002BE0FDB0008)
+HI_REGION_GEOMETRY (prop nil bBox ((42.5 28.85) (44.95 31.95)) readOnly t net nil objType "polygon" segments (dbid:000002BE0FE390A8 dbid:000002BE0FE390F8 dbid:000002BE0FE39148 dbid:000002BE0FE39198) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:000002BE0FE38C88))
+LOCAL_ROUTE	STAR_C9_FEED	"V3V3"	"ETCH/TOP"	((29.8 30.95) (30.7 31.85) (30.7 32.0))	(0.6 0.6)	((dbid:000002BE0FE39290) nil)
+HI_VIA id="V_HI_V3_SOURCE" net="V3V3" xy=(30.7 32.0) padstack="L28_VIA030_C060" result=(dbid:000002BE0FE393D8 nil)
+LOCAL_ROUTE	STAR_BOTTOM_FEED	"V3V3"	"ETCH/BOTTOM"	((30.7 32.0) (30.7 24.0) (37.0 24.0))	(0.6 0.6)	((dbid:000002BE12EFEFC0) nil)
+HI_VIA id="V_HI_V3_STAR" net="V3V3" xy=(37.0 24.0) padstack="L28_VIA030_C060" result=(dbid:000002BE12EFF108 nil)
+LOCAL_ROUTE	STAR_SOUTH_BUS	"V3V3"	"ETCH/TOP"	((37.0 24.0) (43.0 24.0))	(0.6)	((dbid:000002BE12F00D40) nil)
+LOCAL_ROUTE	STAR_RIGHT_BUS	"V3V3"	"ETCH/TOP"	((43.0 24.0) (43.0 29.9))	(0.6)	((dbid:000002BE12F00E38) nil)
+LOCAL_ROUTE	STAR_U1_24	"V3V3"	"ETCH/TOP"	((35.75 24.25) (37.0 24.25) (37.0 24.0))	(0.25 0.6)	((dbid:000002BE12F02290) nil)
+LOCAL_ROUTE	STAR_U1_36	"V3V3"	"ETCH/TOP"	((42.75 22.75) (42.75 24.0))	(0.25)	((dbid:000002BE12F03738 dbid:000002BE12F00E38 dbid:000002BE12F038A8) nil)
+LOCAL_ROUTE	STAR_U1_48	"V3V3"	"ETCH/TOP"	((44.25 29.75) (43.0 29.75))	(0.25)	((dbid:000002BE12F050D8 dbid:000002BE12F00E38 dbid:000002BE12F05248) nil)
+LOCAL_ROUTE	STAR_U1_VBAT	"V3V3"	"ETCH/TOP"	((42.75 31.25) (42.75 30.15) (43.0 29.9))	(0.25 0.25)	((dbid:000002BE12F06878) nil)
+LOCAL_ROUTE	STAR_2L_RETURN_STRAP	"GND"	"ETCH/TOP"	((32.45 25.2748) (31.2 25.2748) (30.7 25.7748) (30.7 29.0) (29.8 29.0))	(0.6 0.6 0.6 0.6)	((dbid:000002BE12F07D20) nil)
+LOCAL_ROUTE	V3_VDDA_PRE_FILTER	"V3V3"	"ETCH/TOP"	((29.8 30.95) (28.4 32.35) (22.0 32.35) (22.0 37.0) (29.5 37.0))	(0.6 0.6 0.6 0.6)	((dbid:000002BE12F07FD8) nil)
+DRC_STATUS	HI_BATCH_FINAL	0	t
+HI_ENDPOINT_PROOF from="C9.1" to="V_HI_V3_SOURCE" expected=t actual=t objects=29
+HI_ENDPOINT_PROOF from="V_HI_V3_SOURCE" to="V_HI_V3_STAR" expected=t actual=t objects=29
+HI_ENDPOINT_PROOF from="V_HI_V3_STAR" to="NODE_V3_RIGHT_SOUTH" expected=t actual=t objects=29
+HI_ENDPOINT_PROOF from="NODE_V3_RIGHT_SOUTH" to="NODE_V3_RIGHT_NORTH" expected=t actual=t objects=29
+HI_ENDPOINT_PROOF from="U1.24" to="V_HI_V3_STAR" expected=t actual=t objects=29
+HI_ENDPOINT_PROOF from="U1.36" to="STAR_SOUTH_BUS" expected=t actual=t objects=29
+HI_ENDPOINT_PROOF from="U1.48" to="STAR_RIGHT_BUS" expected=t actual=t objects=29
+HI_ENDPOINT_PROOF from="U1.1" to="STAR_RIGHT_BUS" expected=t actual=t objects=29
+HI_ENDPOINT_PROOF from="G31_C13_GND_VIA" to="C9.2" expected=t actual=t objects=208
+HI_ENDPOINT_PROOF from="C9.1" to="R26.1" expected=t actual=t objects=29
+HI_BATCH_COMPLETED drcCount=0 status=CANDIDATE_DRC_ZERO_NOT_ENGINEERING_RELEASE board="D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native/HI_4L_power_4L_b003c.brd"

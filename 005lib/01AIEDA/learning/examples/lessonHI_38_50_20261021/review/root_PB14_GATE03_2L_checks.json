@@ -1,0 +1,286 @@
+{
+  "variant": "2L",
+  "checks": [
+    {
+      "id": "ROOT_PB14_GATE03_18",
+      "type": "via",
+      "net": "USB_ATTACH_N",
+      "clearGlobal": false,
+      "padKeepoutHit": false,
+      "hits": [
+        {
+          "layer": "TOP",
+          "net": "GPIO_PB15",
+          "kind": "via",
+          "source": "native_via",
+          "bbox": [
+            38.54,
+            20.439999999999998,
+            39.059999999999995,
+            20.96
+          ],
+          "actualGapMM": 0.1679703525414052,
+          "globalRequiredMM": 0.16
+        },
+        {
+          "layer": "BOTTOM",
+          "net": "GPIO_PB15",
+          "kind": "via",
+          "source": "native_via",
+          "bbox": [
+            38.54,
+            20.439999999999998,
+            39.059999999999995,
+            20.96
+          ],
+          "actualGapMM": 0.1679703525414052,
+          "globalRequiredMM": 0.16
+        }
+      ]
+    },
+    {
+      "id": "ROOT_PB14_GATE03_19",
+      "type": "via",
+      "net": "GPIO_PB15",
+      "clearGlobal": false,
+      "padKeepoutHit": false,
+      "hits": [
+        {
+          "layer": "TOP",
+          "net": "USB_ATTACH_N",
+          "kind": "via",
+          "source": "native_via",
+          "bbox": [
+            39.120000000000005,
+            20.81,
+            39.64,
+            21.330000000000002
+          ],
+          "actualGapMM": 0.1679703525414052,
+          "globalRequiredMM": 0.16
+        },
+        {
+          "layer": "BOTTOM",
+          "net": "USB_ATTACH_N",
+          "kind": "via",
+          "source": "native_via",
+          "bbox": [
+            39.120000000000005,
+            20.81,
+            39.64,
+            21.330000000000002
+          ],
+          "actualGapMM": 0.1679703525414052,
+          "globalRequiredMM": 0.16
+        }
+      ]
+    },
+    {
+      "id": "ROOT_PB14_GATE03_20",
+      "type": "via",
+      "net": "GND",
+      "clearGlobal": false,
+      "padKeepoutHit": false,
+      "hits": [
+        {
+          "layer": "BOTTOM",
+          "net": "GPIO_PB13",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            37.15,
+            17.75,
+            37.35,
+            20.6
+          ],
+          "actualGapMM": 0.18999999999999573,
+          "globalRequiredMM": 0.3
+        }
+      ]
+    },
+    {
+      "id": "ROOT_PB14_GATE03_21",
+      "type": "via",
+      "net": "GND",
+      "clearGlobal": true,
+      "padKeepoutHit": false,
+      "hits": []
+    },
+    {
+      "id": "ROOT_PB14_GATE03_22",
+      "type": "route",
+      "net": "USB_ATTACH_N",
+      "clearUnderPolicy": false,
+      "collision": "LINESTRING (39.32163398796312 22.028366012036884, 39.38 21.97, 39.38 21.314525261702972)",
+      "nearGlobalRuleHits": [
+        {
+          "net": "PA9_UART_TX",
+          "kind": "smdpin",
+          "source": "U1.30",
+          "bbox": [
+            39.6,
+            22.15,
+            39.9,
+            23.35
+          ],
+          "actualGapMM": 0.2042534080710368,
+          "globalRequiredMM": 0.2
+        },
+        {
+          "net": "PA9_UART_TX",
+          "kind": "via",
+          "source": "native_via",
+          "bbox": [
+            39.440000000000005,
+            21.439999999999998,
+            39.96,
+            21.96
+          ],
+          "actualGapMM": -0.01999999999999772,
+          "globalRequiredMM": 0.2
+        },
+        {
+          "net": "PA9_UART_TX",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            39.620000000000005,
+            21.62,
+            39.83,
+            21.83
+          ],
+          "actualGapMM": 0.16000000000000203,
+          "globalRequiredMM": 0.2
+        },
+        {
+          "net": "PA9_UART_TX",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            39.67,
+            21.67,
+            39.83,
+            22.83
+          ],
+          "actualGapMM": 0.20999999999999913,
+          "globalRequiredMM": 0.2
+        }
+      ]
+    },
+    {
+      "id": "ROOT_PB14_GATE03_23",
+      "type": "route",
+      "net": "USB_ATTACH_N",
+      "clearUnderPolicy": false,
+      "collision": "LINESTRING (39.60745449727189 20.842545502728115, 39.7 20.75, 39.7 18.6)",
+      "nearGlobalRuleHits": [
+        {
+          "net": "PA10_UART_RX",
+          "kind": "via",
+          "source": "native_via",
+          "bbox": [
+            39.74,
+            20.24,
+            40.26,
+            20.76
+          ],
+          "actualGapMM": -0.06000000000000086,
+          "globalRequiredMM": 0.2
+        },
+        {
+          "net": "PA10_UART_RX",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            39.9,
+            20.2,
+            48.5,
+            20.400000000000002
+          ],
+          "actualGapMM": 0.0999999999999957,
+          "globalRequiredMM": 0.2
+        },
+        {
+          "net": "PA10_UART_RX",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            39.9,
+            20.2,
+            40.1,
+            20.6
+          ],
+          "actualGapMM": 0.0999999999999957,
+          "globalRequiredMM": 0.2
+        }
+      ]
+    },
+    {
+      "id": "ROOT_PB14_GATE03_24",
+      "type": "route",
+      "net": "GPIO_PB15",
+      "clearUnderPolicy": true,
+      "collision": null,
+      "nearGlobalRuleHits": []
+    },
+    {
+      "id": "ROOT_PB14_GATE03_25",
+      "type": "route",
+      "net": "GPIO_PB14",
+      "clearUnderPolicy": false,
+      "collision": "LINESTRING (39.25 19.649942350986237, 39.25 17.5)",
+      "nearGlobalRuleHits": [
+        {
+          "net": "GPIO_PB15",
+          "kind": "via",
+          "source": "native_via",
+          "bbox": [
+            38.54,
+            20.439999999999998,
+            39.059999999999995,
+            20.96
+          ],
+          "actualGapMM": 0.1899999999999992,
+          "globalRequiredMM": 0.2
+        }
+      ]
+    },
+    {
+      "id": "ROOT_PB14_GATE03_26",
+      "type": "route",
+      "net": "GPIO_PB15",
+      "clearUnderPolicy": false,
+      "collision": "LINESTRING (40.18514197520829 22.95, 41.25 22.95, 41.6 23.3, 42.21288070107368 23.3)",
+      "nearGlobalRuleHits": [
+        {
+          "net": "GPIO_PB1",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            41.8,
+            23.45,
+            42.0,
+            26.89
+          ],
+          "actualGapMM": 0.04999999999999857,
+          "globalRequiredMM": 0.2
+        },
+        {
+          "net": "GPIO_PB1",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            36.6,
+            23.45,
+            42.0,
+            23.650000000000002
+          ],
+          "actualGapMM": 0.04999999999999857,
+          "globalRequiredMM": 0.2
+        }
+      ]
+    }
+  ],
+  "operationCount": 27,
+  "status": "DERIVED_GEOMETRY_REVIEW_ONLY_NOT_NATIVE_NOT_RELEASED"
+}

@@ -1,0 +1,249 @@
+{
+  "status": "EXPLICIT_SPI_SOURCE_V5_WESTVIA_CLEAR_BOOT1",
+  "operations": [
+    {
+      "type": "route",
+      "id": "NSS_SOURCE_SERIES",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          29.25
+        ],
+        [
+          34.8,
+          29.25
+        ],
+        [
+          34.8,
+          31.15
+        ],
+        [
+          32.93,
+          33.02
+        ],
+        [
+          32.7984,
+          33.02
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit source-first NSS and pullup branch, preserves west SPI corridor; native/reference validation pending"
+    },
+    {
+      "type": "route",
+      "id": "NSS_PULLUP_INWARD",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          29.25
+        ],
+        [
+          36.8,
+          29.25
+        ],
+        [
+          39,
+          27.05
+        ],
+        [
+          39,
+          26.2
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit source-first NSS and pullup branch, preserves west SPI corridor; native/reference validation pending"
+    },
+    {
+      "type": "via",
+      "id": "NSS_PULLUP_INNER_VIA",
+      "net": "PA4_SPI_NSS",
+      "xy": [
+        39,
+        26.2
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad layerchange; nearby actual GND return and reference review required"
+    },
+    {
+      "type": "via",
+      "id": "NSS_PULLUP_WEST_VIA",
+      "net": "PA4_SPI_NSS",
+      "xy": [
+        32.2,
+        22
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad layerchange; nearby actual GND return and reference review required"
+    },
+    {
+      "type": "route",
+      "id": "NSS_PULLUP_BOTTOM",
+      "net": "PA4_SPI_NSS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39,
+          26.2
+        ],
+        [
+          39,
+          21.3
+        ],
+        [
+          32.2,
+          21.3
+        ],
+        [
+          32.2,
+          22
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit source-first NSS and pullup branch, preserves west SPI corridor; native/reference validation pending"
+    },
+    {
+      "type": "route",
+      "id": "NSS_PULLUP_RESISTOR",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          32.2,
+          22
+        ],
+        [
+          32,
+          21
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit source-first NSS and pullup branch, preserves west SPI corridor; native/reference validation pending"
+    },
+    {
+      "type": "via",
+      "id": "NSS_PULLUP_GND_RETURN",
+      "net": "GND",
+      "xy": [
+        31,
+        21.6
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad layerchange; nearby actual GND return and reference review required"
+    },
+    {
+      "type": "route",
+      "id": "SPI_SOURCE_SCK_PRECISE",
+      "net": "PA5_SPI_SCK",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          28.75
+        ],
+        [
+          34.385,
+          28.75
+        ],
+        [
+          34.385,
+          30.215
+        ],
+        [
+          33.6,
+          31
+        ]
+      ],
+      "width": 0.2,
+      "from": "U1.15",
+      "to": "R21.1",
+      "purpose": "Explicit precise source-side route with correct series-resistor order, controls actual pad edge gaps; native/return verification pending"
+    },
+    {
+      "type": "route",
+      "id": "SPI_SOURCE_MISO_PRECISE",
+      "net": "PA6_SPI_MISO",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          28.25
+        ],
+        [
+          33.6,
+          28.25
+        ],
+        [
+          33.6,
+          29
+        ]
+      ],
+      "width": 0.2,
+      "from": "U1.16",
+      "to": "R24.1",
+      "purpose": "Explicit precise source-side route with correct series-resistor order, controls actual pad edge gaps; native/return verification pending"
+    },
+    {
+      "type": "route",
+      "id": "SPI_SOURCE_MOSI_PRECISE",
+      "net": "PA7_SPI_MOSI",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          27.75
+        ],
+        [
+          34.35,
+          27.75
+        ],
+        [
+          33.6,
+          27
+        ]
+      ],
+      "width": 0.2,
+      "from": "U1.17",
+      "to": "R22.1",
+      "purpose": "Explicit precise source-side route with correct series-resistor order, controls actual pad edge gaps; native/return verification pending"
+    }
+  ],
+  "proofs": [
+    {
+      "from": "U1.14",
+      "to": "R23.1",
+      "connected": true
+    },
+    {
+      "from": "U1.14",
+      "to": "R25.2",
+      "connected": true
+    },
+    {
+      "from": "U1.15",
+      "to": "R21.1",
+      "connected": true
+    },
+    {
+      "from": "U1.16",
+      "to": "R24.1",
+      "connected": true
+    },
+    {
+      "from": "U1.17",
+      "to": "R22.1",
+      "connected": true
+    }
+  ],
+  "pending": [
+    "Full future critical copper precheck",
+    "Native DRC and exact endpoints",
+    "2L actual TOP reference gaps under internal BOTTOM branch; never claim uniformly continuous reference",
+    "Final GND return and all-board HSE anchor challenge"
+  ],
+  "errata": "First 32,23.2 GND via intersected R29.1 BOOT1, rejected before any native writes. Moved31,21.6 subject to complete native/reference checks. West signalvia32,22.2 also left only .114418 to BOOT1 pad; moved32.2,22 after independent full-copper screen before native.",
+  "basis": "R24.1 right edge34.07 and NSS vertical34.8 give only .13mm legal center span before numerical grid margin. Choose SCKx34.385 with actual .215 copper gaps, not two unnecessary signal vias."
+}

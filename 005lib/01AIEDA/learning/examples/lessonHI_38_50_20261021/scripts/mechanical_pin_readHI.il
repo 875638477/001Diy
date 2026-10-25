@@ -1,0 +1,23 @@
+procedure(hiMechanicalPinRead(out)
+ let((f pf sf ps pad)
+  f=outfile(strcat(out "/hi_mechanical_pins.tsv"))
+  pf=outfile(strcat(out "/hi_mechanical_pad_layers.tsv"))
+  sf=outfile(strcat(out "/hi_hole_spacing_defaults.tsv"))
+  fprintf(f "symbol\trefdes\tpin\tpadstack\txy\tthrough\tmechanical\tholeType\tplating\tdrillDiameter\tdrillX\tdrillY\tdefinitionAttributes\tinstanceAttributes\n")
+  fprintf(pf "refdes\tpin\tpadstack\txy\tlayer\tkind\tfigure\tpadBBoxRelativeXY\tpadAttributes\n")
+  foreach(s axlDBGetDesign()->symbols
+   foreach(p s->pins
+    when(p->isMech || !p->number || equal(p->number "")
+     ps=p->definition
+     fprintf(f "%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\n" s->name s->refdes p->number p->name p->xy p->isThrough p->isMech ps->holeType ps->plating ps->drillDiameter ps->drillSizeWidth ps->drillSizeHeight ps->?? p->??)
+     foreach(layer mapcar(lambda((l) strcat("ETCH/" l)) axlSubclassRoute())
+      foreach(kind list("REGULAR" "ANTI" "THERMAL" "KEEPOUT")
+       pad=axlDBGetPad(p layer kind)
+       fprintf(pf "%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\n" s->refdes p->number p->name p->xy layer kind if(pad then pad->figureName else nil) if(pad then pad->bBox else nil) if(pad then pad->?? else nil)))))))
+  fprintf(sf "cset\tlayer\tfield\tvalue\n")
+  foreach(layer axlSubclassRoute()
+   foreach(key list('hole_line 'hole_shape 'hole_via 'hole_hole 'hole_thrupin)
+    fprintf(sf "DEFAULT\t%L\t%L\t%L\n" layer key axlCNSGetSpacing("DEFAULT" layer key))))
+  foreach(port list(f pf sf) close(port))
+  f=outfile(strcat(out "/hi_mechanical_pin_scope.txt"))
+  fprintf(f "HI_ALL_MECHANICAL_PINS_READ_COMPLETE\nAll actual symbol pins with isMech or empty/nil number included, including connector locating holes. Hole geometry taken from embedded native padstack definition, not inferred from name. Only actual routing layers probed. DEFAULT spacing is raw reference data, not a coordinate-specific resolved rule for a hole against another net/class.\n") close(f) t))

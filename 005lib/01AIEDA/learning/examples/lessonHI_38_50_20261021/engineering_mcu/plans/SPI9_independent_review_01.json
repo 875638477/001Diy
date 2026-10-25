@@ -1,0 +1,134 @@
+{
+  "status": "INDEPENDENT_CANDIDATE_GEOMETRY_SCREEN_NOT_NATIVE_APPROVAL",
+  "sourceCheckpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\postcritical_2L_b010",
+  "sourceSnapshotSHA256": "7c6ae3f2596fb2b4f0b523fac203eba5b49dad6b4a5d835259875a2c728f0057",
+  "sourcePlan": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\SPI_external_2L_engineered_v9.json",
+  "sourcePlanSHA256": "94a75c0036029e43def4c59cd44e042b3c722b8bf9312e56e40c82022b300ee6",
+  "deletedUniqueSegments": [
+    "SPI_RIP_PREFILTER_0",
+    "SPI_RIP_PREFILTER_1",
+    "SPI_RIP_PREFILTER_2"
+  ],
+  "otherNetComparisons": 27441,
+  "belowPoint20Issues": [],
+  "drillInSMDPadIntersections": [],
+  "minimumCandidateCopperToHSEMoat": [
+    6.489485158872183,
+    "SPI_NSS_EAST_TOP"
+  ],
+  "guardClockMOSIExplicitlyJoinsRetainedCommonGNDvia28Point6_29": true,
+  "signalReturnViaDistances": [
+    {
+      "signalVia": "SPI_SCK_EAST",
+      "xy": [
+        30.8,
+        29.95
+      ],
+      "nearestCommonGroundVia": [
+        30.9,
+        29.1
+      ],
+      "distanceMM": 0.8558621384311821,
+      "targetAtMost1Point5": true
+    },
+    {
+      "signalVia": "SPI_SCK_WEST",
+      "xy": [
+        21.85,
+        29.95
+      ],
+      "nearestCommonGroundVia": [
+        20.5,
+        29.32
+      ],
+      "distanceMM": 1.4897650821522173,
+      "targetAtMost1Point5": true
+    },
+    {
+      "signalVia": "SPI_MOSI_EAST",
+      "xy": [
+        31.65,
+        27.8
+      ],
+      "nearestCommonGroundVia": [
+        32.85,
+        28.1
+      ],
+      "distanceMM": 1.2369316876853012,
+      "targetAtMost1Point5": true
+    },
+    {
+      "signalVia": "SPI_MOSI_WEST",
+      "xy": [
+        14,
+        29.3
+      ],
+      "nearestCommonGroundVia": [
+        14,
+        30.6
+      ],
+      "distanceMM": 1.3000000000000007,
+      "targetAtMost1Point5": true
+    },
+    {
+      "signalVia": "SPI_MISO_EAST",
+      "xy": [
+        31.65,
+        29.77
+      ],
+      "nearestCommonGroundVia": [
+        30.9,
+        29.1
+      ],
+      "distanceMM": 1.0056838469419689,
+      "targetAtMost1Point5": true
+    },
+    {
+      "signalVia": "SPI_MISO_WEST",
+      "xy": [
+        20.5,
+        30.8
+      ],
+      "nearestCommonGroundVia": [
+        21,
+        31.55
+      ],
+      "distanceMM": 0.9013878188659973,
+      "targetAtMost1Point5": true
+    },
+    {
+      "signalVia": "SPI_NSS_EAST",
+      "xy": [
+        29.8,
+        32.3
+      ],
+      "nearestCommonGroundVia": [
+        29,
+        33.2
+      ],
+      "distanceMM": 1.2041594578792343,
+      "targetAtMost1Point5": true
+    },
+    {
+      "signalVia": "SPI_NSS_WEST",
+      "xy": [
+        20.3,
+        32.4
+      ],
+      "nearestCommonGroundVia": [
+        21,
+        31.55
+      ],
+      "distanceMM": 1.1011357772772599,
+      "targetAtMost1Point5": true
+    }
+  ],
+  "referenceObservations": [
+    "NSS BOTTOM y32.3 is below shifted TOP V3V3 copper row y32.55; it is not a continuous opposite GND microstrip. Grounded BOTTOM guard y31.55 and GND via29,33.2 /20.8,33.75 provide proposed same-layer/transition return options, to be checked in actual post-fill native geometry.",
+    "The two guards are conductors tied to explicit common-GND vias; same-net names alone are insufficient. First guard starts on inherited via28.6,29 and second directly connects two new GND vias.",
+    "TOP power-row shift is +0.20mm; ADC_INPUT TOP y34 remains separate, no direct HSE/main moat intersection.",
+    "All eight signal-transition nearest proposed/inherited common-GND via center distances <=1.5mm. This is a geometric policy target, not evidence of HF return path or EMI pass.",
+    "Native DRC, TCF, branch-terminal orphan audit, HSE unique-anchor negative test, actual generated GND polygon and reference/return inspection remain required.",
+    "Concurrent ordinary GPIO candidates are not frozen; root must merge all candidate copper before native execution."
+  ]
+}

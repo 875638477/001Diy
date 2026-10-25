@@ -1,0 +1,5 @@
+from pathlib import Path
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');s=(R/'scripts/precheck_RIGHT10_v7_interfaces.py').read_text()
+old="p=json.loads((R/'RIGHT10_source_joint_v6.json').read_text());p['operations']+=json.loads((R/'RIGHT10_interface_corridors_v7.json').read_text())['operations'];variant=sys.argv[1] if len(sys.argv)>1 else '2L';"
+new="""variant=sys.argv[1] if len(sys.argv)>1 else '2L';p=json.loads((R/'RIGHT10_source_joint_v6.json').read_text());p['operations']+=json.loads((R/'RIGHT10_interface_corridors_v7.json').read_text())['operations'];pol=json.loads((R/f'RIGHT10_long_policy_{variant}_v7.json').read_text());ids={o['id'] for o in p['operations']};p['operations'] += [o for o in pol['pendingOperations'] if o['id'] not in ids];p['operations'] += [o for o in pol['pendingDeleteSegments'] if o['id'] not in ids];p['placementChanges']=pol['pendingPlacementChanges'];"""
+assert old in s;s=s.replace(old,new).replace('RIGHT10_v7_interfaces_','RIGHT10_v7_full_future_');(R/'scripts/precheck_RIGHT10_v7_full_future.py').write_text(s,encoding='utf-8')

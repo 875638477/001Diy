@@ -1,0 +1,55 @@
+Cadence 17.2 公共焊盘/封装库整理执行记录
+日期：2026-10-25（Asia/Shanghai）
+结果：PASS，已应用并复核。
+
+实际目录
+焊盘：D:\001DIY\005lib\01Pad_lib
+封装：D:\001DIY\005lib\01Psm_lib
+程序：C:\Program0\cadence\SPB172
+实际 HOME/pcbenv：C:\Program0\Cadence\SPB_Data\pcbenv
+配置中的 padpath、psmpath 已指向上述公共库，本次未修改环境配置。
+
+按用户追加要求删除
+仅删除数字开头0402/0603/0805且带后缀的封装，DRA/PSM成对，共9种18文件：
+0402cs、0402esd、0402leds、0402rs、0603_led、0603cs、0603ls、0603rs、0805cs。
+0402、0603、0805本名的DRA/PSM均保留。
+所有C/R/L开头的封装及辅助符号均排除修改；已验证2571个文件原始哈希不变。
+本次“带后缀封装删除”不包括PAD焊盘文件。
+上述9个名称在已扫描8份PCB来源的放置符号和声明封装统计中均为0；此结论不覆盖未扫描工程。
+
+去重合并
+重复PAD：120份；重复PSM：33份；重复DRA：37份。
+合计190个旧路径指向各自主文件，使用NTFS硬链接，每组只保存一份活动内容。
+旧名称/旧路径保留，因此文件名数量不会因硬链接去重而减少。
+选主名按01brdlib的7个PCB和正式12electrical_fixed板的实际引用数优先。
+PAD按17.2原生XML全部字段匹配，只忽略padstackname；其余孔、镀铜、各层、辅助形状引用、单位精度、属性及顺序均保留。
+PSM/DRA仅合并逐字节SHA256相同的文件。
+同名异内容的文件保留；4个原生导出无焊盘几何的PAD保留审查。
+
+验证
+4392个PAD全部原生导出成功。
+合并前在工作区模拟链接通过；合并后17.2重新读取233个主/别名PAD，完整定义与合并前一致，0失败。
+全部13165个初始文件逐项复核：18个删除文件均有校验一致备份；其余13147文件全部存在并符合预期SHA。
+190个合并别名逐项验证与主文件的Windows文件身份相同；全部原文件备份SHA验证通过。
+原PCB、DSN、网表和环境配置未修改。
+
+备份与恢复
+带后缀删除备份：D:\001DIY\005lib\_library_suffix_backup_20261025
+合并原文件备份：D:\001DIY\005lib\_library_merge_backup_20261025
+在对应备份目录内运行 Remove-SuffixedPackages.ps1 -Rollback 或 Apply-LibraryMerge.ps1 -Rollback 可恢复。
+脚本仅恢复计划中的文件，不递归删除/移动其他目录；恢复前验证备份SHA。
+
+后续编辑
+同组旧名称共享一份内容。需要只修改某个别名时，先复制为独立文件再编辑，避免通过硬链接同时改到同组名称。
+重新编译或另存为操作可能生成独立文件，可用本目录脚本和原生证据重新审计。
+
+审计文件
+merge_plan.csv / canonical_index.csv：最终主名与兼容旧名映射。
+suffix_delete_plan.csv：删除文件逐项清单及原始SHA。
+final_file_verification.json / live_padxml_verification.json：最终校验结果。
+independent_followup_review.json：用户追加要求后的独立复审。
+usage_audit：8份PCB的原生使用记录及公共同名缺失清单。
+
+范围限制
+仅在具备完全一致证据时合并；非一致PSM未依据包围框或引脚数量判定等价。
+老PCB0010、VCU16等存在未在公共库找到同名的嵌入定义，记录于usage_audit/usage_missing_public.csv，未补入或替换公共库。

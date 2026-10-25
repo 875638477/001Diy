@@ -1,0 +1,3704 @@
+{
+  "summary": {
+    "status": "PASS",
+    "aliases": 138,
+    "actual_new_groups": 116,
+    "by_extension": {
+      ".pad": 50,
+      ".psm": 38,
+      ".dra": 44,
+      ".fsm": 1,
+      ".ssm": 5
+    },
+    "by_reason": {
+      "ALL_PAD_GEOMETRY_EXACT_MM": 37,
+      "ALL_MANUFACTURING_GEOMETRY_EXACT_MM_DRILL_LEGEND_STANDARDIZED": 12,
+      "ALL_PAD_GEOMETRY_EXACT_MM_RESOLVED_CUSTOM": 1,
+      "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID": 38,
+      "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID": 44,
+      "CUSTOM_COMPILED_COMPLETE_GEOMETRY_ORIGINAL_GRID": 6
+    },
+    "canonical_paths": 116,
+    "protected_files_read_and_unchanged": 3444,
+    "native_graphs_freshly_recomputed": 158,
+    "legitimate_already_shared_group_members": 254,
+    "staged_pad_aliases": 50,
+    "staged_pad_filenames": 96
+  },
+  "files": {
+    "physical_merge_plan.json": "E7B2636311F8F82B23E578E7A2F29B7F1DAC4E5D637C453251C16DD05482139A",
+    "build_physical_plan.py": "56791A8B9C07BE566FF8AD55E59DE2A79413AB50EF035C7D174769F9123D3D8B",
+    "Apply-PhysicalMerge.ps1": "C632DE30B8DC39EC9F67046930EEED83C02768E126D1C76BF7B78D2E84DEABBD",
+    "compare_native_geometry.py": "DEDF6CB39BA0B14F3EA1BB644EFE7E9806A489E98150876735EA830ECAC65B5C",
+    "sexpr.py": "6FE0AC6BA5CF315C897E66120A5C4883C75541D12F533961979726AA9366F8F8"
+  },
+  "script_checks": {
+    "manual_rollback_unlinks_before_copy": true,
+    "failure_rollback_unlinks_before_copy": true,
+    "backup_hashes_verified_before_apply": true,
+    "entire_plan_sha_preflight_before_external_backup_creation": true,
+    "replacement_hardlink_created_before_alias_removed": true,
+    "allowed_roots_and_clr_guards_present": true
+  },
+  "changes": [
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\ball14.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\14c.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "692BE0FF806887F6FCE67248F14A2E2DD3B60B9A5CE0E4341C2BC1C5A6A6481B",
+      "canonical_sha256": "8CE9EA860BE47E167CADDB6A7244098A14B08EA1B37DA9DF3B31C659D48A4684",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\27x39rec.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\r27x39.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "0668B8014450A26A4B54F27022F8F2118E25B5894F407A6A18616D6DBD0AE709",
+      "canonical_sha256": "763EAC051953306B80D9D3F14239A2BC2E7666E4DFD91E738D61007C44FD185D",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\smd_60x63ret.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\60x63r.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "05534A0E4DCD7B89EA5EF158C3D5EF80B6EDC30126C7CB84BF63DA5EBEEFED16",
+      "canonical_sha256": "C0A318D8D77EAEC986FE7E5BAD8E6C2C80F87158188321D7B296F8973DFF63FC",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\smd95_130.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\95x130r.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "0FCC0072697979948BEC865D5BB21747404DAB287A5D6B4DF4AF65A0EE9F408C",
+      "canonical_sha256": "6588DF72CCA882F1CFCB3D14501C1FFD22F417D206A9E2B85FEAE25E5EB48484",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\ex0_25y0_35t.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\c025.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "8C4C12312B77838085B775523CB825267F56A3CC33CBBBEA477540252A6B6E82",
+      "canonical_sha256": "3FCD3F419761C69B0510998A4FE3C2299213DC08DCC9B3CC73616A087347E228",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\fiducial_40s80.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\mark40.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "01B1D9588DCC6A7838AD0720DA5D44B127E2880B449082BB36FB43DAE47E904F",
+      "canonical_sha256": "3990536852713EBE89635EDA714F5C3F2D1359215C7B3E59B7EC14BCD05F355E",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\pad40m80.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\mark40.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "01B1D9588DCC6A7838AD0720DA5D44B127E2880B449082BB36FB43DAE47E904F",
+      "canonical_sha256": "3990536852713EBE89635EDA714F5C3F2D1359215C7B3E59B7EC14BCD05F355E",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\3GIO_PAD_B2.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\gpa1_b.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "FC0E5435C670BED1F8C02BA3A72C86670FC56BB4AA480F2FEF33194A3CDFFE67",
+      "canonical_sha256": "B1E1440ED4C639FAEDEB2FC528076AE051283D0D3D001FC3A8D1BA8357F26FB6",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\pad_0d66_0d254_o.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\o26x10.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "438C10669C887B882FCD0DA0C6223F76375A67FA74748DC6527D74D44E41AC22",
+      "canonical_sha256": "557A3CD204C050CE341598082DED12C529316DDB3C57D5FDB3A87FCB4A39704A",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\pad_128x128.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\s128.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "82C3675DE8C21DFD1E385DC7A1E4A3D59FAD76DC8B7C75DB3212DE4A90BC0E41",
+      "canonical_sha256": "38BDE93DDBFEA08BDF75ABB169038C7E14CF123BFE38A91C0BA8AE65759430DA",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\pad_183_187.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd183_187.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "3E763AF5C7B21B3CEB950C896FC95FBB076F887ADE5674B2E73E9B52FB1DE5B2",
+      "canonical_sha256": "8D0F172D358692D8CC41633DB5F9498A9AAD0850CBCBF71700BF5590204533DC",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\pad_25_60ob.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd25_60ob.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "C2E385F38AFA820728088B177D592064F2905575A7349CC8F3D956A7C83E4217",
+      "canonical_sha256": "BCB91805A7D516C715125911FC7EFC3EA35D9AC8EBF6BB23AB95807F6BEB9D3E",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\pad_25_78.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd25_78.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "FE25116A96FCEBFDD073B8B4D9DF880B03848E5F5340D3782AD30B84386B2AA4",
+      "canonical_sha256": "1099836AE6905E8CCD565F8D78DD72DC59658116D6833BBD5BB9E26F3D203D03",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\pad_28_48.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd28_48.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "B5E0CACFFB49AC78FA1272240C657962F6612B553EB6CB3DFF8C259CC7B8BFFE",
+      "canonical_sha256": "2C8428E339544539D892A8902523BD4F4D8F9873FA250D9764EE335D5295C8FD",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\pad_40_110.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd40_110.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "80023C9751C61E21E4BB0FB50DC3E3CB8A7DF1CD1365F7E5E880183BF1575B1D",
+      "canonical_sha256": "D46087FDBC12059E77A990A9F05D223B8AFD60039C8283DDFDE77502A806947E",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\pad_40_32.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd40_32.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "8FC49510E646836112473DA2E6CC67E52D39FCBD763F12577C220B401225995B",
+      "canonical_sha256": "4A2B5EE9F75095864AA4C8B9023C40A092F5D7780A05DA6A851F19890D73A559",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\pad_65_65.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd65_65.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "A6F10153375AC7C2F7F4563E3CF979A9183D80DFEB835966BA0E689A15E992B9",
+      "canonical_sha256": "ECD6FD3112DE108A0CEF9619455CE858E4DFC7F29D1E60419BD1623A031AD523",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\pad_70_75.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd70_75.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "4D07B517792CBBE226D4C5011E14C0A318CA4353E660FC2D8ED49EF4C60FA79F",
+      "canonical_sha256": "4212A04049C2AEC877F928EDE890B6CC067945869F2756E7D49F25919300D9EE",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\re31x35.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\r31x35.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "24CBDB62E772334DD5D9B0126F85B1FE40C9FFD94DC84961E42D759B9ED95A3B",
+      "canonical_sha256": "42967EB0A85689281A69C7B6397F762324E8D8C8D6FF4BA0E56A0F0E0B007B6D",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\re40x50.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\r40x50.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "DFF06B21AFB0B73BF5F03C5C3F28E7CC20CAE0A95793AAF760F01D75610743ED",
+      "canonical_sha256": "DB81F6998FDE81949E50B81C2EB15C4C97D46F725D8342ED5F41EACF7CB17F72",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\rect0_50x1_125.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\rect0_50x1_125.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "B50ADAE987E07716E9E09283681E14CF121376C6CE0D4AA95E6CBF4642C2EFDB",
+      "canonical_sha256": "7C4782A322570FCFC68014E88F65A7CB745BFE44739B8091F447432E28D2C4D2",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\rect100x120.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd_r1000x1200p0s30.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "2AEAC77EA76B7ED1414EE596394BAF8F88435B594F9717EB176C724E2D660826",
+      "canonical_sha256": "1739F1C494539CCB55296AAA864573738D563D25A90DF4A98A0E0B583B93DCC5",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\rect1_125x0_50.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\rect1_125x0_50.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "B6D02F7615131D19944CCCB2778D6A45551ED9751A7F6AC4C7B7DF638DEC4B05",
+      "canonical_sha256": "2E8584A715FA841C5D9BBD5C458B7377E2BB7DB10E58AC66CF54C297418A1629",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\smd_r400x200p0s30.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\rect40x20.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "B5DFC8ADD142A402119949FF029358A6BA9887C057282C1016F646FC644A935C",
+      "canonical_sha256": "232195F62069330E151FA3FB7CC2A844CD3A75AB1E8261DD232753BB632562C6",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\sq20.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\s20.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "0ABCFAD8F758AAE451DAB8003B36380858DBB81352ED278257745F947F7CA70F",
+      "canonical_sha256": "0DF4450AF2FE8604CB1AC634E583CCF60FAD816D791DE976866DAA4DC87779F4",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\smd032x032.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\sq32.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "95F2FF9CAFA893C5A5FAB685E184156DF2D3A9830BBE458852A4186A7839ED14",
+      "canonical_sha256": "76AE2739DB20B4066427C1D339B3D9A5E1194793C66F25A8F826C5933F763FF0",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\smd10_26-s4.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd10_26-s4.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "F9F9E4042AC56121ABCCD92A0AE675F3B89821FA165BF2C5F5A6945E9E7CB8AE",
+      "canonical_sha256": "4C01A906FC7C50C0D94D05A42C41F5C8FE07F7C94AEFDCE5EE1D8A61B4A91B94",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\smd10_37v.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd10_37v.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "987276DFEE88168B2457951F880FDFA343F936A33E917903090EFE72230137AC",
+      "canonical_sha256": "551A270781224BA94978A581AA167B40ACEAA80F2529C832BAE6994C583EB6B1",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\smd12_71-s4.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd12_71-s4.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "F9DEC4F4C3D57E30D37953470A2684C4C587E1208880C1FFA12FD0AFFC2D141C",
+      "canonical_sha256": "04451CBA47C4D89FB9B8F6A9490D216D54432932951DC8097C067911256FFC37",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\smd16_26-s4.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd16_26-s4.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "CFD2F6CDCB3ECEAAD78A4247DBD0F172C3CC1C80F05467C7597B30E6DC38B8AC",
+      "canonical_sha256": "85AE068E4011720E30868542CCB7B310C5755B704C9D370477E4C434C31E841C",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\smd20_24.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd20_24.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "07EBB0257241194D38A442AB1C0A21ED9C7A6E56A4C05019D256A10655227078",
+      "canonical_sha256": "0952A12BBF532BE7E1FC1A504CCB8E8E40E215541741F361E8F316691F43DC20",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\smd25_75.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd25_75.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "00F57CBFE38295ED91BE7D1FD313E5D247A851FF71FF3C5FA44BB5449CD2355D",
+      "canonical_sha256": "F053AB2F9046F508B592533C99BF11D62823AA9F8E218C0A68714147ED0F2421",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\smd55_24.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd55_24h.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "11F958997825617682C6552EA818DB58660AA92FD30FDC1211E6CBB452883247",
+      "canonical_sha256": "4AF7F47220F61B6BC8585AED0C178A8E1AD08DBB23EE496C455984482C6C3A22",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\smd8_26-s4.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd8_26-s4.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "B6531DC93B5D0094D3F63F8CB81B2138D35AEE023586B33F07AC9423571BFDEB",
+      "canonical_sha256": "5A12FAA551AFF3CAF4005812F628FC4A4C343D662BF34C1AAA8E7327F69B3C50",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\smd_0d5x0d5.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd_0d5x0d5.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "0A15C7162D2620B2603A9463E45AAE5E2526E8830C9AA63621F56AF2EAC225F1",
+      "canonical_sha256": "28D89C3135DD7E80953187075B266588AA6B4ECB0DF0C0222039FD92F3EFFB43",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\smd_1d4x0d6.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd_1d4x0d6.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "4EF3E08EC3BC1536328E13A9B366CC1198E335D65544BC1E18B4DCD2959E7B72",
+      "canonical_sha256": "E503F3CBAED0F77BB19F5B44FD64F5BAC63377F7809674D738C45B0B9644191B",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\smd_1d58x0d58.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd_1d58x0d58.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM",
+      "before_sha256": "94AA16C083633E18A1F8090C91B650D79F4DAAA57FD9D3ADBF6D6F4583DE537B",
+      "canonical_sha256": "A29B151D3E301E44C79765BDFDC2A17286AE858A393CB7D63F3224659C1AF2F5",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\fix_1d5_2d5.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\via_1d5_2d5.pad",
+      "reason": "ALL_MANUFACTURING_GEOMETRY_EXACT_MM_DRILL_LEGEND_STANDARDIZED",
+      "before_sha256": "10E1ECB78BF91F37E8B1941F13269EEAAE6336AEBF7E9594E10E6963E5178BFA",
+      "canonical_sha256": "C900BDDD9CE631D0208FE2FBE5D9083009C76E2AEF364B0254585A233A294A23",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\sq68d35.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\s68d35.pad",
+      "reason": "ALL_MANUFACTURING_GEOMETRY_EXACT_MM_DRILL_LEGEND_STANDARDIZED",
+      "before_sha256": "37CF9B507E296E50AB516760461CB65CF3511F67731258F7DA8CD018314D39B6",
+      "canonical_sha256": "BEB1D5012663E403061424321AE78AD59F19454B86EC7BCDA8F4E5674E378E05",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\v-o-4x2d5_5d25x4.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\v-o-4x2d5_5d2x4.pad",
+      "reason": "ALL_MANUFACTURING_GEOMETRY_EXACT_MM_DRILL_LEGEND_STANDARDIZED",
+      "before_sha256": "3D418E72EB6A76B7DCA30DAF06291F3B742DC7B8783874ED88C511E1B9BDFC98",
+      "canonical_sha256": "8ABE7D01C2CBE1F96F1F7D1850EB5E0AE54DBF2C97787B116F0D1ECC44A7BE59",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\via_1d2_1d5.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\v_1d2_1d5.pad",
+      "reason": "ALL_MANUFACTURING_GEOMETRY_EXACT_MM_DRILL_LEGEND_STANDARDIZED",
+      "before_sha256": "9245E9F9389BC822FC3363D761971E418B34750A5420A478DF7B336E9C6306D4",
+      "canonical_sha256": "930322F701A94EF699E02B723DF3747C62146FC8773C288FCDA3EEC6337A5B76",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\via_c3d0.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\v_c1d8p3d0.pad",
+      "reason": "ALL_MANUFACTURING_GEOMETRY_EXACT_MM_DRILL_LEGEND_STANDARDIZED",
+      "before_sha256": "53B9F466F52E835BFB1CA8F8B0B8A0076338A57B46707946B260823165470A3E",
+      "canonical_sha256": "DF497F450442E721B0B4CA9E745302EA7F85059EBF6E5FE5BC0186F99D7C0E38",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\via10-20,1.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\via_20d10.pad",
+      "reason": "ALL_MANUFACTURING_GEOMETRY_EXACT_MM_DRILL_LEGEND_STANDARDIZED",
+      "before_sha256": "602FC4DFB4E5ED18B3FB1A7511DEB838A2F4DC6B761D24D9E96FA4BD74DB3150",
+      "canonical_sha256": "BEF72119B429E2A16BE8A4E6E675193CF1C78A0C5283E82FE23EFE5B1317BAD2",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\via10-20.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\via_20d10.pad",
+      "reason": "ALL_MANUFACTURING_GEOMETRY_EXACT_MM_DRILL_LEGEND_STANDARDIZED",
+      "before_sha256": "602FC4DFB4E5ED18B3FB1A7511DEB838A2F4DC6B761D24D9E96FA4BD74DB3150",
+      "canonical_sha256": "BEF72119B429E2A16BE8A4E6E675193CF1C78A0C5283E82FE23EFE5B1317BAD2",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\via10-gen.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\via_20d10.pad",
+      "reason": "ALL_MANUFACTURING_GEOMETRY_EXACT_MM_DRILL_LEGEND_STANDARDIZED",
+      "before_sha256": "7C15276547A35F3F31F81BDD8A8622B70EEA962A5651F44747B9DB47F5904A21",
+      "canonical_sha256": "BEF72119B429E2A16BE8A4E6E675193CF1C78A0C5283E82FE23EFE5B1317BAD2",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\via_10_20.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\via_20d10.pad",
+      "reason": "ALL_MANUFACTURING_GEOMETRY_EXACT_MM_DRILL_LEGEND_STANDARDIZED",
+      "before_sha256": "7C15276547A35F3F31F81BDD8A8622B70EEA962A5651F44747B9DB47F5904A21",
+      "canonical_sha256": "BEF72119B429E2A16BE8A4E6E675193CF1C78A0C5283E82FE23EFE5B1317BAD2",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\via_10_20,1.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\via12x20.pad",
+      "reason": "ALL_MANUFACTURING_GEOMETRY_EXACT_MM_DRILL_LEGEND_STANDARDIZED",
+      "before_sha256": "505A564EF9E84B8DEE1DB2AD50560C39A5E2F0E57F1E53C1BEDE586748484C52",
+      "canonical_sha256": "6A76446C891AFEFF775E5999ADA92E492B0F24CDA21C181EEAC1E35335FDE4E4",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\via19d12a30,1.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\via19d12a30.pad",
+      "reason": "ALL_MANUFACTURING_GEOMETRY_EXACT_MM_DRILL_LEGEND_STANDARDIZED",
+      "before_sha256": "F690AB582C414D31F4920C9E9789C017840335581BC8BF26CDAA4F2D2F789A02",
+      "canonical_sha256": "438E02AABD9408990AC505DCD606683FA1AB7AB9074D6E58129898CD7D33BDC2",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\via_25_30.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\via_20_30.pad",
+      "reason": "ALL_MANUFACTURING_GEOMETRY_EXACT_MM_DRILL_LEGEND_STANDARDIZED",
+      "before_sha256": "E8CF87E11817737FAD5A5B4AB94FF5586A49F63F70F6C72EE9CB96202B9C161B",
+      "canonical_sha256": "4CBF00314997C7C4030802006EEB932A38471091607B29BBAE5A7DC5318C984E",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Pad_lib\\mark_edge_160x160.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\mark_160x160.pad",
+      "reason": "ALL_PAD_GEOMETRY_EXACT_MM_RESOLVED_CUSTOM",
+      "before_sha256": "C54765EE86E2E1887849D24B26A39AC2BD0645610FEB35012880C20F04682256",
+      "canonical_sha256": "92C4F01DFEF9F60BEA01C683F7C078315233E4D23378AF9997D1EC7F9D7BE141",
+      "native_provenance": [],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\a3212elhlt-t_sot23w-3.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\psot24c_sot23-3.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "BF05F373DC8899E55775C2B0444865234595A40787F4A547541F34CD3FCD4DAE",
+      "canonical_sha256": "C5052B3A0CD94D7B4B528D84A0773A036CCB05C94B8D9B5F4ADFA4B81F805F15",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0000.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "e7f069cf140801e2bbbd24ae58cedfe2c751d418229c75a4b66bbb87dc173ae7"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0083.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "e7f069cf140801e2bbbd24ae58cedfe2c751d418229c75a4b66bbb87dc173ae7"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\tp0610k-t1-e3_sot23-3.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\psot24c_sot23-3.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "35639BAA71F99A088597AC517D3E43E49B448D4658DA997318D6B9FCD509E214",
+      "canonical_sha256": "C5052B3A0CD94D7B4B528D84A0773A036CCB05C94B8D9B5F4ADFA4B81F805F15",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0106.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "e7f069cf140801e2bbbd24ae58cedfe2c751d418229c75a4b66bbb87dc173ae7"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0083.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "e7f069cf140801e2bbbd24ae58cedfe2c751d418229c75a4b66bbb87dc173ae7"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ao3414_sot23-3.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ao3413_sot23-3.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "7B5F917ABCCED0E43A8DFA459F158C75392CE087464903F260B39E2DC9B991B3",
+      "canonical_sha256": "CCAF251BE3A21FFF5AC3DE9C7C052DB8E60C46666468B4B6560C60A26BDB5072",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0002.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "1f259cba6c10215f8a0e2eaf7ec953312e5ede443765f3c162f8ef2560257cc1"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0001.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "1f259cba6c10215f8a0e2eaf7ec953312e5ede443765f3c162f8ef2560257cc1"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\PIN_con_2d0_8pdip.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\dip_con_2d0mm_8p.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "22E54198D579A67192B42F777CF40109BB049BB8A8900B375960A595E1D9AB27",
+      "canonical_sha256": "78DAA6720AD59BA8AD9234983BCB1A5D7CBC6B0A1A95445C99346C05F8D58B70",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0078.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "f98e2866573fbd9dbfbaa983e13bc2af48820781520cdd66b075b564d51cc27d"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0008.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "f98e2866573fbd9dbfbaa983e13bc2af48820781520cdd66b075b564d51cc27d"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\do-214ab_SMC.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\do-214ab.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "74EF40CD1587AD7354B6F9C280184A1BF10438CE1FB99FF9ED62762F0B986E7A",
+      "canonical_sha256": "1618EC52FB5096116D9ABD819E6CCFACCC3AC6354306AF68632A75BF8D980BE7",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0010.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "9e9071014b3e92a4d93269cf1559a5f3f37ee8244c18530c7a99926d878e6fb2"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0009.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "9e9071014b3e92a4d93269cf1559a5f3f37ee8244c18530c7a99926d878e6fb2"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\e-10x12x5-dip.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\e-10x12x5.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "131B7884891269AAA729B73495049A89382E19D88BA62D5EAD2878C2460D098D",
+      "canonical_sha256": "9643BFFEBDC2B8F1909801BB68C8056FAC0316B4000B4B085EDC300586ABE7B9",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0011.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "151b50022f4d753de885f3f0286ddc41a8aafb11cae10039e7696b1a48b887b0"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0012.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "151b50022f4d753de885f3f0286ddc41a8aafb11cae10039e7696b1a48b887b0"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_13.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "6A00E2A881185B05560594D74B2F5C0CF70A2FBA0C25A16710C2453E1DDAC10C",
+      "canonical_sha256": "A94F8EED45B7260890EBBF8D2BF5673F88898AB54F677D92E61038AA63530D82",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0018.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fb9546c315e13fb072a3fb15077336c2d9e7b30dbee1dea498fd49ae1302929b"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0017.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fb9546c315e13fb072a3fb15077336c2d9e7b30dbee1dea498fd49ae1302929b"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_14.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "3513D85CCF02C1FBF1D9CD25EC331EA2694689D2D02D4FF0534C0505BFFBA146",
+      "canonical_sha256": "A94F8EED45B7260890EBBF8D2BF5673F88898AB54F677D92E61038AA63530D82",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0019.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fb9546c315e13fb072a3fb15077336c2d9e7b30dbee1dea498fd49ae1302929b"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0017.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fb9546c315e13fb072a3fb15077336c2d9e7b30dbee1dea498fd49ae1302929b"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_15.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "9E31DB6CB4186C022922A47E8AE76F83BF2ACF337F2C69C0FADB01E6AFFCD30D",
+      "canonical_sha256": "A94F8EED45B7260890EBBF8D2BF5673F88898AB54F677D92E61038AA63530D82",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0020.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fb9546c315e13fb072a3fb15077336c2d9e7b30dbee1dea498fd49ae1302929b"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0017.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fb9546c315e13fb072a3fb15077336c2d9e7b30dbee1dea498fd49ae1302929b"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_16.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "6BFE10E9063C6647AC1C06B06E2FFC2976483867A812E5B535609CFCD6017FC5",
+      "canonical_sha256": "A94F8EED45B7260890EBBF8D2BF5673F88898AB54F677D92E61038AA63530D82",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0021.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fb9546c315e13fb072a3fb15077336c2d9e7b30dbee1dea498fd49ae1302929b"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0017.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fb9546c315e13fb072a3fb15077336c2d9e7b30dbee1dea498fd49ae1302929b"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_17.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "6FA04EE3D178FC77149297C92968506FD3986B3F2757C1DB6CBC9D2834923DE6",
+      "canonical_sha256": "A94F8EED45B7260890EBBF8D2BF5673F88898AB54F677D92E61038AA63530D82",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0022.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fb9546c315e13fb072a3fb15077336c2d9e7b30dbee1dea498fd49ae1302929b"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0017.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fb9546c315e13fb072a3fb15077336c2d9e7b30dbee1dea498fd49ae1302929b"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_18.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "452807F148BE34B28CA26269A7E2AC3B55DD6E7C57819613368C1EEDDBA65FED",
+      "canonical_sha256": "A94F8EED45B7260890EBBF8D2BF5673F88898AB54F677D92E61038AA63530D82",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0023.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fb9546c315e13fb072a3fb15077336c2d9e7b30dbee1dea498fd49ae1302929b"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0017.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fb9546c315e13fb072a3fb15077336c2d9e7b30dbee1dea498fd49ae1302929b"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\fix_2d6.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fix_2d5.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "E815BFBA7606F1CBA37A0F1E0D916607093FF92D01A4DE7E78D02943E42787B1",
+      "canonical_sha256": "7C9DE4D0D60B20C557117422C1709996FE7663768C0384F9D7BF018F2B06A446",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0025.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "22158903a4f7d9b411b5000b00c524f8c8a06250b5df20f57475a8ca67b3b339"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0024.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "22158903a4f7d9b411b5000b00c524f8c8a06250b5df20f57475a8ca67b3b339"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\fpc0510hx-04p.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fpc0510fg-04p.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "9B49D888E56FF15F248BCA1B50F915089560A99DCB52AC2BA4C4F011232CDE21",
+      "canonical_sha256": "14EC0AE2FC7FB31D48529230645B7718DC7082CA9B8C66581C5E8CE66A94210B",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0027.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "407f482479a2517ac9fec831ba610316250d696042be4b1f9ef1e852fb20232d"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0026.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "407f482479a2517ac9fec831ba610316250d696042be4b1f9ef1e852fb20232d"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\hdmi-19pw.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\hdmii.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "559A068E5F49B4E8773FE260A1375F9491DAB72B857EB846DE5E323FF8DEC1E8",
+      "canonical_sha256": "B432B11321E35A31CCA4AB1F28E3B0862023B231B061373D2411A1DA9B429CCA",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0048.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "60b097586cb3d8b03f131cb38fe96a636bcfcfb82c5eb2f2cecdbae1eb7d7c74"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0050.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "60b097586cb3d8b03f131cb38fe96a636bcfcfb82c5eb2f2cecdbae1eb7d7c74"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\hdmia19_hdmi_01a.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\hdmii.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "846A44747F8503C1362BDB9DBA06990CD6A23669897EFAAC7FAB0F59B0DF673B",
+      "canonical_sha256": "B432B11321E35A31CCA4AB1F28E3B0862023B231B061373D2411A1DA9B429CCA",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0049.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "60b097586cb3d8b03f131cb38fe96a636bcfcfb82c5eb2f2cecdbae1eb7d7c74"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0050.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "60b097586cb3d8b03f131cb38fe96a636bcfcfb82c5eb2f2cecdbae1eb7d7c74"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ind_252012.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ind_252010.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "7B7621626D1790C009EC4A8C31FC4E30F776ABF3276FAE2498A690875C67DBAD",
+      "canonical_sha256": "1F1790B42722A068428DBEB9429B9F2A187BFFEC4D4D4573A95AF243021EA1B5",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0052.sexp",
+          "units": "mils",
+          "accuracy": 3,
+          "signature": "99e0ab9f60c75605b3a5f29af020205f42ebb6eef70e78bc0b8d19e3e3931534"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0051.sexp",
+          "units": "mils",
+          "accuracy": 3,
+          "signature": "99e0ab9f60c75605b3a5f29af020205f42ebb6eef70e78bc0b8d19e3e3931534"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ir26-61c-l302-tr8.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ir42-21c-d2d2.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "5DB7100771BBF775EE5F83B6B764835623EF1FCEDC1B4AC995EAE457C6608B31",
+      "canonical_sha256": "0C4BF8B864F304F1EF142149405B8846DA6A5E9563B8B3381F8567C0E92F5F91",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0054.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "666afe1ec36108ecb92c8631f01ab6cbe41cdda66f80c93a22af1c40df9b5417"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0055.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "666afe1ec36108ecb92c8631f01ab6cbe41cdda66f80c93a22af1c40df9b5417"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\isen_shortni_2.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\isen_shortni.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "915A3321215E8348B508EEFA670780E56608781EBE29942F82BB775C5E79F0A1",
+      "canonical_sha256": "C27CE9A10762EB46FFFBF5A1438D50616AF42E3F613A77F5449A6A404E386D71",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0057.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "5d5170cfc351845893fcae8c090ffb41ebd8d67fa97ae0c57ddb3f6ac889dcc8"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0056.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "5d5170cfc351845893fcae8c090ffb41ebd8d67fa97ae0c57ddb3f6ac889dcc8"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\magic_r22_2.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\magic_r22_1.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "11C615C02C16BC34CB19736281D04DD943AE987C02A552C3F12143D435FE9462",
+      "canonical_sha256": "0C2887A03F716B4A4360035CD34E27B43F215DBC35A8DD3BB6CCE2A8AD7178D2",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0059.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "020337cbc4ce878533da80fd732f62ad9cf5df30dc2d86ec2bbe6acd9631cdd0"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0058.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "020337cbc4ce878533da80fd732f62ad9cf5df30dc2d86ec2bbe6acd9631cdd0"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\minismdc110_2.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\minismdc110_1.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "B92E115871583E1614BB5B09C9F2168A6914F9FDC55CEF5DD13C440C3D2EB990",
+      "canonical_sha256": "6C70C60B205BB426CFD0C007708A8AD2095538E0E3F109340AA28E1E2B3ECB8A",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0061.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "1e0b924aee8c355c1c5ae97690a5194bc6d96b6b4e522791056ac706d40b5e89"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0060.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "1e0b924aee8c355c1c5ae97690a5194bc6d96b6b4e522791056ac706d40b5e89"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_518.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_516.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "73191C1A62DFD1413CD575502827FDA57633CD7E649FDD558F89D2628CA8820A",
+      "canonical_sha256": "B76B235F111EEA1A559ECB612F54E308D0E0FE60F806CE7B4175274D26306581",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0064.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "1230d311754ec0e2f29ff8b49322ecb66a1e5253320756ea1731fd1f52014044"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0062.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "1230d311754ec0e2f29ff8b49322ecb66a1e5253320756ea1731fd1f52014044"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_519.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_516.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "2CA0F7D1B48A1323008FB572C4C4D197B13D6A074E4F1C30DC8589202B1B4211",
+      "canonical_sha256": "B76B235F111EEA1A559ECB612F54E308D0E0FE60F806CE7B4175274D26306581",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0065.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "1230d311754ec0e2f29ff8b49322ecb66a1e5253320756ea1731fd1f52014044"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0062.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "1230d311754ec0e2f29ff8b49322ecb66a1e5253320756ea1731fd1f52014044"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_521.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_516.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "108A55857D82C4029080D18F44199F6AF10127DD498E9D3EA4D0E62D323ACB9E",
+      "canonical_sha256": "B76B235F111EEA1A559ECB612F54E308D0E0FE60F806CE7B4175274D26306581",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0067.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "1230d311754ec0e2f29ff8b49322ecb66a1e5253320756ea1731fd1f52014044"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0062.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "1230d311754ec0e2f29ff8b49322ecb66a1e5253320756ea1731fd1f52014044"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_520.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_517.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "BFBEE2A0BFF6A9DE8B76BAFE677DCA19271AB9B422EBD520788AC4F89A18C7B8",
+      "canonical_sha256": "4942F577D8C195E4E342029BE36640C988365FB230A478DC2D76EAA8B5DB2694",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0066.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "dc94bd0c04e032db3336e9c7970b4742e9d35799271c7cd58985ee588e329691"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0063.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "dc94bd0c04e032db3336e9c7970b4742e9d35799271c7cd58985ee588e329691"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_8128x1_6d0_12.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_8128x1_6d0_11.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "024040BE1AF2BFA9A92ECEADBF9BC9FF138F43531DE3A8EFF86C3E0E51720884",
+      "canonical_sha256": "38D4DC5F52E66165CD6BECD19544DACFFD0DBD0FDC0E091C1735A8AC1028E042",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0069.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "7d9ceb2696c44854e3d4b83254fe66952422c7b7b634fab44866a003b9dbe816"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0068.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "7d9ceb2696c44854e3d4b83254fe66952422c7b7b634fab44866a003b9dbe816"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\pin08_2d0mm_1x08_1d0.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\pin08_2d0mm_1d2_1d7.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "AABA8347DB57A868EC61CE1AC1F17EF1A79C279D537EF6AD18C8B50C6C8E8D5D",
+      "canonical_sha256": "9C823036ADBA4CBAAB1A7E70BBE81E11703762EE670FE5D8F6D5AC09F877D600",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0075.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "60c42e59f33255869c0a21daf5d8de2f04eb773e73fefc910fde3b991ca11794"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0074.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "60c42e59f33255869c0a21daf5d8de2f04eb773e73fefc910fde3b991ca11794"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_2.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_1.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "35A4055E9FB3E1D66D89A0B61682E3951743450003FBCD3D97F33F688A9E6A8E",
+      "canonical_sha256": "E7BB3AA0C1E793C0DC3055679352DAC01812B39396BD2BE2AB2A9B83AFEC6A56",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0082.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "7f63f454be9dce88cc0d2ec9d58af490b17858983dfbea0dad479032dd0c2d08"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0079.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "7f63f454be9dce88cc0d2ec9d58af490b17858983dfbea0dad479032dd0c2d08"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_1_3.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_1_2.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "03C16A070C3C4972E0B99FC0E737F85E9F939C4341BA0FE61EBACCC04D9119F9",
+      "canonical_sha256": "EEDC104C1BB9C3EAF491B87E2CA29DA057DD93BBEB78FE0C440B256B4873379F",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0081.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "12641c4030dfec5c7478b43cfce5c8b413d01176daf5dbac833ba6c2ecaaac5a"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0080.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "12641c4030dfec5c7478b43cfce5c8b413d01176daf5dbac833ba6c2ecaaac5a"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\sata_d_akl_1.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sata_d_akl.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "8824D602A69454BDC8CEA1F285112C809B118AEDAF3945DC836BF13493A4FB25",
+      "canonical_sha256": "1DA5F0AFCBE2B8BF8CC6154477FC277F60F69AD1E04549AC523588C728C4B50A",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0087.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "275ded949fbdd743adbc14479b771d4c79d5992a4d74d776c0f6ca723ec40363"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0086.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "275ded949fbdd743adbc14479b771d4c79d5992a4d74d776c0f6ca723ec40363"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\sgdbm-08-020p-hxx.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sgdbf-08-020p-hxx.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "A044E3C58A63C4E080F18234F8D563CBCA5F87CFC72C7915BCDAD23C8F020A8F",
+      "canonical_sha256": "2FAC351EA56B29DFE098136D2323A491C210665C65FFB1BE7DFB0F50D8EE50F1",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0089.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "23cb6ffb888be314ea68cb95d8f8bdacbcd3ca34e1dedd0015c54917bc54e48b"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0088.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "23cb6ffb888be314ea68cb95d8f8bdacbcd3ca34e1dedd0015c54917bc54e48b"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\so8_50_150gv_3_1.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\so8_50_150gv_3.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "0C27D5880BF5F306426747486AC4656DF361253F7C269C5FC1BF61185D1B97E1",
+      "canonical_sha256": "6A4DFD3D5B46465183ECE47278B8C429253DCCC69E53AB4BC784C5B68BB0DB2C",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0091.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "7519d0ab69f2fb8364a1d73bc59b1558b657c9ed1918a10c671aa0e32d3c2f7d"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0090.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "7519d0ab69f2fb8364a1d73bc59b1558b657c9ed1918a10c671aa0e32d3c2f7d"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\sot23-6p-20051228_4.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sot23-6p-20051228_2.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "3785A11F1EA5F085E503FC0DC1CC4422BEFF60F461B88D670473524E25B287F4",
+      "canonical_sha256": "4F0DE6B5E4967B7BDEDA29F0E6BA5B3A8DCF17754A5194502A61AB73F8EC2449",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0100.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "927458fd3910b2b444f6f8a3bc66ff222906c2b04577c1390972580739e474d1"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0099.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "927458fd3910b2b444f6f8a3bc66ff222906c2b04577c1390972580739e474d1"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\to-220-2p.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\to-220.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "157E17AB49055E5A25FB199658F0778C78F285127FEA00D5E4B771379F6BB013",
+      "canonical_sha256": "4FC62C90455DF84791D551A2A78647186B917AED7E3EE34CA3DBF72DDD9179D7",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0104.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "b2f2f5869260964ae0aa7506e7557bbb592f6067ac690b1bb0439c5dd28a5e33"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0105.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "b2f2f5869260964ae0aa7506e7557bbb592f6067ac690b1bb0439c5dd28a5e33"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\tps1d0m1d35.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\tps-1d35.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "39E0D4769C13B822AA476E6690D7208B757E91AA4B8F16712D24DBA45615CB92",
+      "canonical_sha256": "7CED3FFB9C9C9BE69FBF18B7F4A7AB8CE0BDDDB0EA23796C5A506DF6F3A3BE79",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0110.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "fc0872a5dcf1021fce0b404d6fd4767c526cf948ae7df3a5f3975764815ac788"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0107.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "fc0872a5dcf1021fce0b404d6fd4767c526cf948ae7df3a5f3975764815ac788"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\tps0d08.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\tps08.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "244E38C0EC90072B495F26B5A2EE72DFDD81B4E1B2B2222F8029C2206E829895",
+      "canonical_sha256": "AB272C272D5962D76BE9D5ED21021FBCA4ED43C9347CE9E5D9536703CB66E792",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0109.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "24df9c460dccd10b812a68157bc097f37b961cb06af1b55ceaa28432ae23a827"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0108.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "24df9c460dccd10b812a68157bc097f37b961cb06af1b55ceaa28432ae23a827"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\xh-02p-2d54-h.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\xh-2p-2d54-h.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "07ED4293D4D862FFE49AA65B5B88BC53E922EB4A98268E560C763C3C422D41A4",
+      "canonical_sha256": "4EC0C149D01845170E4249D05CD9D03EE349A89DC9CBD65A44E674CC18545BBD",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0115.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "82e8301dcacf9e40241b52a3b8dddffea71bb949a10173d31006e5f211675065"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0118.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "82e8301dcacf9e40241b52a3b8dddffea71bb949a10173d31006e5f211675065"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_51p.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\zif_51pin_0_3.psm",
+      "reason": "PSM_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "C404B2913F923E319F37E0103C05773549D2EC2E54F400184D1A71A2DC8A557C",
+      "canonical_sha256": "5ED41AA6F75F6F325AE6FA266570C9F6A9C0A23EB9C7284FE320A6A312A13075",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0126.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "e8b1c17af22a047f6993eb1bd03dcd6c3d2a8f4d363fdb3bc13c1b96d3d110e7"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_candidates_native_final\\output\\0132.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "e8b1c17af22a047f6993eb1bd03dcd6c3d2a8f4d363fdb3bc13c1b96d3d110e7"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\2nup-s_sh.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ESDPAD2.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "37EC09471C4BB598C9761847F8A14A67EA2D093F512E9408AFC97E48C4750739",
+      "canonical_sha256": "C472D7CE6CBD37CB4E096593CE3119A717E80CB404C94D6006260FDDEBF710CB",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0010.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "79b818f840b845abfb98bec8a1e26b235c49dc67dcfc0bba8188e741318b9fc4"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0034.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "79b818f840b845abfb98bec8a1e26b235c49dc67dcfc0bba8188e741318b9fc4"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\3gio_pad_b1.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\3gio_pad1.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "32F61C9F726113F4C6CF6B25124381417501FF85B3F09B02C4BDE060513B2503",
+      "canonical_sha256": "612B163257B3356271153BA0E31BF684B11EB36031E91C96BFBDFAB6EBB4F936",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0016.sexp",
+          "units": "millimeters",
+          "accuracy": 3,
+          "signature": "affe849c8fa121fbdf0d14c23efcba18d02f68b30e59c619a6cc4b56cfa5b36f"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0015.sexp",
+          "units": "millimeters",
+          "accuracy": 3,
+          "signature": "affe849c8fa121fbdf0d14c23efcba18d02f68b30e59c619a6cc4b56cfa5b36f"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\a3212elhlt-t_sot23w-3.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\psot24c_sot23-3.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "EADDF9C666B955374AF253EC4AF9C7AD9AC04A70A6CB11E386A40A027A784DF2",
+      "canonical_sha256": "5DA355E5D9C5FABADFDFD50CB038F8F75B7B12F1808553B172D296F631DD76A5",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\all_full_precision\\output\\0066.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "ebf99bd722e9cd99df3379f80f7720a017302b095bb8e0bfafb55b817af747b3"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch2\\output\\0053.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "ebf99bd722e9cd99df3379f80f7720a017302b095bb8e0bfafb55b817af747b3"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\tp0610k-t1-e3_sot23-3.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\psot24c_sot23-3.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "3A15C57B6ACE2DBCE52283C5FF7D9402D18CCBD7AA8E7FE3862AAD431DDB14A4",
+      "canonical_sha256": "5DA355E5D9C5FABADFDFD50CB038F8F75B7B12F1808553B172D296F631DD76A5",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch2\\output\\0054.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "ebf99bd722e9cd99df3379f80f7720a017302b095bb8e0bfafb55b817af747b3"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch2\\output\\0053.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "ebf99bd722e9cd99df3379f80f7720a017302b095bb8e0bfafb55b817af747b3"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ao3414_sot23-3.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ao3413_sot23-3.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "716886F78E638F311E2D47A0BCE2E66C7EEB2D2CAB10671E16F73F7A91EB3540",
+      "canonical_sha256": "EB5D223CCF5EB071CC166A15AEE09D097F911F461AACD54909B4CBD9455E9FC1",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\all_full_precision\\output\\0106.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "01a8201f8ffa579b385d9794af074df2b91c42e36b3bec22271e2160c0887338"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\all_full_precision\\output\\0105.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "01a8201f8ffa579b385d9794af074df2b91c42e36b3bec22271e2160c0887338"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\PIN_con_2d0_8pdip.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\dip_con_2d0mm_8p.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "754C0A071D2C4B194C42A80C83B098F718F762BA0A23E2E8DF4CFC27A47223F1",
+      "canonical_sha256": "5DA9CCD24E57C688340CF2C1F0C6A2B16D83F2D280268B1BDB035CCFFFB45493",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0076.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "0f59872e63012986cb75053dbdf1dce0d65f9e57da8e204d840a0d33c13e3854"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0008.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "0f59872e63012986cb75053dbdf1dce0d65f9e57da8e204d840a0d33c13e3854"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\do-214ab_SMC.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\do-214ab.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "3FE3F97022EAA525F17A42A782F103F756250AD9D732F6C445C6C137489513BD",
+      "canonical_sha256": "3DFA1C5BFEBBAF4C966204F2E765FFFA838BF9D8D95449B24D8AFEBA4B63F5A8",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0007.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "c22a17da3389c966e1c0842984227df269553c5aa52a15bbf138c533fd115327"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0006.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "c22a17da3389c966e1c0842984227df269553c5aa52a15bbf138c533fd115327"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\e-10x12x5-dip.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\e-10x12x5.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "7E22FF27685DD65E51076B0ADBE38ACC9CEA15CCD6C6AE592BE0D8E2CCC4F51F",
+      "canonical_sha256": "05E17D2182A63977C435A2E8D41B72B944F2F8CBBAA89D0F9BAE0425B8E3CB63",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0008.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "d1c033f623d3458ebcd660eece60bdf2d94f6ed4e5da6cfcfed9aead48fa481c"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0009.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "d1c033f623d3458ebcd660eece60bdf2d94f6ed4e5da6cfcfed9aead48fa481c"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_13.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "984934C229B3A4B39D3D750869478D352F21722246F2D4DA01C71766084C72F2",
+      "canonical_sha256": "EC23CA61C7449A8A8479F2DC310A743CC4174C319118E3FBF961EC79FE28675E",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0015.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "94c73844b5f2cbfdc4f9f61855c7cec79ff87bb1723abc41593906c5afe20927"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0014.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "94c73844b5f2cbfdc4f9f61855c7cec79ff87bb1723abc41593906c5afe20927"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_14.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "1E9B77288330CFEB45BCAE5569A21A699C1C7746980247F48167E73D96D163E4",
+      "canonical_sha256": "EC23CA61C7449A8A8479F2DC310A743CC4174C319118E3FBF961EC79FE28675E",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0016.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "94c73844b5f2cbfdc4f9f61855c7cec79ff87bb1723abc41593906c5afe20927"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0014.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "94c73844b5f2cbfdc4f9f61855c7cec79ff87bb1723abc41593906c5afe20927"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_15.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "C3C96AD148F74A4CEA75485B1353C0F8AC420D195A210A15920DBF254FB7DCD6",
+      "canonical_sha256": "EC23CA61C7449A8A8479F2DC310A743CC4174C319118E3FBF961EC79FE28675E",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0017.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "94c73844b5f2cbfdc4f9f61855c7cec79ff87bb1723abc41593906c5afe20927"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0014.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "94c73844b5f2cbfdc4f9f61855c7cec79ff87bb1723abc41593906c5afe20927"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_16.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "C3A3EBE07D9B2E228779681181F7BE8D859CFA0DA7064E4EDD99AFAE30C9CBFE",
+      "canonical_sha256": "EC23CA61C7449A8A8479F2DC310A743CC4174C319118E3FBF961EC79FE28675E",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0018.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "94c73844b5f2cbfdc4f9f61855c7cec79ff87bb1723abc41593906c5afe20927"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0014.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "94c73844b5f2cbfdc4f9f61855c7cec79ff87bb1723abc41593906c5afe20927"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_17.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "F6BC5BF3160C8F636B2F8A8DAE5AE78EA207717A3765421608BB134BF372DF29",
+      "canonical_sha256": "EC23CA61C7449A8A8479F2DC310A743CC4174C319118E3FBF961EC79FE28675E",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0019.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "94c73844b5f2cbfdc4f9f61855c7cec79ff87bb1723abc41593906c5afe20927"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0014.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "94c73844b5f2cbfdc4f9f61855c7cec79ff87bb1723abc41593906c5afe20927"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_18.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "F2482835572F7406EABEB4A52CCB60AA916BD271A35132D26CAB65F29C711021",
+      "canonical_sha256": "EC23CA61C7449A8A8479F2DC310A743CC4174C319118E3FBF961EC79FE28675E",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0020.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "94c73844b5f2cbfdc4f9f61855c7cec79ff87bb1723abc41593906c5afe20927"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch1\\output\\0014.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "94c73844b5f2cbfdc4f9f61855c7cec79ff87bb1723abc41593906c5afe20927"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\flash_pad49_bottom.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\flash_pad49_top.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "B596B1BA15933A0EABC39EEEDA41F54E0D137CC44A0FDBC547999656F33FD000",
+      "canonical_sha256": "A9D496230B9D96A689C5961C31C3859D737B8FD4D232F84A12F48BA1C7C12EAC",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0052.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "0fa853b5de615183dac669cc4f0afee677918406a0bd6bb1b6e4375ba06bd82e"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0054.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "0fa853b5de615183dac669cc4f0afee677918406a0bd6bb1b6e4375ba06bd82e"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad1_pst.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad1.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "D391BCE79749D0D8CD9F9DF64D70C5ECAF3EF33624D9C04C60E402B41622874D",
+      "canonical_sha256": "91550C81A6DD3F9751DE755FE8EF3DDE881D5448AD5F77FDC993571C78AC3980",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0061.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "e823058e5dada29852d90929e1bdf1b42ad9bda50e36d20faff90ed24223164b"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0059.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "e823058e5dada29852d90929e1bdf1b42ad9bda50e36d20faff90ed24223164b"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad2_pst.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad2.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "B1D50B4D597D98A4B22B8C2284EDB05143A8CD5D0AA1A92DBF45548C81C5EC12",
+      "canonical_sha256": "100FA70957F6289293C00280E66DDEAD0F3A07AD043891F044F6CE4D8E55AE33",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0064.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "0a4ed796372b2e25a492bc6cb72f5769b5a603ea376771250b89b3ad91d0eb0d"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0062.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "0a4ed796372b2e25a492bc6cb72f5769b5a603ea376771250b89b3ad91d0eb0d"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad3_pst.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad3.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "5378EE3DD4AD25D927C0C4BC095757828930F2CB584E0A33DF6CF1D51FC6AD37",
+      "canonical_sha256": "E54DFBD7C833E0BCE0D3EA0050945C4A3094A66967AB469E272E1B0A0E2378FD",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0067.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "2f26e87b23a2d17dfbd1c577b659c716e406fe5df3e07d117b7da8b3005e2ef6"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0065.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "2f26e87b23a2d17dfbd1c577b659c716e406fe5df3e07d117b7da8b3005e2ef6"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad4_pst.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad4.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "11373FF879B7E80E229632DB9DA49ACB31F458C5D7C1752A478791540E6A31EA",
+      "canonical_sha256": "7DF1D9B1A0B7A585577EB68E98106EEFB1425D9A0A48A63BD163D48FE819434E",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0070.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "4a96cae69ac1c4445921375c4ff4a68fc12b4364df8161e8b5893adba3ff1fdc"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0068.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "4a96cae69ac1c4445921375c4ff4a68fc12b4364df8161e8b5893adba3ff1fdc"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\hdmi-19pw.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\hdmii.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "69138EE7B50D322D417C16ABD027EAD7A639048226D0E03BE0E855C1EE1EFCF3",
+      "canonical_sha256": "4A6EED37939D3BFD55F969BFEECAD7E46D9461C327A6E893375D63848FC58D58",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch2\\output\\0045.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "66cf4b2a9bf086ff5633a06dc20991e34bee83b3fd59f21faa1038ca020cb139"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch2\\output\\0047.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "66cf4b2a9bf086ff5633a06dc20991e34bee83b3fd59f21faa1038ca020cb139"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\hdmia19_hdmi_01a.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\hdmii.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "6AC4EA3BD3E3D6A13C9414D1996CA8EC98221641F8202D3DF7E9E41FED8749A2",
+      "canonical_sha256": "4A6EED37939D3BFD55F969BFEECAD7E46D9461C327A6E893375D63848FC58D58",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch2\\output\\0046.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "66cf4b2a9bf086ff5633a06dc20991e34bee83b3fd59f21faa1038ca020cb139"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch2\\output\\0047.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "66cf4b2a9bf086ff5633a06dc20991e34bee83b3fd59f21faa1038ca020cb139"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ind_252012.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ind_252010.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "46FD1787B16D332FD034A9A02E75FEB05068C2E1419D7144179BA45525FA660E",
+      "canonical_sha256": "EDBCFA284AC1396F2C26FF61675044A9775647CAC1FAA540A1543D95F5A793C0",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0051.sexp",
+          "units": "mils",
+          "accuracy": 3,
+          "signature": "7ae563109ed18a5327eb66c96373e31ae57a75ad14f1405a135f28512d3da506"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0050.sexp",
+          "units": "mils",
+          "accuracy": 3,
+          "signature": "7ae563109ed18a5327eb66c96373e31ae57a75ad14f1405a135f28512d3da506"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\IR26-61C-L302-TR8.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\IR42-21C-D2D2.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "753046CB221E4867856AE96EC63D07BD14659A9F9D580DC547DA4FC4317A0CD4",
+      "canonical_sha256": "ADDEB7F07B1E86F2D1D0CA3FE58F84157F555DDCEB990FAB0D31905B73FED9EC",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0053.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "737408b35e51560d12770df2a4deac1aa81117d7afda29a5bfa92a4fe7478e5b"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0054.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "737408b35e51560d12770df2a4deac1aa81117d7afda29a5bfa92a4fe7478e5b"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\isen_shortni_2.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\isen_shortni.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "8CE752C6EACEC2FBCA641563DA9E5817188580C877BB1D8BBA3590B080BD70CD",
+      "canonical_sha256": "D00DC7EDC0DF4617CEEE0F20E61AD46580A2E4B093C69899C20798FE7DEC12E4",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch2\\output\\0049.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "f74a32d2ff00a1acfe33336a35a0ac5996897ce5b2322417143253412e1a1f3c"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch2\\output\\0048.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "f74a32d2ff00a1acfe33336a35a0ac5996897ce5b2322417143253412e1a1f3c"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\magic_r22_2.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\magic_r22_1.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "C4754BC66FA2E679E124CCD9BFD1D6F43926A45A6B9A24A98EEB6D8B27BAB0B3",
+      "canonical_sha256": "24E94BB05065C00E2EB6A1AE7AF9DE9E53462FBD29883ED30B2472750D94DBFD",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0058.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "b4588de043d10f300b7b786333c73bc0310ca4abb36a9ae5ba8e16793457c1ac"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0057.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "b4588de043d10f300b7b786333c73bc0310ca4abb36a9ae5ba8e16793457c1ac"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\mark160x160.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\mark_edge.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "E647565F044F49B7B23A2A62BA28AED6FD4D0870075452D1CD6A81CBF00E8974",
+      "canonical_sha256": "8CB83BF1840563478BF336BF11CD3A83080401CB86BF1F8761336ED24631A27F",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0104.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "77ad1dad7543fb41f578160939d7ee1e90413508be3aa0b6f1f17a75661b1f1b"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0105.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "77ad1dad7543fb41f578160939d7ee1e90413508be3aa0b6f1f17a75661b1f1b"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\minismdc110_2.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\minismdc110_1.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "EA3E893A35540E73C2B86AF198C33FE863C763FC8F50D0D65A7CC2DC7CF987B3",
+      "canonical_sha256": "2A8F17B3ED7EDACF9645CEC0690772542DD41BF287EFA204FCADF820781D7895",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0060.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "87a0fd8b17953d5bfa3b717f2379b3ee37acce341d00b3d1044d68ed04b65d2b"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0059.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "87a0fd8b17953d5bfa3b717f2379b3ee37acce341d00b3d1044d68ed04b65d2b"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_518.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_516.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "2FADF2D70F91FEC33FCF7ED3494A5074BEBEABAA79122A8B2492DAA26B14D379",
+      "canonical_sha256": "684B27739CDF64EC51E8B965BFB7053B13F47C14C15E681EF3233F1D7B5FA790",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch2\\output\\0051.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "ea55307ab7d71a1b57cc33663f9c0d3871bbefff7017f53bad0bb2f39ebf474a"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch2\\output\\0050.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "ea55307ab7d71a1b57cc33663f9c0d3871bbefff7017f53bad0bb2f39ebf474a"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_519.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_516.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "29A67CCB77D34E25859B02996C8727CFFB06321498FFFCFC86E5EF7DC398E718",
+      "canonical_sha256": "684B27739CDF64EC51E8B965BFB7053B13F47C14C15E681EF3233F1D7B5FA790",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0064.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "ea55307ab7d71a1b57cc33663f9c0d3871bbefff7017f53bad0bb2f39ebf474a"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch2\\output\\0050.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "ea55307ab7d71a1b57cc33663f9c0d3871bbefff7017f53bad0bb2f39ebf474a"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_521.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_516.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "2F251A65679A3284C608587317424D710B87C9E4CAC692598EBB6F98A89B2CFB",
+      "canonical_sha256": "684B27739CDF64EC51E8B965BFB7053B13F47C14C15E681EF3233F1D7B5FA790",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0066.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "ea55307ab7d71a1b57cc33663f9c0d3871bbefff7017f53bad0bb2f39ebf474a"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_batch2\\output\\0050.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "ea55307ab7d71a1b57cc33663f9c0d3871bbefff7017f53bad0bb2f39ebf474a"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_520.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_517.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "9F04434271DB45C4E7E9C12AB584EA0C03EB5CBA0B8BA61BCF55BA08843B255B",
+      "canonical_sha256": "85D6D85201181A90C9FEC1340FA9AA2D237A59DDED1C76C78552DECDE0420906",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0065.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "ff675a4b49a85c98f625e404a7c588eb3e88c7e0ced354ab443b1f109494aec8"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0062.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "ff675a4b49a85c98f625e404a7c588eb3e88c7e0ced354ab443b1f109494aec8"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_8128x1_6d0_12.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_8128x1_6d0_11.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "4DFD868B4C257BABFA6330E6CFD2A21ADB5588547D63C65425F6ACAB7DC843B1",
+      "canonical_sha256": "748D5765D513CC197D44BA38C996899D834B7B7BC0E868DAC2FF96105CE59D0E",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0068.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "0924e1b9d92153ccf8db2b0db86d6793e171ceb1d1e0af5bacecfe3dcb0bc635"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0067.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "0924e1b9d92153ccf8db2b0db86d6793e171ceb1d1e0af5bacecfe3dcb0bc635"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_2.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_1.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "2A776E896899BB36DA189649C319BDBE41F6C8C2BBB5391C80BD07B2167685F1",
+      "canonical_sha256": "9938442B36F91823BEBF29F57FD5139C3553F85F182F39DE646C638FEDAE3E7A",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0080.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "e3eda0ab64f9361505e84612e678bb530698071057b5ed41eefb4bd2cd18f829"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0077.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "e3eda0ab64f9361505e84612e678bb530698071057b5ed41eefb4bd2cd18f829"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_1_3.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_1_2.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "415E00DF9CDE1EA1D9FD1ADA6D1D64514C34F08ECDDFD657EB27795BE75D67F4",
+      "canonical_sha256": "D00CEEAEB77DCC42F7448DF26B93E2DBC3A15B62226FF17FC76DEA3FF724C3A3",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0079.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "ce20d24231e2aa8ec256e1b95ac67158157ba74ac3de76f36ad54d8e8d7773c4"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0078.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "ce20d24231e2aa8ec256e1b95ac67158157ba74ac3de76f36ad54d8e8d7773c4"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\sata_d_akl_1.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sata_d_akl.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "2AD3CB2137DC981BF121346F283239F612C9E24943CBF470B7F2647BAAC1460B",
+      "canonical_sha256": "E65236B1D40537C8F1DB4378499852BCAF21F74E90811C4C1A5552EFDF0CFA71",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0085.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fe6ab0c4398710b3129c2ee61efef94f2e0cbe80cf58f44c11c13f1e7d4df97b"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0084.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fe6ab0c4398710b3129c2ee61efef94f2e0cbe80cf58f44c11c13f1e7d4df97b"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\SGDBM-08-020P-HXX.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\SGDBF-08-020P-HXX.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "76CEEA9EE484995A0BB361CDFCE8AE788CDD23994FA3C62DAEFF186C57B734E9",
+      "canonical_sha256": "6DCDD375BA518EA5A377C7149F4246207A15DDAA224918BC05C910382E04B1B3",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0087.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "3dac66ad220a96707f6bf81243defb3c471ac813b0ac386aa2a9bba5e5fc2c62"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0086.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "3dac66ad220a96707f6bf81243defb3c471ac813b0ac386aa2a9bba5e5fc2c62"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_l_paste.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_l.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "DC0B4BC8A802D068E8A42649625B7CF3E442A517F23184B49C13A3A8B6A82948",
+      "canonical_sha256": "FEBDB40C0CD233FF43796B8010FE131F307DDB3FF333DACA823E8E2127983D24",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0236.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "1a07ee8824ee116639be63cd11226d252dbee260a75fe59b298fa182b4911f79"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0235.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "1a07ee8824ee116639be63cd11226d252dbee260a75fe59b298fa182b4911f79"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_r_paste.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_r.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "A18DAF9B165E2474492D2219606B8DA4FC1E4C925D07C924CD9BB02D74FF6311",
+      "canonical_sha256": "F9E3775F519B8FBD59FB6B6594D7C881C968EDD28661D931B979248B41A2E739",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0239.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "1971b99c91cf7073d8bb0bca81a8726e73ab8ff78f36978545c7fe7488ca5ed0"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0238.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "1971b99c91cf7073d8bb0bca81a8726e73ab8ff78f36978545c7fe7488ca5ed0"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\shape_mechan_2x2_4_add_0_7x4.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\shape_2x2_4_add_0_7x4.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "F30A0BB49331DA11E458004E5F2B6CE82B0CEEC4AB2852EF0795E5C544747662",
+      "canonical_sha256": "1103DEB2D594F261788475C8D9AA79F50517606521AB812583459729038F7B0D",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0298.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "7d3409b8a3eb089e4e3ea0f5604ff584e063c715ca649c41c5a64e947a2a42d4"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\source_only_nonclr\\output\\0276.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "7d3409b8a3eb089e4e3ea0f5604ff584e063c715ca649c41c5a64e947a2a42d4"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\so8_50_150gv_3_1.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\so8_50_150gv_3.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "DCF1F42947D3CE07199FB2674E95A648AF331F8CDCD57B66E203659FDBC4C438",
+      "canonical_sha256": "CADF7F36145DCB2F8D415BE13A189B5C03F57E552BA9A0717CD6AD4061C8B815",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0089.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "c5166a3ee6aebb5c36c5bd5372e8c3b7e5c520879f36a8fec1a0415740dd74de"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0088.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "c5166a3ee6aebb5c36c5bd5372e8c3b7e5c520879f36a8fec1a0415740dd74de"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\sot23-6p-20051228_4.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sot23-6p-20051228_2.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "DB9B59159E5021781C0311C684A39871E362B70D237BDD89B0DE13C17532B3DC",
+      "canonical_sha256": "48B29314F2BE8B5165D6A81A7A3D927D7F6AED267EDB609A166313279E67EC28",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0098.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "bc89fc01bd5e641c474e3d0185c79f22142292cbaf8ef14889959904d909ee0b"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0097.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "bc89fc01bd5e641c474e3d0185c79f22142292cbaf8ef14889959904d909ee0b"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\to-220-2p.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\to-220.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "7420A89D91F51FAEF5D7EF7F3E1643B2B41647A6ED61A6BC48657C29F7EEED49",
+      "canonical_sha256": "1BAA9C2D08FADA2116D630ADFB7836724DA72392D416B2D4DF73C6D49D6A48A4",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0102.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "1066493564f1f5fbf86d56b43395206eac4c81509f991611df42951d2445f7e6"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0103.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "1066493564f1f5fbf86d56b43395206eac4c81509f991611df42951d2445f7e6"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\XH-02P-2D54-H.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\XH-2P-2D54-H.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "53A1CC4D71CE2C13EDC292EB06C1E75AA4108CE9D2743F7639678CE15BAB117F",
+      "canonical_sha256": "20B5BB296753E7F897EA76A4A6CB1B4DD4F06B74087338866552253FBB2E9162",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0112.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "91be31b0a07108384d053a86e2268615bdcad0908357c7c33459ea20998208d4"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0115.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "91be31b0a07108384d053a86e2268615bdcad0908357c7c33459ea20998208d4"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_51P.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\zif_51pin_0_3.dra",
+      "reason": "DRA_COMPLETE_NATIVE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "B98D900DD9977F1BB899785860F43294623BDDF3CFAA1641021EC4660C54D85F",
+      "canonical_sha256": "05280326E23FAA26CAF664CF243D13C8AE2CC239A1F8546A73863D973E192C3B",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0123.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "c5e72e46452b9f3176e5b72000dda43994b223bfc8ae1e62511dad4041f8da79"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\candidate_dra_final\\output\\0129.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "c5e72e46452b9f3176e5b72000dda43994b223bfc8ae1e62511dad4041f8da79"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\flash_pad49_bottom.fsm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\flash_pad49_top.fsm",
+      "reason": "CUSTOM_COMPILED_COMPLETE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "E7A4E04E5BE61B5B9FC5FD4E543193151602BA755B3CEACE1052B8EED5235E76",
+      "canonical_sha256": "1D43B2E4EB7D8219DD555A78AD0B416A67FCF79246A2C119C82407BEA4606D44",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\custom_original_units\\output\\04.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fd699f44cce308fd495a0c21b61d2dbc8b093dec8b5e0ebe66ff17973c7dba0a"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\custom_original_units\\output\\05.sexp",
+          "units": "mils",
+          "accuracy": 2,
+          "signature": "fd699f44cce308fd495a0c21b61d2dbc8b093dec8b5e0ebe66ff17973c7dba0a"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\2nup-s_sh.ssm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\esdpad2.ssm",
+      "reason": "CUSTOM_COMPILED_COMPLETE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "3B5819CF6FB96F55D547E7C0E69BB951F5B204DE23333E4C4B458DD7EA871446",
+      "canonical_sha256": "D886193D0531A0F12853AA9F22FCC4C3B09685DEA7494B63A3ED2CB2105D4864",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\custom_original_units\\output\\00.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "7bdaca169c0d5da41ebe35d4f39e6149029b0c391a316e59a9d1f4042232d3e2"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\custom_original_units\\output\\03.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "7bdaca169c0d5da41ebe35d4f39e6149029b0c391a316e59a9d1f4042232d3e2"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\3gio_pad_b1.ssm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\3gio_pad1.ssm",
+      "reason": "CUSTOM_COMPILED_COMPLETE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "33807A35A324407B5135E01B250033A89D2177425016C726017334CA1B7D1168",
+      "canonical_sha256": "0F6E7588C16B2F01FB113882440813C2A807315D4C6621FC2DB4A986A6C604E7",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\custom_original_units\\output\\02.sexp",
+          "units": "millimeters",
+          "accuracy": 3,
+          "signature": "62209a07939401095cbfdd755ce8c7e5b6752261e1258d059e4b731e29d69cd5"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\custom_original_units\\output\\01.sexp",
+          "units": "millimeters",
+          "accuracy": 3,
+          "signature": "62209a07939401095cbfdd755ce8c7e5b6752261e1258d059e4b731e29d69cd5"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\mark160x160.ssm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\mark_edge.ssm",
+      "reason": "CUSTOM_COMPILED_COMPLETE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "4A2909B2271517861B3308572DFAEA25102E5D0CCA44C538CB5306110EDEF038",
+      "canonical_sha256": "94C99A0AFBF4A0C7C74E331EA3DF8BABB6ACD3962EB553C832388EB81BCF52CF",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\custom_original_units\\output\\06.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "668ee1a1c87f779c63cfebf978118774799dec49374f4810e6030fef74950fb7"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\custom_original_units\\output\\07.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "668ee1a1c87f779c63cfebf978118774799dec49374f4810e6030fef74950fb7"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_l_paste.ssm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_l.ssm",
+      "reason": "CUSTOM_COMPILED_COMPLETE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "0F71C63E06C5EA1FA8EC6C3F65D92A270E82745846C9A783674B70CF1CA71038",
+      "canonical_sha256": "749DFF991E05E41F6D82135541CDAB7D51FEE823F53D0174D7AD317E9DC9B9A1",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\custom_original_units\\output\\09.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "be47de9fc9ca95ef8a85d24231a4a04919579080a2c91ebcbc8920587a440c04"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\custom_original_units\\output\\08.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "be47de9fc9ca95ef8a85d24231a4a04919579080a2c91ebcbc8920587a440c04"
+        }
+      ],
+      "pass_": true
+    },
+    {
+      "alias": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_r_paste.ssm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_r.ssm",
+      "reason": "CUSTOM_COMPILED_COMPLETE_GEOMETRY_ORIGINAL_GRID",
+      "before_sha256": "016A4F591B4B6BDAC19476E2E831C337301AF81062E20498DCA98ED971F80FDE",
+      "canonical_sha256": "3BB07BC47A05273AD4774FAEBCB676629AF57EECA8649AF34581B8E23045FAE9",
+      "native_provenance": [
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\custom_original_units\\output\\11.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "9af8ba081f7c47dc2ccef5d59eda82ea3d6f5dae940ba69edb69ec6be6ebd5b2"
+        },
+        {
+          "raw": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\dra_audit\\custom_original_units\\output\\10.sexp",
+          "units": "millimeters",
+          "accuracy": 4,
+          "signature": "9af8ba081f7c47dc2ccef5d59eda82ea3d6f5dae940ba69edb69ec6be6ebd5b2"
+        }
+      ],
+      "pass_": true
+    }
+  ],
+  "skipped_samefile_members": [
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\14c.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\14c.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\r27x39.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\r27x39.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\60x63r.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\60x63r.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\95x130r.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\95x130r.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\c025.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\c025.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\mark40.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\mark40.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd40m80.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\mark40.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\TPS40m80.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\mark40.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\id-board.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\mark40.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\gpa1_b.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\gpa1_b.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gpa1_b.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\gpa1_b.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\o26x10.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\o26x10.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd26ob10h.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\o26x10.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\s128.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\s128.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd183_187.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd183_187.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd25_60ob.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd25_60ob.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd25_78.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd25_78.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd28_48.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd28_48.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd40_110.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd40_110.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd40_32.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd40_32.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd65_65.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd65_65.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd70_75.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd70_75.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\r31x35.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\r31x35.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\r40x50.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\r40x50.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\rect0_50x1_125.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\rect0_50x1_125.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd100_120.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd_r1000x1200p0s30.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd_r1000x1200p0s30.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd_r1000x1200p0s30.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\rect1_125x0_50.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\rect1_125x0_50.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\rect40x20.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\rect40x20.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\s20.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\s20.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd_bottom_s200p0s20.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\s20.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd_s200p0s20.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\s20.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\sq32.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\sq32.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd10_26-s4.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd10_26-s4.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd10_37v.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd10_37v.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd12_71-s4.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd12_71-s4.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd16_26-s4.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd16_26-s4.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd20_24.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd20_24.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd25_75.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd25_75.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd55_24h.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd55_24h.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\smd55_24.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd55_24h.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd8_26-s4.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd8_26-s4.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd_0d5x0d5.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd_0d5x0d5.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd_1d4x0d6.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd_1d4x0d6.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\smd_1d58x0d58.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\smd_1d58x0d58.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\via_1d5_2d5.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\via_1d5_2d5.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\s68d35.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\s68d35.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\v-o-4x2d5_5d2x4.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\v-o-4x2d5_5d2x4.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\v_1d2_1d5.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\v_1d2_1d5.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\v_c1d8p3d0.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\v_c1d8p3d0.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\via_20d10.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\via_20d10.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\via12x20.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\via12x20.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\via19d12a30.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\via19d12a30.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\via_20_30.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\via_20_30.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\mark_160x160.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\mark_160x160.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\mark_160x160.pad",
+      "canonical": "D:\\001DIY\\005lib\\01Pad_lib\\mark_160x160.pad",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\psot24c_sot23-3.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\psot24c_sot23-3.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ao3413_sot23-3.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ao3413_sot23-3.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\bwipx-1.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\bwipx-1.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\IPEX-1_2.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\bwipx-1.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\dfn2x2-6l.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\dfn2x2-6l.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\dfn6L_L2H2.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\dfn2x2-6l.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\dfn2x2-8l.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\dfn2x2-8l.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\dfn8_L2H2_E.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\dfn2x2-8l.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\dip_con_2d0mm_8p.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\dip_con_2d0mm_8p.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\do-214ab.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\do-214ab.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\e-10x12x5.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\e-10x12x5.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\e6312.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\e6312.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\e6312DIPSMT.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\e6312.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\e6377-DIPSMT.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\e6377-DIPSMT.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\e6377.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\e6377-DIPSMT.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\fix_2d5.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fix_2d5.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\fpc0510fg-04p.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fpc0510fg-04p.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_13p_0d5_F.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_13p_0d5_F.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_13p_0d5_w_finger.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_13p_0d5_F.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\FPC_7P_0D5_F.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\FPC_7P_0D5_F.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\FPC_7P_0D5_W_finger.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\FPC_7P_0D5_F.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-02p-1d25-w.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-02p-1d25-w.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-2p-1d25-w.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-02p-1d25-w.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\GH-04P-1d25-w.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-04P-1d25-w.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-4p-1d25-w.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-04P-1d25-w.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\GH-05P-1d25-w.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-05P-1d25-w.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-5p-1d25-w.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-05P-1d25-w.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\GH-06P-1d25-w.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-06P-1d25-w.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-6p-1d25-w.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-06P-1d25-w.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\GH-07P-1d25-w.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-07P-1d25-w.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-7p-1d25-w.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-07P-1d25-w.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-08p-1d25-w.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-08p-1d25-w.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-8p-1d25-w.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-08p-1d25-w.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-12p-1d25-awr.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-12p-1d25-awr.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-12p-1d25-W.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-12p-1d25-awr.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-20p-2x10-1d27.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-20p-2x10-1d27.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-2x10p-1d27.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-20p-2x10-1d27.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\hdmii.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\hdmii.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ind_252010.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ind_252010.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ir42-21c-d2d2.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ir42-21c-d2d2.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\isen_shortni.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\isen_shortni.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\magic_r22_1.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\magic_r22_1.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\minismdc110_1.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\minismdc110_1.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_516.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_516.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_517.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_517.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_8128x1_6d0_11.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_8128x1_6d0_11.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\osc2016_2520.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\osc2016_2520.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\osc4p_2520.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\osc2016_2520.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\pin05_2d54mm_1x4DIP.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\pin05_2d54mm_1x4DIP.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\pin05_2d54mm_1x5DIP.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\pin05_2d54mm_1x4DIP.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\pin08_2d0mm_1d2_1d7.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\pin08_2d0mm_1d2_1d7.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\pin60_2d54_2x30dipH.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\pin60_2d54_2x30dipH.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\pin60_2d54mm_2x30.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\pin60_2d54_2x30dipH.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_1.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_1.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_1_2.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_1_2.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\qfn26_6x6mm.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\qfn26_6x6mm.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\QFN26P065_6D0X6D0.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\qfn26_6x6mm.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sata_d_akl.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sata_d_akl.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sgdbf-08-020p-hxx.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sgdbf-08-020p-hxx.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\so8_50_150gv_3.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\so8_50_150gv_3.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-10x6d25.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-10x6d25.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-150mil.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-10x6d25.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-9d9x6-17p.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-9d9x6-17p.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-9d9x6.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-9d9x6-17p.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sot-669.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sot-669.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sot669.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sot-669.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sot23-6p-20051228_2.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sot23-6p-20051228_2.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\to-220.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\to-220.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\tps-1d35.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\tps-1d35.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\tps08.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\tps08.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\tssop48.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\tssop48.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\tssop48_12X20_b.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\tssop48.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\usb_typec_115h0.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\usb_typec_115h0.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\usb_typec_24p_115h0.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\usb_typec_115h0.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\xh-2p-2d54-h.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\xh-2p-2d54-h.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\xh-04p-2d54-w.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\xh-04p-2d54-w.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\xh-4p-2d54-w.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\xh-04p-2d54-w.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_13p.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_13p.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_13p_0_3_1D0H.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_13p.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_15p.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_15p.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_15p_0_3_1D0H.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_15p.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_21p.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_21p.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_21p_0_3_1D0H.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_21p.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_25p.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_25p.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_25p_0_3_1D0H.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_25p.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_45p.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_45p.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_45p_0_3_1D0H.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\zif_0d3_1d0h_45p.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_51pin_0_3.psm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\zif_51pin_0_3.psm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ESDPAD2.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ESDPAD2.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\3gio_pad1.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\3gio_pad1.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\psot24c_sot23-3.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\psot24c_sot23-3.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ao3413_sot23-3.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ao3413_sot23-3.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\BGA100_7x7_1050X1050X300.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\BGA100_7x7_1050X1050X300.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\BGA100_7x7_top.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\BGA100_7x7_1050X1050X300.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\bwipx-1.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\bwipx-1.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\IPEX-1_2.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\bwipx-1.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\dfn2x2-6l.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\dfn2x2-6l.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\dfn6L_L2H2.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\dfn2x2-6l.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\dfn2x2-8l.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\dfn2x2-8l.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\dfn8_L2H2_E.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\dfn2x2-8l.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\dip_con_2d0mm_8p.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\dip_con_2d0mm_8p.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\do-214ab.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\do-214ab.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\e-10x12x5.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\e-10x12x5.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\e6312.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\e6312.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\e6312DIPSMT.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\e6312.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\e6377-DIPSMT.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\e6377-DIPSMT.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\e6377.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\e6377-DIPSMT.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ec1p25c_2_12.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\flash_pad49_top.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\flash_pad49_top.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_13p_0d5_F.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_13p_0d5_F.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\FPC_13P_0D5_W_finger.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_13p_0d5_F.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad1.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad1.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad2.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad2.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad3.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad3.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad4.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\fpc_31pin_0_3_shp_pad4.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\FPC_7P_0D5_F.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\FPC_7P_0D5_F.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\FPC_7P_0D5_W_finger.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\FPC_7P_0D5_F.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-02p-1d25-w.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-02p-1d25-w.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\GH-2P-1d25-w.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-02p-1d25-w.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\GH-04P-1d25-w.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-04P-1d25-w.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\GH-4P-1d25-w.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-04P-1d25-w.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\GH-05P-1d25-w.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-05P-1d25-w.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\GH-5P-1d25-w.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-05P-1d25-w.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\GH-06P-1d25-w.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-06P-1d25-w.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\GH-6P-1d25-w.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-06P-1d25-w.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\GH-07P-1d25-w.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-07P-1d25-w.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\GH-7P-1d25-w.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\GH-07P-1d25-w.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-08p-1d25-w.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-08p-1d25-w.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\GH-8P-1d25-w.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-08p-1d25-w.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-12p-1d25-awr.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-12p-1d25-awr.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-12p-1d25-W.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-12p-1d25-awr.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-20p-2x10-1d27.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-20p-2x10-1d27.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\gh-2x10p-1d27.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\gh-20p-2x10-1d27.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\hdmii.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\hdmii.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ind_252010.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ind_252010.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\IR42-21C-D2D2.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\IR42-21C-D2D2.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\isen_shortni.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\isen_shortni.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\magic_r22_1.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\magic_r22_1.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\mark_edge.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\mark_edge.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\minismdc110_1.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\minismdc110_1.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_516.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_516.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_517.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_762x1_6d0_517.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_8128x1_6d0_11.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ole_2f_pth_2f_r0_8128x1_6d0_11.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\osc2016_2520.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\osc2016_2520.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\osc4p_2520.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\osc2016_2520.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\pin05_2d54mm_1x4DIP.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\pin05_2d54mm_1x4DIP.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\pin05_2d54mm_1x5DIP.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\pin05_2d54mm_1x4DIP.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\pin60_2d54_2x30dipH.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\pin60_2d54_2x30dipH.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\pin60_2D54MM_2x30.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\pin60_2d54_2x30dipH.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_1.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_1.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_1_2.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\prpak5x6_1_2.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\qfn26_6x6mm.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\qfn26_6x6mm.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\QFN26P065_6D0X6D0.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\qfn26_6x6mm.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sata_d_akl.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sata_d_akl.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\SGDBF-08-020P-HXX.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\SGDBF-08-020P-HXX.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_l.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_l.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_r.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_r.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\shape_2x2_4_add_0_7x4.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\shape_2x2_4_add_0_7x4.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\so8_50_150gv_3.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\so8_50_150gv_3.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-10x6d25.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-10x6d25.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-150MIL.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-10x6d25.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-9d9x6-17p.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-9d9x6-17p.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-9d9x6.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sop-16-9d9x6-17p.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sot-669.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sot-669.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sot669.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sot-669.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sot-763-1.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sot-763-1.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\SOT763-1.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sot-763-1.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\SOT-8016-1.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\SOT-8016-1.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\SOT8016-1.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\SOT-8016-1.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\sot23-6p-20051228_2.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\sot23-6p-20051228_2.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\to-220.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\to-220.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\tssop48.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\tssop48.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\tssop48_12X20_b.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\tssop48.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\usb_typec_115h0.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\usb_typec_115h0.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\usb_typec_24p_115h0.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\usb_typec_115h0.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\XH-2P-2D54-H.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\XH-2P-2D54-H.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\xh-04p-2d54-w.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\xh-04p-2d54-w.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\xh-4p-2d54-w.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\xh-04p-2d54-w.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\xh-0p-2d54-W-DIP.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\xh-0p-2d54-W-DIP.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\xh-5p-2d54-W-DIP.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\xh-0p-2d54-W-DIP.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_13P.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_13P.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_13p_0_3_1D0H.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_13P.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_15P.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_15P.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_15p_0_3_1D0H.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_15P.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_21P.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_21P.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_21p_0_3_1D0H.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_21P.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_25P.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_25P.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_25p_0_3_1D0H.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_25P.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_45P.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_45P.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_45p_0_3_1D0H.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\ZIF_0d3_1d0h_45P.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\zif_51pin_0_3.dra",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\zif_51pin_0_3.dra",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\flash_pad49_top.fsm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\flash_pad49_top.fsm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\esdpad2.ssm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\esdpad2.ssm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\3gio_pad1.ssm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\3gio_pad1.ssm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\mark_edge.ssm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\mark_edge.ssm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_l.ssm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_l.ssm",
+      "samefile": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_r.ssm",
+      "canonical": "D:\\001DIY\\005lib\\01Psm_lib\\shape_0d3x0d5_cham_r.ssm",
+      "samefile": true
+    }
+  ],
+  "scope": "Read-only source files; native graph comparison recomputed by importing Native directly, not global cache/main. Source libraries were not modified."
+}

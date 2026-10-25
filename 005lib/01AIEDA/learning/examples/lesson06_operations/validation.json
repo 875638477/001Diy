@@ -1,0 +1,141 @@
+{
+  "status": "PASS_NATIVE_SUBSET",
+  "course6FullyComplete": false,
+  "pending": [
+    "Interactive viewport/menu/mouse/undo practice pending native desktop connection",
+    "Old mil/0 half-unit discrepancy cause remains unresolved"
+  ],
+  "transactionStates": [
+    {
+      "state": "INITIAL",
+      "minx": "5.000000000",
+      "miny": "5.000000000",
+      "maxx": "7.000000000",
+      "maxy": "7.000000000"
+    },
+    {
+      "state": "MOVED",
+      "minx": "7.000000000",
+      "miny": "4.000000000",
+      "maxx": "9.000000000",
+      "maxy": "6.000000000"
+    },
+    {
+      "state": "ROTATED",
+      "minx": "5.000000000",
+      "miny": "4.000000000",
+      "maxx": "7.000000000",
+      "maxy": "6.000000000"
+    },
+    {
+      "state": "OOPS",
+      "minx": "7.000000000",
+      "miny": "4.000000000",
+      "maxx": "9.000000000",
+      "maxy": "6.000000000"
+    },
+    {
+      "state": "ROLLBACK",
+      "minx": "5.000000000",
+      "miny": "5.000000000",
+      "maxx": "7.000000000",
+      "maxy": "7.000000000"
+    },
+    {
+      "state": "COMMIT",
+      "minx": "4.000000000",
+      "miny": "7.000000000",
+      "maxx": "6.000000000",
+      "maxy": "9.000000000"
+    },
+    {
+      "state": "AFTER_SAVE",
+      "minx": "4.000000000",
+      "miny": "7.000000000",
+      "maxx": "6.000000000",
+      "maxy": "9.000000000"
+    },
+    {
+      "state": "REOPEN",
+      "minx": "4.000000000",
+      "miny": "7.000000000",
+      "maxx": "6.000000000",
+      "maxy": "9.000000000"
+    }
+  ],
+  "settingsRestored": true,
+  "filterSemanticsObserved": "nil=enabled, t=onButtons; automatic BONDSMART/DYNTHEMALS added",
+  "filterInitialState": "nil/nil in fresh process; known initialized baseline established for restoration test",
+  "quantizationObserved": [
+    {
+      "input_x": -0.0006,
+      "actual_x": -0.001,
+      "actual_y": -8.0,
+      "delta_x_mm": -0.0004000000000000001
+    },
+    {
+      "input_x": -0.0005,
+      "actual_x": 0.0,
+      "actual_y": -8.0,
+      "delta_x_mm": 0.0005
+    },
+    {
+      "input_x": -0.0004,
+      "actual_x": 0.0,
+      "actual_y": -8.0,
+      "delta_x_mm": 0.0004
+    },
+    {
+      "input_x": 0.0004,
+      "actual_x": 0.0,
+      "actual_y": -8.0,
+      "delta_x_mm": -0.0004
+    },
+    {
+      "input_x": 0.0005,
+      "actual_x": 0.0,
+      "actual_y": -8.0,
+      "delta_x_mm": -0.0005
+    },
+    {
+      "input_x": 0.0006,
+      "actual_x": 0.001,
+      "actual_y": -8.0,
+      "delta_x_mm": 0.0004000000000000001
+    },
+    {
+      "input_x": 10.0004,
+      "actual_x": 10.0,
+      "actual_y": -8.0,
+      "delta_x_mm": -0.0004000000000008441
+    },
+    {
+      "input_x": 10.0005,
+      "actual_x": 10.0,
+      "actual_y": -8.0,
+      "delta_x_mm": -0.0005000000000006111
+    },
+    {
+      "input_x": 10.0006,
+      "actual_x": 10.001,
+      "actual_y": -8.0,
+      "delta_x_mm": 0.00039999999999906777
+    }
+  ],
+  "oddDbuLineGeometry": {
+    "type": "line",
+    "layer": "PACKAGE GEOMETRY/DISPLAY_TOP",
+    "start_end": "((1.0 1.0) (4.0 1.0))",
+    "width": "0.101000000",
+    "bbox": "((0.949 0.949) (4.051 1.051))",
+    "poly_bbox": "((0.9495 0.9495) (4.0505 1.0505))",
+    "vertices": "(((4.05 0.949) 0.0) ((4.05 1.05) 0.0) ((0.949 1.05) 0.0) ((0.949 0.949) 0.0))"
+  },
+  "geometryPersistent": true,
+  "boardSHA256": "4002BB588F8A86F707583CA93BB64F5404311FB8C4EFB7A21B9D2B7360983B31",
+  "exitCodes": {
+    "create03": 0,
+    "reopen": 0
+  },
+  "interpretation": "Grid differs from database resolution. 0.101 mm line poly bbox includes half-DBU values while vertices fall on 0.001 mm grid. Observed differences retained, no general rounding rule or old-bug root cause inferred."
+}

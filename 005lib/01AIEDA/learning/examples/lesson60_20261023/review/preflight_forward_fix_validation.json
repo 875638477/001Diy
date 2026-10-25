@@ -1,0 +1,158 @@
+{
+  "oldSourceSHA256": "8EFEA4E2B3255E25077290D2ED23B82F25552F43F1484A00BDD6360FCCCDC4E1",
+  "oldByteSnapshot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\backups\\preflight_before_forward_fix.py",
+  "newSourceSHA256": "6C5FC954C2A4A4A9BF130E55C643AA5B319981FA955473D23B20C879D343A34C",
+  "fix": "Only new JSON reports using exclusive creation; any existing target is refused without writing",
+  "checks": [
+    {
+      "case": "current",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "passed": true,
+      "stdoutJSON": {
+        "status": "LEARNING_FILES_AND_FIXED_FIXTURE_CHECKED",
+        "root": "D:\\001DIY\\005lib\\01AIEDA",
+        "pythonVersion": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+        "requiredFiles": [
+          {
+            "relative": "EDA.md",
+            "exists": true
+          },
+          {
+            "relative": "课程索引.md",
+            "exists": true
+          },
+          {
+            "relative": "learning/notes/pcb_layer_naming.md",
+            "exists": true
+          },
+          {
+            "relative": "learning/notes/package_defaults.md",
+            "exists": true
+          }
+        ],
+        "historicalFixture": {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\4L\\JK_4L_L2_GND_L3_V3V3_STACK_TRAINING_NOT_RELEASED.brd",
+          "expectedSHA256": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+          "actualSHA256": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+          "matched": true
+        },
+        "cadenceInventory": {
+          "configured": true,
+          "allegroExeExists": true,
+          "captureExeExists": true,
+          "installationRoot": "C:\\Program0\\Cadence\\SPB172"
+        },
+        "nativeExecution": "NOT_TESTED_BY_PREFLIGHT",
+        "license": "NOT_TESTED_BY_PREFLIGHT",
+        "GUI": "NOT_TESTED_BY_PREFLIGHT",
+        "secondPhysicalComputer": "NOT_TESTED",
+        "readOnly": true
+      },
+      "stderr": ""
+    },
+    {
+      "case": "missing",
+      "exitCode": 2,
+      "expectedExitCode": 2,
+      "passed": true,
+      "stdoutJSON": {
+        "status": "LEARNING_INPUTS_MISSING_OR_DIFFERENT",
+        "root": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\review\\no_such_learning_root",
+        "pythonVersion": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+        "requiredFiles": [
+          {
+            "relative": "EDA.md",
+            "exists": false
+          },
+          {
+            "relative": "课程索引.md",
+            "exists": false
+          },
+          {
+            "relative": "learning/notes/pcb_layer_naming.md",
+            "exists": false
+          },
+          {
+            "relative": "learning/notes/package_defaults.md",
+            "exists": false
+          }
+        ],
+        "historicalFixture": {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\review\\no_such_learning_root\\learning\\examples\\lessonJK_51_59_20261022\\native\\4L\\JK_4L_L2_GND_L3_V3V3_STACK_TRAINING_NOT_RELEASED.brd",
+          "expectedSHA256": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+          "actualSHA256": null,
+          "matched": false
+        },
+        "cadenceInventory": {
+          "configured": true,
+          "allegroExeExists": true,
+          "captureExeExists": true,
+          "installationRoot": "C:\\Program0\\Cadence\\SPB172"
+        },
+        "nativeExecution": "NOT_TESTED_BY_PREFLIGHT",
+        "license": "NOT_TESTED_BY_PREFLIGHT",
+        "GUI": "NOT_TESTED_BY_PREFLIGHT",
+        "secondPhysicalComputer": "NOT_TESTED",
+        "readOnly": true
+      },
+      "stderr": ""
+    },
+    {
+      "case": "refuse_existing",
+      "exitCode": 2,
+      "expectedExitCode": 2,
+      "passed": true,
+      "stdoutJSON": null,
+      "stderr": "usage: preflight.py [-h] --root ROOT [--cadence-root CADENCE_ROOT] [--out OUT]\npreflight.py: error: --out already exists; refuse overwrite\n"
+    },
+    {
+      "case": "create_report",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "passed": true,
+      "stdoutJSON": {
+        "status": "LEARNING_FILES_AND_FIXED_FIXTURE_CHECKED",
+        "root": "D:\\001DIY\\005lib\\01AIEDA",
+        "pythonVersion": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+        "requiredFiles": [
+          {
+            "relative": "EDA.md",
+            "exists": true
+          },
+          {
+            "relative": "课程索引.md",
+            "exists": true
+          },
+          {
+            "relative": "learning/notes/pcb_layer_naming.md",
+            "exists": true
+          },
+          {
+            "relative": "learning/notes/package_defaults.md",
+            "exists": true
+          }
+        ],
+        "historicalFixture": {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\4L\\JK_4L_L2_GND_L3_V3V3_STACK_TRAINING_NOT_RELEASED.brd",
+          "expectedSHA256": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+          "actualSHA256": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+          "matched": true
+        },
+        "cadenceInventory": {
+          "configured": true,
+          "allegroExeExists": true,
+          "captureExeExists": true,
+          "installationRoot": "C:\\Program0\\Cadence\\SPB172"
+        },
+        "nativeExecution": "NOT_TESTED_BY_PREFLIGHT",
+        "license": "NOT_TESTED_BY_PREFLIGHT",
+        "GUI": "NOT_TESTED_BY_PREFLIGHT",
+        "secondPhysicalComputer": "NOT_TESTED",
+        "readOnly": true
+      },
+      "stderr": ""
+    }
+  ],
+  "passed": true
+}

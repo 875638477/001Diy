@@ -1,0 +1,315 @@
+{
+  "status": "READ_ONLY_DERIVED_GEOMETRY_REFERENCE_COMPARISON_DO_NOT_EXECUTE",
+  "batchId": "USB_RETURN_SOURCE_COMPARE_2L_02",
+  "variant": "2L",
+  "sourceExpectedSHA256": "AA3BFC0E01B06CB1058462439C71E56BC316F1F2929859B6A224320BE1013420",
+  "sourceCheckpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\padentry_2L_b019_DRC_PENDING",
+  "operations": [
+    {
+      "type": "deleteVia",
+      "id": "USBRET_RX_OLD_VIA_RIP",
+      "net": "PA10_UART_RX",
+      "xy": [
+        40.0,
+        20.5
+      ],
+      "padstack": "HI_VIA026_C052_TENT"
+    },
+    {
+      "type": "deleteSegment",
+      "id": "USBRET_RIP_1",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          22.75
+        ],
+        [
+          40.25,
+          22.05
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "deleteSegment",
+      "id": "USBRET_RIP_2",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          40.205,
+          21.285
+        ],
+        [
+          40,
+          21.08
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "deleteSegment",
+      "id": "USBRET_RIP_3",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          40,
+          21.08
+        ],
+        [
+          40,
+          20.5
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "deleteSegment",
+      "id": "USBRET_RIP_4",
+      "net": "PA10_UART_RX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40,
+          20.5
+        ],
+        [
+          40,
+          20.3
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "USBRET_RIP_5",
+      "net": "PA10_UART_RX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40,
+          20.3
+        ],
+        [
+          48.4,
+          20.3
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "USBRET_RIP_6",
+      "net": "PA9_UART_TX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39.7,
+          21.7
+        ],
+        [
+          40.4,
+          21.7
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "USBRET_RIP_7",
+      "net": "PA9_UART_TX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.4,
+          21.7
+        ],
+        [
+          40.8,
+          21.3
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "USBRET_RIP_8",
+      "net": "PA9_UART_TX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.8,
+          21.3
+        ],
+        [
+          40.8,
+          20.85
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "USBRET_RIP_9",
+      "net": "PA9_UART_TX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.8,
+          20.85
+        ],
+        [
+          40.95,
+          20.7
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "USBRET_RX_NEW_VIA",
+      "net": "PA10_UART_RX",
+      "xy": [
+        39.8,
+        20.52
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "purpose": "PrivatePTHsame.26drill/.52copper, relocatedtoavoidUSBsharedreferenceprojection; allactualconductorpointapprovalmustbeadapted"
+    },
+    {
+      "type": "route",
+      "id": "USBRET_PA10_UART_RX_TOP_11",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          22.75
+        ],
+        [
+          40.25,
+          22.35
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "ExplicitnormalanchorinsideactualMCUpad; preserveexternalCuedges/2.4mmneckbudget"
+    },
+    {
+      "type": "route",
+      "id": "USBRET_PA10_UART_RX_TOP_12",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          22.35
+        ],
+        [
+          40.25,
+          22.05
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "JoinexistingunmodifiedMCUsourcepartial"
+    },
+    {
+      "type": "route",
+      "id": "USBRET_PA10_UART_RX_TOP_13",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          40.205,
+          21.285
+        ],
+        [
+          39.8,
+          20.88
+        ],
+        [
+          39.8,
+          20.52
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "LocalordinaryRXapproach; preserveMCUpin/USB/C14; actualneck2.0164mmestimatedafterpadnormalization"
+    },
+    {
+      "type": "route",
+      "id": "USBRET_PA10_UART_RX_BOTTOM_14",
+      "net": "PA10_UART_RX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39.8,
+          20.52
+        ],
+        [
+          40.02,
+          20.3
+        ],
+        [
+          48.4,
+          20.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "KeeporiginalRXeastendpoint; shiftonlysourcepoint andshortapproach"
+    },
+    {
+      "type": "route",
+      "id": "USBRET_PA9_UART_TX_BOTTOM_15",
+      "net": "PA9_UART_TX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39.7,
+          21.7
+        ],
+        [
+          40.08,
+          21.32
+        ],
+        [
+          40.08,
+          21.02
+        ],
+        [
+          40.4,
+          20.7
+        ],
+        [
+          40.95,
+          20.7
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "MoveTXparallellegwestoftheUSBsharedcolumns; lastsharedcrossingremainsfiniteandunverified"
+    }
+  ],
+  "placementChanges": [],
+  "constraintOperations": [],
+  "connectivityProofs": [
+    {
+      "from": "U1.30",
+      "to": "R16.1",
+      "connected": true
+    },
+    {
+      "from": "U1.31",
+      "to": "R17.1",
+      "connected": true
+    }
+  ],
+  "pending": [
+    "FullactualspacinginclallprivateviaCuLayers/pointapprovedscope",
+    "PA10existingregional2.4maxneckbudgetunchanged; normal.2insideactualpadfullycovered",
+    "Oldsourcealias40,20.5musttransparentlyretiretoactual39.78,20.37,notwaivephysicalpinproofs",
+    "Actualpostfillcommonreferencefootprint/coplanarneck/returnnetbenefitbeforeacceptance",
+    "Rootapprovalandnativefullalloldproof/HSE/refillhealthbeforeanysave"
+  ]
+}

@@ -1,0 +1,2399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html xmlns="http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Allegro PCB SI User Guide -- 4</title>
+<META NAME="Approver" CONTENT="Technical Publications">
+<META NAME="Author" CONTENT="Technical Publications">
+<META NAME="CreateDate" CONTENT="2017-07-28">
+<META NAME="CreateTime" CONTENT="1501254588">
+<META NAME="DataType" CONTENT="Manuals">
+<META NAME="Description" CONTENT="This user guide familiarizes you with the Allegro PCB SI solution.">
+<META NAME="DocTitle" CONTENT="Allegro PCB SI User Guide">
+<META NAME="DocType" CONTENT="User Guide">
+<META NAME="EdmsRelease" CONTENT="FM-Wiki-1.0_P005">
+<META NAME="FileTitle" CONTENT="4">
+<META NAME="FileType" CONTENT="Chapter">
+<META NAME="Group" CONTENT="Signal Integrity">
+<META NAME="Keyword" CONTENT="squg">
+<META NAME="Language" CONTENT="English">
+<META NAME="ModifiedDate" CONTENT="2017-07-28">
+<META NAME="ModifiedTime" CONTENT="1501254588">
+<META NAME="NextFile" CONTENT="05_floorplan.html">
+<META NAME="PageCount" CONTENT="32">
+<META NAME="Platform" CONTENT="ALL">
+<META NAME="PrevFile" CONTENT="03_models.html">
+<META NAME="Product" CONTENT="Allegro PCB SI">
+<META NAME="ProductFamily" CONTENT="Silicon-Package-Board Co-Design">
+<META NAME="ProductVersion" CONTENT="17.2-2016">
+<META NAME="RightsManagement" CONTENT="Copyright 1991Ð2015 Cadence Design Systems Inc.">
+<META NAME="Title" CONTENT="Allegro PCB SI User Guide -- 4">
+<META NAME="TopicTags" CONTENT="FALSE">
+<META NAME="Version" CONTENT="17.2-2016">
+  </head>
+  <body style="margin-left: 5%;">
+    <a name="pagetop"></a>
+    <a name="firstpage"></a>
+    <!-- Begin Buttons -->
+    <table width="650" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td height="36" width="650" colspan="10">
+          <img src="images/header_doc.gif" width="650" height="34">
+        </td>
+      </tr>
+      <tr>
+        <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+                </td>
+<td height="20" width="73">
+<a href="squgTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+        <td>
+          <a href="03_models.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+        </td>
+        <td>
+          <a href="05_floorplan.html"><img src="images/nav_next.gif" alt="Next" border="0"></a>
+        </td>
+        <td height="20">
+          <a>
+<a href="squg.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+          </a>
+        </td>
+        <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+        </td>
+        <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+        </td>
+        <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+        </td>
+        <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+        </td>
+      </tr>
+    </table>
+    <!-- End Buttons -->
+    <p>
+    <hr>
+    <p>
+      <h3>
+        <center>
+          <font >
+            <div>Allegro&#174; PCB SI User Guide</div>
+            <font >
+              <div>Product Version 17.2&#45;2016  April 2016</div>
+            </font>
+          </font>
+        </center>
+      </h3>
+      <br>
+    </p>
+    <div>
+      <h1>4<a name="918849">&nbsp;</a></h1>
+      <h1><a name="918942">Transmission Line Simulation</a></h1>
+      <h2><a name="99312">Overview</a></h2>
+      <p><a name="918599">Transmission line simulation helps you resolve high&#45;speed interconnect problems that often accompany higher density designs, shorter cycle times, higher clock frequencies, shorter rise and fall times, and decreasing ratios of rise time to propagation delay. You can analyze a design for delay, distortion, parasitic, crosstalk effects, and design rule violations. You can review analysis results in both waveform and text report formats. </a></p>
+      <h3><a name="918728">About the PCB and Package SI Simulator</a></h3>
+      <p><a name="918600">SigNoise (TLsim) is the transmission line simulator employed by Allegro PCB SI. When you analyze a design for signal integrity, SigNoise develops models of your design and simulates the behavior of one or more </a><font color="#000000"><em>extended nets</em></font>. An extended net (or Xnet) is a set of connected and coupled nets.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 4&#45;1&nbsp; </strong></font></strong>
+        <strong><a name="926296">An Extended Net</a></strong>
+      </p>
+      <p align="left"><a name="919069"><img src="images/04_simsetup.07.1.01.png" alt=""><br></a></p>
+      <p><a name="909581">There are two different ways in which you can use transmission line simulation. You can screen entire designs or large groups of nets for problem areas. Based on the results of these initial analysis, you can then analyze specific individual signals or small groups of signals in order to troubleshoot signal integrity issues. </a></p>
+      <p><a name="99325">You can use SigNoise throughout the development of a design:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="912759">During critical component placement.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="912734">After component placement and before you route any connections.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="99327">After you route the critical nets.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="99328">After you route the entire design.</a></td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="919342">Simulations</a></h4>
+      <p><a name="918699">Once the interconnect parasitics are derived and the appropriate device models are retrieved and plugged in, SigNoise builds the simulation circuit based on the type of simulation you require. You can distinguish the different simulation types by what is included in the circuit, and how stimulus is applied. </a></p>
+      <p><a name="921760">The following types of simulation are available.</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="918701">Reflection</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="918702">Comprehensive</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="918703">Crosstalk</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="918704">SSN</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="918705">EMI Single Net</a></td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="919343">Batch Simulation</a></h4>
+      <p><a name="919504">In addition to performing signal integrity analysis interactively from the user interface, you can also use SigNoise in batch mode. See </a><a href="08_verify.html#1071890" title="8"><font color="#0000ff"><u>Chapter&nbsp;8, "Analyzing to Generate Text Reports"</u></font></a> for more information.</p>
+      <h3><a name="107197">Analysis Results</a></h3>
+      <p><a name="101648">SigNoise provides its analysis results in the form of:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="916967">ten types of standard analysis text reports.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="916976">custom designed text reports.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="916978">waveforms and accompanying data.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="916980">conductor cross&#45;section diagrams.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="918840">ground bounce movies.</a></td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="911577">Standard Analysis Reports</a></h4>
+      <p><a name="919168">Descriptions for the different types of standard analysis text reports generated by SigNoise are provided in the following table.</a></p>
+      <p><a name="920153">&nbsp;</a></p>
+      <table summary="" border="1" cellpadding="5" cellspacing="0" width="649">
+        <caption>
+          <p align="left">
+            <strong><font color="#000000"><strong>Table 4&#45;1&nbsp; </strong></font></strong>
+            <strong><a name="919226">Standard Analysis Reports</a></strong>
+          </p>
+        </caption>
+        <tr>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="187">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="919230">Report Type</a></strong></font>
+            </p>
+          </td>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="461">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="919232">Description</a></strong></font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="919274">Reflection Summary</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="919278">Gives delay and distortion data in a concise, summary format.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="919282">Delay</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="919286">Gives propagation delays, switch delays (rising and falling edge), settle delays (rising and falling edge), and reports a pass or fail status for first incident rise and fall and monotonic rise and fall heuristics for selected nets.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="919290">Ringing</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="919294">Gives overshoot and noise margin values for selected nets.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="919298">Single Net EMI</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="919300">Gives essential EMI data for the net in a concise, single&#45;line format.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="919302">Parasitics</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="919306">Gives total self capacitance, impedance range, and transmission line propagation delays for selected nets. </a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="919310">SSN report</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="919314">Gives noise levels induced on a component's power and ground busses when drivers on that bus switch simultaneously.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="919318">Segment Crosstalk</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="919322">Gives estimated peak and total crosstalk for selected nets. Crosstalk values are derived from closed form algorithms using tables produced from time domain simulation.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="919326">Crosstalk Summary</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="919330">Gives peak and total crosstalk for selected nets in a concise, summary format. Crosstalk values are derived from multi&#45;line simulations.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="919334">Crosstalk Detailed</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="919336">Gives total crosstalk on selected nets for all cases. Crosstalk values are derived from multi&#45;line simulations.</a></p>
+          </td>
+        </tr>
+      </table>
+      <h4><a name="913187">Custom Reports</a></h4>
+      <p><a name="913514">You can define and then generate text reports with a specific format that you define using the </a><font color="#000000"><em>Custom Report</em></font> tab in the <font color="#000000"><em>Report Generator</em></font> dialog box. </p>
+      <h4><a name="917141">Waveforms and V&#47;I Curves</a></h4>
+      <p><a name="919837">The waveform data shows the waveform of a signal on a driver&#45;receiver pair. SigWave can display waveforms for all pins in a simulation circuit as well as the VI curves for IOCell models.</a></p>
+      <h4><a name="919840">Conductor Cross Sections</a></h4>
+      <p><a name="919841">SigNoise generates models for the interconnect in your design. The field solvers generate the parasitic values in the model. The </a>Sigxsect window shows you a three&#45;dimensional view of the interconnect and its parasitic values.</p>
+      <h2><a name="920287">Simulation Setup</a></h2>
+      <h3><a name="921632">Setup Options</a></h3>
+      <h4><a name="920288">To set up for simulation</a></h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/arrwrite.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920289">Select any of the menu options shown in the following figure from the main menu of your PCB or Package editor.</a></td>
+          </tr>
+        </table>
+      </div>
+      <p align="left"><a name="921765"><img src="images/sim_setup_options.gif" alt=""><br></a></p>
+      <p align="left"><a name="920294">&nbsp;</a></p>
+      <p><a name="920295">The following table describes the </a><font color="#000000"><em>Analyze</em></font> menu options relevant for simulation.</p>
+      <p align="left"><a name="920372">.</a></p>
+      <table summary="" border="1" cellpadding="5" cellspacing="0" width="648">
+        <caption>
+          <p align="left">
+            <strong><font color="#000000"><strong>Table 4&#45;2&nbsp; </strong></font></strong>
+            <strong><a name="920298">SI&#47;EMI Simulation Menu Option Descriptions</a></strong>
+          </p>
+        </caption>
+        <tr>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="3" bordercolor="#000000" valign="middle" width="203">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="920302">Option</a></strong></font>
+            </p>
+          </td>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="3" bordercolor="#000000" valign="middle" width="445">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="920304">Description</a></strong></font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920307"><font color="#000000"><em>Initialize </em></font></a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920309">Displays the Signal Analysis Initialization dialog box. See </a><a href="#926243" title="4"><font color="#0000ff"><u>"User Directed Initialization"</u></font></a><a href="#926243" title="4"> </a>. </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="920315"><font color="#000000"><em>Model Browser</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="920317">Displays the SI Model Browser dialog for working with libraries and models. See </a><a href="03_models.html#871459" title="3"><font color="#0000ff"><u>Chapter&nbsp;3, "Working with SI Model Browser."</u></font></a> </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="920323"><font color="#000000"><em>Model Assignment</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="920325">Displays the Signal Model Assignment dialog box for assigning models to components. See </a><a href="#921310" title="4"><font color="#0000ff"><u>"Auditing Simulation Setup"</u></font></a><a href="#921310" title="4"> </a>. </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="920330"><font color="#000000"><em>Model Dump &#47; Refresh</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="920332">Displays the Model Dump&#47;Refresh dialog box for dumping signal integrity models (stored) in the current design to a library or refreshing models in the current design with changes made to their source files in the library. See </a><a href="03_models.html#863367" title="3"><font color="#0000ff"><u>Chapter&nbsp;3, "Managing Models Resident in a Design."</u></font></a> </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="920338"><font color="#000000"><em>Preferences</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="920340">Displays the SigNoise Preferences dialog box for specifying the analysis parameters. For details, see </a><a href="08_verify.html#1041241" title="8"><font color="#0000ff"><u>Chapter&nbsp;8, "Setting Simulation Preferences."</u></font></a> </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="920357"><font color="#000000"><em>Probe</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="920359">Displays the Signal Analysis dialog box for detailed analysis. For details, see </a><a href="08_verify.html#1038611" title="8"><font color="#0000ff"><u>Chapter&nbsp;8, "Interactive Simulation."</u></font></a> </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920366"><font color="#000000"><em>Xtalk Table</em></font></a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920368">Displays the Signal Analysis Crosstalk Table dialog box from which you can specify a crosstalk table or create one. See </a><a href="D_xtalk.html#1043336" title="C"><font color="#0000ff"><u>Appendix&nbsp;C, "Crosstalk Timing Windows,"</u></font></a> for more information. </p>
+          </td>
+        </tr>
+      </table>
+      <h3><a name="Signal_Analysis_Initialization_Form"></a><a name="920782">Initializing the Simulation Environment</a></h3>
+      <h4><a name="920784">Automatic Initialization</a></h4>
+      <p><a name="920785">You do not have to perform any manual initialization tasks before you simulate. When you initiate a signal integrity or EMI simulation from your PCB or Package editor, SigNoise automatically takes the following initialization actions.</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920788">Assumes single board analysis mode.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920789">Opens or writes the </a><font size="2" face="'Courier New'" color="#000000">signoise.log </font>file in the start directory.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920790">Uses or creates the </a><font size="2" face="'Courier New'" color="#000000">signoise.run</font> directory structure. See <a href="#924538" title="4"><font color="#0000ff"><u>Figure&nbsp;4&#45;9</u></font></a><a href="#924538" title="4"> </a>.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920791">Runs the most recently used case and clears simulation data. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920792">Uses the system configuration last used in the current case.</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="926241">Each case runs in its own sub&#45;directory (within the </a><font size="2" face="'Courier New'" color="#000000">signoise.run</font> directory). On the first run SigNoise creates the case1 sub&#45;directory containing the current (active) case. Subsequently, new (consecutively numbered) case sub&#45;directories are created as needed.</p>
+      <h4><a name="926243">User Directed Initialization</a></h4>
+      <p><a name="921923">You may also choose to initialize your simulation environment manually.</a></p>
+      <h4><a name="920796">To initialize SigNoise manually</a></h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/arrwrite.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920797">Choose </a><font color="#000000"><em>Analyze - Initialize</em></font> from the main menu of either your PCB or Package editor.</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="920803">The Signal Analysis Initialization dialog box appears as shown in the following figure.</a></blockquote>
+      <p>
+        <strong><font color="#000000"><strong>Figure 4&#45;2&nbsp; </strong></font></strong>
+        <strong><a name="920804">Signal Analysis Initialization Dialog Box</a></strong>
+      </p>
+      <p align="left"><a name="920808"><img src="images/signal_anal_init_db.gif" alt=""><br></a></p>
+      <p><a name="920809">Using this dialog box you can:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920810">elect to perform signal integrity analysis on a single board or analyze a multi&#45;board system using a System Configuration model. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920811">perform case management tasks such as:</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920812">changing the current case.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920813">creating a new case or delete an existing case.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920814">editing the comments associated with a case.</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="926099">For further details on this dialog box or for procedures regarding simulation initialization, refer to the </a><a href="../scoms/schap.html#signal_init" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>signal_init</u></font></a> command in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>.</p>
+      <h4><a name="920899">Single Board and Multi&#45;Board Setup</a></h4>
+      <p><a name="920900">By default, when you perform a simulation operation, SigNoise runs in single board mode on the current design. From the Initialization dialog box you can select to operate SigNoise in multi&#45;board mode. Multi&#45;board mode enables you to analyze a system of more than one printed circuit board using a System Configuration model. </a></p>
+      <h4><a name="920902">Case Management</a></h4>
+      <p><a name="920904">Setup and analysis data are partitioned into cases with one case being operated on at a time. You can use the initialization dialog box to manually create and delete cases, and to switch from the current case to another existing case. When you change to a different case using the initialization dialog box, upon confirmation (</a><font color="#000000"><em>OK</em></font>), all other dialog boxes are updated to reflect the case data file (<font size="2" face="'Courier New'" color="#000000">case.cfg</font>) for the new current case. </p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <font size="3"><img src="images/tip.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="927767">By default, </a><font color="#000000"><em>Always ask me about case updates when the project changes</em></font> is unchecked, and the <font color="#000000"><em>Keep the current case, clearing simulation data</em></font> executes in the background. To change this behavior, choose <font color="#000000"><em>Analyze - Initialize</em></font> and check <font color="#000000"><em>Always ask me about case updates when the project changes. </em></font>Subsequent parameter changes and simulations will then invoke the <font color="#000000"><em>Case Update</em></font> dialog box (see <a href="#920804" title="4"><font color="#0000ff"><u>Figure&nbsp;4&#45;2</u></font></a><a href="#920804" title="4"> </a>), where you can change the case management settings. </font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><font color="#000000"><strong>Note: </strong></font><a name="927877">You can also access the </a><font color="#000000"><em>Case Update</em></font> dialog box by choosing <font color="#000000"><em>Analyze - Probe</em></font> and clicking <font color="#000000"><em>Reports</em></font> or <font color="#000000"><em>Waveforms</em></font>.</blockquote>
+      <p><a name="sigcaseupdate"></a><a name="920905">When you initiate an operation which would change the case data file, </a>case.cfg, in a way that could invalidate simulation data in the current case directory, you are notified of the change by the display of the Update Case dialog box, shown in <a href="#920804" title="4"><font color="#0000ff"><u>Figure&nbsp;4&#45;2</u></font></a><a href="#920804" title="4"> </a>. </p>
+      <p><a name="920907">You can choose to:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920909">create and name a new case based on a copy of the configuration information in the existing</a><font size="2" face="'Courier New'" color="#000000"> case.cfg </font>file, plus the proposed change. </td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="920912">Make the new case the current case and begin working there. The new case includes no existing simulation data. </a></blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920913">add the proposed change to the current case, clear all existing simulation data from the case, and continue your work there. This is the default behavior.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="920914">add the proposed change to the configuration of the current case, and continue your work there.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="920915">All existing simulation details are retained. Do this only when you are certain that new simulation data, based on the modified configuration information, will be compatible with existing simulation data. </a></blockquote>
+      <h3><a name="924182">Assigning Device Models</a></h3>
+      <p><a name="924185">SigNoise uses device models, IOCell (or buffer) models, Espice models, and trace models to create complete simulation circuits for nets in your design. You can assign device models to discrete devices automatically.</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <font size="3"><img src="images/important.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="924186">Before performing simulations, choose </a><font color="#000000"><em>Setup - SI Design Audit</em></font> to verify that each component has a model assigned to it. For further details, see <a href="#921310" title="4"><font color="#0000ff"><u>Auditing Simulation Setup</u></font></a><a href="#921310" title="4"> </a>. When necessary, you are required to manually assign device models.</font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="924187">To assign device and interconnect models to design objects</a></h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/arrwrite.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924188">Choose </a><font color="#000000"><em>Analyze - SI&#47;EMI Sim - Model</em></font> from the main menu of your PCB or Package editor.</td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="924189">The Signal Model Assignment dialog box is displayed as shown in the following figure.</a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 4&#45;3&nbsp; </strong></font></strong>
+        <strong><a name="924191">Signal Model Assignment &#45; Devices Tab</a></strong>
+      </p>
+      <p align="left"><a name="924195"><img src="images/sig_model_assign_db.gif" alt=""><br></a></p>
+      <p><a name="924196">Using this dialog box you can perform the following tasks.</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924197">Choose to have SigNoise automatically assign models to capacitors, resistors, and inductors.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924198">Manually assign models to components and bond wires.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924199">Disassociate models from design objects. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924200">Save model assignments to a Model Assignment mapping file or load an existing mapping file.</a></td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="924201">Devices Tab</a></h4>
+      <p><a name="924909">Using the </a><font color="#000000"><em>Devices</em></font> tab of the Signal Model Assignment dialog box, you can assign device models to components in the design either manually or automatically. Note the <font color="#000000"><em>Auto Setup</em></font> button in <a href="#924191" title="4"><font color="#0000ff"><u>Figure&nbsp;4&#45;3</u></font></a><a href="#924191" title="4"> </a>.</p>
+      <h4>
+        <em></em>
+        <em><a name="924281">Devices Tab Usage Notes</a></em>
+      </h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924282">Use </a><font color="#000000"><em>Preferences</em></font> at anytime while using the Signal Model Assignment dialog box to display the SigNoise Preferences dialog box. Through this dialog box, you can change the characteristics of the default device and interconnect models.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924284">Use </a><font color="#000000"><em>Auto Setup</em></font> to automatically assign device models to simple components such as capacitors and resistors using the device type prefix as a reference. In order for automatic model assignment to succeed, components must have reasonable value property data in the design database.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924285">For manual model assignments, either assign a single device model to all components having the same device file or assign individual device models to individual components specified by reference designator. When you specify a model you can enter a model name in the </a>Signal Model field or select a model in the <font color="#000000"><em>Model Browser</em></font>.</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="924286">Use </a><font color="#000000"><em>Find Model</em></font> to display a set of models appropriate for the selected DevType or RefDes.</blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924287">You can also use </a><font color="#000000"><em>Create Model</em></font> to invoke a model editor and create a model from scratch. Depending on the value property data associated with the component, either the Create Espice Device Model dialog box or the Create IBIS Device Model dialog box is invoked.</td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="926163">For further details on this tab, refer to the </a><a href="../scoms/schap.html#signal_model" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>signal_model</u></font></a> command in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>.</p>
+      <h4><a name="924288">BondWires Tab</a></h4>
+      <p><a name="924289">Bond wires are connect lines (clines) on wire bond layers. Use the </a><font color="#000000"><em>BondWires</em></font> tab to assign trace models or Espice models to individual bond wire connections in the design or to modify these models. When the Model Browser is open along with the Signal Model Assignment dialog box, the name of a trace model or Espice model selected in the Model Browser also displays in the <font color="#000000"><em>Signal Model</em></font> field. </p>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="924290">Espice models assigned to the bond wires are not used in parasitic reports and DRC</a><font color="#0000ff">.</font></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <font size="3"><img src="images/important.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="924291">When assigning an Espice model, map the first Espice subvariety node to the die pin and the second node to the bond finger. </a></font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p>
+        <strong><font color="#000000"><strong>Figure 4&#45;4&nbsp; </strong></font></strong>
+        <strong><a name="924935">Signal Model Assignment &#45; BondWires Tab</a></strong>
+      </p>
+      <p align="left"><a name="924295"><img src="images/model-assign-bondwires.png" alt=""><br></a></p>
+      <h4>
+        <em></em>
+        <em><a name="924350">BondWires Tab Usage Notes</a></em>
+      </h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924351">To manually assign trace and Espice models, use </a><font color="#000000"><em>Find Model</em></font> to view and select existing models in the selected interconnect library. </td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="926182">For further details on this tab, refer to the </a><a href="../scoms/schap.html#signal_model" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>signal_model</u></font></a> command in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>.</p>
+      <h4><a name="924352">RefDesPins Tab</a></h4>
+      <p><a name="924353">Use the </a><font color="#000000"><em>RefDesPins</em></font> tab to assign IOCell models and programmable buffer models to individual pins identified by reference designator. You can also modify existing models during assignment. When the model Browser is open along with the Signal Model Assignment dialog box, the name of the model selected in the Model Browser also displays in the <font color="#000000"><em>Signal Model</em></font> field.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 4&#45;5&nbsp; </strong></font></strong>
+        <strong><a name="924354">Signal Model Assignment &#45; RefDesPinsTab</a></strong>
+      </p>
+      <p align="left"><a name="924358"><img src="images/model-assign-refdespins.png" alt=""><br></a></p>
+      <h4>
+        <em></em>
+        <em><a name="924418">RefDesPinsTab Usage Notes</a></em>
+      </h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924419">If necessary, use the </a><font color="#000000"><em>Preferences</em></font> button to modify default data values.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924420">To assign an existing IBIS Device model, you can enter a model name in the </a><font color="#000000"><em>Signal Model</em></font> field, or select a model in the Model Browser. Use the <font color="#000000"><em>Find Model</em></font> button to display models appropriate for the selected reference designator.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924421">To activate the </a><font color="#000000"><em>Prog. Buffers</em></font> command button, first select a Programmable Buffer model from the working library.</td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="926330">Connectors Tab</a></h4>
+      <p><a name="926333">Use the Connectors tab to assign coupled connector models to components such as male&#47;female connectors, PCI slots, and other components that connect one design to another.</a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 4&#45;6&nbsp; </strong></font></strong>
+        <strong><a name="926391">Signal Model Assignment &#45; Connectors Tab</a></strong>
+      </p>
+      <p align="left"><a name="926392"><img src="images/sig_model_assign_conns_db.png" alt=""><br></a></p>
+      <p><a name="926349"><font color="#000000"><strong>Connectors Tab Usage Notes</strong></font></a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="926337">Use the </a><font color="#000000"><em>Connector Model </em></font>field<font color="#000000"><em> </em></font>to<font color="#000000"><em> </em></font>type in an existing connector model name for specified components. Connector model names previously entered in the field appear as selection entries in the drop&#45;down. You can clear individual model assignments by choosing the <font color="#000000"><em>No Model </em></font>entry.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="926338">To manually assign connector models, use </a><font color="#000000"><em>Find Model</em></font> to view and select existing models in the selected device library.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="926339">If necessary, you can modify the chosen model with </a><font color="#000000"><em>Edit Model</em></font>. </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="926331">To quickly clear all connector models assigned to components in the design, use </a><font color="#000000"><em>Clear All Connector Model Assignments</em></font>.</td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="926218">For further details on this tab, refer to the </a><a href="../scoms/schap.html#signal_model" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>signal_model</u></font></a> command in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>.</p>
+      <h3><a name="920917">Setting Environment Variables</a></h3>
+      <p><a name="925397">SigNoise references both general and PCB SI simulation&#45;related environment variables that you can set to customize your simulation environment. Simulation&#45;related variables are best handled using a local environment (</a><font size="2" face="'Courier New'" color="#000000">env</font>) file, which is read by PCB SI at start&#45;up. See <a href="#920985" title="4"><font color="#0000ff"><u>Setting Allegro&#174; PCB SI Simulation Variables</u></font></a><a href="#920985" title="4"> </a>.</p>
+      <h4><a name="920919">General System Variables</a></h4>
+      <p><a name="920920">General system variables can be set in either your local</a><font color="#000000"><em> </em></font><font size="2" face="'Courier New'" color="#000000">.cshrc</font> file (UNIX platforms) or in the System Properties dialog box (Windows platform).</p>
+      <h4>
+        <em></em>
+        <em><a name="920921">Setting General System Variables on UNIX Platforms</a></em>
+      </h4>
+      <p><a name="920922">The variables in the following table can be set by adding its command line as an entry in your local </a><font size="2" face="'Courier New'" color="#000000">.cshrc</font> file.</p>
+      <p align="left"><a name="920948">&nbsp;</a></p>
+      <table summary="" border="1" cellpadding="5" cellspacing="0" width="651">
+        <caption>
+          <p align="left">
+            <strong><font color="#000000"><strong>Table 4&#45;3&nbsp; </strong></font></strong>
+            <strong><a name="920925">General System Variables on UNIX Platforms</a></strong>
+          </p>
+        </caption>
+        <tr>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="116">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="920931">Variable Name</a></strong></font>
+            </p>
+          </td>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="159">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="920933">Purpose</a></strong></font>
+            </p>
+          </td>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="375">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="920935">Command Line</a></strong></font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920937">EDITOR</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920939">Sets the default text editor.</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920941"><font size="2" face="'Courier New'" color="#000000">setenv EDITOR `xterm &#45;e &#47;usr&#47;ucb&#47;vi'</font></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920943">PRINTER</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920945">Sets the default printer to use when a print command is given.</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920947"><font size="2" face="'Courier New'" color="#000000">setenv PRINTER printer_name</font></a></p>
+          </td>
+        </tr>
+      </table>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="920949">If the EDITOR variable is not set, SigNoise will run </a><font size="2" face="'Courier New'" color="#000000">xterm vi</font> when you text edit a file. You may omit the <font size="2" face="'Courier New'" color="#000000">xterm</font> for editors that open a new window of their own. </p>
+      <h4>
+        <em></em>
+        <em><a name="920950">Setting General System Variables on the Windows Platform</a></em>
+      </h4>
+      <p><a name="920951">You can set the variables that are described in the following table by adding an entry within the User Variables section of the System Properties dialog box.</a></p>
+      <p align="left"><a name="920977">&nbsp;</a></p>
+      <table summary="" border="1" cellpadding="5" cellspacing="0" width="651">
+        <caption>
+          <p align="left">
+            <strong><font color="#000000"><strong>Table 4&#45;4&nbsp; </strong></font></strong>
+            <strong><a name="920954">General System Variables on the Windows Platform</a></strong>
+          </p>
+        </caption>
+        <tr>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="116">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="920960">Variable Name</a></strong></font>
+            </p>
+          </td>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="159">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="920962">Purpose</a></strong></font>
+            </p>
+          </td>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="375">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="920964">Value</a></strong></font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920966">EDITOR</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920968">Sets the default text editor.</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920970"><font size="2" face="'Courier New'" color="#000000">editor_application_name</font></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920972">PRINTER</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920974">Sets the default printer to use when a print command is given.</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="920976"><font size="2" face="'Courier New'" color="#000000">printer_name</font></a></p>
+          </td>
+        </tr>
+      </table>
+      <h4><a name="920979">Allegro</a><sup>&#174;</sup> PCB SI Environment Variables</h4>
+      <p><a name="925519">The PCB SI environment variables for both the UNIX and Windows platforms are set in your local </a><font size="2" face="'Courier New'" color="#000000">env</font> file (&#60;<font size="2" face="'Courier New'" color="#000000"><em>home</em></font>&#62;<font size="2" face="'Courier New'" color="#000000">&#47;pcbenv&#47;env</font>).They apply to the Transmission Line Simulator, and other analysis tools which reference them. </p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <font size="3"><img src="images/tip.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="925947">You are not required to set these environment variables unless you choose to customize your simulation environment. Setting these environment variables is optional.</a></font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h4>
+        <em></em>
+        <em><a name="925948">To determine your local pcbenv</a> directory</em>
+      </h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="925949">In your PCB SI or SigXplorer command window, type: </a><font size="2" face="'Courier New'" color="#000000">set</font></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="925468">The Defined Variables window appears as shown in the following figure.</a></blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="925484">Check the value of the ENVPATH variable. </a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="925490">Typically, this shows a path to a local directory followed by a path to a common directory in your software installation. </a></blockquote>
+      <blockquote><font color="#000000"><strong>Note: </strong></font><a name="925697">For local environment variable settings, the best strategy is to put them in a local </a><font size="2" face="'Courier New'" color="#000000">env</font> file (&#60;<font size="2" face="'Courier New'" color="#000000"><em>home</em></font>&#62;<font size="2" face="'Courier New'" color="#000000">&#47;pcbenv&#47;env</font>) and leave the settings in the software installation as&#45;is.</blockquote>
+      <p>
+        <strong><font color="#000000"><strong>Figure 4&#45;7&nbsp; </strong></font></strong>
+        <strong><a name="925504">Defined Variables Window</a></strong>
+      </p>
+      <p align="left"><a name="925635"><img src="images/defined_vars_win.gif" alt=""><br></a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="925975">Take a look in your </a>local ENVPATH directory to see if an <font size="2" face="'Courier New'" color="#000000">env</font> file already exists there. </td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="925979">If it does not exist, you may want create one. See </a><a href="#925981" title="4"><font color="#0000ff"><u>To create a local env file</u></font></a><a href="#925981" title="4"> </a>.</blockquote>
+      <h4>
+        <em></em>
+        <em><a name="925981">To create a local env file</a></em>
+      </h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="920982">Make a </a><font size="2" face="'Courier New'" color="#000000">pcbenv</font> directory under your home directory if one does not currently exist.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="920983">Copy the </a><font size="2" face="'Courier New'" color="#000000"><em>&#60;install&#62;</em></font><font size="2" face="'Courier New'" color="#000000">&#47;share&#47;pcb&#47;text&#47;env_local.txt</font> file to your <font size="2" face="'Courier New'" color="#000000">pcbenv</font> directory and name it <font size="2" face="'Courier New'" color="#000000">env</font>. This local environment file is read first when PCB SI starts up.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="920984">Edit this </a><font size="2" face="'Courier New'" color="#000000">env</font> file to add your environment variable settings, aliases, and so on to the end of the file. See <a href="#925719" title="4"><font color="#0000ff"><u>To edit your local env file</u></font></a><a href="#925719" title="4"> </a> for further details.</td>
+          </tr>
+        </table>
+      </div>
+      <h4>
+        <em></em>
+        <em><a name="920985">Setting Allegro</a><sup>&#174;</sup> PCB SI Simulation Variables</em>
+      </h4>
+      <p><a name="920986">You can set the variables in the following table by adding its command line syntax as an entry in your local </a><font size="2" face="'Courier New'" color="#000000">env</font> file.</p>
+      <p align="left"><a name="921057">&nbsp;</a></p>
+      <table summary="" border="1" cellpadding="5" cellspacing="0" width="649">
+        <caption>
+          <p align="left">
+            <strong><font color="#000000"><strong>Table 4&#45;5&nbsp; </strong></font></strong>
+            <strong><a name="920989">Simulation Environment Variables</a></strong>
+          </p>
+        </caption>
+        <tr>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="150">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="920995">Variable Name</a></strong></font>
+            </p>
+          </td>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="214">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="920997">Function</a></strong></font>
+            </p>
+          </td>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="284">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="920999">Command Line Syntax</a></strong></font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="921001">TOPOLOGY_<br>TEMPLATE_PATH</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="921003">Sets the path where topology templates are stored.</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="921005"><font size="2" face="'Courier New'" color="#000000">set TOPOLOGY_TEMPLATE_PATH = &#47;home&#47;sig6&#47;newboard&#47;tops</font></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="921007">SIGNOISEPATH</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="921009">Sets the path to various items used by SigNoise, such as the default libraries.</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="921011"><font size="2" face="'Courier New'" color="#000000">set SIGNOISEPATH = ~&#47;cds&#47;tools&#47;pcb&#47;text</font></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="921013">DISPLAY_<br>NOHILITEFONT</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="921015">Useful when trying to highlight a trace on a fully routed board. The highlight is a solid color.</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="921017"><font size="2" face="'Courier New'" color="#000000">set DISPLAY_NOHILITEFONT</font></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="921019">LOG_NET_XTALK</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="921021">Sets all net&#45;to&#45;net results from the Crosstalk Estimator to be logged in the Allegro message window and the </a><font size="2" face="'Courier New'" color="#000000">signoise.log</font> file.</p>
+            <p><a name="921022">&nbsp;</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="921024"><font size="2" face="'Courier New'" color="#000000">set LOG_NET_XTALK</font></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="921026">SIGSUPPRESS</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="921028">Suppresses display of the specified types of messages in SigNoise's Message Log window. Follow the variable name with a </a><font color="#000000"><em>space&#45;separated</em></font> list of message types to suppress. </p>
+            <p><a name="921029">These can be </a><font color="#000000"><strong>warning</strong></font> and&#47;or <font color="#000000"><strong>error</strong></font> messages. Case is not significant. </p>
+            <p><a name="921030">&nbsp;</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="921032"><font size="2" face="'Courier New'" color="#000000">set SIGSUPPRESS</font></a> <font size="2" face="'Courier New'" color="#000000">[</font><font size="2" face="'Courier New'" color="#000000"><em>list_of_message_types</em></font><font size="2" face="'Courier New'" color="#000000">]</font></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="921034">SIGNAL_RUN_<br>DIRECTORY</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="921036">Sets SigNoise to use an existing run directory, </a><font size="2" face="'Courier New'" color="#000000">signoise.run</font>. When the design software is started, SigNoise will use this run directory.</p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="921038"><font size="2" face="'Courier New'" color="#000000">set SIGNAL_RUN_DIRECTORY &#47;home&#47;sig7&#47;projects&#47;signoise.run</font></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="921040">SIGNAL_DEVLIBS</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="921042">Sets the default device libraries that appear in the library search list.</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="921044"><font size="2" face="'Courier New'" color="#000000">set SIGNAL_DEVLIBS &#47;home&#47;sig6&#47;new.dml &#47;home&#47;sig5&#47;std.dml</font></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="921046">SIGNAL_ICNLIBS</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="921048">Sets the interconnect model libraries that appears in the library search list.</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="921050"><font size="2" face="'Courier New'" color="#000000">set SIGNAL_ICNLIBS &#47;home&#47;sig6&#47;intrconn1 &#47;home&#47;sig5&#47;intrconn2</font></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="921052">SIG_MAPFILE_ORGPATH</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="921054">Specifies that the original model path is used in the device model assignment map file when it is saved.</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="921056"><font color="#000000">set SIG_MAPFILE_ORGPATH 1</font></a></p>
+          </td>
+        </tr>
+      </table>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="921058">The SIGNAL_DEVLIBS and SIGNAL_ICNLIBS variables do not apply to SigNoise run directories created </a><font color="#000000"><em>before</em></font> the variables were set. Also, if you specify a directory, rather than a file, SigNoise will include all libraries (*.<font size="2" face="'Courier New'" color="#000000">dml</font>*) in that directory within the library search list.</p>
+      <h4>
+        <em></em>
+        <em><a name="925719">To edit your local env file</a></em>
+      </h4>
+      <p><a name="925844">You can set environment variables simply by editing your local </a><font size="2" face="'Courier New'" color="#000000"><em>&#60;home&#62;</em></font><font size="2" face="'Courier New'" color="#000000">&#47;pcbenv&#47;env</font> file using a text editor and then sourcing the file from your command console window.</p>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="925845">Do not edit the standard header information in this file. </a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="925846">Add environment variable statements to the bottom of your </a><font size="2" face="'Courier New'" color="#000000">env</font> file, preceded by the command <font size="2" face="'Courier New'" color="#000000">set, </font>as shown in the <a href="#925729" title="4"><font color="#0000ff"><u>Local </u></font></a><a href="#925729" title="4"><font color="#0000ff"><u>env</u></font></a><a href="#925729" title="4"><font color="#0000ff"><u> File Example</u></font></a><a href="#925729" title="4"> </a>. Refer to <a href="#920989" title="4"><font color="#0000ff"><u>Table&nbsp;4&#45;5</u></font></a><a href="#920989" title="4"> </a> for exact syntax.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <font size="3"><img src="images/tip.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="925812">A "#" sign is used to precede comment lines and to comment out (turn off) environment variables without removing them from the file.</a></font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="925876">Save the file, then type the following line in your PCB SI or SigXplorer command console window to have the </a><font size="2" face="'Courier New'" color="#000000">env</font> file read.</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925884">source </a><font size="2" face="'Courier New'" color="#000000"><em>&#60;home&#62;</em></font><font size="2" face="'Courier New'" color="#000000">&#47;pcbenv&#47;env</font>.txt</font>
+      </blockquote>
+      <blockquote><a name="925906">The new environment variables are now set in your Allegro PCB SI session.</a></blockquote>
+      <h4><a name="925729">Local </a><font size="2" face="'Courier New'" color="#000000"><strong>env</strong></font> File Example</h4>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925913">&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925914">#</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925780"># ALLEGRO local user&#39;s environment file</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925730"># # &#45; this indicates a comment</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925731">#</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925732"># read global environment file source $ALLEGRO_INSTALL_DIR&#47;text&#47;env</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925734">#</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925735"># Do not edit the default header above this line.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925736">#</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925737"># Custom user preferences below</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925738">#</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925739"># enforce lossy Welement algorithms for MGH sims</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925740">set Enforce_Welement_Simulation 1</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925741">#</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="926051"># holes in the shield layers are included in delay calculations.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="926054">set USE_ACCURATE_DELAY_CALCULATION</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="926052">#</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="926070"># system Xnet names can come from any design.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="926063">set SXNET_NAME_FROM_DESIGN = Any</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="926068">#</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925742"># define a trapezoidal trace cross&#45;section. </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="926088"># value is the acute angle of the sides of the trapezoid.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925743"># set TrapeZoidal_Angle_in_Degree = 60</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925744">#</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925745"># for very fine geometric shapes below 1 mil</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925746"># set BEM2D_BOUNDARY_ELEMENT_SIZE = 5</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925388">#</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925824"># suppress SigWave display of internal i waveforms</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925825"># set SW_HIDE_ALL_I_WAVEFORMS</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="925819">#</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="926046"># set the default display of T&#45;line delay to be in length.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="926037">set SIGXP_LENGTH_MODE</a></font>
+      </p>
+      <h2><a name="921310">Auditing Simulation Setup</a></h2>
+      <h3><a name="921311">SI Audit Errors Report</a></h3>
+      <p><a name="921312">The SI Design Audit wizard lets you generate a report about the information discovered during the audit process.</a></p>
+      <h4><a name="921313">To check your design setup</a></h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/arrwrite.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921314">Choose </a><font color="#000000"><em>Setup - </em></font><font size="3" color="#0000ff"><u><em>SI Design Audit </em></u></font>from the main menu of your PCB or Package editor.</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="921319">As your design and its libraries are checked, audit errors are listed in the Audit Errors page of the SI Design Audit wizard. This page displays a list of errors encountered, ignored, or resolved during the audit process.</a></blockquote>
+      <p>
+<blockquote><blockquote>        <font color="#000000"><a name="928156"><img src="images/aud005.png" alt=""><br></a></font></blockquote></blockquote>
+      </p>
+      <p><a name="928034">You can click the </a><font color="#000000"><em>Report</em></font> button to generate a report of the errors encountered during audit. The following figure shows the SI Audit Errors Report window with a sample report. Use this window to view and save your setup report as needed.</p>
+      <blockquote><a name="928394"><img src="images/si_audit_report.png" alt=""><br></a></blockquote>
+      <p><a name="928322">For information on design audit, see</a><a href="../scoms/schap.html#signal_audit" target="external_window"><font color="#0000ff"><u><em> Allegro PCB and Physical Layout Command Reference: S Commands</em></u></font></a>.</p>
+      <h3><a name="928185">Design Audit Checks</a></h3>
+      <h4>
+        <em></em>
+        <em><a name="928186">To report serious simulation setup problems (Errors), following are checked:</a></em>
+      </h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="928187">zero thickness layers in the layer stack.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921352">unplaced components.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921353">nets with POWER or GROUND pins, but no VOLTAGE property.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921354">nets with POWER or GROUND pins or a VOLTAGE property, but no shape or a VOLTAGE_SOURCE pin.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921355">no VOLTAGE property on any net.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921356">nets with no drivers or receivers, and no pins attached to a component with an EspiceDevice SIGNAL_MODEL reference.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921357">C&#45;lines with a SIGNAL_MODEL reference that do not exist in any open interconnect library</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921358">no working interconnect library.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921359">an active system configuration reference that is not loaded or where a DesignLink model does not exist in any open device library.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921360">Default IOCells that do not exist in any open device library</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921361">components with a SIGNAL_MODEL reference that do not exist in any open device library.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921362">model version discrepancies.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921363">referenced device models that do not pass dmlcheck (Audit Report will list problem models, but actual errors will appear in SigNoise log window).</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921364">pin signal_model parameters in IBISDevice pin map do not match Allegro pin use.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921365">Allegro component pins not found in IBISDevice pin map (other than NC pins).</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921366">components with the TERMINATOR_PACK property not assigned an EspiceDevice SIGNAL_MODEL property.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921367">shapes on PLANE layers with no VOLTAGE property on a net.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921368">layers with improper material for a given layer type.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921369">nets with improper differential pair connections like a non&#45;inverting driver that is driving an inverting receiver.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921370">nets with the DIFFERENTIAL_PAIR property and no differential pair signal models on pins, or vice versa.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921371">DISCRETE components with the wrong PINUSE property.</a></td>
+          </tr>
+        </table>
+      </div>
+      <h4>
+        <em></em>
+        <em><a name="921372">To find setup problems that may hinder accuracy (Warnings), SigNoise checks for:</a></em>
+      </h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921373">default settings in the layer stack.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921374">wire bond layers that do not have the SIGNAL_MODEL property attached to clines.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921375">components that have no SIGNAL_MODEL property.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921376">nets with a DC VOLTAGE property.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921377">default IOCELL models that are not set.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921378">PLANE layers that have no name assigned.</a></td>
+          </tr>
+        </table>
+      </div>
+      <h4>
+        <em></em>
+        <em><a name="921379">SigNoise also reports:</a></em>
+      </h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921380">layer stack information.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921381">number of nets and components.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="921382">assigned models, including the library file.</a></td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="924442">Simulation Run Directory Structure</a></h2>
+      <h4><a name="924443">Creation Scheme</a></h4>
+      <p><a name="924446">SigNoise is the Allegro</a><sup>&#174;</sup> SI simulation engine. It creates the run directory structure required for simulation when it is needed. In most cases, the parent directory of the SigNoise run directory structure is the directory from where you start your design software. Your start directory contains a log file (<font size="2" face="'Courier New'" color="#000000">signoise.log</font>) which contains information about libraries which are currently loaded as well as a run directory (<font size="2" face="'Courier New'" color="#000000">signoise.run</font>). </p>
+      <p><a name="924449">Y</a>our current working directory is always tracked by SigNoise. If you open a design in a different directory, SigNoise switches focus to the new directory, adjusts settings accordingly, and uses the local <font size="2" face="'Courier New'" color="#000000">signoise.run</font> directory (if one exists). Otherwise, a new run directory structure is created there and a message is issued announcing the action.</p>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="926254">You can use the SIGNAL_RUN_DIRECTORY environment variable to establish a </a>default run directory. See the <a href="#924538" title="4"><font color="#0000ff"><u>Simulation Run Directory Structure</u></font></a><a href="#924538" title="4"> figure </a> for more information. </p>
+      <p><a href="#926259" title="4" name="926258"><font color="#0000ff"><u>Figure&nbsp;4&#45;8</u></font></a><a href="#926259" title="4"> </a> depicts the files and sub&#45;directories that are contained within a typical working directory.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 4&#45;8&nbsp; </strong></font></strong>
+        <strong><a name="926259">Working Directory Structure</a></strong>
+      </p>
+      <p align="left"><a name="924536"><img src="images/04_simsetup.07.1.11.png" alt=""><br></a></p>
+      <p><a href="#924538" title="4" name="924537"><font color="#0000ff"><u>Figure&nbsp;4&#45;9</u></font></a><a href="#924538" title="4"> </a> depicts the files and sub&#45;directories that are contained within the <font size="2" face="'Courier New'" color="#000000">signoise.run</font> directory.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 4&#45;9&nbsp; </strong></font></strong>
+        <strong><a name="924538">Simulation Run Directory Structure</a></strong>
+      </p>
+      <p align="left"><a name="924641"><img src="images/04_simsetup.07.1.12.png" alt=""><br></a></p>
+      <h4><a name="924642">signoise.run</a> Directory Contents</h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924643"><strong>signoise.cfg</strong></a> &#45; Contains the configuration information that is general and common to all simulations. For example, information on whether a System Configuration model is active and the name of the current device model library is included here.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924644"><strong>cases.cfg</strong></a> &#45; Contains a listing of the case directories and the descriptive text string associated with each case.</td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="924645">Case#</a> Directory Contents</h4>
+      <p><a name="924646">SigNoise creates a </a>new case directory whenever one is required. You also have the option to create case directories manually and to determine the characteristics of the cases that SigNoise creates. See <a href="#920902" title="4"><font color="#0000ff"><u>"Case Management"</u></font></a><a href="#920902" title="4"> </a> for more information.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924650"><strong>case.cfg</strong></a> &#45; Contains the configuration information that is specific to that particular case. This information includes, for example, the text string describing the case and the stimuli to apply when a simulation for this case is run.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924651"><strong>projstat.dat</strong></a> &#45; Lists timestamp data for each <font size="2" face="'Courier New'" color="#000000">.brd</font> file in the system as well as each <font size="2" face="'Courier New'" color="#000000">.dml</font> loaded. Use this information to determine when these files have been modified.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924652"><strong>sim# Directories</strong></a> &#45; These sub&#45;directories (<font size="2" face="'Courier New'" color="#000000">sim1</font>, <font size="2" face="'Courier New'" color="#000000">sim2</font>, and so on) are created only when Save Circuit Files is on. They contain all input and output files for a specific simulation, except for the <font size="2" face="'Courier New'" color="#000000">.sim</font> waveform files that get saved to the waveforms directory.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924660"><strong>waveforms</strong></a> &#45; If you elect to save circuit files (in either the Report Generator or the WaveForm Simulation dialog boxes), SigNoise saves SPICE files in the simulation directories. If you elect to save waveforms (in the Report Generator), SigNoise saves the waveform files corresponding to SigNoise runs (sim1.sim, sim2.sim, and so on) in the waveforms directory. </td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="924661">When you perform an EMI emissions simulation, SigNoise saves both the time voltage waveform files corresponding to SigNoise runs (sim4.sim, sim5.sim, and so on) and the files containing the emission spectrum in the frequency domain (sim4_emi_db.sim, sim5_emi_db.sim, and so on) in the waveforms directory.</a></blockquote>
+      <p>
+        <strong><font color="#000000"><strong>Figure 4&#45;10&nbsp; </strong></font></strong>
+        <strong><a name="924662">Simulation Run Directory Structure (cont.)</a></strong>
+      </p>
+      <p align="left"><a name="924834"><img src="images/04_simsetup.07.1.13.png" alt=""><br></a></p>
+      <h4><a name="924835">sim# </a>Directory Contents</h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924836"><strong>comp_rlgc.inc </strong></a>&#45; Describes the package parasitic values of package model RLGC matrices.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924837"><strong>comps.spc </strong></a>&#45; Describes component sub circuits, and power and ground values of the simulation. It also contains package parasitics when the package model contains spice sub circuits.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924838"><strong>cycle.msm</strong></a> &#45; Lists the simulation results for each node to measure. It contains delay and distortion data.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924839"><strong>delay.dl </strong></a>&#45; Lists the delay simulation results.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924840"><strong>distortion.dst</strong></a> &#45; Lists the distortion simulation results.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924842"><strong>ibis_models.inc</strong></a> &#45; Describes the parameter values of IbisIOCell model definitions.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924843"><strong>interconn.spc </strong></a>&#45; Describes sub circuits of interconnect model definitions.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924844"><strong>main.spc</strong></a> &#45; This is the main SPICE file calling the other SPICE sub circuits.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924845"><strong>ntl_rlgc.inc</strong></a> &#45; Describes the parameter values of trace model RLGC matrixes.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924846"><strong>stimulus.spc</strong></a> &#45; This SPICE file describes the stimulus input.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="924436"><strong>tlsim.log</strong></a> &#45; The log file for the Cadence proprietary SPICE simulator.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="926274"><strong>dlink_rlgc.inc</strong></a> &#45; Describes the parameter values of cable model RLGC matrixes.</td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="921384">Simulation Message Window and Log File</a></h2>
+      <p><a name="921386">Warning and error messages generated during simulation are displayed in the SigNoise Errors&#47;Warnings window. The window opens when the first message is generated and the display list expands for each subsequent message. When you perform the next simulation action, all existing messages are cleared and the window is closed. </a></p>
+      <p><a name="921387">The SigNoise Errors&#47;Warnings window displays warnings below error messages. As the simulator generates new messages, they are </a>added to the top of each list. Duplicate messages are filtered out of the list. The associated <font size="2" face="'Courier New'" color="#000000">signoise.log</font> file logs all informational messages, warnings, and errors.</p>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="921388">You can suppress the display of SigNoise Errors&#47;Warnings window by setting the SIGSUPPRESS environment variable. See </a><a href="#924442" title="4"><font color="#0000ff"><u>"Simulation Run Directory Structure"</u></font></a><a href="#924442" title="4"> </a> for more information. </p>
+      <p><a name="921392">The SigNoise Errors&#47;Warnings window with a sample list of warnings is shown in </a><a href="#921393" title="4"><font color="#0000ff"><u>Figure 4&#45;11&nbsp;</u></font></a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 4&#45;11&nbsp; </strong></font></strong>
+        <strong><a name="921393">The SigNoise Errors&#47;Warnings Window</a></strong>
+      </p>
+      <p align="left"><a name="921397"><img src="images/sn-error-warn-win.gif" alt=""><br></a></p>
+    </div>
+    <br>
+    <a href="#pagetop">Return to top of page</a>
+    <hr>
+    <hr align="left">
+    <div style="text-align: left;">
+      <!-- Begin Buttons -->
+      <table width="650" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+                    </td>
+<td height="20" width="73">
+<a href="squgTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+          <td>
+            <a href="03_models.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+          </td>
+          <td>
+            <a href="05_floorplan.html"><img src="images/nav_next.gif" alt="Next" border="0"></a>
+          </td>
+          <td>
+            <a>
+<a href="squg.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+            </a>
+          </td>
+          <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+          </td>
+          <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+          </td>
+          <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+          </td>
+          <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+          </td>
+        </tr>
+      </table>
+      <!-- End Buttons -->
+    </div>
+    <br>
+    <font size="-1" >
+For support, see <a href="http://support.cadence.com" target="_blank">Cadence Online Support</a> service.</font>
+    <br>
+    <br>
+    <font size="-1" >
+<font size="-1"><i>Copyright &#169; 2016, <a href ="http://www.cadence.com">Cadence Design Systems, Inc.</a></i></font>
+    </font>
+    <br>
+    <font size="-1" >
+All rights reserved.</font>
+    <br>
+    <br>
+  </body>
+</html>

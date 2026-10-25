@@ -1,0 +1,11 @@
+BASELINE_CONNECTOR_ALL=((Maximum_Via_Count "2") (Differential_Pair_Max_Uncoupled_Length "13.5 MM") (Differential_Pair_Phase_Tolerance "4 MM"))
+BASELINE_SHARED_ALL=((Maximum_Via_Count "2") (Differential_Pair_Max_Uncoupled_Length "6 MM") (Differential_Pair_Phase_Tolerance "1 MM"))
+DRC_STATUS	CONNECTOR_PHASE_STRICT_3MM	1	t
+DRC_DETAIL	CONNECTOR_PHASE_STRICT_3MM	(prop nil bBox ((39.0825 16.5061) (39.7175 17.1411)) readOnly t objType "drc" waived nil layer "DRC ERROR CLASS/ALL" xy (39.4 16.8236) violations (dbid:0000021F87B1D5C0 dbid:0000021F87B1D4F8) type "NET ELECTRICAL CONSTRAINTS" source "HI_E_USB_CONNECTOR_2L" fixed t parent dbid:0000021FF29D9C40 expected "3 MM" actual "3.2757 MM" name "Differential Pair Phase Tolerance")
+DRC_STATUS	SHARED_UNCOUPLED_STRICT_1MM	2	t
+DRC_DETAIL	SHARED_UNCOUPLED_STRICT_1MM	(prop nil bBox ((40.4325 22.4325) (41.0675 23.0675)) readOnly t objType "drc" waived nil layer "DRC ERROR CLASS/ALL" xy (40.75 22.75) violations (dbid:0000021F87B21C88 dbid:0000021F87B21D50) type "NET ELECTRICAL CONSTRAINTS" source "HI2L_E_USB_BUDGET" fixed t parent dbid:0000021FF29D9C40 expected "1 MM" actual "4.9931 MM" name "Differential Pair Max Uncoupled Length")
+DRC_DETAIL	SHARED_UNCOUPLED_STRICT_1MM	(prop nil bBox ((42.5841 17.9825) (43.2191 18.6175)) readOnly t objType "drc" waived nil layer "DRC ERROR CLASS/ALL" xy (42.9016 18.3) violations (dbid:0000021F87B21D50 dbid:0000021F87B21C88) type "NET ELECTRICAL CONSTRAINTS" source "HI2L_E_USB_BUDGET" fixed t parent dbid:0000021FF29D9C40 expected "1 MM" actual "4.9204 MM" name "Differential Pair Max Uncoupled Length")
+DRC_STATUS	USB_NATIVE_BUDGETS_RESTORED	0	t
+RESTORED_CONNECTOR_ALL=((Maximum_Via_Count "2") (Differential_Pair_Max_Uncoupled_Length "13.5 MM") (Differential_Pair_Phase_Tolerance "4 MM"))
+RESTORED_SHARED_ALL=((Maximum_Via_Count "2") (Differential_Pair_Max_Uncoupled_Length "6 MM") (Differential_Pair_Phase_Tolerance "1 MM"))
+HI_USB_NATIVE_LENGTH_CHALLENGES_COMPLETE_NO_SAVE

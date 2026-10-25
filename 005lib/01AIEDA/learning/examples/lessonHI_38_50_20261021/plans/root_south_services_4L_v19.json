@@ -1,0 +1,350 @@
+{
+  "batchId": "root_south_services_joint_v19_4L",
+  "variant": "4L",
+  "sourcePlans": [
+    "plans/GPIO_south_joint_root_v9.json",
+    "engineering_power/RIGHT10_FULL_4L_v11.json"
+  ],
+  "operations": [
+    {
+      "type": "route",
+      "id": "ROOT_SWDIO_BOTTOM",
+      "net": "SWDIO",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          41.52,
+          21.25
+        ],
+        [
+          41.52,
+          21.72
+        ],
+        [
+          42,
+          22.2
+        ],
+        [
+          44.15,
+          22.2
+        ],
+        [
+          44.4,
+          21.95
+        ]
+      ],
+      "purpose": "Jointly engineered four-net south service corridor, including exact finite neck and transitions; full combined native spacing/return review pending.",
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "ROOT_SWDIO_EAST_V",
+      "net": "SWDIO",
+      "xy": [
+        44.4,
+        21.95
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "ROOT_SWDIO_TOP",
+      "net": "SWDIO",
+      "layer": "TOP",
+      "points": [
+        [
+          44.4,
+          21.95
+        ],
+        [
+          44.6,
+          21.75
+        ],
+        [
+          54.33,
+          21.75
+        ],
+        [
+          56.08,
+          20
+        ]
+      ],
+      "purpose": "Jointly engineered four-net south service corridor, including exact finite neck and transitions; full combined native spacing/return review pending.",
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "ROOT_UART_RX_BOTTOM",
+      "net": "PA10_UART_RX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40,
+          20.5
+        ],
+        [
+          40,
+          20.3
+        ],
+        [
+          48.4,
+          20.3
+        ],
+        [
+          50.1,
+          22
+        ],
+        [
+          50.1,
+          22.4
+        ]
+      ],
+      "purpose": "Jointly engineered four-net south service corridor, including exact finite neck and transitions; full combined native spacing/return review pending.",
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "ROOT_UART_RX_EAST_V",
+      "net": "PA10_UART_RX",
+      "xy": [
+        50.1,
+        22.4
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "ROOT_UART_RX_TOP",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          50.1,
+          22.4
+        ],
+        [
+          50.12,
+          22.42
+        ],
+        [
+          50.12,
+          23.4626
+        ]
+      ],
+      "purpose": "Jointly engineered four-net south service corridor, including exact finite neck and transitions; full combined native spacing/return review pending.",
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "ROOT_UART_TX_BOTTOM",
+      "net": "PA9_UART_TX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39.7,
+          21.7
+        ],
+        [
+          40.4,
+          21.7
+        ],
+        [
+          40.8,
+          21.3
+        ],
+        [
+          40.8,
+          20.85
+        ],
+        [
+          40.95,
+          20.7
+        ],
+        [
+          41.85,
+          20.7
+        ],
+        [
+          41.95,
+          20.8
+        ],
+        [
+          46,
+          20.8
+        ],
+        [
+          46.3,
+          21.1
+        ]
+      ],
+      "purpose": "Jointly engineered four-net south service corridor, including exact finite neck and transitions; full combined native spacing/return review pending.",
+      "widths": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.16,
+        0.2,
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "type": "via",
+      "id": "ROOT_UART_TX_EAST_V",
+      "net": "PA9_UART_TX",
+      "xy": [
+        46.3,
+        21.1
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "ROOT_UART_TX_TOP",
+      "net": "PA9_UART_TX",
+      "layer": "TOP",
+      "points": [
+        [
+          46.3,
+          21.1
+        ],
+        [
+          45.6016,
+          20.4016
+        ],
+        [
+          45.6016,
+          19.9
+        ]
+      ],
+      "purpose": "Jointly engineered four-net south service corridor, including exact finite neck and transitions; full combined native spacing/return review pending.",
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "ROOT_ATTACH_BOTTOM",
+      "net": "USB_ATTACH_N",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39,
+          21.2
+        ],
+        [
+          39.1,
+          21.1
+        ],
+        [
+          39.1,
+          20.4
+        ],
+        [
+          39.7,
+          19.8
+        ],
+        [
+          39.7,
+          18.6
+        ],
+        [
+          43.6,
+          18.6
+        ],
+        [
+          45.9,
+          16.3
+        ],
+        [
+          50.8,
+          16.3
+        ]
+      ],
+      "purpose": "Jointly engineered four-net south service corridor, including exact finite neck and transitions; full combined native spacing/return review pending.",
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "ROOT_SWDIO_RETURN_COMMON",
+      "net": "GND",
+      "xy": [
+        45.3,
+        22.55
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate common-ground return near actual SWDIO east signal transition; must native graph/real copper prove, never join quiet island."
+    }
+  ],
+  "proofs": [
+    {
+      "from": "U1.34",
+      "to": "J9.3",
+      "connected": true
+    },
+    {
+      "from": "U1.31",
+      "to": "R17.1",
+      "connected": true
+    },
+    {
+      "from": "U1.30",
+      "to": "R16.1",
+      "connected": true
+    },
+    {
+      "from": "U1.29",
+      "to": "R10.2",
+      "connected": true
+    },
+    {
+      "from": "U1.35",
+      "toAlias": "ROOT_SWDIO_RETURN_COMMON",
+      "connected": true
+    }
+  ],
+  "scope": "Explicit four-source joint topology rather than committing each net greedily. R16 move and relocated groundstitches are a required same-batch source edit; no duplicate remote USB auxiliary branch. TOP/BOTTOM actual return and USB-reference crossings still pending.",
+  "returnReview": {
+    "SWDIO_east_signalVia": [
+      44.4,
+      21.95
+    ],
+    "addedCommonGround": [
+      45.3,
+      22.55
+    ],
+    "distanceMM": 1.0816653826391964,
+    "sourceAndOtherVias": "Nearest via distance is not actual reference continuity; final native planes/return copper and conditional deviations must be read back."
+  },
+  "placementChanges": [
+    {
+      "ref": "R17",
+      "xy": [
+        50.12,
+        23.361
+      ],
+      "rotation": 90,
+      "reason": "Orient existing receiver-series resistor across GPIO_PA15 routing row: PA10 input pad23.4626 and externalUART pad25.0374 lie on opposite sides, .2175nominal copper-to-row clearance. This opens pin2 routing without closing another signal layer or adding spare vias."
+    }
+  ],
+  "rootR17Rework": {
+    "oldOrigin": [
+      50.0,
+      23.5
+    ],
+    "newOrigin": [
+      50.12,
+      23.361
+    ],
+    "rotation": 90,
+    "PA10pad": [
+      50.12,
+      23.4626
+    ],
+    "UART_RXpad": [
+      50.12,
+      25.0374
+    ],
+    "newPinAccess": "Route existingMCUvia to pin1 below PA15row; UART_RX from pin2 above. Native semantics remain two different nets across resistor. Under-body GPIO trace remains masked, manufacturing/actualMPN clearance and coupling check pending.",
+    "sourceBatchAlreadyRunning": "v18 immutable source native may complete first. If so, later delta deletes only its two exact RX_TOP segments before R17 move and newroutes; never reapply whole source or move connected part leaving old copper."
+  }
+}

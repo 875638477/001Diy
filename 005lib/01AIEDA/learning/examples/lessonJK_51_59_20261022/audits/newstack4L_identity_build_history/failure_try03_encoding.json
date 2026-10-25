@@ -1,0 +1,11 @@
+﻿{
+  "status": "FAILED_CHINESE_OUTPUT_ENCODING_MANUAL_QA",
+  "attempt": 3,
+  "machineChecks": 923,
+  "machineFailed": 0,
+  "qualityCheckPassed": false,
+  "cause": "A PowerShell Get-Content call omitted -Encoding UTF8 after the generator had been written without BOM. The ASCII logic and CSVs remained valid, but subsequent script edits persisted misdecoded Chinese note/README strings.",
+  "correction": "Move both Chinese texts to explicit UTF-8 template files, read all sources with explicit encoding, assert expected Chinese content and complete Markdown links after generation. Keep corrupted output bytes and the failed generator as history.",
+  "cadenceExecuted": false,
+  "oldSealedFilesModified": false
+}

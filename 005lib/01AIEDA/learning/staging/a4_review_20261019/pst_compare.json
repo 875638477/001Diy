@@ -1,0 +1,4362 @@
+{
+  "status": "PASS_A4_NATIVE_PST_COMPARE",
+  "createdUTC": "2026-10-19T03:54:14.387482+00:00",
+  "scope": "Native PST component values, package identities, physical pins, nets and explicit NC; comparison against requirements and every pin of the original user-saved snapshot.",
+  "comparisonPolicy": "Values and footprint names compare case-insensitively; reference designators, physical pin numbers and net names compare exactly; PST NC maps to JSON null and explicit snapshot nc=1.",
+  "checks": 718,
+  "passed": 718,
+  "failed": 0,
+  "components": 80,
+  "physicalPins": 272,
+  "exportedNodes": 272,
+  "connectedPins": 266,
+  "netsExcludingNC": 69,
+  "explicitNCPins": [
+    "J2.A8",
+    "J2.B8",
+    "U2.5",
+    "U3.4",
+    "U5.5",
+    "U5.8"
+  ],
+  "electricalChangesFromOriginalSnapshot": [],
+  "sourceFileObservation": {
+    "currentSource": {
+      "path": "examples/de_15_26_20261019/native/DE_INTEGRATED_BASELINE.DSN",
+      "bytes": 178688,
+      "sha256": "577078ff88dbbae2a55f3184942e0cfa92598a5b526b7f43637e73fd27cd6d6d"
+    },
+    "savedSnapshot": {
+      "path": "staging/a4_review_20261019/baseline_snapshot.dsn",
+      "bytes": 178688,
+      "sha256": "577078ff88dbbae2a55f3184942e0cfa92598a5b526b7f43637e73fd27cd6d6d"
+    },
+    "currentlyIdentical": true,
+    "note": "Original source and saved snapshot still have identical SHA-256."
+  },
+  "inputArtifacts": [
+    {
+      "path": "examples/de_15_26_20261019/a4_review/native/DE_INTEGRATED_A4.DSN",
+      "bytes": 176128,
+      "sha256": "15fa52a755f28295eabf1e43ca0f8eb98041fd2483262c46cddcd86a05c51446"
+    },
+    {
+      "path": "examples/de_15_26_20261019/integrated_circuit.json",
+      "bytes": 107710,
+      "sha256": "e91069ec8373b3ad3f00b6ad72e4413ba5d5361d4c431524f93328857477ce2e"
+    },
+    {
+      "path": "staging/a4_review_20261019/before_pins.tsv",
+      "bytes": 9796,
+      "sha256": "a19fdf92ef3ea27b27518d526380a5e059f631cbc7786639482bed9be5f962de"
+    },
+    {
+      "path": "staging/a4_review_20261019/packaging_verified_process/launch.json",
+      "bytes": 654,
+      "sha256": "e2260e80f1202a4ca71e190931d76d5bd403fe1c5f3d1bce6ac303ae0add5d7c"
+    },
+    {
+      "path": "staging/a4_review_20261019/packaging/netlist/pstchip.dat",
+      "bytes": 20236,
+      "sha256": "d42e155be0dfb3405c6c33646c77bfd4745d0408562fd126612a59a47dae5927"
+    },
+    {
+      "path": "staging/a4_review_20261019/packaging/netlist/pstxprt.dat",
+      "bytes": 26482,
+      "sha256": "dbabb9499570fe2057cc452bfb6ec6761247babeeac991dad81bc2ceee6b588b"
+    },
+    {
+      "path": "staging/a4_review_20261019/packaging/netlist/pstxnet.dat",
+      "bytes": 31888,
+      "sha256": "6b3e982677d425dfc1fd753ffae067d8cf18b6f77c997d8cae1aa62a9aefe3de"
+    }
+  ],
+  "details": [
+    {
+      "pass": true,
+      "check": "Cadence pstswp native export completed with exit code 0"
+    },
+    {
+      "pass": true,
+      "check": "Working input matched the final A4 design before packaging; original design remained unchanged"
+    },
+    {
+      "pass": true,
+      "check": "80 native exported components",
+      "actual": 80
+    },
+    {
+      "pass": true,
+      "check": "Exact exported and requirement reference sets"
+    },
+    {
+      "pass": true,
+      "check": "272 physical package pins in primitive/instance expansion",
+      "actual": 272
+    },
+    {
+      "pass": true,
+      "check": "Exact primitive physical pin set versus requirements"
+    },
+    {
+      "pass": true,
+      "check": "Every native primitive physical pin has exactly one exported node"
+    },
+    {
+      "pass": true,
+      "check": "Exact exported physical node set versus requirements"
+    },
+    {
+      "pass": true,
+      "check": "69 connected native nets; NC is excluded",
+      "actual": 69
+    },
+    {
+      "pass": true,
+      "check": "Exact native net-name set versus requirements"
+    },
+    {
+      "pass": true,
+      "check": "No unexpected or empty PST net sections"
+    },
+    {
+      "pass": true,
+      "check": "Six explicitly NC physical pins",
+      "actual": 6
+    },
+    {
+      "pass": true,
+      "check": "266 connected physical pins",
+      "actual": 266
+    },
+    {
+      "pass": true,
+      "check": "C1: native value equals requirement",
+      "expected": "47uF",
+      "actual": "47uF"
+    },
+    {
+      "pass": true,
+      "check": "C1: native footprint equals requirement",
+      "expected": "de_capradial_6d3_p2d5",
+      "actual": "de_capradial_6d3_p2d5"
+    },
+    {
+      "pass": true,
+      "check": "C10: native value equals requirement",
+      "expected": "100nF",
+      "actual": "100nF"
+    },
+    {
+      "pass": true,
+      "check": "C10: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C11: native value equals requirement",
+      "expected": "100nF",
+      "actual": "100nF"
+    },
+    {
+      "pass": true,
+      "check": "C11: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C12: native value equals requirement",
+      "expected": "1uF",
+      "actual": "1uF"
+    },
+    {
+      "pass": true,
+      "check": "C12: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C13: native value equals requirement",
+      "expected": "100nF",
+      "actual": "100nF"
+    },
+    {
+      "pass": true,
+      "check": "C13: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C14: native value equals requirement",
+      "expected": "100nF",
+      "actual": "100nF"
+    },
+    {
+      "pass": true,
+      "check": "C14: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C15: native value equals requirement",
+      "expected": "100nF",
+      "actual": "100nF"
+    },
+    {
+      "pass": true,
+      "check": "C15: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C16: native value equals requirement",
+      "expected": "10uF",
+      "actual": "10uF"
+    },
+    {
+      "pass": true,
+      "check": "C16: native footprint equals requirement",
+      "expected": "0805",
+      "actual": "0805"
+    },
+    {
+      "pass": true,
+      "check": "C17: native value equals requirement",
+      "expected": "100nF",
+      "actual": "100nF"
+    },
+    {
+      "pass": true,
+      "check": "C17: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C18: native value equals requirement",
+      "expected": "10nF",
+      "actual": "10nF"
+    },
+    {
+      "pass": true,
+      "check": "C18: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C19: native value equals requirement",
+      "expected": "100nF",
+      "actual": "100nF"
+    },
+    {
+      "pass": true,
+      "check": "C19: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C2: native value equals requirement",
+      "expected": "22uF",
+      "actual": "22uF"
+    },
+    {
+      "pass": true,
+      "check": "C2: native footprint equals requirement",
+      "expected": "1206",
+      "actual": "1206"
+    },
+    {
+      "pass": true,
+      "check": "C20: native value equals requirement",
+      "expected": "2.2uF",
+      "actual": "2.2uF"
+    },
+    {
+      "pass": true,
+      "check": "C20: native footprint equals requirement",
+      "expected": "0805",
+      "actual": "0805"
+    },
+    {
+      "pass": true,
+      "check": "C21: native value equals requirement",
+      "expected": "100nF",
+      "actual": "100nF"
+    },
+    {
+      "pass": true,
+      "check": "C21: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C22: native value equals requirement",
+      "expected": "16pF",
+      "actual": "16pF"
+    },
+    {
+      "pass": true,
+      "check": "C22: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C23: native value equals requirement",
+      "expected": "16pF",
+      "actual": "16pF"
+    },
+    {
+      "pass": true,
+      "check": "C23: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C24: native value equals requirement",
+      "expected": "100nF",
+      "actual": "100nF"
+    },
+    {
+      "pass": true,
+      "check": "C24: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C3: native value equals requirement",
+      "expected": "100nF",
+      "actual": "100nF"
+    },
+    {
+      "pass": true,
+      "check": "C3: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C4: native value equals requirement",
+      "expected": "100nF",
+      "actual": "100nF"
+    },
+    {
+      "pass": true,
+      "check": "C4: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C5: native value equals requirement",
+      "expected": "22uF",
+      "actual": "22uF"
+    },
+    {
+      "pass": true,
+      "check": "C5: native footprint equals requirement",
+      "expected": "1206",
+      "actual": "1206"
+    },
+    {
+      "pass": true,
+      "check": "C6: native value equals requirement",
+      "expected": "22uF",
+      "actual": "22uF"
+    },
+    {
+      "pass": true,
+      "check": "C6: native footprint equals requirement",
+      "expected": "1206",
+      "actual": "1206"
+    },
+    {
+      "pass": true,
+      "check": "C7: native value equals requirement",
+      "expected": "75pF",
+      "actual": "75pF"
+    },
+    {
+      "pass": true,
+      "check": "C7: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "C8: native value equals requirement",
+      "expected": "2.2uF",
+      "actual": "2.2uF"
+    },
+    {
+      "pass": true,
+      "check": "C8: native footprint equals requirement",
+      "expected": "0805",
+      "actual": "0805"
+    },
+    {
+      "pass": true,
+      "check": "C9: native value equals requirement",
+      "expected": "4.7uF",
+      "actual": "4.7uF"
+    },
+    {
+      "pass": true,
+      "check": "C9: native footprint equals requirement",
+      "expected": "0805",
+      "actual": "0805"
+    },
+    {
+      "pass": true,
+      "check": "D1: native value equals requirement",
+      "expected": "SS14",
+      "actual": "SS14"
+    },
+    {
+      "pass": true,
+      "check": "D1: native footprint equals requirement",
+      "expected": "do-214ac_sma",
+      "actual": "do-214ac_sma"
+    },
+    {
+      "pass": true,
+      "check": "F1: native value equals requirement",
+      "expected": "500mA",
+      "actual": "500mA"
+    },
+    {
+      "pass": true,
+      "check": "F1: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "J1: native value equals requirement",
+      "expected": "9-16V",
+      "actual": "9-16V"
+    },
+    {
+      "pass": true,
+      "check": "J1: native footprint equals requirement",
+      "expected": "pin02_2d54MM_1x2",
+      "actual": "pin02_2d54MM_1x2"
+    },
+    {
+      "pass": true,
+      "check": "J10: native value equals requirement",
+      "expected": "ADC_0_TO_3V0",
+      "actual": "ADC_0_TO_3V0"
+    },
+    {
+      "pass": true,
+      "check": "J10: native footprint equals requirement",
+      "expected": "pin02_2d54MM_1x2",
+      "actual": "pin02_2d54MM_1x2"
+    },
+    {
+      "pass": true,
+      "check": "J11: native value equals requirement",
+      "expected": "GPIO_3V3",
+      "actual": "GPIO_3V3"
+    },
+    {
+      "pass": true,
+      "check": "J11: native footprint equals requirement",
+      "expected": "pin08_2d54MM_1x8",
+      "actual": "pin08_2d54MM_1x8"
+    },
+    {
+      "pass": true,
+      "check": "J12: native value equals requirement",
+      "expected": "GPIO_3V3",
+      "actual": "GPIO_3V3"
+    },
+    {
+      "pass": true,
+      "check": "J12: native footprint equals requirement",
+      "expected": "pin08_2d54MM_1x8",
+      "actual": "pin08_2d54MM_1x8"
+    },
+    {
+      "pass": true,
+      "check": "J13: native value equals requirement",
+      "expected": "GPIO_3V3",
+      "actual": "GPIO_3V3"
+    },
+    {
+      "pass": true,
+      "check": "J13: native footprint equals requirement",
+      "expected": "pin08_2d54MM_1x8",
+      "actual": "pin08_2d54MM_1x8"
+    },
+    {
+      "pass": true,
+      "check": "J2: native value equals requirement",
+      "expected": "USB-C USB2 DEVICE",
+      "actual": "USB-C USB2 DEVICE"
+    },
+    {
+      "pass": true,
+      "check": "J2: native footprint equals requirement",
+      "expected": "l10_gct_usb4105_gf_a_12land",
+      "actual": "l10_gct_usb4105_gf_a_12land"
+    },
+    {
+      "pass": true,
+      "check": "J3: native value equals requirement",
+      "expected": "CAN",
+      "actual": "CAN"
+    },
+    {
+      "pass": true,
+      "check": "J3: native footprint equals requirement",
+      "expected": "pin03_2d54MM_1x3",
+      "actual": "pin03_2d54MM_1x3"
+    },
+    {
+      "pass": true,
+      "check": "J4: native value equals requirement",
+      "expected": "3V3",
+      "actual": "3V3"
+    },
+    {
+      "pass": true,
+      "check": "J4: native footprint equals requirement",
+      "expected": "pin04_2d54MM_1x4",
+      "actual": "pin04_2d54MM_1x4"
+    },
+    {
+      "pass": true,
+      "check": "J5: native value equals requirement",
+      "expected": "3V3",
+      "actual": "3V3"
+    },
+    {
+      "pass": true,
+      "check": "J5: native footprint equals requirement",
+      "expected": "pin04_2d54MM_1x4",
+      "actual": "pin04_2d54MM_1x4"
+    },
+    {
+      "pass": true,
+      "check": "J6: native value equals requirement",
+      "expected": "3V3",
+      "actual": "3V3"
+    },
+    {
+      "pass": true,
+      "check": "J6: native footprint equals requirement",
+      "expected": "pin06_2d54MM_1x6",
+      "actual": "pin06_2d54MM_1x6"
+    },
+    {
+      "pass": true,
+      "check": "J7: native value equals requirement",
+      "expected": "RESET_SHUNT",
+      "actual": "RESET_SHUNT"
+    },
+    {
+      "pass": true,
+      "check": "J7: native footprint equals requirement",
+      "expected": "pin02_2d54MM_1x2",
+      "actual": "pin02_2d54MM_1x2"
+    },
+    {
+      "pass": true,
+      "check": "J8: native value equals requirement",
+      "expected": "BOOT0_SERVICE",
+      "actual": "BOOT0_SERVICE"
+    },
+    {
+      "pass": true,
+      "check": "J8: native footprint equals requirement",
+      "expected": "pin02_2d54MM_1x2",
+      "actual": "pin02_2d54MM_1x2"
+    },
+    {
+      "pass": true,
+      "check": "J9: native value equals requirement",
+      "expected": "SWD_LOCAL_1X6",
+      "actual": "SWD_LOCAL_1X6"
+    },
+    {
+      "pass": true,
+      "check": "J9: native footprint equals requirement",
+      "expected": "pin06_2d54MM_1x6",
+      "actual": "pin06_2d54MM_1x6"
+    },
+    {
+      "pass": true,
+      "check": "L1: native value equals requirement",
+      "expected": "15uH +/-20%",
+      "actual": "15uH +/-20%"
+    },
+    {
+      "pass": true,
+      "check": "L1: native footprint equals requirement",
+      "expected": "de_xal6060_2land",
+      "actual": "de_xal6060_2land"
+    },
+    {
+      "pass": true,
+      "check": "Q1: native value equals requirement",
+      "expected": "2N7002",
+      "actual": "2N7002"
+    },
+    {
+      "pass": true,
+      "check": "Q1: native footprint equals requirement",
+      "expected": "sot23-3",
+      "actual": "sot23-3"
+    },
+    {
+      "pass": true,
+      "check": "Q2: native value equals requirement",
+      "expected": "DMP2035U",
+      "actual": "DMP2035U"
+    },
+    {
+      "pass": true,
+      "check": "Q2: native footprint equals requirement",
+      "expected": "sot23-3",
+      "actual": "sot23-3"
+    },
+    {
+      "pass": true,
+      "check": "R1: native value equals requirement",
+      "expected": "100k",
+      "actual": "100k"
+    },
+    {
+      "pass": true,
+      "check": "R1: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R10: native value equals requirement",
+      "expected": "100k",
+      "actual": "100k"
+    },
+    {
+      "pass": true,
+      "check": "R10: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R11: native value equals requirement",
+      "expected": "1.5k",
+      "actual": "1.5k"
+    },
+    {
+      "pass": true,
+      "check": "R11: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R12: native value equals requirement",
+      "expected": "0R",
+      "actual": "0R"
+    },
+    {
+      "pass": true,
+      "check": "R12: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R13: native value equals requirement",
+      "expected": "0R",
+      "actual": "0R"
+    },
+    {
+      "pass": true,
+      "check": "R13: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R14: native value equals requirement",
+      "expected": "10k",
+      "actual": "10k"
+    },
+    {
+      "pass": true,
+      "check": "R14: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R15: native value equals requirement",
+      "expected": "120R",
+      "actual": "120R"
+    },
+    {
+      "pass": true,
+      "check": "R15: native footprint equals requirement",
+      "expected": "1206",
+      "actual": "1206"
+    },
+    {
+      "pass": true,
+      "check": "R16: native value equals requirement",
+      "expected": "33R",
+      "actual": "33R"
+    },
+    {
+      "pass": true,
+      "check": "R16: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R17: native value equals requirement",
+      "expected": "0R",
+      "actual": "0R"
+    },
+    {
+      "pass": true,
+      "check": "R17: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R18: native value equals requirement",
+      "expected": "10k",
+      "actual": "10k"
+    },
+    {
+      "pass": true,
+      "check": "R18: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R19: native value equals requirement",
+      "expected": "2.2k",
+      "actual": "2.2k"
+    },
+    {
+      "pass": true,
+      "check": "R19: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R2: native value equals requirement",
+      "expected": "13.5k",
+      "actual": "13.5k"
+    },
+    {
+      "pass": true,
+      "check": "R2: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R20: native value equals requirement",
+      "expected": "2.2k",
+      "actual": "2.2k"
+    },
+    {
+      "pass": true,
+      "check": "R20: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R21: native value equals requirement",
+      "expected": "33R",
+      "actual": "33R"
+    },
+    {
+      "pass": true,
+      "check": "R21: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R22: native value equals requirement",
+      "expected": "33R",
+      "actual": "33R"
+    },
+    {
+      "pass": true,
+      "check": "R22: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R23: native value equals requirement",
+      "expected": "33R",
+      "actual": "33R"
+    },
+    {
+      "pass": true,
+      "check": "R23: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R24: native value equals requirement",
+      "expected": "0R",
+      "actual": "0R"
+    },
+    {
+      "pass": true,
+      "check": "R24: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R25: native value equals requirement",
+      "expected": "10k",
+      "actual": "10k"
+    },
+    {
+      "pass": true,
+      "check": "R25: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R26: native value equals requirement",
+      "expected": "0R",
+      "actual": "0R"
+    },
+    {
+      "pass": true,
+      "check": "R26: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R27: native value equals requirement",
+      "expected": "10k",
+      "actual": "10k"
+    },
+    {
+      "pass": true,
+      "check": "R27: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R28: native value equals requirement",
+      "expected": "10k",
+      "actual": "10k"
+    },
+    {
+      "pass": true,
+      "check": "R28: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R29: native value equals requirement",
+      "expected": "10k",
+      "actual": "10k"
+    },
+    {
+      "pass": true,
+      "check": "R29: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R3: native value equals requirement",
+      "expected": "5.1k",
+      "actual": "5.1k"
+    },
+    {
+      "pass": true,
+      "check": "R3: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R30: native value equals requirement",
+      "expected": "1k",
+      "actual": "1k"
+    },
+    {
+      "pass": true,
+      "check": "R30: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R31: native value equals requirement",
+      "expected": "0R",
+      "actual": "0R"
+    },
+    {
+      "pass": true,
+      "check": "R31: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R32: native value equals requirement",
+      "expected": "1k",
+      "actual": "1k"
+    },
+    {
+      "pass": true,
+      "check": "R32: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R4: native value equals requirement",
+      "expected": "5.1k",
+      "actual": "5.1k"
+    },
+    {
+      "pass": true,
+      "check": "R4: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R5: native value equals requirement",
+      "expected": "22R",
+      "actual": "22R"
+    },
+    {
+      "pass": true,
+      "check": "R5: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R6: native value equals requirement",
+      "expected": "22R",
+      "actual": "22R"
+    },
+    {
+      "pass": true,
+      "check": "R6: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R7: native value equals requirement",
+      "expected": "10k",
+      "actual": "10k"
+    },
+    {
+      "pass": true,
+      "check": "R7: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R8: native value equals requirement",
+      "expected": "1M",
+      "actual": "1M"
+    },
+    {
+      "pass": true,
+      "check": "R8: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "R9: native value equals requirement",
+      "expected": "10k",
+      "actual": "10k"
+    },
+    {
+      "pass": true,
+      "check": "R9: native footprint equals requirement",
+      "expected": "0603",
+      "actual": "0603"
+    },
+    {
+      "pass": true,
+      "check": "U1: native value equals requirement",
+      "expected": "STM32F103C8T6",
+      "actual": "STM32F103C8T6"
+    },
+    {
+      "pass": true,
+      "check": "U1: native footprint equals requirement",
+      "expected": "l09_stm32f103c8_lqfp48",
+      "actual": "l09_stm32f103c8_lqfp48"
+    },
+    {
+      "pass": true,
+      "check": "U2: native value equals requirement",
+      "expected": "TPS54202",
+      "actual": "TPS54202"
+    },
+    {
+      "pass": true,
+      "check": "U2: native footprint equals requirement",
+      "expected": "sot23-6",
+      "actual": "sot23-6"
+    },
+    {
+      "pass": true,
+      "check": "U3: native value equals requirement",
+      "expected": "TLV75533P",
+      "actual": "TLV75533P"
+    },
+    {
+      "pass": true,
+      "check": "U3: native footprint equals requirement",
+      "expected": "sot23-5",
+      "actual": "sot23-5"
+    },
+    {
+      "pass": true,
+      "check": "U4: native value equals requirement",
+      "expected": "USBLC6-2SC6",
+      "actual": "USBLC6-2SC6"
+    },
+    {
+      "pass": true,
+      "check": "U4: native footprint equals requirement",
+      "expected": "sot23-6",
+      "actual": "sot23-6"
+    },
+    {
+      "pass": true,
+      "check": "U5: native value equals requirement",
+      "expected": "TCAN332",
+      "actual": "TCAN332"
+    },
+    {
+      "pass": true,
+      "check": "U5: native footprint equals requirement",
+      "expected": "so8",
+      "actual": "so8"
+    },
+    {
+      "pass": true,
+      "check": "Y1: native value equals requirement",
+      "expected": "8MHz",
+      "actual": "8MHz"
+    },
+    {
+      "pass": true,
+      "check": "Y1: native footprint equals requirement",
+      "expected": "de_abm3b_5032",
+      "actual": "de_abm3b_5032"
+    },
+    {
+      "pass": true,
+      "check": "C1.1: native connection/NC equals requirement",
+      "expected": "VIN_PROT",
+      "actual": "VIN_PROT"
+    },
+    {
+      "pass": true,
+      "check": "C1.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C10.1: native connection/NC equals requirement",
+      "expected": "USB_VBUS",
+      "actual": "USB_VBUS"
+    },
+    {
+      "pass": true,
+      "check": "C10.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C11.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C11.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C12.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C12.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C13.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C13.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C14.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C14.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C15.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C15.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C16.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C16.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C17.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C17.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C18.1: native connection/NC equals requirement",
+      "expected": "VDDA",
+      "actual": "VDDA"
+    },
+    {
+      "pass": true,
+      "check": "C18.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C19.1: native connection/NC equals requirement",
+      "expected": "VDDA",
+      "actual": "VDDA"
+    },
+    {
+      "pass": true,
+      "check": "C19.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C2.1: native connection/NC equals requirement",
+      "expected": "VIN_PROT",
+      "actual": "VIN_PROT"
+    },
+    {
+      "pass": true,
+      "check": "C2.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C20.1: native connection/NC equals requirement",
+      "expected": "VDDA",
+      "actual": "VDDA"
+    },
+    {
+      "pass": true,
+      "check": "C20.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C21.1: native connection/NC equals requirement",
+      "expected": "NRST",
+      "actual": "NRST"
+    },
+    {
+      "pass": true,
+      "check": "C21.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C22.1: native connection/NC equals requirement",
+      "expected": "OSC_IN",
+      "actual": "OSC_IN"
+    },
+    {
+      "pass": true,
+      "check": "C22.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C23.1: native connection/NC equals requirement",
+      "expected": "XTAL_OUT",
+      "actual": "XTAL_OUT"
+    },
+    {
+      "pass": true,
+      "check": "C23.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C24.1: native connection/NC equals requirement",
+      "expected": "ADC0",
+      "actual": "ADC0"
+    },
+    {
+      "pass": true,
+      "check": "C24.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C3.1: native connection/NC equals requirement",
+      "expected": "VIN_PROT",
+      "actual": "VIN_PROT"
+    },
+    {
+      "pass": true,
+      "check": "C3.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C4.1: native connection/NC equals requirement",
+      "expected": "BUCK_BOOT",
+      "actual": "BUCK_BOOT"
+    },
+    {
+      "pass": true,
+      "check": "C4.2: native connection/NC equals requirement",
+      "expected": "BUCK_SW",
+      "actual": "BUCK_SW"
+    },
+    {
+      "pass": true,
+      "check": "C5.1: native connection/NC equals requirement",
+      "expected": "V5",
+      "actual": "V5"
+    },
+    {
+      "pass": true,
+      "check": "C5.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C6.1: native connection/NC equals requirement",
+      "expected": "V5",
+      "actual": "V5"
+    },
+    {
+      "pass": true,
+      "check": "C6.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C7.1: native connection/NC equals requirement",
+      "expected": "V5",
+      "actual": "V5"
+    },
+    {
+      "pass": true,
+      "check": "C7.2: native connection/NC equals requirement",
+      "expected": "BUCK_FB",
+      "actual": "BUCK_FB"
+    },
+    {
+      "pass": true,
+      "check": "C8.1: native connection/NC equals requirement",
+      "expected": "V5",
+      "actual": "V5"
+    },
+    {
+      "pass": true,
+      "check": "C8.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C9.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C9.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "D1.1: native connection/NC equals requirement",
+      "expected": "VIN_PROT",
+      "actual": "VIN_PROT"
+    },
+    {
+      "pass": true,
+      "check": "D1.2: native connection/NC equals requirement",
+      "expected": "VIN_FUSED",
+      "actual": "VIN_FUSED"
+    },
+    {
+      "pass": true,
+      "check": "F1.1: native connection/NC equals requirement",
+      "expected": "VIN_RAW",
+      "actual": "VIN_RAW"
+    },
+    {
+      "pass": true,
+      "check": "F1.2: native connection/NC equals requirement",
+      "expected": "VIN_FUSED",
+      "actual": "VIN_FUSED"
+    },
+    {
+      "pass": true,
+      "check": "J1.1: native connection/NC equals requirement",
+      "expected": "VIN_RAW",
+      "actual": "VIN_RAW"
+    },
+    {
+      "pass": true,
+      "check": "J1.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J10.1: native connection/NC equals requirement",
+      "expected": "ADC_IN",
+      "actual": "ADC_IN"
+    },
+    {
+      "pass": true,
+      "check": "J10.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J11.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "J11.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J11.3: native connection/NC equals requirement",
+      "expected": "GPIO_PC13",
+      "actual": "GPIO_PC13"
+    },
+    {
+      "pass": true,
+      "check": "J11.4: native connection/NC equals requirement",
+      "expected": "GPIO_PC14",
+      "actual": "GPIO_PC14"
+    },
+    {
+      "pass": true,
+      "check": "J11.5: native connection/NC equals requirement",
+      "expected": "GPIO_PC15",
+      "actual": "GPIO_PC15"
+    },
+    {
+      "pass": true,
+      "check": "J11.6: native connection/NC equals requirement",
+      "expected": "GPIO_PA1",
+      "actual": "GPIO_PA1"
+    },
+    {
+      "pass": true,
+      "check": "J11.7: native connection/NC equals requirement",
+      "expected": "GPIO_PA2",
+      "actual": "GPIO_PA2"
+    },
+    {
+      "pass": true,
+      "check": "J11.8: native connection/NC equals requirement",
+      "expected": "GPIO_PA3",
+      "actual": "GPIO_PA3"
+    },
+    {
+      "pass": true,
+      "check": "J12.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "J12.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J12.3: native connection/NC equals requirement",
+      "expected": "GPIO_PB1",
+      "actual": "GPIO_PB1"
+    },
+    {
+      "pass": true,
+      "check": "J12.4: native connection/NC equals requirement",
+      "expected": "GPIO_PB10",
+      "actual": "GPIO_PB10"
+    },
+    {
+      "pass": true,
+      "check": "J12.5: native connection/NC equals requirement",
+      "expected": "GPIO_PB11",
+      "actual": "GPIO_PB11"
+    },
+    {
+      "pass": true,
+      "check": "J12.6: native connection/NC equals requirement",
+      "expected": "GPIO_PB12",
+      "actual": "GPIO_PB12"
+    },
+    {
+      "pass": true,
+      "check": "J12.7: native connection/NC equals requirement",
+      "expected": "GPIO_PB13",
+      "actual": "GPIO_PB13"
+    },
+    {
+      "pass": true,
+      "check": "J12.8: native connection/NC equals requirement",
+      "expected": "GPIO_PB14",
+      "actual": "GPIO_PB14"
+    },
+    {
+      "pass": true,
+      "check": "J13.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "J13.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J13.3: native connection/NC equals requirement",
+      "expected": "GPIO_PB15",
+      "actual": "GPIO_PB15"
+    },
+    {
+      "pass": true,
+      "check": "J13.4: native connection/NC equals requirement",
+      "expected": "GPIO_PA15",
+      "actual": "GPIO_PA15"
+    },
+    {
+      "pass": true,
+      "check": "J13.5: native connection/NC equals requirement",
+      "expected": "GPIO_PB4",
+      "actual": "GPIO_PB4"
+    },
+    {
+      "pass": true,
+      "check": "J13.6: native connection/NC equals requirement",
+      "expected": "GPIO_PB5",
+      "actual": "GPIO_PB5"
+    },
+    {
+      "pass": true,
+      "check": "J13.7: native connection/NC equals requirement",
+      "expected": "GPIO_PB8",
+      "actual": "GPIO_PB8"
+    },
+    {
+      "pass": true,
+      "check": "J13.8: native connection/NC equals requirement",
+      "expected": "GPIO_PB9",
+      "actual": "GPIO_PB9"
+    },
+    {
+      "pass": true,
+      "check": "J2.A1_B12: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J2.A4_B9: native connection/NC equals requirement",
+      "expected": "USB_VBUS",
+      "actual": "USB_VBUS"
+    },
+    {
+      "pass": true,
+      "check": "J2.A5: native connection/NC equals requirement",
+      "expected": "USB_CC1",
+      "actual": "USB_CC1"
+    },
+    {
+      "pass": true,
+      "check": "J2.A6: native connection/NC equals requirement",
+      "expected": "USB_DP",
+      "actual": "USB_DP"
+    },
+    {
+      "pass": true,
+      "check": "J2.A7: native connection/NC equals requirement",
+      "expected": "USB_DM",
+      "actual": "USB_DM"
+    },
+    {
+      "pass": true,
+      "check": "J2.A8: native connection/NC equals requirement",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "pass": true,
+      "check": "J2.B1_A12: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J2.B4_A9: native connection/NC equals requirement",
+      "expected": "USB_VBUS",
+      "actual": "USB_VBUS"
+    },
+    {
+      "pass": true,
+      "check": "J2.B5: native connection/NC equals requirement",
+      "expected": "USB_CC2",
+      "actual": "USB_CC2"
+    },
+    {
+      "pass": true,
+      "check": "J2.B6: native connection/NC equals requirement",
+      "expected": "USB_DP",
+      "actual": "USB_DP"
+    },
+    {
+      "pass": true,
+      "check": "J2.B7: native connection/NC equals requirement",
+      "expected": "USB_DM",
+      "actual": "USB_DM"
+    },
+    {
+      "pass": true,
+      "check": "J2.B8: native connection/NC equals requirement",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "pass": true,
+      "check": "J2.SH1: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J2.SH2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J2.SH3: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J2.SH4: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J3.1: native connection/NC equals requirement",
+      "expected": "CAN_H",
+      "actual": "CAN_H"
+    },
+    {
+      "pass": true,
+      "check": "J3.2: native connection/NC equals requirement",
+      "expected": "CAN_L",
+      "actual": "CAN_L"
+    },
+    {
+      "pass": true,
+      "check": "J3.3: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J4.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "J4.2: native connection/NC equals requirement",
+      "expected": "UART_TX",
+      "actual": "UART_TX"
+    },
+    {
+      "pass": true,
+      "check": "J4.3: native connection/NC equals requirement",
+      "expected": "UART_RX",
+      "actual": "UART_RX"
+    },
+    {
+      "pass": true,
+      "check": "J4.4: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J5.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "J5.2: native connection/NC equals requirement",
+      "expected": "I2C_SCL",
+      "actual": "I2C_SCL"
+    },
+    {
+      "pass": true,
+      "check": "J5.3: native connection/NC equals requirement",
+      "expected": "I2C_SDA",
+      "actual": "I2C_SDA"
+    },
+    {
+      "pass": true,
+      "check": "J5.4: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J6.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "J6.2: native connection/NC equals requirement",
+      "expected": "SPI_SCK",
+      "actual": "SPI_SCK"
+    },
+    {
+      "pass": true,
+      "check": "J6.3: native connection/NC equals requirement",
+      "expected": "SPI_MOSI",
+      "actual": "SPI_MOSI"
+    },
+    {
+      "pass": true,
+      "check": "J6.4: native connection/NC equals requirement",
+      "expected": "SPI_MISO",
+      "actual": "SPI_MISO"
+    },
+    {
+      "pass": true,
+      "check": "J6.5: native connection/NC equals requirement",
+      "expected": "SPI_NSS",
+      "actual": "SPI_NSS"
+    },
+    {
+      "pass": true,
+      "check": "J6.6: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J7.1: native connection/NC equals requirement",
+      "expected": "NRST",
+      "actual": "NRST"
+    },
+    {
+      "pass": true,
+      "check": "J7.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J8.1: native connection/NC equals requirement",
+      "expected": "BOOT_SERVICE",
+      "actual": "BOOT_SERVICE"
+    },
+    {
+      "pass": true,
+      "check": "J8.2: native connection/NC equals requirement",
+      "expected": "BOOT0",
+      "actual": "BOOT0"
+    },
+    {
+      "pass": true,
+      "check": "J9.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "J9.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J9.3: native connection/NC equals requirement",
+      "expected": "SWDIO",
+      "actual": "SWDIO"
+    },
+    {
+      "pass": true,
+      "check": "J9.4: native connection/NC equals requirement",
+      "expected": "SWCLK",
+      "actual": "SWCLK"
+    },
+    {
+      "pass": true,
+      "check": "J9.5: native connection/NC equals requirement",
+      "expected": "NRST",
+      "actual": "NRST"
+    },
+    {
+      "pass": true,
+      "check": "J9.6: native connection/NC equals requirement",
+      "expected": "SWO",
+      "actual": "SWO"
+    },
+    {
+      "pass": true,
+      "check": "L1.1: native connection/NC equals requirement",
+      "expected": "BUCK_SW",
+      "actual": "BUCK_SW"
+    },
+    {
+      "pass": true,
+      "check": "L1.2: native connection/NC equals requirement",
+      "expected": "V5",
+      "actual": "V5"
+    },
+    {
+      "pass": true,
+      "check": "Q1.1: native connection/NC equals requirement",
+      "expected": "VBUS_GATE",
+      "actual": "VBUS_GATE"
+    },
+    {
+      "pass": true,
+      "check": "Q1.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "Q1.3: native connection/NC equals requirement",
+      "expected": "VBUS_PRESENT_N",
+      "actual": "VBUS_PRESENT_N"
+    },
+    {
+      "pass": true,
+      "check": "Q2.1: native connection/NC equals requirement",
+      "expected": "USB_ATTACH_N",
+      "actual": "USB_ATTACH_N"
+    },
+    {
+      "pass": true,
+      "check": "Q2.2: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "Q2.3: native connection/NC equals requirement",
+      "expected": "USB_PULLUP_SRC",
+      "actual": "USB_PULLUP_SRC"
+    },
+    {
+      "pass": true,
+      "check": "R1.1: native connection/NC equals requirement",
+      "expected": "V5",
+      "actual": "V5"
+    },
+    {
+      "pass": true,
+      "check": "R1.2: native connection/NC equals requirement",
+      "expected": "BUCK_FB",
+      "actual": "BUCK_FB"
+    },
+    {
+      "pass": true,
+      "check": "R10.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R10.2: native connection/NC equals requirement",
+      "expected": "USB_ATTACH_N",
+      "actual": "USB_ATTACH_N"
+    },
+    {
+      "pass": true,
+      "check": "R11.1: native connection/NC equals requirement",
+      "expected": "USB_PULLUP_SRC",
+      "actual": "USB_PULLUP_SRC"
+    },
+    {
+      "pass": true,
+      "check": "R11.2: native connection/NC equals requirement",
+      "expected": "USB_DP",
+      "actual": "USB_DP"
+    },
+    {
+      "pass": true,
+      "check": "R12.1: native connection/NC equals requirement",
+      "expected": "PA12_SHARED",
+      "actual": "PA12_SHARED"
+    },
+    {
+      "pass": true,
+      "check": "R12.2: native connection/NC equals requirement",
+      "expected": "CAN_TXD",
+      "actual": "CAN_TXD"
+    },
+    {
+      "pass": true,
+      "check": "R13.1: native connection/NC equals requirement",
+      "expected": "PA11_SHARED",
+      "actual": "PA11_SHARED"
+    },
+    {
+      "pass": true,
+      "check": "R13.2: native connection/NC equals requirement",
+      "expected": "CAN_RXD",
+      "actual": "CAN_RXD"
+    },
+    {
+      "pass": true,
+      "check": "R14.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R14.2: native connection/NC equals requirement",
+      "expected": "CAN_TXD",
+      "actual": "CAN_TXD"
+    },
+    {
+      "pass": true,
+      "check": "R15.1: native connection/NC equals requirement",
+      "expected": "CAN_H",
+      "actual": "CAN_H"
+    },
+    {
+      "pass": true,
+      "check": "R15.2: native connection/NC equals requirement",
+      "expected": "CAN_L",
+      "actual": "CAN_L"
+    },
+    {
+      "pass": true,
+      "check": "R16.1: native connection/NC equals requirement",
+      "expected": "PA9_UART_TX",
+      "actual": "PA9_UART_TX"
+    },
+    {
+      "pass": true,
+      "check": "R16.2: native connection/NC equals requirement",
+      "expected": "UART_TX",
+      "actual": "UART_TX"
+    },
+    {
+      "pass": true,
+      "check": "R17.1: native connection/NC equals requirement",
+      "expected": "PA10_UART_RX",
+      "actual": "PA10_UART_RX"
+    },
+    {
+      "pass": true,
+      "check": "R17.2: native connection/NC equals requirement",
+      "expected": "UART_RX",
+      "actual": "UART_RX"
+    },
+    {
+      "pass": true,
+      "check": "R18.1: native connection/NC equals requirement",
+      "expected": "UART_RX",
+      "actual": "UART_RX"
+    },
+    {
+      "pass": true,
+      "check": "R18.2: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R19.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R19.2: native connection/NC equals requirement",
+      "expected": "I2C_SCL",
+      "actual": "I2C_SCL"
+    },
+    {
+      "pass": true,
+      "check": "R2.1: native connection/NC equals requirement",
+      "expected": "BUCK_FB",
+      "actual": "BUCK_FB"
+    },
+    {
+      "pass": true,
+      "check": "R2.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "R20.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R20.2: native connection/NC equals requirement",
+      "expected": "I2C_SDA",
+      "actual": "I2C_SDA"
+    },
+    {
+      "pass": true,
+      "check": "R21.1: native connection/NC equals requirement",
+      "expected": "PA5_SPI_SCK",
+      "actual": "PA5_SPI_SCK"
+    },
+    {
+      "pass": true,
+      "check": "R21.2: native connection/NC equals requirement",
+      "expected": "SPI_SCK",
+      "actual": "SPI_SCK"
+    },
+    {
+      "pass": true,
+      "check": "R22.1: native connection/NC equals requirement",
+      "expected": "PA7_SPI_MOSI",
+      "actual": "PA7_SPI_MOSI"
+    },
+    {
+      "pass": true,
+      "check": "R22.2: native connection/NC equals requirement",
+      "expected": "SPI_MOSI",
+      "actual": "SPI_MOSI"
+    },
+    {
+      "pass": true,
+      "check": "R23.1: native connection/NC equals requirement",
+      "expected": "PA4_SPI_NSS",
+      "actual": "PA4_SPI_NSS"
+    },
+    {
+      "pass": true,
+      "check": "R23.2: native connection/NC equals requirement",
+      "expected": "SPI_NSS",
+      "actual": "SPI_NSS"
+    },
+    {
+      "pass": true,
+      "check": "R24.1: native connection/NC equals requirement",
+      "expected": "PA6_SPI_MISO",
+      "actual": "PA6_SPI_MISO"
+    },
+    {
+      "pass": true,
+      "check": "R24.2: native connection/NC equals requirement",
+      "expected": "SPI_MISO",
+      "actual": "SPI_MISO"
+    },
+    {
+      "pass": true,
+      "check": "R25.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R25.2: native connection/NC equals requirement",
+      "expected": "PA4_SPI_NSS",
+      "actual": "PA4_SPI_NSS"
+    },
+    {
+      "pass": true,
+      "check": "R26.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R26.2: native connection/NC equals requirement",
+      "expected": "VDDA",
+      "actual": "VDDA"
+    },
+    {
+      "pass": true,
+      "check": "R27.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R27.2: native connection/NC equals requirement",
+      "expected": "NRST",
+      "actual": "NRST"
+    },
+    {
+      "pass": true,
+      "check": "R28.1: native connection/NC equals requirement",
+      "expected": "BOOT0",
+      "actual": "BOOT0"
+    },
+    {
+      "pass": true,
+      "check": "R28.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "R29.1: native connection/NC equals requirement",
+      "expected": "BOOT1",
+      "actual": "BOOT1"
+    },
+    {
+      "pass": true,
+      "check": "R29.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "R3.1: native connection/NC equals requirement",
+      "expected": "USB_CC1",
+      "actual": "USB_CC1"
+    },
+    {
+      "pass": true,
+      "check": "R3.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "R30.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R30.2: native connection/NC equals requirement",
+      "expected": "BOOT_SERVICE",
+      "actual": "BOOT_SERVICE"
+    },
+    {
+      "pass": true,
+      "check": "R31.1: native connection/NC equals requirement",
+      "expected": "OSC_OUT",
+      "actual": "OSC_OUT"
+    },
+    {
+      "pass": true,
+      "check": "R31.2: native connection/NC equals requirement",
+      "expected": "XTAL_OUT",
+      "actual": "XTAL_OUT"
+    },
+    {
+      "pass": true,
+      "check": "R32.1: native connection/NC equals requirement",
+      "expected": "ADC_IN",
+      "actual": "ADC_IN"
+    },
+    {
+      "pass": true,
+      "check": "R32.2: native connection/NC equals requirement",
+      "expected": "ADC0",
+      "actual": "ADC0"
+    },
+    {
+      "pass": true,
+      "check": "R4.1: native connection/NC equals requirement",
+      "expected": "USB_CC2",
+      "actual": "USB_CC2"
+    },
+    {
+      "pass": true,
+      "check": "R4.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "R5.1: native connection/NC equals requirement",
+      "expected": "PA12_SHARED",
+      "actual": "PA12_SHARED"
+    },
+    {
+      "pass": true,
+      "check": "R5.2: native connection/NC equals requirement",
+      "expected": "USB_DP",
+      "actual": "USB_DP"
+    },
+    {
+      "pass": true,
+      "check": "R6.1: native connection/NC equals requirement",
+      "expected": "PA11_SHARED",
+      "actual": "PA11_SHARED"
+    },
+    {
+      "pass": true,
+      "check": "R6.2: native connection/NC equals requirement",
+      "expected": "USB_DM",
+      "actual": "USB_DM"
+    },
+    {
+      "pass": true,
+      "check": "R7.1: native connection/NC equals requirement",
+      "expected": "USB_VBUS",
+      "actual": "USB_VBUS"
+    },
+    {
+      "pass": true,
+      "check": "R7.2: native connection/NC equals requirement",
+      "expected": "VBUS_GATE",
+      "actual": "VBUS_GATE"
+    },
+    {
+      "pass": true,
+      "check": "R8.1: native connection/NC equals requirement",
+      "expected": "VBUS_GATE",
+      "actual": "VBUS_GATE"
+    },
+    {
+      "pass": true,
+      "check": "R8.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "R9.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R9.2: native connection/NC equals requirement",
+      "expected": "VBUS_PRESENT_N",
+      "actual": "VBUS_PRESENT_N"
+    },
+    {
+      "pass": true,
+      "check": "U1.1: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "U1.10: native connection/NC equals requirement",
+      "expected": "ADC0",
+      "actual": "ADC0"
+    },
+    {
+      "pass": true,
+      "check": "U1.11: native connection/NC equals requirement",
+      "expected": "GPIO_PA1",
+      "actual": "GPIO_PA1"
+    },
+    {
+      "pass": true,
+      "check": "U1.12: native connection/NC equals requirement",
+      "expected": "GPIO_PA2",
+      "actual": "GPIO_PA2"
+    },
+    {
+      "pass": true,
+      "check": "U1.13: native connection/NC equals requirement",
+      "expected": "GPIO_PA3",
+      "actual": "GPIO_PA3"
+    },
+    {
+      "pass": true,
+      "check": "U1.14: native connection/NC equals requirement",
+      "expected": "PA4_SPI_NSS",
+      "actual": "PA4_SPI_NSS"
+    },
+    {
+      "pass": true,
+      "check": "U1.15: native connection/NC equals requirement",
+      "expected": "PA5_SPI_SCK",
+      "actual": "PA5_SPI_SCK"
+    },
+    {
+      "pass": true,
+      "check": "U1.16: native connection/NC equals requirement",
+      "expected": "PA6_SPI_MISO",
+      "actual": "PA6_SPI_MISO"
+    },
+    {
+      "pass": true,
+      "check": "U1.17: native connection/NC equals requirement",
+      "expected": "PA7_SPI_MOSI",
+      "actual": "PA7_SPI_MOSI"
+    },
+    {
+      "pass": true,
+      "check": "U1.18: native connection/NC equals requirement",
+      "expected": "VBUS_PRESENT_N",
+      "actual": "VBUS_PRESENT_N"
+    },
+    {
+      "pass": true,
+      "check": "U1.19: native connection/NC equals requirement",
+      "expected": "GPIO_PB1",
+      "actual": "GPIO_PB1"
+    },
+    {
+      "pass": true,
+      "check": "U1.2: native connection/NC equals requirement",
+      "expected": "GPIO_PC13",
+      "actual": "GPIO_PC13"
+    },
+    {
+      "pass": true,
+      "check": "U1.20: native connection/NC equals requirement",
+      "expected": "BOOT1",
+      "actual": "BOOT1"
+    },
+    {
+      "pass": true,
+      "check": "U1.21: native connection/NC equals requirement",
+      "expected": "GPIO_PB10",
+      "actual": "GPIO_PB10"
+    },
+    {
+      "pass": true,
+      "check": "U1.22: native connection/NC equals requirement",
+      "expected": "GPIO_PB11",
+      "actual": "GPIO_PB11"
+    },
+    {
+      "pass": true,
+      "check": "U1.23: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U1.24: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "U1.25: native connection/NC equals requirement",
+      "expected": "GPIO_PB12",
+      "actual": "GPIO_PB12"
+    },
+    {
+      "pass": true,
+      "check": "U1.26: native connection/NC equals requirement",
+      "expected": "GPIO_PB13",
+      "actual": "GPIO_PB13"
+    },
+    {
+      "pass": true,
+      "check": "U1.27: native connection/NC equals requirement",
+      "expected": "GPIO_PB14",
+      "actual": "GPIO_PB14"
+    },
+    {
+      "pass": true,
+      "check": "U1.28: native connection/NC equals requirement",
+      "expected": "GPIO_PB15",
+      "actual": "GPIO_PB15"
+    },
+    {
+      "pass": true,
+      "check": "U1.29: native connection/NC equals requirement",
+      "expected": "USB_ATTACH_N",
+      "actual": "USB_ATTACH_N"
+    },
+    {
+      "pass": true,
+      "check": "U1.3: native connection/NC equals requirement",
+      "expected": "GPIO_PC14",
+      "actual": "GPIO_PC14"
+    },
+    {
+      "pass": true,
+      "check": "U1.30: native connection/NC equals requirement",
+      "expected": "PA9_UART_TX",
+      "actual": "PA9_UART_TX"
+    },
+    {
+      "pass": true,
+      "check": "U1.31: native connection/NC equals requirement",
+      "expected": "PA10_UART_RX",
+      "actual": "PA10_UART_RX"
+    },
+    {
+      "pass": true,
+      "check": "U1.32: native connection/NC equals requirement",
+      "expected": "PA11_SHARED",
+      "actual": "PA11_SHARED"
+    },
+    {
+      "pass": true,
+      "check": "U1.33: native connection/NC equals requirement",
+      "expected": "PA12_SHARED",
+      "actual": "PA12_SHARED"
+    },
+    {
+      "pass": true,
+      "check": "U1.34: native connection/NC equals requirement",
+      "expected": "SWDIO",
+      "actual": "SWDIO"
+    },
+    {
+      "pass": true,
+      "check": "U1.35: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U1.36: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "U1.37: native connection/NC equals requirement",
+      "expected": "SWCLK",
+      "actual": "SWCLK"
+    },
+    {
+      "pass": true,
+      "check": "U1.38: native connection/NC equals requirement",
+      "expected": "GPIO_PA15",
+      "actual": "GPIO_PA15"
+    },
+    {
+      "pass": true,
+      "check": "U1.39: native connection/NC equals requirement",
+      "expected": "SWO",
+      "actual": "SWO"
+    },
+    {
+      "pass": true,
+      "check": "U1.4: native connection/NC equals requirement",
+      "expected": "GPIO_PC15",
+      "actual": "GPIO_PC15"
+    },
+    {
+      "pass": true,
+      "check": "U1.40: native connection/NC equals requirement",
+      "expected": "GPIO_PB4",
+      "actual": "GPIO_PB4"
+    },
+    {
+      "pass": true,
+      "check": "U1.41: native connection/NC equals requirement",
+      "expected": "GPIO_PB5",
+      "actual": "GPIO_PB5"
+    },
+    {
+      "pass": true,
+      "check": "U1.42: native connection/NC equals requirement",
+      "expected": "I2C_SCL",
+      "actual": "I2C_SCL"
+    },
+    {
+      "pass": true,
+      "check": "U1.43: native connection/NC equals requirement",
+      "expected": "I2C_SDA",
+      "actual": "I2C_SDA"
+    },
+    {
+      "pass": true,
+      "check": "U1.44: native connection/NC equals requirement",
+      "expected": "BOOT0",
+      "actual": "BOOT0"
+    },
+    {
+      "pass": true,
+      "check": "U1.45: native connection/NC equals requirement",
+      "expected": "GPIO_PB8",
+      "actual": "GPIO_PB8"
+    },
+    {
+      "pass": true,
+      "check": "U1.46: native connection/NC equals requirement",
+      "expected": "GPIO_PB9",
+      "actual": "GPIO_PB9"
+    },
+    {
+      "pass": true,
+      "check": "U1.47: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U1.48: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "U1.5: native connection/NC equals requirement",
+      "expected": "OSC_IN",
+      "actual": "OSC_IN"
+    },
+    {
+      "pass": true,
+      "check": "U1.6: native connection/NC equals requirement",
+      "expected": "OSC_OUT",
+      "actual": "OSC_OUT"
+    },
+    {
+      "pass": true,
+      "check": "U1.7: native connection/NC equals requirement",
+      "expected": "NRST",
+      "actual": "NRST"
+    },
+    {
+      "pass": true,
+      "check": "U1.8: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U1.9: native connection/NC equals requirement",
+      "expected": "VDDA",
+      "actual": "VDDA"
+    },
+    {
+      "pass": true,
+      "check": "U2.1: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U2.2: native connection/NC equals requirement",
+      "expected": "BUCK_SW",
+      "actual": "BUCK_SW"
+    },
+    {
+      "pass": true,
+      "check": "U2.3: native connection/NC equals requirement",
+      "expected": "VIN_PROT",
+      "actual": "VIN_PROT"
+    },
+    {
+      "pass": true,
+      "check": "U2.4: native connection/NC equals requirement",
+      "expected": "BUCK_FB",
+      "actual": "BUCK_FB"
+    },
+    {
+      "pass": true,
+      "check": "U2.5: native connection/NC equals requirement",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "pass": true,
+      "check": "U2.6: native connection/NC equals requirement",
+      "expected": "BUCK_BOOT",
+      "actual": "BUCK_BOOT"
+    },
+    {
+      "pass": true,
+      "check": "U3.1: native connection/NC equals requirement",
+      "expected": "V5",
+      "actual": "V5"
+    },
+    {
+      "pass": true,
+      "check": "U3.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U3.3: native connection/NC equals requirement",
+      "expected": "V5",
+      "actual": "V5"
+    },
+    {
+      "pass": true,
+      "check": "U3.4: native connection/NC equals requirement",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "pass": true,
+      "check": "U3.5: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "U4.1: native connection/NC equals requirement",
+      "expected": "USB_DP",
+      "actual": "USB_DP"
+    },
+    {
+      "pass": true,
+      "check": "U4.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U4.3: native connection/NC equals requirement",
+      "expected": "USB_DM",
+      "actual": "USB_DM"
+    },
+    {
+      "pass": true,
+      "check": "U4.4: native connection/NC equals requirement",
+      "expected": "USB_DM",
+      "actual": "USB_DM"
+    },
+    {
+      "pass": true,
+      "check": "U4.5: native connection/NC equals requirement",
+      "expected": "USB_VBUS",
+      "actual": "USB_VBUS"
+    },
+    {
+      "pass": true,
+      "check": "U4.6: native connection/NC equals requirement",
+      "expected": "USB_DP",
+      "actual": "USB_DP"
+    },
+    {
+      "pass": true,
+      "check": "U5.1: native connection/NC equals requirement",
+      "expected": "CAN_TXD",
+      "actual": "CAN_TXD"
+    },
+    {
+      "pass": true,
+      "check": "U5.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U5.3: native connection/NC equals requirement",
+      "expected": "V3V3",
+      "actual": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "U5.4: native connection/NC equals requirement",
+      "expected": "CAN_RXD",
+      "actual": "CAN_RXD"
+    },
+    {
+      "pass": true,
+      "check": "U5.5: native connection/NC equals requirement",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "pass": true,
+      "check": "U5.6: native connection/NC equals requirement",
+      "expected": "CAN_L",
+      "actual": "CAN_L"
+    },
+    {
+      "pass": true,
+      "check": "U5.7: native connection/NC equals requirement",
+      "expected": "CAN_H",
+      "actual": "CAN_H"
+    },
+    {
+      "pass": true,
+      "check": "U5.8: native connection/NC equals requirement",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "pass": true,
+      "check": "Y1.1: native connection/NC equals requirement",
+      "expected": "OSC_IN",
+      "actual": "OSC_IN"
+    },
+    {
+      "pass": true,
+      "check": "Y1.2: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "Y1.3: native connection/NC equals requirement",
+      "expected": "XTAL_OUT",
+      "actual": "XTAL_OUT"
+    },
+    {
+      "pass": true,
+      "check": "Y1.4: native connection/NC equals requirement",
+      "expected": "GND",
+      "actual": "GND"
+    },
+    {
+      "pass": true,
+      "check": "Exact original user-saved snapshot and A4 export physical pin sets"
+    },
+    {
+      "pass": true,
+      "check": "C1.1: original snapshot to A4 connection/NC unchanged",
+      "before": "VIN_PROT",
+      "after": "VIN_PROT"
+    },
+    {
+      "pass": true,
+      "check": "C1.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C10.1: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_VBUS",
+      "after": "USB_VBUS"
+    },
+    {
+      "pass": true,
+      "check": "C10.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C11.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C11.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C12.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C12.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C13.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C13.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C14.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C14.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C15.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C15.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C16.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C16.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C17.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C17.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C18.1: original snapshot to A4 connection/NC unchanged",
+      "before": "VDDA",
+      "after": "VDDA"
+    },
+    {
+      "pass": true,
+      "check": "C18.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C19.1: original snapshot to A4 connection/NC unchanged",
+      "before": "VDDA",
+      "after": "VDDA"
+    },
+    {
+      "pass": true,
+      "check": "C19.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C2.1: original snapshot to A4 connection/NC unchanged",
+      "before": "VIN_PROT",
+      "after": "VIN_PROT"
+    },
+    {
+      "pass": true,
+      "check": "C2.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C20.1: original snapshot to A4 connection/NC unchanged",
+      "before": "VDDA",
+      "after": "VDDA"
+    },
+    {
+      "pass": true,
+      "check": "C20.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C21.1: original snapshot to A4 connection/NC unchanged",
+      "before": "NRST",
+      "after": "NRST"
+    },
+    {
+      "pass": true,
+      "check": "C21.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C22.1: original snapshot to A4 connection/NC unchanged",
+      "before": "OSC_IN",
+      "after": "OSC_IN"
+    },
+    {
+      "pass": true,
+      "check": "C22.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C23.1: original snapshot to A4 connection/NC unchanged",
+      "before": "XTAL_OUT",
+      "after": "XTAL_OUT"
+    },
+    {
+      "pass": true,
+      "check": "C23.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C24.1: original snapshot to A4 connection/NC unchanged",
+      "before": "ADC0",
+      "after": "ADC0"
+    },
+    {
+      "pass": true,
+      "check": "C24.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C3.1: original snapshot to A4 connection/NC unchanged",
+      "before": "VIN_PROT",
+      "after": "VIN_PROT"
+    },
+    {
+      "pass": true,
+      "check": "C3.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C4.1: original snapshot to A4 connection/NC unchanged",
+      "before": "BUCK_BOOT",
+      "after": "BUCK_BOOT"
+    },
+    {
+      "pass": true,
+      "check": "C4.2: original snapshot to A4 connection/NC unchanged",
+      "before": "BUCK_SW",
+      "after": "BUCK_SW"
+    },
+    {
+      "pass": true,
+      "check": "C5.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V5",
+      "after": "V5"
+    },
+    {
+      "pass": true,
+      "check": "C5.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C6.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V5",
+      "after": "V5"
+    },
+    {
+      "pass": true,
+      "check": "C6.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C7.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V5",
+      "after": "V5"
+    },
+    {
+      "pass": true,
+      "check": "C7.2: original snapshot to A4 connection/NC unchanged",
+      "before": "BUCK_FB",
+      "after": "BUCK_FB"
+    },
+    {
+      "pass": true,
+      "check": "C8.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V5",
+      "after": "V5"
+    },
+    {
+      "pass": true,
+      "check": "C8.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "C9.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "C9.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "D1.1: original snapshot to A4 connection/NC unchanged",
+      "before": "VIN_PROT",
+      "after": "VIN_PROT"
+    },
+    {
+      "pass": true,
+      "check": "D1.2: original snapshot to A4 connection/NC unchanged",
+      "before": "VIN_FUSED",
+      "after": "VIN_FUSED"
+    },
+    {
+      "pass": true,
+      "check": "F1.1: original snapshot to A4 connection/NC unchanged",
+      "before": "VIN_RAW",
+      "after": "VIN_RAW"
+    },
+    {
+      "pass": true,
+      "check": "F1.2: original snapshot to A4 connection/NC unchanged",
+      "before": "VIN_FUSED",
+      "after": "VIN_FUSED"
+    },
+    {
+      "pass": true,
+      "check": "J1.1: original snapshot to A4 connection/NC unchanged",
+      "before": "VIN_RAW",
+      "after": "VIN_RAW"
+    },
+    {
+      "pass": true,
+      "check": "J1.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J10.1: original snapshot to A4 connection/NC unchanged",
+      "before": "ADC_IN",
+      "after": "ADC_IN"
+    },
+    {
+      "pass": true,
+      "check": "J10.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J11.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "J11.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J11.3: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PC13",
+      "after": "GPIO_PC13"
+    },
+    {
+      "pass": true,
+      "check": "J11.4: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PC14",
+      "after": "GPIO_PC14"
+    },
+    {
+      "pass": true,
+      "check": "J11.5: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PC15",
+      "after": "GPIO_PC15"
+    },
+    {
+      "pass": true,
+      "check": "J11.6: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PA1",
+      "after": "GPIO_PA1"
+    },
+    {
+      "pass": true,
+      "check": "J11.7: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PA2",
+      "after": "GPIO_PA2"
+    },
+    {
+      "pass": true,
+      "check": "J11.8: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PA3",
+      "after": "GPIO_PA3"
+    },
+    {
+      "pass": true,
+      "check": "J12.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "J12.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J12.3: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB1",
+      "after": "GPIO_PB1"
+    },
+    {
+      "pass": true,
+      "check": "J12.4: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB10",
+      "after": "GPIO_PB10"
+    },
+    {
+      "pass": true,
+      "check": "J12.5: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB11",
+      "after": "GPIO_PB11"
+    },
+    {
+      "pass": true,
+      "check": "J12.6: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB12",
+      "after": "GPIO_PB12"
+    },
+    {
+      "pass": true,
+      "check": "J12.7: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB13",
+      "after": "GPIO_PB13"
+    },
+    {
+      "pass": true,
+      "check": "J12.8: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB14",
+      "after": "GPIO_PB14"
+    },
+    {
+      "pass": true,
+      "check": "J13.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "J13.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J13.3: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB15",
+      "after": "GPIO_PB15"
+    },
+    {
+      "pass": true,
+      "check": "J13.4: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PA15",
+      "after": "GPIO_PA15"
+    },
+    {
+      "pass": true,
+      "check": "J13.5: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB4",
+      "after": "GPIO_PB4"
+    },
+    {
+      "pass": true,
+      "check": "J13.6: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB5",
+      "after": "GPIO_PB5"
+    },
+    {
+      "pass": true,
+      "check": "J13.7: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB8",
+      "after": "GPIO_PB8"
+    },
+    {
+      "pass": true,
+      "check": "J13.8: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB9",
+      "after": "GPIO_PB9"
+    },
+    {
+      "pass": true,
+      "check": "J2.A1_B12: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J2.A4_B9: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_VBUS",
+      "after": "USB_VBUS"
+    },
+    {
+      "pass": true,
+      "check": "J2.A5: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_CC1",
+      "after": "USB_CC1"
+    },
+    {
+      "pass": true,
+      "check": "J2.A6: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_DP",
+      "after": "USB_DP"
+    },
+    {
+      "pass": true,
+      "check": "J2.A7: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_DM",
+      "after": "USB_DM"
+    },
+    {
+      "pass": true,
+      "check": "J2.A8: original snapshot to A4 connection/NC unchanged",
+      "before": null,
+      "after": null
+    },
+    {
+      "pass": true,
+      "check": "J2.B1_A12: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J2.B4_A9: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_VBUS",
+      "after": "USB_VBUS"
+    },
+    {
+      "pass": true,
+      "check": "J2.B5: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_CC2",
+      "after": "USB_CC2"
+    },
+    {
+      "pass": true,
+      "check": "J2.B6: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_DP",
+      "after": "USB_DP"
+    },
+    {
+      "pass": true,
+      "check": "J2.B7: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_DM",
+      "after": "USB_DM"
+    },
+    {
+      "pass": true,
+      "check": "J2.B8: original snapshot to A4 connection/NC unchanged",
+      "before": null,
+      "after": null
+    },
+    {
+      "pass": true,
+      "check": "J2.SH1: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J2.SH2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J2.SH3: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J2.SH4: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J3.1: original snapshot to A4 connection/NC unchanged",
+      "before": "CAN_H",
+      "after": "CAN_H"
+    },
+    {
+      "pass": true,
+      "check": "J3.2: original snapshot to A4 connection/NC unchanged",
+      "before": "CAN_L",
+      "after": "CAN_L"
+    },
+    {
+      "pass": true,
+      "check": "J3.3: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J4.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "J4.2: original snapshot to A4 connection/NC unchanged",
+      "before": "UART_TX",
+      "after": "UART_TX"
+    },
+    {
+      "pass": true,
+      "check": "J4.3: original snapshot to A4 connection/NC unchanged",
+      "before": "UART_RX",
+      "after": "UART_RX"
+    },
+    {
+      "pass": true,
+      "check": "J4.4: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J5.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "J5.2: original snapshot to A4 connection/NC unchanged",
+      "before": "I2C_SCL",
+      "after": "I2C_SCL"
+    },
+    {
+      "pass": true,
+      "check": "J5.3: original snapshot to A4 connection/NC unchanged",
+      "before": "I2C_SDA",
+      "after": "I2C_SDA"
+    },
+    {
+      "pass": true,
+      "check": "J5.4: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J6.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "J6.2: original snapshot to A4 connection/NC unchanged",
+      "before": "SPI_SCK",
+      "after": "SPI_SCK"
+    },
+    {
+      "pass": true,
+      "check": "J6.3: original snapshot to A4 connection/NC unchanged",
+      "before": "SPI_MOSI",
+      "after": "SPI_MOSI"
+    },
+    {
+      "pass": true,
+      "check": "J6.4: original snapshot to A4 connection/NC unchanged",
+      "before": "SPI_MISO",
+      "after": "SPI_MISO"
+    },
+    {
+      "pass": true,
+      "check": "J6.5: original snapshot to A4 connection/NC unchanged",
+      "before": "SPI_NSS",
+      "after": "SPI_NSS"
+    },
+    {
+      "pass": true,
+      "check": "J6.6: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J7.1: original snapshot to A4 connection/NC unchanged",
+      "before": "NRST",
+      "after": "NRST"
+    },
+    {
+      "pass": true,
+      "check": "J7.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J8.1: original snapshot to A4 connection/NC unchanged",
+      "before": "BOOT_SERVICE",
+      "after": "BOOT_SERVICE"
+    },
+    {
+      "pass": true,
+      "check": "J8.2: original snapshot to A4 connection/NC unchanged",
+      "before": "BOOT0",
+      "after": "BOOT0"
+    },
+    {
+      "pass": true,
+      "check": "J9.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "J9.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "J9.3: original snapshot to A4 connection/NC unchanged",
+      "before": "SWDIO",
+      "after": "SWDIO"
+    },
+    {
+      "pass": true,
+      "check": "J9.4: original snapshot to A4 connection/NC unchanged",
+      "before": "SWCLK",
+      "after": "SWCLK"
+    },
+    {
+      "pass": true,
+      "check": "J9.5: original snapshot to A4 connection/NC unchanged",
+      "before": "NRST",
+      "after": "NRST"
+    },
+    {
+      "pass": true,
+      "check": "J9.6: original snapshot to A4 connection/NC unchanged",
+      "before": "SWO",
+      "after": "SWO"
+    },
+    {
+      "pass": true,
+      "check": "L1.1: original snapshot to A4 connection/NC unchanged",
+      "before": "BUCK_SW",
+      "after": "BUCK_SW"
+    },
+    {
+      "pass": true,
+      "check": "L1.2: original snapshot to A4 connection/NC unchanged",
+      "before": "V5",
+      "after": "V5"
+    },
+    {
+      "pass": true,
+      "check": "Q1.1: original snapshot to A4 connection/NC unchanged",
+      "before": "VBUS_GATE",
+      "after": "VBUS_GATE"
+    },
+    {
+      "pass": true,
+      "check": "Q1.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "Q1.3: original snapshot to A4 connection/NC unchanged",
+      "before": "VBUS_PRESENT_N",
+      "after": "VBUS_PRESENT_N"
+    },
+    {
+      "pass": true,
+      "check": "Q2.1: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_ATTACH_N",
+      "after": "USB_ATTACH_N"
+    },
+    {
+      "pass": true,
+      "check": "Q2.2: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "Q2.3: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_PULLUP_SRC",
+      "after": "USB_PULLUP_SRC"
+    },
+    {
+      "pass": true,
+      "check": "R1.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V5",
+      "after": "V5"
+    },
+    {
+      "pass": true,
+      "check": "R1.2: original snapshot to A4 connection/NC unchanged",
+      "before": "BUCK_FB",
+      "after": "BUCK_FB"
+    },
+    {
+      "pass": true,
+      "check": "R10.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R10.2: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_ATTACH_N",
+      "after": "USB_ATTACH_N"
+    },
+    {
+      "pass": true,
+      "check": "R11.1: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_PULLUP_SRC",
+      "after": "USB_PULLUP_SRC"
+    },
+    {
+      "pass": true,
+      "check": "R11.2: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_DP",
+      "after": "USB_DP"
+    },
+    {
+      "pass": true,
+      "check": "R12.1: original snapshot to A4 connection/NC unchanged",
+      "before": "PA12_SHARED",
+      "after": "PA12_SHARED"
+    },
+    {
+      "pass": true,
+      "check": "R12.2: original snapshot to A4 connection/NC unchanged",
+      "before": "CAN_TXD",
+      "after": "CAN_TXD"
+    },
+    {
+      "pass": true,
+      "check": "R13.1: original snapshot to A4 connection/NC unchanged",
+      "before": "PA11_SHARED",
+      "after": "PA11_SHARED"
+    },
+    {
+      "pass": true,
+      "check": "R13.2: original snapshot to A4 connection/NC unchanged",
+      "before": "CAN_RXD",
+      "after": "CAN_RXD"
+    },
+    {
+      "pass": true,
+      "check": "R14.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R14.2: original snapshot to A4 connection/NC unchanged",
+      "before": "CAN_TXD",
+      "after": "CAN_TXD"
+    },
+    {
+      "pass": true,
+      "check": "R15.1: original snapshot to A4 connection/NC unchanged",
+      "before": "CAN_H",
+      "after": "CAN_H"
+    },
+    {
+      "pass": true,
+      "check": "R15.2: original snapshot to A4 connection/NC unchanged",
+      "before": "CAN_L",
+      "after": "CAN_L"
+    },
+    {
+      "pass": true,
+      "check": "R16.1: original snapshot to A4 connection/NC unchanged",
+      "before": "PA9_UART_TX",
+      "after": "PA9_UART_TX"
+    },
+    {
+      "pass": true,
+      "check": "R16.2: original snapshot to A4 connection/NC unchanged",
+      "before": "UART_TX",
+      "after": "UART_TX"
+    },
+    {
+      "pass": true,
+      "check": "R17.1: original snapshot to A4 connection/NC unchanged",
+      "before": "PA10_UART_RX",
+      "after": "PA10_UART_RX"
+    },
+    {
+      "pass": true,
+      "check": "R17.2: original snapshot to A4 connection/NC unchanged",
+      "before": "UART_RX",
+      "after": "UART_RX"
+    },
+    {
+      "pass": true,
+      "check": "R18.1: original snapshot to A4 connection/NC unchanged",
+      "before": "UART_RX",
+      "after": "UART_RX"
+    },
+    {
+      "pass": true,
+      "check": "R18.2: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R19.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R19.2: original snapshot to A4 connection/NC unchanged",
+      "before": "I2C_SCL",
+      "after": "I2C_SCL"
+    },
+    {
+      "pass": true,
+      "check": "R2.1: original snapshot to A4 connection/NC unchanged",
+      "before": "BUCK_FB",
+      "after": "BUCK_FB"
+    },
+    {
+      "pass": true,
+      "check": "R2.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "R20.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R20.2: original snapshot to A4 connection/NC unchanged",
+      "before": "I2C_SDA",
+      "after": "I2C_SDA"
+    },
+    {
+      "pass": true,
+      "check": "R21.1: original snapshot to A4 connection/NC unchanged",
+      "before": "PA5_SPI_SCK",
+      "after": "PA5_SPI_SCK"
+    },
+    {
+      "pass": true,
+      "check": "R21.2: original snapshot to A4 connection/NC unchanged",
+      "before": "SPI_SCK",
+      "after": "SPI_SCK"
+    },
+    {
+      "pass": true,
+      "check": "R22.1: original snapshot to A4 connection/NC unchanged",
+      "before": "PA7_SPI_MOSI",
+      "after": "PA7_SPI_MOSI"
+    },
+    {
+      "pass": true,
+      "check": "R22.2: original snapshot to A4 connection/NC unchanged",
+      "before": "SPI_MOSI",
+      "after": "SPI_MOSI"
+    },
+    {
+      "pass": true,
+      "check": "R23.1: original snapshot to A4 connection/NC unchanged",
+      "before": "PA4_SPI_NSS",
+      "after": "PA4_SPI_NSS"
+    },
+    {
+      "pass": true,
+      "check": "R23.2: original snapshot to A4 connection/NC unchanged",
+      "before": "SPI_NSS",
+      "after": "SPI_NSS"
+    },
+    {
+      "pass": true,
+      "check": "R24.1: original snapshot to A4 connection/NC unchanged",
+      "before": "PA6_SPI_MISO",
+      "after": "PA6_SPI_MISO"
+    },
+    {
+      "pass": true,
+      "check": "R24.2: original snapshot to A4 connection/NC unchanged",
+      "before": "SPI_MISO",
+      "after": "SPI_MISO"
+    },
+    {
+      "pass": true,
+      "check": "R25.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R25.2: original snapshot to A4 connection/NC unchanged",
+      "before": "PA4_SPI_NSS",
+      "after": "PA4_SPI_NSS"
+    },
+    {
+      "pass": true,
+      "check": "R26.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R26.2: original snapshot to A4 connection/NC unchanged",
+      "before": "VDDA",
+      "after": "VDDA"
+    },
+    {
+      "pass": true,
+      "check": "R27.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R27.2: original snapshot to A4 connection/NC unchanged",
+      "before": "NRST",
+      "after": "NRST"
+    },
+    {
+      "pass": true,
+      "check": "R28.1: original snapshot to A4 connection/NC unchanged",
+      "before": "BOOT0",
+      "after": "BOOT0"
+    },
+    {
+      "pass": true,
+      "check": "R28.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "R29.1: original snapshot to A4 connection/NC unchanged",
+      "before": "BOOT1",
+      "after": "BOOT1"
+    },
+    {
+      "pass": true,
+      "check": "R29.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "R3.1: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_CC1",
+      "after": "USB_CC1"
+    },
+    {
+      "pass": true,
+      "check": "R3.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "R30.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R30.2: original snapshot to A4 connection/NC unchanged",
+      "before": "BOOT_SERVICE",
+      "after": "BOOT_SERVICE"
+    },
+    {
+      "pass": true,
+      "check": "R31.1: original snapshot to A4 connection/NC unchanged",
+      "before": "OSC_OUT",
+      "after": "OSC_OUT"
+    },
+    {
+      "pass": true,
+      "check": "R31.2: original snapshot to A4 connection/NC unchanged",
+      "before": "XTAL_OUT",
+      "after": "XTAL_OUT"
+    },
+    {
+      "pass": true,
+      "check": "R32.1: original snapshot to A4 connection/NC unchanged",
+      "before": "ADC_IN",
+      "after": "ADC_IN"
+    },
+    {
+      "pass": true,
+      "check": "R32.2: original snapshot to A4 connection/NC unchanged",
+      "before": "ADC0",
+      "after": "ADC0"
+    },
+    {
+      "pass": true,
+      "check": "R4.1: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_CC2",
+      "after": "USB_CC2"
+    },
+    {
+      "pass": true,
+      "check": "R4.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "R5.1: original snapshot to A4 connection/NC unchanged",
+      "before": "PA12_SHARED",
+      "after": "PA12_SHARED"
+    },
+    {
+      "pass": true,
+      "check": "R5.2: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_DP",
+      "after": "USB_DP"
+    },
+    {
+      "pass": true,
+      "check": "R6.1: original snapshot to A4 connection/NC unchanged",
+      "before": "PA11_SHARED",
+      "after": "PA11_SHARED"
+    },
+    {
+      "pass": true,
+      "check": "R6.2: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_DM",
+      "after": "USB_DM"
+    },
+    {
+      "pass": true,
+      "check": "R7.1: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_VBUS",
+      "after": "USB_VBUS"
+    },
+    {
+      "pass": true,
+      "check": "R7.2: original snapshot to A4 connection/NC unchanged",
+      "before": "VBUS_GATE",
+      "after": "VBUS_GATE"
+    },
+    {
+      "pass": true,
+      "check": "R8.1: original snapshot to A4 connection/NC unchanged",
+      "before": "VBUS_GATE",
+      "after": "VBUS_GATE"
+    },
+    {
+      "pass": true,
+      "check": "R8.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "R9.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "R9.2: original snapshot to A4 connection/NC unchanged",
+      "before": "VBUS_PRESENT_N",
+      "after": "VBUS_PRESENT_N"
+    },
+    {
+      "pass": true,
+      "check": "U1.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "U1.10: original snapshot to A4 connection/NC unchanged",
+      "before": "ADC0",
+      "after": "ADC0"
+    },
+    {
+      "pass": true,
+      "check": "U1.11: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PA1",
+      "after": "GPIO_PA1"
+    },
+    {
+      "pass": true,
+      "check": "U1.12: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PA2",
+      "after": "GPIO_PA2"
+    },
+    {
+      "pass": true,
+      "check": "U1.13: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PA3",
+      "after": "GPIO_PA3"
+    },
+    {
+      "pass": true,
+      "check": "U1.14: original snapshot to A4 connection/NC unchanged",
+      "before": "PA4_SPI_NSS",
+      "after": "PA4_SPI_NSS"
+    },
+    {
+      "pass": true,
+      "check": "U1.15: original snapshot to A4 connection/NC unchanged",
+      "before": "PA5_SPI_SCK",
+      "after": "PA5_SPI_SCK"
+    },
+    {
+      "pass": true,
+      "check": "U1.16: original snapshot to A4 connection/NC unchanged",
+      "before": "PA6_SPI_MISO",
+      "after": "PA6_SPI_MISO"
+    },
+    {
+      "pass": true,
+      "check": "U1.17: original snapshot to A4 connection/NC unchanged",
+      "before": "PA7_SPI_MOSI",
+      "after": "PA7_SPI_MOSI"
+    },
+    {
+      "pass": true,
+      "check": "U1.18: original snapshot to A4 connection/NC unchanged",
+      "before": "VBUS_PRESENT_N",
+      "after": "VBUS_PRESENT_N"
+    },
+    {
+      "pass": true,
+      "check": "U1.19: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB1",
+      "after": "GPIO_PB1"
+    },
+    {
+      "pass": true,
+      "check": "U1.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PC13",
+      "after": "GPIO_PC13"
+    },
+    {
+      "pass": true,
+      "check": "U1.20: original snapshot to A4 connection/NC unchanged",
+      "before": "BOOT1",
+      "after": "BOOT1"
+    },
+    {
+      "pass": true,
+      "check": "U1.21: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB10",
+      "after": "GPIO_PB10"
+    },
+    {
+      "pass": true,
+      "check": "U1.22: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB11",
+      "after": "GPIO_PB11"
+    },
+    {
+      "pass": true,
+      "check": "U1.23: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U1.24: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "U1.25: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB12",
+      "after": "GPIO_PB12"
+    },
+    {
+      "pass": true,
+      "check": "U1.26: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB13",
+      "after": "GPIO_PB13"
+    },
+    {
+      "pass": true,
+      "check": "U1.27: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB14",
+      "after": "GPIO_PB14"
+    },
+    {
+      "pass": true,
+      "check": "U1.28: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB15",
+      "after": "GPIO_PB15"
+    },
+    {
+      "pass": true,
+      "check": "U1.29: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_ATTACH_N",
+      "after": "USB_ATTACH_N"
+    },
+    {
+      "pass": true,
+      "check": "U1.3: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PC14",
+      "after": "GPIO_PC14"
+    },
+    {
+      "pass": true,
+      "check": "U1.30: original snapshot to A4 connection/NC unchanged",
+      "before": "PA9_UART_TX",
+      "after": "PA9_UART_TX"
+    },
+    {
+      "pass": true,
+      "check": "U1.31: original snapshot to A4 connection/NC unchanged",
+      "before": "PA10_UART_RX",
+      "after": "PA10_UART_RX"
+    },
+    {
+      "pass": true,
+      "check": "U1.32: original snapshot to A4 connection/NC unchanged",
+      "before": "PA11_SHARED",
+      "after": "PA11_SHARED"
+    },
+    {
+      "pass": true,
+      "check": "U1.33: original snapshot to A4 connection/NC unchanged",
+      "before": "PA12_SHARED",
+      "after": "PA12_SHARED"
+    },
+    {
+      "pass": true,
+      "check": "U1.34: original snapshot to A4 connection/NC unchanged",
+      "before": "SWDIO",
+      "after": "SWDIO"
+    },
+    {
+      "pass": true,
+      "check": "U1.35: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U1.36: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "U1.37: original snapshot to A4 connection/NC unchanged",
+      "before": "SWCLK",
+      "after": "SWCLK"
+    },
+    {
+      "pass": true,
+      "check": "U1.38: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PA15",
+      "after": "GPIO_PA15"
+    },
+    {
+      "pass": true,
+      "check": "U1.39: original snapshot to A4 connection/NC unchanged",
+      "before": "SWO",
+      "after": "SWO"
+    },
+    {
+      "pass": true,
+      "check": "U1.4: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PC15",
+      "after": "GPIO_PC15"
+    },
+    {
+      "pass": true,
+      "check": "U1.40: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB4",
+      "after": "GPIO_PB4"
+    },
+    {
+      "pass": true,
+      "check": "U1.41: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB5",
+      "after": "GPIO_PB5"
+    },
+    {
+      "pass": true,
+      "check": "U1.42: original snapshot to A4 connection/NC unchanged",
+      "before": "I2C_SCL",
+      "after": "I2C_SCL"
+    },
+    {
+      "pass": true,
+      "check": "U1.43: original snapshot to A4 connection/NC unchanged",
+      "before": "I2C_SDA",
+      "after": "I2C_SDA"
+    },
+    {
+      "pass": true,
+      "check": "U1.44: original snapshot to A4 connection/NC unchanged",
+      "before": "BOOT0",
+      "after": "BOOT0"
+    },
+    {
+      "pass": true,
+      "check": "U1.45: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB8",
+      "after": "GPIO_PB8"
+    },
+    {
+      "pass": true,
+      "check": "U1.46: original snapshot to A4 connection/NC unchanged",
+      "before": "GPIO_PB9",
+      "after": "GPIO_PB9"
+    },
+    {
+      "pass": true,
+      "check": "U1.47: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U1.48: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "U1.5: original snapshot to A4 connection/NC unchanged",
+      "before": "OSC_IN",
+      "after": "OSC_IN"
+    },
+    {
+      "pass": true,
+      "check": "U1.6: original snapshot to A4 connection/NC unchanged",
+      "before": "OSC_OUT",
+      "after": "OSC_OUT"
+    },
+    {
+      "pass": true,
+      "check": "U1.7: original snapshot to A4 connection/NC unchanged",
+      "before": "NRST",
+      "after": "NRST"
+    },
+    {
+      "pass": true,
+      "check": "U1.8: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U1.9: original snapshot to A4 connection/NC unchanged",
+      "before": "VDDA",
+      "after": "VDDA"
+    },
+    {
+      "pass": true,
+      "check": "U2.1: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U2.2: original snapshot to A4 connection/NC unchanged",
+      "before": "BUCK_SW",
+      "after": "BUCK_SW"
+    },
+    {
+      "pass": true,
+      "check": "U2.3: original snapshot to A4 connection/NC unchanged",
+      "before": "VIN_PROT",
+      "after": "VIN_PROT"
+    },
+    {
+      "pass": true,
+      "check": "U2.4: original snapshot to A4 connection/NC unchanged",
+      "before": "BUCK_FB",
+      "after": "BUCK_FB"
+    },
+    {
+      "pass": true,
+      "check": "U2.5: original snapshot to A4 connection/NC unchanged",
+      "before": null,
+      "after": null
+    },
+    {
+      "pass": true,
+      "check": "U2.6: original snapshot to A4 connection/NC unchanged",
+      "before": "BUCK_BOOT",
+      "after": "BUCK_BOOT"
+    },
+    {
+      "pass": true,
+      "check": "U3.1: original snapshot to A4 connection/NC unchanged",
+      "before": "V5",
+      "after": "V5"
+    },
+    {
+      "pass": true,
+      "check": "U3.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U3.3: original snapshot to A4 connection/NC unchanged",
+      "before": "V5",
+      "after": "V5"
+    },
+    {
+      "pass": true,
+      "check": "U3.4: original snapshot to A4 connection/NC unchanged",
+      "before": null,
+      "after": null
+    },
+    {
+      "pass": true,
+      "check": "U3.5: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "U4.1: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_DP",
+      "after": "USB_DP"
+    },
+    {
+      "pass": true,
+      "check": "U4.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U4.3: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_DM",
+      "after": "USB_DM"
+    },
+    {
+      "pass": true,
+      "check": "U4.4: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_DM",
+      "after": "USB_DM"
+    },
+    {
+      "pass": true,
+      "check": "U4.5: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_VBUS",
+      "after": "USB_VBUS"
+    },
+    {
+      "pass": true,
+      "check": "U4.6: original snapshot to A4 connection/NC unchanged",
+      "before": "USB_DP",
+      "after": "USB_DP"
+    },
+    {
+      "pass": true,
+      "check": "U5.1: original snapshot to A4 connection/NC unchanged",
+      "before": "CAN_TXD",
+      "after": "CAN_TXD"
+    },
+    {
+      "pass": true,
+      "check": "U5.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "U5.3: original snapshot to A4 connection/NC unchanged",
+      "before": "V3V3",
+      "after": "V3V3"
+    },
+    {
+      "pass": true,
+      "check": "U5.4: original snapshot to A4 connection/NC unchanged",
+      "before": "CAN_RXD",
+      "after": "CAN_RXD"
+    },
+    {
+      "pass": true,
+      "check": "U5.5: original snapshot to A4 connection/NC unchanged",
+      "before": null,
+      "after": null
+    },
+    {
+      "pass": true,
+      "check": "U5.6: original snapshot to A4 connection/NC unchanged",
+      "before": "CAN_L",
+      "after": "CAN_L"
+    },
+    {
+      "pass": true,
+      "check": "U5.7: original snapshot to A4 connection/NC unchanged",
+      "before": "CAN_H",
+      "after": "CAN_H"
+    },
+    {
+      "pass": true,
+      "check": "U5.8: original snapshot to A4 connection/NC unchanged",
+      "before": null,
+      "after": null
+    },
+    {
+      "pass": true,
+      "check": "Y1.1: original snapshot to A4 connection/NC unchanged",
+      "before": "OSC_IN",
+      "after": "OSC_IN"
+    },
+    {
+      "pass": true,
+      "check": "Y1.2: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    },
+    {
+      "pass": true,
+      "check": "Y1.3: original snapshot to A4 connection/NC unchanged",
+      "before": "XTAL_OUT",
+      "after": "XTAL_OUT"
+    },
+    {
+      "pass": true,
+      "check": "Y1.4: original snapshot to A4 connection/NC unchanged",
+      "before": "GND",
+      "after": "GND"
+    }
+  ],
+  "limits": "This comparison does not certify GUI ERC, graphical readability or electrical hardware behavior."
+}

@@ -1,0 +1,179 @@
+{
+  "status": "FROZEN_PLANNED_RETURN_NOT_NATIVE",
+  "signals": [
+    {
+      "net": "SWCLK",
+      "pin": 37,
+      "via": [
+        46.2,
+        24.15
+      ],
+      "nearestGND": "RIGHT_GROUND_STITCH_0",
+      "groundXY": [
+        46.99,
+        24.9
+      ],
+      "distance_mm": 1.089311709291697,
+      "topNeck_mm": 1.9914213562373106,
+      "bottomNeck_mm": 0.14999999999999858
+    },
+    {
+      "net": "GPIO_PA15",
+      "pin": 38,
+      "via": [
+        45.7,
+        24.65
+      ],
+      "nearestGND": "RIGHT_GROUND_STITCH_0",
+      "groundXY": [
+        46.99,
+        24.9
+      ],
+      "distance_mm": 1.3140015220691328,
+      "topNeck_mm": 1.4914213562373106,
+      "bottomNeck_mm": 0.6499999999999986
+    },
+    {
+      "net": "SWO",
+      "pin": 39,
+      "via": [
+        46.2,
+        25.15
+      ],
+      "nearestGND": "RIGHT_GROUND_STITCH_0",
+      "groundXY": [
+        46.99,
+        24.9
+      ],
+      "distance_mm": 0.8286132994346631,
+      "topNeck_mm": 1.9914213562373106,
+      "bottomNeck_mm": 0.14999999999999858
+    },
+    {
+      "net": "GPIO_PB4",
+      "pin": 40,
+      "via": [
+        45.7,
+        25.65
+      ],
+      "nearestGND": "RIGHT_GROUND_STITCH_0",
+      "groundXY": [
+        46.99,
+        24.9
+      ],
+      "distance_mm": 1.492179613853506,
+      "topNeck_mm": 1.4914213562373106,
+      "bottomNeck_mm": 0.6499999999999986
+    },
+    {
+      "net": "GPIO_PB5",
+      "pin": 41,
+      "via": [
+        46.2,
+        26.15
+      ],
+      "nearestGND": "RIGHT_GROUND_STITCH_1",
+      "groundXY": [
+        46.99,
+        26.4
+      ],
+      "distance_mm": 0.8286132994346631,
+      "topNeck_mm": 1.9914213562373106,
+      "bottomNeck_mm": 0.14999999999999858
+    },
+    {
+      "net": "I2C_SCL",
+      "pin": 42,
+      "via": [
+        45.7,
+        26.65
+      ],
+      "nearestGND": "RIGHT_GROUND_STITCH_1",
+      "groundXY": [
+        46.99,
+        26.4
+      ],
+      "distance_mm": 1.3140015220691328,
+      "topNeck_mm": 1.4914213562373106,
+      "bottomNeck_mm": 0.6499999999999986
+    },
+    {
+      "net": "I2C_SDA",
+      "pin": 43,
+      "via": [
+        46.2,
+        27.15
+      ],
+      "nearestGND": "RIGHT_GROUND_STITCH_1",
+      "groundXY": [
+        46.99,
+        26.4
+      ],
+      "distance_mm": 1.089311709291697,
+      "topNeck_mm": 1.9914213562373106,
+      "bottomNeck_mm": 0.14999999999999858
+    },
+    {
+      "net": "BOOT0",
+      "pin": 44,
+      "via": [
+        45.7,
+        27.65
+      ],
+      "nearestGND": "RIGHT_GROUND_STITCH_2",
+      "groundXY": [
+        46.99,
+        27.9
+      ],
+      "distance_mm": 1.3140015220691328,
+      "topNeck_mm": 1.4914213562373106,
+      "bottomNeck_mm": 0.6499999999999986
+    },
+    {
+      "net": "GPIO_PB8",
+      "pin": 45,
+      "via": [
+        46.2,
+        28.15
+      ],
+      "nearestGND": "RIGHT_GROUND_STITCH_2",
+      "groundXY": [
+        46.99,
+        27.9
+      ],
+      "distance_mm": 0.8286132994346631,
+      "topNeck_mm": 1.9914213562373106,
+      "bottomNeck_mm": 0.14999999999999858
+    },
+    {
+      "net": "GPIO_PB9",
+      "pin": 46,
+      "via": [
+        45.7,
+        28.65
+      ],
+      "nearestGND": "HSE_SINGLE_ANCHOR_REWORK",
+      "groundXY": [
+        46.35,
+        29.4
+      ],
+      "distance_mm": 0.9924716620639594,
+      "topNeck_mm": 1.4914213562373106,
+      "bottomNeck_mm": 0.6499999999999986
+    }
+  ],
+  "allGNDwithin1_5mm": true,
+  "conservativeVSSVDDcenterlineNecks": {
+    "VSS47newNeck": 1.2535533905932739,
+    "VDD48newNeck": 1.298528137423857,
+    "note": "Centerline lengths including pad center to flare are conservative upper bounds; native effective neck must be measured and satisfy original1.4 without raising."
+  },
+  "quietShapeAreaOld_mm2": null,
+  "reason": "Ground stitching pitch1.5mm and diameter.52 leaves .98mm copper opening; unlike a1mm pitch .6via wall, enough one .2signal+.3clearance either side perlayer after finite fanout. Full longroute/plane review still mandatory.",
+  "limits": [
+    "3new GND .52vias must retain actual L2/L3/BOTTOMcommon attach, not mislabeled quiet GND",
+    "Source .16segments are limited explicitly to region; global/electrical/innerlayer permissions unchanged",
+    "Signal .5pitch via diagonal center sqrt(.5^2+.5^2)=.7071, copper gap.1871 with .52pads meets local.16; hole separation.4471 exceeds both target makers published minima",
+    "At dense source, finite local spacing exceptions are engineering choice; no signal/radiation certification"
+  ]
+}

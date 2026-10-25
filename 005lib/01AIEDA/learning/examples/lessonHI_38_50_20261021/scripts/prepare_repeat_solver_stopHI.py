@@ -1,0 +1,7 @@
+﻿from pathlib import Path
+import hashlib
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');old=R/'logs/source_service_2L_b015_guarded_try08/tmp/#Taaaacu16604.in';new=R/'logs/source_service_2L_b015_guarded_try09_interactive/tmp/#Taaaafb05476.in';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper();assert sha(old)==sha(new);print('Identical repeated solver input SHA256',sha(old))
+s=(R/'scripts/stop_owned_source_try08_after10minHI.py').read_text(encoding='utf-8-sig').replace('source_service_2L_b015_guarded_try08','source_service_2L_b015_guarded_try09_interactive').replace('native_work/source_b015_2L_try08','native_work/source_b015_2L_try09').replace('16604','5476').replace('16264','19056').replace('#Taaaacu5476','#Taaaafb05476').replace('elapsed>=600','elapsed>=120').replace('after10min','after120sec').replace('only after10min','only after120sec').replace('After>=10min','After>=120sec repeated identical input').replace('will use official whole-board interactive nil with all modes unchanged','will use explicit saved DRC_PENDING source with all modes unchanged; nil also repeated identical field-solver block')
+s=s.replace("assert 'HI_FULL_DRC_REQUEST_RETURN' not in", "assert 'HI_INTERMEDIATE_INTERACTIVE_DRC_REQUEST_RETURN' not in")
+s=s.replace("inp=B/'tmp/#Taaaafb05476.in';out=", "inp=B/'tmp/#Taaaafb05476.in';assert sha(inp)==sha(R/'logs/source_service_2L_b015_guarded_try08/tmp/#Taaaacu16604.in');out=")
+(R/'scripts/stop_owned_source_try09_after120secHI.py').write_text(s,encoding='utf8')

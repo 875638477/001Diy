@@ -1,0 +1,10 @@
+from pathlib import Path
+import json,hashlib,copy
+R=Path('D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021')
+for v in ['2L','4L']:
+ paths=[R/f'plans/aux_remote_{v}_v9.json',R/f'plans/CC_entry_{v}_v5.json',R/f'plans/VBUS_entry_{v}_v4.json',R/f'plans/USB_aux_returns_{v}_03.json'];plans=[json.loads(p.read_text(encoding='utf8')) for p in paths];ops=copy.deepcopy([o for d in plans for o in d['operations']]);assert len(ops)==len(set(o['id'] for o in ops))
+ proofs=[p for d in plans for p in d.get('proofs',[])];proofs+=[{'from':o['id'],'to':'U1.23','connected':True} for o in ops if o['type']=='via' and o['net']=='GND']
+ checks=[{'type':'hseIsolation','anchorXY':[45.45,28.85],'localLayer':'BOTTOM' if v=='2L' else 'L2','guardPoints':[[42.2,39.8],[44.2,39.8],[47.8,33.5]]}]
+ if v=='2L':checks.append({'type':'ccSpacingChallenge'})
+ d={'status':'ROOT_APPROVED_USB_AUX_EXPLICIT_BATCH','nativeVariant':v,'units':'mm','inputBoardIdentity':json.loads((R/f'inventory/current_{v}.json').read_text()),'operations':ops,'constraintOperations':[o for d in plans for o in d.get('constraintOperations',[])]+[{'type':'existingSpacingFields','name':o['name'],'values':o['onlyDelta']} for d in plans for o in d.get('existingCSetFieldUpdates',[])],'proofs':proofs,'postChecks':checks,'engineeringSources':[{'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest().upper()} for p in paths],'scope':['Root final auxiliary group including actual6mechanicalholes screen. No MCU source joint or HSE rework in this batch.','Fullnative build DRC + source/target/return graphs + oldanchor HSEnegative; separate fresh interim read is geometry/storedDRC only, final wholeboard fullfresh pending.','2L connector CC1 finite ClassClass spacing .2 only; strict .4 real .3 challenge must fail then restore0.','4L CC2 static-Rd via-return distance2.5005mm explicit use-specific engineering exception, not applicable to highspeed DP.']}
+ (R/f'batches/USB_aux_{v}_b014.json').write_text(json.dumps(d,indent=2),encoding='utf8');print(v,len(ops),'ops',len(proofs),'proofs')

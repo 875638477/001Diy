@@ -1,0 +1,96 @@
+{
+  "status": "READ_ONLY_SELECTED_SOURCE_REVIEW_NO_REPLAY",
+  "historicalFilesUntouched": true,
+  "scripts": [
+    {
+      "path": "learning/scripts/launch_cadence17.py",
+      "observed": [
+        "固定记录根D:/001DIY/005lib/01AIEDA",
+        "固定Cadence安装根",
+        "原根目录/只读SHA守卫"
+      ],
+      "migration": "新配置副本，重核产品参数与私有env。"
+    },
+    {
+      "path": "learning/scripts/c11_sdk_runtime.tcl",
+      "observed": [
+        "固定SDK DLL/source路径",
+        "standalone_Capture_native_database_SDK"
+      ],
+      "migration": "目标安装根生成新入口，不当GUI会话。"
+    },
+    {
+      "path": "learning/scripts/c11_capture_runtime.tcl",
+      "observed": [
+        "C11Root固定",
+        "queue/vwait异步状态"
+      ],
+      "migration": "新会话目录/token，旧队列只归档。"
+    },
+    {
+      "path": "learning/scripts/capture_request.py",
+      "observed": [
+        "__file__推导根",
+        "固定capture_C_20261019队列"
+      ],
+      "migration": "相对根仍绑定旧session，不能直接投递。"
+    },
+    {
+      "path": "learning/scripts/launch_capture_c.py",
+      "observed": [
+        "固定Capture.exe/旧runtime/ready"
+      ],
+      "migration": "旧ready可能残留，不能作为新GUI探测入口直接运行。"
+    },
+    {
+      "path": "learning/scripts/de_native_cli.py",
+      "observed": [
+        "ROOT相对",
+        "BIN固定",
+        "私有TEMP/TMP/pcbenv",
+        "library分支source $TELENV"
+      ],
+      "migration": "安装根配置化，保留目录约束/新日志/本次进程归属。"
+    },
+    {
+      "path": "learning/scripts/de_run_native_flow.py",
+      "observed": [
+        "显式baseline/eco/out",
+        "训练library位置固定",
+        "allegro.cfg安装根固定",
+        "GUI ERC/SWP应用未验"
+      ],
+      "migration": "完整输入/库和当前官方配置，新隔离输出。"
+    },
+    {
+      "path": "learning/examples/lessonJK_51_59_20261022/scripts/independent_cam56.py",
+      "observed": [
+        "固定HI/JK/根路径",
+        "旧Film集合",
+        "重跑可能覆盖visualReviewed"
+      ],
+      "migration": "只作历史参考，另写新审核，不重写已封组。"
+    },
+    {
+      "path": "ai_bridge/ai_bridge.il",
+      "observed": [
+        "AIB_exchDir/AIB_watchCmd绝对路径"
+      ],
+      "migration": "本课不加载bridge/watcher，后续单独验证。"
+    },
+    {
+      "path": "ai_bridge/auto_run.ps1",
+      "observed": [
+        "exchange绝对路径"
+      ],
+      "migration": "与bridge新会话重配置，不自动重放旧任务。"
+    }
+  ],
+  "limits": "仅十个代表入口抽查；不是全部历史脚本审计。",
+  "sessionHazards": [
+    "PID可复用，关联创建时间/exe/命令/目标路径。",
+    "SKILL DBID/Capture Dbo对象不可跨进程重用。",
+    "用户已开CAD不是实验入口。",
+    "旧NULL/FlatNet崩溃探针、清理或全局env不重放。"
+  ]
+}

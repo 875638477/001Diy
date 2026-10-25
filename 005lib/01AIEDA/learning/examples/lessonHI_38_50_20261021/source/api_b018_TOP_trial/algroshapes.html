@@ -1,0 +1,2603 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html xmlns="http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Working with Shapes -- Dynamic Positive Shapes</title>
+<META NAME="Approver" CONTENT="Technical Publications">
+<META NAME="Author" CONTENT="Technical Publications">
+<META NAME="CreateDate" CONTENT="2016-03-22">
+<META NAME="CreateTime" CONTENT="1458630417">
+<META NAME="DataType" CONTENT="Manuals">
+<META NAME="Description" CONTENT="Describes best practices for working with dynamic shapes">
+<META NAME="DocTitle" CONTENT="Working with Shapes">
+<META NAME="DocType" CONTENT="Reference">
+<META NAME="EdmsRelease" CONTENT="FM-Wiki-1.0_P003_S2">
+<META NAME="FileTitle" CONTENT="Dynamic Positive Shapes">
+<META NAME="FileType" CONTENT="Chapter">
+<META NAME="Group" CONTENT="Best Practices">
+<META NAME="Keyword" CONTENT="algroshapes">
+<META NAME="Language" CONTENT="English">
+<META NAME="ModifiedDate" CONTENT="2016-03-22">
+<META NAME="ModifiedTime" CONTENT="1458630417">
+<META NAME="NextFile" CONTENT="">
+<META NAME="Order" CONTENT="6">
+<META NAME="PageCount" CONTENT="42">
+<META NAME="Platform" CONTENT="ALL">
+<META NAME="PrevFile" CONTENT="algroshapesTOC.html">
+<META NAME="Product" CONTENT="Allegro, IC Packaging">
+<META NAME="ProductFamily" CONTENT="PCB Design, IC Packaging">
+<META NAME="ProductVersion" CONTENT="17.2-2016">
+<META NAME="RightsManagement" CONTENT="Copyright 19912016 Cadence Design Systems Inc.">
+<META NAME="Title" CONTENT="Working with Shapes -- Dynamic Positive Shapes">
+<META NAME="TopicTags" CONTENT="FALSE">
+<META NAME="Version" CONTENT="17.2-2016">
+  </head>
+  <body style="margin-left: 5%;">
+    <a name="pagetop"></a>
+    <a name="firstpage"></a>
+    <!-- Begin Buttons -->
+    <table width="650" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td height="36" width="650" colspan="10">
+          <img src="../support/header_doc.gif" width="650" height="34">
+        </td>
+      </tr>
+      <tr>
+        <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+                </td>
+<td height="20" width="73">
+<a href="algroshapesTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+        <td>
+          <a href="algroshapesTOC.html"><img src="../support/nav2_previous.gif" alt="Previous" border="0"></a>
+        </td>
+        <td height="20">
+          <img src="../support/nav2_next_b.gif" alt="Previous">
+        </td>
+        <td height="20">
+          <a>
+<a href="algroshapes.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+          </a>
+        </td>
+        <td height="20" width="59">
+          <img src="../support/nav_next_b.gif" alt="Next" border="0">
+        </td>
+        <td height="20" width="61">
+          <img src="../support/nav2_black.gif">
+        </td>
+        <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+        </td>
+        <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+        </td>
+        <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+        </td>
+      </tr>
+    </table>
+    <!-- End Buttons -->
+    <p>
+    <hr>
+    <p>
+      <h3>
+        <center>
+          <font >
+            <div>Best Practices:  Working with Shapes</div>
+            <font >
+              <div></div>
+            </font>
+          </font>
+        </center>
+      </h3>
+      <br>
+    </p>
+    <div>
+      <h1>1<a name="1032955">&nbsp;</a></h1>
+      <h1><a name="1035250">Dynamic Positive Shapes</a></h1>
+      <p><a name="1035363">Major changes have occurred with shape generation and modification starting in Version 15.0. Voted as the number one project on the 2001 International Cadence Users Group (ICU) Top Ten list, this is a top priority for the 15.0 release. The positive shapes project completely overhauls shape creation, editing, voiding, and parameter setup. Starting with shape creation, a single environment usage model and toolbar for adding and editing shapes follows the Microsoft model to which many users are no doubt accustomed. </a></p>
+      <p><a name="1036340">Shape parameters are structured into a global, shape instance, and object level hierarchy. Shape fill can be dynamic, allowing users to easily modify circuitry without regenerating, or static, which follows the traditional model for shapes. During interactive editing, the user can modify component placement or add connect lines and vias while the shape updates in real time, which is referred to as "dynamic" throughout this document. Improved graphics that involve a transparent stencil pattern allow objects from multiple layers to be visible through the shape. Allegro PCB Router alignment includes the passing back of vias through dynamic shapes but not clines. Provisions for producing quality artwork are also included in the parameter settings.</a></p>
+      <h3><a name="1035364">Why Dynamic Positive Shapes?</a></h3>
+      <p><a name="1035365">If designing a printed circuit board (PCB) did not involve changes, we could retain static implementations of creating copper areas and add them near the end of the design process. This of course is not the case in today's concurrent engineering driven world, where change is more of the normal course of events throughout the entire design process. Currently in Allegro PCB Editor, changes to areas occupied by copper shapes require the user to either remove and to re&#45;add the shape or add changes directly within the shape area while creating a vast amount of DRC conditions. On a multilayer PCB, a simple via hole added though the board could impact several shapes, each requiring some level of intervention. The migration to dynamic&#45;based shapes offers a real&#45;time editing environment where changes made within the shape trigger an immediate shape updating routine otherwise known as auto&#45;voiding. Changes that happen dynamically include:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035367">Adding&#47;Deleting&#47;Moving a component </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035369">Adding&#47;Slide a cline</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035371">Adding&#47;Sliding a via</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035372">Updating shape parameters, that is, additional clearance</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035374">Modifying the shape's boundary</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035376">Adding a manual voided area</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1035378">In terms of performance, for example, how long would it take to add then make edits within a ground shape on an outer layer of a dense 15x15 inch pcb? The answer is somewhat proportional to the performance of autovoiding in the 14.x series of Allegro PCB Editor. In 14.0, Allegro PCB Editor's auto&#45;voiding code changed from integer to floating point operation, improving performance and accuracy. The core of this code carries forward to 15.0; however, it is called upon each time the shape is modified. This document expands upon the options to consider when using dynamic shapes on large complex PCBs. Controls to disable shape fill in favor of a batch process or disabling the internal smoothing operation are options to maintain productivity.</a></p>
+      <h3><a name="1035379">Product Availability</a></h3>
+      <p><a name="1035380">All Tiers of Allegro PCB Editor, APD, Allegro PCB SI. </a></p>
+      <h3><a name="1043484">Additional Information</a></h3>
+      <p><a name="1036537">For more information regarding positive shapes, refer to the technical documentation provided on Cadence Online Support. </a></p>
+      <p><a name="1042703"><font color="#0000ff"><u>http:&#47;&#47;www.support.cadence.com</u></font></a></p>
+      <h2><a name="1035384">Review of the Shapes Menu and Parameter Dialog Box</a></h2>
+      <p><a name="1035385">The shape menu offers an intuitive use model that allows users to easily create and edit shapes in the same session. The former method requiring users to enter a secondary menu application has been eliminated. From the main toolbar, choose </a><font color="#000000"><em>Shape</em></font> to bring up the menu of commands. A shape toolbar appears on the main toolbar. Parameter settings can be entered in the <font color="#000000"><em>Global Dynamic Shape Parameters</em></font> dialog box and overridden at the Shape instance or Object level. Bitmap images inside the dialog box help users better understand the implied function.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/tip.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1035387">If the Shape Toolbar does not appear as part of the main toolbar display, in Allegro PCB Editor, choose </a><font color="#000000"><em>View - Customize Toolbar</em></font>, then enable the <font color="#000000"><em>Shape</em></font> option in the dialog box, followed by OK.</font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h3><a name="1035389">Polygon   <img src="images/shape_add_icon.png" width="32" height="32" alt=""></a></h3>
+      <p><a name="1043196">Use </a><font color="#000000"><em>Shape - Polygon</em></font> to draw multi&#45;side shapes that may be used for a placebound, route keepout, or a board outline. Like many other Allegro PCB Editor commands, the <font color="#000000"><em>Options</em></font> tab is used in conjunction with the main command. When drawing a polygon, choices for segment type and angle are available. When entering a polygon, an extra dynamic line is added from the last end point to the starting point of the polygon, maintaining a closed polygon image at all times. Left mouse double click or clicking <font color="#000000"><em>Done</em></font> from the popup completes the shape boundary. <font color="#000000"><em>Oops</em></font> backs up to the last pick. The dynamic line used for maintaining a closed polygon adheres to the current <font color="#000000"><em>Segment Type</em></font> set in the <font color="#000000"><em>Options</em></font> tab and appears in orange. </p>
+      <p align="left"><a name="1043201"><img src="images/dy.gif" width="249" height="141" alt=""></a></p>
+      <h3><a name="1035393">Rectangular   <img src="images/shape_add_rec_icon.png" width="32" height="32" alt=""></a></h3>
+      <p><a name="1035394"><font color="#000000"><em>Shape - Rectangular </em></font></a>adds a rectangle to the subclass layer chosen in the Options tab. </p>
+      <h3><a name="1035396">Circular   <img src="images/shape_add_cir_icon.png" width="32" height="32" alt=""></a></h3>
+      <p><a name="1035397"><font color="#000000"><em>Shape - Circular </em></font></a>adds a circle to the subclass layer chosen in the Options tab. </p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/tip.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1035399">Dynamic filled shapes are only allowed on ETCH subclasses in Allegro PCB Editor. </a></font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1035402">Options tab</a></h2>
+      <p><a name="1035403">When adding a dynamic shape, physical options pertinent to the shape are controlled in the Options tab, including choice of a subclass layer, net name, type of shape fill, shape grid, and line style. Voiding&#45;related options are controlled in the </a><font color="#000000"><em>Global Dynamic Shape Parameters</em></font> dialog box. </p>
+      <p><a name="1043423">Dynamic shapes can only be added to ETCH layers. When you add a dynamic etch shape that crosses the route keepin, or modify the route keepin boundary, the dynamic shape boundary is clipped  to the route keepin by default. When you edit or move a dynamic shape that crosses a keepin, the tool does not clip the shape at the keepin by default.</a></p>
+      <p><a name="1043424">To preserve any user&#45;defined dynamic shape boundary and re&#45;clip it to the route keepin during a dynamic shape update, enable the </a><font size="2" face="'Courier New'" color="#000000">shape_rki_autoclip</font> board&#45;level environment variable in the <font color="#000000"><em>User Preferences</em></font> dialog box, available by choosing <font color="#000000"><em>Setup - User Preferences (</em></font><font size="2" face="'Courier New'" color="#0000ff"><u>enved</u></font> command).</p>
+      <p><a name="1043426">For example, mechanical engineering changes a board outline and route keepin, thereby generating a new Intermediate Data Format (IDF) file. Upon reading the IDF file into Allegro PCB Editor, any dynamic shapes currently clipped by the route keepin automatically update to the new route keepin location specified by the IDF file.</a></p>
+      <p><a name="1043420">If you add a dynamic shape that is completely outside the route keepin, the tool ignores the route keepin when voiding.</a></p>
+      <p><a name="1043447">After choosing a command to add a shape, follow these steps to add a shape on an electrical subclass.</a></p>
+      <h3><a name="1035405">Step 1 &#45; Choosing a Class&#47;Subclass</a></h3>
+      <p><a name="1035406">Color swatches appear in the subclass section in the </a><font color="#000000"><em>Options</em></font> tab that align with the etch color on that particular subclass layer. The subclass layer can be chosen prior to the first instantiated pick or at any time during shape creation. </p>
+      <p>Figure 1&#45;1&nbsp; <strong><a name="1039298">Color Swatches</a></strong></p>
+      <p align="left"><a name="1035410"><img src="images/color_swatch.gif" width="233" height="314" alt=""></a></p>
+      <h3><a name="1035414">Step 2 - Choosing Shape Fill</a></h3>
+      <p><a name="1035415">Five shape fill types are available: cavity, dynamic copper, static solid, static crosshatch, and unfilled. </a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035417">Cavity:</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1043558">Dynamic Copper: The preferred option for most conductive shapes, dynamic copper triggers an auto&#45;voiding process upon each edit to the boundary or elements within. The editing of elements can include moving a component, adding or sliding clines and vias, or changing parameters. Global parameter file controls type of dynamic fill (</a><font color="#000000"><em>Smooth, Rough,</em></font> or <font color="#000000"><em>Disabled</em></font> mode). Dynamic fill applies only to etch subclass layers (electrical layers), including both positive and negative planes.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035419">Static Solid: The traditional method of adding copper shapes in Allegro PCB Editor. Shape remains a constant until manually voided by element. Static solid shapes are typically used for copper paths carrying high current, copper heat sinking, or with keepout areas. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035421">Static Crosshatch: Typically used in advanced packaging or RF applications for power distribution. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035423">Unfilled: Use for board outlines, package geometry, rooms. Cannot be used on etch subclass layers. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/tip.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1035426">Static and dynamic shapes have unique graphic patterns. Although drawn in the same color, the stencil pattern associated with dynamic shapes is drawn more densely than that for static.</a></font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p align="left"><a name="1035428">			<img src="images/pattern.gif" width="249" height="130" alt=""></a></p>
+      <h3><a name="1035432">Step 3 - Assigning a Net Name</a></h3>
+      <p><a name="1035434">Nets can be assigned to shapes by choosing the desired net from the net browser that lists all nets in the design or from the pulldown list of nets with the voltage property assigned to them, or by directly picking a pin or cline after right mouse clicking and choosing </a><font color="#000000"><em>Assign Net</em></font>. </p>
+      <p><a name="1043600">Since most nets assigned to shapes are power&#47;ground in nature, a dropdown list provides a shorter list that is easier to navigate. To change a shape's net name, choose the shape, change the net name in the </a><font color="#000000"><em>Options</em></font> tab, or right mouse click and choose <font color="#000000"><em>Assign Net</em></font>.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/tip.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1043604">Voltage properties can be assigned to nets in all tiers of Allegro PCB Editor. The voltage property is also required to enable the plane rat option introduced in Version 14.2. Assign voltage properties by choosing </a><font color="#000000"><em>Logic - Assign DC Nets</em></font>, choose a net, and enter a voltage level.</font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p align="left"><a name="1035437"><img src="images/algroshapes.3.1.7.png" width="436" height="367" alt=""></a></p>
+      <h3><a name="1035442">Step 4 - Entering a Shape Grid (Optional)</a></h3>
+      <p><a name="1045122">Since shape grids tend to be more coarse than routing grids, a separate shape grid on the </a><font color="#000000"><em>Options</em></font> tab saves time toggling between the <font color="#000000"><em>Setup - Grids</em></font> menu. If a shape grid is not entered, it uses the current subclass grid. Up to five grid entries can be entered during any Allegro PCB Editor session. Exiting Allegro PCB Editor clears the grid settings from memory. Once the shape editing session is completed, the working grid reverts back to the original database settings. </p>
+      <p align="left"><a name="1045132"><img src="images/shape_grid.gif" width="225" height="125" alt=""></a></p>
+      <h3><a name="1045133">Step 5 - Choosing a Segment Type</a></h3>
+      <p><a name="1035450">When using </a><font color="#000000"><em>Shape - Polygon</em></font>, choose among four options for line segments.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035451">Line: freehand or any angle line draws</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035452">Line 45: corners are drawn at 45 degrees</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035453">Line Orthogonal: corners are drawn at 90 degrees</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035454">Arc in conjunction with radius value: standard 3 pt arc, radius displays in the status window as arc stretches. Also available from a right mouse click.</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1035457">When drawing the shape, an enclosed polygon is continually maintained. A dynamic line connecting the last end point to the starting point is added. Double clicking or right mouse clicking and choosing </a><font color="#000000"><em>Done</em></font> completes the boundary and fills the shape to its respective parameter settings. </p>
+      <p><a name="1038398">A Boundary color class is available by choosing </a><font color="#000000"><em>Display - Color&#47;Visibility </em></font>and <font color="#000000"><em>Stack&#45; Up</em></font>. The boundary appears in this color when adding shapes, but the shape fill color overrides it when the shape is completely drawn. For example, a shape with a fill color of blue and boundary of red appears as solid blue if the fill overlays the boundary. If a voided area overlays part of the boundary, the latter appears as the boundary subclass color (red), as in the graphic below.</p>
+      <p align="left"><a name="1035458"><img src="images/boundary_object.gif" width="285" height="141" alt=""></a></p>
+      <h2><a name="1035462">Defer Performing Dynamic Fill</a></h2>
+      <p><a name="1035463">Enabling </a><font color="#000000"><em>Defer Performing Dynamic Fill </em></font>retains shape boundaries; however, the dynamic fill process is deferred. After the initial shape boundary is created, often the shape boundary is refined to meet the final design intent. It may be advantageous to enable this switch while using <font color="#000000"><em>Shape - Select Shape or Void&#47;Cavity,</em></font> whether you are dragging the shape boundary or adding new vertex points. The recommended use model for this feature applies to a single active shape and not for a global application. The chosen shape becomes temporarily unfilled until the <font color="#000000"><em>Defer Performing Dynamic Fill </em></font>option is disabled or you right mouse click and choose <font color="#000000"><em>Done</em></font> from the popup menu. Cadence recommends using this option when wholesale editing a shape's boundary outline.</p>
+      <p align="left"><a name="1040322"><img src="images/algroshapes.3.1.10.png" width="388" height="329" alt=""></a></p>
+      <h2><a name="1040323">Select Command <img src="images/shape_select_icon.png" width="32" height="32" alt=""></a></h2>
+      <p><a name="1038511">Use the </a><font color="#000000"><em>Shape - Select Shape or Void&#47;Cavity</em></font> to choose a shape or manual void for boundary editing or in conjunction with right mouse click options to customize shape&#45;instance parameters, copy to other layers, or to produce an instance&#45;level report. After choosing any part of the shape or boundary edge, the shape turns the setting for temporary highlight color. Handles appear at all vertex locations. New vertex points can be added by choosing any part of the boundary and dragging it to its final destination. Boundary edges can be moved in whole by passing the cursor over it until the cursor changes its form then dragging accordingly with the left mouse button pressed. The entire shape can also be moved by dragging the cursor with the left mouse button pressed. </p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/tip.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1038512">If you are unsuccessful in dragging the entire shape with the left mouse button, enable the </a><font size="2" face="'Courier New'" color="#000000">shape_drag_move</font> variable available by choosing <font color="#000000"><em>Setup - User Preferences</em></font> and the <font color="#000000"><em>Shape</em></font> category. This variable is disabled by default.</font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p align="left"><a name="1035473"><img src="images/shape_vertex.gif" width="449" height="355" alt=""></a></p>
+      <h2><a name="1035476">Manual Void <img src="images/algroshapes.3.1.13.png" width="136" height="50" alt=""></a></h2>
+      <p><a name="1035477">Use the geometrical based commands </a><font color="#000000"><em>Shape - Manual Void&#47;Cavity - Polygon,</em></font> <font color="#000000"><em>Shape - Manual Void&#47;Cavity - Rectangular, </em></font>and <font color="#000000"><em>Shape - Manual Void&#47;Cavity - Circular </em></font>to add custom voids within a dynamic shape. Modify void boundaries as you do shape boundaries.Choosing just inside the void boundary places the object in a chooseable state with handles appearing at all vertex locations. Overlapping voids are not permitted. </p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/tip.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1040389">Only manual voids can be modified or deleted. Auto generated voids are not database objects and cannot be edited.</a></font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1040390">Edit Boundary <img src="images/shape_edit_boundary_icon.png" width="32" height="32" alt=""></a></h2>
+      <p><a name="1035482">Improvements in the edit boundary function now allow the design window to provide a better gravitational mechanism to snap to the boundary object. Prior to 15.0, an increased zoom factor was necessary for choosing the boundary. Use </a><font color="#000000"><em>Shape - Edit boundary</em></font> to modify the shape's boundary edge. After choosing the command, choose any part of the shape, pick the origin of where the boundary is to be edited. Continue to add to the boundary and end the command by choosing the final destination, any location on the existing boundary. Overlapping during the editing is not allowed. The shape redraws and updates its voiding upon completing of the command.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/tip.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1035484">When using </a><font color="#000000"><em>Shape - Edit boundary</em></font> on complex shapes, Cadence recommends working in <font color="#000000"><em>Disabled</em></font> dynamic copper fill mode as <font color="#000000"><em>Defer Performing Dynamic Fill </em></font>in the <font color="#000000"><em>Options</em></font> tab is unavailable when in this command.</font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1035486">Raise Priority </a></h2>
+      <p><a name="1035487">When dynamic shape boundaries overlap, use </a><font color="#000000"><em>Shape - Select Shape or Void&#47;Cavity,</em></font><font color="#000000"><em> then right mouse click and choose</em></font><font color="#000000"><em> Raise Priority </em></font>from the pop&#45;up menu that appears<font color="#000000"><em> </em></font>to control which of the two shapes controls the voiding path around its respective boundary. When you choose <font color="#000000"><em>Raise Priority</em></font>, Allegro PCB Editor prompts you to choose a shape, which then essentially becomes the master and is brought to the front.</p>
+      <h2><a name="1035489">Delete Islands <img src="images/island_delete_icon.png" width="32" height="32" alt=""></a></h2>
+      <p><a name="1035490">Auto&#45;voiding a shape often creates fragments or unconnected areas, called islands in Allegro PCB Editor. </a><font color="#000000"><em>Shape - Delete Islands </em></font>highlights and deletes chosen or all islands in any one shape or subclass layer. After choosing <font color="#000000"><em>Shape - Delete Islands</em></font>, use the <font color="#000000"><em>Options</em></font> tab to delete or navigate to each island. Alternatively with the left mouse, choose an island or choose by window an area to delete a group of islands. For enhanced viewing, choose <font color="#000000"><em>Display - Color&#47;Visibility, Display</em></font>, and enable <font color="#000000"><em>Shadow Mode</em></font> and the <font color="#000000"><em>Dim Active Layer</em></font> field to accentuate the highlighted islands. When islands are deleted, a manual void remains to prevent this area from re&#45;filling with copper. </p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/tip.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1043796">The </a><font color="#000000"><em>Shape - Delete Islands</em></font> command can only be used when <font color="#000000"><em>Global Dynamic Fill</em></font> is set to <font color="#000000"><em>Smooth</em></font>. If used on <font color="#000000"><em>Rough</em></font> filled shapes, this message appears in the pop&#45;up window. </font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1043797">Dynamic Shapes present are not Smooth. Should I update the shapes to Smooth (YES) or exit command (NO) ? </a></font>
+      </blockquote>
+      <p><a name="1038789">Delete islands at the end of the design cycle since permanent manual voids are added to the shapes. Use </a><font color="#000000"><em>Shape - Manual Void&#47;Cavity - Delete </em></font>to remove them if more design changes occur.</p>
+      <h2><a name="1035494">Change Shape Type </a></h2>
+      <p><a name="1039225"><font color="#000000"><em>Shape - Change Shape Type </em></font></a>can be used to convert a dynamic shape into a static shape if the shape is critical, and if it should not be automatically modified or voided. Converting from static to dynamic allows older database to migrate into a dynamic state without re&#45;adding each existing shape. Cadence recommends editing the edges so that the changed shapes contain the original outline which was drawn before any voiding occurred. Although a conversion to dynamic eliminates the existing voids, it can not clean up edges that have clearances surrounding other etch elements. For best results, edit the boundary to remove auto&#45;voided clearance around etch elements that overlapped the original border before converting the shapes. When converting a dynamic shape to static, Allegro PCB Editor advise that loss of boundary, parameters and manual voids occur as a result of the change to static. For this reason, setting desired dynamic voiding parameters should be done prior to the conversions. See<font color="#000000"><em> Shape - Global Dynamic Params...</em></font> in Allegro PCB Editor.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/tip.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1035497">If a dynamic shape needs to be locked, that is, prevent future dynamics such as adding vias through it, changing it to static is recommended. Fixing a shape only fixes its boundary outline, preventing it from being moved as an entity.</a></font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1035501">Merge Shapes</a></h2>
+      <p><a name="1035502">To merge or combine two or more overlapping shapes, use the </a><font color="#000000"><em>Shape - Merge Shapes </em></font>command. When using this command, consider it in terms of primary&#45;secondary where the primary shape is chosen first, followed by the secondary shape(s), which inherit the parameters of the primary shape when completing the command.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/tip.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1035504">Shapes must have a common net name to merge. </a></font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1035506">Shape Check</a></h2>
+      <p><a name="1044949"><font color="#000000"><em>Shape - Check </em></font></a>executes legacy code that works on a single shape at a time. It's most useful on a shape that fails to run through Gerber 4x or 6x, but not as relevant for raster artwork. In theory, a vector&#45;based dynamic shape should process without problems, but a mix of user&#45;added and dynamic&#45;generated voids might cause issues, along with user&#45;defined void patterns that are too close to each other or have edges that the <font color="#000000"><em>Minimum Aperture</em></font> field (defined in the <font color="#000000"><em>Global Dynamic Shape Parameters</em></font> dialog box) could not outline. </p>
+      <h2><a name="1044951"><font color="#000000">Compose shapes</font></a></h2>
+      <p><a name="1044784">When you choose </a><font color="#000000"><em>Shape - Compose Shape</em></font> (<a href="../ccoms/cchap.html#compose_shape" target="external_window"><font size="2" face="'Courier New'" color="#000000"><u>compose shape</u></font></a> command), you can build complex shapes using arcs and lines. You compose shapes on a DRAWING FORMAT. Cadence recommends that you compose such shapes on a user&#45;defined subclass; for example, a CONSTRUCTION subclass, using the following procedure: </p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="29.95" align="right">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1044886">Choose </a><font color="#000000"><em>Setup - Subclasses</em></font><font size="2" face="'Courier New'" color="#000000"> (</font><a href="../dcoms/dchap.html#define_subclass" target="external_window"><font size="2" face="'Courier New'" color="#000000"><u>define subclass </u></font></a>command) to display the Define Subclass dialog box.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="29.95" align="right">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1044887">Click on DRAWING FORMAT to display the Define Non&#45;Conductor (or Define Non&#45;Etch) Subclass dialog box.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="29.95" align="right">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1044888">Enter &#34;USER&#45;DEFINED&#34; in the New Subclass field and press Enter.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="29.95" align="right">
+              <div>
+                <nobr><font color="#000000"><strong>	4.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1044889">Click </a><font color="#000000"><em>OK</em></font> in the Define Subclass dialog box.</td>
+          </tr>
+        </table>
+      </div>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1044901">While it is recommended that you create shapes on a layer that you create and define, the program creates a shape when data from any CLASS&#47;SUBCLASS is chosen for compose shape.</a></p>
+      <p><a name="1044921">To set up shape parameters, choose </a><font color="#000000"><em>Setup - Design Parameters</em></font> (<a href="../pcoms/pchap.html#prmed" target="external_window"><font size="2" face="'Courier New'" color="#000000"><u>prmed</u></font></a> command) to access the Design Parameter Editor or right mouse button click whenever you are working in an application mode, then click the <font color="#000000"><em>Shapes</em></font> tab to edit global dynamic shape parameters, static shape parameters and split plane parameters.</p>
+      <p><a name="1044809">Using a drawing tool on the subclass layer, you create the basic shape that you want. Then you pick the lines and arc that constitute the shape. Choose </a><font color="#000000"><em>Shape - Compose Shape</em></font> (<a href="../ccoms/cchap.html#compose_shape" target="external_window"><font size="2" face="'Courier New'" color="#000000"><u>compose shape</u></font></a> command) to connect the ends of the lines (or trims crossing lines) to create a single solid shape. You can also create voids in the solid shape where they are needed using the same procedure you use to create the solid shape. </p>
+      <h2><a name="1044801">Decompose Shape</a></h2>
+      <p><a name="1044838">To decompose a previously composed shape, choose the shape and choose </a><font color="#000000"><em>Shape - Decompose Shape </em></font><a href="../dcoms/dchap.html#decompose_shape" target="external_window"><font size="2" face="'Courier New'" color="#000000"><u>decompose shape</u></font></a><font size="2" face="'Courier New'" color="#000000"> </font>command. Line and arc segments remain trimmed, champhered, or rounded, but each segment is detached from each other. Then you can modify the shape and reconnect the segments with the <font color="#000000"><em>Shape - Compose Shape</em></font> (<a href="../ccoms/cchap.html#compose_shape" target="external_window"><font size="2" face="'Courier New'" color="#000000"><u>compose shape</u></font></a> command). </p>
+      <h2><a name="1044755">Shape Connectivity Report </a></h2>
+      <p><a name="1040439">A summary of analysis results and shape&#45;based parameters for all shapes is available by choosing </a><font color="#0000ff"><em>Tools - Reports</em></font><font color="#0000ff"> and </font><font color="#0000ff"><em>Dynamic Shapes</em></font><font color="#0000ff">.</font> For shape&#45; instance&#45;based information, choose a shape, right mouse click, and choose <font color="#000000"><em>Report</em></font> from the popup menu. The following example displays the generation results of one shape.</p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1042745">&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1042861">&nbsp;Generation Results<br>&nbsp;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;<br>&nbsp;&nbsp;Number of Etch Shapes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2<br>&nbsp;&nbsp;Number of Islands(non&#45;conducting)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<br>&nbsp;&nbsp;Number of etch shapes in conducting Area(1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<br>&nbsp;&nbsp;Number of etch Shapes in conducting Area(2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<br><br>&nbsp;&nbsp;Number of Manual Voids&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<br>&nbsp;&nbsp;Number of pins&#47;vias not connected&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<br>&nbsp;&nbsp;Number of pins&#47;vias partially connected&nbsp;&nbsp;1<br><br>&nbsp;&nbsp;Total Area of Etch Shape(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3300961.8668&nbsp;&nbsp;square MILS<br>&nbsp;&nbsp;Total Area of Boundary Shape&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4431985.0000&nbsp;&nbsp;square MILS<br>&nbsp;&nbsp;Etch area&#47;Boundary area(%)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;74.48<br><br>&nbsp;Pins&#47;vias Not Connected<br>&nbsp;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;<br>&nbsp;&nbsp;Symbol Pin &#34;C6321.1&#34;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10975.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1500.000<br><br>&nbsp;Pins&#47;vias partially Connected<br>&nbsp;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;<br>&nbsp;&nbsp;Symbol Pin &#34;U45.4&#34;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9100.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1950.000<br></a></font>
+      </p>
+      <h2><a name="1040443">Status Tab </a></h2>
+      <p><a name="1039678">The Status tab quickly summarizes board condition in terms of connectivity, placement, and shape status. </a></p>
+      <p align="left"><a name="1039686"><img src="images/algroshapes.3.1.16.png" width="375" height="510" alt=""></a></p>
+      <p><a name="1039794">For shape status:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039795">Out of date shapes: indicates the number shapes whose status is other than </a><font color="#000000"><em>Smooth.</em></font> All shapes must be updated to <font color="#000000"><em>Smooth</em></font> prior to running artwork or ODB++.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039796">Unassigned Shapes: indicates the number of shapes without logic assigned to them. Click the yellow box to locate them.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039807">Isolated Shapes: indicates the number of isolated shapes or islands in the design. Clicking the adjacent yellow box displays a dialog box indicating the extents of the shapes. The following is an example of the Shape Island Report.</a></td>
+          </tr>
+        </table>
+      </div>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1040450">(&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039823">(                                                            )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039824">(        Shape Island Report                                 )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039825">(                                                            )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039826">(        Drawing          : demo1.brd                        )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039827">(        Software Version : 15.1A4                           )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039828">(        Date&#47;Time        : Fri Oct 24 10:42:15 2007 )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039829">(                                                            )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039830">(&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039833">Total islands on design: 5</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039835">&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039836">   Layer = TOP</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039837">&nbsp;&nbsp;&nbsp;&nbsp;Extents: (6640.000 5830.000) (6865.000 6190.000)  Net: V1_8_RAC</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039838">&nbsp;&nbsp;&nbsp;&nbsp;Extents: (6637.000 5827.030) (6745.000 6095.000)  Net: P1_8V</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039839">&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039840">   Layer = INNER1</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039841">&nbsp;&nbsp;&nbsp;&nbsp;Extents: (7725.000 11925.000) (9800.000 12275.000)  Net: GND</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039842">&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039843">   Layer = BOTTOM</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039844">&nbsp;&nbsp;&nbsp;&nbsp;Extents: (160.000 585.000) (515.000 1065.000)  Net: BUZZER_B</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1039784">&nbsp;&nbsp;&nbsp;&nbsp;Extents: (&#45;15.000 740.000) (155.000 980.000)  Net: FET_BUZZ</a></font>
+      </p>
+      <h2><a name="1039780">Global Dynamic Params &#8230;</a></h2>
+      <p><a name="1035527">The </a><font color="#000000"><em>Global Dynamic Shape Parameters</em></font> dialog box controls parameters for all dynamic shapes. Updates to this dialog box automatically update each dynamic shape when you click <font color="#000000"><em>Apply</em></font> or <font color="#000000"><em>OK</em></font>. Parameters can be applied at three different levels:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035529">Global </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035530">Use the </a><font color="#000000"><em>Global Dynamic Shape Parameters</em></font> dialog box</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035532">Shape Instance </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035533">Choose a shape, right mouse click, and choose </a><font color="#000000"><em>Parameters</em></font></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035535">Object Level (Pin, Via, Cline)</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035536">Choose</a><font color="#000000"><em> Edit - Property</em></font>: 7 dynamic properties available, all begin with DYN*</td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1035538">The implied hierarchy has object level properties overriding Shape Instance and Global. Shape Instance overrides Global. Overrides in the Shape Instance Parameter dialog box appear in bold blue, similar to overrides made in Constraint Manager.</a></p>
+      <p>
+        <strong><a name="1039036">Shape Parameter Hierarchy</a></strong>
+      </p>
+      <p align="left"><a name="1039025"><img src="images/algroshapes.3.1.17.png" width="132" height="246" alt=""></a></p>
+      <h4><a name="1035544">Dynamic Fill</a></h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035545"><font color="#000000"><em>Smooth</em></font></a>: Produces artwork quality fill for each dynamic shape. Shapes are expected to be DRC free.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035546"><font color="#000000"><em>Rough:</em></font></a> Shapes approximately represent Smooth. Internal smoothing is disabled, maximum of two thermal relief spokes are drawn. Cadence recommends this option for large complex shapes or until performance metrics have been established where performance can be reasonably predicted.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035547"><font color="#000000"><em>Disabled:</em></font></a> Defers shape updating for all subsequent edits to dynamic shapes. Use this option if <font color="#000000"><em>Rough</em></font> mode performance is not acceptable. </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039083">Xhatch parameters: Apply to static crosshatch shapes only</a></td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="1035552">Void Controls</a></h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035554"><font color="#000000"><em>Artwork Format:</em></font></a> Optimizes shape fill for vector or raster processing</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035555"><font color="#000000"><em>Minimum aperture for gap width</em></font></a>: Used for raster applications</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035556"><font color="#000000"><em>Minimum Aperture For Artwork Fill:</em></font></a> Used for vector applications</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035557"><font color="#000000"><em>Suppress Shapes Less Than</em></font></a>: Eliminates unconnected shapes less than this value when autovoiding a shape</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035558"><font color="#000000"><em>Create Pin Voids</em></font></a>: Inline or individual options for voiding around pin fields</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035559"><font color="#000000"><em>Distance Between Pins</em></font></a>: Used only when in&#45;line chooseion is made</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035560"><font color="#000000"><em>Acute Angle Trim Control</em></font></a>: Used only when non&#45;vector artwork format is chosen</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035561"><font color="#000000"><em>Snap Voids To Hatch Grid</em></font></a>: Suppresses off grid clearance pads, leaving defined mesh pattern in a cross hatch shape </td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="1042678">Clearance options</a></h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1042679"><font color="#000000"><em>DRC Value:</em></font></a> Uses the DRC spacing values as clearance. </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1042680"><font color="#000000"><em>Thermal&#47;Anti</em></font></a>: Clearance derived from thermal and antipad definitions in padstack. If antipad clearance is smaller than the DRC values, voiding increases the clearance to the DRC value.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1044060"><font color="#000000"><em>Thru pin</em></font></a>: If antipad clearance is smaller than the DRC values, voiding increases the clearance to the DRC value.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1044073"><font color="#000000"><em>Smd pin</em></font></a>:If antipad clearance is smaller than the DRC values, voiding increases the clearance to the DRC value.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1044080"><font color="#000000"><em>Via</em></font></a>: If antipad clearance is smaller than the DRC values, voiding increases the clearance to the DRC value.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035567"><font color="#000000"><em>Oversize:</em></font></a> These values are incremented to default clearance settings.</td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="1035569">Thermal relief connects</a></h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035571">Options for Pins (Thru and Smd) and Vias</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035572">Min&#47;Max Thermal connect values</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035573"><font color="#000000"><em>Best Contact:</em></font></a> When enabled, if pin or via fails to meet minimum requirement, spokes populate in 22.5 degree increments.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1040467"><font color="#000000"><em>Thermal Width Oversize Value:</em></font></a> Value is incremented to default thermal connect width lines</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1040468"><font color="#000000"><em>Fixed Thermal Width</em></font></a>: Overrides physical constraint set values</td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1040469">Best Practices and Performance Guidelines</a></h2>
+      <h3><a name="1035579">Getting Started with Shapes</a></h3>
+      <p><a name="1035580">You are starting a new board in 15.0, without migration issues from a 14.x database. Your stack&#45;up construction calls for several negative planes and etch layers containing positive shapes. Outer layers are mostly pad only and are to be filled with a copper ground shield. If your board outline did not come in from IDF or DXF, choose </a><font color="#000000"><em>Shape - Polygon, Shape - Rectangular</em></font>, or <font color="#000000"><em>Shape - Circular</em></font> to draw your outline. </p>
+      <p><a name="1037034">After setting the class&#47;subclass to Board Geometry&#47;Outline in the </a><font color="#000000"><em>Options</em></font> tab, your shape fill type automatically sets itself to <font color="#000000"><em>Unfill</em></font>. Do not attempt to change this, Allegro PCB Editor does not allow dynamic fill on non&#45;electrical subclasses. Take advantage of the v shape grid option on the Options tab. Enter as many as five different shape grids to be used for outlines, areas, or copper shape boundaries<font color="#0000ff">.</font> These settings are volatile and cleared when exiting Allegro PCB Editor. If adding component and etch keepout areas, follow the same procedure, but this time choosing a keepout subclass sets the shape fill type to <font color="#000000"><em>Static Solid</em></font>. </p>
+      <p><a name="1037035">Set up negative planes using </a><font color="#000000"><em>Edit- Z&#45;Copy</em></font> since the copper geometry of a negative plane tends to be an exact contour of the board outline minus a contraction distance. <font color="#000000"><em>Edit- Z&#45;Copy</em></font> is available in all tiers of Allegro PCB Editor. <font color="#000000"><em>Edit- Z&#45;Copy</em></font> can be used to copy a shape to multiple layers at once provided the target subclass names are named sequentially like GND, GND1, GND2. When choosing the subclass name to copy to, intercede and enter an asterisk after the name as shown in the graphic below. Once the shapes are copied, assign a net name by first choosing the shape using the arrow like icon in the shape toolbar or from the shape menu choose shape or void. After the shape is chosen, change the net name by picking from the pull down list in <font color="#000000"><em>Options</em></font> tab under <font color="#000000"><em>Assign Net Name,</em></font> provided your power and ground signals have a voltage property assigned or from the full net browser to the right of the pull&#45;down. Only one shape can be chosen at a time.</p>
+      <p><a name="1035582">If your board has several power and ground planes, use </a><font color="#000000"><em>Edit- Z&#45;Copy</em></font> to copy only to one subclass layer. After a net name is assigned to the shape, use <font color="#000000"><em>Edit- Z&#45;Copy</em></font> once again, but enable the <font color="#000000"><em>Copy Netname</em></font> option in the <font color="#000000"><em>Options</em></font> tab to preclude manually assigning a net name to many replicated shapes.</p>
+      <p align="left"><a name="1038230"><img src="images/zcopy.gif" width="233" height="396" alt=""></a></p>
+      <h3><a name="1035585">Negative Planes - Dynamic or Static Fill?</a></h3>
+      <p><a name="1040526">Use dynamic filled shapes on internal power and ground plane layers, especially on boards with split planes. Prior to 15.0, the intersection between the split planes known as Anti&#45;Etch created false DRC conditions when obstacles like vias or pins encroached upon them. In addition, when using </a><font color="#000000"><em>Route - Slide</em></font> to move a via across the Anti&#45;Etch area, the via denoted as a DRC condition did not move across fluently, but jumped erratically, causing undesirable results. Negative dynamic shapes are useful because you eliminate the need to void pads close to edges, or fix chopped edges where pads were voided, but have moved. The dynamics of the negative shape only operate on the edges, which make split planes much friendlier.  </p>
+      <p><a name="1040528">You do not have to change shapes to dynamic, you can leave them static.</a></p>
+      <p><a name="1040548">If you have a pre&#45;15.0 board with copper pour areas customized by manually adding void areas, then it is not advisable to change those shapes to dynamic unless you manually re&#45;add the void(s) in the new dynamic  shape. This is true for negative and positive because Allegro PCB Editor, with static shapes, cannot  differentiate between voids created via the autovoid process and user created. Once a shape is dynamic, Allegro PCB Editor can track user&#45;created voids versus autovoid&#45;created voids. </a></p>
+      <p><a name="1040554">The conversion from static to dynamic shapes was developed to aid those customers  who wanted to convert pre&#45;15.0 builds to use dynamic shapes. Additional manual  work may be required in the conversion process to add user voids and to smooth the boundary. If the voids you have are based on route keepouts,  dynamics generate the new voids for you, and they would then move if keepouts changed later.</a></p>
+      <p align="left"><a name="1038193"><img src="images/false_DRC.gif" width="617" height="283" alt=""></a></p>
+      <h2><a name="1035600">Global Parameter Considerations for Dynamic Shapes</a></h2>
+      <p><a name="1035601">Dynamic shapes are recommended for most electrical layer applications in Allegro PCB Editor. Before drawing shape boundaries, set parameters on the </a><font color="#000000"><em>Global Dynamic Shape Parameters</em></font> dialog box, which then automatically update to all dynamic shapes unless a shape has instance&#45; or object&#45;level properties. </p>
+      <p><a name="1037042">When using dynamic shapes initially, Cadence strongly recommends setting </a><font color="#000000"><em>Dynamic Fill</em></font> to <font color="#000000"><em>Rough</em></font> mode. The major benefit of using this mode directly affects the performance of auto&#45;voiding the shape. The <font color="#000000"><em>Rough</em></font> mode option produces approximate artwork quality shape results, but within a fraction of the time required using the <font color="#000000"><em>Smooth</em></font> mode. Internal to Allegro PCB Editor, the smoothing algorithm is disabled during auto&#45;void and thermal spoke quantity is maximized at two. Eventually all shapes msut be updated to <font color="#000000"><em>Smooth</em></font> to output artwork; however, you may want to do this in a batch job during non&#45;work hours. If your shapes are confined to a limited area only and do not have an excessive amount of obstacles to void, it may be safe to choose <font color="#000000"><em>Smooth</em></font>; however, test the process using <font color="#000000"><em>Rough</em></font> mode first. Save a copy of your current database before updating shapes to <font color="#000000"><em>Smooth</em></font> if you decide to terminate the process.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/important.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1035605">It's important to understand the impact of choosing global parameters. The following options can only be set at the global level and cannot be overridden by instance or object level properties. They are grayed out in the </a><em>Shape Instance Parameters</em> dialog box.</font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035607">Dynamic Fill: </a><font color="#000000"><em>Smooth</em></font>, <font color="#000000"><em>Rough</em></font>, or DISABLED</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035608">Artwork Format: Raster or Vector options</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035609">Minimum Aperture for respective artwork chooseion</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1035611">The </a><font color="#000000"><em>Disabled </em></font>dynamic fill option essentially disables the auto&#45;voiding algorithm. If wholesale editing occurs, and the performance of <font color="#000000"><em>Rough</em></font> dynamic fill mode is unsatisfactory, using the <font color="#000000"><em>Disabled </em></font>dynamic fill option may prove to be the fastest method of making numerous changes. Once changes are made, update to either <font color="#000000"><em>Rough</em></font> or <font color="#000000"><em>Smooth</em></font>, depending on the time available for this update.</p>
+      <h4><a name="1035613">Artwork Format </a></h4>
+      <p><a name="1045426">The </a><font color="#000000"><em>Artwork Format</em></font> field on the <font color="#000000"><em>Global Dynamic Shape Parameters</em></font> dialog box aligns and improves voiding quality with the artwork style you output. Many formats are offered, but effectively there are only two: raster and vector. Vector based artwork, such as 274D, always uses a circular line for the display and chooses the artwork draw from an aperture list for shape filling. It cannot draw a perfectly squared edge because it is limited to filling with a circular aperture. Raster formats, such as 274X, can have edges smoothed with chamfered or round styles since no aperture is needed. </p>
+      <p align="left"><a name="1045430">.<img src="images/min_aperture.gif" width="535" height="276" alt=""></a></p>
+      <h4><a name="1045431">Trim control</a></h4>
+      <p><a name="1037234">The </a><font color="#000000"><em>Acute Angle Trim Contro</em></font>l field is used with raster sections only and cuts out a sharp acute angle and flattens it so that you can draw with an aperture relative to the<font color="#000000"><em> Minimum Aperture For Gap Width</em></font> setting.</p>
+      <p><a name="1035623">Gap width is defined as the distance from the edge of a void to the edge of a void. A larger value produces a greater number of clearances between objects; a lesser value produces greater continuity within the copper but a higher number of potential slivers. Gap width should be in&#45;line with the minimum trace size your PCB fabricator can etch.</a></p>
+      <p align="left"><a name="1039485"><img src="images/gap_width.gif" width="537" height="268" alt=""></a></p>
+      <p><a name="1035628">It may be necessary to re&#45;void shapes to achieve a contiguous flow of copper throughout. Islands or unconnected fragments of copper may develop as a result of certain parameter settings, including gap width and clearances. Fragments within the shape can be suppressed or eliminated automatically using the </a><font color="#000000"><em>Suppress Shapes Less Than</em></font> option on the <font color="#000000"><em>Void Controls</em></font> tab. The entered value represents an area setting that controls what is removed from the shape. For example, if a value of 25 is entered, any shape fragment with an area less than 625 mils is deleted. Use <font color="#000000"><em>Display - Element</em></font> on the shape to obtain the shape area value. Use <font color="#000000"><em>Shape - Delete Island</em></font>s to detect and remove any remaining fragments. Use shadow mode control with a very low intensity to detect any additional islands throughout a shape.</p>
+      <h4><a name="1035630">Clearance values</a></h4>
+      <p><a name="1042492">Pins now separate into thru hole and smd categories. The </a><font color="#000000"><em>Use Thermal Width Oversize of </em></font>option lets you add more clearance around objects within the shape boundary. </p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/tip.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1042498">If round&#45;off errors occur after auto&#45;voiding, update the </a><font color="#000000"><em>Clearances</em></font> tab of the <font color="#000000"><em>Global Dynamic Shape Parameters </em></font>dialog box. Add a uniform small oversize value to all fields under <font color="#000000"><em>Oversize Value</em></font>. Cadence recommends a value of twice the smallest unit&#47;accuracy of the design to eliminate small spacing problems.</font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1042531">For example, if the database were set up as mils with one place of accuracy, and the DRC rule equals 5.0 with a roundoff DRC error of 4.9, then enter 0.2 as the oversize to void. For a database with two places of accuracy, enter 0.02. In parallel, when designs require a global update, and Gerber 4x or 6x is the artwork format, Cadence recommends increasing the</a><font color="#000000"><em> Minimum Aperture For Artwork Fill </em></font>value by the same number used in the <font color="#000000"><em>Oversize Value</em></font>. (The aperture in the wheel should remain unchanged.)</blockquote>
+      <p><a name="1042494">For instance&#45;based applications, use the property </a><font size="2" face="'Courier New'" color="#000000">DYN_OVERSIZE_CLEARANCE.</font> The following graphic explains the use of pin&#45;level properties applied to the two large component pads. Each has been assigned a value of 50 mils. Since the bottom pad is outside the shape boundary, the property is not applicable.</p>
+      <p align="left"><a name="1037888"><img src="images/oversize_clear.gif" width="546" height="302" alt=""></a></p>
+      <h4><a name="1035637">Thermal relief connect lines </a></h4>
+      <p><a name="1037245">Thermal relief connect lines can be automatically constructed on pins and vias. Pins have been classified into Smd and Thru Hole. Additionally, a minimum and maximum setting can be applied to thermal connects as long as the option is not set to direct, in which case, Allegro PCB Editor sets min and max equal to 0. If Allegro PCB Editor cannot populate to the minimum thermal requirement, it leaves a via or pin free of any thermal connects. Consider using a min value less than the max to achieve the best coverage. Review current carrying requirements with the electrical engineer to determine if this is an acceptable practice. </a></p>
+      <p><a name="1037747">In the following example, SMT pins require a connection to GND. With in&#45;line pins, it is common to populate two spokes on inner pins and three on the outer if pin&#45;escaping vias are not used. In the example below, the min&#47;max setting controls thermal connections. The graphic on left is free of thermals, due to the requirement of four minimum connects. Since four is not possible, no thermal connect is applied. The middle graphic reduces the minimum connect to three where it is possible to populate but only on the end pin. With the minimum value set to two, the inner pins now properly connect while the end pin remains at three as the right graphic shows.</a></p>
+      <p align="left"><a name="1035639"><img src="images/thermal_relief.gif" width="504" height="205" alt=""></a></p>
+      <p><a name="1035643">When applying thermals to SMT pins, use the </a><font color="#000000"><em>Orthogonal</em></font> rather than <font color="#000000"><em>Diagonal</em></font> setting, at least for oblong pins. Allegro PCB Editor populates thermals on a polar axis with each 22.5 degree interval a possible location. Because a circle is 360 degrees, 16 locations exist to potentially place a thermal connect line. In addition, Allegro PCB Editor does not account for pad exit directions for clines; therefore, the probability for acute angles becomes greater. In the same example, changing the type to <font color="#000000"><em>Diagonal</em></font> causes the thermal connect on the outer pin to produce acid trap violations, and the adjacent pin is not populated due to DRC conditions.</p>
+      <p align="left"><a name="1037748"><img src="images/acute_angle.gif" width="465" height="216" alt=""></a></p>
+      <h4><a name="1035647">Best Contact </a></h4>
+      <p><a name="1037253">The </a><font color="#000000"><em>Best Contact</em></font> option help populates thermal spokes by adding clines where possible. Odd angle connects may result, but the intent is to meet the minimum requirement and override the connect settings to do so. In the example below, the left graphic shows a boundary placed close to a column of connector pins. This proximity prevents the pins with the adjacent red arrow from making a connection when thermal connects call for a minimum and maximum of 4. </p>
+      <p><a name="1037736">Using the </a><font color="#000000"><em>Best Contact</em></font> option as shown in the right graphic, a cline added in the 45 degree location satisfies the requirement. When the <font color="#000000"><em>Best Contact</em></font> option is chosen, Allegro PCB Editor examines the pin or via object and determines the best location for populating thermals: 45 degree locations take priority over 22.5 degree locations.</p>
+      <p align="left"><a name="1037715"><img src="images/best_contact.gif" width="552" height="274" alt=""></a></p>
+      <p><a name="1037285">The </a><font color="#000000"><em>Use Thermal Width Oversize of </em></font>field adds the value you specify to the default thermal connect line width, using <font size="2" face="'Courier New'" color="#000000">min line width</font> as the default. Consider your general routing line width strategy and thermal spoke width because Allegro PCB Editor uses one source for both applications. It may not be practical to set up GND for 50 mils and also use thermal spokes in a non&#45;direct contact mode. Using direct contact for thermal applications mitigates this issue.</p>
+      <p><a name="1040814">The</a> Use Fixed Thermal Width of field controls thermal line width directly from the <em>Shape Instance Parameters</em> dialog box and independently of physical constraint set mappings. Prior to 15.2, thermal line width derived only from the physical constraint set, hampering control of power&#47;ground routing and thermal line width using a single set of constraint values. For example, you may want GND routing to be 25 mils, but spoke width of 10 mils. In this scenario, the physical constraint set for GND routing would have a min line width set to 25 mils; on the <em>Shape Instance Parameters</em> dialog box, the fixed thermal width be set to 10 mils.</p>
+      <p><a name="1040816">The </a><em>Shape Instance Parameters</em> dialog box defaults to an oversize value of 0 mils to avoid uprev problems. The user must choose the Use Fixed Thermal Width of: option to control thermal line width from the <em>Shape Instance Parameters</em> dialog box.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/tip.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1035654">Direct contact thermals help improve dynamic shape auto&#45;voiding performance. The PCB Industry generally accepts direct contact of copper on vias.</a></font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1035657">Shape Instance Parameters</a></h2>
+      <p><a name="1035658">It may become necessary to override global parameters on a shape&#45;instance level. You may want extra pin or via clearance or different thermal connect styles for a particular shape. There are two methods to accomplish this:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1037667">by adding the new shape, right mouse clicking, and choosing </a><font color="#000000"><em>Parameters</em></font> from the popup menu, which displays the <em>Shape Instance Parameters</em> dialog box. Changed values appear in a bold blue, which follows the lead from Constraint Manager. </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1037675">by choosing an existing shape, right mouse clicking, and choosing </a><font color="#000000"><em>Parameter</em></font>s from the popup menu. </td>
+          </tr>
+        </table>
+      </div>
+      <p align="left"><a name="1037623"><img src="images/algroshapes.3.1.26.png" width="649" height="389" alt=""></a></p>
+      <h2><a name="1035665">Object Level Properties</a></h2>
+      <p><a name="1042381">Use </a><font color="#000000"><em>Edit - Property</em></font> to apply the third level of shape parameters to objects. Once applied, these values override instance and global parameters. Object&#45;based properties can be added in the Allegro PCB Editor session and also at the library level, where it may be best to add certain properties routinely designed into all boards designed in your group. For example, you may want to associate a thermal connect of a particular size with an inductor pin or to limit thermal connects to two on a 0603 package type, but maintain four thermal connects on all 1210 packages. (These package types are used for resistors and capacitors, and the numbers represent the Width x Length of the geometry.) </p>
+      <p><a name="1042413">There are seven properties associated with dynamic shapes:</a></p>
+      <p align="left"><a name="1037561"><img src="images/dyn_prop.gif" width="324" height="181" alt=""></a></p>
+      <p><a name="1035670">The following graphic displays the use of the properties DYN_CLEARANCE_OVERSIZE and DYN_OVERSIZE_THERM_WIDTH, added using </a><font color="#000000"><em>Edit - Property</em></font> with the <font color="#000000"><em>Find Filter</em></font> set to <font color="#000000"><em>Pin</em></font>. Once added, these properties remain on the pin even if the shape is deleted and re&#45;added. </p>
+      <p align="left"><a name="1035673"><img src="images/etch.gif" width="572" height="318" alt=""></a></p>
+      <h2><a name="1035674">Interactive Etch Editing </a></h2>
+      <p><a name="1035675">A benefit of dynamic shapes is using the interactive and automatic routing tools without deleting and re&#45;adding the shape. Routing a cline within the shape is commonly known as plowing, while the re&#45;pouring of copper in areas vacated by a cline or via is known as healing. Allegro PCB Editor's interactive etch editing tools can be used to add clines or vias within the shape while having the shape dynamically auto&#45;void after each change. The actual database updating does not occur until you left mouse click. </a></p>
+      <p><a name="1037557">The following graphics show </a><font color="#000000"><em>Route - Slide</em></font> moving a cline. On the left, the cursor has moved the cline, but a left mouse click has not occurred yet. On the right, the cline is instantiated and committed to the database. </p>
+      <p align="left"><a name="1037523"><img src="images/before_after.gif" width="530" height="250" alt=""></a></p>
+      <p><a name="1035680">Before using </a><font color="#000000"><em>Route - Connect, Route - Slide </em></font>or<font color="#000000"><em> Edit - Vertex</em></font>, understand the limitations.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035683">Outside the shape: While performing edits outside the boundary of a dynamic shape, any resulting bubbling external to the shape does not compromise the integrity of a dynamic shape. You cannot shove etch into a dynamic shape intentionally or accidentally. To slide a cline that is outside the shape, disable bubble mode, then slide the cline.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035685">Cutting Corners: When a cline cuts through a shape, the resulting action produce either an island or a conducting fragment. Either type of fragment may become suppressed pending the value you have assigned to the </a><font color="#000000"><em>Suppress Shapes Less Than</em></font> option. If suppressed, the boundary remains unchanged allowing the suppressed area to heal in the event the cline is removed. The graphic on the left shows a cline being added and cutting the shape resulting in the formation of an island. The graphic on the right has the cline retracting from within the shape resulting in the healing of the voided area.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/tip.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1035687">If routing into a shape from outside, it may be best to disable the bubble options. </a><font color="#000000"><em>Hug preferred</em></font> does not allow a cline to enter a shape as it tries to hug around it; with shove, multiple instantiations may be necessary to control the path. </font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p align="left"><a name="1039527"><img src="images/cut.gif" width="528" height="245" alt=""></a></p>
+      <h4><a name="1039528">				Performance Considerations </a></h4>
+      <p><a name="1037301">Etch editing within a dynamic shape triggers the auto&#45;voiding algorithm; however, it is localized to where the dynamics occur. The complexity of the shape is directly proportional to the performance. If your shapes are </a><font color="#000000"><em>Smooth</em></font> and etch editing performance is sluggish, consider changing the <font color="#000000"><em>Dynamic Fill </em></font>mode to <font color="#000000"><em>Rough</em></font>. If wholesale editing occurs, choose the <font color="#000000"><em>Disabled</em></font> mode, then update later.</p>
+      <h2><a name="1035692">Interface to Allegro PCB Router </a></h2>
+      <p><a name="1035693">When dynamic shapes pass to Allegro PCB Router from Allegro PCB Editor, vias can pop through the shapes; however, routing is not be allowed through them. If via popping is not preferred, convert the shapes to static in Allegro PCB Editor to prevent this. </a></p>
+      <h2><a name="1035695">Outputting Manufacturing Data</a></h2>
+      <p><a name="1035696">Before artwork can be created, all dynamic shapes must be updated to </a><font color="#000000"><em>Smooth</em></font>. Shapes not created as <font color="#000000"><em>Smooth</em></font> are labeled as <font color="#000000"><em>out of date shapes</em></font> as shown in the <font color="#000000"><em>Status</em></font> dialog box below. Use the <font color="#000000"><em>Update to Smooth</em></font> option to update all out of date shapes. Failure to do so prevents you from generating artwork data.</p>
+      <p><a name="1040914">When dynamic shapes are out&#45;of&#45;date, Allegro PCB Editor and APD display a </a><font color="#000000"><em>Dynamic Shapes Need Updating..</em></font>. button on the <font color="#000000"><em>Artwork Control Form</em></font> dialog box. If you try to use the <font color="#000000"><em>Create Artwork</em></font> button on the <font color="#000000"><em>Artwork Control Form</em></font> dialog box, an error message appears: </p>
+      <blockquote>
+        <font size="2" face="&quot;Microsoft Sans Serif&quot;" color="#000000"><a name="1040951">Dynamic Shapes are out of date, please update them. </a></font>
+      </blockquote>
+      <p><a name="1040952">Click </a><font color="#000000"><em>Dynamic Shapes Need Updating..</em></font>. to open the <font color="#000000"><em>Status</em></font> tab of the <font color="#000000"><em>Status</em></font> dialog box, which becomes active, blocking any use of the <font color="#000000"><em>Artwork Control Form</em></font> dialog box until you update dynamic shapes or DRCs before proceeding with artwork.</p>
+      <p><a name="1040940">A warning also appears if the shape artwork format does not align with the artwork device type setting. This is limited to comparing raster against vector and not individual types.</a></p>
+      <p align="left"><a name="1040941"><img src="images/format_warn.png" width="485" height="91" alt=""></a></p>
+      <p><a name="1035698">The shape boundary should not be part of any film records. Although it has a zero width outline, it could be output accidentally and assigned an aperture width. </a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <img src="images/tip.gif" alt="ParagraphBullet" border="0">
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1035700">DO NOT include the boundary class in artwork film records. Although Allegro PCB Editor only assigns pin, via, and etch classes, the user may add more class information. Adding a boundary class could create artwork continuity problems.</a></font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p align="left"><a name="1037370"><img src="images/algroshapes.3.1.32.png" width="640" height="559" alt=""></a></p>
+      <h2><a name="1035704">User Preference Variables</a></h2>
+      <p><a name="1035705">At present, there are eight shape related variables. Choose</a><font color="#000000"><em> Setup - User Preferences</em></font> and choose the <font color="#000000"><em>Shape &#45;General&#47;Voiding </em></font>category. Variables beginning with <font color="#000000"><em>av_</em></font> are for static applications only.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035707"><font color="#000000"><em>av_endcapstyle:</em></font></a> the void around a cline appears in this style. Defaults to round. Takes effect when pad&#47;via&#47;pin is less than the connect line width.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035709"><font color="#000000"><em>av_inline:</em></font></a> controls the distance between pins during autovoid processing to determine if pins are voided as a group.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035711"><font color="#000000"><em>av_thermal_extend: </em></font></a>Controls the distance the thermal connect cline infringes into the shape. Default is 5 mils.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035713"><font color="#000000"><em>highlight_shape_net:</em></font></a> Highlights the net associated with the chosen shape. </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035715"><font color="#000000"><em>no_shape_fill:</em></font></a> Shapes are drawn without fill or skeleton if set</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035717"><font color="#000000"><em>old_shape_fill_style:</em></font></a> 15.0 introduces a transparent stencil fill pattern. Set this variable if you desire the 14.x solid fill style.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1044579"><font color="#000000"><em>dv_endcapstyle: </em></font></a>applies to dynamic shape voiding.It affets the geometry of voids created around cline end points.It allows shape voiding if the default mode (circle) shows problem.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1044580"><font color="#000000"><em>pad_drcplus:</em></font></a> If small round&#45;off errors occur between pin and shape, set this variable with a numerical value that adds additional clearance on all auto&#45;voids from pin to shape.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1036404"><font color="#000000"><em>shape_add_filltype: </em></font></a>determines the initial shape type used for adding shapes on Etch. Default is dynamic.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1044610">shape_arcmode_nonsticky: controls the arc behaviour of the edit shape&#47;void boundary commands. This variable on setting will automatically changes the segment type to line after an arc has been added.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1044611"><font color="#000000"><em>shape_drag_move</em></font></a>: If enabled, allows you to move a shape using the LMB drag. You must be in shape edit mode to drag a shape. </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1044517"><font color="#000000"><em>shape_local_temp</em></font></a>: if design is located on network file server. This variable uses standard OS TEMP or TMP as the location for these files.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1044524"><font color="#000000"><em>shape_merge_props</em></font></a>: merging properties also on merging two shapes.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1044531"><font color="#000000"><em>shape_no_ripupthermal</em></font></a>: changes the default response for the static shape thermal rip&#45;up question form from Yes to No. In this case, thermals will not rip up.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1044538"><font color="#000000"><em>shape_no_clip_rk </em></font></a>: adding an etch shape that crosses the route keepin , will be clipped to the route keepin. Shapes added outside of the keepin are not clipped and will not generate DRCs. Restores pre 15.5 functionality where no clipping was done.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1044545"><font color="#000000"><em>shape_rki_autoclip</em></font></a>: allows automatic update of dynamic shapes to the route keepin. By default, dynamic shape boundaries, are clipped to the route keepin.</td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1035725">Questions and Answers</a></h2>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Is Smooth the same as WYSIWYG?</nobr>
+              </div>
+            </td>
+            <td><a name="1041004">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer: 	WYSIWYG became Smooth in 15.1 to better represent its functionality.</nobr>
+              </div>
+            </td>
+            <td><a name="1041006">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Can you change the thermal relief for one pin only ?</nobr>
+              </div>
+            </td>
+            <td><a name="1041008">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer: 	Yes, use </nobr>
+              </div>
+            </td>
+            <td><a name="1042868">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><img src="images/edit_property.png" width="191" height="188" alt=""></nobr>
+              </div>
+            </td>
+            <td><a name="1042872">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Do oversize clearances accept negative values?</nobr>
+              </div>
+            </td>
+            <td><a name="1042873">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer : 	No.</nobr>
+              </div>
+            </td>
+            <td><a name="1041017">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Wouldn&#39;t the thermal relief be based upon the thermal model for the pin?</nobr>
+              </div>
+            </td>
+            <td><a name="1041019">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer: 	The parameter settings or object&#45;level properties control thermal reliefs for dynamic positive planes. The </nobr>
+              </div>
+            </td>
+            <td><a name="1041021">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	When you change the global parameters, do existing shapes automatically update?</nobr>
+              </div>
+            </td>
+            <td><a name="1041023">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	Global dynamic shape parameter changes update existing shapes unless they have overriding values set.</nobr>
+              </div>
+            </td>
+            <td><a name="1041025">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Can you specify a Gerber output on the </nobr>
+              </div>
+            </td>
+            <td><a name="1041028">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	A disparity can exist between shape and artwork settings. When you attempt to run artwork, a warning appears that identifies any difference between vector and raster settings.</nobr>
+              </div>
+            </td>
+            <td><a name="1041030">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	How would you define a spacing constraint where copper must be kept away from pads, clines, etc. by the cline width?</nobr>
+              </div>
+            </td>
+            <td><a name="1041032">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	Use the spacing constraint set to control shape&#45;to&#45;pin, &#45;via, &#45;line, or &#45;shape spacing with a cline value. When setting shape parameters, use the </nobr>
+              </div>
+            </td>
+            <td><a name="1041034">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Why does the shape not merge with the other GND?</nobr>
+              </div>
+            </td>
+            <td><a name="1041038">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	Shapes will not merge automatically. Use </nobr>
+              </div>
+            </td>
+            <td><a name="1041040">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	The minimum number of spokes was defined as two; the maximum, four: Why is the default two? Wouldn&#39;t two be populated only if four were not possible?</nobr>
+              </div>
+            </td>
+            <td><a name="1041042">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	In </nobr>
+              </div>
+            </td>
+            <td><a name="1041044">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Is overlapping shapes cause DRCs, even with the same net?</nobr>
+              </div>
+            </td>
+            <td><a name="1041046">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:   	Yes, overlapping shapes of the same net report a DRC in 15.x. DRCs are not reported if dynamic shapes are in </nobr>
+              </div>
+            </td>
+            <td><a name="1041048">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	What is the difference between dynamic and static shapes?</nobr>
+              </div>
+            </td>
+            <td><a name="1041050">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	Static is analogous to pre&#45;15.0 shapes that require interactive voiding. Dynamic shapes automatically void when the shape is edited, for example, routing or moving components.</nobr>
+              </div>
+            </td>
+            <td><a name="1041052">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Editing global parameters for dynamic shapes does not change the </nobr>
+              </div>
+            </td>
+            <td><a name="1041054">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	Shape parameters are not written to the </nobr>
+              </div>
+            </td>
+            <td><a name="1041056">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Do global dynamic shape parameters update automatically, or do you have to edit shapes to update them?</nobr>
+              </div>
+            </td>
+            <td><a name="1041064">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer: 	Out&#45;of&#45;date shapes update to </nobr>
+              </div>
+            </td>
+            <td><a name="1041066">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	When creating a shape, can you automatically identify islands?</nobr>
+              </div>
+            </td>
+            <td><a name="1041068">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer: 	Run the </nobr>
+              </div>
+            </td>
+            <td><a name="1041070">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	If you use different parameters for different shapes, is there any way to understand the parameter setup for that shape after the changing the parameters?</nobr>
+              </div>
+            </td>
+            <td><a name="1041072">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	Choose the shape, right mouse click ,and choose </nobr>
+              </div>
+            </td>
+            <td><a name="1041075">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	If you have many complex shapes, will performance suffer? Is there a better way to approach this?</nobr>
+              </div>
+            </td>
+            <td><a name="1041077">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	We recommend maintaining </nobr>
+              </div>
+            </td>
+            <td><a name="1041079">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Why don&#39;t the voids of the Cross&#45;Hatched shapes have the same border as the boundary?</nobr>
+              </div>
+            </td>
+            <td><a name="1041081">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	They are consistent.</nobr>
+              </div>
+            </td>
+            <td><a name="1041083">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Is there supposed to be a border line around the void areas?</nobr>
+              </div>
+            </td>
+            <td><a name="1041085">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	Yes, enable the boundary subclass in the </nobr>
+              </div>
+            </td>
+            <td><a name="1041087">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Is there autovoiding for static shapes?</nobr>
+              </div>
+            </td>
+            <td><a name="1041089">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	Use </nobr>
+              </div>
+            </td>
+            <td><a name="1041091">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Are complex shapes created in the Harmony software compatible with 15.1 when changed to dynamic shapes in Allegro PCB Editor? Software crashes occur when dynamic shapes are changed to </nobr>
+              </div>
+            </td>
+            <td><a name="1041093">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	We do not test Harmony internally as this is an OHIO Design product. Send us a testcase and script if possible that recreates a crash condition.</nobr>
+              </div>
+            </td>
+            <td><a name="1041095">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Can an aperture be changed for a specific shape instance?</nobr>
+              </div>
+            </td>
+            <td><a name="1041097">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	Apertures can only be controlled at a global level.</nobr>
+              </div>
+            </td>
+            <td><a name="1041099">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Can you erase spokes if you didn&#39;t need all of them on one pin?</nobr>
+              </div>
+            </td>
+            <td><a name="1041101">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	Spokes generated in dynamic shapes cannot be deleted or moved. You must use instance&#45; or object&#45;level properties to customize.</nobr>
+              </div>
+            </td>
+            <td><a name="1041103">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Do these object&#45;level properties extract when you export a netlist with properties?</nobr>
+              </div>
+            </td>
+            <td><a name="1041105">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	Shape properties cannot be assigned at the net level. They must be assigned to pins, vias, or clines.</nobr>
+              </div>
+            </td>
+            <td><a name="1041107">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Is there a trick to using copper pour and keeping the database small?</nobr>
+              </div>
+            </td>
+            <td><a name="1041109">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	None of which we are aware. </nobr>
+              </div>
+            </td>
+            <td><a name="1041111">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	If you delete an island, and subsequently want to add it again manually, can you?</nobr>
+              </div>
+            </td>
+            <td><a name="1041113">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	A manual void represents the island. Use the </nobr>
+              </div>
+            </td>
+            <td><a name="1041115">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Does </nobr>
+              </div>
+            </td>
+            <td><a name="1041117">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	It uses the center line.</nobr>
+              </div>
+            </td>
+            <td><a name="1041119">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Do negative planes still have the problem creating a complex plane, that is, one net inset entirely within another net?</nobr>
+              </div>
+            </td>
+            <td><a name="1041121">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	The 15.0 shape environment in this regard is similar that of 14.2. Your artwork choice factors into the design of complex planes. The embedded shape problem is a limit in vector artwork output. Dynamic shapes do not change the requirement to suppress shape fill and add your own fill lines for negative shapes within shapes when using vector artwork.</nobr>
+              </div>
+            </td>
+            <td><a name="1041602">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Can shapes be disabled before passing to Allegro PCB Router?</nobr>
+              </div>
+            </td>
+            <td><a name="1041603">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	Shapes pass to Allegro PCB Router as wire keepout areas, allowing vias to be added through shapes.</nobr>
+              </div>
+            </td>
+            <td><a name="1041604">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Does the line width matter for creating the border of the shapes?</nobr>
+              </div>
+            </td>
+            <td><a name="1041129">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	The shape boundary width is not user controlled.</nobr>
+              </div>
+            </td>
+            <td><a name="1041131">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Can thermals be mapped to flash symbols?</nobr>
+              </div>
+            </td>
+            <td><a name="1041133">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	No, a separate thermal line width control exists in the </nobr>
+              </div>
+            </td>
+            <td><a name="1044989">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Can dynamic shapes be added to soldermask layers?</nobr>
+              </div>
+            </td>
+            <td><a name="1041593">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	No, only to electrical subclasses.</nobr>
+              </div>
+            </td>
+            <td><a name="1041594">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Are there plans for additional shape controls from the right mouse button?</nobr>
+              </div>
+            </td>
+            <td><a name="1041141">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	Preview the 15.2 popup menu by running the </nobr>
+              </div>
+            </td>
+            <td><a name="1041143">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Can I control a thermal by direction, for example, N S E W?</nobr>
+              </div>
+            </td>
+            <td><a name="1041147">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer: 	No, available properties appear as in the above screen capture.</nobr>
+              </div>
+            </td>
+            <td><a name="1041149">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Question: 	Why don&#39;t shapes obey anti etch?</nobr>
+              </div>
+            </td>
+            <td><a name="1041151">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Answer:  	Initially they do when using the </nobr>
+              </div>
+            </td>
+            <td><a name="1041153">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1041154">&nbsp;</a></p>
+    </div>
+    <br>
+    <a href="#pagetop">Return to top of page</a>
+    <hr>
+    <hr align="left">
+    <div style="text-align: left;">
+      <!-- Begin Buttons -->
+      <table width="650" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+                    </td>
+<td height="20" width="73">
+<a href="algroshapesTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+          <td>
+            <a href="algroshapesTOC.html"><img src="../support/nav2_previous.gif" alt="Previous" border="0"></a>
+          </td>
+          <td height="20">
+            <img src="../support/nav2_next_b.gif" alt="Previous">
+          </td>
+          <td>
+            <a>
+<a href="algroshapes.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+            </a>
+          </td>
+          <td height="20" width="59">
+            <img src="../support/nav_next_b.gif" alt="Next" border="0">
+          </td>
+          <td height="20" width="61">
+            <img src="../support/nav2_black.gif">
+          </td>
+          <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+          </td>
+          <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+          </td>
+          <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+          </td>
+        </tr>
+      </table>
+      <!-- End Buttons -->
+    </div>
+    <br>
+    <font size="-1" >
+For support, see <a href="http://support.cadence.com" target="_blank">Cadence Online Support</a> service.</font>
+    <br>
+    <br>
+    <font size="-1" >
+      <i>Copyright &#169; 2016, <a href="http://www.cadence.com">Cadence Design Systems, Inc.</a></i>
+    </font>
+    <br>
+    <font size="-1" >
+All rights reserved.</font>
+    <br>
+    <br>
+  </body>
+</html>

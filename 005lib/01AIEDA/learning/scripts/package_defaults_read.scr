@@ -1,0 +1,7 @@
+set NOCONFIRM
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/scripts/lesson04_verify.il") t)
+skill errset(edaL4Verify("D:/001DIY/005lib/01AIEDA/learning/logs/package_defaults_20261017/reopen") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/scripts/package_defaults.il") t)
+skill errset(edaPackageDefaultsRead("D:/001DIY/005lib/01AIEDA/learning/logs/package_defaults_20261017/reopen") t)
+quit
+fillin "yes"

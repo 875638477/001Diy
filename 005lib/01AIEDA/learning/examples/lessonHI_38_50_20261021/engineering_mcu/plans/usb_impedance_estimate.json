@@ -1,0 +1,81 @@
+{
+  "status": "ANALYTIC_PRELAYOUT_ESTIMATE_NOT_90OHM_CERTIFICATION",
+  "source": "TI SLVA531A p15 eq1/2",
+  "formula": "Z0=87/sqrt(Er+1.41)*ln(5.98H/(0.8W+T));Zdiff=2Z0*(1-0.48exp(-0.96S/H))",
+  "units": "All dimensions same mm; log natural",
+  "notModeled": [
+    "mask/conductive roughness/trapezoid/etch/tolerance/nearbycoplanarGND/vias/pads/bends/reference open gaps",
+    "Dk dispersion:2L4.5 source10MHz;4L4.4 frequency notpublished",
+    "actual differential coupling outside straightparallel regions; connector and ESD discontinuities"
+  ],
+  "variants": {
+    "2L": {
+      "H": 1.524,
+      "T": 0.0356,
+      "Er": 4.5,
+      "reference": "BOTTOM",
+      "selectedBulkGeometry": {
+        "width": 1.15,
+        "gap": 0.16
+      },
+      "cases": [
+        {
+          "width": 0.2,
+          "gap": 0.15,
+          "Z0_ohm": 137.47377369916893,
+          "Zdiff_ohm": 154.87177517753287
+        },
+        {
+          "width": 1.15,
+          "gap": 0.15,
+          "Z0_ohm": 80.70598441796693,
+          "Zdiff_ohm": 90.91973500059966
+        },
+        {
+          "width": 1.15,
+          "gap": 0.2,
+          "Z0_ohm": 80.70598441796693,
+          "Zdiff_ohm": 93.10536282615638
+        },
+        {
+          "width": 1.15,
+          "gap": 0.16,
+          "Z0_ohm": 80.70598441796693,
+          "Zdiff_ohm": 91.36238493135833,
+          "selected": "True; .16>=public.1524 copperminimum"
+        }
+      ]
+    },
+    "4L": {
+      "H": 0.2104,
+      "T": 0.035,
+      "Er": 4.4,
+      "reference": "L2",
+      "selectedBulkGeometry": {
+        "width": 0.26,
+        "gap": 0.15
+      },
+      "cases": [
+        {
+          "width": 0.2,
+          "gap": 0.15,
+          "Z0_ohm": 67.29419712186235,
+          "Zdiff_ohm": 102.00374263425994
+        },
+        {
+          "width": 0.26,
+          "gap": 0.15,
+          "Z0_ohm": 59.351353455831564,
+          "Zdiff_ohm": 89.96407479147723
+        },
+        {
+          "width": 0.26,
+          "gap": 0.2,
+          "Z0_ohm": 59.351353455831564,
+          "Zdiff_ohm": 95.82631626968201
+        }
+      ]
+    }
+  },
+  "fabricationCorrection": "Two-layer .15mm example retained only as rejectedcalculationbelowpublic.1524 minimum; selectedactualgap.16. Fourlayer.15 hasdifferentprocesscapability."
+}

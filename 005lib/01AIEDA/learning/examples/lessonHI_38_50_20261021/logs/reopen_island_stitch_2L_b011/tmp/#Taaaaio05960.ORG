@@ -1,0 +1,19 @@
+
+.subckt STL_0S_1R_1050 
++X1 0
++X2 0
+*Trapezoidal_Angle_in_Degree = 90.000000
+*EMIinfo Type NoGroundPlane
+*EMIinfo Conductor Width=2000 botDist=0.0015596
+*EMIinfo Dielectric Eps=4.5 Thick=3.56e-005
+*EMIinfo Dielectric Eps=4.5 Thick=0.001524
+*EMIinfo Dielectric Eps=4.5 Thick=3.56e-005
+
+.layerstack Layerstack1
++dielectric( 3.56e-005 4.5 0 )
++dielectric( 0.001524 4.5 0.035 )
++dielectric( 3.56e-005 4.5 0 )
+.crosssection
++rectangle ( 5.959e+007 0 0.0015596 0.0002 0.0015952 )
++Length=length
+.ends STL_0S_1R_1050

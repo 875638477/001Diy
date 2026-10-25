@@ -1,0 +1,157 @@
+{
+  "status": "POWER_REVIEW_PROPOSAL_PATCH_ROOT_NSS3B_WESTVIA_KEEP_ROOT_APPROVAL",
+  "operations": [
+    {
+      "type": "route",
+      "id": "NSS_SOURCE_SERIES",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          29.25
+        ],
+        [
+          34.8,
+          29.25
+        ],
+        [
+          34.8,
+          31.15
+        ],
+        [
+          32.93,
+          33.02
+        ],
+        [
+          32.7984,
+          33.02
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit source-first NSS and pullup branch, preserves west SPI corridor; native/reference validation pending"
+    },
+    {
+      "type": "route",
+      "id": "NSS_PULLUP_INWARD",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          29.25
+        ],
+        [
+          36.8,
+          29.25
+        ],
+        [
+          39,
+          27.05
+        ],
+        [
+          39,
+          26.2
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit source-first NSS and pullup branch, preserves west SPI corridor; native/reference validation pending"
+    },
+    {
+      "type": "via",
+      "id": "NSS_PULLUP_INNER_VIA",
+      "net": "PA4_SPI_NSS",
+      "xy": [
+        39,
+        26.2
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad layerchange; nearby actual GND return and reference review required"
+    },
+    {
+      "type": "via",
+      "id": "NSS_PULLUP_WEST_VIA",
+      "net": "PA4_SPI_NSS",
+      "xy": [
+        32.2,
+        22
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad layerchange; nearby actual GND return and reference review required"
+    },
+    {
+      "type": "route",
+      "id": "NSS_PULLUP_BOTTOM",
+      "net": "PA4_SPI_NSS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39,
+          26.2
+        ],
+        [
+          39,
+          21.3
+        ],
+        [
+          32.2,
+          21.3
+        ],
+        [
+          32.2,
+          22
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit source-first NSS and pullup branch, preserves west SPI corridor; native/reference validation pending"
+    },
+    {
+      "type": "route",
+      "id": "NSS_PULLUP_RESISTOR",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          32.2,
+          22
+        ],
+        [
+          32,
+          21
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit source-first NSS and pullup branch, preserves west SPI corridor; native/reference validation pending"
+    },
+    {
+      "type": "via",
+      "id": "NSS_PULLUP_GND_RETURN",
+      "net": "GND",
+      "xy": [
+        31,
+        21.6
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad layerchange; nearby actual GND return and reference review required"
+    }
+  ],
+  "proofs": [
+    {
+      "from": "U1.14",
+      "to": "R23.1",
+      "connected": true
+    },
+    {
+      "from": "U1.14",
+      "to": "R25.2",
+      "connected": true
+    }
+  ],
+  "pending": [
+    "Full future critical copper precheck",
+    "Native DRC and exact endpoints",
+    "2L actual TOP reference gaps under internal BOTTOM branch; never claim uniformly continuous reference",
+    "Final GND return and all-board HSE anchor challenge"
+  ],
+  "errata": "First 32,23.2 GND via intersected R29.1 BOOT1, rejected before any native writes. Moved31,21.6 subject to complete native/reference checks."
+}

@@ -1,0 +1,46 @@
+HI_BIND_STATIC_SHAPE id="HI_HSE_QUIET" layer="BOTTOM" shape=(prop nil priority nil autoObject nil autoKeepoutType nil dynamicGroup nil taper nil shapeAuto nil region nil bBox ((37.2 28.5) (47.5 39.4)) readOnly t voids nil objType "shape" segments (dbid:00000298BDA38510 dbid:00000298BDA38560 dbid:00000298BDA385B0 dbid:00000298BDA38600 dbid:00000298BDA38650 dbid:00000298BDA386A0 dbid:00000298BDA386F0 dbid:00000298BDA38740 dbid:00000298BDA38790 dbid:00000298BDA387E0 dbid:00000298BDA38830 dbid:00000298BDA38880 dbid:00000298BDA388D0 dbid:00000298BDA38920 dbid:00000298BDA38970 dbid:00000298BDA389C0) nSegs 16 fillet nil connect (dbid:00000298BDA39440 dbid:00000298BDA39530 dbid:00000298BDA39620) cavity nil branch dbid:00000298BDA38458 parentGroups nil fill t fillOOD nil isRect nil layer "ETCH/BOTTOM" symbolEtch nil parent dbid:00000298BDA38458 isHole nil net dbid:00000298BD98CA08)
+HI_EXISTING_VIA_ALIAS "HSE_LOCAL_C22" (47.1 35.5748) dbid:00000298BDA39440
+HI_EXISTING_VIA_ALIAS "HSE_LOCAL_C23" (37.7 37.7) dbid:00000298BDA39530
+HI_EXISTING_VIA_ALIAS "HSE_SINGLE_ANCHOR" (45.45 28.85) dbid:00000298BDA39620
+HI_EXISTING_VIA_ALIAS "HSE_CASE_APP" (43.2 40.8) dbid:00000298BDA39DB0
+HI_EXISTING_VIA_ALIAS "VSSA8_APP" (38.7 29.5) dbid:00000298BDA3AA30
+HI_EXISTING_VIA_ALIAS "C18_APP_GND" (37.9 34.7748) dbid:00000298BDA3ABE0
+HI_EXISTING_VIA_ALIAS "C19_APP_GND" (34.8 39.7) dbid:00000298BDA3AD40
+HI_EXISTING_VIA_ALIAS "C20_APP_GND" (32.2 40.1) dbid:00000298BDA3AEA0
+HI_EXISTING_VIA_ALIAS "C24_APP_GND" (34.4 35.7) dbid:00000298BDA3B000
+HI_EXISTING_VIA_ALIAS "C21_APP_GND" (36.95 36.25) dbid:00000298BDA3B1B0
+HI_EXISTING_VIA_ALIAS "NRST_SERVICE" (38.7 35.3) dbid:00000298BDA3BB50
+HI_EXISTING_VIA_ALIAS "VBAT_C17_APP" (48.9 32.4) dbid:00000298BDA3D570
+HI_ENDPOINT_PROOF from="U1.5" to="Y1.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="Y1.1" to="C22.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U1.6" to="R31.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="R31.2" to="Y1.3" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="R31.2" to="C23.1" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="C22.2" to="HSE_LOCAL_C22" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C23.2" to="HSE_LOCAL_C23" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="Y1.4" to="HSE_CASE_APP" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="Y1.2" to="HSE_CASE_APP" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="U1.9" to="C18.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C18.1" to="C19.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C19.1" to="C20.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C20.1" to="R26.2" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="U1.8" to="VSSA8_APP" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C18.2" to="C18_APP_GND" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C19.2" to="C19_APP_GND" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C20.2" to="C20_APP_GND" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C24.2" to="C24_APP_GND" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C21.2" to="C21_APP_GND" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="U1.10" to="C24.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="C24.1" to="R32.2" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R32.1" to="J10.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="U1.7" to="C21.1" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="C21.1" to="NRST_SERVICE" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.1" to="C17.1" expected=t actual=t objects=31
+HI_ENDPOINT_PROOF from="C17.2" to="VBAT_C17_APP" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C22.2" to="HI_HSE_QUIET" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C23.2" to="HI_HSE_QUIET" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="HI_GUARD_LEFT_END" to="C23.2" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="HI_GUARD_RIGHT_END" to="C22.2" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="HI_GUARD_RIGHT_LOWER_END" to="C22.2" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C22.2" to="U1.47" expected=t actual=t objects=185
+HI_REOPEN_ALL_ENDPOINTS_COMPLETE

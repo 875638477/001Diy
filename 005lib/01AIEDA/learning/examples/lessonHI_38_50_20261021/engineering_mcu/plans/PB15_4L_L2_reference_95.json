@@ -1,0 +1,83 @@
+{
+  "status": "REFERENCE_ENGINEERING_COMPARISON_NOT_NATIVE_FILL",
+  "candidate": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\PB15_4L_short_L2_comparison_95.json",
+  "candidateSHA256": "b1302c97ed68e5acc9eac962aa5112711ffa453e691549cca337df415cee2709",
+  "actualSnapshot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\padentry_4L_b019_DRC_PENDING\\normalized.json",
+  "actualSnapshotSHA256": "5c8dd51f7d7f5f3e5e0b7cd7a64d76690631a7d6e28856ff9223e8cd909a673f",
+  "L3Reference": [
+    {
+      "identity": "actual_b019_L3_before_candidate",
+      "centerlineCoveredMM": 9.335432893255074,
+      "centerlineUncoveredMM": 0.0,
+      "traceCopperAreaMM2": 1.8975662635143142,
+      "traceCopperCoveredAreaMM2": 1.8975662635143142,
+      "fieldBuffer04CoveredAreaMM2": 7.956468992611392,
+      "uncoveredBounds": null
+    },
+    {
+      "identity": "planned_L3_after_new_PTH_antipads",
+      "centerlineCoveredMM": 8.183371923145131,
+      "centerlineUncoveredMM": 1.152060970109942,
+      "traceCopperAreaMM2": 1.8975662635143142,
+      "traceCopperCoveredAreaMM2": 1.6372802190766054,
+      "fieldBuffer04CoveredAreaMM2": 6.623264780699576,
+      "uncoveredBounds": [
+        48.9,
+        23.68,
+        51.99597979746447,
+        31.4
+      ]
+    }
+  ],
+  "projectedTOPCenterlineCrossingPlannedL2SlotMM": {
+    "BOOT0": 1.1313708498984738,
+    "GPIO_PA15": 0.7999999999999972,
+    "GPIO_PB4": 1.0527658370030082,
+    "GND": 0.6254608650212373,
+    "I2C_SCL": 1.1313708498984738
+  },
+  "padProjection": [
+    {
+      "pin": "C15.1",
+      "net": "V3V3",
+      "plannedL2SlotClearanceMM": 3.3996382887059156,
+      "slotOverlapAreaMM2": 0.0
+    },
+    {
+      "pin": "C15.2",
+      "net": "GND",
+      "plannedL2SlotClearanceMM": 2.2860865296933395,
+      "slotOverlapAreaMM2": 0.0
+    },
+    {
+      "pin": "R17.1",
+      "net": "PA10_UART_RX",
+      "plannedL2SlotClearanceMM": 0.3135000000000048,
+      "slotOverlapAreaMM2": 0.0
+    },
+    {
+      "pin": "R17.2",
+      "net": "UART_RX",
+      "plannedL2SlotClearanceMM": 0.27606479349246077,
+      "slotOverlapAreaMM2": 0.0
+    },
+    {
+      "pin": "C16.1",
+      "net": "V3V3",
+      "plannedL2SlotClearanceMM": 1.1801115685936967,
+      "slotOverlapAreaMM2": 0.0
+    },
+    {
+      "pin": "C16.2",
+      "net": "GND",
+      "plannedL2SlotClearanceMM": 0.21871843353823384,
+      "slotOverlapAreaMM2": 0.0
+    }
+  ],
+  "qualification": [
+    "Actual b019 plane geometry, not simulation or native repour of this candidate",
+    "New PTH antipad subtraction is explicit planar estimate radius.56; actual native thermal/clearance/plane readback still required",
+    "L2 slot removes local TOP reference under listed ordinary crossings, even though L3 can reference the new inner signal",
+    "Near transition reference openings are expected and need actual nearby common-GND return; no 100-percent-microstrip or SI certification claim"
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "status": "TRAINING_NOT_FOR_ASSEMBLY",
+  "issues": [
+    {
+      "issueID": "JK57-001",
+      "title": "采购料号及生产旋转标准未定",
+      "scope": "BOTH",
+      "status": "OPEN_RELEASE",
+      "evidence": {
+        "mpnSpecified": 12,
+        "mpnPending": 68
+      },
+      "nextAction": "逐件定MPN并与装配厂确认封装零度、吸取中心和顶底镜像转换；当前CSV保留CAD原点/原生角度。"
+    },
+    {
+      "issueID": "JK57-002",
+      "title": "默认USB和CAN备选料互斥",
+      "scope": "BOTH",
+      "status": "OPEN_RELEASE",
+      "evidence": {
+        "USB": {
+          "fit": [
+            "R_USB_DP",
+            "R_USB_DM"
+          ],
+          "DNP": [
+            "R_CAN_TX",
+            "R_CAN_RX"
+          ],
+          "firmware": "enable USB only, PB0=0 and V3V3 valid then PA8=0; PB0=1 => PA8=1. At reset Q_ATTACH off."
+        },
+        "CAN": {
+          "fit": [
+            "R_CAN_TX",
+            "R_CAN_RX"
+          ],
+          "DNP": [
+            "R_USB_DP",
+            "R_USB_DM"
+          ],
+          "firmware": "enable CAN only, PA8 always high; USB and CAN share MCU SRAM and cannot operate simultaneously even with remapping"
+        }
+      },
+      "nextAction": "本轮输出默认USB：R5/R6装22R，R12/R13 DNP；22R为历史工程值，未硬件验证；CAN配置只能受控另出BOM和固件。"
+    },
+    {
+      "issueID": "JK55-005",
+      "title": "USB安装脚长与约1.6mm板厚装配尚未匹配",
+      "scope": "BOTH",
+      "status": "OPEN_RELEASE",
+      "evidence": {
+        "connector": "USB4105-GF-A",
+        "stakeLengthBelowSeatingPlaneMM": "0.95 ±0.15",
+        "note": "D:\\001DIY\\005lib\\01AIEDA\\learning\\notes\\lessonF_source_corrections_20261019.md"
+      },
+      "nextAction": "确认座高/成品板厚公差/壳脚焊接工艺，不将S误解为板底突出量。"
+    },
+    {
+      "issueID": "JK55-006",
+      "title": "USB两层阻焊桥0.100mm小于所选公开目标0.1016mm",
+      "scope": "2L",
+      "status": "OPEN_RELEASE",
+      "evidence": {
+        "nominalMaskBridgeMM": 0.1,
+        "publicMinimumMM": 0.1016
+      },
+      "nextAction": "与板厂确认可行工艺或受控改开窗/厂商；不能以差1.6um忽略。"
+    },
+    {
+      "issueID": "JK55-007",
+      "title": "DNP焊盘仍在原生钢网定义中",
+      "scope": "BOTH",
+      "status": "OPEN_PROCESS",
+      "evidence": {
+        "DNP": [
+          "R12",
+          "R13"
+        ]
+      },
+      "nextAction": "根据不装位焊料策略决定是否屏蔽钢网开口；当前全PAD钢网并非已批准装配变体。"
+    },
+    {
+      "issueID": "JK55-008",
+      "title": "默认高度和PlaceBound不等实物尺寸",
+      "scope": "BOTH",
+      "status": "OPEN_RELEASE",
+      "evidence": {
+        "defaultHeightMM": 1,
+        "heightSource": "User default / existing explicit library properties"
+      },
+      "nextAction": "1mm缺省只代表教学占位；68件无MPN及实际courtyard/连接器插拔/装配公差仍待核，不把PlaceBound叫真实器件body。"
+    },
+    {
+      "issueID": "JK55-009",
+      "title": "测试点/极性/定位与生产装配输出待确认",
+      "scope": "BOTH",
+      "status": "OPEN_RELEASE",
+      "evidence": {
+        "dedicatedTestPointApproval": false
+      },
+      "nextAction": "导出每件pin1实际坐标并按原理图极性核对；排针/裸pad不能自动作为量产探针方案；需测试夹具/接触/可达性。"
+    },
+    {
+      "issueID": "JK55-001",
+      "title": "三文字层缺失",
+      "scope": "2L",
+      "status": "CORRECTION_READY",
+      "evidence": {
+        "REF DES/SILKSCREEN_TOP": 20,
+        "COMPONENT VALUE/ASSEMBLY_TOP": 78
+      },
+      "nextAction": "按逐实例修正合同添加/迁层，保留普通PACKAGE GEOMETRY丝印极性字。"
+    },
+    {
+      "issueID": "JK55-002",
+      "title": "必要文字锚点偏离器件原点",
+      "scope": "2L",
+      "status": "CORRECTION_READY",
+      "evidence": {
+        "REF DES/SILKSCREEN_TOP": 58,
+        "REF DES/ASSEMBLY_TOP": 64
+      },
+      "nextAction": "原生实例更正xy/rotation/mirror，保持textBlock和justify；重开读回240个三文字锚点。"
+    },
+    {
+      "issueID": "JK55-003",
+      "title": "72件缺省高度未实际写入",
+      "scope": "2L",
+      "status": "CORRECTION_READY",
+      "evidence": {
+        "missingCount": 72,
+        "explicitCount": 8
+      },
+      "nextAction": "只向缺失PlaceBound添加1MM占位，保留8件明确高度及MIN属性。"
+    },
+    {
+      "issueID": "JK57-003",
+      "title": "原01env PDFTOP并非完整装配图",
+      "scope": "2L",
+      "status": "OPEN_PROCESS",
+      "evidence": {
+        "PDFTOPGroups": [
+          "REF DES/ASSEMBLY_TOP",
+          "PACKAGE GEOMETRY/SILKSCREEN_TOP",
+          "BOARD GEOMETRY/OUTLINE"
+        ]
+      },
+      "nextAction": "原Film保留；JK独立装配输出另包含PACKAGE GEOMETRY/ASSEMBLY_TOP、REF DES/ASSEMBLY_TOP、COMPONENT VALUE/ASSEMBLY_TOP及板框/孔，不称旧PDFTOP已输出value。"
+    },
+    {
+      "issueID": "JK55-001",
+      "title": "三文字层缺失",
+      "scope": "4L",
+      "status": "CORRECTION_READY",
+      "evidence": {
+        "REF DES/SILKSCREEN_TOP": 20,
+        "COMPONENT VALUE/ASSEMBLY_TOP": 78
+      },
+      "nextAction": "按逐实例修正合同添加/迁层，保留普通PACKAGE GEOMETRY丝印极性字。"
+    },
+    {
+      "issueID": "JK55-002",
+      "title": "必要文字锚点偏离器件原点",
+      "scope": "4L",
+      "status": "CORRECTION_READY",
+      "evidence": {
+        "REF DES/SILKSCREEN_TOP": 58,
+        "REF DES/ASSEMBLY_TOP": 64
+      },
+      "nextAction": "原生实例更正xy/rotation/mirror，保持textBlock和justify；重开读回240个三文字锚点。"
+    },
+    {
+      "issueID": "JK55-003",
+      "title": "72件缺省高度未实际写入",
+      "scope": "4L",
+      "status": "CORRECTION_READY",
+      "evidence": {
+        "missingCount": 72,
+        "explicitCount": 8
+      },
+      "nextAction": "只向缺失PlaceBound添加1MM占位，保留8件明确高度及MIN属性。"
+    },
+    {
+      "issueID": "JK57-003",
+      "title": "原01env PDFTOP并非完整装配图",
+      "scope": "4L",
+      "status": "OPEN_PROCESS",
+      "evidence": {
+        "PDFTOPGroups": [
+          "REF DES/ASSEMBLY_TOP",
+          "PACKAGE GEOMETRY/SILKSCREEN_TOP",
+          "BOARD GEOMETRY/OUTLINE"
+        ]
+      },
+      "nextAction": "原Film保留；JK独立装配输出另包含PACKAGE GEOMETRY/ASSEMBLY_TOP、REF DES/ASSEMBLY_TOP、COMPONENT VALUE/ASSEMBLY_TOP及板框/孔，不称旧PDFTOP已输出value。"
+    }
+  ]
+}

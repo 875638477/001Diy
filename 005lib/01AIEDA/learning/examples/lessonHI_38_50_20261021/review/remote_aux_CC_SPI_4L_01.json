@@ -1,0 +1,227 @@
+{
+  "status": "DEFINITE_COPPER_OVERLAPS",
+  "checkpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\postcritical_4L_b010",
+  "plans": [
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\ordinary_remote_4L_v7.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\aux_remote_4L_v8.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\CC_entry_4L_v1.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\SPI_external_4L_engineered_v6.json"
+  ],
+  "placementChanges": [],
+  "deletedSegments": [],
+  "operations": 56,
+  "piecesChecked": 139,
+  "definiteOverlapPieces": 3,
+  "spacingWarningPieces": 6,
+  "issues": [
+    {
+      "operation": "CC2_ENTRY",
+      "net": "USB_CC2",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "USB_VBUS",
+          "otherSource": "C10.1",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            42.2935,
+            8.7316,
+            43.1065,
+            9.6716
+          ],
+          "actualCopperGapMM": 0.0,
+          "baseRuleMM": 0.2,
+          "actualOverlap": true
+        },
+        {
+          "otherNet": "USB_VBUS",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            42.400000000000006,
+            8.901599999999998,
+            44.099999999999994,
+            9.5016
+          ],
+          "actualCopperGapMM": 0.0,
+          "baseRuleMM": 0.2,
+          "actualOverlap": true
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            42.400000000000006,
+            10.4764,
+            44.099999999999994,
+            11.076400000000001
+          ],
+          "actualCopperGapMM": 0.2748,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "C10.2",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            42.2935,
+            10.3064,
+            43.1065,
+            11.2464
+          ],
+          "actualCopperGapMM": 0.288838,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "CC2_ENTRY",
+      "net": "USB_CC2",
+      "type": "line",
+      "segment": 2,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "native_via",
+          "otherKind": "via",
+          "otherBounds": [
+            43.5,
+            10.4764,
+            44.099999999999994,
+            11.076400000000001
+          ],
+          "actualCopperGapMM": 0.2748,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            42.400000000000006,
+            10.4764,
+            44.099999999999994,
+            11.076400000000001
+          ],
+          "actualCopperGapMM": 0.2748,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            43.5,
+            10.4764,
+            44.099999999999994,
+            11.8764
+          ],
+          "actualCopperGapMM": 0.2748,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "CC_R3_GND",
+      "net": "GND",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "V3V3",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            33.0,
+            0.7,
+            33.599999999999994,
+            22.8
+          ],
+          "actualCopperGapMM": 0.1,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "CC_R3_GND_V",
+      "net": "GND",
+      "type": "via",
+      "segment": null,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "V3V3",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            33.0,
+            0.7,
+            33.599999999999994,
+            22.8
+          ],
+          "actualCopperGapMM": 0.0,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "CC_R4_GND",
+      "net": "GND",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "USB_ATTACH_N",
+          "otherSource": "Q2.1",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            46.5975,
+            11.6282,
+            47.4975,
+            12.8282
+          ],
+          "actualCopperGapMM": 0.0,
+          "baseRuleMM": 0.3,
+          "actualOverlap": true
+        }
+      ]
+    },
+    {
+      "operation": "CC_R4_GND_V",
+      "net": "GND",
+      "type": "via",
+      "segment": null,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "USB_ATTACH_N",
+          "otherSource": "Q2.1",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            46.5975,
+            11.6282,
+            47.4975,
+            12.8282
+          ],
+          "actualCopperGapMM": 0.0,
+          "baseRuleMM": 0.2,
+          "actualOverlap": true
+        }
+      ]
+    }
+  ],
+  "scope": "Conservative native pad BBOX plus actual cline-width copper; bbox rounded/circle corners may overestimate. New candidate rules/regions not fully resolved, so spacing warnings are BASE-rule diagnostics, not native errors. No-overlap does not certify clearance, conductive graph, neck counts, dynamic/reference copper, thermal/EMI or manufacturing."
+}

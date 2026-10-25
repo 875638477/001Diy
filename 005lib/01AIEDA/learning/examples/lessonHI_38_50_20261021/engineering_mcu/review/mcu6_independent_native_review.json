@@ -1,0 +1,899 @@
+{
+  "status": "MCU6_NATIVE_CHECKPOINT_INDEPENDENT_REVIEW_NOT_FINAL_HI_BOARD",
+  "date": "2026-10-21T23:40:34.953039+08:00",
+  "planSHA256": "4741058793a6348570e114500570ce1e0567b164443f706474cdb0cf3983680d",
+  "variants": {
+    "4L": {
+      "snapshot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\mcu_4L_b006\\normalized.json",
+      "sha256": "475e4dc2e78e9535ca96fcf585e1213cf9249da87aa6782d0ee5978087111500",
+      "readbackDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_mcu_4L_b006",
+      "inputs": [
+        {
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\mcu_4L_b006\\normalized.json",
+          "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\mcu_4L_b006\\normalized.json",
+          "sha256": "475e4dc2e78e9535ca96fcf585e1213cf9249da87aa6782d0ee5978087111500"
+        },
+        {
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\mcu_4L_b006\\networks.json",
+          "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\mcu_4L_b006\\networks.json",
+          "sha256": "3ab716b46ac6e93087a759e675ea710f743f8c32a9e605d420cb54a54999994e"
+        },
+        {
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_mcu_4L_b006\\hi_hse_isolation_challenge.txt",
+          "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\mcu_4L_b006\\hi_hse_isolation_challenge.txt",
+          "sha256": "27f7482fe2764154c37af84c8444839931b3de8046494fab82364101691e8880"
+        },
+        {
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_mcu_4L_b006\\native_summary.txt",
+          "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\mcu_4L_b006\\native_summary.txt",
+          "sha256": "099278582bb0092f07388e2ee99a183c07d6087642738d097ef0fddd43ff2d8f"
+        },
+        {
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_mcu_4L_b006\\hi_dynamic_boundaries.tsv",
+          "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\mcu_4L_b006\\hi_dynamic_boundaries.tsv",
+          "sha256": "dc859be30768e8a529a29be0c65fef506fe94b398ae255369117dadb21668b19"
+        },
+        {
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_mcu_4L_b006\\hi_rules_context.tsv",
+          "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\mcu_4L_b006\\hi_rules_context.tsv",
+          "sha256": "a47722b07c542b55eb44bf537074899db4b8676dec08dbebb24ba7a808088afe"
+        },
+        {
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_mcu_4L_b006\\physical_pad_layers.tsv",
+          "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\mcu_4L_b006\\physical_pad_layers.tsv",
+          "sha256": "e462865d866972d8d488bb3aa683d748577c1d9a0ba28ca52fc327da1380f085"
+        }
+      ],
+      "checks": [
+        {
+          "name": "Nativecomplete80comp69netDRC0current",
+          "pass": true,
+          "detail": "DE_BOARD_READ_COMPLETE\ndesign=HI_4L_mcu_4L_b006\ncomponents=80\nnets=69\nsymbols=84\ndrcs=0\ndrcState=t\n"
+        },
+        {
+          "name": "Placement_C21",
+          "pass": true,
+          "detail": {
+            "expected": {
+              "ref": "C21",
+              "xy": [
+                39.478,
+                36.25
+              ],
+              "rotation": 180,
+              "purpose": "Same PlaceBound as37.7,36.25 r0 but swap pad ends: NRST39.3764,right / GND37.8016,left. Removes VDDA/ground route crossings. PlaceBound spacing is not actual body/assembly qualification."
+            },
+            "actual": {
+              "ref": "C21",
+              "xy": [
+                39.478,
+                36.25
+              ],
+              "rotation": 180.0
+            }
+          }
+        },
+        {
+          "name": "Placement_C24",
+          "pass": true,
+          "detail": {
+            "expected": {
+              "ref": "C24",
+              "xy": [
+                34.8,
+                32.8984
+              ],
+              "rotation": 90,
+              "purpose": "Shift left .2 so .60 VDDA branch atx35.9 has actual .3935mm to each GND/ADC pad edge"
+            },
+            "actual": {
+              "ref": "C24",
+              "xy": [
+                34.8,
+                32.8984
+              ],
+              "rotation": 90.0
+            }
+          }
+        },
+        {
+          "name": "Placement_R23",
+          "pass": true,
+          "detail": {
+            "expected": {
+              "ref": "R23",
+              "xy": [
+                32.9,
+                33.02
+              ],
+              "rotation": 180,
+              "purpose": "Move SPI NSS series resistor left.8016mm; frees ADC0 diagonal to shiftedC24 without less-than.3 coppergap. Preserve electrical role/value.; +.02mm y avoids native POWER .3 clearance against retained STAR_C9_FEED"
+            },
+            "actual": {
+              "ref": "R23",
+              "xy": [
+                32.9,
+                33.02
+              ],
+              "rotation": 180.0
+            }
+          }
+        },
+        {
+          "name": "Via_HSE_LOCAL_C22",
+          "pass": true,
+          "detail": {
+            "expected": [
+              47.1,
+              35.5748
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_HSE_LOCAL_C23",
+          "pass": true,
+          "detail": {
+            "expected": [
+              37.7,
+              37.7
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_HSE_SINGLE_ANCHOR",
+          "pass": true,
+          "detail": {
+            "expected": [
+              45.45,
+              28.85
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_HSE_CASE_APP",
+          "pass": true,
+          "detail": {
+            "expected": [
+              43.2,
+              40.8
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_VSSA8_APP",
+          "pass": true,
+          "detail": {
+            "expected": [
+              38.7,
+              29.5
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_C18_APP_GND",
+          "pass": true,
+          "detail": {
+            "expected": [
+              37.9,
+              34.7748
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_C19_APP_GND",
+          "pass": true,
+          "detail": {
+            "expected": [
+              34.8,
+              39.7
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_C20_APP_GND",
+          "pass": true,
+          "detail": {
+            "expected": [
+              32.2,
+              40.1
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_C24_APP_GND",
+          "pass": true,
+          "detail": {
+            "expected": [
+              34.4,
+              35.7
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_C21_APP_GND",
+          "pass": true,
+          "detail": {
+            "expected": [
+              36.95,
+              36.25
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_NRST_SERVICE",
+          "pass": true,
+          "detail": {
+            "expected": [
+              38.7,
+              35.3
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_VBAT_C17_APP",
+          "pass": true,
+          "detail": {
+            "expected": [
+              48.9,
+              32.4
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "AllPlannedSegmentsReadExactly",
+          "pass": true,
+          "detail": {
+            "segmentCount": 67,
+            "missing": []
+          }
+        },
+        {
+          "name": "ExactlyOneTrueQuietShape",
+          "pass": true,
+          "detail": [
+            [
+              "ETCH/L2",
+              62.31
+            ]
+          ]
+        },
+        {
+          "name": "ActualQuietShapeOnCorrectLayer",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "ActualQuietNoOtherLayerApplicationCopperOverlap",
+          "pass": true,
+          "detail": [
+            [
+              "ETCH/L2",
+              0.0
+            ],
+            [
+              "ETCH/L3",
+              0.0
+            ]
+          ]
+        },
+        {
+          "name": "AllGroundPolygonsValid",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "ArcParserAreaAgreementWithinPoint01",
+          "pass": true,
+          "detail": [
+            [
+              "ETCH/L2",
+              62.31,
+              62.30999999999996
+            ],
+            [
+              "ETCH/L2",
+              4308.79,
+              4308.795475134287
+            ],
+            [
+              "ETCH/L3",
+              4308.79,
+              4308.795475134287
+            ]
+          ]
+        },
+        {
+          "name": "ThroughViaAllRealPads_HSE_LOCAL_C22",
+          "pass": true,
+          "detail": [
+            "ETCH/BOTTOM",
+            "ETCH/L2",
+            "ETCH/L3",
+            "ETCH/TOP"
+          ]
+        },
+        {
+          "name": "NoQuietViaUnexpectedAppPlaneTouch_HSE_LOCAL_C22",
+          "pass": true,
+          "detail": [
+            [
+              "ETCH/L2",
+              0.45000000000000284
+            ],
+            [
+              "ETCH/L3",
+              0.45000000000000284
+            ]
+          ]
+        },
+        {
+          "name": "QuietViaActualIslandOverlap_HSE_LOCAL_C22",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "ThroughViaAllRealPads_HSE_LOCAL_C23",
+          "pass": true,
+          "detail": [
+            "ETCH/BOTTOM",
+            "ETCH/L2",
+            "ETCH/L3",
+            "ETCH/TOP"
+          ]
+        },
+        {
+          "name": "NoQuietViaUnexpectedAppPlaneTouch_HSE_LOCAL_C23",
+          "pass": true,
+          "detail": [
+            [
+              "ETCH/L2",
+              0.5500000000000043
+            ],
+            [
+              "ETCH/L3",
+              0.5500000000000043
+            ]
+          ]
+        },
+        {
+          "name": "QuietViaActualIslandOverlap_HSE_LOCAL_C23",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "ThroughViaAllRealPads_HSE_SINGLE_ANCHOR",
+          "pass": true,
+          "detail": [
+            "ETCH/BOTTOM",
+            "ETCH/L2",
+            "ETCH/L3",
+            "ETCH/TOP"
+          ]
+        },
+        {
+          "name": "NoQuietViaUnexpectedAppPlaneTouch_HSE_SINGLE_ANCHOR",
+          "pass": true,
+          "detail": [
+            [
+              "ETCH/L2",
+              0.3999999999999986
+            ],
+            [
+              "ETCH/L3",
+              0.3999999999999986
+            ]
+          ]
+        },
+        {
+          "name": "QuietViaActualIslandOverlap_HSE_SINGLE_ANCHOR",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "ChallengeEveryExpectedEqualsActual",
+          "pass": true,
+          "detail": {
+            "proofCount": 12
+          }
+        },
+        {
+          "name": "ChallengeDeleteOnlyCorrectThroughVia",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "Negative_C22.2_C23.2",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "Negative_C22.2_U1.47",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "Negative_C22.2_Y1.2",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "Negative_C15.2_U1.47",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "Negative_Y1.2_Y1.4",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "Negative_Y1.2_U1.47",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "NegativeAll3GuardEndsRemainLocal",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "RestoreDRC0CurrentComplete",
+          "pass": true,
+          "detail": null
+        }
+      ],
+      "passed": 41,
+      "total": 41,
+      "allPassed": true,
+      "quietArea": 62.30999999999996,
+      "minimumPhysicalMoat": 0.3499999999999943
+    },
+    "2L": {
+      "snapshot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\mcu_2L_b006\\normalized.json",
+      "sha256": "d5b8a4a1216470a0660755e3877070b19acce824648c8945889eea4029ce9d52",
+      "readbackDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_mcu_2L_b006",
+      "inputs": [
+        {
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\mcu_2L_b006\\normalized.json",
+          "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\mcu_2L_b006\\normalized.json",
+          "sha256": "d5b8a4a1216470a0660755e3877070b19acce824648c8945889eea4029ce9d52"
+        },
+        {
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\mcu_2L_b006\\networks.json",
+          "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\mcu_2L_b006\\networks.json",
+          "sha256": "6281e9d0273c1186553d94a9eeabe180388543c6166092151f42814950eb306a"
+        },
+        {
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_mcu_2L_b006\\hi_hse_isolation_challenge.txt",
+          "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\mcu_2L_b006\\hi_hse_isolation_challenge.txt",
+          "sha256": "d6e0e2ad1b28112f20a557a05e114272c5ad54fa572c04ca709d65869420afdb"
+        },
+        {
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_mcu_2L_b006\\native_summary.txt",
+          "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\mcu_2L_b006\\native_summary.txt",
+          "sha256": "c6d9e6dffa39ae27e3e08e78f633e4b7030c110f91fea54ea8429fe789131d69"
+        },
+        {
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_mcu_2L_b006\\hi_dynamic_boundaries.tsv",
+          "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\mcu_2L_b006\\hi_dynamic_boundaries.tsv",
+          "sha256": "228cb3748b10f4ec2036a60f480fa3aca968280c6fa670b228608399db6603e4"
+        },
+        {
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_mcu_2L_b006\\hi_rules_context.tsv",
+          "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\mcu_2L_b006\\hi_rules_context.tsv",
+          "sha256": "d8d2f3ac02c7c62432c868062dacfdd1866f98493d228f1fbe10e92ebb854d12"
+        },
+        {
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_mcu_2L_b006\\physical_pad_layers.tsv",
+          "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\mcu_2L_b006\\physical_pad_layers.tsv",
+          "sha256": "847620f4dc214cb47d614cd80e82defa8826ea287c4ec3f6a6ba330fc0b6e38f"
+        }
+      ],
+      "checks": [
+        {
+          "name": "Nativecomplete80comp69netDRC0current",
+          "pass": true,
+          "detail": "DE_BOARD_READ_COMPLETE\ndesign=HI_2L_mcu_2L_b006\ncomponents=80\nnets=69\nsymbols=84\ndrcs=0\ndrcState=t\n"
+        },
+        {
+          "name": "Placement_C21",
+          "pass": true,
+          "detail": {
+            "expected": {
+              "ref": "C21",
+              "xy": [
+                39.478,
+                36.25
+              ],
+              "rotation": 180,
+              "purpose": "Same PlaceBound as37.7,36.25 r0 but swap pad ends: NRST39.3764,right / GND37.8016,left. Removes VDDA/ground route crossings. PlaceBound spacing is not actual body/assembly qualification."
+            },
+            "actual": {
+              "ref": "C21",
+              "xy": [
+                39.478,
+                36.25
+              ],
+              "rotation": 180.0
+            }
+          }
+        },
+        {
+          "name": "Placement_C24",
+          "pass": true,
+          "detail": {
+            "expected": {
+              "ref": "C24",
+              "xy": [
+                34.8,
+                32.8984
+              ],
+              "rotation": 90,
+              "purpose": "Shift left .2 so .60 VDDA branch atx35.9 has actual .3935mm to each GND/ADC pad edge"
+            },
+            "actual": {
+              "ref": "C24",
+              "xy": [
+                34.8,
+                32.8984
+              ],
+              "rotation": 90.0
+            }
+          }
+        },
+        {
+          "name": "Placement_R23",
+          "pass": true,
+          "detail": {
+            "expected": {
+              "ref": "R23",
+              "xy": [
+                32.9,
+                33.02
+              ],
+              "rotation": 180,
+              "purpose": "Move SPI NSS series resistor left.8016mm; frees ADC0 diagonal to shiftedC24 without less-than.3 coppergap. Preserve electrical role/value.; +.02mm y avoids native POWER .3 clearance against retained STAR_C9_FEED"
+            },
+            "actual": {
+              "ref": "R23",
+              "xy": [
+                32.9,
+                33.02
+              ],
+              "rotation": 180.0
+            }
+          }
+        },
+        {
+          "name": "Via_HSE_LOCAL_C22",
+          "pass": true,
+          "detail": {
+            "expected": [
+              47.1,
+              35.5748
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_HSE_LOCAL_C23",
+          "pass": true,
+          "detail": {
+            "expected": [
+              37.7,
+              37.7
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_HSE_SINGLE_ANCHOR",
+          "pass": true,
+          "detail": {
+            "expected": [
+              45.45,
+              28.85
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_HSE_CASE_APP",
+          "pass": true,
+          "detail": {
+            "expected": [
+              43.2,
+              40.8
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_VSSA8_APP",
+          "pass": true,
+          "detail": {
+            "expected": [
+              38.7,
+              29.5
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_C18_APP_GND",
+          "pass": true,
+          "detail": {
+            "expected": [
+              37.9,
+              34.7748
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_C19_APP_GND",
+          "pass": true,
+          "detail": {
+            "expected": [
+              34.8,
+              39.7
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_C20_APP_GND",
+          "pass": true,
+          "detail": {
+            "expected": [
+              32.2,
+              40.1
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_C24_APP_GND",
+          "pass": true,
+          "detail": {
+            "expected": [
+              34.4,
+              35.7
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_C21_APP_GND",
+          "pass": true,
+          "detail": {
+            "expected": [
+              36.95,
+              36.25
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_NRST_SERVICE",
+          "pass": true,
+          "detail": {
+            "expected": [
+              38.7,
+              35.3
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "Via_VBAT_C17_APP",
+          "pass": true,
+          "detail": {
+            "expected": [
+              48.9,
+              32.4
+            ],
+            "found": 1
+          }
+        },
+        {
+          "name": "AllPlannedSegmentsReadExactly",
+          "pass": true,
+          "detail": {
+            "segmentCount": 67,
+            "missing": []
+          }
+        },
+        {
+          "name": "ExactlyOneTrueQuietShape",
+          "pass": true,
+          "detail": [
+            [
+              "ETCH/BOTTOM",
+              62.31
+            ]
+          ]
+        },
+        {
+          "name": "ActualQuietShapeOnCorrectLayer",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "ActualQuietNoOtherLayerApplicationCopperOverlap",
+          "pass": true,
+          "detail": [
+            [
+              "ETCH/BOTTOM",
+              0.0
+            ]
+          ]
+        },
+        {
+          "name": "AllGroundPolygonsValid",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "ArcParserAreaAgreementWithinPoint01",
+          "pass": true,
+          "detail": [
+            [
+              "ETCH/BOTTOM",
+              62.31,
+              62.30999999999996
+            ],
+            [
+              "ETCH/BOTTOM",
+              4265.208,
+              4265.212326856942
+            ]
+          ]
+        },
+        {
+          "name": "ThroughViaAllRealPads_HSE_LOCAL_C22",
+          "pass": true,
+          "detail": [
+            "ETCH/BOTTOM",
+            "ETCH/TOP"
+          ]
+        },
+        {
+          "name": "NoQuietViaUnexpectedAppPlaneTouch_HSE_LOCAL_C22",
+          "pass": true,
+          "detail": [
+            [
+              "ETCH/BOTTOM",
+              0.45000000000000284
+            ]
+          ]
+        },
+        {
+          "name": "QuietViaActualIslandOverlap_HSE_LOCAL_C22",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "ThroughViaAllRealPads_HSE_LOCAL_C23",
+          "pass": true,
+          "detail": [
+            "ETCH/BOTTOM",
+            "ETCH/TOP"
+          ]
+        },
+        {
+          "name": "NoQuietViaUnexpectedAppPlaneTouch_HSE_LOCAL_C23",
+          "pass": true,
+          "detail": [
+            [
+              "ETCH/BOTTOM",
+              0.5500000000000043
+            ]
+          ]
+        },
+        {
+          "name": "QuietViaActualIslandOverlap_HSE_LOCAL_C23",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "ThroughViaAllRealPads_HSE_SINGLE_ANCHOR",
+          "pass": true,
+          "detail": [
+            "ETCH/BOTTOM",
+            "ETCH/TOP"
+          ]
+        },
+        {
+          "name": "NoQuietViaUnexpectedAppPlaneTouch_HSE_SINGLE_ANCHOR",
+          "pass": true,
+          "detail": [
+            [
+              "ETCH/BOTTOM",
+              0.3999999999999986
+            ]
+          ]
+        },
+        {
+          "name": "QuietViaActualIslandOverlap_HSE_SINGLE_ANCHOR",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "ChallengeEveryExpectedEqualsActual",
+          "pass": true,
+          "detail": {
+            "proofCount": 12
+          }
+        },
+        {
+          "name": "ChallengeDeleteOnlyCorrectThroughVia",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "Negative_C22.2_C23.2",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "Negative_C22.2_U1.47",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "Negative_C22.2_Y1.2",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "Negative_C15.2_U1.47",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "Negative_Y1.2_Y1.4",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "Negative_Y1.2_U1.47",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "NegativeAll3GuardEndsRemainLocal",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "RestoreDRC0CurrentComplete",
+          "pass": true,
+          "detail": null
+        }
+      ],
+      "passed": 41,
+      "total": 41,
+      "allPassed": true,
+      "quietArea": 62.30999999999996,
+      "minimumPhysicalMoat": 0.3499999999999943
+    }
+  },
+  "limitations": [
+    "HI wholeboard still remaining112; USB/GPIO laterbatchesnotincluded",
+    "Hardwarestartup/ADC/EMI/impedance andGUI notestablished",
+    "Arcflatteningsagitta<=.00002mm; nativearea rounded/quantized difference<=.01mm2 accepted only forgeometryparsercheck"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "operation": {
+    "type": "route",
+    "id": "V5_SENSE_C5_R1",
+    "net": "V5",
+    "layer": "TOP",
+    "points": [
+      [
+        14.4,
+        23.1
+      ],
+      [
+        15.7,
+        21.8
+      ],
+      [
+        15.7,
+        20.2
+      ],
+      [
+        18.9,
+        16.95
+      ],
+      [
+        27.4,
+        16.95
+      ],
+      [
+        27.4,
+        16
+      ],
+      [
+        31.8,
+        16
+      ],
+      [
+        31.8,
+        19.1
+      ],
+      [
+        30.8984,
+        19.1
+      ]
+    ],
+    "widths": [
+      0.6,
+      0.6,
+      0.6,
+      0.6,
+      0.6,
+      0.6,
+      0.6,
+      0.6
+    ],
+    "from": "C5.1",
+    "to": "R1.1",
+    "purpose": "Independent filtered-output sense branch, avoid SW/L1 switching side and leave FB node small; not load-distribution branch."
+  },
+  "reason": "TOP proposed y16.95 crosses VIN_C2_C3 about25.7356,16.95; discovered before native execution, no fake DRC pass."
+}

@@ -1,0 +1,12 @@
+procedure(hiRoute(f id net layer points widths)
+ let((ret actualPoints actualWidths)
+  actualPoints=points actualWidths=widths
+  when(equal(id "RIGHT_BOOT_DIRECT_TOP")
+   fprintf(f "HI_BOOT_CONSTRUCTION_PHYSICAL_ANCHORS U1_44=%L R28_1=%L R28_2=%L\n" gPin("U1" "44")->?? gPin("R28" "1")->?? gPin("R28" "2")->??)
+   actualPoints=reverse(points) actualWidths=reverse(widths)
+   fprintf(f "HI_BOOT_REVERSE_CONSTRUCTION_SAME_GEOMETRY requestedPoints=%L actualConstructionPoints=%L fromPhysicalR28Pin=t\n" points actualPoints) drain(f))
+  ret=gRouteNative(net actualPoints actualWidths strcat("ETCH/" layer) f id)
+  foreach(o car(ret)
+   fprintf(f "HI_CREATED_ROUTE_NATIVE_NET id=%L expected=%L object=%L actualNet=%L layer=%L\n" id net o if(o->net then o->net->name else nil) o->layer))
+  hiReg(id "route" car(ret))
+  ret))

@@ -1,0 +1,47 @@
+{
+  "status": "REVIEW_REQUIRED",
+  "tests": 33790,
+  "issues": [
+    {
+      "kind": "segment-segment",
+      "a": "BASE_G",
+      "b": "STAR_U1_36:0",
+      "geometryLowerBoundGap_mm": 0.25,
+      "requiredAssumed_mm": 0.3
+    },
+    {
+      "kind": "segment-segment",
+      "a": "BASE_G",
+      "b": "STAR_U1_24:0",
+      "geometryLowerBoundGap_mm": 0.25,
+      "requiredAssumed_mm": 0.3
+    },
+    {
+      "kind": "segment-segment",
+      "a": "BASE_G",
+      "b": "STAR_U1_48:0",
+      "geometryLowerBoundGap_mm": 0.25,
+      "requiredAssumed_mm": 0.3
+    },
+    {
+      "kind": "segment-segment",
+      "a": "C2_GND_VIAS:1",
+      "b": "IN_D1_C2:0",
+      "geometryLowerBoundGap_mm": -0.15,
+      "requiredAssumed_mm": 0.3
+    },
+    {
+      "kind": "segment-via",
+      "a": "IN_D1_C2:0",
+      "b": "V_HI_C2_B",
+      "geometryLowerBoundGap_mm": -0.15,
+      "requiredAssumed_mm": 0.3
+    }
+  ],
+  "files": [
+    "power_critical_paths_01.json",
+    "power_paths_02b.json",
+    "power_star_03.json"
+  ],
+  "scope": "Independent sufficient conservative AABB clearance precheck only, not native rules or planes. Initial G snapshot plus proposed C3 shift. All candidates crosschecked together and against actual G routes/vias; SMT pads only TOP, THT bottom apertures and mechanical keepout not yet included."
+}

@@ -1,0 +1,24 @@
+from pathlib import Path
+import json,hashlib,argparse,subprocess,sys,os,stat,datetime
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');A=argparse.ArgumentParser();A.add_argument('--variant',choices=['2L','4L'],required=True);A.add_argument('--try-suffix',default='');a=A.parse_args();assert a.try_suffix in ['', '_try02'];work=R/f'native_work/source_b015_{a.variant}{a.try_suffix}';cfgpath=work/'guard_configuration.json';cfg=json.loads(cfgpath.read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper();inside=lambda p,root:p.resolve().is_relative_to(root.resolve());scratch=Path(cfg['scratchReadonlyInput']);output=Path(cfg['candidateOutput']);meta=Path(cfg['compiledMetadata']);script=Path(cfg['script']);log=Path(cfg['log']);assert inside(scratch,R/'native_work') and inside(output,R/'native_candidates') and inside(script,R/'scripts') and inside(log,R/'logs')
+assert scratch.is_file() and not output.exists() and not log.exists()
+assert scratch.stat().st_file_attributes & stat.FILE_ATTRIBUTE_READONLY
+assert sha(scratch)==cfg['scratchSHA256'] and sha(meta)==cfg['compiledMetadataSHA256'] and sha(Path(cfg['plan']))==cfg['planSHA256'] and sha(script)==cfg['scriptSHA256']
+m=json.loads(meta.read_text());assert Path(m['output']).resolve()==output.resolve() and Path(m['script']).resolve()==script.resolve()
+for x in cfg['protectedOriginals']:assert sha(Path(x['path']))==x['sha256']
+for x in m['helperSnapshots']:assert sha(Path(x['snapshot']))==x['sha256']
+# Assert the only save target passed by the generated batch is this new candidate.
+program=next(Path(x['snapshot']) for x in m['helperSnapshots'] if Path(x['source']).name==cfg['tag']+'.il');code=program.read_text();assert code.count('hiFinalize(')==1 and output.as_posix() in code
+assert all(Path(x['path']).as_posix() not in code for x in cfg['protectedOriginals'])
+# No existing Cadence process is allowed: this executor remains the sole native owner.
+rt=work/'guard_runtime';rt.mkdir(exist_ok=False);env=os.environ.copy();env.update(TEMP=str(rt),TMP=str(rt));si=subprocess.STARTUPINFO();si.dwFlags|=subprocess.STARTF_USESHOWWINDOW;si.wShowWindow=0
+ps=subprocess.run(['powershell','-NoProfile','-Command',"@(Get-CimInstance Win32_Process -Filter \"Name='allegro.exe'\" | Select-Object ProcessId,CreationDate,ExecutablePath) | ConvertTo-Json -Compress"],cwd=rt,env=env,capture_output=True,text=True,startupinfo=si,creationflags=subprocess.CREATE_NO_WINDOW,check=True);assert not ps.stdout.strip(), 'Another native Cadence process exists; do not run in parallel'
+aliases={str(p):sha(p) for p in [R/'inventory/current_2L.json',R/'inventory/current_4L.json']};record={'status':'GUARD_VERIFIED_ONLY_NEW_READONLY_SCRATCH_MEMORY_EDIT_AND_NEW_CANDIDATE_SAVEAS','startUTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'configuration':str(cfgpath),'input':str(scratch),'inputReadonlyAttribute':True,'inputSHA256':sha(scratch),'candidateNewOutput':str(output),'protectedBefore':cfg['protectedOriginals'],'currentAliasSHABefore':aliases,'scope':'Reversible native training reroute: deletions/moves apply only in memory loaded from new readonly scratch; all originals are never opened. SaveAs allowlisted new candidate only. No public library or real user engineering file mutation.'}
+(work/'guard_preflight.json').write_text(json.dumps(record,indent=2),encoding='utf8');print(json.dumps({'guard':'VERIFIED','input':str(scratch),'output':str(output),'mode':'-readonly','protectedOriginals':len(cfg['protectedOriginals'])}),flush=True)
+PTH=R.parent.parent/'tools/python_3_14_0/python.exe';returncode=None
+try:
+ r=subprocess.run([str(PTH),str(R/'scripts/launchHI_1800_path.py'),'--readonly','--board',str(scratch),'--script',str(script),'--log',str(log)],cwd=rt,env=env);returncode=r.returncode
+finally:
+ after=[{'path':x['path'],'expected':x['sha256'],'actual':sha(Path(x['path']))} for x in cfg['protectedOriginals']];record.update({'finishUTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'launcherExit':returncode,'protectedAfter':after,'scratchSHAAfter':sha(scratch),'candidateExists':output.exists(),'candidateSHA256':sha(output) if output.exists() else None,'aliasesSHAAfter':{p:sha(Path(p)) for p in aliases},'aliasCurrentNotUpdated':all(sha(Path(p))==h for p,h in aliases.items())});record['allProtectedUnchanged']=all(x['actual']==x['expected'] for x in after) and sha(scratch)==cfg['scratchSHA256'];(work/'guard_result.json').write_text(json.dumps(record,indent=2),encoding='utf8');assert record['allProtectedUnchanged'] and record['aliasCurrentNotUpdated']
+assert returncode==0,'Native launcher did not complete successfully; keep failed candidate/log, no alias update'
+print(json.dumps({'guard':'PROTECTED_SOURCES_STABLE_NO_ALIAS_UPDATE','candidateExists':output.exists(),'candidate':str(output),'sha256':sha(output) if output.exists() else None}),flush=True)

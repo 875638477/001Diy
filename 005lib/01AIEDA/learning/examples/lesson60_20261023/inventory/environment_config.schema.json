@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "executionEnabled",
+    "recordRoot",
+    "cadenceRoot",
+    "packageRoots",
+    "libraryRoots",
+    "workRoot",
+    "guiVerification"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "executionEnabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "recordRoot": {
+      "type": "string"
+    },
+    "cadenceRoot": {
+      "type": "string"
+    },
+    "expectedCadenceMajorMinor": {
+      "const": "17.2"
+    },
+    "expectedPatchLevel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "packageRoots": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "libraryRoots": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "workRoot": {
+      "type": "string"
+    },
+    "externalEnvRoot": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "guiVerification": {
+      "enum": [
+        "UNTESTED",
+        "CURRENT_PASS",
+        "CURRENT_FAIL"
+      ]
+    },
+    "optionalTools": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$comment": "Data-shape validation only. Resolve/contain paths and verify actual dependencies before executing. No license or credential fields; no evidence of target-machine runtime success."
+}

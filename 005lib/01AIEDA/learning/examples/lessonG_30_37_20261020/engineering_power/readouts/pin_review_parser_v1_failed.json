@@ -1,0 +1,2387 @@
+{
+  "status": "FAIL",
+  "checks": [
+    {
+      "id": "source_pin_map_Y1",
+      "pass": true,
+      "actual": {
+        "3": "XTAL_OUT",
+        "1": "OSC_IN",
+        "4": "GND",
+        "2": "GND"
+      },
+      "expected": {
+        "1": "OSC_IN",
+        "2": "GND",
+        "3": "XTAL_OUT",
+        "4": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_U5",
+      "pass": true,
+      "actual": {
+        "3": "V3V3",
+        "1": "CAN_TXD",
+        "4": "CAN_RXD",
+        "8": null,
+        "5": null,
+        "2": "GND",
+        "6": "CAN_L",
+        "7": "CAN_H"
+      },
+      "expected": {
+        "1": "CAN_TXD",
+        "2": "GND",
+        "3": "V3V3",
+        "4": "CAN_RXD",
+        "5": null,
+        "6": "CAN_L",
+        "7": "CAN_H",
+        "8": null
+      }
+    },
+    {
+      "id": "source_pin_map_U4",
+      "pass": true,
+      "actual": {
+        "5": "USB_VBUS",
+        "4": "USB_DM",
+        "3": "USB_DM",
+        "6": "USB_DP",
+        "1": "USB_DP",
+        "2": "GND"
+      },
+      "expected": {
+        "1": "USB_DP",
+        "2": "GND",
+        "3": "USB_DM",
+        "4": "USB_DM",
+        "5": "USB_VBUS",
+        "6": "USB_DP"
+      }
+    },
+    {
+      "id": "source_pin_map_U3",
+      "pass": true,
+      "actual": {
+        "5": "V3V3",
+        "4": null,
+        "1": "V5",
+        "2": "GND",
+        "3": "V5"
+      },
+      "expected": {
+        "1": "V5",
+        "2": "GND",
+        "3": "V5",
+        "4": null,
+        "5": "V3V3"
+      }
+    },
+    {
+      "id": "source_pin_map_U2",
+      "pass": true,
+      "actual": {
+        "3": "VIN_PROT",
+        "2": "BUCK_SW",
+        "1": "GND",
+        "4": "BUCK_FB",
+        "5": null,
+        "6": "BUCK_BOOT"
+      },
+      "expected": {
+        "1": "GND",
+        "2": "BUCK_SW",
+        "3": "VIN_PROT",
+        "4": "BUCK_FB",
+        "5": null,
+        "6": "BUCK_BOOT"
+      }
+    },
+    {
+      "id": "source_pin_map_U1",
+      "pass": true,
+      "actual": {
+        "47": "GND",
+        "35": "GND",
+        "23": "GND",
+        "8": "GND",
+        "48": "V3V3",
+        "36": "V3V3",
+        "24": "V3V3",
+        "9": "VDDA",
+        "1": "V3V3",
+        "6": "OSC_OUT",
+        "5": "OSC_IN",
+        "4": "GPIO_PC15",
+        "3": "GPIO_PC14",
+        "2": "GPIO_PC13",
+        "46": "GPIO_PB9",
+        "45": "GPIO_PB8",
+        "43": "I2C_SDA",
+        "42": "I2C_SCL",
+        "41": "GPIO_PB5",
+        "40": "GPIO_PB4",
+        "39": "SWO",
+        "20": "BOOT1",
+        "28": "GPIO_PB15",
+        "27": "GPIO_PB14",
+        "26": "GPIO_PB13",
+        "25": "GPIO_PB12",
+        "22": "GPIO_PB11",
+        "21": "GPIO_PB10",
+        "19": "GPIO_PB1",
+        "18": "VBUS_PRESENT_N",
+        "30": "PA9_UART_TX",
+        "29": "USB_ATTACH_N",
+        "17": "PA7_SPI_MOSI",
+        "16": "PA6_SPI_MISO",
+        "15": "PA5_SPI_SCK",
+        "14": "PA4_SPI_NSS",
+        "13": "GPIO_PA3",
+        "12": "GPIO_PA2",
+        "38": "GPIO_PA15",
+        "37": "SWCLK",
+        "34": "SWDIO",
+        "33": "PA12_SHARED",
+        "32": "PA11_SHARED",
+        "31": "PA10_UART_RX",
+        "11": "GPIO_PA1",
+        "10": "ADC0",
+        "7": "NRST",
+        "44": "BOOT0"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "GPIO_PC13",
+        "3": "GPIO_PC14",
+        "4": "GPIO_PC15",
+        "5": "OSC_IN",
+        "6": "OSC_OUT",
+        "7": "NRST",
+        "8": "GND",
+        "9": "VDDA",
+        "10": "ADC0",
+        "11": "GPIO_PA1",
+        "12": "GPIO_PA2",
+        "13": "GPIO_PA3",
+        "14": "PA4_SPI_NSS",
+        "15": "PA5_SPI_SCK",
+        "16": "PA6_SPI_MISO",
+        "17": "PA7_SPI_MOSI",
+        "18": "VBUS_PRESENT_N",
+        "19": "GPIO_PB1",
+        "20": "BOOT1",
+        "21": "GPIO_PB10",
+        "22": "GPIO_PB11",
+        "23": "GND",
+        "24": "V3V3",
+        "25": "GPIO_PB12",
+        "26": "GPIO_PB13",
+        "27": "GPIO_PB14",
+        "28": "GPIO_PB15",
+        "29": "USB_ATTACH_N",
+        "30": "PA9_UART_TX",
+        "31": "PA10_UART_RX",
+        "32": "PA11_SHARED",
+        "33": "PA12_SHARED",
+        "34": "SWDIO",
+        "35": "GND",
+        "36": "V3V3",
+        "37": "SWCLK",
+        "38": "GPIO_PA15",
+        "39": "SWO",
+        "40": "GPIO_PB4",
+        "41": "GPIO_PB5",
+        "42": "I2C_SCL",
+        "43": "I2C_SDA",
+        "44": "BOOT0",
+        "45": "GPIO_PB8",
+        "46": "GPIO_PB9",
+        "47": "GND",
+        "48": "V3V3"
+      }
+    },
+    {
+      "id": "source_pin_map_R8",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "VBUS_GATE"
+      },
+      "expected": {
+        "1": "VBUS_GATE",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_R6",
+      "pass": true,
+      "actual": {
+        "2": "USB_DM",
+        "1": "PA11_SHARED"
+      },
+      "expected": {
+        "1": "PA11_SHARED",
+        "2": "USB_DM"
+      }
+    },
+    {
+      "id": "source_pin_map_R5",
+      "pass": true,
+      "actual": {
+        "2": "USB_DP",
+        "1": "PA12_SHARED"
+      },
+      "expected": {
+        "1": "PA12_SHARED",
+        "2": "USB_DP"
+      }
+    },
+    {
+      "id": "source_pin_map_R32",
+      "pass": true,
+      "actual": {
+        "2": "ADC0",
+        "1": "ADC_IN"
+      },
+      "expected": {
+        "1": "ADC_IN",
+        "2": "ADC0"
+      }
+    },
+    {
+      "id": "source_pin_map_R30",
+      "pass": true,
+      "actual": {
+        "2": "BOOT_SERVICE",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "BOOT_SERVICE"
+      }
+    },
+    {
+      "id": "source_pin_map_R4",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "USB_CC2"
+      },
+      "expected": {
+        "1": "USB_CC2",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_R3",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "USB_CC1"
+      },
+      "expected": {
+        "1": "USB_CC1",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_R2",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "BUCK_FB"
+      },
+      "expected": {
+        "1": "BUCK_FB",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_R20",
+      "pass": true,
+      "actual": {
+        "2": "I2C_SDA",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "I2C_SDA"
+      }
+    },
+    {
+      "id": "source_pin_map_R19",
+      "pass": true,
+      "actual": {
+        "2": "I2C_SCL",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "I2C_SCL"
+      }
+    },
+    {
+      "id": "source_pin_map_R23",
+      "pass": true,
+      "actual": {
+        "2": "SPI_NSS",
+        "1": "PA4_SPI_NSS"
+      },
+      "expected": {
+        "1": "PA4_SPI_NSS",
+        "2": "SPI_NSS"
+      }
+    },
+    {
+      "id": "source_pin_map_R22",
+      "pass": true,
+      "actual": {
+        "2": "SPI_MOSI",
+        "1": "PA7_SPI_MOSI"
+      },
+      "expected": {
+        "1": "PA7_SPI_MOSI",
+        "2": "SPI_MOSI"
+      }
+    },
+    {
+      "id": "source_pin_map_R21",
+      "pass": true,
+      "actual": {
+        "2": "SPI_SCK",
+        "1": "PA5_SPI_SCK"
+      },
+      "expected": {
+        "1": "PA5_SPI_SCK",
+        "2": "SPI_SCK"
+      }
+    },
+    {
+      "id": "source_pin_map_R16",
+      "pass": true,
+      "actual": {
+        "2": "UART_TX",
+        "1": "PA9_UART_TX"
+      },
+      "expected": {
+        "1": "PA9_UART_TX",
+        "2": "UART_TX"
+      }
+    },
+    {
+      "id": "source_pin_map_R15",
+      "pass": true,
+      "actual": {
+        "2": "CAN_L",
+        "1": "CAN_H"
+      },
+      "expected": {
+        "1": "CAN_H",
+        "2": "CAN_L"
+      }
+    },
+    {
+      "id": "source_pin_map_R9",
+      "pass": true,
+      "actual": {
+        "2": "VBUS_PRESENT_N",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "VBUS_PRESENT_N"
+      }
+    },
+    {
+      "id": "source_pin_map_R7",
+      "pass": true,
+      "actual": {
+        "2": "VBUS_GATE",
+        "1": "USB_VBUS"
+      },
+      "expected": {
+        "1": "USB_VBUS",
+        "2": "VBUS_GATE"
+      }
+    },
+    {
+      "id": "source_pin_map_R29",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "BOOT1"
+      },
+      "expected": {
+        "1": "BOOT1",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_R28",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "BOOT0"
+      },
+      "expected": {
+        "1": "BOOT0",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_R27",
+      "pass": true,
+      "actual": {
+        "2": "NRST",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "NRST"
+      }
+    },
+    {
+      "id": "source_pin_map_R25",
+      "pass": true,
+      "actual": {
+        "2": "PA4_SPI_NSS",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "PA4_SPI_NSS"
+      }
+    },
+    {
+      "id": "source_pin_map_R18",
+      "pass": true,
+      "actual": {
+        "2": "V3V3",
+        "1": "UART_RX"
+      },
+      "expected": {
+        "1": "UART_RX",
+        "2": "V3V3"
+      }
+    },
+    {
+      "id": "source_pin_map_R14",
+      "pass": true,
+      "actual": {
+        "2": "CAN_TXD",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "CAN_TXD"
+      }
+    },
+    {
+      "id": "source_pin_map_R31",
+      "pass": true,
+      "actual": {
+        "2": "XTAL_OUT",
+        "1": "OSC_OUT"
+      },
+      "expected": {
+        "1": "OSC_OUT",
+        "2": "XTAL_OUT"
+      }
+    },
+    {
+      "id": "source_pin_map_R26",
+      "pass": true,
+      "actual": {
+        "2": "VDDA",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "VDDA"
+      }
+    },
+    {
+      "id": "source_pin_map_R24",
+      "pass": true,
+      "actual": {
+        "2": "SPI_MISO",
+        "1": "PA6_SPI_MISO"
+      },
+      "expected": {
+        "1": "PA6_SPI_MISO",
+        "2": "SPI_MISO"
+      }
+    },
+    {
+      "id": "source_pin_map_R17",
+      "pass": true,
+      "actual": {
+        "2": "UART_RX",
+        "1": "PA10_UART_RX"
+      },
+      "expected": {
+        "1": "PA10_UART_RX",
+        "2": "UART_RX"
+      }
+    },
+    {
+      "id": "source_pin_map_R13",
+      "pass": true,
+      "actual": {
+        "2": "CAN_RXD",
+        "1": "PA11_SHARED"
+      },
+      "expected": {
+        "1": "PA11_SHARED",
+        "2": "CAN_RXD"
+      }
+    },
+    {
+      "id": "source_pin_map_R12",
+      "pass": true,
+      "actual": {
+        "2": "CAN_TXD",
+        "1": "PA12_SHARED"
+      },
+      "expected": {
+        "1": "PA12_SHARED",
+        "2": "CAN_TXD"
+      }
+    },
+    {
+      "id": "source_pin_map_R11",
+      "pass": true,
+      "actual": {
+        "2": "USB_DP",
+        "1": "USB_PULLUP_SRC"
+      },
+      "expected": {
+        "1": "USB_PULLUP_SRC",
+        "2": "USB_DP"
+      }
+    },
+    {
+      "id": "source_pin_map_R10",
+      "pass": true,
+      "actual": {
+        "2": "USB_ATTACH_N",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "USB_ATTACH_N"
+      }
+    },
+    {
+      "id": "source_pin_map_R1",
+      "pass": true,
+      "actual": {
+        "2": "BUCK_FB",
+        "1": "V5"
+      },
+      "expected": {
+        "1": "V5",
+        "2": "BUCK_FB"
+      }
+    },
+    {
+      "id": "source_pin_map_Q2",
+      "pass": true,
+      "actual": {
+        "2": "V3V3",
+        "1": "USB_ATTACH_N",
+        "3": "USB_PULLUP_SRC"
+      },
+      "expected": {
+        "1": "USB_ATTACH_N",
+        "2": "V3V3",
+        "3": "USB_PULLUP_SRC"
+      }
+    },
+    {
+      "id": "source_pin_map_Q1",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "VBUS_GATE",
+        "3": "VBUS_PRESENT_N"
+      },
+      "expected": {
+        "1": "VBUS_GATE",
+        "2": "GND",
+        "3": "VBUS_PRESENT_N"
+      }
+    },
+    {
+      "id": "source_pin_map_L1",
+      "pass": true,
+      "actual": {
+        "1": "BUCK_SW",
+        "2": "V5"
+      },
+      "expected": {
+        "1": "BUCK_SW",
+        "2": "V5"
+      }
+    },
+    {
+      "id": "source_pin_map_J9",
+      "pass": true,
+      "actual": {
+        "6": "SWO",
+        "5": "NRST",
+        "4": "SWCLK",
+        "3": "SWDIO",
+        "2": "GND",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "GND",
+        "3": "SWDIO",
+        "4": "SWCLK",
+        "5": "NRST",
+        "6": "SWO"
+      }
+    },
+    {
+      "id": "source_pin_map_J8",
+      "pass": true,
+      "actual": {
+        "2": "BOOT0",
+        "1": "BOOT_SERVICE"
+      },
+      "expected": {
+        "1": "BOOT_SERVICE",
+        "2": "BOOT0"
+      }
+    },
+    {
+      "id": "source_pin_map_J7",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "NRST"
+      },
+      "expected": {
+        "1": "NRST",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_J6",
+      "pass": true,
+      "actual": {
+        "6": "GND",
+        "5": "SPI_NSS",
+        "4": "SPI_MISO",
+        "3": "SPI_MOSI",
+        "2": "SPI_SCK",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "SPI_SCK",
+        "3": "SPI_MOSI",
+        "4": "SPI_MISO",
+        "5": "SPI_NSS",
+        "6": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_J5",
+      "pass": true,
+      "actual": {
+        "4": "GND",
+        "3": "I2C_SDA",
+        "2": "I2C_SCL",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "I2C_SCL",
+        "3": "I2C_SDA",
+        "4": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_J4",
+      "pass": true,
+      "actual": {
+        "4": "GND",
+        "3": "UART_RX",
+        "2": "UART_TX",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "UART_TX",
+        "3": "UART_RX",
+        "4": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_J3",
+      "pass": true,
+      "actual": {
+        "3": "GND",
+        "2": "CAN_L",
+        "1": "CAN_H"
+      },
+      "expected": {
+        "1": "CAN_H",
+        "2": "CAN_L",
+        "3": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_J2",
+      "pass": true,
+      "actual": {
+        "B4_A9": "USB_VBUS",
+        "A4_B9": "USB_VBUS",
+        "SH4": "GND",
+        "SH3": "GND",
+        "SH2": "GND",
+        "SH1": "GND",
+        "B8": null,
+        "A8": null,
+        "B1_A12": "GND",
+        "A1_B12": "GND",
+        "B6": "USB_DP",
+        "A6": "USB_DP",
+        "B7": "USB_DM",
+        "A7": "USB_DM",
+        "B5": "USB_CC2",
+        "A5": "USB_CC1"
+      },
+      "expected": {
+        "A1_B12": "GND",
+        "A4_B9": "USB_VBUS",
+        "B8": null,
+        "A5": "USB_CC1",
+        "B7": "USB_DM",
+        "A6": "USB_DP",
+        "A7": "USB_DM",
+        "B6": "USB_DP",
+        "A8": null,
+        "B5": "USB_CC2",
+        "B4_A9": "USB_VBUS",
+        "B1_A12": "GND",
+        "SH1": "GND",
+        "SH2": "GND",
+        "SH3": "GND",
+        "SH4": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_J13",
+      "pass": true,
+      "actual": {
+        "8": "GPIO_PB9",
+        "7": "GPIO_PB8",
+        "6": "GPIO_PB5",
+        "5": "GPIO_PB4",
+        "4": "GPIO_PA15",
+        "3": "GPIO_PB15",
+        "2": "GND",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "GND",
+        "3": "GPIO_PB15",
+        "4": "GPIO_PA15",
+        "5": "GPIO_PB4",
+        "6": "GPIO_PB5",
+        "7": "GPIO_PB8",
+        "8": "GPIO_PB9"
+      }
+    },
+    {
+      "id": "source_pin_map_J12",
+      "pass": true,
+      "actual": {
+        "8": "GPIO_PB14",
+        "7": "GPIO_PB13",
+        "6": "GPIO_PB12",
+        "5": "GPIO_PB11",
+        "4": "GPIO_PB10",
+        "3": "GPIO_PB1",
+        "2": "GND",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "GND",
+        "3": "GPIO_PB1",
+        "4": "GPIO_PB10",
+        "5": "GPIO_PB11",
+        "6": "GPIO_PB12",
+        "7": "GPIO_PB13",
+        "8": "GPIO_PB14"
+      }
+    },
+    {
+      "id": "source_pin_map_J11",
+      "pass": true,
+      "actual": {
+        "8": "GPIO_PA3",
+        "7": "GPIO_PA2",
+        "6": "GPIO_PA1",
+        "5": "GPIO_PC15",
+        "4": "GPIO_PC14",
+        "3": "GPIO_PC13",
+        "2": "GND",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "GND",
+        "3": "GPIO_PC13",
+        "4": "GPIO_PC14",
+        "5": "GPIO_PC15",
+        "6": "GPIO_PA1",
+        "7": "GPIO_PA2",
+        "8": "GPIO_PA3"
+      }
+    },
+    {
+      "id": "source_pin_map_J10",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "ADC_IN"
+      },
+      "expected": {
+        "1": "ADC_IN",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_J1",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "VIN_RAW"
+      },
+      "expected": {
+        "1": "VIN_RAW",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_F1",
+      "pass": true,
+      "actual": {
+        "2": "VIN_FUSED",
+        "1": "VIN_RAW"
+      },
+      "expected": {
+        "1": "VIN_RAW",
+        "2": "VIN_FUSED"
+      }
+    },
+    {
+      "id": "source_pin_map_D1",
+      "pass": true,
+      "actual": {
+        "1": "VIN_PROT",
+        "2": "VIN_FUSED"
+      },
+      "expected": {
+        "1": "VIN_PROT",
+        "2": "VIN_FUSED"
+      }
+    },
+    {
+      "id": "source_pin_map_C9",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C7",
+      "pass": true,
+      "actual": {
+        "2": "BUCK_FB",
+        "1": "V5"
+      },
+      "expected": {
+        "1": "V5",
+        "2": "BUCK_FB"
+      }
+    },
+    {
+      "id": "source_pin_map_C23",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "XTAL_OUT"
+      },
+      "expected": {
+        "1": "XTAL_OUT",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C22",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "OSC_IN"
+      },
+      "expected": {
+        "1": "OSC_IN",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C8",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "V5"
+      },
+      "expected": {
+        "1": "V5",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C20",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "VDDA"
+      },
+      "expected": {
+        "1": "VDDA",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C6",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "V5"
+      },
+      "expected": {
+        "1": "V5",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C5",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "V5"
+      },
+      "expected": {
+        "1": "V5",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C2",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "VIN_PROT"
+      },
+      "expected": {
+        "1": "VIN_PROT",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C18",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "VDDA"
+      },
+      "expected": {
+        "1": "VDDA",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C16",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C12",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C4",
+      "pass": true,
+      "actual": {
+        "2": "BUCK_SW",
+        "1": "BUCK_BOOT"
+      },
+      "expected": {
+        "1": "BUCK_BOOT",
+        "2": "BUCK_SW"
+      }
+    },
+    {
+      "id": "source_pin_map_C3",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "VIN_PROT"
+      },
+      "expected": {
+        "1": "VIN_PROT",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C24",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "ADC0"
+      },
+      "expected": {
+        "1": "ADC0",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C21",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "NRST"
+      },
+      "expected": {
+        "1": "NRST",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C19",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "VDDA"
+      },
+      "expected": {
+        "1": "VDDA",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C17",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C15",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C14",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C13",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C11",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "V3V3"
+      },
+      "expected": {
+        "1": "V3V3",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C10",
+      "pass": true,
+      "actual": {
+        "2": "GND",
+        "1": "USB_VBUS"
+      },
+      "expected": {
+        "1": "USB_VBUS",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "source_pin_map_C1",
+      "pass": true,
+      "actual": {
+        "1": "VIN_PROT",
+        "2": "GND"
+      },
+      "expected": {
+        "1": "VIN_PROT",
+        "2": "GND"
+      }
+    },
+    {
+      "id": "components80",
+      "pass": true,
+      "actual": 80,
+      "expected": 80
+    },
+    {
+      "id": "logicalPins272",
+      "pass": true,
+      "actual": 272,
+      "expected": 272
+    },
+    {
+      "id": "critical_U2.1",
+      "pass": true,
+      "actual": "GND",
+      "expected": "GND"
+    },
+    {
+      "id": "critical_U2.2",
+      "pass": true,
+      "actual": "BUCK_SW",
+      "expected": "BUCK_SW"
+    },
+    {
+      "id": "critical_U2.3",
+      "pass": true,
+      "actual": "VIN_PROT",
+      "expected": "VIN_PROT"
+    },
+    {
+      "id": "critical_U2.4",
+      "pass": true,
+      "actual": "BUCK_FB",
+      "expected": "BUCK_FB"
+    },
+    {
+      "id": "critical_U2.5",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "id": "NC_U2.5",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "id": "critical_U2.6",
+      "pass": true,
+      "actual": "BUCK_BOOT",
+      "expected": "BUCK_BOOT"
+    },
+    {
+      "id": "critical_U3.1",
+      "pass": true,
+      "actual": "V5",
+      "expected": "V5"
+    },
+    {
+      "id": "critical_U3.2",
+      "pass": true,
+      "actual": "GND",
+      "expected": "GND"
+    },
+    {
+      "id": "critical_U3.3",
+      "pass": true,
+      "actual": "V5",
+      "expected": "V5"
+    },
+    {
+      "id": "critical_U3.4",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "id": "NC_U3.4",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "id": "critical_U3.5",
+      "pass": true,
+      "actual": "V3V3",
+      "expected": "V3V3"
+    },
+    {
+      "id": "critical_U4.1",
+      "pass": true,
+      "actual": "USB_DP",
+      "expected": "USB_DP"
+    },
+    {
+      "id": "critical_U4.6",
+      "pass": true,
+      "actual": "USB_DP",
+      "expected": "USB_DP"
+    },
+    {
+      "id": "critical_U4.3",
+      "pass": true,
+      "actual": "USB_DM",
+      "expected": "USB_DM"
+    },
+    {
+      "id": "critical_U4.4",
+      "pass": true,
+      "actual": "USB_DM",
+      "expected": "USB_DM"
+    },
+    {
+      "id": "critical_U4.2",
+      "pass": true,
+      "actual": "GND",
+      "expected": "GND"
+    },
+    {
+      "id": "critical_U4.5",
+      "pass": true,
+      "actual": "USB_VBUS",
+      "expected": "USB_VBUS"
+    },
+    {
+      "id": "critical_U5.1",
+      "pass": true,
+      "actual": "CAN_TXD",
+      "expected": "CAN_TXD"
+    },
+    {
+      "id": "critical_U5.2",
+      "pass": true,
+      "actual": "GND",
+      "expected": "GND"
+    },
+    {
+      "id": "critical_U5.3",
+      "pass": true,
+      "actual": "V3V3",
+      "expected": "V3V3"
+    },
+    {
+      "id": "critical_U5.4",
+      "pass": true,
+      "actual": "CAN_RXD",
+      "expected": "CAN_RXD"
+    },
+    {
+      "id": "critical_U5.5",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "id": "NC_U5.5",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "id": "critical_U5.6",
+      "pass": true,
+      "actual": "CAN_L",
+      "expected": "CAN_L"
+    },
+    {
+      "id": "critical_U5.7",
+      "pass": true,
+      "actual": "CAN_H",
+      "expected": "CAN_H"
+    },
+    {
+      "id": "critical_U5.8",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "id": "NC_U5.8",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "id": "critical_C4.1",
+      "pass": true,
+      "actual": "BUCK_BOOT",
+      "expected": "BUCK_BOOT"
+    },
+    {
+      "id": "critical_C4.2",
+      "pass": true,
+      "actual": "BUCK_SW",
+      "expected": "BUCK_SW"
+    },
+    {
+      "id": "critical_L1.1",
+      "pass": true,
+      "actual": "BUCK_SW",
+      "expected": "BUCK_SW"
+    },
+    {
+      "id": "critical_L1.2",
+      "pass": true,
+      "actual": "V5",
+      "expected": "V5"
+    },
+    {
+      "id": "critical_D1.1",
+      "pass": true,
+      "actual": "VIN_PROT",
+      "expected": "VIN_PROT"
+    },
+    {
+      "id": "critical_D1.2",
+      "pass": true,
+      "actual": "VIN_FUSED",
+      "expected": "VIN_FUSED"
+    },
+    {
+      "id": "critical_R5.1",
+      "pass": true,
+      "actual": "PA12_SHARED",
+      "expected": "PA12_SHARED"
+    },
+    {
+      "id": "critical_R5.2",
+      "pass": true,
+      "actual": "USB_DP",
+      "expected": "USB_DP"
+    },
+    {
+      "id": "critical_R6.1",
+      "pass": true,
+      "actual": "PA11_SHARED",
+      "expected": "PA11_SHARED"
+    },
+    {
+      "id": "critical_R6.2",
+      "pass": true,
+      "actual": "USB_DM",
+      "expected": "USB_DM"
+    },
+    {
+      "id": "critical_R12.1",
+      "pass": true,
+      "actual": "PA12_SHARED",
+      "expected": "PA12_SHARED"
+    },
+    {
+      "id": "critical_R12.2",
+      "pass": true,
+      "actual": "CAN_TXD",
+      "expected": "CAN_TXD"
+    },
+    {
+      "id": "critical_R13.1",
+      "pass": true,
+      "actual": "PA11_SHARED",
+      "expected": "PA11_SHARED"
+    },
+    {
+      "id": "critical_R13.2",
+      "pass": true,
+      "actual": "CAN_RXD",
+      "expected": "CAN_RXD"
+    },
+    {
+      "id": "USBdefault_R12_DNP",
+      "pass": false,
+      "actual": "DNP default USB mode",
+      "expected": "no"
+    },
+    {
+      "id": "USBdefault_R13_DNP",
+      "pass": false,
+      "actual": "DNP default USB mode",
+      "expected": "no"
+    }
+  ],
+  "placementVersion": "initial40 component proposal, not final native placement",
+  "metrics": [
+    {
+      "id": "buck_C3_VIN",
+      "a": {
+        "ref": "U2",
+        "number": "3",
+        "net": "VIN_PROT",
+        "xy": [
+          24.2,
+          20.05
+        ],
+        "padBBox": [
+          [
+            23.65,
+            19.75
+          ],
+          [
+            24.75,
+            20.35
+          ]
+        ]
+      },
+      "b": {
+        "ref": "C3",
+        "number": "1",
+        "net": "VIN_PROT",
+        "xy": [
+          26.0984,
+          18.6
+        ],
+        "padBBox": [
+          [
+            25.6284,
+            18.1935
+          ],
+          [
+            26.5684,
+            19.0065
+          ]
+        ]
+      },
+      "centerDistance_mm": 2.3888,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 1.1508,
+      "proposalBudget_mm": 3.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "HF bypass forward connection",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "buck_C3_GND",
+      "a": {
+        "ref": "U2",
+        "number": "1",
+        "net": "GND",
+        "xy": [
+          24.2,
+          21.95
+        ],
+        "padBBox": [
+          [
+            23.65,
+            21.65
+          ],
+          [
+            24.75,
+            22.25
+          ]
+        ]
+      },
+      "b": {
+        "ref": "C3",
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          24.5236,
+          18.6
+        ],
+        "padBBox": [
+          [
+            24.0536,
+            18.1935
+          ],
+          [
+            24.9936,
+            19.0065
+          ]
+        ]
+      },
+      "centerDistance_mm": 3.3656,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 2.6435,
+      "proposalBudget_mm": 3.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "HF bypass return connection; continuous ground plus close via, not SW shared neck",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "buck_C2_VIN",
+      "a": {
+        "ref": "U2",
+        "number": "3",
+        "net": "VIN_PROT",
+        "xy": [
+          24.2,
+          20.05
+        ],
+        "padBBox": [
+          [
+            23.65,
+            19.75
+          ],
+          [
+            24.75,
+            20.35
+          ]
+        ]
+      },
+      "b": {
+        "ref": "C2",
+        "number": "1",
+        "net": "VIN_PROT",
+        "xy": [
+          25.2,
+          15.4
+        ],
+        "padBBox": [
+          [
+            24.438,
+            14.6
+          ],
+          [
+            25.962,
+            16.2
+          ]
+        ]
+      },
+      "centerDistance_mm": 4.7563,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 3.55,
+      "proposalBudget_mm": 4.5,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "main input capacitor",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "boot_to_pin6",
+      "a": {
+        "ref": "U2",
+        "number": "6",
+        "net": "BUCK_BOOT",
+        "xy": [
+          26.8,
+          21.95
+        ],
+        "padBBox": [
+          [
+            26.25,
+            21.65
+          ],
+          [
+            27.35,
+            22.25
+          ]
+        ]
+      },
+      "b": {
+        "ref": "C4",
+        "number": "1",
+        "net": "BUCK_BOOT",
+        "xy": [
+          26.5984,
+          23.7
+        ],
+        "padBBox": [
+          [
+            26.1284,
+            23.2935
+          ],
+          [
+            27.0684,
+            24.1065
+          ]
+        ]
+      },
+      "centerDistance_mm": 1.7616,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 1.0435,
+      "proposalBudget_mm": 2.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "BOOT no GND",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "boot_to_SW",
+      "a": {
+        "ref": "U2",
+        "number": "2",
+        "net": "BUCK_SW",
+        "xy": [
+          24.2,
+          21.0
+        ],
+        "padBBox": [
+          [
+            23.65,
+            20.7
+          ],
+          [
+            24.75,
+            21.3
+          ]
+        ]
+      },
+      "b": {
+        "ref": "C4",
+        "number": "2",
+        "net": "BUCK_SW",
+        "xy": [
+          25.0236,
+          23.7
+        ],
+        "padBBox": [
+          [
+            24.5536,
+            23.2935
+          ],
+          [
+            25.4936,
+            24.1065
+          ]
+        ]
+      },
+      "centerDistance_mm": 2.8228,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 1.9935,
+      "proposalBudget_mm": 4.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "BOOT return SW, no switch current under IC",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "inductor_shortlead",
+      "a": {
+        "ref": "U2",
+        "number": "2",
+        "net": "BUCK_SW",
+        "xy": [
+          24.2,
+          21.0
+        ],
+        "padBBox": [
+          [
+            23.65,
+            20.7
+          ],
+          [
+            24.75,
+            21.3
+          ]
+        ]
+      },
+      "b": {
+        "ref": "L1",
+        "number": "1",
+        "net": "BUCK_SW",
+        "xy": [
+          22.02,
+          24.0
+        ],
+        "padBBox": [
+          [
+            21.305,
+            21.25
+          ],
+          [
+            22.735,
+            26.75
+          ]
+        ]
+      },
+      "centerDistance_mm": 3.7084,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 0.915,
+      "proposalBudget_mm": 3.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "short-lead faces switch",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "output_cap_to_L",
+      "a": {
+        "ref": "L1",
+        "number": "2",
+        "net": "V5",
+        "xy": [
+          17.98,
+          24.0
+        ],
+        "padBBox": [
+          [
+            17.265,
+            21.25
+          ],
+          [
+            18.695,
+            26.75
+          ]
+        ]
+      },
+      "b": {
+        "ref": "C5",
+        "number": "1",
+        "net": "V5",
+        "xy": [
+          14.4,
+          23.1
+        ],
+        "padBBox": [
+          [
+            13.6,
+            22.338
+          ],
+          [
+            15.2,
+            23.862
+          ]
+        ]
+      },
+      "centerDistance_mm": 3.6914,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 2.065,
+      "proposalBudget_mm": 4.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "filtered output path",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "feedback_pin4_R2",
+      "a": {
+        "ref": "U2",
+        "number": "4",
+        "net": "BUCK_FB",
+        "xy": [
+          26.8,
+          20.05
+        ],
+        "padBBox": [
+          [
+            26.25,
+            19.75
+          ],
+          [
+            27.35,
+            20.35
+          ]
+        ]
+      },
+      "b": {
+        "ref": "R2",
+        "number": "1",
+        "net": "BUCK_FB",
+        "xy": [
+          29.7984,
+          21.3
+        ],
+        "padBBox": [
+          [
+            29.3284,
+            20.8935
+          ],
+          [
+            30.2684,
+            21.7065
+          ]
+        ]
+      },
+      "centerDistance_mm": 3.2485,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 2.0517,
+      "proposalBudget_mm": 2.5,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "small quiet FB node",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "ldo_input",
+      "a": {
+        "ref": "U3",
+        "number": "1",
+        "net": "V5",
+        "xy": [
+          29.1,
+          27.95
+        ],
+        "padBBox": [
+          [
+            28.45,
+            27.65
+          ],
+          [
+            29.75,
+            28.25
+          ]
+        ]
+      },
+      "b": {
+        "ref": "C8",
+        "number": "1",
+        "net": "V5",
+        "xy": [
+          27.8,
+          29.0
+        ],
+        "padBBox": [
+          [
+            27.165,
+            28.492
+          ],
+          [
+            28.435,
+            29.508
+          ]
+        ]
+      },
+      "centerDistance_mm": 1.6711,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 0.2425,
+      "proposalBudget_mm": 2.5,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "DBV input bypass",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "ldo_input_ground",
+      "a": {
+        "ref": "U3",
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          29.1,
+          27.0
+        ],
+        "padBBox": [
+          [
+            28.45,
+            26.7
+          ],
+          [
+            29.75,
+            27.3
+          ]
+        ]
+      },
+      "b": {
+        "ref": "C8",
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          27.8,
+          26.968
+        ],
+        "padBBox": [
+          [
+            27.165,
+            26.46
+          ],
+          [
+            28.435,
+            27.476
+          ]
+        ]
+      },
+      "centerDistance_mm": 1.3004,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 0.015,
+      "proposalBudget_mm": 3.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "LDO quiet common return",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "ldo_output",
+      "a": {
+        "ref": "U3",
+        "number": "5",
+        "net": "V3V3",
+        "xy": [
+          31.7,
+          27.95
+        ],
+        "padBBox": [
+          [
+            31.05,
+            27.65
+          ],
+          [
+            32.35,
+            28.25
+          ]
+        ]
+      },
+      "b": {
+        "ref": "C9",
+        "number": "1",
+        "net": "V3V3",
+        "xy": [
+          31.2,
+          30.6
+        ],
+        "padBBox": [
+          [
+            30.692,
+            29.965
+          ],
+          [
+            31.708,
+            31.235
+          ]
+        ]
+      },
+      "centerDistance_mm": 2.6968,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 1.715,
+      "proposalBudget_mm": 2.5,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "DBV output bypass",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "ldo_output_ground",
+      "a": {
+        "ref": "U3",
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          29.1,
+          27.0
+        ],
+        "padBBox": [
+          [
+            28.45,
+            26.7
+          ],
+          [
+            29.75,
+            27.3
+          ]
+        ]
+      },
+      "b": {
+        "ref": "C9",
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          33.232,
+          30.6
+        ],
+        "padBBox": [
+          [
+            32.724,
+            29.965
+          ],
+          [
+            33.74,
+            31.235
+          ]
+        ]
+      },
+      "centerDistance_mm": 5.4803,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 3.9934,
+      "proposalBudget_mm": 4.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "LDO quiet common return",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "can_HF_VCC",
+      "a": {
+        "ref": "U5",
+        "number": "3",
+        "net": "V3V3",
+        "xy": [
+          64.0,
+          13.46
+        ],
+        "padBBox": [
+          [
+            63.238,
+            13.155
+          ],
+          [
+            64.762,
+            13.765
+          ]
+        ]
+      },
+      "b": {
+        "ref": "C11",
+        "number": "1",
+        "net": "V3V3",
+        "xy": [
+          61.8,
+          13.46
+        ],
+        "padBBox": [
+          [
+            61.3935,
+            12.99
+          ],
+          [
+            62.2065,
+            13.93
+          ]
+        ]
+      },
+      "centerDistance_mm": 2.2,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 1.0315,
+      "proposalBudget_mm": 2.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "100nF closest to VCC",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "can_HF_GND",
+      "a": {
+        "ref": "U5",
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          64.0,
+          14.73
+        ],
+        "padBBox": [
+          [
+            63.238,
+            14.425
+          ],
+          [
+            64.762,
+            15.035
+          ]
+        ]
+      },
+      "b": {
+        "ref": "C11",
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          61.8,
+          15.0348
+        ],
+        "padBBox": [
+          [
+            61.3935,
+            14.5648
+          ],
+          [
+            62.2065,
+            15.5048
+          ]
+        ]
+      },
+      "centerDistance_mm": 2.221,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 1.0315,
+      "proposalBudget_mm": 2.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "at least two vias when connection uses ground plane, as TI guidance",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "ESD_VBUS_cap",
+      "a": {
+        "ref": "U4",
+        "number": "5",
+        "net": "USB_VBUS",
+        "xy": [
+          40.25,
+          8.7
+        ],
+        "padBBox": [
+          [
+            39.95,
+            8.15
+          ],
+          [
+            40.55,
+            9.25
+          ]
+        ]
+      },
+      "b": {
+        "ref": "C10",
+        "number": "1",
+        "net": "USB_VBUS",
+        "xy": [
+          42.7,
+          8.7016
+        ],
+        "padBBox": [
+          [
+            42.2935,
+            8.2316
+          ],
+          [
+            43.1065,
+            9.1716
+          ]
+        ]
+      },
+      "centerDistance_mm": 2.45,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 1.7435,
+      "proposalBudget_mm": 2.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "rail clamp local capacitor",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "ESD_GND_cap",
+      "a": {
+        "ref": "U4",
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          40.25,
+          11.3
+        ],
+        "padBBox": [
+          [
+            39.95,
+            10.75
+          ],
+          [
+            40.55,
+            11.85
+          ]
+        ]
+      },
+      "b": {
+        "ref": "C10",
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          42.7,
+          10.2764
+        ],
+        "padBBox": [
+          [
+            42.2935,
+            9.8064
+          ],
+          [
+            43.1065,
+            10.7464
+          ]
+        ]
+      },
+      "centerDistance_mm": 2.6552,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 1.7435,
+      "proposalBudget_mm": 3.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "direct local ground return",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "USB_R5_to_MCU",
+      "a": {
+        "ref": "U1",
+        "number": "33",
+        "net": "PA12_SHARED",
+        "xy": [
+          41.25,
+          22.75
+        ],
+        "padBBox": [
+          [
+            41.1,
+            22.15
+          ],
+          [
+            41.4,
+            23.35
+          ]
+        ]
+      },
+      "b": {
+        "ref": "R5",
+        "number": "1",
+        "net": "PA12_SHARED",
+        "xy": [
+          41.4,
+          18.3984
+        ],
+        "padBBox": [
+          [
+            40.9935,
+            17.9284
+          ],
+          [
+            41.8065,
+            18.8684
+          ]
+        ]
+      },
+      "centerDistance_mm": 4.3542,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 3.2816,
+      "proposalBudget_mm": 5.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "proposed source-side access budget, no vendor fixed-mm assertion",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "USB_R6_to_MCU",
+      "a": {
+        "ref": "U1",
+        "number": "32",
+        "net": "PA11_SHARED",
+        "xy": [
+          40.75,
+          22.75
+        ],
+        "padBBox": [
+          [
+            40.6,
+            22.15
+          ],
+          [
+            40.9,
+            23.35
+          ]
+        ]
+      },
+      "b": {
+        "ref": "R6",
+        "number": "1",
+        "net": "PA11_SHARED",
+        "xy": [
+          39.4,
+          18.3984
+        ],
+        "padBBox": [
+          [
+            38.9935,
+            17.9284
+          ],
+          [
+            39.8065,
+            18.8684
+          ]
+        ]
+      },
+      "centerDistance_mm": 4.5562,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 3.3762,
+      "proposalBudget_mm": 5.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "proposed source-side access budget, no vendor fixed-mm assertion",
+      "status": "WITHIN_GEOMETRIC_BUDGET_ROUTE_UNPROVEN",
+      "noTraceLengthClaim": true
+    },
+    {
+      "id": "UART_TX_driver_R16",
+      "a": {
+        "ref": "U1",
+        "number": "30",
+        "net": "PA9_UART_TX",
+        "xy": [
+          39.75,
+          22.75
+        ],
+        "padBBox": [
+          [
+            39.6,
+            22.15
+          ],
+          [
+            39.9,
+            23.35
+          ]
+        ]
+      },
+      "b": {
+        "ref": "R16",
+        "number": "1",
+        "net": "PA9_UART_TX",
+        "xy": [
+          46.6016,
+          20.5
+        ],
+        "padBBox": [
+          [
+            46.1316,
+            20.0935
+          ],
+          [
+            47.0716,
+            20.9065
+          ]
+        ]
+      },
+      "centerDistance_mm": 7.2116,
+      "axisAlignedPadEdgeDistanceLowerBound_mm": 6.3545,
+      "proposalBudget_mm": 4.0,
+      "budgetProvenance": "engineering placement goal, not manufacturer hard limit",
+      "purpose": "prefer source damping resistor close to driving MCU, current candidate review",
+      "status": "REVIEW_PLACEMENT",
+      "noTraceLengthClaim": true
+    }
+  ],
+  "metricLimit": "Rectangular pad AABB shortest separation is geometric lower bound only, not actual trace length, loop area/inductance/EMI or impedance result."
+}

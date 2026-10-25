@@ -1,0 +1,45 @@
+
+  NAME
+         axlDBCheck - run a database check/fix on open database
+  SYNOPSIS
+         Runs dbdoctor on the current database.
+ 
+         Support the following options:
+           'general      performs a full database check
+           'links        same as general
+           'branch       same as general
+           'shapes       checks shapes (autovoid)
+                                 (could be slow if complicated shapes)
+                                 (normally fast)
+                                 (slow on large databases)
+           'all          performas a full check and fix (no shape check)
+                         e.g. general and fix
+           'drc          Perform a batch DRC.
+           'log          uses standard dbdoctor.log file for output
+ 
+         By default no logfile is produced. Application can
+         by specifing the 'log option write the the standard 
+         dbdoctor.log file. Optionally a Port descriptor can
+         be as the second argument to write the dbdoctor output
+         to an external file.
+  FUNCTION
+         axlDBCheck(
+                 g_option/lg_options
+                 [p_file]
+         ) -> (x_errors x_warnings)/nil
+  NEEDS
+         g_option/lg_options
+                 option or list of options to run see above
+         p_file
+                 optional port to write dbcheck logging
+ 
+  RETURNS
+ 
+  EXAMPLES
+         res = axlDBCheck('all)
+         printf("errors = %d; warnings = %d", car(res), cadr(res);
+ 
+         p = outfile("foo")
+         res = axlDBCheck('(links shapes) p)
+         close(p)
+

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1020" viewBox="0 0 1400 1020">
+<rect width="1400" height="1020" fill="#f2f5f9"/>
+<style>text{font-family:Arial,sans-serif;fill:#1c2b3d} .h{font-size:30px;font-weight:bold}.s{font-size:17px}.c{font-size:19px;font-weight:bold}</style>
+<text x="40" y="50" font-family="Arial" font-size="30" font-weight="bold" fill="#1c2b3d">Lesson 29 | Persisted PCB constraints</text>
+<text x="40" y="82" font-family="Arial" font-size="17" fill="#1c2b3d">F29_CONSTRAINTS_v3 | 80 components / 69 nets / 27 domain classes / 3 differential pairs</text>
+<text x="40" y="110" font-family="Arial" font-size="17" fill="#1c2b3d">543 independent checks PASS. Rule values below are draft allocations for the 4-layer JLC target.</text>
+<rect x="30" y="135" width="1340" height="405" rx="12" fill="white"/>
+<text x="50" y="170" font-family="Arial" font-size="19" font-weight="bold" fill="#1c2b3d">Category / CSet</text>
+<text x="460" y="170" font-family="Arial" font-size="19" font-weight="bold" fill="#1c2b3d">Nominal width / neck / max neck</text>
+<text x="940" y="170" font-family="Arial" font-size="19" font-weight="bold" fill="#1c2b3d">Applied scope</text>
+<text x="50" y="209" font-family="Arial" font-size="17" fill="#1c2b3d">General / P_SIGNAL_020</text>
+<text x="460" y="209" font-family="Arial" font-size="17" fill="#1c2b3d">0.20 / 0.15 / 1.0 mm</text>
+<text x="940" y="209" font-family="Arial" font-size="17" fill="#1c2b3d">TOP + BOTTOM</text>
+<text x="50" y="248" font-family="Arial" font-size="17" fill="#1c2b3d">Power / P_POWER_060</text>
+<text x="460" y="248" font-family="Arial" font-size="17" fill="#1c2b3d">0.60 / 0.25 / 1.0 mm</text>
+<text x="940" y="248" font-family="Arial" font-size="17" fill="#1c2b3d">TOP + BOTTOM</text>
+<text x="50" y="287" font-family="Arial" font-size="17" fill="#1c2b3d">VDDA direct exception</text>
+<text x="460" y="287" font-family="Arial" font-size="17" fill="#1c2b3d">0.30 / 0.20 / 1.0 mm</text>
+<text x="940" y="287" font-family="Arial" font-size="17" fill="#1c2b3d">TOP + BOTTOM</text>
+<text x="50" y="326" font-family="Arial" font-size="17" fill="#1c2b3d">GND / P_GND_PLANE</text>
+<text x="460" y="326" font-family="Arial" font-size="17" fill="#1c2b3d">0.60 / 0.25 / 1.0 mm</text>
+<text x="940" y="326" font-family="Arial" font-size="17" fill="#1c2b3d">L2 + L3 permitted for GND</text>
+<text x="50" y="365" font-family="Arial" font-size="17" fill="#1c2b3d">USB / P_USB_PROVISIONAL</text>
+<text x="460" y="365" font-family="Arial" font-size="17" fill="#1c2b3d">0.20 / 0.15 / 1.0 mm</text>
+<text x="940" y="365" font-family="Arial" font-size="17" fill="#1c2b3d">TOP only; gap 0.15 mm</text>
+<text x="50" y="404" font-family="Arial" font-size="17" fill="#1c2b3d">CAN / P_CAN_025</text>
+<text x="460" y="404" font-family="Arial" font-size="17" fill="#1c2b3d">0.25 / 0.20 / 1.0 mm</text>
+<text x="940" y="404" font-family="Arial" font-size="17" fill="#1c2b3d">TOP + BOTTOM</text>
+<text x="50" y="443" font-family="Arial" font-size="17" fill="#1c2b3d">Class-class spacing</text>
+<text x="460" y="443" font-family="Arial" font-size="17" fill="#1c2b3d">Switch to analog / crystal / USB: 1 mm</text>
+<text x="940" y="443" font-family="Arial" font-size="17" fill="#1c2b3d">Reference continuity still required</text>
+<text x="50" y="482" font-family="Arial" font-size="17" fill="#1c2b3d">Approved via</text>
+<text x="460" y="482" font-family="Arial" font-size="17" fill="#1c2b3d">Drill 0.30 / copper 0.60 mm</text>
+<text x="940" y="482" font-family="Arial" font-size="17" fill="#1c2b3d">One unique GND test via inherited</text>
+<rect x="30" y="565" width="1340" height="190" rx="12" fill="white"/>
+<text x="50" y="602" font-family="Arial" font-size="19" font-weight="bold" fill="#1c2b3d">Controlled native DRC proofs (all reverted)</text>
+<text x="50" y="638" font-family="Arial" font-size="17" fill="#1c2b3d">Neck width: 0.10 &lt; 0.15 mm | Power neck: 10 &gt; 1 mm | Net MIN_LINE_WIDTH override removes violation</text>
+<text x="50" y="670" font-family="Arial" font-size="17" fill="#1c2b3d">Spacing: 0.10 &lt; 0.20 mm | Class-class: 0.50 &lt; 1 mm | USB via count: 3 &gt; 2</text>
+<text x="50" y="702" font-family="Arial" font-size="17" fill="#1c2b3d">Unapproved via rejected on all 4 layers | L2 power cline blocked | L2 GND fill allowed</text>
+<text x="50" y="734" font-family="Arial" font-size="17" fill="#1c2b3d">Rollback: current DRC = 0, state = t. DRC zero is not SI / PI / EMI acceptance.</text>
+<rect x="30" y="780" width="1340" height="175" rx="12" fill="white"/>
+<text x="50" y="818" font-family="Arial" font-size="19" font-weight="bold" fill="#1c2b3d">Separate fully connected length-rule coupon</text>
+<text x="50" y="853" font-family="Arial" font-size="17" fill="#1c2b3d">Unbalanced: 20.0 / 27.6 mm -&gt; native phase tolerance error: expected 1, actual 7.6 mm</text>
+<text x="50" y="886" font-family="Arial" font-size="17" fill="#1c2b3d">Balanced: two actual 20.0 mm segments, 4 pin endpoints verified -&gt; current DRC 0 / t</text>
+<text x="50" y="919" font-family="Arial" font-size="17" fill="#1c2b3d">90 ohm target geometry is unconfirmed. No ground plane has been poured. No manufacturing release.</text>
+<text x="40" y="993" font-family="Arial" font-size="17" fill="#1c2b3d">Native data preview, not a Cadence UI screenshot. Full sources, failures, readback and hashes are archived.</text>
+</svg>

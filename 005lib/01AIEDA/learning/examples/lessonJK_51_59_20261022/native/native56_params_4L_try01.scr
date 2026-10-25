@@ -1,0 +1,50 @@
+version 17.2
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonJK_51_59_20261022/native/native56_probe.il") t)
+skill errset(jk56Probe("D:/001DIY/005lib/01AIEDA/learning/examples/lessonJK_51_59_20261022/exports/native_4L_TRAINING_NOT_FOR_FAB/inventory_before.tsv") t)
+ncdrill param
+setwindow form.nc_parameters
+FORM nc_parameters metric_units YES
+FORM nc_parameters absolute_coords YES
+FORM nc_parameters integer_places 3
+FORM nc_parameters decimal_places 4
+FORM nc_parameters x_offset 0
+FORM nc_parameters y_offset 0
+FORM nc_parameters suppress_lead_zeroes NO
+FORM nc_parameters suppress_trail_zeroes NO
+FORM nc_parameters suppress_equal NO
+FORM nc_parameters enhanced_format YES
+FORM nc_parameters auto_tool_select YES
+FORM nc_parameters Done
+setwindow pcb
+nctape_full
+setwindow form.nc_drill
+FORM nc_drill tape_name D:/001DIY/005lib/01AIEDA/learning/examples/lessonJK_51_59_20261022/exports/native_4L_TRAINING_NOT_FOR_FAB/TRAINING_NOT_FOR_FAB_4L
+FORM nc_drill separate_tapes YES
+FORM nc_drill auto_tool_select YES
+FORM nc_drill layer_pair_drilling YES
+FORM nc_drill close
+setwindow pcb
+ncroute
+setwindow form.nc_route
+FORM nc_route separate_files YES
+FORM nc_route filename D:/001DIY/005lib/01AIEDA/learning/examples/lessonJK_51_59_20261022/exports/native_4L_TRAINING_NOT_FOR_FAB/TRAINING_NOT_FOR_FAB_4L
+FORM nc_route close
+setwindow pcb
+artwork
+setwindow form.film_control
+FORM film_control general_parameters
+FORM film_control gerber_rs274x YES
+FORM film_control units_metric YES
+FORM film_control format_int_places 3
+FORM film_control format_dec_places 6
+FORM film_control film_max_x 300
+FORM film_control film_max_y 300
+FORM film_control scale 1
+FORM film_control suppress_lead_zeroes YES
+FORM film_control suppress_trail_zeroes NO
+FORM film_control suppress_equals NO
+FORM film_control ok
+setwindow pcb
+skill errset(jk56Probe("D:/001DIY/005lib/01AIEDA/learning/examples/lessonJK_51_59_20261022/exports/native_4L_TRAINING_NOT_FOR_FAB/inventory_after.tsv") t)
+skill errset(axlKillDesign() t)
+quit

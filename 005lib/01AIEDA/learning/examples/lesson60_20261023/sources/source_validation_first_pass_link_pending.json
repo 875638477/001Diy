@@ -1,0 +1,456 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "purpose": "Source identity, scoped page-reading evidence and truthful execution/migration status; not CAD correctness or fabrication acceptance.",
+  "checks": [
+    {
+      "check": "exactly_two_scoped_pdf_pages",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "check": "exactly_two_filled_records",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "check": "both_full_page_views_logged",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-TEXT-001:source_sha_syntax",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-TEXT-001:source_current_sha",
+      "actual": "FB331FBABEE8392ED2937ED757C1610CB0F174B84625147C0B580A18EEA8C0E5",
+      "expected": "FB331FBABEE8392ED2937ED757C1610CB0F174B84625147C0B580A18EEA8C0E5",
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-TEXT-001:probe_and_record_source_identity",
+      "actual": "FB331FBABEE8392ED2937ED757C1610CB0F174B84625147C0B580A18EEA8C0E5",
+      "expected": "FB331FBABEE8392ED2937ED757C1610CB0F174B84625147C0B580A18EEA8C0E5",
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-TEXT-001:physical_api_index",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-TEXT-001:scoped_reading_stage",
+      "actual": "READ_SCOPED",
+      "expected": "READ_SCOPED",
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-TEXT-001:no_ocr_claim",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-TEXT-001:no_native_execution_claim",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-TEXT-001:no_second_pc_claim",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-TEXT-001:full_page_view",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-TEXT-001:image_matches_viewed_sha",
+      "actual": "00B725BC5B6CA3D5825ADEB79C68418FDED0E66F5965B89647AE29F578E46073",
+      "expected": "00B725BC5B6CA3D5825ADEB79C68418FDED0E66F5965B89647AE29F578E46073",
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-TEXT-001:visual_log_sha",
+      "actual": "00B725BC5B6CA3D5825ADEB79C68418FDED0E66F5965B89647AE29F578E46073",
+      "expected": "00B725BC5B6CA3D5825ADEB79C68418FDED0E66F5965B89647AE29F578E46073",
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-TEXT-001:probe_view_status",
+      "actual": "FULL_SELECTED_PAGE_VIEWED",
+      "expected": "FULL_SELECTED_PAGE_VIEWED",
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-TEXT-001:extracted_count",
+      "actual": 2529,
+      "expected": 2529,
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-SCAN-001:source_sha_syntax",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-SCAN-001:source_current_sha",
+      "actual": "FB16EE05893C976F8E71706B4A2EFC29AB6179C0F4BD66336B90FB90C1AD44B3",
+      "expected": "FB16EE05893C976F8E71706B4A2EFC29AB6179C0F4BD66336B90FB90C1AD44B3",
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-SCAN-001:probe_and_record_source_identity",
+      "actual": "FB16EE05893C976F8E71706B4A2EFC29AB6179C0F4BD66336B90FB90C1AD44B3",
+      "expected": "FB16EE05893C976F8E71706B4A2EFC29AB6179C0F4BD66336B90FB90C1AD44B3",
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-SCAN-001:physical_api_index",
+      "actual": 281,
+      "expected": 281,
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-SCAN-001:scoped_reading_stage",
+      "actual": "READ_SCOPED",
+      "expected": "READ_SCOPED",
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-SCAN-001:no_ocr_claim",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-SCAN-001:no_native_execution_claim",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-SCAN-001:no_second_pc_claim",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-SCAN-001:full_page_view",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-SCAN-001:image_matches_viewed_sha",
+      "actual": "EE206EE0FA05613D929D5714BD2BAB408B05BCFEB78248EDDB90E8709674A2F6",
+      "expected": "EE206EE0FA05613D929D5714BD2BAB408B05BCFEB78248EDDB90E8709674A2F6",
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-SCAN-001:visual_log_sha",
+      "actual": "EE206EE0FA05613D929D5714BD2BAB408B05BCFEB78248EDDB90E8709674A2F6",
+      "expected": "EE206EE0FA05613D929D5714BD2BAB408B05BCFEB78248EDDB90E8709674A2F6",
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-SCAN-001:probe_view_status",
+      "actual": "FULL_SELECTED_PAGE_VIEWED",
+      "expected": "FULL_SELECTED_PAGE_VIEWED",
+      "pass": true
+    },
+    {
+      "check": "L60-PDF-SCAN-001:extracted_count",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "check": "text_page_nonempty",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "real_scan_page_zero_text",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "check": "real_scan_page_one_image",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "check": "real_scan_selected_printed_page",
+      "actual": "262",
+      "expected": "262",
+      "pass": true
+    },
+    {
+      "check": "real_scan_selected_page_offset",
+      "actual": 19,
+      "expected": 19,
+      "pass": true
+    },
+    {
+      "check": "legacy_vs_current_video_paths",
+      "actual": [
+        false,
+        true,
+        true
+      ],
+      "expected": [
+        false,
+        true,
+        true
+      ],
+      "pass": true
+    },
+    {
+      "check": "video_0_no_playback",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "video_0_no_audio",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "video_0_no_frames",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "check": "video_0_no_timepoints",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "check": "video_1_no_playback",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "video_1_no_audio",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "video_1_no_frames",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "check": "video_1_no_timepoints",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "check": "video_1_current_sha",
+      "actual": "C2B82635FBF112DEAADEB8FA7AD1EC6AEE5ED3603992DCA13F0F02B523F7310E",
+      "expected": "C2B82635FBF112DEAADEB8FA7AD1EC6AEE5ED3603992DCA13F0F02B523F7310E",
+      "pass": true
+    },
+    {
+      "check": "video_1_AVI_signature",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "video_1_duration_not_claimed",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "check": "video_2_no_playback",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "video_2_no_audio",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "video_2_no_frames",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "check": "video_2_no_timepoints",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "check": "video_2_current_sha",
+      "actual": "11219A1DB6176551EA6B144AAF164169C355F61E2472B28DDE2373A0FD5AE47C",
+      "expected": "11219A1DB6176551EA6B144AAF164169C355F61E2472B28DDE2373A0FD5AE47C",
+      "pass": true
+    },
+    {
+      "check": "video_2_AVI_signature",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "video_2_duration_not_claimed",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "check": "video_template_start_unfilled",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "check": "video_template_end_unfilled",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "check": "video_template_completion_false",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "installed_help_current_sha",
+      "actual": "70652BE4E75A2050F0486ACFFAA6AB72B295E753EA870D6A9C4B86504CE9E1B2",
+      "expected": "70652BE4E75A2050F0486ACFFAA6AB72B295E753EA870D6A9C4B86504CE9E1B2",
+      "pass": true
+    },
+    {
+      "check": "help_no_native_run",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "no_pdf_authoring",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "note_utf8_no_replacement",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "note_local_link_0",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "note_local_link_1",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "note_local_link_2",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "note_local_link_3",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "note_local_link_4",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "note_local_link_5",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "note_local_link_6",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "note_local_link_7",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "note_local_link_8",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "note_local_link_9",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "note_local_link_10",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "note_local_link_11",
+      "actual": false,
+      "expected": true,
+      "pass": false
+    },
+    {
+      "check": "relative_prepare_script_root",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    }
+  ],
+  "pass_count": 72,
+  "fail_count": 1
+}

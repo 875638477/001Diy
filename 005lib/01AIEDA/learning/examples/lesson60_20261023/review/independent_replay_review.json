@@ -1,0 +1,5305 @@
+{
+  "schema_version": 1,
+  "reviewer": "l60_sources independent read-only review",
+  "date_local": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS_SCOPED_NATIVE_REPLAY_EVIDENCE",
+  "independent_checks": {
+    "pass_count": 313,
+    "fail_count": 0,
+    "checks": [
+      {
+        "id": "package:manifest_replay.py",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package:manifest_scripts/replay.il",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package:manifest_fixture/training_4L.brd",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package:manifest_README.md",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package:manifest_config.example.json",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package:fixture_expected",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native\\R Space:manifest_replay.py",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native\\R Space:manifest_scripts/replay.il",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native\\R Space:manifest_fixture/training_4L.brd",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native\\R Space:manifest_README.md",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native\\R Space:manifest_config.example.json",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native\\R Space:fixture_expected",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "same_reviewed_portable_source_manifest",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:probe_bound_to_root",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:probe_fixture_expected",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:probe_manifest_identity",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:unique_component_names",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:unique_logical_pins",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:unique_net_names",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:four_layer_order",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:mm_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:pin_refdes_membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:logical_pin_net_membership_allowing_blank_NC",
+        "pass": true,
+        "detail": {
+          "netted": 266,
+          "blank_NC": 6,
+          "NC_pins": [
+            [
+              "J2",
+              "A8"
+            ],
+            [
+              "J2",
+              "B8"
+            ],
+            [
+              "U2",
+              "5"
+            ],
+            [
+              "U3",
+              "4"
+            ],
+            [
+              "U5",
+              "5"
+            ],
+            [
+              "U5",
+              "8"
+            ]
+          ],
+          "actual_rule": "A nil or empty-string native net name represents NC. Every nonempty net name must occur in the 69 NET rows."
+        }
+      },
+      {
+        "id": "package/runs/final03:before:actual_lines_932",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:actual_manual_750",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:actual_thermal_182",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:valid_nondegenerate_positive_width_segments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:no_unclassified_segment_flags",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:actual_vias_150",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:actual_positive_drilled_vias",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:actual_copper_polygons_21",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:actual_nonempty_copper_geometry",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:inner_actual_net_function",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:copper_fill_not_ood",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:summary_completed",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:summary_unique_components",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:summary_unique_logicalPins",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:summary_unique_nets",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:summary_unique_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:summary_unique_layers",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:summary_unique_markerCount",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:summary_unique_etchSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:summary_unique_manualSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:summary_unique_thermalSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:summary_counts",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:summary_layers",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:summary_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:no_initial_marker",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:unique_component_names",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:unique_logical_pins",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:unique_net_names",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:four_layer_order",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:mm_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:pin_refdes_membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:logical_pin_net_membership_allowing_blank_NC",
+        "pass": true,
+        "detail": {
+          "netted": 266,
+          "blank_NC": 6,
+          "NC_pins": [
+            [
+              "J2",
+              "A8"
+            ],
+            [
+              "J2",
+              "B8"
+            ],
+            [
+              "U2",
+              "5"
+            ],
+            [
+              "U3",
+              "4"
+            ],
+            [
+              "U5",
+              "5"
+            ],
+            [
+              "U5",
+              "8"
+            ]
+          ],
+          "actual_rule": "A nil or empty-string native net name represents NC. Every nonempty net name must occur in the 69 NET rows."
+        }
+      },
+      {
+        "id": "package/runs/final03:memory:actual_lines_932",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:actual_manual_750",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:actual_thermal_182",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:valid_nondegenerate_positive_width_segments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:no_unclassified_segment_flags",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:actual_vias_150",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:actual_positive_drilled_vias",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:actual_copper_polygons_21",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:actual_nonempty_copper_geometry",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:inner_actual_net_function",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:copper_fill_not_ood",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:summary_completed",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:summary_unique_components",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:summary_unique_logicalPins",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:summary_unique_nets",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:summary_unique_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:summary_unique_layers",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:summary_unique_markerCount",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:summary_unique_etchSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:summary_unique_manualSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:summary_unique_thermalSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:summary_counts",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:summary_layers",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:summary_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:unique_saved_marker",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:memory:exact_marker",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:unique_component_names",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:unique_logical_pins",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:unique_net_names",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:four_layer_order",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:mm_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:pin_refdes_membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:logical_pin_net_membership_allowing_blank_NC",
+        "pass": true,
+        "detail": {
+          "netted": 266,
+          "blank_NC": 6,
+          "NC_pins": [
+            [
+              "J2",
+              "A8"
+            ],
+            [
+              "J2",
+              "B8"
+            ],
+            [
+              "U2",
+              "5"
+            ],
+            [
+              "U3",
+              "4"
+            ],
+            [
+              "U5",
+              "5"
+            ],
+            [
+              "U5",
+              "8"
+            ]
+          ],
+          "actual_rule": "A nil or empty-string native net name represents NC. Every nonempty net name must occur in the 69 NET rows."
+        }
+      },
+      {
+        "id": "package/runs/final03:fresh:actual_lines_932",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:actual_manual_750",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:actual_thermal_182",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:valid_nondegenerate_positive_width_segments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:no_unclassified_segment_flags",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:actual_vias_150",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:actual_positive_drilled_vias",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:actual_copper_polygons_21",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:actual_nonempty_copper_geometry",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:inner_actual_net_function",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:copper_fill_not_ood",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:summary_completed",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:summary_unique_components",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:summary_unique_logicalPins",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:summary_unique_nets",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:summary_unique_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:summary_unique_layers",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:summary_unique_markerCount",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:summary_unique_etchSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:summary_unique_manualSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:summary_unique_thermalSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:summary_counts",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:summary_layers",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:summary_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:unique_saved_marker",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:exact_marker",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:all_three_semantic_row_multisets_equal",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:all_three_geometry_bytes_equal",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:PID_parent_record_consistency",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:exe_identity",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:task_paths_in_identity_command",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:proper_source_path",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:source_SHA_stable_and_current",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:exit_zero_no_timeout",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:capture_creation_within_process_interval",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:private_environment_paths",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:source_default_TELENV_only",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:journal_corroborates_pid",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:journal_corroborates_design_path",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:journal_loads_this_root_skill",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:journal_has_completed_native_function",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:generated_replay_script_root",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:python_isolation",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:nographic_flags",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:build:fresh_readonly_flag",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:PID_parent_record_consistency",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:exe_identity",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:task_paths_in_identity_command",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:proper_source_path",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:source_SHA_stable_and_current",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:exit_zero_no_timeout",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:capture_creation_within_process_interval",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:private_environment_paths",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:source_default_TELENV_only",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:journal_corroborates_pid",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:journal_corroborates_design_path",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:journal_loads_this_root_skill",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:journal_has_completed_native_function",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:generated_replay_script_root",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:python_isolation",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:nographic_flags",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh:fresh_readonly_flag",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:separate_fresh_process",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:fresh_after_build",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:saved_native_board_new_bytes",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:explicit_SaveAs_path",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:declared_report_consistent_with_raw",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:probe_bound_to_root",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:probe_fixture_expected",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:probe_manifest_identity",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:unique_component_names",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:unique_logical_pins",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:unique_net_names",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:four_layer_order",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:mm_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:pin_refdes_membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:logical_pin_net_membership_allowing_blank_NC",
+        "pass": true,
+        "detail": {
+          "netted": 266,
+          "blank_NC": 6,
+          "NC_pins": [
+            [
+              "J2",
+              "A8"
+            ],
+            [
+              "J2",
+              "B8"
+            ],
+            [
+              "U2",
+              "5"
+            ],
+            [
+              "U3",
+              "4"
+            ],
+            [
+              "U5",
+              "5"
+            ],
+            [
+              "U5",
+              "8"
+            ]
+          ],
+          "actual_rule": "A nil or empty-string native net name represents NC. Every nonempty net name must occur in the 69 NET rows."
+        }
+      },
+      {
+        "id": "native/R Space/runs/move01:before:actual_lines_932",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:actual_manual_750",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:actual_thermal_182",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:valid_nondegenerate_positive_width_segments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:no_unclassified_segment_flags",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:actual_vias_150",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:actual_positive_drilled_vias",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:actual_copper_polygons_21",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:actual_nonempty_copper_geometry",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:inner_actual_net_function",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:copper_fill_not_ood",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:summary_completed",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:summary_unique_components",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:summary_unique_logicalPins",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:summary_unique_nets",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:summary_unique_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:summary_unique_layers",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:summary_unique_markerCount",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:summary_unique_etchSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:summary_unique_manualSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:summary_unique_thermalSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:summary_counts",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:summary_layers",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:summary_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:before:no_initial_marker",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:unique_component_names",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:unique_logical_pins",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:unique_net_names",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:four_layer_order",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:mm_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:pin_refdes_membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:logical_pin_net_membership_allowing_blank_NC",
+        "pass": true,
+        "detail": {
+          "netted": 266,
+          "blank_NC": 6,
+          "NC_pins": [
+            [
+              "J2",
+              "A8"
+            ],
+            [
+              "J2",
+              "B8"
+            ],
+            [
+              "U2",
+              "5"
+            ],
+            [
+              "U3",
+              "4"
+            ],
+            [
+              "U5",
+              "5"
+            ],
+            [
+              "U5",
+              "8"
+            ]
+          ],
+          "actual_rule": "A nil or empty-string native net name represents NC. Every nonempty net name must occur in the 69 NET rows."
+        }
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:actual_lines_932",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:actual_manual_750",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:actual_thermal_182",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:valid_nondegenerate_positive_width_segments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:no_unclassified_segment_flags",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:actual_vias_150",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:actual_positive_drilled_vias",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:actual_copper_polygons_21",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:actual_nonempty_copper_geometry",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:inner_actual_net_function",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:copper_fill_not_ood",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:summary_completed",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:summary_unique_components",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:summary_unique_logicalPins",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:summary_unique_nets",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:summary_unique_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:summary_unique_layers",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:summary_unique_markerCount",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:summary_unique_etchSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:summary_unique_manualSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:summary_unique_thermalSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:summary_counts",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:summary_layers",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:summary_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:unique_saved_marker",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:exact_marker",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:unique_component_names",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:unique_logical_pins",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:unique_net_names",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:four_layer_order",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:mm_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:pin_refdes_membership",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:logical_pin_net_membership_allowing_blank_NC",
+        "pass": true,
+        "detail": {
+          "netted": 266,
+          "blank_NC": 6,
+          "NC_pins": [
+            [
+              "J2",
+              "A8"
+            ],
+            [
+              "J2",
+              "B8"
+            ],
+            [
+              "U2",
+              "5"
+            ],
+            [
+              "U3",
+              "4"
+            ],
+            [
+              "U5",
+              "5"
+            ],
+            [
+              "U5",
+              "8"
+            ]
+          ],
+          "actual_rule": "A nil or empty-string native net name represents NC. Every nonempty net name must occur in the 69 NET rows."
+        }
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:actual_lines_932",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:actual_manual_750",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:actual_thermal_182",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:valid_nondegenerate_positive_width_segments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:no_unclassified_segment_flags",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:actual_vias_150",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:actual_positive_drilled_vias",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:actual_copper_polygons_21",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:actual_nonempty_copper_geometry",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:inner_actual_net_function",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:copper_fill_not_ood",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:summary_completed",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:summary_unique_components",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:summary_unique_logicalPins",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:summary_unique_nets",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:summary_unique_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:summary_unique_layers",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:summary_unique_markerCount",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:summary_unique_etchSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:summary_unique_manualSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:summary_unique_thermalSegments",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:summary_counts",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:summary_layers",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:summary_units",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:unique_saved_marker",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:exact_marker",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:all_three_semantic_row_multisets_equal",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:all_three_geometry_bytes_equal",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:PID_parent_record_consistency",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:exe_identity",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:task_paths_in_identity_command",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:proper_source_path",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:source_SHA_stable_and_current",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:exit_zero_no_timeout",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:capture_creation_within_process_interval",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:private_environment_paths",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:source_default_TELENV_only",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:journal_corroborates_pid",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:journal_corroborates_design_path",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:journal_loads_this_root_skill",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:journal_has_completed_native_function",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:generated_replay_script_root",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:python_isolation",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:nographic_flags",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:build:fresh_readonly_flag",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:PID_parent_record_consistency",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:exe_identity",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:task_paths_in_identity_command",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:proper_source_path",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:source_SHA_stable_and_current",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:exit_zero_no_timeout",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:capture_creation_within_process_interval",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:private_environment_paths",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:source_default_TELENV_only",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:journal_corroborates_pid",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:journal_corroborates_design_path",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:journal_loads_this_root_skill",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:journal_has_completed_native_function",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:generated_replay_script_root",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:python_isolation",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:nographic_flags",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:fresh_readonly_flag",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:separate_fresh_process",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh_after_build",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:saved_native_board_new_bytes",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:explicit_SaveAs_path",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "native/R Space/runs/move01:declared_report_consistent_with_raw",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "two_roots_same_fixture",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "two_runs_same_semantic_geometry",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "relocated_run_has_different_new_binary_artifact",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "four_distinct_native_child_ids",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "two_distinct_launcher_parents",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "same_native_host_not_second_PC",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "relocation_initial_manifest_matches_current_source",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "relocation_initial_destination_identity",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "relocation_initial_clean_runs_record",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "negative_existing_run_refusal_record",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "id": "package/runs/final03:before:all_raw_row_field_arities",
+        "pass": true,
+        "detail": {
+          "rows_checked": 1888,
+          "failures": []
+        }
+      },
+      {
+        "id": "package/runs/final03:memory:all_raw_row_field_arities",
+        "pass": true,
+        "detail": {
+          "rows_checked": 1888,
+          "failures": []
+        }
+      },
+      {
+        "id": "package/runs/final03:fresh:all_raw_row_field_arities",
+        "pass": true,
+        "detail": {
+          "rows_checked": 1888,
+          "failures": []
+        }
+      },
+      {
+        "id": "native/R Space/runs/move01:before:all_raw_row_field_arities",
+        "pass": true,
+        "detail": {
+          "rows_checked": 1888,
+          "failures": []
+        }
+      },
+      {
+        "id": "native/R Space/runs/move01:memory:all_raw_row_field_arities",
+        "pass": true,
+        "detail": {
+          "rows_checked": 1888,
+          "failures": []
+        }
+      },
+      {
+        "id": "native/R Space/runs/move01:fresh:all_raw_row_field_arities",
+        "pass": true,
+        "detail": {
+          "rows_checked": 1888,
+          "failures": []
+        }
+      }
+    ],
+    "check_count_note": "Per-row parser arity checks are aggregated to one semantic check per phase; do not present thousands of scalar reads as independent engineering conclusions."
+  },
+  "method": {
+    "invoked_replay_verify": false,
+    "reason": "replay.py verify() writes verification.json, so it was reviewed statically and not executed.",
+    "launched_native_or_GUI": false,
+    "parsed_raw_native_summaries": 6,
+    "parsed_raw_native_geometry_files": 6,
+    "parsed_journals": 4,
+    "compared_geometry": "Strict independent parser of SKILL %L field data; counts, field checks and complete semantic row multiset comparison, plus byte SHA comparison.",
+    "relocation_cleanliness_evidence": "Retained pre-run relocation snapshot says no runs existed; independent reviewer did not observe the filesystem before the experiment. Distinct native child identities and destination-specific journals/output hashes corroborate an actual new destination run.",
+    "review_method_correction": {
+      "initial_review_error": "Treated only nil as NC and initially flagged the six blank-string NC pin names in each phase as unknown nets.",
+      "actual_source_observation": "Six exact same blank-net pins across all six geometry files: J2.A8, J2.B8, U2.5, U3.4, U5.5, U5.8. Nonempty 266 pin net names all belong to 69 actual net rows.",
+      "correction": "Blank string or nil is accepted as NC and counted separately; no native source/output was altered."
+    }
+  },
+  "same_portable_source_files": {
+    "replay.py": "3DF86D85AE9190CD4BF66FE7793FD7E5CD80E93CC8948C124E59ABAFE94E7FCA",
+    "scripts/replay.il": "3B7EE87D435244D486042588F8E0CCD37BC007D578E1607A3B31D64FBF54D187",
+    "fixture/training_4L.brd": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+    "README.md": "10E07C07D629C785EAF3278F83FF1F097B74937DEA586419B61953813A5C5CA7",
+    "config.example.json": "2B55D9D0FB8EA33B5200F1F87ACE8E6E1C753C08770B357DD7EB7ED7C2A2B43F"
+  },
+  "runs": [
+    {
+      "root": "package/runs/final03",
+      "probe_file_sha256": "0E4E54113E0D757F635817D99A15BBA05D2C92169AD0DBFC653F24FC95775D12",
+      "phase_geometry": {
+        "before": {
+          "path": "package\\runs\\final03\\build\\before_geometry.txt",
+          "sha256": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+          "bytes": 233599,
+          "row_count": 1888,
+          "row_type_counts": {
+            "COMP": 80,
+            "COPPER": 21,
+            "ETCH_LINE": 932,
+            "LAYERS": 1,
+            "LOGICAL_PIN": 272,
+            "NET": 69,
+            "PHYSICAL_PIN": 278,
+            "POSE": 84,
+            "UNITS": 1,
+            "VIA": 150
+          },
+          "segments": {
+            "manual": 750,
+            "thermal": 182,
+            "total": 932,
+            "arcs": 0,
+            "by_layer": {
+              "ETCH/TOP": 667,
+              "ETCH/BOTTOM": 173,
+              "ETCH/L2": 64,
+              "ETCH/L3": 28
+            }
+          },
+          "vias": 150,
+          "logical_netted_pins": 266,
+          "logical_nc_pins": 6,
+          "physical_mechanical_pins": 6,
+          "copper": [
+            {
+              "layer": "ETCH/L2",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 4312.918,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  79.5,
+                  59.5
+                ]
+              ],
+              "outer_vertex_count": 8,
+              "hole_count": 119
+            },
+            {
+              "layer": "ETCH/L3",
+              "net": "V3V3",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 4234.959,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  79.5,
+                  59.5
+                ]
+              ],
+              "outer_vertex_count": 8,
+              "hole_count": 135
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1977.472,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  77.5998,
+                  58.3491
+                ]
+              ],
+              "outer_vertex_count": 707,
+              "hole_count": 33
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 16.40764,
+              "bbox_mm": [
+                [
+                  17.7903,
+                  38.6295
+                ],
+                [
+                  31.4378,
+                  52.1998
+                ]
+              ],
+              "outer_vertex_count": 35,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 2.058048,
+              "bbox_mm": [
+                [
+                  27.182,
+                  32.4826
+                ],
+                [
+                  30.0526,
+                  33.7902
+                ]
+              ],
+              "outer_vertex_count": 20,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.316824,
+              "bbox_mm": [
+                [
+                  27.5502,
+                  28.5094
+                ],
+                [
+                  29.0433,
+                  29.5205
+                ]
+              ],
+              "outer_vertex_count": 23,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 279.364,
+              "bbox_mm": [
+                [
+                  33.9002,
+                  1.6002
+                ],
+                [
+                  59.8998,
+                  23.3084
+                ]
+              ],
+              "outer_vertex_count": 342,
+              "hole_count": 5
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.5310567,
+              "bbox_mm": [
+                [
+                  34.1045,
+                  24.0243
+                ],
+                [
+                  35.0293,
+                  25.1198
+                ]
+              ],
+              "outer_vertex_count": 18,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 23.9392,
+              "bbox_mm": [
+                [
+                  36.4707,
+                  24.6002
+                ],
+                [
+                  42.3998,
+                  30.5293
+                ]
+              ],
+              "outer_vertex_count": 86,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.529719,
+              "bbox_mm": [
+                [
+                  39.7002,
+                  10.5784
+                ],
+                [
+                  40.7998,
+                  12.246
+                ]
+              ],
+              "outer_vertex_count": 18,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 5.681189,
+              "bbox_mm": [
+                [
+                  43.1752,
+                  21.8914
+                ],
+                [
+                  47.3656,
+                  23.9003
+                ]
+              ],
+              "outer_vertex_count": 30,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.97594,
+              "bbox_mm": [
+                [
+                  46.7582,
+                  24.6502
+                ],
+                [
+                  49.5133,
+                  25.4498
+                ]
+              ],
+              "outer_vertex_count": 11,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 23.40066,
+              "bbox_mm": [
+                [
+                  50.5002,
+                  12.991
+                ],
+                [
+                  57.5998,
+                  17.8998
+                ]
+              ],
+              "outer_vertex_count": 33,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 6.017135,
+              "bbox_mm": [
+                [
+                  50.6059,
+                  20.7621
+                ],
+                [
+                  56.8452,
+                  23.8498
+                ]
+              ],
+              "outer_vertex_count": 30,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.6901322,
+              "bbox_mm": [
+                [
+                  51.6877,
+                  8.8502
+                ],
+                [
+                  52.4512,
+                  10.1298
+                ]
+              ],
+              "outer_vertex_count": 14,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 2.030795,
+              "bbox_mm": [
+                [
+                  52.5599,
+                  19.2002
+                ],
+                [
+                  55.1922,
+                  21.3498
+                ]
+              ],
+              "outer_vertex_count": 22,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 209.5699,
+              "bbox_mm": [
+                [
+                  54.5099,
+                  24.8045
+                ],
+                [
+                  77.5998,
+                  42.2098
+                ]
+              ],
+              "outer_vertex_count": 107,
+              "hole_count": 2
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 339.856,
+              "bbox_mm": [
+                [
+                  54.5548,
+                  1.6002
+                ],
+                [
+                  77.5998,
+                  28.2098
+                ]
+              ],
+              "outer_vertex_count": 154,
+              "hole_count": 7
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.776978,
+              "bbox_mm": [
+                [
+                  55.4344,
+                  18.7002
+                ],
+                [
+                  57.9654,
+                  20.2525
+                ]
+              ],
+              "outer_vertex_count": 28,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.7674213,
+              "bbox_mm": [
+                [
+                  56.2337,
+                  24.6502
+                ],
+                [
+                  57.2663,
+                  25.4498
+                ]
+              ],
+              "outer_vertex_count": 14,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 104.9169,
+              "bbox_mm": [
+                [
+                  57.5254,
+                  34.7851
+                ],
+                [
+                  77.5998,
+                  46.3998
+                ]
+              ],
+              "outer_vertex_count": 38,
+              "hole_count": 0
+            }
+          ],
+          "net_row_member_counts": {
+            "0": 69
+          },
+          "logical_nc_pin_identities": [
+            [
+              "J2",
+              "A8"
+            ],
+            [
+              "J2",
+              "B8"
+            ],
+            [
+              "U2",
+              "5"
+            ],
+            [
+              "U3",
+              "4"
+            ],
+            [
+              "U5",
+              "5"
+            ],
+            [
+              "U5",
+              "8"
+            ]
+          ]
+        },
+        "memory": {
+          "path": "package\\runs\\final03\\build\\memory_geometry.txt",
+          "sha256": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+          "bytes": 233599,
+          "row_count": 1888,
+          "row_type_counts": {
+            "COMP": 80,
+            "COPPER": 21,
+            "ETCH_LINE": 932,
+            "LAYERS": 1,
+            "LOGICAL_PIN": 272,
+            "NET": 69,
+            "PHYSICAL_PIN": 278,
+            "POSE": 84,
+            "UNITS": 1,
+            "VIA": 150
+          },
+          "segments": {
+            "manual": 750,
+            "thermal": 182,
+            "total": 932,
+            "arcs": 0,
+            "by_layer": {
+              "ETCH/TOP": 667,
+              "ETCH/BOTTOM": 173,
+              "ETCH/L2": 64,
+              "ETCH/L3": 28
+            }
+          },
+          "vias": 150,
+          "logical_netted_pins": 266,
+          "logical_nc_pins": 6,
+          "physical_mechanical_pins": 6,
+          "copper": [
+            {
+              "layer": "ETCH/L2",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 4312.918,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  79.5,
+                  59.5
+                ]
+              ],
+              "outer_vertex_count": 8,
+              "hole_count": 119
+            },
+            {
+              "layer": "ETCH/L3",
+              "net": "V3V3",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 4234.959,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  79.5,
+                  59.5
+                ]
+              ],
+              "outer_vertex_count": 8,
+              "hole_count": 135
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1977.472,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  77.5998,
+                  58.3491
+                ]
+              ],
+              "outer_vertex_count": 707,
+              "hole_count": 33
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 16.40764,
+              "bbox_mm": [
+                [
+                  17.7903,
+                  38.6295
+                ],
+                [
+                  31.4378,
+                  52.1998
+                ]
+              ],
+              "outer_vertex_count": 35,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 2.058048,
+              "bbox_mm": [
+                [
+                  27.182,
+                  32.4826
+                ],
+                [
+                  30.0526,
+                  33.7902
+                ]
+              ],
+              "outer_vertex_count": 20,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.316824,
+              "bbox_mm": [
+                [
+                  27.5502,
+                  28.5094
+                ],
+                [
+                  29.0433,
+                  29.5205
+                ]
+              ],
+              "outer_vertex_count": 23,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 279.364,
+              "bbox_mm": [
+                [
+                  33.9002,
+                  1.6002
+                ],
+                [
+                  59.8998,
+                  23.3084
+                ]
+              ],
+              "outer_vertex_count": 342,
+              "hole_count": 5
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.5310567,
+              "bbox_mm": [
+                [
+                  34.1045,
+                  24.0243
+                ],
+                [
+                  35.0293,
+                  25.1198
+                ]
+              ],
+              "outer_vertex_count": 18,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 23.9392,
+              "bbox_mm": [
+                [
+                  36.4707,
+                  24.6002
+                ],
+                [
+                  42.3998,
+                  30.5293
+                ]
+              ],
+              "outer_vertex_count": 86,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.529719,
+              "bbox_mm": [
+                [
+                  39.7002,
+                  10.5784
+                ],
+                [
+                  40.7998,
+                  12.246
+                ]
+              ],
+              "outer_vertex_count": 18,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 5.681189,
+              "bbox_mm": [
+                [
+                  43.1752,
+                  21.8914
+                ],
+                [
+                  47.3656,
+                  23.9003
+                ]
+              ],
+              "outer_vertex_count": 30,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.97594,
+              "bbox_mm": [
+                [
+                  46.7582,
+                  24.6502
+                ],
+                [
+                  49.5133,
+                  25.4498
+                ]
+              ],
+              "outer_vertex_count": 11,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 23.40066,
+              "bbox_mm": [
+                [
+                  50.5002,
+                  12.991
+                ],
+                [
+                  57.5998,
+                  17.8998
+                ]
+              ],
+              "outer_vertex_count": 33,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 6.017135,
+              "bbox_mm": [
+                [
+                  50.6059,
+                  20.7621
+                ],
+                [
+                  56.8452,
+                  23.8498
+                ]
+              ],
+              "outer_vertex_count": 30,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.6901322,
+              "bbox_mm": [
+                [
+                  51.6877,
+                  8.8502
+                ],
+                [
+                  52.4512,
+                  10.1298
+                ]
+              ],
+              "outer_vertex_count": 14,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 2.030795,
+              "bbox_mm": [
+                [
+                  52.5599,
+                  19.2002
+                ],
+                [
+                  55.1922,
+                  21.3498
+                ]
+              ],
+              "outer_vertex_count": 22,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 209.5699,
+              "bbox_mm": [
+                [
+                  54.5099,
+                  24.8045
+                ],
+                [
+                  77.5998,
+                  42.2098
+                ]
+              ],
+              "outer_vertex_count": 107,
+              "hole_count": 2
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 339.856,
+              "bbox_mm": [
+                [
+                  54.5548,
+                  1.6002
+                ],
+                [
+                  77.5998,
+                  28.2098
+                ]
+              ],
+              "outer_vertex_count": 154,
+              "hole_count": 7
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.776978,
+              "bbox_mm": [
+                [
+                  55.4344,
+                  18.7002
+                ],
+                [
+                  57.9654,
+                  20.2525
+                ]
+              ],
+              "outer_vertex_count": 28,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.7674213,
+              "bbox_mm": [
+                [
+                  56.2337,
+                  24.6502
+                ],
+                [
+                  57.2663,
+                  25.4498
+                ]
+              ],
+              "outer_vertex_count": 14,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 104.9169,
+              "bbox_mm": [
+                [
+                  57.5254,
+                  34.7851
+                ],
+                [
+                  77.5998,
+                  46.3998
+                ]
+              ],
+              "outer_vertex_count": 38,
+              "hole_count": 0
+            }
+          ],
+          "net_row_member_counts": {
+            "0": 69
+          },
+          "logical_nc_pin_identities": [
+            [
+              "J2",
+              "A8"
+            ],
+            [
+              "J2",
+              "B8"
+            ],
+            [
+              "U2",
+              "5"
+            ],
+            [
+              "U3",
+              "4"
+            ],
+            [
+              "U5",
+              "5"
+            ],
+            [
+              "U5",
+              "8"
+            ]
+          ]
+        },
+        "fresh": {
+          "path": "package\\runs\\final03\\fresh\\fresh_geometry.txt",
+          "sha256": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+          "bytes": 233599,
+          "row_count": 1888,
+          "row_type_counts": {
+            "COMP": 80,
+            "COPPER": 21,
+            "ETCH_LINE": 932,
+            "LAYERS": 1,
+            "LOGICAL_PIN": 272,
+            "NET": 69,
+            "PHYSICAL_PIN": 278,
+            "POSE": 84,
+            "UNITS": 1,
+            "VIA": 150
+          },
+          "segments": {
+            "manual": 750,
+            "thermal": 182,
+            "total": 932,
+            "arcs": 0,
+            "by_layer": {
+              "ETCH/TOP": 667,
+              "ETCH/BOTTOM": 173,
+              "ETCH/L2": 64,
+              "ETCH/L3": 28
+            }
+          },
+          "vias": 150,
+          "logical_netted_pins": 266,
+          "logical_nc_pins": 6,
+          "physical_mechanical_pins": 6,
+          "copper": [
+            {
+              "layer": "ETCH/L2",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 4312.918,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  79.5,
+                  59.5
+                ]
+              ],
+              "outer_vertex_count": 8,
+              "hole_count": 119
+            },
+            {
+              "layer": "ETCH/L3",
+              "net": "V3V3",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 4234.959,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  79.5,
+                  59.5
+                ]
+              ],
+              "outer_vertex_count": 8,
+              "hole_count": 135
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1977.472,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  77.5998,
+                  58.3491
+                ]
+              ],
+              "outer_vertex_count": 707,
+              "hole_count": 33
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 16.40764,
+              "bbox_mm": [
+                [
+                  17.7903,
+                  38.6295
+                ],
+                [
+                  31.4378,
+                  52.1998
+                ]
+              ],
+              "outer_vertex_count": 35,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 2.058048,
+              "bbox_mm": [
+                [
+                  27.182,
+                  32.4826
+                ],
+                [
+                  30.0526,
+                  33.7902
+                ]
+              ],
+              "outer_vertex_count": 20,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.316824,
+              "bbox_mm": [
+                [
+                  27.5502,
+                  28.5094
+                ],
+                [
+                  29.0433,
+                  29.5205
+                ]
+              ],
+              "outer_vertex_count": 23,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 279.364,
+              "bbox_mm": [
+                [
+                  33.9002,
+                  1.6002
+                ],
+                [
+                  59.8998,
+                  23.3084
+                ]
+              ],
+              "outer_vertex_count": 342,
+              "hole_count": 5
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.5310567,
+              "bbox_mm": [
+                [
+                  34.1045,
+                  24.0243
+                ],
+                [
+                  35.0293,
+                  25.1198
+                ]
+              ],
+              "outer_vertex_count": 18,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 23.9392,
+              "bbox_mm": [
+                [
+                  36.4707,
+                  24.6002
+                ],
+                [
+                  42.3998,
+                  30.5293
+                ]
+              ],
+              "outer_vertex_count": 86,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.529719,
+              "bbox_mm": [
+                [
+                  39.7002,
+                  10.5784
+                ],
+                [
+                  40.7998,
+                  12.246
+                ]
+              ],
+              "outer_vertex_count": 18,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 5.681189,
+              "bbox_mm": [
+                [
+                  43.1752,
+                  21.8914
+                ],
+                [
+                  47.3656,
+                  23.9003
+                ]
+              ],
+              "outer_vertex_count": 30,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.97594,
+              "bbox_mm": [
+                [
+                  46.7582,
+                  24.6502
+                ],
+                [
+                  49.5133,
+                  25.4498
+                ]
+              ],
+              "outer_vertex_count": 11,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 23.40066,
+              "bbox_mm": [
+                [
+                  50.5002,
+                  12.991
+                ],
+                [
+                  57.5998,
+                  17.8998
+                ]
+              ],
+              "outer_vertex_count": 33,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 6.017135,
+              "bbox_mm": [
+                [
+                  50.6059,
+                  20.7621
+                ],
+                [
+                  56.8452,
+                  23.8498
+                ]
+              ],
+              "outer_vertex_count": 30,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.6901322,
+              "bbox_mm": [
+                [
+                  51.6877,
+                  8.8502
+                ],
+                [
+                  52.4512,
+                  10.1298
+                ]
+              ],
+              "outer_vertex_count": 14,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 2.030795,
+              "bbox_mm": [
+                [
+                  52.5599,
+                  19.2002
+                ],
+                [
+                  55.1922,
+                  21.3498
+                ]
+              ],
+              "outer_vertex_count": 22,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 209.5699,
+              "bbox_mm": [
+                [
+                  54.5099,
+                  24.8045
+                ],
+                [
+                  77.5998,
+                  42.2098
+                ]
+              ],
+              "outer_vertex_count": 107,
+              "hole_count": 2
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 339.856,
+              "bbox_mm": [
+                [
+                  54.5548,
+                  1.6002
+                ],
+                [
+                  77.5998,
+                  28.2098
+                ]
+              ],
+              "outer_vertex_count": 154,
+              "hole_count": 7
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.776978,
+              "bbox_mm": [
+                [
+                  55.4344,
+                  18.7002
+                ],
+                [
+                  57.9654,
+                  20.2525
+                ]
+              ],
+              "outer_vertex_count": 28,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.7674213,
+              "bbox_mm": [
+                [
+                  56.2337,
+                  24.6502
+                ],
+                [
+                  57.2663,
+                  25.4498
+                ]
+              ],
+              "outer_vertex_count": 14,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 104.9169,
+              "bbox_mm": [
+                [
+                  57.5254,
+                  34.7851
+                ],
+                [
+                  77.5998,
+                  46.3998
+                ]
+              ],
+              "outer_vertex_count": 38,
+              "hole_count": 0
+            }
+          ],
+          "net_row_member_counts": {
+            "0": 69
+          },
+          "logical_nc_pin_identities": [
+            [
+              "J2",
+              "A8"
+            ],
+            [
+              "J2",
+              "B8"
+            ],
+            [
+              "U2",
+              "5"
+            ],
+            [
+              "U3",
+              "4"
+            ],
+            [
+              "U5",
+              "5"
+            ],
+            [
+              "U5",
+              "8"
+            ]
+          ]
+        }
+      },
+      "phase_summary": {
+        "before": {
+          "path": "package\\runs\\final03\\build\\before_summary.tsv",
+          "sha256": "2E27BCAE5A8F0009F07069284B091F73A5570AAC4847DA6F218E7AEF144F553C",
+          "fields": {
+            "components": "80",
+            "logicalPins": "272",
+            "nets": "69",
+            "units": "(\"millimeters\" 4)",
+            "layers": "(\"TOP\" \"L2\" \"L3\" \"BOTTOM\")",
+            "markerCount": "0",
+            "etchSegments": "932",
+            "manualSegments": "750",
+            "thermalSegments": "182"
+          },
+          "markers": []
+        },
+        "memory": {
+          "path": "package\\runs\\final03\\build\\memory_summary.tsv",
+          "sha256": "4417B04F8697463E7DE0064E6BED4FB446F6BBE0524D1BA11018CD7A19A5806B",
+          "fields": {
+            "components": "80",
+            "logicalPins": "272",
+            "nets": "69",
+            "units": "(\"millimeters\" 4)",
+            "layers": "(\"TOP\" \"L2\" \"L3\" \"BOTTOM\")",
+            "markerCount": "1",
+            "etchSegments": "932",
+            "manualSegments": "750",
+            "thermalSegments": "182"
+          },
+          "markers": [
+            [
+              "\"L60_REPLAY\"",
+              "\"BOARD GEOMETRY/ASSEMBLY_NOTES\"",
+              "4.00000000",
+              "4.00000000",
+              "0.00000000"
+            ]
+          ]
+        },
+        "fresh": {
+          "path": "package\\runs\\final03\\fresh\\fresh_summary.tsv",
+          "sha256": "4417B04F8697463E7DE0064E6BED4FB446F6BBE0524D1BA11018CD7A19A5806B",
+          "fields": {
+            "components": "80",
+            "logicalPins": "272",
+            "nets": "69",
+            "units": "(\"millimeters\" 4)",
+            "layers": "(\"TOP\" \"L2\" \"L3\" \"BOTTOM\")",
+            "markerCount": "1",
+            "etchSegments": "932",
+            "manualSegments": "750",
+            "thermalSegments": "182"
+          },
+          "markers": [
+            [
+              "\"L60_REPLAY\"",
+              "\"BOARD GEOMETRY/ASSEMBLY_NOTES\"",
+              "4.00000000",
+              "4.00000000",
+              "0.00000000"
+            ]
+          ]
+        }
+      },
+      "processes": [
+        {
+          "phase": "build",
+          "identity": {
+            "pid": 17824,
+            "parent": 17804,
+            "exe": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe",
+            "created": "2026-10-23T08:47:13.8038530Z",
+            "command": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe -product Allegro_performance -safe -nographic -s D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\runs\\final03\\build.scr -p D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\runs\\final03\\build D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\runs\\final03\\work\\INPUT_COPY.brd"
+          },
+          "exitCode": 0,
+          "start_utc": "2026-10-23T08:47:13.798852+00:00",
+          "finish_utc": "2026-10-23T08:47:23.590457+00:00",
+          "journal_host": "ECMCFS2",
+          "source_sha256": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+          "args_characters_from_captured_command": 382,
+          "readonly": false
+        },
+        {
+          "phase": "fresh",
+          "identity": {
+            "pid": 7660,
+            "parent": 17804,
+            "exe": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe",
+            "created": "2026-10-23T08:47:23.6055830Z",
+            "command": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe -product Allegro_performance -safe -nographic -s D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\runs\\final03\\fresh.scr -p D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\runs\\final03\\fresh -readonly D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\runs\\final03\\work\\L60_replayed.brd"
+          },
+          "exitCode": 0,
+          "start_utc": "2026-10-23T08:47:23.596994+00:00",
+          "finish_utc": "2026-10-23T08:47:29.815273+00:00",
+          "journal_host": "ECMCFS2",
+          "source_sha256": "D8EF6A3C9A0E78AA51728F10D3700F75B6EC07535E2062C598E88D90182AFF89",
+          "args_characters_from_captured_command": 394,
+          "readonly": true
+        }
+      ],
+      "saved_board": {
+        "path": "package\\runs\\final03\\work\\L60_replayed.brd",
+        "sha256": "D8EF6A3C9A0E78AA51728F10D3700F75B6EC07535E2062C598E88D90182AFF89",
+        "bytes": 1404716
+      },
+      "user_GUI_exclusion": {
+        "observed_unowned_processes": [],
+        "coexisting_user_GUI_exclusion_actually_exercised": false,
+        "interpretation": "Formal probes list no unrelated Allegro processes; exclusion code is present but coexistence was not exercised in these two runs."
+      }
+    },
+    {
+      "root": "native/R Space/runs/move01",
+      "probe_file_sha256": "FF47BF09A80EA2B7211DC0F696B16B2B78F4F40E9443B0896CC195C02E86880C",
+      "phase_geometry": {
+        "before": {
+          "path": "native\\R Space\\runs\\move01\\build\\before_geometry.txt",
+          "sha256": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+          "bytes": 233599,
+          "row_count": 1888,
+          "row_type_counts": {
+            "COMP": 80,
+            "COPPER": 21,
+            "ETCH_LINE": 932,
+            "LAYERS": 1,
+            "LOGICAL_PIN": 272,
+            "NET": 69,
+            "PHYSICAL_PIN": 278,
+            "POSE": 84,
+            "UNITS": 1,
+            "VIA": 150
+          },
+          "segments": {
+            "manual": 750,
+            "thermal": 182,
+            "total": 932,
+            "arcs": 0,
+            "by_layer": {
+              "ETCH/TOP": 667,
+              "ETCH/BOTTOM": 173,
+              "ETCH/L2": 64,
+              "ETCH/L3": 28
+            }
+          },
+          "vias": 150,
+          "logical_netted_pins": 266,
+          "logical_nc_pins": 6,
+          "physical_mechanical_pins": 6,
+          "copper": [
+            {
+              "layer": "ETCH/L2",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 4312.918,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  79.5,
+                  59.5
+                ]
+              ],
+              "outer_vertex_count": 8,
+              "hole_count": 119
+            },
+            {
+              "layer": "ETCH/L3",
+              "net": "V3V3",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 4234.959,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  79.5,
+                  59.5
+                ]
+              ],
+              "outer_vertex_count": 8,
+              "hole_count": 135
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1977.472,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  77.5998,
+                  58.3491
+                ]
+              ],
+              "outer_vertex_count": 707,
+              "hole_count": 33
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 16.40764,
+              "bbox_mm": [
+                [
+                  17.7903,
+                  38.6295
+                ],
+                [
+                  31.4378,
+                  52.1998
+                ]
+              ],
+              "outer_vertex_count": 35,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 2.058048,
+              "bbox_mm": [
+                [
+                  27.182,
+                  32.4826
+                ],
+                [
+                  30.0526,
+                  33.7902
+                ]
+              ],
+              "outer_vertex_count": 20,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.316824,
+              "bbox_mm": [
+                [
+                  27.5502,
+                  28.5094
+                ],
+                [
+                  29.0433,
+                  29.5205
+                ]
+              ],
+              "outer_vertex_count": 23,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 279.364,
+              "bbox_mm": [
+                [
+                  33.9002,
+                  1.6002
+                ],
+                [
+                  59.8998,
+                  23.3084
+                ]
+              ],
+              "outer_vertex_count": 342,
+              "hole_count": 5
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.5310567,
+              "bbox_mm": [
+                [
+                  34.1045,
+                  24.0243
+                ],
+                [
+                  35.0293,
+                  25.1198
+                ]
+              ],
+              "outer_vertex_count": 18,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 23.9392,
+              "bbox_mm": [
+                [
+                  36.4707,
+                  24.6002
+                ],
+                [
+                  42.3998,
+                  30.5293
+                ]
+              ],
+              "outer_vertex_count": 86,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.529719,
+              "bbox_mm": [
+                [
+                  39.7002,
+                  10.5784
+                ],
+                [
+                  40.7998,
+                  12.246
+                ]
+              ],
+              "outer_vertex_count": 18,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 5.681189,
+              "bbox_mm": [
+                [
+                  43.1752,
+                  21.8914
+                ],
+                [
+                  47.3656,
+                  23.9003
+                ]
+              ],
+              "outer_vertex_count": 30,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.97594,
+              "bbox_mm": [
+                [
+                  46.7582,
+                  24.6502
+                ],
+                [
+                  49.5133,
+                  25.4498
+                ]
+              ],
+              "outer_vertex_count": 11,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 23.40066,
+              "bbox_mm": [
+                [
+                  50.5002,
+                  12.991
+                ],
+                [
+                  57.5998,
+                  17.8998
+                ]
+              ],
+              "outer_vertex_count": 33,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 6.017135,
+              "bbox_mm": [
+                [
+                  50.6059,
+                  20.7621
+                ],
+                [
+                  56.8452,
+                  23.8498
+                ]
+              ],
+              "outer_vertex_count": 30,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.6901322,
+              "bbox_mm": [
+                [
+                  51.6877,
+                  8.8502
+                ],
+                [
+                  52.4512,
+                  10.1298
+                ]
+              ],
+              "outer_vertex_count": 14,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 2.030795,
+              "bbox_mm": [
+                [
+                  52.5599,
+                  19.2002
+                ],
+                [
+                  55.1922,
+                  21.3498
+                ]
+              ],
+              "outer_vertex_count": 22,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 209.5699,
+              "bbox_mm": [
+                [
+                  54.5099,
+                  24.8045
+                ],
+                [
+                  77.5998,
+                  42.2098
+                ]
+              ],
+              "outer_vertex_count": 107,
+              "hole_count": 2
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 339.856,
+              "bbox_mm": [
+                [
+                  54.5548,
+                  1.6002
+                ],
+                [
+                  77.5998,
+                  28.2098
+                ]
+              ],
+              "outer_vertex_count": 154,
+              "hole_count": 7
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.776978,
+              "bbox_mm": [
+                [
+                  55.4344,
+                  18.7002
+                ],
+                [
+                  57.9654,
+                  20.2525
+                ]
+              ],
+              "outer_vertex_count": 28,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.7674213,
+              "bbox_mm": [
+                [
+                  56.2337,
+                  24.6502
+                ],
+                [
+                  57.2663,
+                  25.4498
+                ]
+              ],
+              "outer_vertex_count": 14,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 104.9169,
+              "bbox_mm": [
+                [
+                  57.5254,
+                  34.7851
+                ],
+                [
+                  77.5998,
+                  46.3998
+                ]
+              ],
+              "outer_vertex_count": 38,
+              "hole_count": 0
+            }
+          ],
+          "net_row_member_counts": {
+            "0": 69
+          },
+          "logical_nc_pin_identities": [
+            [
+              "J2",
+              "A8"
+            ],
+            [
+              "J2",
+              "B8"
+            ],
+            [
+              "U2",
+              "5"
+            ],
+            [
+              "U3",
+              "4"
+            ],
+            [
+              "U5",
+              "5"
+            ],
+            [
+              "U5",
+              "8"
+            ]
+          ]
+        },
+        "memory": {
+          "path": "native\\R Space\\runs\\move01\\build\\memory_geometry.txt",
+          "sha256": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+          "bytes": 233599,
+          "row_count": 1888,
+          "row_type_counts": {
+            "COMP": 80,
+            "COPPER": 21,
+            "ETCH_LINE": 932,
+            "LAYERS": 1,
+            "LOGICAL_PIN": 272,
+            "NET": 69,
+            "PHYSICAL_PIN": 278,
+            "POSE": 84,
+            "UNITS": 1,
+            "VIA": 150
+          },
+          "segments": {
+            "manual": 750,
+            "thermal": 182,
+            "total": 932,
+            "arcs": 0,
+            "by_layer": {
+              "ETCH/TOP": 667,
+              "ETCH/BOTTOM": 173,
+              "ETCH/L2": 64,
+              "ETCH/L3": 28
+            }
+          },
+          "vias": 150,
+          "logical_netted_pins": 266,
+          "logical_nc_pins": 6,
+          "physical_mechanical_pins": 6,
+          "copper": [
+            {
+              "layer": "ETCH/L2",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 4312.918,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  79.5,
+                  59.5
+                ]
+              ],
+              "outer_vertex_count": 8,
+              "hole_count": 119
+            },
+            {
+              "layer": "ETCH/L3",
+              "net": "V3V3",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 4234.959,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  79.5,
+                  59.5
+                ]
+              ],
+              "outer_vertex_count": 8,
+              "hole_count": 135
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1977.472,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  77.5998,
+                  58.3491
+                ]
+              ],
+              "outer_vertex_count": 707,
+              "hole_count": 33
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 16.40764,
+              "bbox_mm": [
+                [
+                  17.7903,
+                  38.6295
+                ],
+                [
+                  31.4378,
+                  52.1998
+                ]
+              ],
+              "outer_vertex_count": 35,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 2.058048,
+              "bbox_mm": [
+                [
+                  27.182,
+                  32.4826
+                ],
+                [
+                  30.0526,
+                  33.7902
+                ]
+              ],
+              "outer_vertex_count": 20,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.316824,
+              "bbox_mm": [
+                [
+                  27.5502,
+                  28.5094
+                ],
+                [
+                  29.0433,
+                  29.5205
+                ]
+              ],
+              "outer_vertex_count": 23,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 279.364,
+              "bbox_mm": [
+                [
+                  33.9002,
+                  1.6002
+                ],
+                [
+                  59.8998,
+                  23.3084
+                ]
+              ],
+              "outer_vertex_count": 342,
+              "hole_count": 5
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.5310567,
+              "bbox_mm": [
+                [
+                  34.1045,
+                  24.0243
+                ],
+                [
+                  35.0293,
+                  25.1198
+                ]
+              ],
+              "outer_vertex_count": 18,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 23.9392,
+              "bbox_mm": [
+                [
+                  36.4707,
+                  24.6002
+                ],
+                [
+                  42.3998,
+                  30.5293
+                ]
+              ],
+              "outer_vertex_count": 86,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.529719,
+              "bbox_mm": [
+                [
+                  39.7002,
+                  10.5784
+                ],
+                [
+                  40.7998,
+                  12.246
+                ]
+              ],
+              "outer_vertex_count": 18,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 5.681189,
+              "bbox_mm": [
+                [
+                  43.1752,
+                  21.8914
+                ],
+                [
+                  47.3656,
+                  23.9003
+                ]
+              ],
+              "outer_vertex_count": 30,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.97594,
+              "bbox_mm": [
+                [
+                  46.7582,
+                  24.6502
+                ],
+                [
+                  49.5133,
+                  25.4498
+                ]
+              ],
+              "outer_vertex_count": 11,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 23.40066,
+              "bbox_mm": [
+                [
+                  50.5002,
+                  12.991
+                ],
+                [
+                  57.5998,
+                  17.8998
+                ]
+              ],
+              "outer_vertex_count": 33,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 6.017135,
+              "bbox_mm": [
+                [
+                  50.6059,
+                  20.7621
+                ],
+                [
+                  56.8452,
+                  23.8498
+                ]
+              ],
+              "outer_vertex_count": 30,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.6901322,
+              "bbox_mm": [
+                [
+                  51.6877,
+                  8.8502
+                ],
+                [
+                  52.4512,
+                  10.1298
+                ]
+              ],
+              "outer_vertex_count": 14,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 2.030795,
+              "bbox_mm": [
+                [
+                  52.5599,
+                  19.2002
+                ],
+                [
+                  55.1922,
+                  21.3498
+                ]
+              ],
+              "outer_vertex_count": 22,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 209.5699,
+              "bbox_mm": [
+                [
+                  54.5099,
+                  24.8045
+                ],
+                [
+                  77.5998,
+                  42.2098
+                ]
+              ],
+              "outer_vertex_count": 107,
+              "hole_count": 2
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 339.856,
+              "bbox_mm": [
+                [
+                  54.5548,
+                  1.6002
+                ],
+                [
+                  77.5998,
+                  28.2098
+                ]
+              ],
+              "outer_vertex_count": 154,
+              "hole_count": 7
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.776978,
+              "bbox_mm": [
+                [
+                  55.4344,
+                  18.7002
+                ],
+                [
+                  57.9654,
+                  20.2525
+                ]
+              ],
+              "outer_vertex_count": 28,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.7674213,
+              "bbox_mm": [
+                [
+                  56.2337,
+                  24.6502
+                ],
+                [
+                  57.2663,
+                  25.4498
+                ]
+              ],
+              "outer_vertex_count": 14,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 104.9169,
+              "bbox_mm": [
+                [
+                  57.5254,
+                  34.7851
+                ],
+                [
+                  77.5998,
+                  46.3998
+                ]
+              ],
+              "outer_vertex_count": 38,
+              "hole_count": 0
+            }
+          ],
+          "net_row_member_counts": {
+            "0": 69
+          },
+          "logical_nc_pin_identities": [
+            [
+              "J2",
+              "A8"
+            ],
+            [
+              "J2",
+              "B8"
+            ],
+            [
+              "U2",
+              "5"
+            ],
+            [
+              "U3",
+              "4"
+            ],
+            [
+              "U5",
+              "5"
+            ],
+            [
+              "U5",
+              "8"
+            ]
+          ]
+        },
+        "fresh": {
+          "path": "native\\R Space\\runs\\move01\\fresh\\fresh_geometry.txt",
+          "sha256": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+          "bytes": 233599,
+          "row_count": 1888,
+          "row_type_counts": {
+            "COMP": 80,
+            "COPPER": 21,
+            "ETCH_LINE": 932,
+            "LAYERS": 1,
+            "LOGICAL_PIN": 272,
+            "NET": 69,
+            "PHYSICAL_PIN": 278,
+            "POSE": 84,
+            "UNITS": 1,
+            "VIA": 150
+          },
+          "segments": {
+            "manual": 750,
+            "thermal": 182,
+            "total": 932,
+            "arcs": 0,
+            "by_layer": {
+              "ETCH/TOP": 667,
+              "ETCH/BOTTOM": 173,
+              "ETCH/L2": 64,
+              "ETCH/L3": 28
+            }
+          },
+          "vias": 150,
+          "logical_netted_pins": 266,
+          "logical_nc_pins": 6,
+          "physical_mechanical_pins": 6,
+          "copper": [
+            {
+              "layer": "ETCH/L2",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 4312.918,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  79.5,
+                  59.5
+                ]
+              ],
+              "outer_vertex_count": 8,
+              "hole_count": 119
+            },
+            {
+              "layer": "ETCH/L3",
+              "net": "V3V3",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 4234.959,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  79.5,
+                  59.5
+                ]
+              ],
+              "outer_vertex_count": 8,
+              "hole_count": 135
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1977.472,
+              "bbox_mm": [
+                [
+                  0.5,
+                  0.5
+                ],
+                [
+                  77.5998,
+                  58.3491
+                ]
+              ],
+              "outer_vertex_count": 707,
+              "hole_count": 33
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 16.40764,
+              "bbox_mm": [
+                [
+                  17.7903,
+                  38.6295
+                ],
+                [
+                  31.4378,
+                  52.1998
+                ]
+              ],
+              "outer_vertex_count": 35,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 2.058048,
+              "bbox_mm": [
+                [
+                  27.182,
+                  32.4826
+                ],
+                [
+                  30.0526,
+                  33.7902
+                ]
+              ],
+              "outer_vertex_count": 20,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.316824,
+              "bbox_mm": [
+                [
+                  27.5502,
+                  28.5094
+                ],
+                [
+                  29.0433,
+                  29.5205
+                ]
+              ],
+              "outer_vertex_count": 23,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 279.364,
+              "bbox_mm": [
+                [
+                  33.9002,
+                  1.6002
+                ],
+                [
+                  59.8998,
+                  23.3084
+                ]
+              ],
+              "outer_vertex_count": 342,
+              "hole_count": 5
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.5310567,
+              "bbox_mm": [
+                [
+                  34.1045,
+                  24.0243
+                ],
+                [
+                  35.0293,
+                  25.1198
+                ]
+              ],
+              "outer_vertex_count": 18,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 23.9392,
+              "bbox_mm": [
+                [
+                  36.4707,
+                  24.6002
+                ],
+                [
+                  42.3998,
+                  30.5293
+                ]
+              ],
+              "outer_vertex_count": 86,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.529719,
+              "bbox_mm": [
+                [
+                  39.7002,
+                  10.5784
+                ],
+                [
+                  40.7998,
+                  12.246
+                ]
+              ],
+              "outer_vertex_count": 18,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 5.681189,
+              "bbox_mm": [
+                [
+                  43.1752,
+                  21.8914
+                ],
+                [
+                  47.3656,
+                  23.9003
+                ]
+              ],
+              "outer_vertex_count": 30,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.97594,
+              "bbox_mm": [
+                [
+                  46.7582,
+                  24.6502
+                ],
+                [
+                  49.5133,
+                  25.4498
+                ]
+              ],
+              "outer_vertex_count": 11,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 23.40066,
+              "bbox_mm": [
+                [
+                  50.5002,
+                  12.991
+                ],
+                [
+                  57.5998,
+                  17.8998
+                ]
+              ],
+              "outer_vertex_count": 33,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 6.017135,
+              "bbox_mm": [
+                [
+                  50.6059,
+                  20.7621
+                ],
+                [
+                  56.8452,
+                  23.8498
+                ]
+              ],
+              "outer_vertex_count": 30,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.6901322,
+              "bbox_mm": [
+                [
+                  51.6877,
+                  8.8502
+                ],
+                [
+                  52.4512,
+                  10.1298
+                ]
+              ],
+              "outer_vertex_count": 14,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 2.030795,
+              "bbox_mm": [
+                [
+                  52.5599,
+                  19.2002
+                ],
+                [
+                  55.1922,
+                  21.3498
+                ]
+              ],
+              "outer_vertex_count": 22,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 209.5699,
+              "bbox_mm": [
+                [
+                  54.5099,
+                  24.8045
+                ],
+                [
+                  77.5998,
+                  42.2098
+                ]
+              ],
+              "outer_vertex_count": 107,
+              "hole_count": 2
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 339.856,
+              "bbox_mm": [
+                [
+                  54.5548,
+                  1.6002
+                ],
+                [
+                  77.5998,
+                  28.2098
+                ]
+              ],
+              "outer_vertex_count": 154,
+              "hole_count": 7
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 1.776978,
+              "bbox_mm": [
+                [
+                  55.4344,
+                  18.7002
+                ],
+                [
+                  57.9654,
+                  20.2525
+                ]
+              ],
+              "outer_vertex_count": 28,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 0.7674213,
+              "bbox_mm": [
+                [
+                  56.2337,
+                  24.6502
+                ],
+                [
+                  57.2663,
+                  25.4498
+                ]
+              ],
+              "outer_vertex_count": 14,
+              "hole_count": 0
+            },
+            {
+              "layer": "ETCH/TOP",
+              "net": "GND",
+              "filled": true,
+              "isBoundary": null,
+              "fillOOD": null,
+              "area_mm2": 104.9169,
+              "bbox_mm": [
+                [
+                  57.5254,
+                  34.7851
+                ],
+                [
+                  77.5998,
+                  46.3998
+                ]
+              ],
+              "outer_vertex_count": 38,
+              "hole_count": 0
+            }
+          ],
+          "net_row_member_counts": {
+            "0": 69
+          },
+          "logical_nc_pin_identities": [
+            [
+              "J2",
+              "A8"
+            ],
+            [
+              "J2",
+              "B8"
+            ],
+            [
+              "U2",
+              "5"
+            ],
+            [
+              "U3",
+              "4"
+            ],
+            [
+              "U5",
+              "5"
+            ],
+            [
+              "U5",
+              "8"
+            ]
+          ]
+        }
+      },
+      "phase_summary": {
+        "before": {
+          "path": "native\\R Space\\runs\\move01\\build\\before_summary.tsv",
+          "sha256": "2E27BCAE5A8F0009F07069284B091F73A5570AAC4847DA6F218E7AEF144F553C",
+          "fields": {
+            "components": "80",
+            "logicalPins": "272",
+            "nets": "69",
+            "units": "(\"millimeters\" 4)",
+            "layers": "(\"TOP\" \"L2\" \"L3\" \"BOTTOM\")",
+            "markerCount": "0",
+            "etchSegments": "932",
+            "manualSegments": "750",
+            "thermalSegments": "182"
+          },
+          "markers": []
+        },
+        "memory": {
+          "path": "native\\R Space\\runs\\move01\\build\\memory_summary.tsv",
+          "sha256": "4417B04F8697463E7DE0064E6BED4FB446F6BBE0524D1BA11018CD7A19A5806B",
+          "fields": {
+            "components": "80",
+            "logicalPins": "272",
+            "nets": "69",
+            "units": "(\"millimeters\" 4)",
+            "layers": "(\"TOP\" \"L2\" \"L3\" \"BOTTOM\")",
+            "markerCount": "1",
+            "etchSegments": "932",
+            "manualSegments": "750",
+            "thermalSegments": "182"
+          },
+          "markers": [
+            [
+              "\"L60_REPLAY\"",
+              "\"BOARD GEOMETRY/ASSEMBLY_NOTES\"",
+              "4.00000000",
+              "4.00000000",
+              "0.00000000"
+            ]
+          ]
+        },
+        "fresh": {
+          "path": "native\\R Space\\runs\\move01\\fresh\\fresh_summary.tsv",
+          "sha256": "4417B04F8697463E7DE0064E6BED4FB446F6BBE0524D1BA11018CD7A19A5806B",
+          "fields": {
+            "components": "80",
+            "logicalPins": "272",
+            "nets": "69",
+            "units": "(\"millimeters\" 4)",
+            "layers": "(\"TOP\" \"L2\" \"L3\" \"BOTTOM\")",
+            "markerCount": "1",
+            "etchSegments": "932",
+            "manualSegments": "750",
+            "thermalSegments": "182"
+          },
+          "markers": [
+            [
+              "\"L60_REPLAY\"",
+              "\"BOARD GEOMETRY/ASSEMBLY_NOTES\"",
+              "4.00000000",
+              "4.00000000",
+              "0.00000000"
+            ]
+          ]
+        }
+      },
+      "processes": [
+        {
+          "phase": "build",
+          "identity": {
+            "pid": 8076,
+            "parent": 16840,
+            "exe": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe",
+            "created": "2026-10-23T08:47:30.5307840Z",
+            "command": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe -product Allegro_performance -safe -nographic -s \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\R Space\\runs\\move01\\build.scr\" -p \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\R Space\\runs\\move01\\build\" \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\R Space\\runs\\move01\\work\\INPUT_COPY.brd\""
+          },
+          "exitCode": 0,
+          "start_utc": "2026-10-23T08:47:30.525568+00:00",
+          "finish_utc": "2026-10-23T08:47:40.214350+00:00",
+          "journal_host": "ECMCFS2",
+          "source_sha256": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+          "args_characters_from_captured_command": 406,
+          "readonly": false
+        },
+        {
+          "phase": "fresh",
+          "identity": {
+            "pid": 15616,
+            "parent": 16840,
+            "exe": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe",
+            "created": "2026-10-23T08:47:40.2245420Z",
+            "command": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe -product Allegro_performance -safe -nographic -s \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\R Space\\runs\\move01\\fresh.scr\" -p \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\R Space\\runs\\move01\\fresh\" -readonly \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\R Space\\runs\\move01\\work\\L60_replayed.brd\""
+          },
+          "exitCode": 0,
+          "start_utc": "2026-10-23T08:47:40.219808+00:00",
+          "finish_utc": "2026-10-23T08:47:46.443310+00:00",
+          "journal_host": "ECMCFS2",
+          "source_sha256": "C4B7ADA6244EB4B7861DFD0933C5EF48FA5DD20FD5372432BD27A01AE1C6A781",
+          "args_characters_from_captured_command": 418,
+          "readonly": true
+        }
+      ],
+      "saved_board": {
+        "path": "native\\R Space\\runs\\move01\\work\\L60_replayed.brd",
+        "sha256": "C4B7ADA6244EB4B7861DFD0933C5EF48FA5DD20FD5372432BD27A01AE1C6A781",
+        "bytes": 1404716
+      },
+      "user_GUI_exclusion": {
+        "observed_unowned_processes": [],
+        "coexisting_user_GUI_exclusion_actually_exercised": false,
+        "interpretation": "Formal probes list no unrelated Allegro processes; exclusion code is present but coexistence was not exercised in these two runs."
+      }
+    }
+  ],
+  "relocation": {
+    "destination_initial_snapshot": {
+      "sourceRoot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package",
+      "destinationRoot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\R Space",
+      "destinationInitiallyNoRuns": true,
+      "copiedManifestFiles": {
+        "replay.py": "3DF86D85AE9190CD4BF66FE7793FD7E5CD80E93CC8948C124E59ABAFE94E7FCA",
+        "scripts/replay.il": "3B7EE87D435244D486042588F8E0CCD37BC007D578E1607A3B31D64FBF54D187",
+        "fixture/training_4L.brd": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+        "README.md": "10E07C07D629C785EAF3278F83FF1F097B74937DEA586419B61953813A5C5CA7",
+        "config.example.json": "2B55D9D0FB8EA33B5200F1F87ACE8E6E1C753C08770B357DD7EB7ED7C2A2B43F"
+      },
+      "samePhysicalMachine": true,
+      "secondPhysicalMachineTested": false
+    },
+    "same_physical_host": true,
+    "actual_second_physical_computer_tested": false,
+    "new_output_at_second_path_with_fresh_native_process": true
+  },
+  "history": {
+    "initial_probe_failure": "Initial probe failed before native launch: Python codec utf8-sig is not a valid alias. Corrected to utf-8-sig, refreshed package source manifest. No board/process change.\n",
+    "superseded_runs_inspected": [
+      {
+        "run": "package/runs/first01",
+        "accepted_for_final_source": false,
+        "actual_geometry_row_types": {
+          "COMP": 80,
+          "COPPER": 21,
+          "LAYERS": 1,
+          "LOGICAL_PIN": 272,
+          "NET": 69,
+          "PHYSICAL_PIN": 278,
+          "POSE": 84,
+          "UNITS": 1,
+          "VIA": 150
+        },
+        "build": {
+          "exit": 0,
+          "timeout": false,
+          "pid": 2120,
+          "command_characters": 382,
+          "journal_exists": true
+        },
+        "failure.json": {
+          "status": null,
+          "passCount": null,
+          "totalCount": null,
+          "traceback": "Traceback (most recent call last):\n  File \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\replay.py\", line 155, in main\n    assert output.is_file() and output.stat().st_size>100000, 'No saved board; read build logs'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: No saved board; read build logs\n"
+        },
+        "actual_journal_error": "L60 marker missing or different"
+      },
+      {
+        "run": "package/runs/first02",
+        "accepted_for_final_source": false,
+        "actual_geometry_row_types": {
+          "COMP": 80,
+          "COPPER": 21,
+          "LAYERS": 1,
+          "LOGICAL_PIN": 272,
+          "NET": 69,
+          "PHYSICAL_PIN": 278,
+          "POSE": 84,
+          "UNITS": 1,
+          "VIA": 150
+        },
+        "build": {
+          "exit": 0,
+          "timeout": false,
+          "pid": 9472,
+          "command_characters": 382,
+          "journal_exists": true
+        },
+        "fresh": {
+          "exit": 0,
+          "timeout": false,
+          "pid": 4468,
+          "command_characters": 394,
+          "journal_exists": true
+        },
+        "verification.json": {
+          "status": "PASS",
+          "passCount": 33,
+          "totalCount": 33,
+          "traceback": null
+        }
+      },
+      {
+        "run": "package/runs/final01",
+        "accepted_for_final_source": false,
+        "actual_geometry_row_types": {
+          "COMP": 80,
+          "COPPER": 21,
+          "LAYERS": 1,
+          "LOGICAL_PIN": 272,
+          "NET": 69,
+          "PHYSICAL_PIN": 278,
+          "POSE": 84,
+          "UNITS": 1,
+          "VIA": 150
+        },
+        "build": {
+          "exit": 0,
+          "timeout": false,
+          "pid": 8148,
+          "command_characters": 382,
+          "journal_exists": true
+        },
+        "fresh": {
+          "exit": 0,
+          "timeout": false,
+          "pid": 5636,
+          "command_characters": 394,
+          "journal_exists": true
+        },
+        "verification.json": {
+          "status": "PASS",
+          "passCount": 33,
+          "totalCount": 33,
+          "traceback": null
+        }
+      },
+      {
+        "run": "package/runs/final02",
+        "accepted_for_final_source": false,
+        "actual_geometry_row_types": {
+          "COMP": 80,
+          "COPPER": 21,
+          "ETCH_LINE": 932,
+          "LAYERS": 1,
+          "LOGICAL_PIN": 272,
+          "NET": 69,
+          "PHYSICAL_PIN": 278,
+          "POSE": 84,
+          "UNITS": 1,
+          "VIA": 150
+        },
+        "build": {
+          "exit": 0,
+          "timeout": false,
+          "pid": 8172,
+          "command_characters": 382,
+          "journal_exists": true
+        },
+        "fresh": {
+          "exit": 0,
+          "timeout": false,
+          "pid": 11604,
+          "command_characters": 394,
+          "journal_exists": true
+        },
+        "verification.json": {
+          "status": "PASS",
+          "passCount": 42,
+          "totalCount": 42,
+          "traceback": null
+        }
+      },
+      {
+        "run": "native/Relocated Final Space/portable package/runs/relocated02",
+        "accepted_for_final_source": false,
+        "actual_geometry_row_types": {
+          "COMP": 80,
+          "COPPER": 21,
+          "ETCH_LINE": 932,
+          "LAYERS": 1,
+          "LOGICAL_PIN": 272,
+          "NET": 69,
+          "PHYSICAL_PIN": 278,
+          "POSE": 84,
+          "UNITS": 1,
+          "VIA": 150
+        },
+        "build": {
+          "exit": 0,
+          "timeout": false,
+          "pid": 18292,
+          "command_characters": 514,
+          "journal_exists": true
+        },
+        "fresh": {
+          "exit": 3221225477,
+          "timeout": false,
+          "pid": 17904,
+          "command_characters": 526,
+          "journal_exists": true
+        },
+        "failure.json": {
+          "status": null,
+          "passCount": null,
+          "totalCount": null,
+          "traceback": "Traceback (most recent call last):\n  File \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\Relocated Final Space\\portable package\\replay.py\", line 162, in main\n    launch(c,'fresh',runroot,output,script,readonly=True)\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\Relocated Final Space\\portable package\\replay.py\", line 86, in launch\n    assert record['exitCode']==0, 'Native nonzero exit; retain all stdout, stderr, journals and process.json'\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Native nonzero exit; retain all stdout, stderr, journals and process.json\n"
+        }
+      },
+      {
+        "run": "native/Relocated Final Space/portable package/runs/relocated03",
+        "accepted_for_final_source": false,
+        "actual_geometry_row_types": {
+          "COMP": 80,
+          "COPPER": 21,
+          "ETCH_LINE": 932,
+          "LAYERS": 1,
+          "LOGICAL_PIN": 272,
+          "NET": 69,
+          "PHYSICAL_PIN": 278,
+          "POSE": 84,
+          "UNITS": 1,
+          "VIA": 150
+        },
+        "build": {
+          "exit": 0,
+          "timeout": false,
+          "pid": 17684,
+          "command_characters": 514,
+          "journal_exists": true
+        },
+        "fresh": {
+          "exit": 3221225477,
+          "timeout": false,
+          "pid": 15644,
+          "command_characters": 526,
+          "journal_exists": true
+        },
+        "failure.json": {
+          "status": null,
+          "passCount": null,
+          "totalCount": null,
+          "traceback": "Traceback (most recent call last):\n  File \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\Relocated Final Space\\portable package\\replay.py\", line 162, in main\n    launch(c,'fresh',runroot,output,script,readonly=True)\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\Relocated Final Space\\portable package\\replay.py\", line 86, in launch\n    assert record['exitCode']==0, 'Native nonzero exit; retain all stdout, stderr, journals and process.json'\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Native nonzero exit; retain all stdout, stderr, journals and process.json\n"
+        }
+      }
+    ],
+    "existing_run_negative": {
+      "expectedFailure": true,
+      "exitCode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\replay.py\", line 174, in <module>\n    if __name__=='__main__': main()\n                             ~~~~^^\n  File \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\replay.py\", line 161, in main\n    assert not runroot.exists(), 'Refuse overwrite: choose a new tag, retain previous failure evidence'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: Refuse overwrite: choose a new tag, retain previous failure evidence\n",
+      "noNativeLaunch": true,
+      "reason": "existing run tag rejected before probe/native launch"
+    }
+  },
+  "limitations_and_findings": [
+    {
+      "severity": "scope_limit",
+      "id": "L60I-GUI-NOT-EXERCISED",
+      "finding": "Both accepted probes have empty unownedProcessesExcluded. Source code excludes unrelated native processes; no concurrent user-GUI exclusion scenario was actually observed here."
+    },
+    {
+      "severity": "scope_limit",
+      "id": "L60I-NOT-SECOND-PC",
+      "finding": "All four journals name the same host ECMCFS2. Second path with spaces was exercised; a second physical computer, new Windows environment, new Cadence installation or license was not tested."
+    },
+    {
+      "severity": "scope_limit",
+      "id": "L60I-NOT-WHOLE-DB-FINGERPRINT",
+      "finding": "Equal native geometry records cover component identity, pin net/positions, poses, layer/unit list, etch segment geometry, copper polygons and vias. They do not serialize every rule, property, non-target text, mask/paste or other native database field; no routing, DRC or fabrication acceptance follows."
+    },
+    {
+      "severity": "scope_limit",
+      "id": "L60I-MARKER-READBACK-SCOPE",
+      "finding": "Marker uniqueness/position is recorded by native d->text scan in both memory/fresh summaries and corroborated by fresh journal and distinct process. This read-only reviewer did not reopen or independently decode the binary board."
+    },
+    {
+      "severity": "scope_limit",
+      "id": "L60I-NET-ROW-COUNTS",
+      "finding": "NET row contains the native n->pins member count, which is 0 in this fixture readback. This is not a connectivity proof. The 69 distinct net names and actual logical/physical pin-to-net identities were independently counted from their own rows."
+    },
+    {
+      "severity": "historical_failure",
+      "id": "L60I-LONG-PATH-AV",
+      "finding": "Earlier relocated02/03 fresh processes exited 3221225477 (0xC0000005) with 526-character captured command strings; this correlates with a long path but does not prove a universal native length limit or spaces as cause. Final source has conservative prelaunch 500-character guard and ASCII path restriction."
+    }
+  ],
+  "file_evidence_sha256": {
+    "package\\package_manifest.json": "92D5C74A3F8B20C557C6616FB2D763E026972B75F63570A542B06BAF169602BB",
+    "package\\replay.py": "3DF86D85AE9190CD4BF66FE7793FD7E5CD80E93CC8948C124E59ABAFE94E7FCA",
+    "package\\scripts\\replay.il": "3B7EE87D435244D486042588F8E0CCD37BC007D578E1607A3B31D64FBF54D187",
+    "package\\fixture\\training_4L.brd": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+    "package\\README.md": "10E07C07D629C785EAF3278F83FF1F097B74937DEA586419B61953813A5C5CA7",
+    "package\\config.example.json": "2B55D9D0FB8EA33B5200F1F87ACE8E6E1C753C08770B357DD7EB7ED7C2A2B43F",
+    "native\\R Space\\package_manifest.json": "92D5C74A3F8B20C557C6616FB2D763E026972B75F63570A542B06BAF169602BB",
+    "native\\R Space\\replay.py": "3DF86D85AE9190CD4BF66FE7793FD7E5CD80E93CC8948C124E59ABAFE94E7FCA",
+    "native\\R Space\\scripts\\replay.il": "3B7EE87D435244D486042588F8E0CCD37BC007D578E1607A3B31D64FBF54D187",
+    "native\\R Space\\fixture\\training_4L.brd": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+    "native\\R Space\\README.md": "10E07C07D629C785EAF3278F83FF1F097B74937DEA586419B61953813A5C5CA7",
+    "native\\R Space\\config.example.json": "2B55D9D0FB8EA33B5200F1F87ACE8E6E1C753C08770B357DD7EB7ED7C2A2B43F",
+    "package\\runs\\final03\\probe.json": "0E4E54113E0D757F635817D99A15BBA05D2C92169AD0DBFC653F24FC95775D12",
+    "package\\runs\\final03\\build\\before_geometry.txt": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+    "package\\runs\\final03\\build\\before_summary.tsv": "2E27BCAE5A8F0009F07069284B091F73A5570AAC4847DA6F218E7AEF144F553C",
+    "package\\runs\\final03\\build\\memory_geometry.txt": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+    "package\\runs\\final03\\build\\memory_summary.tsv": "4417B04F8697463E7DE0064E6BED4FB446F6BBE0524D1BA11018CD7A19A5806B",
+    "package\\runs\\final03\\fresh\\fresh_geometry.txt": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+    "package\\runs\\final03\\fresh\\fresh_summary.tsv": "4417B04F8697463E7DE0064E6BED4FB446F6BBE0524D1BA11018CD7A19A5806B",
+    "package\\runs\\final03\\build\\process.json": "727AF64D83C11F2485813ED837F37AA483E3509EA91C15F0E5642EBB830D45C3",
+    "package\\runs\\final03\\build\\allegro.jrl": "865DB4F639D54D00136D44D55E31A15E2E49BE1C5F314C4F3AF87EBBB088C267",
+    "package\\runs\\final03\\build.scr": "B4A660237335880A7BE25446A7851344FF2FA7FB2EE3FCEFC107E96B1A398FBA",
+    "package\\runs\\final03\\work\\INPUT_COPY.brd": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+    "package\\runs\\final03\\build\\pcbenv\\env": "39C3DA10C5B36B2AD4554070ED13F5125212B6BC06D9D291C9EA25FAB6FE368E",
+    "package\\runs\\final03\\fresh\\process.json": "DD70A4B787826547C5D7224F29C3D993F97E2D7B3E0A586E7F406C3F9C680E8B",
+    "package\\runs\\final03\\fresh\\allegro.jrl": "0406D7D6F7EC7458C264D3A0C4912921B68DAC261F868E2710A7C33C68E31D2A",
+    "package\\runs\\final03\\fresh.scr": "906897334A1DF9050523B44BF25A18B592ED80F5E3FC0D61E800D1EE47537154",
+    "package\\runs\\final03\\work\\L60_replayed.brd": "D8EF6A3C9A0E78AA51728F10D3700F75B6EC07535E2062C598E88D90182AFF89",
+    "package\\runs\\final03\\fresh\\pcbenv\\env": "39C3DA10C5B36B2AD4554070ED13F5125212B6BC06D9D291C9EA25FAB6FE368E",
+    "package\\runs\\final03\\build\\build_result.txt": "49396D1347FB2122C68A49291FFA7B7C2CFAA8BE61E6CBBEB8AE41EB157E24E8",
+    "package\\runs\\final03\\verification.json": "C48E6722026E049D7D8A27729C00091E4484F4690060A9A873CCC04DB409207A",
+    "native\\R Space\\runs\\move01\\probe.json": "FF47BF09A80EA2B7211DC0F696B16B2B78F4F40E9443B0896CC195C02E86880C",
+    "native\\R Space\\runs\\move01\\build\\before_geometry.txt": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+    "native\\R Space\\runs\\move01\\build\\before_summary.tsv": "2E27BCAE5A8F0009F07069284B091F73A5570AAC4847DA6F218E7AEF144F553C",
+    "native\\R Space\\runs\\move01\\build\\memory_geometry.txt": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+    "native\\R Space\\runs\\move01\\build\\memory_summary.tsv": "4417B04F8697463E7DE0064E6BED4FB446F6BBE0524D1BA11018CD7A19A5806B",
+    "native\\R Space\\runs\\move01\\fresh\\fresh_geometry.txt": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+    "native\\R Space\\runs\\move01\\fresh\\fresh_summary.tsv": "4417B04F8697463E7DE0064E6BED4FB446F6BBE0524D1BA11018CD7A19A5806B",
+    "native\\R Space\\runs\\move01\\build\\process.json": "8E53451A02341F68189CDFDAC829464371D50D3FC1252CC51B8840697D578D59",
+    "native\\R Space\\runs\\move01\\build\\allegro.jrl": "9A2E1A15CF0FBFBD246642A03DFD112D1CB90044C94E3E5AC58FAEA2D3915AF7",
+    "native\\R Space\\runs\\move01\\build.scr": "E2EC59683CD4807019430E6D7CD483401296447A12320848C5E05AEE0A1A62BA",
+    "native\\R Space\\runs\\move01\\work\\INPUT_COPY.brd": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+    "native\\R Space\\runs\\move01\\build\\pcbenv\\env": "39C3DA10C5B36B2AD4554070ED13F5125212B6BC06D9D291C9EA25FAB6FE368E",
+    "native\\R Space\\runs\\move01\\fresh\\process.json": "88EAAE88F1E46CF412943AF92E5F2CD3E8D8B9F2B1C28B0F8E41CBD0DE79138C",
+    "native\\R Space\\runs\\move01\\fresh\\allegro.jrl": "D1197CA445E236DF14DB4FC80860A9F6D588C122A5E99157D18E0E256971D318",
+    "native\\R Space\\runs\\move01\\fresh.scr": "59C33F249F5FA9E4734CF0947CC018BF193EAD95BB8B721A919CD552532E38CA",
+    "native\\R Space\\runs\\move01\\work\\L60_replayed.brd": "C4B7ADA6244EB4B7861DFD0933C5EF48FA5DD20FD5372432BD27A01AE1C6A781",
+    "native\\R Space\\runs\\move01\\fresh\\pcbenv\\env": "39C3DA10C5B36B2AD4554070ED13F5125212B6BC06D9D291C9EA25FAB6FE368E",
+    "native\\R Space\\runs\\move01\\build\\build_result.txt": "F4B9767B0F2DD3A9440E7BCB2173DCA8E8268E5B63739443E2D3C82C5B6A1340",
+    "native\\R Space\\runs\\move01\\verification.json": "4E9A45877CA7DE3E37C19F925861910BD5C3D0DB6F11A63BDB3EC9A10319AEB5",
+    "native\\relocation_accepted_initial.json": "6C0923A9FE4E8B461BCB0B1D7BCE288302D5ECF4BF459803EE85418C1AF1944A",
+    "package\\runs\\first01\\build\\before_geometry.txt": "267F6276FCDF47BAD0E025702877CF1D3BC600448683745E19FA01BC20B7F31B",
+    "package\\runs\\first01\\build\\process.json": "08B9A3D636F1392B66826B40DAEF39108FBE49D2BD2DCC911BCF0E71CEC0DFE4",
+    "package\\runs\\first01\\failure.json": "D94A1B407CF63F3FC0D7D4A533BA90387F291C1C7D1A7CB6AFF2A5A97A15C85A",
+    "package\\runs\\first01\\build\\allegro.jrl": "77072AF3F5DF5F5E63D6266C25E4189024CA37BFC4B658F9438713402708BCA4",
+    "package\\runs\\first02\\build\\before_geometry.txt": "267F6276FCDF47BAD0E025702877CF1D3BC600448683745E19FA01BC20B7F31B",
+    "package\\runs\\first02\\build\\process.json": "D3EE8A52C03AADF4564AB6109D4AA3847887D965BF50A7CA075D78705F40DE88",
+    "package\\runs\\first02\\fresh\\process.json": "46C8200E4120700F9C119011AE38E609FB79AFEF041EC06A1833D1718E18F406",
+    "package\\runs\\first02\\verification.json": "164AC9CD4995657BF030EA2285A433070DF7F8D10A41A0F209E726E018F50C57",
+    "package\\runs\\final01\\build\\before_geometry.txt": "267F6276FCDF47BAD0E025702877CF1D3BC600448683745E19FA01BC20B7F31B",
+    "package\\runs\\final01\\build\\process.json": "8E5282BC2176170CBDD98B878714F6D79922D26F837861B1DECCA7EADA378A88",
+    "package\\runs\\final01\\fresh\\process.json": "D891E35F40E275E902E3467B2C7B8788C5C753BBE923ED05CC89C0664D1E72FD",
+    "package\\runs\\final01\\verification.json": "6ADBC94CD9C36DE4C6B0D892F9C7EAEA932C3A9C5BF2829A377996F8591E527C",
+    "package\\runs\\final02\\build\\before_geometry.txt": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+    "package\\runs\\final02\\build\\process.json": "10EFC7CB3521616ABD8549E54B7CE042F559EC2DAE8DFA333F08012C02A750AB",
+    "package\\runs\\final02\\fresh\\process.json": "46FDE4AF4FD9B1AD36904AD50DACF61900F790C46F62364957904F131B96D360",
+    "package\\runs\\final02\\verification.json": "9CBA91544EE4CD05AB17117E6002C2B6CFA2EDCBD7F34039E2F2FAFEF1BC6588",
+    "native\\Relocated Final Space\\portable package\\runs\\relocated02\\build\\before_geometry.txt": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+    "native\\Relocated Final Space\\portable package\\runs\\relocated02\\build\\process.json": "D98EAC574F544CB95C76D62F5D7545B20725855FF889C828C44ADB35849A1447",
+    "native\\Relocated Final Space\\portable package\\runs\\relocated02\\fresh\\process.json": "4E0B7054D9EE59B5A8836CE1D9075CEE4C860C55CCB874BA3075C30136247D84",
+    "native\\Relocated Final Space\\portable package\\runs\\relocated02\\failure.json": "48D509DCE1C650B57C813F43C7E6BF11205C181BFC42A1E00BF99024C8651CBB",
+    "native\\Relocated Final Space\\portable package\\runs\\relocated03\\build\\before_geometry.txt": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+    "native\\Relocated Final Space\\portable package\\runs\\relocated03\\build\\process.json": "7F257C9C331A3512DE6B7CBAF890EC29D249A0300B0B45BE17CC11B3132DD0BA",
+    "native\\Relocated Final Space\\portable package\\runs\\relocated03\\fresh\\process.json": "5D6973F8DEB2F2B69FCA7AAEADE75DAF4626D44F00C271235181DA5180218DA1",
+    "native\\Relocated Final Space\\portable package\\runs\\relocated03\\failure.json": "E19400739A0CB91438B09D72B63E286B6528F06552CF8F13D76492CEA139C2E0",
+    "native\\negative_refuse_existing_run.json": "75AEA05E3684CBDD649A79ECFD0BAB3A14023B921EAE009B03401F0967444D86",
+    "native\\initial_probe_failure.txt": "1AF7A6476F2FBB36A51A25FD25F9D9CA576BA853228B6D056FA75EA4D097085F"
+  },
+  "protected_replay_source_hashes_at_review_end": {
+    "package/replay.py": "3DF86D85AE9190CD4BF66FE7793FD7E5CD80E93CC8948C124E59ABAFE94E7FCA",
+    "package/scripts/replay.il": "3B7EE87D435244D486042588F8E0CCD37BC007D578E1607A3B31D64FBF54D187",
+    "package/package_manifest.json": "92D5C74A3F8B20C557C6616FB2D763E026972B75F63570A542B06BAF169602BB",
+    "native/R Space/replay.py": "3DF86D85AE9190CD4BF66FE7793FD7E5CD80E93CC8948C124E59ABAFE94E7FCA",
+    "native/R Space/scripts/replay.il": "3B7EE87D435244D486042588F8E0CCD37BC007D578E1607A3B31D64FBF54D187",
+    "native/R Space/package_manifest.json": "92D5C74A3F8B20C557C6616FB2D763E026972B75F63570A542B06BAF169602BB"
+  },
+  "review_writes": "Only this independent_replay_review.json; no source package, prior verification, native run, or sealed sources group was altered."
+}

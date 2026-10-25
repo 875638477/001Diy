@@ -1,0 +1,43 @@
+HI_EXISTING_VIA_ALIAS "USB_DP_MIRROR_A" (39.75 5.8) dbid:0000025F0A66C920
+HI_EXISTING_VIA_ALIAS "USB_DP_MIRROR_B" (40.75 5.8) dbid:0000025F0A66C9B0
+HI_EXISTING_VIA_ALIAS "USB_RETURN_LEFT" (38.15 5.8) dbid:0000025F0A66D710
+HI_EXISTING_VIA_ALIAS "USB_RETURN_RIGHT" (41.7 5.8) dbid:0000025F0A66D7A0
+HI_EXISTING_VIA_ALIAS "V_HI_ESD_A" (40.0 11.4) dbid:0000025F0A66F5D0
+HI_EXISTING_VIA_ALIAS "V_HI_ESD_B" (40.5 11.6) dbid:0000025F0A66F800
+HI_EXISTING_VIA_ALIAS "V_HI_C10_A" (43.8 10.7764) dbid:0000025F0A66F9B0
+HI_EXISTING_VIA_ALIAS "V_HI_C10_B" (43.8 11.5764) dbid:0000025F0A66FAC0
+HI_EXISTING_VIA_ALIAS "V_HI_ESD_VBUS_LEFT" (40.25 9.3) dbid:0000025F0A66FC20
+HI_EXISTING_VIA_ALIAS "V_HI_C10_VBUS" (43.8 9.2016) dbid:0000025F0A66FDA8
+HI_ENDPOINT_PROOF from="J2.A6" to="USB_DP_MIRROR_A" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="J2.B6" to="USB_DP_MIRROR_B" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="USB_DP_MIRROR_A" to="USB_DP_MIRROR_B" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="J2.A7" to="J2.B7" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="J2.B6" to="U4.6" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="J2.B7" to="U4.4" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="R5.1" to="U1.33" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R5.1" to="R12.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R6.1" to="R13.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U4.6" to="U4.1" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="U4.4" to="U4.3" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="U4.1" to="R5.2" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="U4.3" to="R6.2" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="USB_DP_TRUNK_NODE" to="R11.2" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="R6.1" to="U1.32" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U4.2" to="V_HI_ESD_A" expected=t actual=t objects=264
+HI_ENDPOINT_PROOF from="ESD_U4_RETURN" to="V_HI_ESD_B" expected=t actual=t objects=264
+HI_ENDPOINT_PROOF from="C10.2" to="V_HI_C10_B" expected=t actual=t objects=264
+HI_ENDPOINT_PROOF from="U4.5" to="V_HI_ESD_VBUS_LEFT" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="V_HI_ESD_VBUS_LEFT" to="V_HI_C10_VBUS" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="V_HI_C10_VBUS" to="C10.1" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="J2.A6" to="U4.6" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="J2.B6" to="U4.6" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="J2.A7" to="U4.4" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="J2.B7" to="U4.4" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="U4.1" to="R5.2" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="U4.3" to="R6.2" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="R11.2" to="R5.2" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="R5.1" to="U1.33" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R6.1" to="U1.32" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U4.2" to="U1.47" expected=t actual=t objects=264
+HI_ENDPOINT_PROOF from="C10.2" to="U1.47" expected=t actual=t objects=264
+HI_REOPEN_ALL_ENDPOINTS_COMPLETE

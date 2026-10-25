@@ -1,0 +1,154 @@
+{
+  "batchId": "UART_RX_receiver_bridge_4L_03",
+  "variant": "4L",
+  "status": "FULL_RECEIVER_DELTA_REBASE_AFTER_NATIVE_SOURCE_FREEZE",
+  "requiredSourcePlan": "plans/root_south_services_4L_v19.json",
+  "operations": [
+    {
+      "type": "route",
+      "id": "UART_RX_RECEIVER_TOP_W",
+      "net": "UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          50.12,
+          25.0374
+        ],
+        [
+          50.1326,
+          25.05
+        ],
+        [
+          55.7,
+          25.05
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Receiver normalwidth path preserving existing pairedground and avoiding NRST BOTTOMcorridor; native/refreview mandatory"
+    },
+    {
+      "type": "via",
+      "id": "UART_RX_BRIDGE1_W",
+      "net": "UART_RX",
+      "xy": [
+        55.7,
+        25.05
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "UART_RX_RECEIVER_BOTTOM_B1",
+      "net": "UART_RX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          55.7,
+          25.05
+        ],
+        [
+          56.45,
+          24.3
+        ],
+        [
+          57.05,
+          24.3
+        ],
+        [
+          57.8,
+          25.05
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Receiver normalwidth path preserving existing pairedground and avoiding NRST BOTTOMcorridor; native/refreview mandatory"
+    },
+    {
+      "type": "via",
+      "id": "UART_RX_BRIDGE1_E",
+      "net": "UART_RX",
+      "xy": [
+        57.8,
+        25.05
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "UART_RX_RECEIVER_TOP_E",
+      "net": "UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          57.8,
+          25.05
+        ],
+        [
+          57.92,
+          24.93
+        ],
+        [
+          68.0316,
+          24.93
+        ],
+        [
+          68.1016,
+          25
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Receiver normalwidth path preserving existing pairedground and avoiding NRST BOTTOMcorridor; native/refreview mandatory"
+    }
+  ],
+  "proofs": [
+    {
+      "net": "PA10_UART_RX",
+      "source": "U1.31",
+      "target": "R17.1"
+    },
+    {
+      "net": "UART_RX",
+      "source": "R17.2",
+      "target": "R18.1"
+    }
+  ],
+  "preserveGroundReturns": [
+    "RIGHT_RETURN_RIGHT_PB5_MID_VIA",
+    "RIGHT_RETURN_RIGHT_PB5_FAR_VIA"
+  ],
+  "sourceExisting": "R17 90deg@(50.12,23.361), sourceconnection fromrootservice19; no otherrefmoved",
+  "returnReview": [
+    {
+      "signalVia": "UART_RX_BRIDGE1_W",
+      "groundXY": [
+        56.757,
+        25.092
+      ],
+      "distanceMM": 1.0578341079772335
+    },
+    {
+      "signalVia": "UART_RX_BRIDGE1_E",
+      "groundXY": [
+        56.757,
+        25.092
+      ],
+      "distanceMM": 1.043845295050947
+    },
+    {
+      "signalVia": "RIGHT_PB4_FAR_VIA",
+      "groundXY": [
+        62.6,
+        25.65
+      ],
+      "distanceMM": 0.8246211251235369,
+      "reason": "Retained adjacentcommonGND reassigned after redundantvia deletion"
+    }
+  ],
+  "engineeringBasis": [
+    "No newGNDvia/position changes; remove only redundantPB4return already supersededby closer retainedground. PB5midreturn retained.",
+    "Old PB5GND move55.4,27.25 collides TOPSCLdiag/BOTTOMSDA27.15, rejected. Alternative longbridgeB2 collides NRST BOTTOM60.25, rejected.",
+    "Two realL28signalvias/shortBOTTOMB1 preserve actualthroughGNDobstacle; pairedGND distances1.058/1.044mm. TOPreceiver afterB1 row24.93 clearance to retainedPB5farGND.32, PA15signalvia.28.",
+    "Receiver externalUARTedge/MPN/probe/cable not certified; normal.20signal, no innersignals or rule changes. B1 oppositeTOPGPIO finiteprojection must be actualpour/return audited."
+  ],
+  "placementChanges": [],
+  "nativeIntegration": "If sourcebuild already saved using service18, apply exact2PA10segment ripups+R17move as delta; do not re-create wholeSOURCE or originalFULL11. Rebase inputsha/unique matches to actualfrozen sourcecheckpoint before executing. If service19was alreadybuilt, omit alreadyappliedPA10/repose mutations explicitly and recordwhy."
+}

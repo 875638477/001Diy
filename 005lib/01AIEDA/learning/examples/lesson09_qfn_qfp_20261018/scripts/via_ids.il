@@ -1,0 +1,15 @@
+procedure(l9ViaIds(outDir)
+ let((f ids obj objs)
+ f=outfile(strcat(outDir "/via_ids.tsv"))
+ fprintf(f "dbid\tpadstack\tx\ty\n")
+ ids=nil
+ objs=axlExtractMap("C:/Program0/Cadence/SPB172/share/pcb/text/views/fgeo_bv.txt" nil)
+ foreach(obj objs
+  when(equal(obj->objType "via") && !member(obj ids)
+   ids=cons(obj ids)
+   fprintf(f "%L\t%L\t%L\t%L\n" obj obj->name car(obj->xy) cadr(obj->xy))))
+ close(f)
+ unless(length(ids)==5 error("Expected exactly five native unique via DBIDs\n"))
+ f=outfile(strcat(outDir "/via_complete.txt"))
+ fprintf(f "L09 VIA UNIQUE DBID COUNT=%d COMPLETE\n" length(ids))
+ close(f) t))

@@ -1,0 +1,175 @@
+{
+  "status": "EXPLICIT_SOURCE_BRIDGE_CANDIDATE_PENDING_FULL_LONG_ROUTE_AND_NATIVE",
+  "batchId": "GPIO_source_access_bridges39",
+  "operations": [
+    {
+      "type": "route",
+      "id": "PB1_ACCESS_TOP",
+      "net": "GPIO_PB1",
+      "layer": "TOP",
+      "points": [
+        [
+          38.3,
+          27.35
+        ],
+        [
+          37.9,
+          27.75
+        ],
+        [
+          37.9,
+          28.25
+        ],
+        [
+          36.82,
+          29.32
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Short TOP normal-width bridge across existing BOTTOM PC15 source bar, preserving MCU power and analog geometry."
+    },
+    {
+      "type": "via",
+      "id": "PB1_ACCESS_VIA",
+      "net": "GPIO_PB1",
+      "xy": [
+        36.82,
+        29.32
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26,
+      "purpose": "Offpad private-via transition in explicit all-conductor approved-via-only permission region; normal spacing retained."
+    },
+    {
+      "type": "route",
+      "id": "PB10_ACCESS_BOTTOM",
+      "net": "GPIO_PB10",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          38,
+          26.3
+        ],
+        [
+          38.4,
+          26.3
+        ],
+        [
+          39,
+          26.9
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Short TOP normal-width bridge across existing BOTTOM PC15 source bar, preserving MCU power and analog geometry."
+    },
+    {
+      "type": "via",
+      "id": "PB10_ACCESS_IN_VIA",
+      "net": "GPIO_PB10",
+      "xy": [
+        39,
+        26.9
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26,
+      "purpose": "Offpad private-via transition in explicit all-conductor approved-via-only permission region; normal spacing retained."
+    },
+    {
+      "type": "route",
+      "id": "PB10_ACCESS_TOP",
+      "net": "GPIO_PB10",
+      "layer": "TOP",
+      "points": [
+        [
+          39,
+          26.9
+        ],
+        [
+          39,
+          27.5
+        ],
+        [
+          38.7,
+          27.8
+        ],
+        [
+          38.7,
+          28.4
+        ],
+        [
+          37.99,
+          29.11
+        ],
+        [
+          37.99,
+          30.15
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Short TOP normal-width bridge across existing BOTTOM PC15 source bar, preserving MCU power and analog geometry."
+    },
+    {
+      "type": "via",
+      "id": "PB10_ACCESS_OUT_VIA",
+      "net": "GPIO_PB10",
+      "xy": [
+        37.99,
+        30.15
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26,
+      "purpose": "Offpad private-via transition in explicit all-conductor approved-via-only permission region; normal spacing retained."
+    },
+    {
+      "type": "via",
+      "id": "PB1_ACCESS_RETURN_VIA",
+      "net": "GND",
+      "xy": [
+        36.95,
+        28
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26,
+      "purpose": "Offpad private-via transition in explicit all-conductor approved-via-only permission region; normal spacing retained."
+    }
+  ],
+  "partialEndpoints": {
+    "GPIO_PB1": {
+      "xy": [
+        36.82,
+        29.32
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.19"
+    },
+    "GPIO_PB10": {
+      "xy": [
+        37.99,
+        30.15
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.21"
+    }
+  },
+  "ruleIntent": "All new routes normal .2mm; do not extend original .16mm source neck budget. Small-via permission local all actual conductor layers only; no spacing relaxation, no power/ADC/HSE changes.",
+  "proofs": [
+    {
+      "from_": "U1.19",
+      "toXY": [
+        36.82,
+        29.32
+      ]
+    },
+    {
+      "from_": "U1.21",
+      "toXY": [
+        37.99,
+        30.15
+      ]
+    }
+  ]
+}

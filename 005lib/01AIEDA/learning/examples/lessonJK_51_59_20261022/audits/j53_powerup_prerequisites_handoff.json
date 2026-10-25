@@ -1,0 +1,1044 @@
+{
+  "status": "CONDITIONAL_PREREQUISITES_NO_HARDWARE_POWERUP_EXECUTED",
+  "realMPNCount": 12,
+  "parts": [
+    {
+      "ref": "U1",
+      "value": "STM32F103C8T6",
+      "mpn": "STM32F103C8T6",
+      "sourceProperties": {
+        "MODULE_ID": "U_MCU",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "REAL_PART",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": "STM32F103C8T6"
+      },
+      "schematicPins": {
+        "1": "V3V3",
+        "2": "GPIO_PC13",
+        "3": "GPIO_PC14",
+        "4": "GPIO_PC15",
+        "5": "OSC_IN",
+        "6": "OSC_OUT",
+        "7": "NRST",
+        "8": "GND",
+        "9": "VDDA",
+        "10": "ADC0",
+        "11": "GPIO_PA1",
+        "12": "GPIO_PA2",
+        "13": "GPIO_PA3",
+        "14": "PA4_SPI_NSS",
+        "15": "PA5_SPI_SCK",
+        "16": "PA6_SPI_MISO",
+        "17": "PA7_SPI_MOSI",
+        "18": "VBUS_PRESENT_N",
+        "19": "GPIO_PB1",
+        "20": "BOOT1",
+        "21": "GPIO_PB10",
+        "22": "GPIO_PB11",
+        "23": "GND",
+        "24": "V3V3",
+        "25": "GPIO_PB12",
+        "26": "GPIO_PB13",
+        "27": "GPIO_PB14",
+        "28": "GPIO_PB15",
+        "29": "USB_ATTACH_N",
+        "30": "PA9_UART_TX",
+        "31": "PA10_UART_RX",
+        "32": "PA11_SHARED",
+        "33": "PA12_SHARED",
+        "34": "SWDIO",
+        "35": "GND",
+        "36": "V3V3",
+        "37": "SWCLK",
+        "38": "GPIO_PA15",
+        "39": "SWO",
+        "40": "GPIO_PB4",
+        "41": "GPIO_PB5",
+        "42": "I2C_SCL",
+        "43": "I2C_SDA",
+        "44": "BOOT0",
+        "45": "GPIO_PB8",
+        "46": "GPIO_PB9",
+        "47": "GND",
+        "48": "V3V3"
+      }
+    },
+    {
+      "ref": "F1",
+      "value": "500mA",
+      "mpn": "0467.500NR",
+      "sourceProperties": {
+        "source_description": "500mA fast 32VDC",
+        "requirements": "",
+        "layout": "",
+        "nc_reason": "{}",
+        "assembly_group": "",
+        "MODULE_ID": "F_IN",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "REAL_PART",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": "0467.500NR"
+      },
+      "schematicPins": {
+        "1": "VIN_RAW",
+        "2": "VIN_FUSED"
+      }
+    },
+    {
+      "ref": "D1",
+      "value": "SS14",
+      "mpn": "SS14-E3/61T",
+      "sourceProperties": {
+        "source_description": "SS14",
+        "requirements": "40V VRRM 1A; local pin1=K pin2=A",
+        "layout": "",
+        "nc_reason": "{}",
+        "assembly_group": "",
+        "MODULE_ID": "D_REV",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "REAL_PART",
+        "REQUIREMENTS": "40V VRRM 1A; local pin1=K pin2=A",
+        "Manufacturer Part Number": "SS14-E3/61T"
+      },
+      "schematicPins": {
+        "1": "VIN_PROT",
+        "2": "VIN_FUSED"
+      }
+    },
+    {
+      "ref": "U2",
+      "value": "TPS54202",
+      "mpn": "TPS54202DDCR",
+      "sourceProperties": {
+        "source_description": "TPS54202",
+        "requirements": "",
+        "layout": "",
+        "nc_reason": "{\"5\": \"datasheet permits float EN for enabled; never connect directly to VIN_PROT\"}",
+        "assembly_group": "",
+        "MODULE_ID": "U_BUCK",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "REAL_PART",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": "TPS54202DDCR"
+      },
+      "schematicPins": {
+        "1": "GND",
+        "2": "BUCK_SW",
+        "3": "VIN_PROT",
+        "4": "BUCK_FB",
+        "5": null,
+        "6": "BUCK_BOOT"
+      }
+    },
+    {
+      "ref": "L1",
+      "value": "15uH +/-20%",
+      "mpn": "XAL6060-153MEC",
+      "sourceProperties": {
+        "source_description": "15uH +/-20%",
+        "requirements": "DCRmax43.75mohm@25C, Isat5.8A typ (30% L drop), Irms4.5A at20C rise; covers nominal120mA and is above TPS54202 current-limit maximum3.9/4.3A at25C; temperature/current curves and actual PCB heat remain validation",
+        "layout": "",
+        "nc_reason": "{}",
+        "assembly_group": "",
+        "MODULE_ID": "L_BUCK",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "REAL_PART",
+        "REQUIREMENTS": "DCRmax43.75mohm@25C, Isat5.8A typ (30% L drop), Irms4.5A at20C rise; covers nominal120mA and is above TPS54202 current-limit maximum3.9/4.3A at25C; temperature/current curves and actual PCB heat remain validation",
+        "Manufacturer Part Number": "XAL6060-153MEC"
+      },
+      "schematicPins": {
+        "1": "BUCK_SW",
+        "2": "V5"
+      }
+    },
+    {
+      "ref": "U3",
+      "value": "TLV75533P",
+      "mpn": "TLV75533PDBVR",
+      "sourceProperties": {
+        "source_description": "TLV75533P",
+        "requirements": "",
+        "layout": "",
+        "nc_reason": "{\"4\": \"NC, no internal connection\"}",
+        "assembly_group": "",
+        "MODULE_ID": "U_LDO",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "REAL_PART",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": "TLV75533PDBVR"
+      },
+      "schematicPins": {
+        "1": "V5",
+        "2": "GND",
+        "3": "V5",
+        "4": null,
+        "5": "V3V3"
+      }
+    },
+    {
+      "ref": "J2",
+      "value": "USB-C USB2 DEVICE",
+      "mpn": "USB4105-GF-A",
+      "sourceProperties": {
+        "source_description": "USB-C USB2 DEVICE",
+        "requirements": "",
+        "layout": "signal ground and shell stakes bonded at connector; enclosure chassis absent in bench design",
+        "nc_reason": "{\"B8\": \"SBU2 unused\", \"A8\": \"SBU1 unused\"}",
+        "assembly_group": "",
+        "MODULE_ID": "J_USB",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "REAL_PART",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": "USB4105-GF-A"
+      },
+      "schematicPins": {
+        "A1_B12": "GND",
+        "A4_B9": "USB_VBUS",
+        "B8": null,
+        "A5": "USB_CC1",
+        "B7": "USB_DM",
+        "A6": "USB_DP",
+        "A7": "USB_DM",
+        "B6": "USB_DP",
+        "A8": null,
+        "B5": "USB_CC2",
+        "B4_A9": "USB_VBUS",
+        "B1_A12": "GND",
+        "SH1": "GND",
+        "SH2": "GND",
+        "SH3": "GND",
+        "SH4": "GND"
+      }
+    },
+    {
+      "ref": "U4",
+      "value": "USBLC6-2SC6",
+      "mpn": "USBLC6-2SC6",
+      "sourceProperties": {
+        "source_description": "USBLC6-2SC6",
+        "requirements": "",
+        "layout": "connector -> ESD flow-through pads -> matched short route -> MCU series resistors; shortest wide local ESD GND return",
+        "nc_reason": "{}",
+        "assembly_group": "",
+        "MODULE_ID": "U_USB_ESD",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "REAL_PART",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": "USBLC6-2SC6"
+      },
+      "schematicPins": {
+        "1": "USB_DP",
+        "2": "GND",
+        "3": "USB_DM",
+        "4": "USB_DM",
+        "5": "USB_VBUS",
+        "6": "USB_DP"
+      }
+    },
+    {
+      "ref": "Q1",
+      "value": "2N7002",
+      "mpn": "2N7002",
+      "sourceProperties": {
+        "source_description": "2N7002",
+        "requirements": "",
+        "layout": "",
+        "nc_reason": "{}",
+        "assembly_group": "",
+        "MODULE_ID": "Q_VBUS",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "REAL_PART",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": "2N7002"
+      },
+      "schematicPins": {
+        "1": "VBUS_GATE",
+        "2": "GND",
+        "3": "VBUS_PRESENT_N"
+      }
+    },
+    {
+      "ref": "Q2",
+      "value": "DMP2035U",
+      "mpn": "DMP2035U-7",
+      "sourceProperties": {
+        "source_description": "DMP2035U",
+        "requirements": "",
+        "layout": "",
+        "nc_reason": "{}",
+        "assembly_group": "",
+        "MODULE_ID": "Q_ATTACH",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "REAL_PART",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": "DMP2035U-7"
+      },
+      "schematicPins": {
+        "1": "USB_ATTACH_N",
+        "2": "V3V3",
+        "3": "USB_PULLUP_SRC"
+      }
+    },
+    {
+      "ref": "U5",
+      "value": "TCAN332",
+      "mpn": "TCAN332DR",
+      "sourceProperties": {
+        "source_description": "TCAN332",
+        "requirements": "",
+        "layout": "",
+        "nc_reason": "{\"5\": \"TCAN332 NC, not SHDN\", \"8\": \"TCAN332 NC, not STB\"}",
+        "assembly_group": "",
+        "MODULE_ID": "U_CAN",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "REAL_PART",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": "TCAN332DR"
+      },
+      "schematicPins": {
+        "1": "CAN_TXD",
+        "2": "GND",
+        "3": "V3V3",
+        "4": "CAN_RXD",
+        "5": null,
+        "6": "CAN_L",
+        "7": "CAN_H",
+        "8": null
+      }
+    },
+    {
+      "ref": "Y1",
+      "value": "8MHz",
+      "mpn": "ABM3B-8.000MHZ-D2Y-T",
+      "sourceProperties": {
+        "MODULE_ID": "Y_HSE",
+        "ASSEMBLY": "yes",
+        "MPN_STATUS": "REAL_PART",
+        "REQUIREMENTS": "",
+        "Manufacturer Part Number": "ABM3B-8.000MHZ-D2Y-T"
+      },
+      "schematicPins": {
+        "1": "OSC_IN",
+        "2": "GND",
+        "3": "XTAL_OUT",
+        "4": "GND"
+      }
+    }
+  ],
+  "designSupplyLimits": {
+    "input_V": [
+      9,
+      16
+    ],
+    "V3V3_load_max_A": 0.15,
+    "ambient_C": [
+      0,
+      40
+    ],
+    "header_combined_load_max_A": 0.01,
+    "external_GPIO_plus_header_load_max_A": 0.01,
+    "USB_VBUS": "sense+ESD only; must never connect to V5 or V3V3",
+    "no_external_backfeed": "SWD and headers are reference outputs only; probe Vtarget must sense, not power; TLV755 has no reverse blocking",
+    "current_budget_revision": "Final normal150mA/Ta0-40C supersedes initial120mA/Ta0-50C after MCU50mA+CAN60mA+external10mA leaves no pullup margin. Fault180mA not normal guarantee.",
+    "native_historical_L1_requirement": "L1 saved REQUIREMENTS still says covers nominal120mA as original design context; not inductor current rating. Actual Isat5.8A/Irms4.5A unchanged and final150mA load/thermal review controls. No native rerun needed."
+  },
+  "currentBudget_mA": {
+    "MCU_72MHz_all_peripherals_DS5319_Table13_max_85C": 50.0,
+    "TCAN332_dominant_RL50_max": 60.0,
+    "external_GPIO_plus_header_combined_ceiling": 10.0,
+    "two_I2C_pullups_2k2_minR_conservative": 3.2,
+    "other_bias_resistors_reserve": 3.0,
+    "analog_current_conservative_reserve": 5.0,
+    "internal_switching_unmodelled_reserve": 5.0,
+    "allocated_subtotal": 136.2,
+    "remaining_margin_to150": 13.8,
+    "USB_profile_total_including2V4mA_attach_reserve": 82.1,
+    "note": "Reserve rows are design allocations, not quoted IC specifications; CAN term load already included in transceiver ICC, not double-added."
+  },
+  "unpopulatedOrRejectedProtection": {
+    "input_TVS": "No populated TVS: ST SMBJ16A VRWM16V but Vcl26V at10/1000us and34.4V at8/20us; latter exceeds TPS54202 abs30V. Not a surge-certified input. Optional review pads only if root explicitly adds DNP.",
+    "CAN_TVS": "No arbitrary SM712/24V TVS: TCAN332 bus abs +/-14V. Short nonautomotive bench, internal device IEC12kV ESD rating does not prove system compliance.",
+    "ferrite": "No default series ferrite/LC on whole V3V3; MCU analog RC supply review delegated to MCU lesson; verify DC drop/damping and supply ramp if added.",
+    "BSS84": "Replaced by DMP2035U with Rds guarantee at-2.5V; BSS84 current catalog Not for Design In and no low-Vgs Rds guarantee used here."
+  },
+  "releaseGates": [
+    "exact passive/connector/inductor MPN and DC-bias curves",
+    "buck loop response, load step, DCM ripple under minimum/maximum loads",
+    "fuse inrush/I2t and source limit coordination",
+    "LDO actual PCB temperature and input/output power-off slew/reverse-current test",
+    "USB attach/detach firmware behavior and compliance/ESD test",
+    "CAN bit timing, termination and bus-fault envelope",
+    "Capture ERC and native network output vs this spec; PCB import/ECO verified separately by root"
+  ],
+  "passiveRequirementRows": [
+    {
+      "ref": "J_PWR",
+      "kind": "HEADER2",
+      "value": "9-16V DC IN",
+      "pins": {
+        "1": "VIN_RAW",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "POWER",
+      "rating": ">=24V >=0.5A connector, exact MPN before mechanical release"
+    },
+    {
+      "ref": "F_IN",
+      "kind": "FUSE",
+      "value": "500mA fast 32VDC",
+      "pins": {
+        "1": "VIN_RAW",
+        "2": "VIN_FUSED"
+      },
+      "populate": "yes",
+      "page": "POWER",
+      "mpn": "0467.500NR",
+      "footprint_family": "0603",
+      "source": "https://www.littelfuse.com/assetdocs/fuse-467-datasheet?assetguid=4a59f034-1cca-460e-a5ba-e1e66247c76d",
+      "release_note": "secondary protection only; inrush and I2t coordination not measured"
+    },
+    {
+      "ref": "D_REV",
+      "kind": "SS14-E3/61T",
+      "value": "SS14",
+      "pins": {
+        "1": "VIN_PROT",
+        "2": "VIN_FUSED"
+      },
+      "populate": "yes",
+      "page": "POWER",
+      "rating": "40V VRRM 1A; local pin1=K pin2=A"
+    },
+    {
+      "ref": "C_IN_BULK",
+      "kind": "CAP_POL",
+      "value": "47uF 35V",
+      "pins": {
+        "1": "VIN_PROT",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "POWER",
+      "rating": "electrolytic ESR provides source-cable resonance damping; polarity pin1+"
+    },
+    {
+      "ref": "C_IN",
+      "kind": "CAP",
+      "value": "22uF 35V X7R",
+      "pins": {
+        "1": "VIN_PROT",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "POWER",
+      "rating": "effective >=10uF at16V including tolerance/temp/DC bias"
+    },
+    {
+      "ref": "C_IN_HF",
+      "kind": "CAP",
+      "value": "100nF 50V X7R",
+      "pins": {
+        "1": "VIN_PROT",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "POWER"
+    },
+    {
+      "ref": "U_BUCK",
+      "kind": "TPS54202DDCR",
+      "value": "TPS54202",
+      "pins": {
+        "1": "GND",
+        "2": "BUCK_SW",
+        "3": "VIN_PROT",
+        "4": "BUCK_FB",
+        "5": null,
+        "6": "BUCK_BOOT"
+      },
+      "populate": "yes",
+      "page": "POWER",
+      "nc_reason": {
+        "5": "datasheet permits float EN for enabled; never connect directly to VIN_PROT"
+      }
+    },
+    {
+      "ref": "C_BOOT",
+      "kind": "CAP",
+      "value": "100nF 16V X7R",
+      "pins": {
+        "1": "BUCK_BOOT",
+        "2": "BUCK_SW"
+      },
+      "populate": "yes",
+      "page": "POWER"
+    },
+    {
+      "ref": "L_BUCK",
+      "kind": "XAL6060-153MEC",
+      "value": "15uH +/-20%",
+      "pins": {
+        "1": "BUCK_SW",
+        "2": "V5"
+      },
+      "populate": "yes",
+      "page": "POWER",
+      "mpn": "XAL6060-153MEC",
+      "rating": "DCRmax43.75mohm@25C, Isat5.8A typ (30% L drop), Irms4.5A at20C rise; covers nominal120mA and is above TPS54202 current-limit maximum3.9/4.3A at25C; temperature/current curves and actual PCB heat remain validation"
+    },
+    {
+      "ref": "C5_A",
+      "kind": "CAP",
+      "value": "22uF 10V X7R",
+      "pins": {
+        "1": "V5",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "POWER",
+      "rating": "pair effective >=30uF total at5V; verify selected MPN bias data; Cff75pF starting value requires stability test"
+    },
+    {
+      "ref": "C5_B",
+      "kind": "CAP",
+      "value": "22uF 10V X7R",
+      "pins": {
+        "1": "V5",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "POWER",
+      "rating": "same as C5_A"
+    },
+    {
+      "ref": "R_FB_HI",
+      "kind": "RES",
+      "value": "100k 0.1%",
+      "pins": {
+        "1": "V5",
+        "2": "BUCK_FB"
+      },
+      "populate": "yes",
+      "page": "POWER"
+    },
+    {
+      "ref": "R_FB_LO",
+      "kind": "RES",
+      "value": "13.5k 0.1%",
+      "pins": {
+        "1": "BUCK_FB",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "POWER"
+    },
+    {
+      "ref": "C_FF",
+      "kind": "CAP",
+      "value": "75pF C0G",
+      "pins": {
+        "1": "V5",
+        "2": "BUCK_FB"
+      },
+      "populate": "yes",
+      "page": "POWER",
+      "rating": "feedforward across upper FB resistor; official 5V low-ESR starting point, verify loop after actual C/L selected"
+    },
+    {
+      "ref": "U_LDO",
+      "kind": "TLV75533PDBVR",
+      "value": "TLV75533P",
+      "pins": {
+        "1": "V5",
+        "2": "GND",
+        "3": "V5",
+        "4": null,
+        "5": "V3V3"
+      },
+      "populate": "yes",
+      "page": "POWER",
+      "nc_reason": {
+        "4": "NC, no internal connection"
+      }
+    },
+    {
+      "ref": "C_LDO_IN",
+      "kind": "CAP",
+      "value": "2.2uF 10V X7R",
+      "pins": {
+        "1": "V5",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "POWER",
+      "rating": "effective >=0.47uF worst case; pin-local"
+    },
+    {
+      "ref": "C_LDO_OUT",
+      "kind": "CAP",
+      "value": "4.7uF 10V X7R",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "POWER",
+      "rating": "effective >=0.47uF worst case; pin-local"
+    },
+    {
+      "ref": "J_USB",
+      "kind": "USB4105-GF-A",
+      "value": "USB-C USB2 DEVICE",
+      "pins": {
+        "A1_B12": "GND",
+        "A4_B9": "USB_VBUS",
+        "B8": null,
+        "A5": "USB_CC1",
+        "B7": "USB_DM",
+        "A6": "USB_DP",
+        "A7": "USB_DM",
+        "B6": "USB_DP",
+        "A8": null,
+        "B5": "USB_CC2",
+        "B4_A9": "USB_VBUS",
+        "B1_A12": "GND",
+        "SH1": "GND",
+        "SH2": "GND",
+        "SH3": "GND",
+        "SH4": "GND"
+      },
+      "populate": "yes",
+      "page": "USB_CAN",
+      "nc_reason": {
+        "B8": "SBU2 unused",
+        "A8": "SBU1 unused"
+      },
+      "layout": "signal ground and shell stakes bonded at connector; enclosure chassis absent in bench design"
+    },
+    {
+      "ref": "R_CC1",
+      "kind": "RES",
+      "value": "5.1k 1%",
+      "pins": {
+        "1": "USB_CC1",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "USB_CAN"
+    },
+    {
+      "ref": "R_CC2",
+      "kind": "RES",
+      "value": "5.1k 1%",
+      "pins": {
+        "1": "USB_CC2",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "USB_CAN"
+    },
+    {
+      "ref": "U_USB_ESD",
+      "kind": "USBLC6-2SC6",
+      "value": "USBLC6-2SC6",
+      "pins": {
+        "1": "USB_DP",
+        "2": "GND",
+        "3": "USB_DM",
+        "4": "USB_DM",
+        "5": "USB_VBUS",
+        "6": "USB_DP"
+      },
+      "populate": "yes",
+      "page": "USB_CAN",
+      "layout": "connector -> ESD flow-through pads -> matched short route -> MCU series resistors; shortest wide local ESD GND return"
+    },
+    {
+      "ref": "C_USB_VBUS",
+      "kind": "CAP",
+      "value": "100nF 10V X7R",
+      "pins": {
+        "1": "USB_VBUS",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "USB_CAN",
+      "rating": "no board power from USB VBUS; cap supplies ESD rail HF return"
+    },
+    {
+      "ref": "R_USB_DP",
+      "kind": "RES",
+      "value": "22R 1%",
+      "pins": {
+        "1": "PA12_SHARED",
+        "2": "USB_DP"
+      },
+      "populate": "yes",
+      "page": "USB_CAN",
+      "assembly_group": "USB_ONLY"
+    },
+    {
+      "ref": "R_USB_DM",
+      "kind": "RES",
+      "value": "22R 1%",
+      "pins": {
+        "1": "PA11_SHARED",
+        "2": "USB_DM"
+      },
+      "populate": "yes",
+      "page": "USB_CAN",
+      "assembly_group": "USB_ONLY"
+    },
+    {
+      "ref": "R_VBUS_GATE",
+      "kind": "RES",
+      "value": "10k 1%",
+      "pins": {
+        "1": "USB_VBUS",
+        "2": "VBUS_GATE"
+      },
+      "populate": "yes",
+      "page": "USB_CAN"
+    },
+    {
+      "ref": "R_VBUS_GPD",
+      "kind": "RES",
+      "value": "1M 1%",
+      "pins": {
+        "1": "VBUS_GATE",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "USB_CAN"
+    },
+    {
+      "ref": "Q_VBUS",
+      "kind": "2N7002",
+      "value": "2N7002",
+      "pins": {
+        "1": "VBUS_GATE",
+        "2": "GND",
+        "3": "VBUS_PRESENT_N"
+      },
+      "populate": "yes",
+      "page": "USB_CAN"
+    },
+    {
+      "ref": "R_VBUS_READ",
+      "kind": "RES",
+      "value": "10k 1%",
+      "pins": {
+        "1": "V3V3",
+        "2": "VBUS_PRESENT_N"
+      },
+      "populate": "yes",
+      "page": "USB_CAN"
+    },
+    {
+      "ref": "Q_ATTACH",
+      "kind": "DMP2035U-7",
+      "value": "DMP2035U",
+      "pins": {
+        "1": "USB_ATTACH_N",
+        "2": "V3V3",
+        "3": "USB_PULLUP_SRC"
+      },
+      "populate": "yes",
+      "page": "USB_CAN"
+    },
+    {
+      "ref": "R_ATTACH_OFF",
+      "kind": "RES",
+      "value": "100k 1%",
+      "pins": {
+        "1": "V3V3",
+        "2": "USB_ATTACH_N"
+      },
+      "populate": "yes",
+      "page": "USB_CAN"
+    },
+    {
+      "ref": "R_DP_PULLUP",
+      "kind": "RES",
+      "value": "1.5k 1%",
+      "pins": {
+        "1": "USB_PULLUP_SRC",
+        "2": "USB_DP"
+      },
+      "populate": "yes",
+      "page": "USB_CAN"
+    },
+    {
+      "ref": "U_CAN",
+      "kind": "TCAN332DR",
+      "value": "TCAN332",
+      "pins": {
+        "1": "CAN_TXD",
+        "2": "GND",
+        "3": "V3V3",
+        "4": "CAN_RXD",
+        "5": null,
+        "6": "CAN_L",
+        "7": "CAN_H",
+        "8": null
+      },
+      "populate": "yes",
+      "page": "USB_CAN",
+      "nc_reason": {
+        "5": "TCAN332 NC, not SHDN",
+        "8": "TCAN332 NC, not STB"
+      }
+    },
+    {
+      "ref": "C_CAN",
+      "kind": "CAP",
+      "value": "100nF 10V X7R",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "USB_CAN"
+    },
+    {
+      "ref": "C_CAN_BULK",
+      "kind": "CAP",
+      "value": "1uF 10V X7R",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "populate": "yes",
+      "page": "USB_CAN"
+    },
+    {
+      "ref": "R_CAN_TX",
+      "kind": "RES",
+      "value": "0R",
+      "pins": {
+        "1": "PA12_SHARED",
+        "2": "CAN_TXD"
+      },
+      "populate": "DNP default USB mode",
+      "page": "USB_CAN",
+      "assembly_group": "CAN_ONLY"
+    },
+    {
+      "ref": "R_CAN_RX",
+      "kind": "RES",
+      "value": "0R",
+      "pins": {
+        "1": "PA11_SHARED",
+        "2": "CAN_RXD"
+      },
+      "populate": "DNP default USB mode",
+      "page": "USB_CAN",
+      "assembly_group": "CAN_ONLY"
+    },
+    {
+      "ref": "R_CAN_TX_IDLE",
+      "kind": "RES",
+      "value": "10k",
+      "pins": {
+        "1": "V3V3",
+        "2": "CAN_TXD"
+      },
+      "populate": "yes",
+      "page": "USB_CAN",
+      "rating": "explicit recessive default complements internal pull-up; no output contention at3.3V"
+    },
+    {
+      "ref": "R_CAN_TERM",
+      "kind": "RES",
+      "value": "120R 1% >=0.25W",
+      "pins": {
+        "1": "CAN_H",
+        "2": "CAN_L"
+      },
+      "populate": "yes",
+      "page": "USB_CAN",
+      "assembly_group": "END_NODE_ONLY",
+      "rating": "fit at physical two bus ends only; DNP for intermediate node"
+    },
+    {
+      "ref": "J_CAN",
+      "kind": "HEADER3",
+      "value": "CAN 500kbps <=1m BENCH",
+      "pins": {
+        "1": "CAN_H",
+        "2": "CAN_L",
+        "3": "GND"
+      },
+      "populate": "yes",
+      "page": "USB_CAN"
+    },
+    {
+      "ref": "J_UART",
+      "kind": "HEADER4",
+      "value": "3V3 UART",
+      "pins": {
+        "1": "V3V3",
+        "2": "UART_TX",
+        "3": "UART_RX",
+        "4": "GND"
+      },
+      "populate": "yes",
+      "page": "INTERFACES",
+      "rating": "V3V3 is OUT/reference <=10mA combined connector load; no external power injection"
+    },
+    {
+      "ref": "R_UART_TX",
+      "kind": "RES",
+      "value": "33R",
+      "pins": {
+        "1": "PA9_UART_TX",
+        "2": "UART_TX"
+      },
+      "populate": "yes",
+      "page": "INTERFACES",
+      "layout": "source damping footprint near MCU; final value requires edge/receiver/cable check"
+    },
+    {
+      "ref": "R_UART_RX",
+      "kind": "RES",
+      "value": "0R",
+      "pins": {
+        "1": "PA10_UART_RX",
+        "2": "UART_RX"
+      },
+      "populate": "yes",
+      "page": "INTERFACES"
+    },
+    {
+      "ref": "R_UART_IDLE",
+      "kind": "RES",
+      "value": "10k",
+      "pins": {
+        "1": "UART_RX",
+        "2": "V3V3"
+      },
+      "populate": "yes",
+      "page": "INTERFACES"
+    },
+    {
+      "ref": "J_I2C",
+      "kind": "HEADER4",
+      "value": "3V3 I2C <=400kHz <=100pF",
+      "pins": {
+        "1": "V3V3",
+        "2": "I2C_SCL",
+        "3": "I2C_SDA",
+        "4": "GND"
+      },
+      "populate": "yes",
+      "page": "INTERFACES",
+      "rating": "short bench interconnect; no hot plug; <=10mA total header load"
+    },
+    {
+      "ref": "R_I2C_SCL",
+      "kind": "RES",
+      "value": "2.2k 1%",
+      "pins": {
+        "1": "V3V3",
+        "2": "I2C_SCL"
+      },
+      "populate": "yes",
+      "page": "INTERFACES"
+    },
+    {
+      "ref": "R_I2C_SDA",
+      "kind": "RES",
+      "value": "2.2k 1%",
+      "pins": {
+        "1": "V3V3",
+        "2": "I2C_SDA"
+      },
+      "populate": "yes",
+      "page": "INTERFACES"
+    },
+    {
+      "ref": "J_SPI",
+      "kind": "HEADER6",
+      "value": "3V3 SPI <=1MHz <=10cm",
+      "pins": {
+        "1": "V3V3",
+        "2": "SPI_SCK",
+        "3": "SPI_MOSI",
+        "4": "SPI_MISO",
+        "5": "SPI_NSS",
+        "6": "GND"
+      },
+      "populate": "yes",
+      "page": "INTERFACES",
+      "rating": "exact receiver setup/hold and edge spec needed before faster/longer interface"
+    },
+    {
+      "ref": "R_SPI_SCK",
+      "kind": "RES",
+      "value": "33R",
+      "pins": {
+        "1": "PA5_SPI_SCK",
+        "2": "SPI_SCK"
+      },
+      "populate": "yes",
+      "page": "INTERFACES"
+    },
+    {
+      "ref": "R_SPI_MOSI",
+      "kind": "RES",
+      "value": "33R",
+      "pins": {
+        "1": "PA7_SPI_MOSI",
+        "2": "SPI_MOSI"
+      },
+      "populate": "yes",
+      "page": "INTERFACES"
+    },
+    {
+      "ref": "R_SPI_NSS",
+      "kind": "RES",
+      "value": "33R",
+      "pins": {
+        "1": "PA4_SPI_NSS",
+        "2": "SPI_NSS"
+      },
+      "populate": "yes",
+      "page": "INTERFACES"
+    },
+    {
+      "ref": "R_SPI_MISO",
+      "kind": "RES",
+      "value": "0R",
+      "pins": {
+        "1": "PA6_SPI_MISO",
+        "2": "SPI_MISO"
+      },
+      "populate": "yes",
+      "page": "INTERFACES"
+    },
+    {
+      "ref": "R_SPI_NSS_PU",
+      "kind": "RES",
+      "value": "10k",
+      "pins": {
+        "1": "V3V3",
+        "2": "PA4_SPI_NSS"
+      },
+      "populate": "yes",
+      "page": "INTERFACES"
+    }
+  ],
+  "actualPinGeometry": "j53_actual_power_domains.json",
+  "actualPowerTraceWidthAndGround": "j53_power_geometry_and_return_detail.json",
+  "currentLimit": "No fixed bench current-limit value is approved here. Source/fuse inrush/I2t, actual population/loads/capacitorMPNs, wiring/polarity and expected steady+startup current must be established first.",
+  "measurementReference": "Use actual local application GND/appropriate short ground reference for the rail being measured. Do not use a quiet oscillator node as a generic test-current return.",
+  "notConfirmed": [
+    "passive exactMPN/effectivecap/DCbias/ESR",
+    "connectorMPN/assembly ratings",
+    "surge/ESD/EMI system envelope",
+    "actual temperature/load transient/reverse current",
+    "sevenGPIO routing/USB4/wholeboardDRC/new4Ldefaultphysicalapplication"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "status": "B018_NATIVE_SAVED_FRESH_NOT_COMPLETE_BOARD",
+  "asOfLocal": "2026-10-22 06:26 Asia/Shanghai",
+  "qualifiedAliasesRemain": "b014",
+  "remainingSignalNetworks": [
+    "GPIO_PB1",
+    "GPIO_PB10",
+    "GPIO_PB11",
+    "GPIO_PB12",
+    "GPIO_PB13",
+    "GPIO_PB14",
+    "GPIO_PB15"
+  ],
+  "variants": {
+    "2L": {
+      "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native_candidates\\HI_2L_north6_TOP_trial_b018_PRE_ALL69_DRC_PENDING.brd",
+      "sha256": "D229F4A52025454CC81A627DA4BA7E3BB9E7A222235C33A3DC090F901B8CEF96",
+      "snapshot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\TOP_trial_2L_b018_PRE_ALL69_DRC_PENDING",
+      "summary": {
+        "netCount": 69,
+        "nettedTerminalCount": 266.0,
+        "nativeRemainingConnections": 7.0,
+        "graphMinTerminalJoins": 7.0,
+        "netsNeedingConnection": 7,
+        "nativeDRC": null,
+        "drcEvidenceScope": "UNRECOMPUTED_PENDING_WHOLE_BOARD_DRC; RAW_STORED_NOT_A_CURRENT_DRC_RESULT",
+        "nativeTerminalFreeBranches": 0,
+        "rawStoredDRCsForensicOnly": 0
+      },
+      "manualSegments": 768,
+      "generatedThermalSegments": 140,
+      "totalRouteSegments": 908,
+      "vias": 160,
+      "actualCopperShapes": 26,
+      "allGroundPinsNativePassed": 56,
+      "allGroundViasNativePassed": 84,
+      "cumulativeEndpointProofsNativePassed": 465,
+      "pinIdentityPassed": 272,
+      "HSESingleAnchorNegativeAndRestorePassed": true,
+      "wholeBoardDRC": null,
+      "scopedResult": {
+        "testedNetworkCount": 65,
+        "zeroNetworks": 61,
+        "failingNetworks": [
+          "BOOT0",
+          "GPIO_PA15",
+          "GPIO_PB4",
+          "I2C_SCL"
+        ],
+        "unexecutedUSBNetworkCount": 4,
+        "blockedUSBNetwork": null,
+        "blockingCondition": "Internal NoGroundPlane solver timeout previously demonstrated; not a current whole-board result"
+      }
+    },
+    "4L": {
+      "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native_candidates\\HI_4L_TOP_trial_b018_PRE_ALL69_DRC_PENDING.brd",
+      "sha256": "412F67C2A799DE1EB413BA88F7AE2B6825EDC854D41F69AA5523BBA54ED902B8",
+      "snapshot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\TOP_trial_4L_b018_PRE_ALL69_DRC_PENDING",
+      "summary": {
+        "netCount": 69,
+        "nettedTerminalCount": 266.0,
+        "nativeRemainingConnections": 7.0,
+        "graphMinTerminalJoins": 7.0,
+        "netsNeedingConnection": 7,
+        "nativeDRC": null,
+        "drcEvidenceScope": "UNRECOMPUTED_PENDING_WHOLE_BOARD_DRC; RAW_STORED_NOT_A_CURRENT_DRC_RESULT",
+        "nativeTerminalFreeBranches": 0,
+        "rawStoredDRCsForensicOnly": 0
+      },
+      "manualSegments": 746,
+      "generatedThermalSegments": 218,
+      "totalRouteSegments": 964,
+      "vias": 150,
+      "actualCopperShapes": 22,
+      "allGroundPinsNativePassed": 56,
+      "allGroundViasNativePassed": 76,
+      "cumulativeEndpointProofsNativePassed": 461,
+      "pinIdentityPassed": 272,
+      "HSESingleAnchorNegativeAndRestorePassed": true,
+      "wholeBoardDRC": null,
+      "scopedResult": {
+        "testedNetworkCount": 65,
+        "zeroNetworks": 65,
+        "failingNetworks": [],
+        "unexecutedUSBNetworkCount": 3,
+        "blockedUSBNetwork": "USB_DP",
+        "blockingCondition": "Internal NoGroundPlane solver timeout previously demonstrated; not a current whole-board result"
+      }
+    }
+  },
+  "wholeBoardDRC": null,
+  "warning": "Geometry/native physical connectivity/scoped checks and full-board acceptance are separate."
+}

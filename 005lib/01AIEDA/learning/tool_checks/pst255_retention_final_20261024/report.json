@@ -1,0 +1,15 @@
+﻿{
+    "status":  "PASS_SYNTHETIC_PST255_PUBLISH_FIXTURES",
+    "checks":  [
+                   "Successful mock export publishes three nonempty files; source SHA retained",
+                   "Native-like failure preserves active output and successful publication pointer",
+                   "External source change rejects snapshot publication",
+                   "Concurrent publisher lock rejected",
+                   "Publish-directory overlap with protected inputs/export storage rejected",
+                   "Both PowerShell tools pass native parser without loading CAD"
+               ],
+    "CAD_started":  false,
+    "mock_backend":  true,
+    "project_files_read_or_written":  false,
+    "scope":  "Mock backend validates snapshot/publication guards only; not a new Cadence execution or license validation."
+}

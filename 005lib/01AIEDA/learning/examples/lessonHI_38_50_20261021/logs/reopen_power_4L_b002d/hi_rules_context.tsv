@@ -1,0 +1,42 @@
+kind	name	data1	data2	data3	data4
+CLASS	"NC_POWER_INPUT_P"	((NETCLASS_DOMAIN "2") (PHYSICAL_CONSTRAINT_SET "P_POWER_060"))	t	nil	nil
+CLASS	"NC_POWER_INPUT_S"	((NETCLASS_DOMAIN "4") (SPACING_CONSTRAINT_SET "S_POWER_030"))	nil	t	nil
+CLASS	"NC_POWER_INPUT_E"	((NETCLASS_DOMAIN "8"))	nil	nil	t
+CLASS	"NC_POWER_LV_P"	((NETCLASS_DOMAIN "2") (PHYSICAL_CONSTRAINT_SET "P_POWER_060"))	t	nil	nil
+CLASS	"NC_POWER_LV_S"	((NETCLASS_DOMAIN "4") (SPACING_CONSTRAINT_SET "S_POWER_030"))	nil	t	nil
+CLASS	"NC_POWER_LV_E"	((NETCLASS_DOMAIN "8"))	nil	nil	t
+CLASS	"NC_SWITCHING_P"	((NETCLASS_DOMAIN "2") (PHYSICAL_CONSTRAINT_SET "P_SWITCH_060"))	t	nil	nil
+CLASS	"NC_SWITCHING_S"	((NETCLASS_DOMAIN "4") (SPACING_CONSTRAINT_SET "S_POWER_030"))	nil	t	nil
+CLASS	"NC_SWITCHING_E"	((NETCLASS_DOMAIN "8"))	nil	nil	t
+CLASS	"NC_ANALOG_SENSITIVE_P"	((NETCLASS_DOMAIN "2") (PHYSICAL_CONSTRAINT_SET "P_ANALOG_020"))	t	nil	nil
+CLASS	"NC_ANALOG_SENSITIVE_S"	((NETCLASS_DOMAIN "4") (SPACING_CONSTRAINT_SET "S_ANALOG_030"))	nil	t	nil
+CLASS	"NC_ANALOG_SENSITIVE_E"	((NETCLASS_DOMAIN "8"))	nil	nil	t
+CLASS	"NC_OSCILLATOR_P"	((NETCLASS_DOMAIN "2") (PHYSICAL_CONSTRAINT_SET "P_OSC_020"))	t	nil	nil
+CLASS	"NC_OSCILLATOR_S"	((NETCLASS_DOMAIN "4") (SPACING_CONSTRAINT_SET "S_ANALOG_030"))	nil	t	nil
+CLASS	"NC_OSCILLATOR_E"	((NETCLASS_DOMAIN "8"))	nil	nil	t
+CLASS	"NC_USB_FS_P"	((NETCLASS_DOMAIN "2") (PHYSICAL_CONSTRAINT_SET "P_USB_PROVISIONAL"))	t	nil	nil
+CLASS	"NC_USB_FS_S"	((NETCLASS_DOMAIN "4") (SPACING_CONSTRAINT_SET "S_USB_015"))	nil	t	nil
+CLASS	"NC_USB_FS_E"	((NETCLASS_DOMAIN "8"))	nil	nil	t
+CLASS	"NC_CAN_BUS_P"	((NETCLASS_DOMAIN "2") (PHYSICAL_CONSTRAINT_SET "P_CAN_025"))	t	nil	nil
+CLASS	"NC_CAN_BUS_S"	((NETCLASS_DOMAIN "4") (SPACING_CONSTRAINT_SET "S_CAN_025"))	nil	t	nil
+CLASS	"NC_CAN_BUS_E"	((NETCLASS_DOMAIN "8"))	nil	nil	t
+CLASS	"NC_USB_AUX_P"	((NETCLASS_DOMAIN "2") (PHYSICAL_CONSTRAINT_SET "P_SIGNAL_020"))	t	nil	nil
+CLASS	"NC_USB_AUX_S"	((NETCLASS_DOMAIN "4") (SPACING_CONSTRAINT_SET "DEFAULT"))	nil	t	nil
+CLASS	"NC_USB_AUX_E"	((NETCLASS_DOMAIN "8"))	nil	nil	t
+CLASS	"NC_DIGITAL_GENERAL_P"	((NETCLASS_DOMAIN "2") (PHYSICAL_CONSTRAINT_SET "P_SIGNAL_020"))	t	nil	nil
+CLASS	"NC_DIGITAL_GENERAL_S"	((NETCLASS_DOMAIN "4") (SPACING_CONSTRAINT_SET "DEFAULT"))	nil	t	nil
+CLASS	"NC_DIGITAL_GENERAL_E"	((NETCLASS_DOMAIN "8"))	nil	nil	t
+CLASS	"G31_GND_P"	((NETCLASS_DOMAIN "2") (PHYSICAL_CONSTRAINT_SET "P_GND_PLANE"))	t	nil	nil
+REGION	"G31_U1_ESCAPE"	"CONSTRAINT REGION/TOP"	((34.2 23.5) (36.5 25.5))	(((34.2 23.5) 0.0) ((36.5 23.5) 0.0) ((36.5 25.5) 0.0) ((34.2 25.5) 0.0))	(prop nil readOnly t net nil objType "polygon" segments (dbid:000002076D7D49B8 dbid:000002076D7D4A08 dbid:000002076D7D4A58 dbid:000002076D7D4AA8) nSegs 4 parentGroups (dbid:000002076D7D4598) bBox ((34.2 23.5) (36.5 25.5)) isRect nil layer "CONSTRAINT REGION/TOP" parent nil)
+REGION	"G31_U1_ESCAPE"	"CONSTRAINT REGION/TOP"	((41.5 21.2) (43.5 23.5))	(((41.5 21.2) 0.0) ((43.5 21.2) 0.0) ((43.5 23.5) 0.0) ((41.5 23.5) 0.0))	(prop nil readOnly t net nil objType "polygon" segments (dbid:000002076D7D4BB8 dbid:000002076D7D4C08 dbid:000002076D7D4C58 dbid:000002076D7D4CA8) nSegs 4 parentGroups (dbid:000002076D7D4598) bBox ((41.5 21.2) (43.5 23.5)) isRect nil layer "CONSTRAINT REGION/TOP" parent nil)
+REGION	"G31_U1_ESCAPE"	"CONSTRAINT REGION/TOP"	((43.5 28.5) (45.8 30.5))	(((43.5 28.5) 0.0) ((45.8 28.5) 0.0) ((45.8 30.5) 0.0) ((43.5 30.5) 0.0))	(prop nil readOnly t net nil objType "polygon" segments (dbid:000002076D7D4DB8 dbid:000002076D7D4E08 dbid:000002076D7D4E58 dbid:000002076D7D4EA8) nSegs 4 parentGroups (dbid:000002076D7D4598) bBox ((43.5 28.5) (45.8 30.5)) isRect nil layer "CONSTRAINT REGION/TOP" parent nil)
+REGION	"HI_U2_SW_ESCAPE"	"CONSTRAINT REGION/TOP"	((22.95 20.55) (24.9 21.45))	(((22.95 20.55) 0.0) ((24.9 20.55) 0.0) ((24.9 21.45) 0.0) ((22.95 21.45) 0.0))	(prop nil readOnly t net nil objType "polygon" segments (dbid:000002076D7D6E90 dbid:000002076D7D6EE0 dbid:000002076D7D6F30 dbid:000002076D7D6F80) nSegs 4 parentGroups (dbid:000002076D7D6A70) bBox ((22.95 20.55) (24.9 21.45)) isRect nil layer "CONSTRAINT REGION/TOP" parent nil)
+TABLE	"HI_U2_SW_ESCAPE"	"NC_SWITCHING_P"	nil	("HI_U2_SW_ESCAPE_P" nil nil)	(objType "classTable" readOnly t prop propList:000002076D103BA8 assembly nil sameNet nil spacing nil physical "HI_U2_SW_ESCAPE_P" region dbid:000002076D7D6A70 netclass2 nil netclass1 dbid:000002076D792948)
+TABLE	"G31_U1_ESCAPE"	"G31_GND_P"	nil	("G31_GND_ESCAPE" nil nil)	(objType "classTable" readOnly t prop propList:000002076D103BC0 assembly nil sameNet nil spacing nil physical "G31_GND_ESCAPE" region dbid:000002076D7D4598 netclass2 nil netclass1 dbid:000002076D7D4F28)
+TABLE	"G31_U1_ESCAPE"	"NC_POWER_LV_P"	nil	("G31_POWER_ESCAPE" nil nil)	(objType "classTable" readOnly t prop propList:000002076D103BD8 assembly nil sameNet nil spacing nil physical "G31_POWER_ESCAPE" region dbid:000002076D7D4598 netclass2 nil netclass1 dbid:000002076D791BC0)
+TABLE	"G31_U1_ESCAPE"	"NC_POWER_LV_S"	nil	(nil "G31_PIN_ESCAPE" nil)	(objType "classTable" readOnly t prop propList:000002076D103BF0 assembly nil sameNet nil physical nil spacing "G31_PIN_ESCAPE" region dbid:000002076D7D4598 netclass2 nil netclass1 dbid:000002076D792008)
+TABLE	nil	"NC_USB_FS_S"	"NC_DIGITAL_GENERAL_S"	(nil "S_USB_OTHER_050" nil)	(objType "classTable" readOnly t prop propList:000002076D103C08 assembly nil sameNet nil physical nil spacing "S_USB_OTHER_050" region nil netclass2 dbid:000002076D7983D0 netclass1 dbid:000002076D7954A8)
+TABLE	nil	"NC_SWITCHING_S"	"NC_USB_FS_S"	(nil "S_ISOLATE_100" nil)	(objType "classTable" readOnly t prop propList:000002076D103C20 assembly nil sameNet nil physical nil spacing "S_ISOLATE_100" region nil netclass2 dbid:000002076D7954A8 netclass1 dbid:000002076D792D60)
+TABLE	nil	"NC_SWITCHING_S"	"NC_OSCILLATOR_S"	(nil "S_ISOLATE_100" nil)	(objType "classTable" readOnly t prop propList:000002076D103C38 assembly nil sameNet nil physical nil spacing "S_ISOLATE_100" region nil netclass2 dbid:000002076D794750 netclass1 dbid:000002076D792D60)
+TABLE	nil	"NC_SWITCHING_S"	"NC_ANALOG_SENSITIVE_S"	(nil "S_ISOLATE_100" nil)	(objType "classTable" readOnly t prop propList:000002076D103C50 assembly nil sameNet nil physical nil spacing "S_ISOLATE_100" region nil netclass2 dbid:000002076D793A28 netclass1 dbid:000002076D792D60)
+HI_RULES_CONTEXT_COMPLETE

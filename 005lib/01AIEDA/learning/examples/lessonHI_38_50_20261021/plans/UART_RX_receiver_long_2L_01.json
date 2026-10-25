@@ -1,0 +1,45 @@
+{
+  "batchId": "UART_RX_receiver_relayout_long_2L_01",
+  "variant": "2L",
+  "status": "EXPLICIT_CANDIDATE_REQUIRES_MOVED_PAD_NATIVE_AND_REFERENCE_REVIEW",
+  "requiredSourcePlan": "plans/root_south_services_2L_v19.json",
+  "operations": [
+    {
+      "type": "route",
+      "id": "ROOT_UART_RX_RECEIVER_TOP_LONG",
+      "net": "UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          50.12,
+          25.0374
+        ],
+        [
+          50.1326,
+          25.05
+        ],
+        [
+          68.05,
+          25.05
+        ],
+        [
+          68.1,
+          25
+        ],
+        [
+          68.1016,
+          25
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "External UART receiver route staysTOP between actualPA15/PB4row trunks, no new drill. ExistingR17 receiver-series function and actualR18/J4termination preserved."
+    }
+  ],
+  "proofs": [
+    {
+      "from": "R17.2",
+      "to": "R18.1",
+      "connected": true
+    }
+  ]
+}

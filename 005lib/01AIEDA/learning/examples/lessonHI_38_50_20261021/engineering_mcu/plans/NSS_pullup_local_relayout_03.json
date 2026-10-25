@@ -1,0 +1,897 @@
+{
+  "status": "ENGINEERED_MAINFEED_SOURCE_CANDIDATE_PENDING_FULL_REFERENCE_AND_NATIVE",
+  "batchId": "NSS_pullup_local_relayout_03",
+  "placementChanges": [
+    {
+      "ref": "R21",
+      "xy": [
+        33.7016,
+        30.7
+      ],
+      "rotation": 180
+    },
+    {
+      "ref": "R23",
+      "xy": [
+        33.5,
+        32.1
+      ],
+      "rotation": 180
+    },
+    {
+      "ref": "R25",
+      "xy": [
+        31,
+        33.7
+      ],
+      "rotation": 0
+    },
+    {
+      "ref": "R32",
+      "xy": [
+        31,
+        35.5
+      ],
+      "rotation": 0
+    }
+  ],
+  "operations": [
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_0",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          29.25
+        ],
+        [
+          36.8,
+          29.25
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_1",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          36.8,
+          29.25
+        ],
+        [
+          39,
+          27.05
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_2",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          39,
+          27.05
+        ],
+        [
+          39,
+          26.2
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_3",
+      "net": "PA4_SPI_NSS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39,
+          26.2
+        ],
+        [
+          39,
+          21.3
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_4",
+      "net": "PA4_SPI_NSS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39,
+          21.3
+        ],
+        [
+          32.2,
+          21.3
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_5",
+      "net": "PA4_SPI_NSS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          32.2,
+          21.3
+        ],
+        [
+          32.2,
+          22
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_6",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          32.2,
+          22
+        ],
+        [
+          32,
+          21
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteVia",
+      "id": "NSS01_DEL_VIA_[39, 26.2]",
+      "net": "PA4_SPI_NSS",
+      "xy": [
+        39,
+        26.2
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "deleteVia",
+      "id": "NSS01_DEL_VIA_[32.2, 22]",
+      "net": "PA4_SPI_NSS",
+      "xy": [
+        32.2,
+        22
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_9",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          32.93,
+          33.02
+        ],
+        [
+          32.7984,
+          33.02
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_10",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          34.8,
+          31.15
+        ],
+        [
+          32.93,
+          33.02
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "NSS01_MAIN_SOURCE",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          34.8,
+          31.15
+        ],
+        [
+          33.85,
+          32.1
+        ],
+        [
+          33.3984,
+          32.1
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "NSS01_LOCAL_PULLUP_STUB",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          33.3984,
+          32.1
+        ],
+        [
+          33.3984,
+          32.9
+        ],
+        [
+          32.6764,
+          33.622
+        ],
+        [
+          32.6764,
+          33.7
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_13",
+      "net": "PA5_SPI_SCK",
+      "layer": "TOP",
+      "points": [
+        [
+          34.385,
+          30.215
+        ],
+        [
+          33.6,
+          31
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "NSS01_SCK_SOURCE",
+      "net": "PA5_SPI_SCK",
+      "layer": "TOP",
+      "points": [
+        [
+          34.385,
+          30.215
+        ],
+        [
+          33.9,
+          30.7
+        ],
+        [
+          33.6,
+          30.7
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_15",
+      "net": "ADC0",
+      "layer": "TOP",
+      "points": [
+        [
+          32.8,
+          35
+        ],
+        [
+          32.6764,
+          35
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_16",
+      "net": "ADC0",
+      "layer": "TOP",
+      "points": [
+        [
+          34.8,
+          33
+        ],
+        [
+          32.8,
+          35
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_17",
+      "net": "ADC_IN",
+      "layer": "TOP",
+      "points": [
+        [
+          29.8,
+          34
+        ],
+        [
+          26.27,
+          34
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_18",
+      "net": "ADC_IN",
+      "layer": "TOP",
+      "points": [
+        [
+          30.8,
+          35
+        ],
+        [
+          29.8,
+          34
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_19",
+      "net": "ADC_IN",
+      "layer": "TOP",
+      "points": [
+        [
+          31.1016,
+          35
+        ],
+        [
+          30.8,
+          35
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "NSS01_ADC_SERIES_TO_LOCAL_CAP",
+      "net": "ADC0",
+      "layer": "TOP",
+      "points": [
+        [
+          34.8,
+          33
+        ],
+        [
+          34.5,
+          33
+        ],
+        [
+          33.65,
+          33.85
+        ],
+        [
+          33.65,
+          35.5
+        ],
+        [
+          32.6764,
+          35.5
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "NSS01_ADC_INPUT",
+      "net": "ADC_IN",
+      "layer": "TOP",
+      "points": [
+        [
+          31.1016,
+          35.5
+        ],
+        [
+          30.8,
+          35.5
+        ],
+        [
+          29.3,
+          34
+        ],
+        [
+          26.27,
+          34
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS01_DEL_23",
+      "net": "V3V3",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          30.7,
+          32
+        ],
+        [
+          37,
+          25.7
+        ]
+      ],
+      "width": 0.6
+    },
+    {
+      "type": "via",
+      "id": "NSS01_R25_SUPPLY_VIA",
+      "net": "V3V3",
+      "xy": [
+        30.4,
+        33.7
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3
+    },
+    {
+      "type": "route",
+      "id": "NSS01_R25_SUPPLY_BOTTOM",
+      "net": "V3V3",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          30.7,
+          32
+        ],
+        [
+          31,
+          32.3
+        ],
+        [
+          31,
+          33.7
+        ],
+        [
+          30.4,
+          33.7
+        ]
+      ],
+      "width": 0.6
+    },
+    {
+      "type": "route",
+      "id": "NSS01_R25_SUPPLY_TOP",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          30.4,
+          33.7
+        ],
+        [
+          31.1016,
+          33.7
+        ]
+      ],
+      "width": 0.6
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS03_DELETE_STAR_BOTTOM_STEM",
+      "net": "V3V3",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          37,
+          25.7
+        ],
+        [
+          37,
+          24
+        ]
+      ],
+      "width": 0.6
+    },
+    {
+      "type": "deleteVia",
+      "id": "NSS03_DELETE_UNUSED_STAR_VIA",
+      "net": "V3V3",
+      "xy": [
+        37,
+        24
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "NSS03_MAIN_V3_TOP_FEED",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          29.8,
+          30.95
+        ],
+        [
+          29.8,
+          25.5
+        ],
+        [
+          28.2,
+          23.9
+        ],
+        [
+          28.2,
+          21.8
+        ],
+        [
+          33.3,
+          21.8
+        ],
+        [
+          33.3,
+          22.5
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Feed MCU TOP innerstar through actual .6 peripheral tap, removing BOTTOM diagonal cage across GPIO sourcebank. Keeps source-cap legs and all VDD/VSS direct loops. 2L SPI bottom crossings have finite reference openings requiring actual return engineering, not continuous microstrip."
+    }
+  ],
+  "variantOperations": {
+    "4L": [
+      {
+        "type": "deleteSegment",
+        "id": "NSS01_4L_DEL_0",
+        "net": "SPI_SCK",
+        "layer": "TOP",
+        "points": [
+          [
+            32.05,
+            31
+          ],
+          [
+            31,
+            29.95
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "deleteSegment",
+        "id": "NSS01_4L_DEL_1",
+        "net": "SPI_SCK",
+        "layer": "TOP",
+        "points": [
+          [
+            32.0252,
+            31
+          ],
+          [
+            32.05,
+            31
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "route",
+        "id": "NSS01_4L_ADD_2",
+        "net": "SPI_SCK",
+        "layer": "TOP",
+        "points": [
+          [
+            32.0252,
+            30.7
+          ],
+          [
+            31.75,
+            30.7
+          ],
+          [
+            31,
+            29.95
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "deleteSegment",
+        "id": "NSS01_4L_DEL_3",
+        "net": "SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            30.5,
+            33
+          ],
+          [
+            29.8,
+            32.3
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "deleteSegment",
+        "id": "NSS01_4L_DEL_4",
+        "net": "SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            31.2,
+            33
+          ],
+          [
+            30.5,
+            33
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "deleteSegment",
+        "id": "NSS01_4L_DEL_5",
+        "net": "SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            31.2236,
+            33.02
+          ],
+          [
+            31.2,
+            33
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "route",
+        "id": "NSS01_4L_ADD_6",
+        "net": "SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            31.8236,
+            32.1
+          ],
+          [
+            31.5,
+            32.1
+          ],
+          [
+            30.8,
+            32.8
+          ],
+          [
+            30.3,
+            32.8
+          ],
+          [
+            29.8,
+            32.3
+          ]
+        ],
+        "width": 0.2
+      }
+    ],
+    "2L": [
+      {
+        "type": "deleteSegment",
+        "id": "NSS01_2L_DEL_0",
+        "net": "SPI_SCK",
+        "layer": "TOP",
+        "points": [
+          [
+            31.85,
+            31
+          ],
+          [
+            30.8,
+            29.95
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "deleteSegment",
+        "id": "NSS01_2L_DEL_1",
+        "net": "SPI_SCK",
+        "layer": "TOP",
+        "points": [
+          [
+            32.0252,
+            31
+          ],
+          [
+            31.85,
+            31
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "route",
+        "id": "NSS01_2L_ADD_2",
+        "net": "SPI_SCK",
+        "layer": "TOP",
+        "points": [
+          [
+            32.0252,
+            30.7
+          ],
+          [
+            31.55,
+            30.7
+          ],
+          [
+            30.8,
+            29.95
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "deleteSegment",
+        "id": "NSS01_2L_DEL_3",
+        "net": "SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            30.16,
+            33.02
+          ],
+          [
+            29.6,
+            32.46
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "deleteSegment",
+        "id": "NSS01_2L_DEL_4",
+        "net": "SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            31.2236,
+            33.02
+          ],
+          [
+            30.16,
+            33.02
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "route",
+        "id": "NSS01_2L_ADD_5",
+        "net": "SPI_NSS",
+        "layer": "TOP",
+        "points": [
+          [
+            31.8236,
+            32.1
+          ],
+          [
+            31.5,
+            32.1
+          ],
+          [
+            30.8,
+            32.8
+          ],
+          [
+            29.94,
+            32.8
+          ],
+          [
+            29.6,
+            32.46
+          ]
+        ],
+        "width": 0.2
+      }
+    ]
+  },
+  "supersedesOperations": [
+    "SOUTH_RIP_NSS_PULLUP_0",
+    "SOUTH_RIP_NSS_PULLUP_1",
+    "SOUTH_RIP_NSS_PULLUP_2",
+    "SOUTH_NSS_PULLUP_RELOCATED"
+  ],
+  "reason": "Delete internal TOP+BOTTOM long pullup stub which blocks ordinary south-source exit. R25 lands 1.53231mm from real main NSS source node; move local series rows and ADC input resistor to fit real native PlaceBounds, retain MCU ADC0-cap path unchanged. Candidate precheck moved R23+.4X to avoid C9 PlaceBound and R25-.2X/ADC verticalx33.65 to clear actual existing C24 .6GND return, preserving exact MCU-to-C24 copper. 2L native MISO bottom bridge blocks earlier feedvia31,31.1. Final common feedvia30.7,31.7 (0.3mm from old), R23(33.5,32) and 2L GNDguard free endpoint29.9->29.7 retain full .3gap without global relaxation. C24 PlaceBound gap to R23 only.03mm, actual pad clearance and real MPN/assembly allowance still require validation. Exact nominal class check then found 2L MISOvia31.65,29.77 too close to R21 outputpad at y30.6. Final R21y30.7 restores .2235 pad-via gap; R23y32.1 preserves0PlaceBoundoverlap. Narrow framework gap is not actual component body/assembly clearance certification. Original BOTTOM longSTAR +TOP innerrail still cage GPIO south/left after NSS wall removal. New mainTOP feed frees BOTTOM for direct ordinary source escapes; do not accept83-119mm GPIO routes underUSB as final. Supersedes02 mainfeedgeometry, retains02 corrected R21/R23/R25/R32 poses and source/interface/ADC rebuild.",
+  "pending": [
+    "Native exact deletions/create and all net graph proofs",
+    "Actual ADC/reference/return geometry",
+    "R21/R23 interface complete chain remains connected",
+    "No manufacturing or SPI edge-rate qualification claimed"
+  ],
+  "sourcePlans": [
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\USB_aux_4L_b014\\normalized.json",
+      "sha256": "18c60faf7db93dedcdbd82c0753cb3e1fed3cbb00017a865f8344f3958460ca4"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\USB_aux_2L_b014\\normalized.json",
+      "sha256": "244b99f6b2b2cd1d3003af4778c87b7da1a3264d3e846186564f9a1e7d8efa78"
+    }
+  ],
+  "expectedProofs": [
+    {
+      "from": "U1.14",
+      "to": "R23.1"
+    },
+    {
+      "from": "U1.14",
+      "to": "R25.2"
+    },
+    {
+      "from": "R23.2",
+      "to": "J6.5"
+    },
+    {
+      "from": "U1.15",
+      "to": "R21.1"
+    },
+    {
+      "from": "R21.2",
+      "to": "J6.2"
+    },
+    {
+      "from": "U1.10",
+      "to": "C24.1"
+    },
+    {
+      "from": "C24.1",
+      "to": "R32.2"
+    },
+    {
+      "from": "R32.1",
+      "to": "J10.1"
+    },
+    {
+      "from": "R25.1",
+      "to": "U1.24"
+    }
+  ],
+  "newPullupStubCenterlineMM": 1.8990621920333748,
+  "mainFeedRework": {
+    "removes": "Full original BOTTOM STAR via30.7,32->37,25.7->37,24 and last37,24 via; original C9feedvia30.7,32 remains for localR25 supply only.",
+    "retains": "TOP .6innerstar and peripheral tap33.3,22.5->37,24, all existing direct VDDcap/VSSreturn copper except explicitly declared left/south/right adjustments.",
+    "estimatedMainTopLengthMM": 15.612741699796949,
+    "reference2L": "Three actual SPI BOTTOM bridge crossings beneath new TOP .6V3feed aroundx29.8. Inspect generated TOPGND void/actual common ground detours/coplanar guards and transition vias; not called continuousreference or SIpass.",
+    "reference4L": "SPI BOTTOM uses L3GND, new TOP feed does not cut that reference. Remove old V3throughvias if unused and inspect refill.",
+    "electrical": "Normal .6mm throughout. Longer DC feed trades length for routable bottom plane/ordinary sources; no current rating/IR/EMI claim. Copper thickness comes actual layerstack; supply current unspecified."
+  }
+}

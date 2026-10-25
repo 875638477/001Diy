@@ -1,0 +1,10 @@
+from pathlib import Path
+import json,math,sys
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');sys.path.insert(0,str(R.parent/'tooling/packages'))
+from shapely.geometry import Polygon
+oldv=[[44.25,29.75],[45.05,29.75],[45.45,30.15],[46.5,30.3]];oldg=[[44.25,29.25],[45.05,29.25],[45.45,28.85],[46.5,28.7252]]
+p=json.loads((R/'RIGHT10_source_joint_v4.json').read_text());op={o['id']:o for o in p['operations']};newv=op['RIGHT_VDD48_NECK']['points']+op['RIGHT_VDD48_CAP']['points'][1:2];ng=op['RIGHT_VSS47_NECK']['points']+op['RIGHT_VSS47_CAP_GROUND']['points'][1:];newg=ng[:ng.index([47.95,28.7252])+1]
+def length(q):return sum(math.dist(a,b) for a,b in zip(q,q[1:]))
+def info(v,g):return dict(VDDcenterline_mm=length(v),VSScenterline_mm=length(g),pairedCenterlineTotal_mm=length(v)+length(g),closedPlanarCenterlineLoopArea_mm2=Polygon(v+list(reversed(g))).area)
+a=info(oldv,oldg);b=info(newv,newg);out=dict(status='PLANNED_PLACEMENT_ROUTING_TRADEOFF_NOT_PI_CERT',baseline=a,source4=b,delta=dict(totalLength_mm=b['pairedCenterlineTotal_mm']-a['pairedCenterlineTotal_mm'],area_mm2=b['closedPlanarCenterlineLoopArea_mm2']-a['closedPlanarCenterlineLoopArea_mm2']),interpretation=['C15 moved to free PB9 and permit normal-width TOP exit without unusedvia or quietshadow crossing. Both .25 short necks remain original1.4budget; normal feed/return.6 retained.','Centerline area is a 2D geometric proxy, not actual current/inductance/PI simulation. Adjacent TOP return remains explicit, but loop is larger and exact MPN/thermal/decoupling performance unverified.','C16bulk is shifted.3 for placement spacing; all MCUpower domains and other local caps unchanged. Native fullfill/DRC/negative and actual loop readback mandatory.'])
+(R/'readouts/RIGHT10_v4_C15_loop_tradeoff.json').write_text(json.dumps(out,indent=2),encoding='utf-8');print(json.dumps(out,indent=2))

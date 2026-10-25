@@ -1,0 +1,94 @@
+
+  NAME
+    axlCNSSetPhysical - update physical cset values
+  SYNOPSIS
+    axlCNSSetPhysical(
+         t_cset/nil
+         t_layer/nil
+         s_constraint
+         g_value
+         )
+         ==> t/nil
+ 
+    axlCNSSetPhysical(
+         t_cset/nil
+         t_layer/nil
+         ll_constraintValues
+         nil
+         )
+         ==> t/nil
+  FUNCTION
+         Allows updating physical constraint values. By passing nil at 
+         the appropriate argument values for all csets and all layers may be 
+         changed.
+ 
+  DATA TYPES
+         See axlCNSGetPhysical for the data type of each constraint.
+ 
+         << units and allowed data values >>     
+         Design Units: 
+            - A number (integer or floating point) where units
+                 is current design units. Must not exceed accuracy
+                 of the design.
+            - Unitless string where accuracy cannot exceed db accuracy.
+            - String with units, data converted to current design units.
+         Boolean
+            - Use t/nil or "true"/"false".
+         Symbol
+            - Use the symbol name or its string.
+ 
+  TIPS
+         1) For best performance, when calling updating multiple axlCNS 
+            values wrap them in the axlCnsMap interfaces as shown below:
+                 axlCNSMapClear()
+                 axlCNSSetPhysical(nil nil 'width_min 5)
+                 axlCNSSetPhysical("" nil 'allow_padconnect 'VIAS_PINS_ONLY)
+                 ...
+                 axlCNSMapUpdate()
+            Single change calls do not require this.
+         2) For list of physical constraints see axlCNSGetPhysical.
+         3) If adding/deleting individual vias, you may find it easier
+            to use axlCnsAddVia and axlCnsDeleteVia.
+ 
+  CAUTION
+         1) same_net behavior will change in 16.2
+         2) This does NOT change override values. For example, you
+            can set width_min value in all csets but if the user has 
+            applied it to a net or constraint area as an override, it
+            will still be used for those items.
+  NEEDS
+         t_cset: cset name, can use "" for DEFAULT cset. Use nil to apply
+                 change to all cset.
+         t_layer: ETCH layer name (e.g "ETCH/TOP" or "TOP"). If nil apply
+                 change to all layers.
+         s_contraint: Constraint symbol to change. Use 
+                 axlCNSGetPhysical(nil nil nil) for list of permissible 
+                 values.
+         g_value: Value to update. For data type see above for "DATA TYPES".
+         ll_constraintValues: Multiple values may be updated by passing
+                 a list of lists for the third argument.
+                         '((s_contraint g_value) ... )
+  RETURNS
+         t if succeeds
+         nil an error
+                 - ecset name does not exit
+                 - layer does not exist
+                 - contraint does not exist
+                 - illegal value for constraint
+                 - cset is locked
+  SEE ALSO
+         axlCNSGetPhysical, axlCNSMapClear, axlCNSMapUpdate
+         axlCnsAddVia, axlCnsDeleteVia
+  EXAMPLES
+         - Set min line width on all constraints and layers
+             axlCNSSetPhysical(nil nil 'width_min 5)
+ 
+         - Set allow etch on all layers in default cset
+             axlCNSSetPhysical("" nil 'allow_etch t)
+ 
+         - don't allow Ts on top layer of VOLTAGE cset
+             axlCNSSetPhysical("VOLTAGE" "top" 'allow_ts "NOT_ALLOWED")
+         - same use symbol for value
+             axlCNSSetPhysical("VOLTAGE" "top" 'allow_ts 'NOT_ALLOWED)
+ 
+

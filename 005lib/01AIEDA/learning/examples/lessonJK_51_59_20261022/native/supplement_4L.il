@@ -1,0 +1,8 @@
+procedure(jkSupp()
+ foreach(n axlGetParam("artwork")->groupMembers unless(axlDeleteObject(axlGetParam(strcat("artwork:" n))) error("Cannot retire generator Film\n")))
+ unless(axlFilmCreate("REFDES_SILK_TOP" ?undefineLineWidth 0.1 ?suppressUnconnectPads nil ?drawMissingPadApertures nil ?layers list("REF DES/SILKSCREEN_TOP")) error("Cannot create companion film\n"))
+ unless(axlFilmCreate("REFDES_ASSEMBLY_TOP" ?undefineLineWidth 0.1 ?suppressUnconnectPads nil ?drawMissingPadApertures nil ?layers list("REF DES/ASSEMBLY_TOP")) error("Cannot create companion film\n"))
+ unless(axlFilmCreate("VALUE_ASSEMBLY_TOP" ?undefineLineWidth 0.1 ?suppressUnconnectPads nil ?drawMissingPadApertures nil ?layers list("COMPONENT VALUE/ASSEMBLY_TOP")) error("Cannot create companion film\n"))
+ unless(length(axlGetParam("artwork")->groupMembers)==3 error("Generator must have3Films\n"))
+ jk56Probe("D:/001DIY/005lib/01AIEDA/learning/examples/lessonJK_51_59_20261022/exports/supplement_4L_THREE_TEXTS_TRAINING/generator_inventory.tsv")
+ unless(axlSaveDesign(?design "D:/001DIY/005lib/01AIEDA/learning/examples/lessonJK_51_59_20261022/native/4L/JK_4L_THREE_TEXT_FILM_GENERATOR_ONLY.brd" ?noMru t ?noConfirm t) error("Generator SaveAs failed\n")) t)

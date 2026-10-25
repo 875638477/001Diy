@@ -1,0 +1,532 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html xmlns="http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Allegro SI SigXplorer User Guide -- 12</title>
+<META NAME="Approver" CONTENT="Technical Publications">
+<META NAME="Author" CONTENT="Technical Publications">
+<META NAME="CreateDate" CONTENT="2017-08-02">
+<META NAME="CreateTime" CONTENT="1501659530">
+<META NAME="DataType" CONTENT="Manuals">
+<META NAME="Description" CONTENT="This user guide familiarizes you with the SigXplorer tool.">
+<META NAME="DocTitle" CONTENT="Allegro SI SigXplorer User Guide">
+<META NAME="DocType" CONTENT="User Guide">
+<META NAME="EdmsRelease" CONTENT="FM-Wiki-1.0_P005">
+<META NAME="FileTitle" CONTENT="12">
+<META NAME="FileType" CONTENT="Chapter">
+<META NAME="Group" CONTENT="Signal Integrity">
+<META NAME="Keyword" CONTENT="sigxpug">
+<META NAME="Language" CONTENT="English">
+<META NAME="ModifiedDate" CONTENT="2017-08-02">
+<META NAME="ModifiedTime" CONTENT="1501659530">
+<META NAME="NextFile" CONTENT="s_parameter.html">
+<META NAME="PageCount" CONTENT="6">
+<META NAME="Platform" CONTENT="ALL">
+<META NAME="PrevFile" CONTENT="interconnect_modeling.html">
+<META NAME="Product" CONTENT="Allegro PCB SI">
+<META NAME="ProductFamily" CONTENT="Silicon-Package-Board Co-Design">
+<META NAME="ProductVersion" CONTENT="17.2-2016">
+<META NAME="RightsManagement" CONTENT="Copyright 1991Ð2017 Cadence Design Systems Inc.">
+<META NAME="Title" CONTENT="Allegro SI SigXplorer User Guide -- 12">
+<META NAME="TopicTags" CONTENT="FALSE">
+<META NAME="Version" CONTENT="17.2-2016">
+  </head>
+  <body style="margin-left: 5%;">
+    <a name="pagetop"></a>
+    <a name="firstpage"></a>
+    <!-- Begin Buttons -->
+    <table width="650" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td height="36" width="650" colspan="10">
+          <img src="images/header_doc.gif" width="650" height="34">
+        </td>
+      </tr>
+      <tr>
+        <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+                </td>
+<td height="20" width="73">
+<a href="sigxpugTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+        <td>
+          <a href="interconnect_modeling.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+        </td>
+        <td>
+          <a href="s_parameter.html"><img src="images/nav_next.gif" alt="Next" border="0"></a>
+        </td>
+        <td height="20">
+          <a>
+<a href="sigxpug.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+          </a>
+        </td>
+        <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+        </td>
+        <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+        </td>
+        <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+        </td>
+        <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+        </td>
+      </tr>
+    </table>
+    <!-- End Buttons -->
+    <p>
+    <hr>
+    <p>
+      <h3>
+        <center>
+          <font >
+            <div>Allegro&#174; SI SigXplorer User Guide</div>
+            <font >
+              <div>Product Version 17.2&#45;2016  April 2016</div>
+            </font>
+          </font>
+        </center>
+      </h3>
+      <br>
+    </p>
+    <div>
+      <h1>12<a name="1065082">&nbsp;</a></h1>
+      <h1><a name="1066635">Model Solving</a></h1>
+      <p><a name="1066642">This chapter covers the following topics:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1066636" title="12" name="1066649"><font color="#0000ff"><u>Overview</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#solve_sigxp" title="12" name="1066670"><font color="#0000ff"><u>Solving Models</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="69">
+              <div>&nbsp;</div>
+            </td>
+            <td width="31.872000000000003">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bss_bullet_sub_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#manage_unsolved_parts" title="12" name="1066686"><font color="#0000ff"><u>Managing Unsolved Parts</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="69">
+              <div>&nbsp;</div>
+            </td>
+            <td width="31.872000000000003">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bss_bullet_sub_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1065630" title="12" name="1066700"><font color="#0000ff"><u>Solving in a Batch</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1066636">Overview</a></h2>
+      <p><a name="1066637">In a pre&#45;16.6 release, when you extract a net to SigXplorer, all the structures are automatically solved in Allegro SI and then passed to SigXplorer. At times, the layerstack of the extracted structure might differ from the real layerstack in terms of the voids in a plane layer or shapes on the conducting layer. In such cases, the structure needs to be re&#45;solved in SigXplorer. At other times, field solution in SigXplorer takes a long time to run and often runs when not needed.</a></p>
+      <p><a name="1066776">Allegro PCB SI provides support for on&#45;demand trace model solving using Bem2D and Ems2D. However, unlike previous releases, now compulsory model solving during extraction from PCB SI is eliminated. The vias and trace models are unsolved when extracted from PCB SI and no impedance values are reported for trace models after extraction if no matched models are found in the existing working IML library.</a></p>
+      <h2><a name="1066777">autoSolve</a></h2>
+      <p><a name="1066778">The </a><font size="2" face="'Courier New'" color="#000000">autoSolve</font> parameter when set to On automatically calls the Solver when you make changes in the parameters of a trace in the spreadsheet, for example.</p>
+      <p><a name="1066808">The </a><font color="#000000"><em>autoSolve</em></font> parameter at the circuit level is set to Off, by default. As a result, during extraction, no solving is triggered except for FSVia. FSVia models are always solved during extraction.</p>
+      <blockquote>
+        <strong><font color="#000000"><strong>Figure 12&#45;1&nbsp; </strong></font></strong>
+        <strong><a name="1066811"><img src="images/autosolve_off.png" alt=""><br>The autoSolve Parameter</a></strong>
+      </blockquote>
+      <p><a name="1066812">However, for the commands which require a field solution, such as Simulate, Generate S&#45;Parameters, and Transform to Constraint Manager, the default status of the </a><font color="#000000"><em>autoSolve</em></font> parameter is overridden and models are produced.</p>
+      <h2><a name="solve_sigxp"></a><a name="1065584">Solving Models</a></h2>
+      <p><a name="1065585">Models can only be solved using one of the following methods if the </a><font color="#000000"><em>autoSolve</em></font> parameter is set to Off by default:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1065586">Running a simulation</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1065587">Using the Manage Unsolved Parts command</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1065588">Using the Solve Batch Mode command</a></td>
+          </tr>
+        </table>
+      </div>
+      <h3><a name="manage_unsolved_parts"></a><a name="1065590">Managing Unsolved Parts</a></h3>
+      <p><a name="1065591">The Manage Unsolved Parts command helps you manage all the unsolved parts including vias and traces. The command launches the Unsolved Part dialog which lists all the parts that have not been solved.</a></p>
+      <p><a name="1065592">To solve a part:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065593">Specify trace solver preferences:</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="37"
+              <div>&nbsp;</div>
+            </td>
+            <td width="26" align="left">
+              <div>
+                <nobr><font color="#000000"><strong>	a.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065594">Choose </a><font color="#000000"><em>Analyze - Preferences</em></font> or right&#45;click on the canvas and choose the <font color="#000000"><em>Preferences</em></font> command from the pop&#45;up menu.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="37"
+              <div>&nbsp;</div>
+            </td>
+            <td width="26" align="left">
+              <div>
+                <nobr><font color="#000000"><strong>	b.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065595">Click </a><font color="#000000"><em>Simulation Parameters</em></font>.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="37"
+              <div>&nbsp;</div>
+            </td>
+            <td width="26" align="left">
+              <div>
+                <nobr><font color="#000000"><strong>	c.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065596">Choose the appropriate trace solver from the Solver list, </a><font color="#000000"><em>EMS2D</em></font> or <font color="#000000"><em>Bem2D</em></font>.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="37"
+              <div>&nbsp;</div>
+            </td>
+            <td width="26" align="left">
+              <div>
+                <nobr><font color="#000000"><strong>	d.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065597">For EMS2D, click the </a><font color="#000000"><em>Solver Preferences</em></font> button and specify EMS2D&#45;specific preferences.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="37"
+              <div>&nbsp;</div>
+            </td>
+            <td width="26" align="left">
+              <div>
+                <nobr><font color="#000000"><strong>	e.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065598">Close the dialogs.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065599">Specify via solver preferences:</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="37"
+              <div>&nbsp;</div>
+            </td>
+            <td width="26" align="left">
+              <div>
+                <nobr><font color="#000000"><strong>	a.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065600">Choose </a><font color="#000000"><em>Analyze - Via Setup Preferences</em></font> or right&#45;click on the canvas and choose the Via Setup Preferences command from the pop&#45;up menu.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="37"
+              <div>&nbsp;</div>
+            </td>
+            <td width="26" align="left">
+              <div>
+                <nobr><font color="#000000"><strong>	b.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065601">In the Via Model Setup dialog, ensure that </a><font color="#000000"><em>FSvia</em></font> is selected.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="37"
+              <div>&nbsp;</div>
+            </td>
+            <td width="26" align="left">
+              <div>
+                <nobr><font color="#000000"><strong>	c.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065603">Click </a><font color="#000000"><em>OK</em></font> to close the dialog.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065604">Right&#45;click on the canvas.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	4.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065605">Choose the </a><font color="#000000"><em>Manage Unsolved Parts</em></font> command.</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1065606">The Unsolved Parts dialog appears. </a></blockquote>
+      <blockquote>
+        <strong><font color="#000000"><strong>Figure 12&#45;2&nbsp; </strong></font></strong>
+        <strong><a name="1065610"><img src="images/unsolved_parts.png" alt=""><br>Unsolved Parts</a></strong>
+      </blockquote>
+      <blockquote><a name="1067126">The Part Name column lists unsolved parts, while the Type column shows the type of the part, such as via or trace. The currently selected solver for via and trace are also displayed. For example, in </a><a href="#1065610" title="12"><font color="Blue"><u>Figure&nbsp;12&#45;2</u></font></a><a href="#1065610" title="12"> </a>, FSVia is selected to solve the Vias, while BEM2D is used to solve the traces.</blockquote>
+      <blockquote><font color="#000000"><strong>Note: </strong></font><a name="1065612">All the parts in the design appear in this dialog if there is no solved model associated with the extracted geometry found in the interconnect model library. If you run the Solver for one of the vias or traces, it is possible that the geometry matches one or more of the other elements. If so, the next time you launch this dialog, it may show fewer parts than expected.</a></blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	5.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065613">You can perform one of the following actions in this dialog.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="37"
+              <div>&nbsp;</div>
+            </td>
+            <td width="26" align="left">
+              <div>
+                <nobr><font color="#000000"><strong>	a.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065614">Select one or multiple part name(s) and, click Solve Selected to solve an individual part.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="37"
+              <div>&nbsp;</div>
+            </td>
+            <td width="26" align="left">
+              <div>
+                <nobr><font color="#000000"><strong>	b.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065615">Click Solve All to solve all the parts in one go.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	6.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1065617">Click </a><font color="#000000"><em>Solve All</em></font>.</td>
+          </tr>
+        </table>
+      </div>
+      <p>
+<blockquote><blockquote>        <font color="#000000"><a name="1065622"><img src="images/autosolve_ems2d.png" alt=""><br></a></font></blockquote></blockquote>
+      </p>
+      <p><a name="1065623">When solved, the tooltip on the via&#47;part on the canvas displays details of the solved part:</a></p>
+      <p>
+<blockquote><blockquote>        <font color="#000000"><a name="1065628"><img src="images/via_model_solved.png" alt=""><br></a></font></blockquote></blockquote>
+      </p>
+      <h3><a name="1065630">Solving in a Batch</a></h3>
+      <p><a name="1065631">You can also solve traces and all vias using the Solve Batch command. Use this command to solve a single part in order to see the impedance, for example, or to create a model in the library with the current parameters.</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/arrwrite.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1065632">Right&#45;click on an unsolved part and choose the </a><font color="#000000"><em>Solve Batch Mode</em></font> (&#60;solver name&#62;) command.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br>
+    <a href="#pagetop">Return to top of page</a>
+    <hr>
+    <hr align="left">
+    <div style="text-align: left;">
+      <!-- Begin Buttons -->
+      <table width="650" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+                    </td>
+<td height="20" width="73">
+<a href="sigxpugTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+          <td>
+            <a href="interconnect_modeling.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+          </td>
+          <td>
+            <a href="s_parameter.html"><img src="images/nav_next.gif" alt="Next" border="0"></a>
+          </td>
+          <td>
+            <a>
+<a href="sigxpug.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+            </a>
+          </td>
+          <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+          </td>
+          <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+          </td>
+          <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+          </td>
+          <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+          </td>
+        </tr>
+      </table>
+      <!-- End Buttons -->
+    </div>
+    <br>
+    <font size="-1" >
+For support, see <a href="http://support.cadence.com" target="_blank">Cadence Online Support</a> service.</font>
+    <br>
+    <br>
+    <font size="-1" >
+<font size="-1"><i>Copyright &#169; 2016, <a href ="http://www.cadence.com">Cadence Design Systems, Inc.</a></i></font>
+    </font>
+    <br>
+    <font size="-1" >
+All rights reserved.</font>
+    <br>
+    <br>
+  </body>
+</html>

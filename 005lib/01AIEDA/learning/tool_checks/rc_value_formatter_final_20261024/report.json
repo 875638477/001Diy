@@ -1,0 +1,84 @@
+{
+  "status": "PASS_SYNTHETIC_RC_FORMATTER_FIXTURES",
+  "checks": [
+    "All six requested display-format examples exact",
+    "Milli versus mega, zero ohm, embedded decimal and Ohm spelling kept distinct",
+    "Micro variants and exact pF/nF/uF engineering conversion",
+    "No25V/10% fallback; full source metadata and input object preserved",
+    "Conflicts, ambiguous m/MF, wrong dimension, family/package mismatch, letter codes and population suffix block candidates",
+    "Numeric voltage meansV and numeric tolerance means percentage points, never ratio",
+    "Explicit display policy may differ from preserved source tolerance; no implicit1% or TBD approval",
+    "Duplicate references rejected instead of choosing one candidate",
+    "Real CLI writes review report, keeps source bytes and rejects output overwrite",
+    "Every non-null candidate is ASCII"
+  ],
+  "CAD_started": false,
+  "user_library_accessed": false,
+  "source_sha256": {
+    "learning\\scripts\\normalize_rc_values.py": "1EE91DCD47C213E124B9E46C5C5894FCBC808D371603FDED4872226B8E35737D",
+    "learning\\scripts\\selftest_normalize_rc_values.py": "F025D3B50093467362696995AE9D237BA66622BC35ECDDD3B3C7AD671B79E8BE",
+    "learning\\notes\\rc_value_display_conventions.md": "4B941F1875AE4EF140CF8D68BAE3CBCC1FB91C1839EB697B2EB5E371F562FADE"
+  },
+  "local_link_checks": [
+    {
+      "source": "learning\\notes\\rc_value_display_conventions.md",
+      "target": "../scripts/normalize_rc_values.py",
+      "exists": true
+    },
+    {
+      "source": "learning\\notes\\rc_value_display_conventions.md",
+      "target": "capture_user_library_first_templates.md",
+      "exists": true
+    },
+    {
+      "source": "learning\\notes\\rc_value_display_conventions.md",
+      "target": "capture_text_geometry_and_readability.md",
+      "exists": true
+    },
+    {
+      "source": "learning\\notes\\rc_value_display_conventions.md",
+      "target": "capture_allegro_netlist_troubleshooting.md",
+      "exists": true
+    },
+    {
+      "source": "learning\\notes\\rc_value_display_conventions.md",
+      "target": "../scripts/selftest_normalize_rc_values.py",
+      "exists": true
+    },
+    {
+      "source": "learning\\skills\\cadence17-learning\\SKILL.md",
+      "target": "../../notes/ad_to_cadence_conversion_workflow.md",
+      "exists": true
+    },
+    {
+      "source": "learning\\skills\\cadence17-learning\\SKILL.md",
+      "target": "../../notes/rc_value_display_conventions.md",
+      "exists": true
+    },
+    {
+      "source": "learning\\skills\\cadence17-learning\\SKILL.md",
+      "target": "references/operating-boundaries.md",
+      "exists": true
+    },
+    {
+      "source": "learning\\skills\\cadence17-learning\\references\\operating-boundaries.md",
+      "target": "../../../notes/rc_value_display_conventions.md",
+      "exists": true
+    },
+    {
+      "source": "EDA.md",
+      "target": "learning/notes/rc_value_display_conventions.md",
+      "exists": true
+    },
+    {
+      "source": "课程索引.md",
+      "target": "learning/notes/rc_value_display_conventions.md",
+      "exists": true
+    }
+  ],
+  "skill_validation": {
+    "official_quick_validate": "NOT_RUN_TO_COMPLETION_MISSING_LOCAL_PYYAML",
+    "manual_frontmatter_and_links": "PASS",
+    "dependency_installed": false
+  }
+}

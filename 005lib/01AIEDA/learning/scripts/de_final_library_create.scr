@@ -1,0 +1,6 @@
+set NOCONFIRM
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/scripts/de_dependency_read.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/scripts/de_final_library_create.il") t)
+skill errset(deFinalCreate("D:/001DIY/005lib/01AIEDA/learning/examples/de_15_26_20261019/library" "D:/001DIY/005lib/01AIEDA/learning/staging/de_15_26_20261019/dependencies_final_create") t)
+quit
+fillin "yes"

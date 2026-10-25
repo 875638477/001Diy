@@ -1,0 +1,378 @@
+{
+  "status": "FROZEN_NORTH51_NATIVE_CONTRACT_NO_EXTRA_COPPER",
+  "variants": [
+    {
+      "variant": "2L",
+      "plan": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\GPIO_NORTH6_2L_51.json",
+      "sha256": "FA3723EAF775A4BF5B959C101A8C4EFD893043631D9FA59EB6F91676D6F69D2C",
+      "sourceBoardSHA": "4AC553CF77DA21A3BA7E2B4E9142DDE1707571B7E4A80B17FCA975C46876D6A5",
+      "operations": 39,
+      "uniqueExactDeletes": 13,
+      "deleteViaCount": 2,
+      "deleteSegmentCount": 11,
+      "newSignalVias": 5,
+      "newGroundVias": 4,
+      "newSignalRouteOperations": 17,
+      "allNewViasStockL28": true,
+      "stockApproval": "L28_VIA030_C060 alreadyglobalapproved for allactualconductors; no newapprovedlist/region needed",
+      "ruleMutations": [],
+      "retiredLegacyEndpointSelectors": [
+        {
+          "net": "GPIO_PC14",
+          "oldXY": [
+            41,
+            27.8
+          ],
+          "oldType": "via",
+          "replacementOperation": "N50_2L_N49_PC14_VIA",
+          "newXY": [
+            41.5,
+            29.65
+          ],
+          "newRealPinProof": [
+            "U1.3",
+            "J11.4"
+          ],
+          "reason": "Oldsourcevia and wholeoldTOPsourcepath are physicallydeleted; true newTOPsourcepath andvia replace it."
+        },
+        {
+          "net": "GPIO_PC14",
+          "oldXY": [
+            49.2,
+            25.2
+          ],
+          "oldType": "via",
+          "knownAliases": [
+            "RIGHT_PC14_FINAL"
+          ],
+          "replacementRealTarget": "J11.4",
+          "newRealPinProof": [
+            "U1.3",
+            "J11.4"
+          ],
+          "reason": "Oldfarvia/eastBOTTOMstub physicallydeleted, newcompletepath reaches actualheader."
+        },
+        {
+          "net": "GPIO_PC14",
+          "oldXY": [
+            43.6,
+            25.2
+          ],
+          "oldType": "historical_point",
+          "knownAliases": [
+            "RIGHT_PC14_SOUTH_BYPASS"
+          ],
+          "replacementRealTarget": "J11.4",
+          "newRealPinProof": [
+            "U1.3",
+            "J11.4"
+          ],
+          "reason": "Historicalbypasspoint isnotretained in complete replacement. Check whether stillactive in actualproofset; transparent retirement only ifactive, never bindoldXY aspass."
+        },
+        {
+          "net": "GPIO_PC13",
+          "oldXY": [
+            35.8,
+            31.1
+          ],
+          "oldType": "point",
+          "replacementRealTarget": "J11.3",
+          "newRealPinProof": [
+            "U1.2",
+            "J11.3"
+          ],
+          "reason": "Oldbarendphysicallyremoved; actualU1-toheadercompletepath supersedespartialvirtualpoint."
+        },
+        {
+          "net": "GPIO_PC15",
+          "oldXY": [
+            35.4,
+            28.75
+          ],
+          "oldType": "point",
+          "knownAliases": [
+            "B016_NODE_176"
+          ],
+          "replacementRealTarget": "J11.5",
+          "newRealPinProof": [
+            "U1.4",
+            "J11.5"
+          ],
+          "reason": "Oldbarendphysicallyremoved; actualsourcevia40.3,28.9 retained andactualU1-toheader proofsupersedespartialbarend."
+        }
+      ],
+      "preserveExistingPhysicalObjects": [
+        {
+          "net": "GPIO_PC13",
+          "xy": [
+            42,
+            28.9
+          ],
+          "type": "via"
+        },
+        {
+          "net": "GPIO_PC15",
+          "xy": [
+            40.3,
+            28.9
+          ],
+          "type": "via"
+        },
+        {
+          "net": "GPIO_PA1",
+          "xy": [
+            37.5,
+            29.6
+          ],
+          "type": "via"
+        },
+        {
+          "net": "GPIO_PA2",
+          "xy": [
+            36.6,
+            30.4
+          ],
+          "type": "via"
+        },
+        {
+          "net": "GPIO_PA3",
+          "xy": [
+            35.2,
+            31.65
+          ],
+          "type": "via"
+        },
+        {
+          "net": "GND",
+          "xy": [
+            48.2,
+            25
+          ],
+          "knownAlias": "RIGHT_PC14_RETURN",
+          "reason": "Ground isnot deleted or repurposed justbecause associated PC14path changes"
+        }
+      ],
+      "migrationRequirements": [
+        "Selectaliasby exactnet+oldXY+expectedtype andlogoldid/proof/newtarget, notsubstringmatching or globalwaiver",
+        "Never alter/remove any of272physicalpin identity contracts",
+        "Preserve all172 alreadyrealphysicalpin-connection edges and otherGND/criticalproofs; add actualsixnewU1\u2194J11 links",
+        "Recheckretainedsourcevia\u2192U1 links, newPC14sourcevia\u2192U1.3, eachfournewGNDvia\u2192C1.2 after actualrefill",
+        "OldXY isretired notsuccessfullyconnected; old source/proofrecord retainedhistory, newproofuses actualnewobject/pin",
+        "Do notbind newlydeleted pathendpointto nearest unrelated same-net copper without explicitmapping"
+      ],
+      "newRealLinks": [
+        [
+          "U1.2",
+          "J11.3"
+        ],
+        [
+          "U1.3",
+          "J11.4"
+        ],
+        [
+          "U1.4",
+          "J11.5"
+        ],
+        [
+          "U1.11",
+          "J11.6"
+        ],
+        [
+          "U1.12",
+          "J11.7"
+        ],
+        [
+          "U1.13",
+          "J11.8"
+        ]
+      ]
+    },
+    {
+      "variant": "4L",
+      "plan": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\GPIO_NORTH6_4L_51.json",
+      "sha256": "BA259F4DE5438F3F0547911335937BEB42B01A8AED4D0C0B5585C76B43C10FC3",
+      "sourceBoardSHA": "FD5D93BED7E64FEF14CEBB17FF103443FA29E0CEDF60EEA26B79D9F8D091B1B7",
+      "operations": 39,
+      "uniqueExactDeletes": 13,
+      "deleteViaCount": 2,
+      "deleteSegmentCount": 11,
+      "newSignalVias": 5,
+      "newGroundVias": 4,
+      "newSignalRouteOperations": 17,
+      "allNewViasStockL28": true,
+      "stockApproval": "L28_VIA030_C060 alreadyglobalapproved for allactualconductors; no newapprovedlist/region needed",
+      "ruleMutations": [],
+      "retiredLegacyEndpointSelectors": [
+        {
+          "net": "GPIO_PC14",
+          "oldXY": [
+            41,
+            27.8
+          ],
+          "oldType": "via",
+          "replacementOperation": "N50_4L_N49_PC14_VIA",
+          "newXY": [
+            41.5,
+            29.65
+          ],
+          "newRealPinProof": [
+            "U1.3",
+            "J11.4"
+          ],
+          "reason": "Oldsourcevia and wholeoldTOPsourcepath are physicallydeleted; true newTOPsourcepath andvia replace it."
+        },
+        {
+          "net": "GPIO_PC14",
+          "oldXY": [
+            49.2,
+            25.2
+          ],
+          "oldType": "via",
+          "knownAliases": [
+            "RIGHT_PC14_FINAL"
+          ],
+          "replacementRealTarget": "J11.4",
+          "newRealPinProof": [
+            "U1.3",
+            "J11.4"
+          ],
+          "reason": "Oldfarvia/eastBOTTOMstub physicallydeleted, newcompletepath reaches actualheader."
+        },
+        {
+          "net": "GPIO_PC14",
+          "oldXY": [
+            43.6,
+            25.2
+          ],
+          "oldType": "historical_point",
+          "knownAliases": [
+            "RIGHT_PC14_SOUTH_BYPASS"
+          ],
+          "replacementRealTarget": "J11.4",
+          "newRealPinProof": [
+            "U1.3",
+            "J11.4"
+          ],
+          "reason": "Historicalbypasspoint isnotretained in complete replacement. Check whether stillactive in actualproofset; transparent retirement only ifactive, never bindoldXY aspass."
+        },
+        {
+          "net": "GPIO_PC13",
+          "oldXY": [
+            35.8,
+            31.1
+          ],
+          "oldType": "point",
+          "replacementRealTarget": "J11.3",
+          "newRealPinProof": [
+            "U1.2",
+            "J11.3"
+          ],
+          "reason": "Oldbarendphysicallyremoved; actualU1-toheadercompletepath supersedespartialvirtualpoint."
+        },
+        {
+          "net": "GPIO_PC15",
+          "oldXY": [
+            35.4,
+            28.75
+          ],
+          "oldType": "point",
+          "knownAliases": [
+            "B016_NODE_176"
+          ],
+          "replacementRealTarget": "J11.5",
+          "newRealPinProof": [
+            "U1.4",
+            "J11.5"
+          ],
+          "reason": "Oldbarendphysicallyremoved; actualsourcevia40.3,28.9 retained andactualU1-toheader proofsupersedespartialbarend."
+        }
+      ],
+      "preserveExistingPhysicalObjects": [
+        {
+          "net": "GPIO_PC13",
+          "xy": [
+            42,
+            28.9
+          ],
+          "type": "via"
+        },
+        {
+          "net": "GPIO_PC15",
+          "xy": [
+            40.3,
+            28.9
+          ],
+          "type": "via"
+        },
+        {
+          "net": "GPIO_PA1",
+          "xy": [
+            37.5,
+            29.6
+          ],
+          "type": "via"
+        },
+        {
+          "net": "GPIO_PA2",
+          "xy": [
+            36.6,
+            30.4
+          ],
+          "type": "via"
+        },
+        {
+          "net": "GPIO_PA3",
+          "xy": [
+            35.2,
+            31.65
+          ],
+          "type": "via"
+        },
+        {
+          "net": "GND",
+          "xy": [
+            48.2,
+            25
+          ],
+          "knownAlias": "RIGHT_PC14_RETURN",
+          "reason": "Ground isnot deleted or repurposed justbecause associated PC14path changes"
+        }
+      ],
+      "migrationRequirements": [
+        "Selectaliasby exactnet+oldXY+expectedtype andlogoldid/proof/newtarget, notsubstringmatching or globalwaiver",
+        "Never alter/remove any of272physicalpin identity contracts",
+        "Preserve all172 alreadyrealphysicalpin-connection edges and otherGND/criticalproofs; add actualsixnewU1\u2194J11 links",
+        "Recheckretainedsourcevia\u2192U1 links, newPC14sourcevia\u2192U1.3, eachfournewGNDvia\u2192C1.2 after actualrefill",
+        "OldXY isretired notsuccessfullyconnected; old source/proofrecord retainedhistory, newproofuses actualnewobject/pin",
+        "Do notbind newlydeleted pathendpointto nearest unrelated same-net copper without explicitmapping"
+      ],
+      "newRealLinks": [
+        [
+          "U1.2",
+          "J11.3"
+        ],
+        [
+          "U1.3",
+          "J11.4"
+        ],
+        [
+          "U1.4",
+          "J11.5"
+        ],
+        [
+          "U1.11",
+          "J11.6"
+        ],
+        [
+          "U1.12",
+          "J11.7"
+        ],
+        [
+          "U1.13",
+          "J11.8"
+        ]
+      ]
+    }
+  ],
+  "scope": "No changes to frozen51 files/SHA. CombinedSouthcompatibility approval still required before native. OriginalJ12/R27LIVEfeed/ADC/C9/HSEplane andFilms retained. ScopedDRC not wholeboardDRC."
+}

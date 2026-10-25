@@ -1,0 +1,2350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html xmlns="http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Preparing Manufacturing Data -- 2</title>
+<META NAME="Approver" CONTENT="Technical Publications">
+<META NAME="Author" CONTENT="Technical Publications">
+<META NAME="CreateDate" CONTENT="2017-07-31">
+<META NAME="CreateTime" CONTENT="1501473056">
+<META NAME="DataType" CONTENT="Manuals">
+<META NAME="Description" CONTENT="Describes how to prepare manufacturing data using Allegro PCB Editor, Allegro Package Designer, and System-in-Package tools.">
+<META NAME="DocTitle" CONTENT="Preparing Manufacturing Data">
+<META NAME="DocType" CONTENT="User Guide">
+<META NAME="EdmsRelease" CONTENT="FM-Wiki-1.0_P005">
+<META NAME="FileTitle" CONTENT="2">
+<META NAME="Keywords" CONTENT="">
+<META NAME="FileType" CONTENT="Chapter">
+<META NAME="Group" CONTENT="Allegro User Guide">
+<META NAME="Keyword" CONTENT="algroman">
+<META NAME="Language" CONTENT="English">
+<META NAME="ModifiedDate" CONTENT="2017-07-31">
+<META NAME="ModifiedTime" CONTENT="1501473056">
+<META NAME="NextFile" CONTENT="chap6.html">
+<META NAME="Order" CONTENT="10">
+<META NAME="PageCount" CONTENT="24">
+<META NAME="Platform" CONTENT="ALL">
+<META NAME="PrevFile" CONTENT="chap1.html">
+<META NAME="Product" CONTENT="Allegro PCB Editor, Cadence SiP Digital, Cadence SiP RF">
+<META NAME="ProductFamily" CONTENT="Silicon-Package-Board Co-Design, IC Packaging, IC Packaging">
+<META NAME="ProductVersion" CONTENT="17.2-2016">
+<META NAME="Syntax" CONTENT="hole_size plating_type,hole_size plating_type tool_number +/- tolerance">
+<META NAME="RightsManagement" CONTENT="Copyright 19912017 Cadence Design Systems Inc.">
+<META NAME="Title" CONTENT="Preparing Manufacturing Data -- 2">
+<META NAME="TopicTags" CONTENT="FALSE">
+<META NAME="Version" CONTENT="17.2-2016">
+  </head>
+  <body style="margin-left: 5%;">
+    <a name="pagetop"></a>
+    <a name="firstpage"></a>
+    <!-- Begin Buttons -->
+    <table width="650" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td height="36" width="650" colspan="10">
+          <img src="images/header_doc.gif" width="650" height="34">
+        </td>
+      </tr>
+      <tr>
+        <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+                </td>
+<td height="20" width="73">
+<a href="algromanTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+        <td>
+          <a href="chap1.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+        </td>
+        <td>
+          <a href="chap6.html"><img src="images/nav_next.gif" alt="Next" border="0"></a>
+        </td>
+        <td height="20">
+          <a>
+<a href="algroman.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+          </a>
+        </td>
+        <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+        </td>
+        <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+        </td>
+        <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+        </td>
+        <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+        </td>
+      </tr>
+    </table>
+    <!-- End Buttons -->
+    <p>
+    <hr>
+    <p>
+      <h3>
+        <center>
+          <font >
+            <div>Allegro&#174; User Guide:  Preparing Manufacturing Data</div>
+            <font >
+              <div>Product Version 17.2&#45;2016 April 2016</div>
+            </font>
+          </font>
+        </center>
+      </h3>
+      <br>
+    </p>
+    <div>
+      <h1>2<a name="1031805">&nbsp;</a></h1>
+      <h1><a name="1031806">Creating Numerical Control Data</a></h1>
+      <p><a name="1036660">When you are ready to manufacture your design, the layout editor can generate output files for numerically controlled (NC) drills and routers. These files let you create data in Excellon format. </a></p>
+      <p><a name="1036668"><img src="images/chap2.05.1.1.png" alt=""><br></a></p>
+      <h3><a name="1035952">Prior to Generating NC Drill Output Files</a></h3>
+      <p><a name="1037558">Prior to generating output files, you can specify information in Padstack Designer that can make preparing your design for manufacturing significantly easier, such as specifying positive&#47;negative tolerance with non&#45;symmetrical values, such as +0.001&#47; &#45;0 .005, which typifies a via hole of 5 mils, as vias usually have a positive&#47;negative tolerance that differs from that of component pin through holes. </a></p>
+      <p><a name="1037501">By associating drilled hole tolerance at the padstack level, this information propagates from the library to both drill legend and drill file output. You can also more clearly delineate the type of hole to be used, including a rectangular, square, or oblong slot hole, at the padstack level. For custom applications in which you must override library data, you can modify drilled hole tolerance at the design level with the </a><font color="#000000"><em>Drill Customization</em></font> spreadsheet by using <font color="#000000"><em>Manufacture - NC - Drill Customization</em></font> (<a href="../ncoms/nchap.html#ncdrill_customization" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>ncdrill customization</u></font></a> command).</p>
+      <p><a name="1035926">You can define a drill size using up to three characters, which creates significantly more combinations of potential drill symbols. These values may also be customized using the Drill Customization spreadsheet. Automatic drill symbol assignment alleviates library&#45;based dependencies.</a></p>
+      <p><a name="1035842">You can choose whether to display plated drill holes in your design using the </a><font color="#000000"><em>Display</em></font> tab of the Design Parameter Editor, available by choosing <font color="#000000"><em>Setup - Design Parameters </em></font>(<a href="../pcoms/pchap.html#prmed" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>prmed</u></font></a> command). Plating hole visibility is often not required due to the volume of entities and supporting geometries, such as etch&#47;conductor layer pads. You may want to make non&#45;plated holes visible during placement and routing because they have no padstacks associated with them on etch&#47;conductor layers and are normally invisible. As a result, they may lack proper keepout areas to guide you.</p>
+      <p><a name="1043943">You can also change the default file extension of </a><font size="2" face="'Courier New'" color="#000000">.drl </font>for NC drill output filenames by setting the <font size="2" face="'Courier New'" color="#000000">ext_drill</font> environment variable in the User Preferences Editor, available by choosing <font color="#000000"><em>Setup - User Preferences </em></font>(<a href="../ecoms/echap.html#enved" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>enved</u></font></a> command). Cadence recommends changing the extension at the CDS_SITE level to ensure your company uses a common extension. Verify that downstream tools can support the extension you choose.</p>
+      <h3><a name="1037566">NC Drill Legends</a></h3>
+      <p><a name="creating_a_drill_legend"></a><a name="creating_a_drill_legend"></a><a name="creating_a_drill_legend"></a><a name="creating_a_drill_legend"></a><a name="1036368">During the last phase of PCB design, drill legend tables are created that usually appear on a fabrication drawing quantifying the number, type, and tolerance of plated and non&#45;plated holes. It is used to help establish PCB costing. These drawings are automatically created when you run </a><font color="#000000"><em>Manufacture - NC - NC Drill Legend (</em></font><a href="../ncoms/nchap.html#ncdrill_legend" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>ncdrill legend</u></font></a><font size="2" face="'Courier New'" color="#000000"> command)</font>. The layout editor automatically generates or replaces all drill legends for all layers and drill figures in the design whether or not the layers are visible.</p>
+      <h3><a name="1037570">NC Parameters File</a></h3>
+      <p><a name="1036480">You then create a parameter file using the </a><font color="#000000"><em>NC Parameters</em></font> dialog box, available from <font color="#000000"><em>Manufacture - NC - NC Parameters</em></font> (<a href="../ncoms/nchap.html#ncdrill_param" target="external_window"><font color="#0000ff"><u>ncdrill param</u></font></a> command). The <font size="2" face="'Courier New'" color="#000000">nc_param.txt </font>parameter file specifies the drill coordinate data format and serves as input when generating an NC drill or route file as well as drill legends. </p>
+      <p><a name="1041042">When you execute </a><font color="#000000"><em>Manufacture - NC - Drill Legend, </em></font>if the drilling type specified on the NC Drill dialog box differs from that specified on the Drill Legend dialog box, <font size="2" face="'Courier New'" color="#000000">nc_param.txt </font>synchronizes them. If <font size="2" face="'Courier New'" color="#000000">nc_param.txt </font>does not exist, or contains no drill types, <font size="2" face="'Courier New'" color="#000000">nctape_full</font> and <font size="2" face="'Courier New'" color="#000000">ncdrill legend</font> scan existing drill legend subclasses to determine the default drilling types specified on the dialog boxes. Otherwise, the default is layer pair drilling.</p>
+      <h2><a name="1034454">Generating Drill Legends </a></h2>
+      <p><a name="1037681">The </a><font color="#000000"><em>Manufacture - NC - Drill Legend</em></font> (<a href="../ncoms/nchap.html#ncdrill_legend" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>ncdrill legend</u></font></a> command) enables you to create drill drawings. Over each hole to be drilled in the design, the layout editor displays a drill figure with optional drill characters inside. This combination of figure and characters represents both the drill size and the hole&#45;plating information (defined in the padstack). This command also creates drill legends on the design. </p>
+      <p><a name="1037739">Figure </a><a href="#1037626" title="2"><font color="#0000ff"><u>2&#45;1</u></font></a> shows a sample legend. Use the Padstack Designer to define the drill figure and characters for each hole size and plating type combination as part of the pin and via padstack data. See <a href="../algrolibdev/chap1.html" target="external_window"><font color="#0000ff"><u>Library Padstacks</u></font></a>. </p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 2&#45;1&nbsp; </strong></font></strong>
+        <strong><a name="1037626">: NC Drill Legend Format</a></strong>
+      </p>
+      <p align="left"><a name="1038261"><img src="images/drill_legend.png" alt=""><br></a></p>
+      <h3><a name="1034448">Using Drill Template Files</a></h3>
+      <p><a name="1037675">Cadence supplies template files to control the drill legend table format and let you customize its appearance. The drill template file specifies the number and order of columns, column titles, and custom data for each tool size in the design. </a></p>
+      <p><a name="1036058">The default </a><font size="2" face="'Courier New'" color="#000000">.dlt</font> drill legend template files include the layer names in the legend table title line. The width of the<font color="#000000"><em> Size</em></font> and <font color="#000000"><em>Tolerance</em></font> columns allow for slot holes and positive and negative tolerance, respectively.</p>
+      <p><a name="1032006">Because drill template files contain unit&#45;specific information, Cadence provides five different templates, one for each type of unit:</a></p>
+      <p align="left"><a name="1034420">&nbsp;</a></p>
+      <table summary="" border="1" cellpadding="5" cellspacing="0" width="382">
+        <caption>
+        <tr>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="136">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1034397">Design Units</a></strong></font>
+            </p>
+          </td>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="246">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1034399">Default Template Filename</a></strong></font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1034401"><font color="#000000">mils</font></a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1034403"><font size="2" face="'Courier New'" color="#000000">default&#45;mil.dlt</font></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4">
+            <p><a name="1034405"><font color="#000000">inches</font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1034407"><font size="2" face="'Courier New'" color="#000000">default&#45;in.dlt</font></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4">
+            <p><a name="1034409"><font color="#000000">mm</font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1034411"><font size="2" face="'Courier New'" color="#000000">default&#45;mm.dlt</font></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4">
+            <p><a name="1034413"><font color="#000000">microns</font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1034415"><font size="2" face="'Courier New'" color="#000000">default&#45;um.dlt</font></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000">
+            <p><a name="1034417"><font color="#000000">cm</font></a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1034419"><font size="2" face="'Courier New'" color="#000000">default&#45;cm.dlt</font></a></p>
+          </td>
+        </tr>
+      </table>
+      <p><a name="1032007">Directories defined by the NCDPATH environment variable, which points to </a><font size="2" face="'Courier New'" color="#000000">&#60;</font><font size="2" face="'Courier New'" color="#000000"><em>Allegro_install_dir</em></font><font size="2" face="'Courier New'" color="#000000">&#62;&#47;share&#47;pcb&#47;text&#47;nclegend</font>, store default template files. The default template files are ASCII text files you can edit with any text editor. The following example shows the <font size="2" face="'Courier New'" color="#000000">default&#45;in.dlt</font> file.</p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041233">&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041271">(make__ncTemplate_struct</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041273">?Name                  &#34;default&#45;in&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041275">?Units                 &#34;inches&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043620">;   ?TitleHeight</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043621">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043622">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043623">;   Height of the main title line row in units as indicated by ?Units.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043624">;   This height must take into account a title that may in fact be multi&#45;line.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043625">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043626"> ?TitleHeight           0.25</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043627">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043628">;   Text block id numbers to be used for the actual title text, the column header</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043629">;   text, and text appearing in each drill data row, respectively.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043630">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043631"> ?TitleTextBlock        9</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043632"> ?ColumnTitleTextBlock  9</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043633"> ?DataTextBlock         9</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043634">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043635">;   Order of holes in the legend table based on plating status.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043636">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043637">;     &#34;PlatedFirst&#34; or &#34;NonPlatedFirst&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043638">;   </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041280"> ?PlatingOrder          &#34;PlatedFirst&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041282">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043650">;   ?Title</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043651">; </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043652">;   ?Title              Title for &#39;Layer pair&#39; drill legends, and default title</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041287">;                       for other drill legend types when not specified otherwise.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041288">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041289">;   ?TitleByLayer       Title for &#39;By layer&#39;  drill legends.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041290">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041291">;   ?TitleBackdrill     Title for &#39;Backdrill&#39; drill legends.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041292">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041293">;   The appearance of the string &#34;$lay_nams$&#34; indicates where &#34;&#60;layer name&#62; to &#60;layer name&#62;&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041294">;   may appear in a title, while &#34;$lay_nums$&#34; indicates where &#34;&#60;layer number&#62; to &#60;layer number&#62;&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041295">;   may appear in a title.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043659">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043660">;   The appearance of &#39;|&#39; characters in the title string will cause subsequent text</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043661">;   in the title to start on a new line. It is up to the user to change the ?TitleHeight</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043657">;   specification accordingly, as it will not automatically be changed.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043671">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041297"> ?Title                 &#34;DRILL CHART: $lay_nams$&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041298"> ?TitleByLayer          &#34;BY LAYER: $lay_nams$&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041299"> ?TitleBackdrill        &#34;BACKDRILL: $lay_nams$&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041300">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041301">;   ?UnitsTitle</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041302">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041303">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041304">;   The units title line appearing in the 2nd header row.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041305">;   The appearance of the string &#34;$units_id$&#34; in the title line indicates</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041306">;   where the actual units identifier is to be located in the string.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041307">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041308"> ?UnitsTitle            &#34;ALL UNITS ARE IN $units_id$&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041309">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041310">;   ?SuppressHeaderRow&#60;n&#62;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041311">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041312">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041313">;   The first three header rows of each legend title are respectively the above </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041314">;   title line, followed by the fixed units line, and then the column headers line.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041315">;   All or any combination of these header rows can be suppressed from appearing</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041316">;   with the following options. The default setting is &#34;no&#34;, with &#34;yes&#34; indicating</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041317">;   the header row is to be suppressed.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041318">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041319"> ?SuppressHeaderRow1    &#34;no&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041320"> ?SuppressHeaderRow2    &#34;no&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041321"> ?SuppressHeaderRow3    &#34;no&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041322">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041323">;   ?Precision</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041324">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041325">; </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041326">;   Precision specifies the number of decimal digits to follow the</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041327">;   decimal point in size and tolerance values appearing in the table. </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041328">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041329">;   &#45;1 = as many as are needed ... minimum 1 (DEFAULT)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041330">;    0 = suppress decimal point and decimal digits</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041331">;   &#62;0 = always put &#60;n&#62; decimal digits after the decimal point,</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041332">;        adding any trailing 0&#39;s as necessary</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041333">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041334"> ?Precision             &#45;1</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041335">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041336">;   ?SuppressLeadingZero</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041337">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041338">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041339">;   SuppressLeadingZero specifies specifies that any leading zero before</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041340">;   the decimal point of a decimal value for a size or tolerance will be</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041341">;   suppressed.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041342">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041343">;     e.g. &#39;0.100&#39; &#45;&#45;&#62; &#39;.100&#39;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041344">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041345">;   The default setting is &#34;no&#34;, while &#34;yes&#34; means suppress the 0.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041346">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041347"> ?SuppressLeadingZero   &#34;no&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041348">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041349">;   ?FixedFigureHeight</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041350">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041351">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041352">;   A non&#45;zero FixedFigureHeight will force all figures displayed</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041353">;   in the &#34;Figure&#34; column to be displayed with the same specified</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041354">;   height, overriding what is defined in individual padstacks. The</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041355">;   setting of 0 included below indicates that they will be displayed</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041356">;   with the sizes as defined in the padstacks.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041357">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041358"> ?FixedFigureHeight     0 </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041359">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041360">;   ?TableSlotRotations</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041361">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041362">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041363">;   The legend table will normally show separate legend table entries</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041364">;   for each rotation found for a slot hole whose figures are otherwise</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041365">;   identical. By specifying &#34;no&#34; for TableSlotRotations, the figure</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041366">;   shown for the slot hole in the table will have a 0 rotation </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041367">;   (e.g. major dimension along the X axis), and the quantity shown</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041368">;   will be the sum of ALL rotations for that slot hole figure. It</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041369">;   should be noted that the main figure display for the individual</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041370">;   slot figure instances will always show the proper rotation,</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041371">;   regardless of what this setting is for the figure in the table.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041372">;   The default setting is &#34;yes&#34;.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041373">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041374"> ?TableSlotRotations    &#34;yes&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041375">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041407">;   ?ForceToleranceColumn</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041408">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041409">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041410">;   The &#34;Tolerance&#34; column specified in the ?ColumnDefinitions</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041411">;   will be automatically suppressed if it is found that all holes</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041412">;   have 0 tolerances. The column can be forced to appear anyway with</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041413">;   a setting of &#34;yes&#34; for ?ForceToleranceColumn. The default setting</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041414">;   is &#34;no&#34;.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041415">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041416"> ?ForceToleranceColumn  &#34;no&#34;    </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041417">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041418">;   ?ShowTotalQuantity</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041419">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041420">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041421">;   The total hole quantity can be requested to appear with the legend</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041422">;   table with a setting of &#34;yes&#34; for ?ShowTotalQuantity. The default</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041423">;   setting is &#34;no&#34;. The quantity appears at the bottom of the &#34;Quantity&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041424">;   column, just outside of the bounding rectangle for the legend table.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041425">;   The numeric quantity is prefixed with the text &#34;TOTAL HOLES:&#34;.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041426">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041427"> ?ShowTotalQuantity     &#34;no&#34; </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041428">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041429">;   ?SeparateSlotHoleLegend</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041430">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041431">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041432">;   A legend can be created for slot holes that is separate from the legend</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041433">;   for the drilling of normal thru holes. The legend is controlled by the</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041434">;   MANUFACTURING class NCLEGEND&#45;SLOTS subclass and the legend table graphics</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041435">;   group name is NC_LEGEND_SLOTS. A setting of &#34;yes&#34; will create the separate</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041436">;   legend, with the default setting being &#34;no&#34;.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041437">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041438"> ?SeparateSlotHoleLegend  &#34;no&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041439">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041440">;   ?RowHeightExpansion</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041441">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041442">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041443">;   The legend row height will at minimum be the maximum figure height in the</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041444">;   legend table expanded by a percentage of that figure height. The default</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041445">;   expansion is 50 percent. An expansion of 0 percent could then result in</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041446">;   the figure of maximum height touching the top and bottom of its row.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041447">;   The text height used in the rows also factors in to the row height</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041448">;   calculation, so this option may in fact have no effect on the height if</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041449">;   the text height is larger.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041450">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041451"> ?RowHeightExpansion 50</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043757">;;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043758">;   ?AlternateUnits</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043759">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043760">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043761">;   If ?AlternateUnits is specified, and also &#34;Holesize2&#34;, or &#34;Tolerance2&#34;, or  </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043762">;   &#34;HoleSizenTol2&#34; in ?ColumnDefinitions, the columns will appear similar to </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043763">;   the standard columns, but in the units specified by ?AlternateUnits.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043764">;   The permissable settings are:</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043765">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043766">;     &#34;mils&#34;  &#34;inches&#34;  &#34;microns&#34;  &#34;millimeters&#34;  &#34;centimeters&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043767">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043768">;   e.g. ?AlternateUnits &#34;millimeters&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043769">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043770">;   Where the columns appear and the column header text is left up to the user</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043771">;   as usual in ?ColumnDefinitions. How the units of the columns are indicated</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043772">;   are also left up to the user. Possibly the column header text (e.g. &#34;SIZE (MM)&#34;),</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043773">;   or with an appropriate ?DrillNotes&#47;?BackdrillNotes line as below.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043790">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043791">;   ?DrillNotes</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043792">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043793">;   ?BackdrillNotes</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043794">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043795">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043796">;   Lines of notes that are to appear below the legend table rectangle for</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043797">;   each drill legend that is generated. ?DrillNotes are for &#39;Layer pair&#39; and</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043798">;   &#39;By layer&#39; legends, while ?BackdrillNotes are for &#39;Backdrill&#39; legends.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043799">;   Note text is allowed to be in upper and&#47;or lower text, and there is no explicit</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043800">;   limit on the number of lines of text. The note text is specified as:</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043801">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043802">;     &#39;(</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043803">;        &#34;&#60;line 1 of text&#62;&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043804">;        &#34;&#60;line 2 of text&#62;&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043805">;               .</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043806">;               .</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043807">;               .</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043808">;        &#34;&#60;line n of text&#62;&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043809">;      )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043810">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043811">;   The default for each is &#34;&#39;()&#34; which indicates there are no notes.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043812">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043813"> ?DrillNotes     &#39;()</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043814">&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043815"> ?BackdrillNotes &#39;(</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043816">                    &#34;NOTES:&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043817">                    &#34;&#45; DRILL SIZES LISTED IN LEGEND&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043818">                    &#34;  ARE CONSIDERED FINISHED.&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043819">                    &#34;&#45; VENDOR IS REQUIRED TO SELECT&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043820">                    &#34;  TOOLING FOR OVERDRILLING.&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043821">                    &#34;&#45; LEGEND DOES NOT SPECIFY DEPTH&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043822">                    &#34;  INTO ADJACENT DIELECTRIC LAYER.&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043823">                  )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043824">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043696">?ColumnDefinitions</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043697">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043698">; The first field of each definition uniquely identifies the column</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043699">;   to appear in the legend table, while the second field provides the</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043700">;   user&#45;specified header text for the column. The third field controls</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043701">;   the width of the column.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043702">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043703">;   Each column definition can have an optional 4th field included</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043704">;   as well to control the justification of the data displayed</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043705">;   within that column. The permitted values are:</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043706">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043707">;      &#34;center&#34;, &#34;right&#34;, or &#34;left&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043708">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043709">;   with &#34;center&#34; being the default if the 4th field is not provided,</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043710">;   or is provided but is not one of the above permitted values.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043711">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043736">;   Other columns that can be specified:</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043737">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043738">;     &#34;HoleSizenTol&#34;   ... &#34;Holesize&#34; and &#34;Tolerance&#34; combined in one column</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043739">;     &#34;Rotation&#34;       ... If a slot hole, it&#39;s rotation, where 0 degrees is</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043740">;                          when the major axis of the hole is on the X axis.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043741">;     &#34;User&#34;           ... User&#45;defined column. See ?CustomData below.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043742">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043743">;     &#34;Holesize2&#34;      ... See ?AlternateUnits.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043744">;     &#34;Tolerance2&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043715">;     &#34;HoleSizenTol2</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043716">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043717"> ?ColumnDefinitions &#39;(</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043718">                       (&#34;Figure&#34;      &#34;FIGURE&#34;        7)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043719">                       (&#34;Holesize&#34;    &#34;SIZE&#34;         15)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043720">                       (&#34;Tolerance&#34;   &#34;TOLERANCE&#34;    15)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043721">                       (&#34;PlateStatus&#34; &#34;PLATED&#34;       10)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043722">                       (&#34;NonStandard&#34; &#34;NONSTANDARD&#34;  15)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043723">                       (&#34;Quantity&#34;    &#34;QTY&#34;           6)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043724">                     )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041453">;   ?CustomData</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041454">;   &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041455">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041456">;   A column definition in ?ColumnDefinitions above can have &#34;User&#34; appear</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041457">;   in the first field to indicate a column of user&#45;defined data. The</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041458">;   data is specified by ?CustomData definitions that are matched to holes</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041459">;   appearing in the legend table.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041460">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041461">;     ?CustomData &#39;(</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041462">;                    ( 28          &#34;Plated&#34;     &#34;&#60;User 1 data&#62;&#34;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041463">;                    ( 42          &#34;Plated&#34;     &#34;&#60;User 1 data&#62;&#34;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041464">;                    ( 36          &#34;Plated&#34;     &#34;&#60;User 1 data&#62;&#34;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041465">;                    ( 63          &#34;Plated&#34;     &#34;&#60;User 1 data&#62;&#34;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041466">;                    (109          &#34;Non Plated&#34; &#34;&#60;User 1 data&#62;&#34;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041467">;                    ((130 50    ) &#34;Plated&#34;     &#34;&#60;User 1 data&#62;&#34;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041468">;                    ((130 50 &#34;r&#34;) &#34;Plated&#34;     &#34;&#60;User 1 data&#62;&#34;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041469">;                  )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041470">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041471">;   Matching of data to a hole is done on the basis of the hole size in field 1</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041472">;   and the plating status in field 2. For a normal hole, the size field is</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041473">;   simply &#39;&#60;size&#62;&#39;. For matching to an oval slot hole, size must be </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041474">;   &#39;(&#60;major&#62; &#60;minor&#62;)&#39;, with &#60;major&#62; being the major dimension of the oval, </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041475">;   and &#60;minor&#62; the minor dimension. For matching with a rectangular slot</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041476">;   hole the &#34;r&#34; must be added to size specification. The additional brackets</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043853">;   around the size specification for a slot hole MUST be included.As many</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043854">;   data strings should appear as there are &#34;User&#34; columns in ?ColumnDefinitions.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043855">;   The order of the data strings is matched to the order of &#34;User&#34; columns</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041477">;   in ?ColumnDefinitions</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041478">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040356">)</a></font>
+      </p>
+      <h4><a name="1034490">Drill Template File Fields </a></h4>
+      <p><a name="1034527">A drill template file contains the following fields:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>Name</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034491"> </a>Specifies the template file name used only for reference purposes and not by the program.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>Units</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034493"> </a>Specifies mm, mils, inches, um, or cm units. Because a drill template contains unit specific data, (for example, the custom fields for each drill hole size), use the corresponding templates for each type of unit. The layout editor converts the values given in the template file to the design units before using them.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>TitleHeight</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034494"> </a>Specifies the height of the drill legend title block. The height is in the units indicated in the <font color="#000000"><em>Units</em></font> field of the template.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>TitleTextBlock</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034495">Specifies the text block number for the drill legend title. Must be a positive number between 1 and 64.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>ColumnTitleTextBlock</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034496"> </a>Specifies the text block number for the drill legend column title. Must be positive number between 1 and 64.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>DataTextBlock</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034497"> </a>Specifies the text block number for the drill legend table entries. Must be a positive number between 1 and 64.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>PlatingOrder </em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034498">Specifies whether to sort drill legend entries by plated or nonplated holes first.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>Title</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041526"> </a>Specifies the title for <font color="#000000"><em>Layer Pair</em></font> drill legends and default title for other drill legend types when not otherwise specified.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>TitleByLayer   </em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041551">    </a>Title for <font color="#000000"><em>By Layer</em></font> drill legends.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>TitleBackdrill </em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041553">    </a>Title for <font color="#000000"><em>Backdrill</em></font> drill legends.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>The appearance of the string $lay_nams$ indicates where &#60;</nobr>
+              </div>
+            </td>
+            <td><a name="1042426">The appearance of the string $lay_nams$ indicates where &#60;</a><font size="2" face="'Courier New'" color="#000000"><em>layer name</em></font>&#62; to &#60;<font size="2" face="'Courier New'" color="#000000"><em>layer name</em></font>&#62; may appear in a title; $lay_nums$, &#60;<font size="2" face="'Courier New'" color="#000000"><em>layer number</em></font>&#62; to &#60;<font size="2" face="'Courier New'" color="#000000"><em>layer number</em></font>&#62; may appear in a title. For example:</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>Title: </em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1042427"><font color="#000000"><em>Title: </em></font></a>DRILL CHRT: $lay_nams$</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>TitleByLayer</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1042428"><font color="#000000"><em>TitleByLayer</em></font></a>: BY LAYER: $lay_nams$</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>TitleBackdrill</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041561"><font color="#000000"><em>TitleBackdrill</em></font></a>: BACKDRILL: $lay_nams$</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>UnitsTitle</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041578">The units title line appears in the second header row. The string $units_id$ in the title line indicates where the actual units identifier is to be located in the string. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>ALL UNITS ARE IN $units_id$&#34;</nobr>
+              </div>
+            </td>
+            <td><a name="1042472">ALL UNITS ARE IN $units_id$&#34;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>SuppressHeaderRow&#60;n&#62;</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1042191">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Any combination of the above title, the fixed units, and the column headers rows can be suppressed from appearing by specifying </nobr>
+              </div>
+            </td>
+            <td><a name="1042469">Any combination of the above title, the fixed units, and the column headers rows can be suppressed from appearing by specifying </a><font size="2" face="'Courier New'" color="#000000">yes.</font> The default setting is <font size="2" face="'Courier New'" color="#000000">no</font>. For example:</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>?SuppressHeaderRow1 no</nobr>
+              </div>
+            </td>
+            <td><a name="1042193">?SuppressHeaderRow1 no</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr> </nobr>
+              </div>
+            </td>
+            <td><a name="1042194"> </a>?SuppressHeaderRow2    no</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr> </nobr>
+              </div>
+            </td>
+            <td><a name="1041598"> </a>?SuppressHeaderRow3    no</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>Precision</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041600">Specifies the number of decimal digits to follow the decimal point for use in size and tolerance values. For example:</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>&#45;1: add as many as are needed with a minimum of 1, which is the default.</nobr>
+              </div>
+            </td>
+            <td><a name="1041606">&#45;1: add as many as are needed with a minimum of 1, which is the default.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>0: suppress decimal point and decimal digits</nobr>
+              </div>
+            </td>
+            <td><a name="1041607">0: suppress decimal point and decimal digits</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>&#62;0: add &#60;</nobr>
+              </div>
+            </td>
+            <td><a name="1041608">&#62;0: add &#60;</a><font size="2" face="'Courier New'" color="#000000"><em>n</em></font>&#62; decimal digits after the decimal point, plus any trailing zeros as necessary.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>SuppressLeadingZero</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041629">Removes any leading zero before the decimal point of a size or tolerance decimal value. For example, </a><font color="#000000"><em>0.100</em></font> becomes <font color="#000000"><em>.100</em></font>. The default setting is <font color="#000000"><em>no</em></font>; <font color="#000000"><em>yes</em></font> suppresses the 0.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>FixedFigureHeight</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1039097"><font color="#000000"><em>FixedFigureHeight</em></font></a>A non&#45;zero value forces all figures to display with the same specified height, overriding the sizes defined in the padstacks. A zero value uses the padstack size definitions.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>TableSlotRotations</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041655">Separates each rotation for slot holes with identical figures into its own entry in the legend table if you specify yes, which is the default. Otherwise, the figure shown has a 0 degree rotation (occurring when the slot hole's major axis exists along the X axis) and the quantity shown is a sum of all rotations for that slot hole figure. The main figure for the individual slot figure instances shows the proper rotation, regardless of this setting. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>ColumnDefinitions</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041738"> </a>Specifies the details for each column in the drill legend. The first field uniquely identifies the column; the second, the user&#45;specified header text; the third, the column width. Each column definition can have an optional fourth field to control the justification of the data displayed within that column. The permitted values are center, right, or left, with center default if the fourth field is not provided, or is not one of the above permitted values. A Rotation column can be optionally added to include slot holes' rotation. A 0 degree rotation occurs when the slot hole's major axis exists along the X axis. Each column has the following format:</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr></nobr>
+              </div>
+            </td>
+            <td><a name="1034502"><font color="#000000"><em>Figure</em></font></a> (FIGURE) has<strong> </strong>the drill figures with a character limit of 7.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>HoleSize</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034503"><font color="#000000"><em>HoleSize</em></font></a> (SIZE) has the drill hole size with a character limit of 15.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>Tolerance </em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1039358"><font color="#000000"><em>Tolerance </em></font></a>(TOLERANCE)<font color="#000000"><em> </em></font>specifies the positive or negative tolerance associated with the tool.<font color="#000000"><em> </em></font>Excluded if all holes have a positive or negative tolerance of zero, even when specified in the <font size="2" face="'Courier New'" color="#000000">.dlt</font> file with a character limit of 15.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr></nobr>
+              </div>
+            </td>
+            <td><a name="1039171"><font color="#000000"><em>PlateStatus</em></font></a><strong> </strong>(PLATED) specifies whether the hole is plated. with a character limit of 10.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr></nobr>
+              </div>
+            </td>
+            <td><a name="1039174"><font color="#000000"><em>NonStandard </em></font></a>(NONSTANDARD)<font color="#000000"><em> </em></font>specifies whether the hole is manufactured with a nonstandard drill method. Excluded if no hole has a non&#45;standard drill setting, even when specified in the <font size="2" face="'Courier New'" color="#000000">.dlt</font> file with a character limit of 15.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>Quantity</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034505"><font color="#000000"><em>Quantity</em></font></a> specifies the number of holes on the design with the specified size. Multiple drill holes in multiple&#45;drill vias are counted individually with a character limit of 6.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>ForceToleranceColumn</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1042390">Hides the Tolerance column specified in </a><font color="#000000"><em>?ColumnDefinitions</em></font> if all holes have 0 tolerances (default), unless you specify <font color="#000000"><em>yes</em></font> to show it.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>ShowTotalQuantit</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041788">y</a>Displays the numeric hole quantity prefixed with TOTAL HOLES: at the bottom of the <font color="#000000"><em>Quantity</em></font> column, outside the bounding legend table rectangle, if you specify <font color="#000000"><em>yes</em></font>. Otherwise defaults to <font color="#000000"><em>no</em></font>.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>SeparateSlotHoleLegend</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041831">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>AlternateUnits</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1043099">If you specify a value here as well as one in Holesize2 or Tolerance2 in ?ColumnDefinitions, the columns resemble the those of Holesize and Tolerance, but in mils, inches, microns, millimeters, or centimeters. The ?ColumnDefinitions dictate column, location, header text and units. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>DrillNotes&#47;BackdrillNotes</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1043199">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>Notes appear below the legend table with a rectangle for each drill legend in upper&#45; or lowercase text, with unlimited text lines. ?DrillNotes are for Layer pair and By layer legends, ?BackdrillNotes are for Backdrill legends. The note text is specified as:</nobr>
+              </div>
+            </td>
+            <td><a name="1043610">Notes appear below the legend table with a rectangle for each drill legend in upper&#45; or lowercase text, with unlimited text lines. ?DrillNotes are for Layer pair and By layer legends, ?BackdrillNotes are for Backdrill legends. The note text is specified as:</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>&#60;line 1 of text&#62;</nobr>
+              </div>
+            </td>
+            <td><a name="1043350">&#60;line 1 of text&#62;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>&#60;line 2 of text&#62;</nobr>
+              </div>
+            </td>
+            <td><a name="1043161">&#60;line 2 of text&#62;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>&#60;line n of text&#62;&#34;</nobr>
+              </div>
+            </td>
+            <td><a name="1043164">&#60;line n of text&#62;&#34;</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>The default for each is &#34;&#39;()&#34; which indicates there are no notes.</nobr>
+              </div>
+            </td>
+            <td><a name="1043353">The default for each is &#34;&#39;()&#34; which indicates there are no notes.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr> </nobr>
+              </div>
+            </td>
+            <td><a name="1043170"> </a>?DrillNotes     &#39;()</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr> </nobr>
+              </div>
+            </td>
+            <td><a name="1043172"> </a>?BackdrillNotes &#39;(</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>                    </nobr>
+              </div>
+            </td>
+            <td><a name="1043173">                    </a>&#34;NOTES:&#34;</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>                    </nobr>
+              </div>
+            </td>
+            <td><a name="1043174">                    </a>&#34;&#45;DRILL SIZES LISTED IN LEGEND&#34;</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>                    </nobr>
+              </div>
+            </td>
+            <td><a name="1043175">                    </a>&#34;ARE CONSIDERED FINISHED.&#34;</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>                    </nobr>
+              </div>
+            </td>
+            <td><a name="1043176">                    </a>&#34;&#45;VENDOR IS REQUIRED TO SELECT&#34;</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>                    </nobr>
+              </div>
+            </td>
+            <td><a name="1043177">                    </a>&#34;TOOLING FOR OVERDRILLING.&#34;</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>                    </nobr>
+              </div>
+            </td>
+            <td><a name="1043178">                    </a> &#34;&#45;LEGEND DOES NOT SPECIFY DEPTH&#34;</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>                   </nobr>
+              </div>
+            </td>
+            <td><a name="1043179">                   </a> &#34;INTO ADJACENT DIELECTRIC LAYER.&#34;</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>)</nobr>
+              </div>
+            </td>
+            <td><a name="1043605">)</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>RowHeightExpansion</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041842">Expands the minimum height of a legend row by a percentage of the maximum figure height. The default expansion is 50 percent. Specifying zero percent might cause, for instance, the figure with the greatest height to touch the top and bottom of its row. If the text height used in a row is larger, this option may have no effect. For example:</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr> RowHeightExpansion 50</nobr>
+              </div>
+            </td>
+            <td><a name="1041853"> RowHeightExpansion 50</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font color="#000000"><em>CustomData</em></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034509"> </a>Specifies all allowable hole size and plating status combinations that can occur in the design. It also specifies the user data for each of these holes. The layout editor goes through the given list of hole sizes and status to find a match for the hole existing in the design. It places the corresponding data in the User column of the drill legend table. </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>The format for CustomData is:</nobr>
+              </div>
+            </td>
+            <td><a name="1034510">The format for CustomData is:</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>(&#60;Holesize&#62; "&#60;PlateStatus&#62;" "&#60;userdata&#62;")</nobr>
+              </div>
+            </td>
+            <td><a name="1034511">(&#60;Holesize&#62; "&#60;PlateStatus&#62;" "&#60;userdata&#62;")</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1034512">The number of user data fields must equal the number of user&#45;defined columns in the ColumnDefinitions field.</a></p>
+      <p><a name="1034513">You can use the Custom Data feature for maintaining data, for example, tolerance that should be added to each hole in a set of designs. The layout editor picks up the custom data only for the holes in the design, you can maintain a file that has all of the allowable sizes of drill holes and their custom data.</a></p>
+      <p><a name="1034514">To get the custom data for a given hole size in the design, the layout editor uses the following method: </a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034515">If the design units and the units in the template file differ, the layout editor converts the template file units into design units.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><font color="#000000"><strong>Note: </strong></font><a name="1034516">Roundoff may cause inaccurate results.</a></blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034517">For each hole size in the drill legend, the layout editor tries match in the drill template file specified. This match is based on both the drill hole size and the plating status. If a match is found, the corresponding custom data is read and placed in the drill legend.</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1034518">The custom data is not converted in any way, even though units may differ, and the hole size was converted.</a></p>
+      <h3><a name="1032011">Customizing Drill Template Files</a></h3>
+      <p><a name="1032012">You can create a custom template file by copying a default template and renaming it to your custom legend. For example:</a></p>
+      <p><a name="1034539"><font size="2" face="'Courier New'" color="#000000">cat default&#45;in.dlt</font></a> becomes <font size="2" face="'Courier New'" color="#000000"><em>&#60;custom name&#62;</em></font><font size="2" face="'Courier New'" color="#000000">.dlt</font></p>
+      <p><a name="1040456">The following example shows a custom drill template specifying two additional user columns and changing the drill legend column sequence so that </a><font color="#000000"><em>Quantity</em></font> is the first column, <font color="#000000"><em>Figure</em></font> is second, <font color="#000000"><em>Holesize</em></font> is third, <font color="#000000"><em>Tolerance</em></font> is fourth, <font color="#000000"><em>Plating</em></font> is fifth, <font color="#000000"><em>NonStandard </em></font>is sixth, and two additional <font color="#000000"><em>User</em></font> columns are last.</p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040658">;     Example custom dlt file</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040659">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040660">;&nbsp;&nbsp;&nbsp;&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040661">;     The following example shows a custom drill template specifying </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040662">;     two additional user columns and changing the drill legend column</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040663">;     sequence so that Quantity is the first column, Figure is second,</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040664">;     Holesize is third, Tolerance is fourth, Plating is fifth, and </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040665">;     two additional User columns are last.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040666">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040667">;     The line &#34;?Title&#34; can use either variable $lay_nams$ to add the layer </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040668">names e.g. </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040669">;     Top to Bottom or $lay_nums$ to add the layer numbers e.g. 1 to 4</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040670">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040671">;     For additional information regarding the data that can be manipulated </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040672">;     in .dlt files please refer to the Cadence documentation or the supplied</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040673">;     .dlt files located in $CDS_ROOT&#47;shape&#47;pcb&#47;text&#47;nelegend.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040674">&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040675">(make__ncTemplate_struct</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040676">&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040677"> ?Name                  &#34;custom_drill&#34;                     </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040678"> ?Title                 &#34;Title $lay_nams$&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040679"> ?Units                 &#34;mils&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040680"> ?TitleHeight           250</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040681"> ?TitleTextBlock        5</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040682"> ?ColumnTitleTextBlock  3</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040683"> ?DataTextBlock         4</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040684"> ?PlatingOrder          &#34;NonPlatedFirst&#34; </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040685"> ?ColumnDefinitions     &#39;(</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040686"> ;              </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040687"> ;    You can add user defined columns below. The format must         </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040688"> ;    follow the guide of &#34;User&#34;, Column Entry that you want</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040689"> ;    displayed in the drill legend and the column width.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040690"> ;    You can move the order the columns are displayed in </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040691"> ;    Allegro by moving the lines below.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040692"> ;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040693"> ;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040694">                           (&#34;Quantity&#34;    &#34;QTY&#34;           6)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040695">                           (&#34;Figure&#34;      &#34;FIGURE&#34;        7)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040696">                           (&#34;Holesize&#34;    &#34;SIZE&#34;         15)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040697">                           (&#34;Tolerance&#34;   &#34;TOLERANCE&#34;    15)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040698">                           (&#34;PlateStatus&#34; &#34;PLATED&#34;       17)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040699">                           (&#34;NonStandard&#34; &#34;NONSTANDARD&#34;  15)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040700">                           (&#34;User&#34;        &#34;OTHER&#34;        20)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040701">                           (&#34;User&nbsp;&nbsp;&nbsp;&nbsp;&#34;  &#34;OTHER1&#34;       20)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040702">                         )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040703">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040704">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040705">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040706">;      Add any custom data that you would want to appear in the drill </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040707">;      legend below.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040708">;           </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040709"> ?CustomData `(</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040710">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040711">;      This is the column data used under each of the headings</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040712">;      above. In order for the data in the User column(s) to</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040713">;      be writen in the drill legend the hole must(!) match the</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040714">;      data in the &#34;Drill&#34; and(!) &#34;Plating Status&#34; columns below.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040715">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040716">;               Drill   Plating    &nbsp;&nbsp;&nbsp;&nbsp;OTHER             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OTHER1</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040717">;                       Status          column           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040718">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040719">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040720">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040721">                (156 &nbsp;&nbsp;&nbsp;&nbsp;&#34;Non Plated&#34;    &#34;Text or Numbers&#34;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &#34;B&#34;) </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040722">                (5  &nbsp;&nbsp;&nbsp;&nbsp;&#34;Plated&#34; &nbsp;&nbsp;&nbsp;&nbsp;&#34;1&#34;                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &#34;C&#34;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040723">                (18  &nbsp;&nbsp;&nbsp;&nbsp;&#34;Plated&#34; &nbsp;&nbsp;&nbsp;&nbsp;&#34;2&#34;               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &#34;8&#34;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040724">                (40  &nbsp;&nbsp;&nbsp;&nbsp;&#34;Plated&#34; &nbsp;&nbsp;&nbsp;&nbsp;&#34;3&#34;              &nbsp;&nbsp;&nbsp;&nbsp;       &#34;.001&#34;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040725">                (36  &nbsp;&nbsp;&nbsp;&nbsp;&#34;Plated&#34; &nbsp;&nbsp;&nbsp;&nbsp;&#34;A&#34;              &nbsp;&nbsp;&nbsp;&nbsp;     &#34;ABCdef&#34;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040726">&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040727">                </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040728">              )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040729">)</a></font>
+      </p>
+      <h2><a name="generating_the_paper_tape_output_file"></a><a name="1032361">Generating NC Drill Files</a></h2>
+      <p><a name="1032362">Using data contained in your</a><font size="2" face="'Courier New'" color="#000000">.brd</font> design, and parameters defined in the <font size="2" face="'Courier New'" color="#000000">ncparam.txt</font> file, the layout editor can output data for automatically generating NC Drill files. </p>
+      <p><a name="1035524">You can create this data either with the user interface or in batch mode. Both methods are described under </a><font color="#000000"><em>Manufacture - NC - NC Drill </em></font>(<a href="../ncoms/nchap.html#nctape_full" target="external_window"><font color="#0000ff"><u>nctape_full</u></font></a> command) in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>.</p>
+      <h3><a name="1032390">Using nc_tools.txt and nc_exclude.txt</a></h3>
+      <p><a name="1032391">If you choose, you can create the </a><font size="2" face="'Courier New'" color="#000000">nc_tools.txt </font>and<font size="2" face="'Courier New'" color="#000000"> nc_exclude.txt</font> files with Notepad or another text editor.</p>
+      <h4><a name="1038041">Syntax for nc_tools.txt</a></h4>
+      <p><a name="1033932">You can optionally define an </a><font color="#000000"><em>nc_tools.txt </em></font>file that contains tool codes for automatic tool selection, specifying each drill size and the <font color="#000000"><em>Tnn</em></font> code to use for it. If your NC drill equipment supports automatic tool selection, you enable <font color="#000000"><em>Auto Tool Select</em></font> on the <font color="#000000"><em>NC Drill </em></font>dialog box to insert <font color="#000000"><em>Tnn</em></font> tool codes in the Excellon format output file, instead of <font color="#000000"><em>M00</em></font> stop codes for manual tool changing. The output file excludes drill sizes not in the <font color="#000000"><em>nc_tools.txt</em></font> file. </p>
+      <p><a name="1038164">The </a><font color="#000000"><em>nc_tools.txt </em></font>file is used if it exists; but if it does not, <font color="#000000"><em>Tnn</em></font> codes automatically generate in sequence (for example, <font color="#000000"><em>T01, T02, &#8230; Tnn</em></font>). <font size="2" face="'Courier New'" color="#000000">Tnn</font> tool&#45;diameter specification codes only append to the tool&#45;select code in the header portion of the Excellon&#45;format output file, expanding to a <font size="2" face="'Courier New'" color="#000000">TnnC.xxx</font> format to specify the required router bit size, if you enabled <font color="#000000"><em>Enhanced Excellon Format </em></font>in the <font color="#000000"><em>NC Parameters</em></font> dialog box. For example, T01C.045 specifies that Tool 1has a 45&#45;mil diameter. For example, T01C.045 specifies that Tool 1has 45&#45;mil diameter, with imperial inch units. </p>
+      <p><a name="1038119">The syntax for each line in the </a><font size="2" face="'Courier New'" color="#000000">nc_tools.txt</font> file is as follows:</p>
+      <dl>
+        <font size="2" face="'Courier New'" color="#000000"><a name="1034014"><font size="2" face="'Courier New'" color="#000000"><em>hole_size plating_type tool_number +&#47;&#45; tolerance</em></font></a></font>
+      </dl>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font face="'Courier New'" color="#000000"><strong>hole_size</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034038">Specifies the drill hole size, in the same units as the design.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font face="'Courier New'" color="#000000"><strong>plating_type</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034098">Identifies the type of plating:<br><br></a><strong>P</strong> (Plated)<br><strong>N</strong> (Nonplated)<br><strong>O</strong> (Optional)</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font face="'Courier New'" color="#000000"><strong>tool_number</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034099">Specifies the tool number for each type of hole your design requires.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font face="'Courier New'" color="#000000"><strong>+ tolerance</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1039433"> </a>Associates the positive tolerance to the tool. Defaults to 0 if no fourth and fifth fields exist. The tolerances of a design hole must match those of the tool to permit selection of that tool.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font face="'Courier New'" color="#000000"><strong>&#45; tolerance</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1039491"><font face="'Courier New'" color="#000000"><strong>&#45; tolerance</strong></font></a>Associates the negative tolerance to the tool. Defaults to 0 if no fourth and fifth fields exist. The tolerances of a design hole must match those of the tool to permit selection of that tool.</td>
+          </tr>
+        </table>
+      </div>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1034132">Do not place comments in this text file because they are read as errors. If errors exist in this file, you cannot make a drill data output file.</a></p>
+      <p><a name="1034118">Here is an example of the </a><font size="2" face="'Courier New'" color="#000000">nc_tools.txt</font> file:</p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1034145">28 P TO1</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1034158">35 P TO2</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1034159">39 O TO3</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1034161">42 N TO4</a></font>
+      </p>
+      <h4><a name="1034214">Syntax for nc_exclude.txt</a></h4>
+      <p><a name="1034215">The text file </a><font size="2" face="'Courier New'" color="#000000">nc_exclude.txt</font> lists drill sizes to exclude from the drill file and the NC drill legend. The syntax for each line in the <font size="2" face="'Courier New'" color="#000000">nc_exclude.txt</font> file is as follows:</p>
+      <dl>
+        <font size="2" face="'Courier New'" color="#000000"><a name="1034282"><font size="2" face="'Courier New'" color="#000000"><em>hole_size plating_type</em></font></a></font>
+      </dl>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font face="'Courier New'" color="#000000"><strong>hole_size</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034283">Specifies the drill hole size, in the same units as the design.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr><font face="'Courier New'" color="#000000"><strong>plating_type</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1034267">Identifies the type of plating:<br><br></a><strong>P</strong> (Plated)<br><strong>N</strong> (Nonplated)<br><strong>O</strong> (Optional)</td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1034269">As with the </a><font size="2" face="'Courier New'" color="#000000">nc_tools.txt</font> file, do not place comments in this text file because they are read as errors that prevent a drill data output file from being created. Here is an example of the <font size="2" face="'Courier New'" color="#000000">nc_exclude.txt</font> file:</p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1034272">35 P</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1034274">42 N</a></font>
+      </p>
+      <h4><a name="1032455">The nctape.log File</a></h4>
+      <p><a name="1032458">The layout editor creates an ASCII log file named </a><font size="2" face="'Courier New'" color="#000000">nctape.log</font> along with the ASCII output file. This file contains error messages; NC Parameters; the output data file name; and size, plating, and quantity of the holes.</p>
+      <h2><a name="creating_nc_route_information"></a><a name="1032471">Running NC Route </a></h2>
+      <p><a name="1032472">Running </a><font color="#000000"><em>Manufacture - NC - NC Route</em></font> (<a href="../ncoms/nchap.html#ncroute" target="external_window"><font color="#0000ff"><u>ncroute</u></font></a> command) enables you to generate data for an NC router. The output file is an ASCII file in Excellon Format. </p>
+      <p><a name="1037535">Slot holes detected in the design are included in the NC Route output file. You can create two separate output files for plated and non&#45;plated routing. In contrast, NC Drill output produced by running the </a><font color="#000000"><em>Manufacture - NC - NC Drill </em></font>(<a href="../ncoms/nchap.html#nctape_full" target="external_window"><font size="2" face="'Courier New'" color="#000000"><u>nctape_full</u></font></a> command) only applies to circular drill holes. </p>
+      <p><a name="1039597">When NC Route routes oval and rectangle slot holes, an appropriate tool is chosen from </a><font size="2" face="'Courier New'" color="#000000">ncroutebits.txt</font> using the following guidelines:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="32">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039598">Rectangle Slot: a tool size smaller than the minimum dimension of the rectangle must exist to route a rectangle path with appropriate Excellon tool compensation.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="32">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039608">Oval Slot: a tool size that exactly matches the minor dimension of the oval must exist to route the oval as a single line path. Otherwise, a tool size smaller than the minor dimension must exist to route an oval path with appropriate Excellon tool compensation.</a></td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="1039578">Guidelines</a></h4>
+      <p><a name="1032503">The </a><font size="2" face="'Courier New'" color="#000000">ncroute</font> command executes with the following expectations:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="32">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1032504">Each cutting path is drawn as a continuous series of lines and&#47;or arcs.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="32">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1032505">There is no limit on the number of paths that may be specified.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="32">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1032506">Path direction can be specified.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="32">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1045567">If the design is defined in English units, the tool diameter is interpreted to be inches; if Metric, then millimeters.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="32">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1045591">Requires </a>nc_param.txt file defined by NCDPATH for controlling additional ncroute settings. If not found uses Cadence defaults.</td>
+          </tr>
+        </table>
+      </div>
+      <h3><a name="defining_the_cutting_path"></a><a name="1045570">Defining the Cutting Path</a></h3>
+      <p><a name="1034632">Choose </a><font color="#000000"><em>Add - Line</em></font> (<a href="../acoms/achap.html#add_line" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>add line</u></font></a> command), <font color="#000000"><em>Add - Arc w&#47; Radius </em></font>(<a href="../acoms/achap.html#add_rarc" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>add rarc</u></font></a> command), and <font color="#000000"><em>Add - Arc</em></font> (<a href="../acoms/achap.html#add_arc" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>add arc</u></font></a> command) to add arcs and lines to a cutting path. Follow these guidelines to establish your cutting path:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="32">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1032510">An unlimited number of cutting paths is allowed, but each cutting path must be continuous. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="32">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1032511">Because arcs and lines are added with separate interactive commands, align the line and arc end points exactly; otherwise, they are not processed as a single path. </a></td>
+          </tr>
+        </table>
+      </div>
+      <p>
+        <strong><font color="#000000"><strong>Figure 2&#45;2&nbsp; </strong></font></strong>
+        <strong><a name="1032533">Defining Cutting Paths</a></strong>
+      </p>
+      <p align="left"><a name="1033639"><font color="#000000"><strong><img src="images/chap2.05.1.3.png" alt=""><br></strong></font></a></p>
+      <p><a name="1032534">If a cut starts and ends at the same point, placing a "1" text point near this common point does not control the path direction. To control the path direction, you also must position a text point that contains a 2 near the second vertex in the cutting path. In Figure </a><a href="#1032579" title="2"><font color="#0000ff"><u>2&#45;3</u></font></a>, the position of the 2 label causes the cutting path to go in the direction shown by the arrows.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 2&#45;3&nbsp; </strong></font></strong>
+        <strong><a name="1032579">Cutting Path Arrows</a></strong>
+      </p>
+      <p align="left"><a name="1033665"><font color="#000000"><strong><img src="images/chap2.05.1.4.png" alt=""><br></strong></font></a></p>
+      <p><a name="1032580">If you are creating output for a machine that requires the path to be offset by half the tooling diameter, the path you draw on NCROUTE_PATH subclass must be offset from the outline by that amount.</a></p>
+      <p><a name="1045666">You can use cutting paths of different widths. When you use different widths, you must define a text file called </a><font size="2" face="'Courier New'" color="#000000">ncroutebits.txt</font>, which correlates tooling widths with Excellon tool codes. If this file does not exist NC Route generates <font size="2" face="'Courier New'" color="#000000">ncroutebits_auto.txt.</font></p>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1045667">The existing </a><font size="2" face="'Courier New'" color="#000000">ncroutebits.txt </font>is not usable because it specifies the route bit sizes in NC Route output units. You need to create new <font size="2" face="'Courier New'" color="#000000">ncroutebits.txt</font> that specifies route bit sizes in design units.</p>
+      <h3><a name="1045668">Using the ncroutebits.txt text file</a></h3>
+      <p><a name="1045713">To specify varying widths for your cutting paths, you must generate a text file called </a><font size="2" face="'Courier New'" color="#000000">ncroutebits.txt</font>. This file cross&#45;references the router tool diameters to Excellon tool codes. Each line of the file contains one diameter followed by a space and a tool code. The two fields can appear anywhere on the line as long as at least one blank space separates them. The following is an example: </p>
+      <p><a name="1045714"><font color="#000000">25.0			T01</font></a></p>
+      <p><a name="1045715"><font color="#000000">50.0			T02</font></a></p>
+      <p><a name="1045695"><font color="#000000">75.0			T03</font></a></p>
+      <p><a name="1032611">The tool diameter is interpreted in design units.</a></p>
+      <p><a name="1032612">If you specify a cutting path at zero width, the layout editor assumes a tool code of T01. Likewise, if a path has a width, but it is not in the </a><font size="2" face="'Courier New'" color="#000000">ncroutebits.txt </font>file, a warning appears in the <font size="2" face="'Courier New'" color="#000000">ncroute.log</font> file and a tool code of T01 is assumed. </p>
+      <h3><a name="1032613">Using the ncroute.log File</a></h3>
+      <p><a name="1032614">An ASCII log file called </a><font size="2" face="'Courier New'" color="#000000">ncroute.log</font> is created along with the ASCII output file. This file contains the NC Parameters used, followed by status messages, including warnings and error messages that describe the program execution and outcome.</p>
+      <p><a name="1038388">&nbsp;</a></p>
+      <h2><a name="1034836">Generating NC Drill Files for Test Points</a></h2>
+      <p><a name="1034839">After you chose test points automatically or interactively, you can generate an NC Drill file for each side of the design probed by running the </a><font color="#000000"><em>Manufacture - Testprep - Create NC Drill Data </em></font>(<a href="../tcoms/tchap.html#testprep_ncdrill" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>testprep ncdrill </u></font></a>command).</p>
+      <p><a name="1034833">The NC Drill data for top side probes is stored in a file called </a><font size="2" face="'Courier New'" color="#000000">top_prob.drl</font>. The NC Drill data for bottom side probes is stored in a file called <font size="2" face="'Courier New'" color="#000000">bottom_p.drl</font>.</p>
+      <p><a name="1035678">&nbsp;</a></p>
+    </div>
+    <br>
+    <a href="#pagetop">Return to top of page</a>
+    <hr>
+    <hr align="left">
+    <div style="text-align: left;">
+      <!-- Begin Buttons -->
+      <table width="650" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+                    </td>
+<td height="20" width="73">
+<a href="algromanTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+          <td>
+            <a href="chap1.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+          </td>
+          <td>
+            <a href="chap6.html"><img src="images/nav_next.gif" alt="Next" border="0"></a>
+          </td>
+          <td>
+            <a>
+<a href="algroman.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+            </a>
+          </td>
+          <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+          </td>
+          <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+          </td>
+          <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+          </td>
+          <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+          </td>
+        </tr>
+      </table>
+      <!-- End Buttons -->
+    </div>
+    <br>
+    <font size="-1" >
+For support, see <a href="http://support.cadence.com" target="_blank">Cadence Online Support</a> service.</font>
+    <br>
+    <br>
+    <font size="-1" >
+<font size="-1"><i>Copyright &#169; 2016, <a href ="http://www.cadence.com">Cadence Design Systems, Inc.</a></i></font>
+    </font>
+    <br>
+    <font size="-1" >
+All rights reserved.</font>
+    <br>
+    <br>
+  </body>
+</html>

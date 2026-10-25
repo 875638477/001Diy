@@ -1,0 +1,4928 @@
+{
+  "2L": {
+    "scope": "READ_ONLY_LOCAL_CANDIDATE_NO_NATIVE",
+    "actualSourceDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\padentry_2L_b019_DRC_PENDING",
+    "inputHashes": {
+      "inventory\\checkpoints\\padentry_2L_b019_DRC_PENDING\\normalized.json": "7F0AE208BC6B379E4FB4E93E9E263BB49D1FECA3B1C9896A8BC463E8287F5A11",
+      "engineering_mcu\\plans\\GPIO_PB1_inward_2L_80_delta.json": "134A03B8338EFC38BF88945E6FDBF365222B85F07E92355982E125EDAAF38A8C"
+    },
+    "jointPB1Candidate": [
+      {
+        "type": "deleteSegment",
+        "id": "RIP80_GPIO_PB1_0",
+        "net": "GPIO_PB1",
+        "layer": "TOP",
+        "points": [
+          [
+            37.9,
+            26.95
+          ],
+          [
+            38.3,
+            27.35
+          ]
+        ],
+        "width": 0.16
+      },
+      {
+        "type": "deleteSegment",
+        "id": "RIP80_GPIO_PB1_1",
+        "net": "GPIO_PB1",
+        "layer": "TOP",
+        "points": [
+          [
+            37.4,
+            26.75
+          ],
+          [
+            37.9,
+            26.95
+          ]
+        ],
+        "width": 0.16
+      },
+      {
+        "type": "deleteSegment",
+        "id": "RIP80_GPIO_PB1_2",
+        "net": "GPIO_PB1",
+        "layer": "TOP",
+        "points": [
+          [
+            35.75,
+            26.75
+          ],
+          [
+            37.4,
+            26.75
+          ]
+        ],
+        "width": 0.16
+      },
+      {
+        "type": "deleteVia",
+        "id": "RIP80_GPIO_PB1_[38.3, 27.35]",
+        "net": "GPIO_PB1",
+        "xy": [
+          38.3,
+          27.35
+        ]
+      },
+      {
+        "type": "deleteVia",
+        "id": "RIP80_V3V3_[37, 24]",
+        "net": "V3V3",
+        "xy": [
+          37,
+          24
+        ]
+      },
+      {
+        "type": "deleteSegment",
+        "id": "RIP80_V3V3_5",
+        "net": "V3V3",
+        "layer": "BOTTOM",
+        "points": [
+          [
+            37,
+            25.7
+          ],
+          [
+            37,
+            24
+          ]
+        ],
+        "width": 0.6
+      },
+      {
+        "type": "deleteVia",
+        "id": "RIP80_GND_[35.8, 21.95]",
+        "net": "GND",
+        "xy": [
+          35.8,
+          21.95
+        ]
+      },
+      {
+        "type": "via",
+        "id": "ADD80_GND_[35.65, 22.1]",
+        "net": "GND",
+        "xy": [
+          35.65,
+          22.1
+        ],
+        "padstack": "HI_VIA026_C052_TENT",
+        "padDiameterMM": 0.52,
+        "drillDiameterMM": 0.26
+      },
+      {
+        "type": "deleteVia",
+        "id": "RIP80_GND_[37.4, 27.4]",
+        "net": "GND",
+        "xy": [
+          37.4,
+          27.4
+        ]
+      },
+      {
+        "type": "via",
+        "id": "PB10_RELOCATED_ORDINARY_RETURN_2L",
+        "net": "GND",
+        "xy": [
+          37.85,
+          27.82
+        ],
+        "padstack": "L28_VIA030_C060",
+        "padDiameterMM": 0.6,
+        "drillDiameterMM": 0.3
+      },
+      {
+        "type": "deleteSegment",
+        "id": "PB15_2L_VBUS_CLEAR_RIP_0",
+        "net": "VBUS_PRESENT_N",
+        "layer": "BOTTOM",
+        "width": 0.2,
+        "points": [
+          [
+            34.75,
+            23.15
+          ],
+          [
+            34.4,
+            22.8
+          ]
+        ]
+      },
+      {
+        "type": "deleteSegment",
+        "id": "PB15_2L_VBUS_CLEAR_RIP_1",
+        "net": "VBUS_PRESENT_N",
+        "layer": "BOTTOM",
+        "width": 0.2,
+        "points": [
+          [
+            34.4,
+            22.8
+          ],
+          [
+            34.4,
+            18.15
+          ]
+        ]
+      },
+      {
+        "type": "route",
+        "id": "PB15_2L_VBUS_FINITE_BYPASS",
+        "net": "VBUS_PRESENT_N",
+        "layer": "BOTTOM",
+        "width": 0.2,
+        "points": [
+          [
+            34.75,
+            23.15
+          ],
+          [
+            34.95,
+            22.95
+          ],
+          [
+            34.95,
+            19.45
+          ],
+          [
+            34.4,
+            18.9
+          ],
+          [
+            34.4,
+            18.15
+          ]
+        ],
+        "purpose": "Low-current DC VBUS sense shifts .55mm over finite y19.45..22.55 to permit a normal-clearance TOP/BOTTOM GPIO bridge between the existing TOP3V3 and BOTTOMsense corridors; source and receiver pins unchanged."
+      },
+      {
+        "type": "via",
+        "id": "ADD80_V3V3_[37.2, 24.3]",
+        "net": "V3V3",
+        "xy": [
+          37.2,
+          24.3
+        ],
+        "padstack": "L28_VIA030_C060",
+        "padDiameterMM": 0.6,
+        "drillDiameterMM": 0.3
+      },
+      {
+        "type": "via",
+        "id": "ADD80_GPIO_PB1_[41.9, 26.79]",
+        "net": "GPIO_PB1",
+        "xy": [
+          41.9,
+          26.79
+        ],
+        "padstack": "HI_VIA026_C052_TENT",
+        "padDiameterMM": 0.52,
+        "drillDiameterMM": 0.26
+      },
+      {
+        "type": "via",
+        "id": "ADD80_GPIO_PB1_[36.25, 21.35]",
+        "net": "GPIO_PB1",
+        "xy": [
+          36.25,
+          21.35
+        ],
+        "padstack": "HI_VIA026_C052_TENT",
+        "padDiameterMM": 0.52,
+        "drillDiameterMM": 0.26
+      },
+      {
+        "type": "via",
+        "id": "ADD80_GPIO_PB1_[34.2, 20.0]",
+        "net": "GPIO_PB1",
+        "xy": [
+          34.2,
+          20.0
+        ],
+        "padstack": "HI_VIA026_C052_TENT",
+        "padDiameterMM": 0.52,
+        "drillDiameterMM": 0.26
+      },
+      {
+        "type": "route",
+        "id": "ADD80_V3V3_BOTTOM_17",
+        "net": "V3V3",
+        "layer": "BOTTOM",
+        "points": [
+          [
+            37,
+            25.7
+          ],
+          [
+            37,
+            24.5
+          ],
+          [
+            37.2,
+            24.3
+          ]
+        ],
+        "width": 0.6
+      },
+      {
+        "type": "route",
+        "id": "ADD80_V3V3_TOP_18",
+        "net": "V3V3",
+        "layer": "TOP",
+        "points": [
+          [
+            37,
+            24
+          ],
+          [
+            37.2,
+            24.2
+          ],
+          [
+            37.2,
+            24.3
+          ]
+        ],
+        "width": 0.6
+      },
+      {
+        "type": "route",
+        "id": "ADD80_GPIO_PB1_TOP_19",
+        "net": "GPIO_PB1",
+        "layer": "TOP",
+        "points": [
+          [
+            35.75,
+            26.75
+          ],
+          [
+            37,
+            26.75
+          ]
+        ],
+        "width": 0.16
+      },
+      {
+        "type": "route",
+        "id": "ADD80_GPIO_PB1_TOP_20",
+        "net": "GPIO_PB1",
+        "layer": "TOP",
+        "points": [
+          [
+            37,
+            26.75
+          ],
+          [
+            37.35,
+            27.1
+          ],
+          [
+            38.3,
+            27.1
+          ],
+          [
+            38.81,
+            26.59
+          ],
+          [
+            41,
+            26.59
+          ],
+          [
+            41.2,
+            26.79
+          ],
+          [
+            41.9,
+            26.79
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "route",
+        "id": "ADD80_GPIO_PB1_BOTTOM_21",
+        "net": "GPIO_PB1",
+        "layer": "BOTTOM",
+        "points": [
+          [
+            41.9,
+            26.79
+          ],
+          [
+            40.8,
+            25.69
+          ],
+          [
+            40.8,
+            23.55
+          ],
+          [
+            36.7,
+            23.55
+          ],
+          [
+            36.7,
+            21.8
+          ],
+          [
+            36.25,
+            21.35
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "route",
+        "id": "ADD80_GPIO_PB1_TOP_22",
+        "net": "GPIO_PB1",
+        "layer": "TOP",
+        "points": [
+          [
+            36.25,
+            21.35
+          ],
+          [
+            35.55,
+            21.35
+          ],
+          [
+            34.2,
+            20
+          ]
+        ],
+        "width": 0.2
+      }
+    ],
+    "uniqueDeleteEvidence": [
+      {
+        "id": "RIP80_GPIO_PB1_0",
+        "matched": [
+          212
+        ],
+        "before": {
+          "kind": "line",
+          "net": "GPIO_PB1",
+          "layer": "ETCH/TOP",
+          "startEnd": [
+            [
+              37.9,
+              26.95
+            ],
+            [
+              38.3,
+              27.35
+            ]
+          ],
+          "width": 0.16,
+          "attributes": "(prop nil readOnly t bBox ((37.82 26.87) (38.38 27.43)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.16 startEnd ((37.9 26.95) (38.3 27.35)) parent dbid:000002DE9EF4D628 net dbid:000002DE9EE6DBA8 objType \"line\")",
+          "nativeProvenance": [
+            {
+              "net": "GPIO_PB1",
+              "layer": "ETCH/TOP",
+              "startEnd": [
+                [
+                  37.9,
+                  26.95
+                ],
+                [
+                  38.3,
+                  27.35
+                ]
+              ],
+              "width": 0.16,
+              "isEtch": true,
+              "thermal": false,
+              "lineThermal": false,
+              "parentThermal": false,
+              "parentType": "path",
+              "parentAttributes": [
+                "prop",
+                null,
+                "bBox",
+                [
+                  [
+                    35.67,
+                    26.67
+                  ],
+                  [
+                    38.38,
+                    27.43
+                  ]
+                ],
+                "readOnly",
+                true,
+                "net",
+                "dbid:000002DE9EE6DBA8",
+                "segments",
+                [
+                  "dbid:000002DE9EF4D6A8",
+                  "dbid:000002DE9EF4D6F8",
+                  "dbid:000002DE9EF4D748"
+                ],
+                "isEtch",
+                true,
+                "nSegs",
+                3.0,
+                "hasArcs",
+                null,
+                "isSameWidth",
+                true,
+                "branch",
+                "dbid:000002DE9EEC2FE0",
+                "parentGroups",
+                null,
+                "objType",
+                "path",
+                "thermal",
+                null,
+                "layer",
+                "ETCH/TOP",
+                "symbolEtch",
+                null,
+                "parent",
+                "dbid:000002DE9EEC2FE0"
+              ],
+              "grandparentType": "branch"
+            }
+          ],
+          "generatedThermal": false,
+          "fixedManualCline": true
+        }
+      },
+      {
+        "id": "RIP80_GPIO_PB1_1",
+        "matched": [
+          212
+        ],
+        "before": {
+          "kind": "line",
+          "net": "GPIO_PB1",
+          "layer": "ETCH/TOP",
+          "startEnd": [
+            [
+              37.4,
+              26.75
+            ],
+            [
+              37.9,
+              26.95
+            ]
+          ],
+          "width": 0.16,
+          "attributes": "(prop nil readOnly t bBox ((37.32 26.67) (37.98 27.03)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.16 startEnd ((37.4 26.75) (37.9 26.95)) parent dbid:000002DE9EF4D628 net dbid:000002DE9EE6DBA8 objType \"line\")",
+          "nativeProvenance": [
+            {
+              "net": "GPIO_PB1",
+              "layer": "ETCH/TOP",
+              "startEnd": [
+                [
+                  37.4,
+                  26.75
+                ],
+                [
+                  37.9,
+                  26.95
+                ]
+              ],
+              "width": 0.16,
+              "isEtch": true,
+              "thermal": false,
+              "lineThermal": false,
+              "parentThermal": false,
+              "parentType": "path",
+              "parentAttributes": [
+                "prop",
+                null,
+                "bBox",
+                [
+                  [
+                    35.67,
+                    26.67
+                  ],
+                  [
+                    38.38,
+                    27.43
+                  ]
+                ],
+                "readOnly",
+                true,
+                "net",
+                "dbid:000002DE9EE6DBA8",
+                "segments",
+                [
+                  "dbid:000002DE9EF4D6A8",
+                  "dbid:000002DE9EF4D6F8",
+                  "dbid:000002DE9EF4D748"
+                ],
+                "isEtch",
+                true,
+                "nSegs",
+                3.0,
+                "hasArcs",
+                null,
+                "isSameWidth",
+                true,
+                "branch",
+                "dbid:000002DE9EEC2FE0",
+                "parentGroups",
+                null,
+                "objType",
+                "path",
+                "thermal",
+                null,
+                "layer",
+                "ETCH/TOP",
+                "symbolEtch",
+                null,
+                "parent",
+                "dbid:000002DE9EEC2FE0"
+              ],
+              "grandparentType": "branch"
+            }
+          ],
+          "generatedThermal": false,
+          "fixedManualCline": true
+        }
+      },
+      {
+        "id": "RIP80_GPIO_PB1_2",
+        "matched": [
+          212
+        ],
+        "before": {
+          "kind": "line",
+          "net": "GPIO_PB1",
+          "layer": "ETCH/TOP",
+          "startEnd": [
+            [
+              35.75,
+              26.75
+            ],
+            [
+              37.4,
+              26.75
+            ]
+          ],
+          "width": 0.16,
+          "attributes": "(prop nil readOnly t bBox ((35.67 26.67) (37.48 26.83)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.16 startEnd ((35.75 26.75) (37.4 26.75)) parent dbid:000002DE9EF4D628 net dbid:000002DE9EE6DBA8 objType \"line\")",
+          "nativeProvenance": [
+            {
+              "net": "GPIO_PB1",
+              "layer": "ETCH/TOP",
+              "startEnd": [
+                [
+                  35.75,
+                  26.75
+                ],
+                [
+                  37.4,
+                  26.75
+                ]
+              ],
+              "width": 0.16,
+              "isEtch": true,
+              "thermal": false,
+              "lineThermal": false,
+              "parentThermal": false,
+              "parentType": "path",
+              "parentAttributes": [
+                "prop",
+                null,
+                "bBox",
+                [
+                  [
+                    35.67,
+                    26.67
+                  ],
+                  [
+                    38.38,
+                    27.43
+                  ]
+                ],
+                "readOnly",
+                true,
+                "net",
+                "dbid:000002DE9EE6DBA8",
+                "segments",
+                [
+                  "dbid:000002DE9EF4D6A8",
+                  "dbid:000002DE9EF4D6F8",
+                  "dbid:000002DE9EF4D748"
+                ],
+                "isEtch",
+                true,
+                "nSegs",
+                3.0,
+                "hasArcs",
+                null,
+                "isSameWidth",
+                true,
+                "branch",
+                "dbid:000002DE9EEC2FE0",
+                "parentGroups",
+                null,
+                "objType",
+                "path",
+                "thermal",
+                null,
+                "layer",
+                "ETCH/TOP",
+                "symbolEtch",
+                null,
+                "parent",
+                "dbid:000002DE9EEC2FE0"
+              ],
+              "grandparentType": "branch"
+            }
+          ],
+          "generatedThermal": false,
+          "fixedManualCline": true
+        }
+      },
+      {
+        "id": "RIP80_GPIO_PB1_[38.3, 27.35]",
+        "matched": [
+          31
+        ],
+        "before": {
+          "padstack": "HI_VIA026_C052_TENT",
+          "xy": [
+            38.3,
+            27.35
+          ],
+          "net": "GPIO_PB1",
+          "usage": "Through_via",
+          "drill": 0.26,
+          "pads": [
+            {
+              "layer": "ETCH/TOP",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.26,
+                  -0.26
+                ],
+                [
+                  0.26,
+                  0.26
+                ]
+              ]
+            },
+            {
+              "layer": "ETCH/BOTTOM",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.26,
+                  -0.26
+                ],
+                [
+                  0.26,
+                  0.26
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "RIP80_V3V3_[37, 24]",
+        "matched": [
+          120
+        ],
+        "before": {
+          "padstack": "L28_VIA030_C060",
+          "xy": [
+            37.0,
+            24.0
+          ],
+          "net": "V3V3",
+          "usage": "Through_via",
+          "drill": 0.3,
+          "pads": [
+            {
+              "layer": "ETCH/TOP",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.3,
+                  -0.3
+                ],
+                [
+                  0.3,
+                  0.3
+                ]
+              ]
+            },
+            {
+              "layer": "ETCH/BOTTOM",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.3,
+                  -0.3
+                ],
+                [
+                  0.3,
+                  0.3
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "RIP80_V3V3_5",
+        "matched": [
+          549
+        ],
+        "before": {
+          "kind": "line",
+          "net": "V3V3",
+          "layer": "ETCH/BOTTOM",
+          "startEnd": [
+            [
+              37.0,
+              25.7
+            ],
+            [
+              37.0,
+              24.0
+            ]
+          ],
+          "width": 0.6,
+          "attributes": "(prop nil readOnly t bBox ((36.7 23.7) (37.3 26.0)) isEtch t font nil lineType vertical layer \"ETCH/BOTTOM\" width 0.6 startEnd ((37.0 25.7) (37.0 24.0)) parent dbid:000002DE9EF337D8 net dbid:000002DE9EE6D798 objType \"line\")",
+          "nativeProvenance": [
+            {
+              "net": "V3V3",
+              "layer": "ETCH/BOTTOM",
+              "startEnd": [
+                [
+                  37.0,
+                  25.7
+                ],
+                [
+                  37.0,
+                  24.0
+                ]
+              ],
+              "width": 0.6,
+              "isEtch": true,
+              "thermal": false,
+              "lineThermal": false,
+              "parentThermal": false,
+              "parentType": "path",
+              "parentAttributes": [
+                "prop",
+                null,
+                "bBox",
+                [
+                  [
+                    30.4,
+                    23.7
+                  ],
+                  [
+                    37.3,
+                    32.3
+                  ]
+                ],
+                "readOnly",
+                true,
+                "net",
+                "dbid:000002DE9EE6D798",
+                "segments",
+                [
+                  "dbid:000002DE9EF33858",
+                  "dbid:000002DE9EF338A8"
+                ],
+                "isEtch",
+                true,
+                "nSegs",
+                2.0,
+                "hasArcs",
+                null,
+                "isSameWidth",
+                true,
+                "branch",
+                "dbid:000002DE9EF337B0",
+                "parentGroups",
+                null,
+                "objType",
+                "path",
+                "thermal",
+                null,
+                "layer",
+                "ETCH/BOTTOM",
+                "symbolEtch",
+                null,
+                "parent",
+                "dbid:000002DE9EF337B0"
+              ],
+              "grandparentType": "branch"
+            }
+          ],
+          "generatedThermal": false,
+          "fixedManualCline": true
+        }
+      },
+      {
+        "id": "RIP80_GND_[35.8, 21.95]",
+        "matched": [
+          88
+        ],
+        "before": {
+          "padstack": "HI_VIA026_C052_TENT",
+          "xy": [
+            35.8,
+            21.95
+          ],
+          "net": "GND",
+          "usage": "Through_via",
+          "drill": 0.26,
+          "pads": [
+            {
+              "layer": "ETCH/TOP",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.26,
+                  -0.26
+                ],
+                [
+                  0.26,
+                  0.26
+                ]
+              ]
+            },
+            {
+              "layer": "ETCH/BOTTOM",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.26,
+                  -0.26
+                ],
+                [
+                  0.26,
+                  0.26
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "RIP80_GND_[37.4, 27.4]",
+        "matched": [
+          55
+        ],
+        "before": {
+          "padstack": "L28_VIA030_C060",
+          "xy": [
+            37.4,
+            27.4
+          ],
+          "net": "GND",
+          "usage": "Through_via",
+          "drill": 0.3,
+          "pads": [
+            {
+              "layer": "ETCH/TOP",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.3,
+                  -0.3
+                ],
+                [
+                  0.3,
+                  0.3
+                ]
+              ]
+            },
+            {
+              "layer": "ETCH/BOTTOM",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.3,
+                  -0.3
+                ],
+                [
+                  0.3,
+                  0.3
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "PB15_2L_VBUS_CLEAR_RIP_0",
+        "matched": [
+          658
+        ],
+        "before": {
+          "kind": "line",
+          "net": "VBUS_PRESENT_N",
+          "layer": "ETCH/BOTTOM",
+          "startEnd": [
+            [
+              34.75,
+              23.15
+            ],
+            [
+              34.4,
+              22.8
+            ]
+          ],
+          "width": 0.2,
+          "attributes": "(prop nil readOnly t bBox ((34.3 22.7) (34.85 23.25)) isEtch t font nil lineType odd layer \"ETCH/BOTTOM\" width 0.2 startEnd ((34.75 23.15) (34.4 22.8)) parent dbid:000002DE9EF59F90 net dbid:000002DE9EE6D4C0 objType \"line\")",
+          "nativeProvenance": [
+            {
+              "net": "VBUS_PRESENT_N",
+              "layer": "ETCH/BOTTOM",
+              "startEnd": [
+                [
+                  34.75,
+                  23.15
+                ],
+                [
+                  34.4,
+                  22.8
+                ]
+              ],
+              "width": 0.2,
+              "isEtch": true,
+              "thermal": false,
+              "lineThermal": false,
+              "parentThermal": false,
+              "parentType": "path",
+              "parentAttributes": [
+                "prop",
+                null,
+                "bBox",
+                [
+                  [
+                    34.3,
+                    2.95
+                  ],
+                  [
+                    51.25,
+                    26.95
+                  ]
+                ],
+                "readOnly",
+                true,
+                "net",
+                "dbid:000002DE9EE6D4C0",
+                "segments",
+                [
+                  "dbid:000002DE9EF5A010",
+                  "dbid:000002DE9EF5A060",
+                  "dbid:000002DE9EF5A0B0",
+                  "dbid:000002DE9EF5A100",
+                  "dbid:000002DE9EF5A150",
+                  "dbid:000002DE9EF5A1A0",
+                  "dbid:000002DE9EF5A1F0",
+                  "dbid:000002DE9EF5A240",
+                  "dbid:000002DE9EF5A290",
+                  "dbid:000002DE9EF5A2E0",
+                  "dbid:000002DE9EF5A330",
+                  "dbid:000002DE9EF5A380",
+                  "dbid:000002DE9EF5A3D0",
+                  "dbid:000002DE9EF5A420",
+                  "dbid:000002DE9EF5A470",
+                  "dbid:000002DE9EF5A4C0"
+                ],
+                "isEtch",
+                true,
+                "nSegs",
+                16.0,
+                "hasArcs",
+                null,
+                "isSameWidth",
+                true,
+                "branch",
+                "dbid:000002DE9EEC30A8",
+                "parentGroups",
+                null,
+                "objType",
+                "path",
+                "thermal",
+                null,
+                "layer",
+                "ETCH/BOTTOM",
+                "symbolEtch",
+                null,
+                "parent",
+                "dbid:000002DE9EEC30A8"
+              ],
+              "grandparentType": "branch"
+            }
+          ],
+          "generatedThermal": false,
+          "fixedManualCline": true
+        }
+      },
+      {
+        "id": "PB15_2L_VBUS_CLEAR_RIP_1",
+        "matched": [
+          657
+        ],
+        "before": {
+          "kind": "line",
+          "net": "VBUS_PRESENT_N",
+          "layer": "ETCH/BOTTOM",
+          "startEnd": [
+            [
+              34.4,
+              22.8
+            ],
+            [
+              34.4,
+              18.15
+            ]
+          ],
+          "width": 0.2,
+          "attributes": "(prop nil readOnly t bBox ((34.3 18.05) (34.5 22.9)) isEtch t font nil lineType vertical layer \"ETCH/BOTTOM\" width 0.2 startEnd ((34.4 22.8) (34.4 18.15)) parent dbid:000002DE9EF59F90 net dbid:000002DE9EE6D4C0 objType \"line\")",
+          "nativeProvenance": [
+            {
+              "net": "VBUS_PRESENT_N",
+              "layer": "ETCH/BOTTOM",
+              "startEnd": [
+                [
+                  34.4,
+                  22.8
+                ],
+                [
+                  34.4,
+                  18.15
+                ]
+              ],
+              "width": 0.2,
+              "isEtch": true,
+              "thermal": false,
+              "lineThermal": false,
+              "parentThermal": false,
+              "parentType": "path",
+              "parentAttributes": [
+                "prop",
+                null,
+                "bBox",
+                [
+                  [
+                    34.3,
+                    2.95
+                  ],
+                  [
+                    51.25,
+                    26.95
+                  ]
+                ],
+                "readOnly",
+                true,
+                "net",
+                "dbid:000002DE9EE6D4C0",
+                "segments",
+                [
+                  "dbid:000002DE9EF5A010",
+                  "dbid:000002DE9EF5A060",
+                  "dbid:000002DE9EF5A0B0",
+                  "dbid:000002DE9EF5A100",
+                  "dbid:000002DE9EF5A150",
+                  "dbid:000002DE9EF5A1A0",
+                  "dbid:000002DE9EF5A1F0",
+                  "dbid:000002DE9EF5A240",
+                  "dbid:000002DE9EF5A290",
+                  "dbid:000002DE9EF5A2E0",
+                  "dbid:000002DE9EF5A330",
+                  "dbid:000002DE9EF5A380",
+                  "dbid:000002DE9EF5A3D0",
+                  "dbid:000002DE9EF5A420",
+                  "dbid:000002DE9EF5A470",
+                  "dbid:000002DE9EF5A4C0"
+                ],
+                "isEtch",
+                true,
+                "nSegs",
+                16.0,
+                "hasArcs",
+                null,
+                "isSameWidth",
+                true,
+                "branch",
+                "dbid:000002DE9EEC30A8",
+                "parentGroups",
+                null,
+                "objType",
+                "path",
+                "thermal",
+                null,
+                "layer",
+                "ETCH/BOTTOM",
+                "symbolEtch",
+                null,
+                "parent",
+                "dbid:000002DE9EEC30A8"
+              ],
+              "grandparentType": "branch"
+            }
+          ],
+          "generatedThermal": false,
+          "fixedManualCline": true
+        }
+      }
+    ],
+    "initialCandidateResults": [
+      {
+        "operation": {
+          "type": "route",
+          "id": "PB10_NW_BOTTOM_01",
+          "net": "GPIO_PB10",
+          "layer": "BOTTOM",
+          "points": [
+            [
+              38,
+              26.3
+            ],
+            [
+              31.3,
+              33
+            ]
+          ],
+          "width": 0.2
+        },
+        "audit": {
+          "baseFieldIssues": [
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.7,
+                31.999999999999996,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.016780677
+            }
+          ],
+          "nearest": [
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.7,
+                31.999999999999996,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.016780677
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                31.7,
+                31.3,
+                32.599999999999994
+              ],
+              "gapMM": 0.307106781,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.007106781,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.362445502,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.062445502,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GND",
+              "kind": "via",
+              "source": "PB10_RELOCATED_ORDINARY_RETURN_2L:[37.85, 27.82]",
+              "bbox": [
+                37.550000000000004,
+                27.52,
+                38.15,
+                28.12
+              ],
+              "gapMM": 0.56873629,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.26873629,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GND",
+              "kind": "via",
+              "source": "native_via:[38.0, 25.27]",
+              "bbox": [
+                37.7,
+                24.97,
+                38.3,
+                25.57
+              ],
+              "gapMM": 0.63,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.33,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.7, 32.0]",
+              "bbox": [
+                30.4,
+                31.7,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.73137085,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.43137085,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                25.4,
+                37.3,
+                32.3
+              ],
+              "gapMM": 0.73137085,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.43137085,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                36.7,
+                24.2,
+                37.3,
+                26.0
+              ],
+              "gapMM": 0.73137085,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.43137085,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.4, 33.7]",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                30.7,
+                34.0
+              ],
+              "gapMM": 0.74017625,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.44017625,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GPIO_PA3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                32.65,
+                33.05,
+                34.2,
+                33.25
+              ],
+              "gapMM": 0.93137085,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.73137085,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "pairComparisons": 428,
+          "pathClearIncludingFiniteRegions": false
+        }
+      },
+      {
+        "operation": {
+          "type": "via",
+          "id": "PB10_NW_PORT_VIA_01",
+          "net": "GPIO_PB10",
+          "xy": [
+            31.3,
+            33
+          ],
+          "padstack": "L28_VIA030_C060",
+          "padDiameterMM": 0.6,
+          "drillDiameterMM": 0.3
+        },
+        "layer": "TOP",
+        "audit": {
+          "baseFieldIssues": [
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.84,
+                32.699999999999996,
+                31.323600000000003,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.2,
+              "overlapAreaMM2": 0.0417196
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                31.1236,
+                32.1,
+                31.9236,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.2,
+              "overlapAreaMM2": 0.040586674
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.401600000000002,
+                34.0
+              ],
+              "gapMM": 0.127945718,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.172054282,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "smdpin",
+              "source": "R25.1",
+              "bbox": [
+                30.6316,
+                33.2935,
+                31.5716,
+                34.1065
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.16,
+              "marginMM": -0.16,
+              "overlapAreaMM2": 0.000538999
+            }
+          ],
+          "nearest": [
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.84,
+                32.699999999999996,
+                31.323600000000003,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.2,
+              "overlapAreaMM2": 0.0417196
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                31.1236,
+                32.1,
+                31.9236,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.2,
+              "overlapAreaMM2": 0.040586674
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.401600000000002,
+                34.0
+              ],
+              "gapMM": 0.127945718,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.172054282,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "smdpin",
+              "source": "R25.1",
+              "bbox": [
+                30.6316,
+                33.2935,
+                31.5716,
+                34.1065
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.16,
+              "marginMM": -0.16,
+              "overlapAreaMM2": 0.000538999
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "smdpin",
+              "source": "R23.2",
+              "bbox": [
+                31.3536,
+                31.6935,
+                32.2936,
+                32.5065
+              ],
+              "gapMM": 0.196404201,
+              "requiredBaseMM": 0.16,
+              "marginMM": 0.036404201,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                31.55,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.567065007,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.267065007,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                31.723599999999998,
+                32.0,
+                31.9236,
+                32.300000000000004
+              ],
+              "gapMM": 0.556250423,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.356250423,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.4, 33.7]",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                30.7,
+                34.0
+              ],
+              "gapMM": 0.540177121,
+              "requiredBaseMM": 0.16,
+              "marginMM": 0.380177121,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.5,
+                30.65,
+                31.0,
+                32.15
+              ],
+              "gapMM": 0.697135541,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.397135541,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.7, 32.0]",
+              "bbox": [
+                30.4,
+                31.7,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.566190509,
+              "requiredBaseMM": 0.16,
+              "marginMM": 0.406190509,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "pairComparisons": 1026
+        }
+      },
+      {
+        "operation": {
+          "type": "via",
+          "id": "PB10_NW_PORT_VIA_01",
+          "net": "GPIO_PB10",
+          "xy": [
+            31.3,
+            33
+          ],
+          "padstack": "L28_VIA030_C060",
+          "padDiameterMM": 0.6,
+          "drillDiameterMM": 0.3
+        },
+        "layer": "BOTTOM",
+        "audit": {
+          "baseFieldIssues": [
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.7,
+                31.999999999999996,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.141368121
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.162445502,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.137554498,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                31.7,
+                31.3,
+                32.599999999999994
+              ],
+              "gapMM": 0.162445502,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.137554498,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "nearest": [
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.7,
+                31.999999999999996,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.141368121
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.162445502,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.137554498,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                31.7,
+                31.3,
+                32.599999999999994
+              ],
+              "gapMM": 0.162445502,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.137554498,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                25.4,
+                37.3,
+                32.3
+              ],
+              "gapMM": 0.567065007,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.267065007,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.4, 33.7]",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                30.7,
+                34.0
+              ],
+              "gapMM": 0.540177121,
+              "requiredBaseMM": 0.16,
+              "marginMM": 0.380177121,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.7, 32.0]",
+              "bbox": [
+                30.4,
+                31.7,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.566190509,
+              "requiredBaseMM": 0.16,
+              "marginMM": 0.406190509,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GPIO_PA3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                15.55,
+                33.05,
+                32.85,
+                50.35
+              ],
+              "gapMM": 0.73137085,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.53137085,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GPIO_PA3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                32.65,
+                33.05,
+                34.2,
+                33.25
+              ],
+              "gapMM": 1.057894621,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.857894621,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "via",
+              "source": "native_via:[29.6, 32.46]",
+              "bbox": [
+                29.3,
+                32.160000000000004,
+                29.900000000000002,
+                32.76
+              ],
+              "gapMM": 1.18370428,
+              "requiredBaseMM": 0.16,
+              "marginMM": 1.02370428,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GPIO_PA2",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                17.45,
+                33.5,
+                33.1,
+                49.15
+              ],
+              "gapMM": 1.226345597,
+              "requiredBaseMM": 0.2,
+              "marginMM": 1.026345597,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "pairComparisons": 428
+        }
+      },
+      {
+        "operation": {
+          "type": "route",
+          "id": "PB10_NW_TOP_01",
+          "net": "GPIO_PB10",
+          "layer": "TOP",
+          "points": [
+            [
+              31.3,
+              33
+            ],
+            [
+              30.5,
+              33.8
+            ],
+            [
+              29.5,
+              33.8
+            ]
+          ],
+          "width": 0.2
+        },
+        "audit": {
+          "baseFieldIssues": [
+            {
+              "net": "V3V3",
+              "kind": "smdpin",
+              "source": "R25.1",
+              "bbox": [
+                30.6316,
+                33.2935,
+                31.5716,
+                34.1065
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.106037733
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.4, 33.7]",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                30.7,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.126177421
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.401600000000002,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.187983149
+            },
+            {
+              "net": "ADC_IN",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                26.169999999999998,
+                33.9,
+                29.400000000000002,
+                34.1
+              ],
+              "gapMM": 0.082842712,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.217157288,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "ADC_IN",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.2,
+                33.9,
+                30.900000000000002,
+                35.6
+              ],
+              "gapMM": 0.082842712,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.217157288,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.84,
+                32.699999999999996,
+                31.323600000000003,
+                32.9
+              ],
+              "gapMM": 0.014321187,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.185678813,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                31.1236,
+                32.1,
+                31.9236,
+                32.9
+              ],
+              "gapMM": 0.014321187,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.185678813,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "nearest": [
+            {
+              "net": "V3V3",
+              "kind": "smdpin",
+              "source": "R25.1",
+              "bbox": [
+                30.6316,
+                33.2935,
+                31.5716,
+                34.1065
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.106037733
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.4, 33.7]",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                30.7,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.126177421
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.401600000000002,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.187983149
+            },
+            {
+              "net": "ADC_IN",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                26.169999999999998,
+                33.9,
+                29.400000000000002,
+                34.1
+              ],
+              "gapMM": 0.082842712,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.217157288,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "ADC_IN",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.2,
+                33.9,
+                30.900000000000002,
+                35.6
+              ],
+              "gapMM": 0.082842712,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.217157288,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.84,
+                32.699999999999996,
+                31.323600000000003,
+                32.9
+              ],
+              "gapMM": 0.014321187,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.185678813,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                31.1236,
+                32.1,
+                31.9236,
+                32.9
+              ],
+              "gapMM": 0.014321187,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.185678813,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GND",
+              "kind": "via",
+              "source": "native_via:[29.0, 33.2]",
+              "bbox": [
+                28.7,
+                32.900000000000006,
+                29.3,
+                33.5
+              ],
+              "gapMM": 0.381031755,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.081031755,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "smdpin",
+              "source": "R23.2",
+              "bbox": [
+                31.3536,
+                31.6935,
+                32.2936,
+                32.5065
+              ],
+              "gapMM": 0.396402586,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.196402586,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.7, 32.0]",
+              "bbox": [
+                30.4,
+                31.7,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.766190443,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.466190443,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "pairComparisons": 1026,
+          "pathClearIncludingFiniteRegions": false
+        }
+      },
+      {
+        "operation": {
+          "type": "via",
+          "id": "PB10_NW_RETURN_01",
+          "net": "GND",
+          "xy": [
+            30.2,
+            32.9
+          ],
+          "padstack": "L28_VIA030_C060",
+          "padDiameterMM": 0.6,
+          "drillDiameterMM": 0.3
+        },
+        "layer": "TOP",
+        "audit": {
+          "baseFieldIssues": [
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.5,
+                32.36,
+                30.040000000000003,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.018961308
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.84,
+                32.699999999999996,
+                31.323600000000003,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.110277554
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.401600000000002,
+                34.0
+              ],
+              "gapMM": 0.225510713,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.074489287,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "via",
+              "source": "native_via:[29.6, 32.46]",
+              "bbox": [
+                29.3,
+                32.160000000000004,
+                29.900000000000002,
+                32.76
+              ],
+              "gapMM": 0.144054096,
+              "requiredBaseMM": 0.16,
+              "marginMM": -0.015945904,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "nearest": [
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.5,
+                32.36,
+                30.040000000000003,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.018961308
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.84,
+                32.699999999999996,
+                31.323600000000003,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.110277554
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.401600000000002,
+                34.0
+              ],
+              "gapMM": 0.225510713,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.074489287,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "via",
+              "source": "native_via:[29.6, 32.46]",
+              "bbox": [
+                29.3,
+                32.160000000000004,
+                29.900000000000002,
+                32.76
+              ],
+              "gapMM": 0.144054096,
+              "requiredBaseMM": 0.16,
+              "marginMM": -0.015945904,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.4, 33.7]",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                30.7,
+                34.0
+              ],
+              "gapMM": 0.224621356,
+              "requiredBaseMM": 0.16,
+              "marginMM": 0.064621356,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "smdpin",
+              "source": "R25.1",
+              "bbox": [
+                30.6316,
+                33.2935,
+                31.5716,
+                34.1065
+              ],
+              "gapMM": 0.284058158,
+              "requiredBaseMM": 0.16,
+              "marginMM": 0.124058158,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                31.55,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.429840755,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.129840755,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.5,
+                30.65,
+                31.0,
+                32.15
+              ],
+              "gapMM": 0.563121232,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.263121232,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.7, 32.0]",
+              "bbox": [
+                30.4,
+                31.7,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.429571855,
+              "requiredBaseMM": 0.16,
+              "marginMM": 0.269571855,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                31.1236,
+                32.1,
+                31.9236,
+                32.9
+              ],
+              "gapMM": 0.628675509,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.328675509,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "pairComparisons": 797
+        }
+      },
+      {
+        "operation": {
+          "type": "via",
+          "id": "PB10_NW_RETURN_01",
+          "net": "GND",
+          "xy": [
+            30.2,
+            32.9
+          ],
+          "padstack": "L28_VIA030_C060",
+          "padDiameterMM": 0.6,
+          "drillDiameterMM": 0.3
+        },
+        "layer": "BOTTOM",
+        "audit": {
+          "baseFieldIssues": [
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.7,
+                31.999999999999996,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.2,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.1,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.225510713,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.074489287,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "via",
+              "source": "native_via:[29.6, 32.46]",
+              "bbox": [
+                29.3,
+                32.160000000000004,
+                29.900000000000002,
+                32.76
+              ],
+              "gapMM": 0.144054096,
+              "requiredBaseMM": 0.16,
+              "marginMM": -0.015945904,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "nearest": [
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.7,
+                31.999999999999996,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.2,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.1,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.225510713,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.074489287,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "via",
+              "source": "native_via:[29.6, 32.46]",
+              "bbox": [
+                29.3,
+                32.160000000000004,
+                29.900000000000002,
+                32.76
+              ],
+              "gapMM": 0.144054096,
+              "requiredBaseMM": 0.16,
+              "marginMM": -0.015945904,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.34,
+                32.199999999999996,
+                29.700000000000003,
+                32.56
+              ],
+              "gapMM": 0.344049126,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.044049126,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.4, 33.7]",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                30.7,
+                34.0
+              ],
+              "gapMM": 0.224621356,
+              "requiredBaseMM": 0.16,
+              "marginMM": 0.064621356,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                31.7,
+                31.3,
+                32.599999999999994
+              ],
+              "gapMM": 0.389949494,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.089949494,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                25.4,
+                37.3,
+                32.3
+              ],
+              "gapMM": 0.429840755,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.129840755,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                20.299999999999997,
+                32.199999999999996,
+                29.540000000000003,
+                32.4
+              ],
+              "gapMM": 0.568387515,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.268387515,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.7, 32.0]",
+              "bbox": [
+                30.4,
+                31.7,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.429571855,
+              "requiredBaseMM": 0.16,
+              "marginMM": 0.269571855,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GPIO_PA3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                15.55,
+                33.05,
+                32.85,
+                50.35
+              ],
+              "gapMM": 1.579898987,
+              "requiredBaseMM": 0.3,
+              "marginMM": 1.279898987,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "pairComparisons": 325
+        }
+      }
+    ],
+    "clearStockViaCentersOnNWLine": [
+      [
+        38.0,
+        26.3
+      ],
+      [
+        37.95,
+        26.35
+      ],
+      [
+        37.9,
+        26.4
+      ],
+      [
+        37.85,
+        26.45
+      ],
+      [
+        37.8,
+        26.5
+      ],
+      [
+        36.85,
+        27.45
+      ],
+      [
+        36.8,
+        27.5
+      ]
+    ]
+  },
+  "4L": {
+    "scope": "READ_ONLY_LOCAL_CANDIDATE_NO_NATIVE",
+    "actualSourceDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\padentry_4L_b019_DRC_PENDING",
+    "inputHashes": {
+      "inventory\\checkpoints\\padentry_4L_b019_DRC_PENDING\\normalized.json": "5C8DD51F7D7F5F3E5E0B7CD7A64D76690631A7D6E28856FF9223E8CD909A673F",
+      "engineering_mcu\\plans\\GPIO_PB1_inward_4L_80_delta.json": "8157A04A0D6F02260F3F9A6BA4B6C3F5B6B423D8086B714DAA5DD8FE8609E20A"
+    },
+    "jointPB1Candidate": [
+      {
+        "type": "deleteSegment",
+        "id": "RIP80_GPIO_PB1_0",
+        "net": "GPIO_PB1",
+        "layer": "TOP",
+        "points": [
+          [
+            37.9,
+            26.95
+          ],
+          [
+            38.3,
+            27.35
+          ]
+        ],
+        "width": 0.16
+      },
+      {
+        "type": "deleteSegment",
+        "id": "RIP80_GPIO_PB1_1",
+        "net": "GPIO_PB1",
+        "layer": "TOP",
+        "points": [
+          [
+            37.4,
+            26.75
+          ],
+          [
+            37.9,
+            26.95
+          ]
+        ],
+        "width": 0.16
+      },
+      {
+        "type": "deleteSegment",
+        "id": "RIP80_GPIO_PB1_2",
+        "net": "GPIO_PB1",
+        "layer": "TOP",
+        "points": [
+          [
+            35.75,
+            26.75
+          ],
+          [
+            37.4,
+            26.75
+          ]
+        ],
+        "width": 0.16
+      },
+      {
+        "type": "deleteVia",
+        "id": "RIP80_GPIO_PB1_[38.3, 27.35]",
+        "net": "GPIO_PB1",
+        "xy": [
+          38.3,
+          27.35
+        ]
+      },
+      {
+        "type": "deleteVia",
+        "id": "RIP80_V3V3_[37, 24]",
+        "net": "V3V3",
+        "xy": [
+          37,
+          24
+        ]
+      },
+      {
+        "type": "deleteSegment",
+        "id": "RIP80_V3V3_5",
+        "net": "V3V3",
+        "layer": "BOTTOM",
+        "points": [
+          [
+            37,
+            25.7
+          ],
+          [
+            37,
+            24
+          ]
+        ],
+        "width": 0.6
+      },
+      {
+        "type": "deleteVia",
+        "id": "RIP80_GND_[35.8, 21.95]",
+        "net": "GND",
+        "xy": [
+          35.8,
+          21.95
+        ]
+      },
+      {
+        "type": "via",
+        "id": "ADD80_GND_[35.65, 22.1]",
+        "net": "GND",
+        "xy": [
+          35.65,
+          22.1
+        ],
+        "padstack": "HI_VIA026_C052_TENT",
+        "padDiameterMM": 0.52,
+        "drillDiameterMM": 0.26
+      },
+      {
+        "type": "via",
+        "id": "ADD80_V3V3_[37.2, 24.3]",
+        "net": "V3V3",
+        "xy": [
+          37.2,
+          24.3
+        ],
+        "padstack": "L28_VIA030_C060",
+        "padDiameterMM": 0.6,
+        "drillDiameterMM": 0.3
+      },
+      {
+        "type": "via",
+        "id": "ADD80_GPIO_PB1_[41.9, 26.79]",
+        "net": "GPIO_PB1",
+        "xy": [
+          41.9,
+          26.79
+        ],
+        "padstack": "HI_VIA026_C052_TENT",
+        "padDiameterMM": 0.52,
+        "drillDiameterMM": 0.26
+      },
+      {
+        "type": "via",
+        "id": "ADD80_GPIO_PB1_[36.25, 21.35]",
+        "net": "GPIO_PB1",
+        "xy": [
+          36.25,
+          21.35
+        ],
+        "padstack": "HI_VIA026_C052_TENT",
+        "padDiameterMM": 0.52,
+        "drillDiameterMM": 0.26
+      },
+      {
+        "type": "via",
+        "id": "ADD80_GPIO_PB1_[34.2, 20.0]",
+        "net": "GPIO_PB1",
+        "xy": [
+          34.2,
+          20.0
+        ],
+        "padstack": "HI_VIA026_C052_TENT",
+        "padDiameterMM": 0.52,
+        "drillDiameterMM": 0.26
+      },
+      {
+        "type": "route",
+        "id": "ADD80_V3V3_BOTTOM_12",
+        "net": "V3V3",
+        "layer": "BOTTOM",
+        "points": [
+          [
+            37,
+            25.7
+          ],
+          [
+            37,
+            24.5
+          ],
+          [
+            37.2,
+            24.3
+          ]
+        ],
+        "width": 0.6
+      },
+      {
+        "type": "route",
+        "id": "ADD80_V3V3_TOP_13",
+        "net": "V3V3",
+        "layer": "TOP",
+        "points": [
+          [
+            37,
+            24
+          ],
+          [
+            37.2,
+            24.2
+          ],
+          [
+            37.2,
+            24.3
+          ]
+        ],
+        "width": 0.6
+      },
+      {
+        "type": "route",
+        "id": "ADD80_GPIO_PB1_TOP_14",
+        "net": "GPIO_PB1",
+        "layer": "TOP",
+        "points": [
+          [
+            35.75,
+            26.75
+          ],
+          [
+            37,
+            26.75
+          ]
+        ],
+        "width": 0.16
+      },
+      {
+        "type": "route",
+        "id": "ADD80_GPIO_PB1_TOP_15",
+        "net": "GPIO_PB1",
+        "layer": "TOP",
+        "points": [
+          [
+            37,
+            26.75
+          ],
+          [
+            37.35,
+            27.1
+          ],
+          [
+            38.3,
+            27.1
+          ],
+          [
+            38.81,
+            26.59
+          ],
+          [
+            41,
+            26.59
+          ],
+          [
+            41.2,
+            26.79
+          ],
+          [
+            41.9,
+            26.79
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "route",
+        "id": "ADD80_GPIO_PB1_BOTTOM_16",
+        "net": "GPIO_PB1",
+        "layer": "BOTTOM",
+        "points": [
+          [
+            41.9,
+            26.79
+          ],
+          [
+            40.8,
+            25.69
+          ],
+          [
+            40.8,
+            23.55
+          ],
+          [
+            36.7,
+            23.55
+          ],
+          [
+            36.7,
+            21.8
+          ],
+          [
+            36.25,
+            21.35
+          ]
+        ],
+        "width": 0.2
+      },
+      {
+        "type": "route",
+        "id": "ADD80_GPIO_PB1_TOP_17",
+        "net": "GPIO_PB1",
+        "layer": "TOP",
+        "points": [
+          [
+            36.25,
+            21.35
+          ],
+          [
+            35.55,
+            21.35
+          ],
+          [
+            34.2,
+            20
+          ]
+        ],
+        "width": 0.2
+      }
+    ],
+    "uniqueDeleteEvidence": [
+      {
+        "id": "RIP80_GPIO_PB1_0",
+        "matched": [
+          200
+        ],
+        "before": {
+          "kind": "line",
+          "net": "GPIO_PB1",
+          "layer": "ETCH/TOP",
+          "startEnd": [
+            [
+              37.9,
+              26.95
+            ],
+            [
+              38.3,
+              27.35
+            ]
+          ],
+          "width": 0.16,
+          "attributes": "(prop nil readOnly t bBox ((37.82 26.87) (38.38 27.43)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.16 startEnd ((37.9 26.95) (38.3 27.35)) parent dbid:0000016E9F0742A0 net dbid:0000016E9EF87BA8 objType \"line\")",
+          "nativeProvenance": [
+            {
+              "net": "GPIO_PB1",
+              "layer": "ETCH/TOP",
+              "startEnd": [
+                [
+                  37.9,
+                  26.95
+                ],
+                [
+                  38.3,
+                  27.35
+                ]
+              ],
+              "width": 0.16,
+              "isEtch": true,
+              "thermal": false,
+              "lineThermal": false,
+              "parentThermal": false,
+              "parentType": "path",
+              "parentAttributes": [
+                "prop",
+                null,
+                "bBox",
+                [
+                  [
+                    35.67,
+                    26.67
+                  ],
+                  [
+                    38.38,
+                    27.43
+                  ]
+                ],
+                "readOnly",
+                true,
+                "net",
+                "dbid:0000016E9EF87BA8",
+                "segments",
+                [
+                  "dbid:0000016E9F074320",
+                  "dbid:0000016E9F074370",
+                  "dbid:0000016E9F0743C0"
+                ],
+                "isEtch",
+                true,
+                "nSegs",
+                3.0,
+                "hasArcs",
+                null,
+                "isSameWidth",
+                true,
+                "branch",
+                "dbid:0000016E9EFE3B30",
+                "parentGroups",
+                null,
+                "objType",
+                "path",
+                "thermal",
+                null,
+                "layer",
+                "ETCH/TOP",
+                "symbolEtch",
+                null,
+                "parent",
+                "dbid:0000016E9EFE3B30"
+              ],
+              "grandparentType": "branch"
+            }
+          ],
+          "generatedThermal": false,
+          "fixedManualCline": true
+        }
+      },
+      {
+        "id": "RIP80_GPIO_PB1_1",
+        "matched": [
+          200
+        ],
+        "before": {
+          "kind": "line",
+          "net": "GPIO_PB1",
+          "layer": "ETCH/TOP",
+          "startEnd": [
+            [
+              37.4,
+              26.75
+            ],
+            [
+              37.9,
+              26.95
+            ]
+          ],
+          "width": 0.16,
+          "attributes": "(prop nil readOnly t bBox ((37.32 26.67) (37.98 27.03)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.16 startEnd ((37.4 26.75) (37.9 26.95)) parent dbid:0000016E9F0742A0 net dbid:0000016E9EF87BA8 objType \"line\")",
+          "nativeProvenance": [
+            {
+              "net": "GPIO_PB1",
+              "layer": "ETCH/TOP",
+              "startEnd": [
+                [
+                  37.4,
+                  26.75
+                ],
+                [
+                  37.9,
+                  26.95
+                ]
+              ],
+              "width": 0.16,
+              "isEtch": true,
+              "thermal": false,
+              "lineThermal": false,
+              "parentThermal": false,
+              "parentType": "path",
+              "parentAttributes": [
+                "prop",
+                null,
+                "bBox",
+                [
+                  [
+                    35.67,
+                    26.67
+                  ],
+                  [
+                    38.38,
+                    27.43
+                  ]
+                ],
+                "readOnly",
+                true,
+                "net",
+                "dbid:0000016E9EF87BA8",
+                "segments",
+                [
+                  "dbid:0000016E9F074320",
+                  "dbid:0000016E9F074370",
+                  "dbid:0000016E9F0743C0"
+                ],
+                "isEtch",
+                true,
+                "nSegs",
+                3.0,
+                "hasArcs",
+                null,
+                "isSameWidth",
+                true,
+                "branch",
+                "dbid:0000016E9EFE3B30",
+                "parentGroups",
+                null,
+                "objType",
+                "path",
+                "thermal",
+                null,
+                "layer",
+                "ETCH/TOP",
+                "symbolEtch",
+                null,
+                "parent",
+                "dbid:0000016E9EFE3B30"
+              ],
+              "grandparentType": "branch"
+            }
+          ],
+          "generatedThermal": false,
+          "fixedManualCline": true
+        }
+      },
+      {
+        "id": "RIP80_GPIO_PB1_2",
+        "matched": [
+          200
+        ],
+        "before": {
+          "kind": "line",
+          "net": "GPIO_PB1",
+          "layer": "ETCH/TOP",
+          "startEnd": [
+            [
+              35.75,
+              26.75
+            ],
+            [
+              37.4,
+              26.75
+            ]
+          ],
+          "width": 0.16,
+          "attributes": "(prop nil readOnly t bBox ((35.67 26.67) (37.48 26.83)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.16 startEnd ((35.75 26.75) (37.4 26.75)) parent dbid:0000016E9F0742A0 net dbid:0000016E9EF87BA8 objType \"line\")",
+          "nativeProvenance": [
+            {
+              "net": "GPIO_PB1",
+              "layer": "ETCH/TOP",
+              "startEnd": [
+                [
+                  35.75,
+                  26.75
+                ],
+                [
+                  37.4,
+                  26.75
+                ]
+              ],
+              "width": 0.16,
+              "isEtch": true,
+              "thermal": false,
+              "lineThermal": false,
+              "parentThermal": false,
+              "parentType": "path",
+              "parentAttributes": [
+                "prop",
+                null,
+                "bBox",
+                [
+                  [
+                    35.67,
+                    26.67
+                  ],
+                  [
+                    38.38,
+                    27.43
+                  ]
+                ],
+                "readOnly",
+                true,
+                "net",
+                "dbid:0000016E9EF87BA8",
+                "segments",
+                [
+                  "dbid:0000016E9F074320",
+                  "dbid:0000016E9F074370",
+                  "dbid:0000016E9F0743C0"
+                ],
+                "isEtch",
+                true,
+                "nSegs",
+                3.0,
+                "hasArcs",
+                null,
+                "isSameWidth",
+                true,
+                "branch",
+                "dbid:0000016E9EFE3B30",
+                "parentGroups",
+                null,
+                "objType",
+                "path",
+                "thermal",
+                null,
+                "layer",
+                "ETCH/TOP",
+                "symbolEtch",
+                null,
+                "parent",
+                "dbid:0000016E9EFE3B30"
+              ],
+              "grandparentType": "branch"
+            }
+          ],
+          "generatedThermal": false,
+          "fixedManualCline": true
+        }
+      },
+      {
+        "id": "RIP80_GPIO_PB1_[38.3, 27.35]",
+        "matched": [
+          30
+        ],
+        "before": {
+          "padstack": "HI_VIA026_C052_TENT",
+          "xy": [
+            38.3,
+            27.35
+          ],
+          "net": "GPIO_PB1",
+          "usage": "Through_via",
+          "drill": 0.26,
+          "pads": [
+            {
+              "layer": "ETCH/TOP",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.26,
+                  -0.26
+                ],
+                [
+                  0.26,
+                  0.26
+                ]
+              ]
+            },
+            {
+              "layer": "ETCH/L2",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.26,
+                  -0.26
+                ],
+                [
+                  0.26,
+                  0.26
+                ]
+              ]
+            },
+            {
+              "layer": "ETCH/L3",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.26,
+                  -0.26
+                ],
+                [
+                  0.26,
+                  0.26
+                ]
+              ]
+            },
+            {
+              "layer": "ETCH/BOTTOM",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.26,
+                  -0.26
+                ],
+                [
+                  0.26,
+                  0.26
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "RIP80_V3V3_[37, 24]",
+        "matched": [
+          111
+        ],
+        "before": {
+          "padstack": "L28_VIA030_C060",
+          "xy": [
+            37.0,
+            24.0
+          ],
+          "net": "V3V3",
+          "usage": "Through_via",
+          "drill": 0.3,
+          "pads": [
+            {
+              "layer": "ETCH/TOP",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.3,
+                  -0.3
+                ],
+                [
+                  0.3,
+                  0.3
+                ]
+              ]
+            },
+            {
+              "layer": "ETCH/L2",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.3,
+                  -0.3
+                ],
+                [
+                  0.3,
+                  0.3
+                ]
+              ]
+            },
+            {
+              "layer": "ETCH/L3",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.3,
+                  -0.3
+                ],
+                [
+                  0.3,
+                  0.3
+                ]
+              ]
+            },
+            {
+              "layer": "ETCH/BOTTOM",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.3,
+                  -0.3
+                ],
+                [
+                  0.3,
+                  0.3
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "RIP80_V3V3_5",
+        "matched": [
+          604
+        ],
+        "before": {
+          "kind": "line",
+          "net": "V3V3",
+          "layer": "ETCH/BOTTOM",
+          "startEnd": [
+            [
+              37.0,
+              25.7
+            ],
+            [
+              37.0,
+              24.0
+            ]
+          ],
+          "width": 0.6,
+          "attributes": "(prop nil readOnly t bBox ((36.7 23.7) (37.3 26.0)) isEtch t font nil lineType vertical layer \"ETCH/BOTTOM\" width 0.6 startEnd ((37.0 25.7) (37.0 24.0)) parent dbid:0000016E9F04F890 net dbid:0000016E9EF87798 objType \"line\")",
+          "nativeProvenance": [
+            {
+              "net": "V3V3",
+              "layer": "ETCH/BOTTOM",
+              "startEnd": [
+                [
+                  37.0,
+                  25.7
+                ],
+                [
+                  37.0,
+                  24.0
+                ]
+              ],
+              "width": 0.6,
+              "isEtch": true,
+              "thermal": false,
+              "lineThermal": false,
+              "parentThermal": false,
+              "parentType": "path",
+              "parentAttributes": [
+                "prop",
+                null,
+                "bBox",
+                [
+                  [
+                    30.4,
+                    23.7
+                  ],
+                  [
+                    37.3,
+                    32.3
+                  ]
+                ],
+                "readOnly",
+                true,
+                "net",
+                "dbid:0000016E9EF87798",
+                "segments",
+                [
+                  "dbid:0000016E9F04F910",
+                  "dbid:0000016E9F04F960"
+                ],
+                "isEtch",
+                true,
+                "nSegs",
+                2.0,
+                "hasArcs",
+                null,
+                "isSameWidth",
+                true,
+                "branch",
+                "dbid:0000016E9F04F868",
+                "parentGroups",
+                null,
+                "objType",
+                "path",
+                "thermal",
+                null,
+                "layer",
+                "ETCH/BOTTOM",
+                "symbolEtch",
+                null,
+                "parent",
+                "dbid:0000016E9F04F868"
+              ],
+              "grandparentType": "branch"
+            }
+          ],
+          "generatedThermal": false,
+          "fixedManualCline": true
+        }
+      },
+      {
+        "id": "RIP80_GND_[35.8, 21.95]",
+        "matched": [
+          78
+        ],
+        "before": {
+          "padstack": "HI_VIA026_C052_TENT",
+          "xy": [
+            35.8,
+            21.95
+          ],
+          "net": "GND",
+          "usage": "Through_via",
+          "drill": 0.26,
+          "pads": [
+            {
+              "layer": "ETCH/TOP",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.26,
+                  -0.26
+                ],
+                [
+                  0.26,
+                  0.26
+                ]
+              ]
+            },
+            {
+              "layer": "ETCH/L2",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.26,
+                  -0.26
+                ],
+                [
+                  0.26,
+                  0.26
+                ]
+              ]
+            },
+            {
+              "layer": "ETCH/L3",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.26,
+                  -0.26
+                ],
+                [
+                  0.26,
+                  0.26
+                ]
+              ]
+            },
+            {
+              "layer": "ETCH/BOTTOM",
+              "figure": "CIRCLE",
+              "bbox": [
+                [
+                  -0.26,
+                  -0.26
+                ],
+                [
+                  0.26,
+                  0.26
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "initialCandidateResults": [
+      {
+        "operation": {
+          "type": "route",
+          "id": "PB10_NW_BOTTOM_01",
+          "net": "GPIO_PB10",
+          "layer": "BOTTOM",
+          "points": [
+            [
+              38,
+              26.3
+            ],
+            [
+              31.3,
+              33
+            ]
+          ],
+          "width": 0.2
+        },
+        "audit": {
+          "baseFieldIssues": [
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.7,
+                31.999999999999996,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.016780677
+            }
+          ],
+          "nearest": [
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.7,
+                31.999999999999996,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.016780677
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                31.7,
+                31.3,
+                32.599999999999994
+              ],
+              "gapMM": 0.307106781,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.007106781,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.362445502,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.062445502,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GND",
+              "kind": "via",
+              "source": "native_via:[38.0, 25.27]",
+              "bbox": [
+                37.7,
+                24.97,
+                38.3,
+                25.57
+              ],
+              "gapMM": 0.63,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.33,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.7, 32.0]",
+              "bbox": [
+                30.4,
+                31.7,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.73137085,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.43137085,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                25.4,
+                37.3,
+                32.3
+              ],
+              "gapMM": 0.73137085,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.43137085,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                36.7,
+                24.2,
+                37.3,
+                26.0
+              ],
+              "gapMM": 0.73137085,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.43137085,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.4, 33.7]",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                30.7,
+                34.0
+              ],
+              "gapMM": 0.74017625,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.44017625,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GPIO_PA3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                32.65,
+                33.05,
+                34.2,
+                33.25
+              ],
+              "gapMM": 0.93137085,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.73137085,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GPIO_PA3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                15.55,
+                33.05,
+                32.85,
+                50.35
+              ],
+              "gapMM": 0.93137085,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.73137085,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "pairComparisons": 398,
+          "pathClearIncludingFiniteRegions": false
+        }
+      },
+      {
+        "operation": {
+          "type": "via",
+          "id": "PB10_NW_PORT_VIA_01",
+          "net": "GPIO_PB10",
+          "xy": [
+            31.3,
+            33
+          ],
+          "padstack": "L28_VIA030_C060",
+          "padDiameterMM": 0.6,
+          "drillDiameterMM": 0.3
+        },
+        "layer": "TOP",
+        "audit": {
+          "baseFieldIssues": [
+            {
+              "net": "V3V3",
+              "kind": "smdpin",
+              "source": "R25.1",
+              "bbox": [
+                30.6316,
+                33.2935,
+                31.5716,
+                34.1065
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.2,
+              "overlapAreaMM2": 0.000538999
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.2,
+                32.699999999999996,
+                31.323600000000003,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.2,
+              "overlapAreaMM2": 0.0417196
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                31.1236,
+                32.1,
+                31.9236,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.2,
+              "overlapAreaMM2": 0.040586674
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.401600000000002,
+                34.0
+              ],
+              "gapMM": 0.127945718,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.172054282,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "smdpin",
+              "source": "R23.2",
+              "bbox": [
+                31.3536,
+                31.6935,
+                32.2936,
+                32.5065
+              ],
+              "gapMM": 0.196404201,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.003595799,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "nearest": [
+            {
+              "net": "V3V3",
+              "kind": "smdpin",
+              "source": "R25.1",
+              "bbox": [
+                30.6316,
+                33.2935,
+                31.5716,
+                34.1065
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.2,
+              "overlapAreaMM2": 0.000538999
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.2,
+                32.699999999999996,
+                31.323600000000003,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.2,
+              "overlapAreaMM2": 0.0417196
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                31.1236,
+                32.1,
+                31.9236,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.2,
+              "overlapAreaMM2": 0.040586674
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.401600000000002,
+                34.0
+              ],
+              "gapMM": 0.127945718,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.172054282,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "smdpin",
+              "source": "R23.2",
+              "bbox": [
+                31.3536,
+                31.6935,
+                32.2936,
+                32.5065
+              ],
+              "gapMM": 0.196404201,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.003595799,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                31.55,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.567065007,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.267065007,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.4, 33.7]",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                30.7,
+                34.0
+              ],
+              "gapMM": 0.540177121,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.340177121,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                31.723599999999998,
+                32.0,
+                31.9236,
+                32.300000000000004
+              ],
+              "gapMM": 0.556250423,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.356250423,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.7, 32.0]",
+              "bbox": [
+                30.4,
+                31.7,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.566190509,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.366190509,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.5,
+                30.65,
+                31.0,
+                32.15
+              ],
+              "gapMM": 0.697135541,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.397135541,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "pairComparisons": 1011
+        }
+      },
+      {
+        "operation": {
+          "type": "via",
+          "id": "PB10_NW_PORT_VIA_01",
+          "net": "GPIO_PB10",
+          "xy": [
+            31.3,
+            33
+          ],
+          "padstack": "L28_VIA030_C060",
+          "padDiameterMM": 0.6,
+          "drillDiameterMM": 0.3
+        },
+        "layer": "BOTTOM",
+        "audit": {
+          "baseFieldIssues": [
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.7,
+                31.999999999999996,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.141368121
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.162445502,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.137554498,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                31.7,
+                31.3,
+                32.599999999999994
+              ],
+              "gapMM": 0.162445502,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.137554498,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "nearest": [
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.7,
+                31.999999999999996,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.141368121
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.162445502,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.137554498,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                31.7,
+                31.3,
+                32.599999999999994
+              ],
+              "gapMM": 0.162445502,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.137554498,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                25.4,
+                37.3,
+                32.3
+              ],
+              "gapMM": 0.567065007,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.267065007,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.4, 33.7]",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                30.7,
+                34.0
+              ],
+              "gapMM": 0.540177121,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.340177121,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.7, 32.0]",
+              "bbox": [
+                30.4,
+                31.7,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.566190509,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.366190509,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GPIO_PA3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                15.55,
+                33.05,
+                32.85,
+                50.35
+              ],
+              "gapMM": 0.73137085,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.53137085,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "via",
+              "source": "native_via:[29.8, 32.3]",
+              "bbox": [
+                29.5,
+                31.999999999999996,
+                30.1,
+                32.599999999999994
+              ],
+              "gapMM": 1.055305041,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.855305041,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GPIO_PA3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                32.65,
+                33.05,
+                34.2,
+                33.25
+              ],
+              "gapMM": 1.057894621,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.857894621,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GPIO_PA2",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                17.4,
+                33.5,
+                33.1,
+                49.2
+              ],
+              "gapMM": 1.226345597,
+              "requiredBaseMM": 0.2,
+              "marginMM": 1.026345597,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "pairComparisons": 398
+        }
+      },
+      {
+        "operation": {
+          "type": "route",
+          "id": "PB10_NW_TOP_01",
+          "net": "GPIO_PB10",
+          "layer": "TOP",
+          "points": [
+            [
+              31.3,
+              33
+            ],
+            [
+              30.5,
+              33.8
+            ],
+            [
+              29.5,
+              33.8
+            ]
+          ],
+          "width": 0.2
+        },
+        "audit": {
+          "baseFieldIssues": [
+            {
+              "net": "V3V3",
+              "kind": "smdpin",
+              "source": "R25.1",
+              "bbox": [
+                30.6316,
+                33.2935,
+                31.5716,
+                34.1065
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.106037733
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.4, 33.7]",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                30.7,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.126177421
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.401600000000002,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.187983149
+            },
+            {
+              "net": "ADC_IN",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                26.169999999999998,
+                33.9,
+                29.400000000000002,
+                34.1
+              ],
+              "gapMM": 0.082842712,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.217157288,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "ADC_IN",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.2,
+                33.9,
+                30.900000000000002,
+                35.6
+              ],
+              "gapMM": 0.082842712,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.217157288,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.2,
+                32.699999999999996,
+                31.323600000000003,
+                32.9
+              ],
+              "gapMM": 0.014321187,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.185678813,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                31.1236,
+                32.1,
+                31.9236,
+                32.9
+              ],
+              "gapMM": 0.014321187,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.185678813,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "nearest": [
+            {
+              "net": "V3V3",
+              "kind": "smdpin",
+              "source": "R25.1",
+              "bbox": [
+                30.6316,
+                33.2935,
+                31.5716,
+                34.1065
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.106037733
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.4, 33.7]",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                30.7,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.126177421
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.401600000000002,
+                34.0
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.187983149
+            },
+            {
+              "net": "ADC_IN",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                26.169999999999998,
+                33.9,
+                29.400000000000002,
+                34.1
+              ],
+              "gapMM": 0.082842712,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.217157288,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "ADC_IN",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.2,
+                33.9,
+                30.900000000000002,
+                35.6
+              ],
+              "gapMM": 0.082842712,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.217157288,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.2,
+                32.699999999999996,
+                31.323600000000003,
+                32.9
+              ],
+              "gapMM": 0.014321187,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.185678813,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                31.1236,
+                32.1,
+                31.9236,
+                32.9
+              ],
+              "gapMM": 0.014321187,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.185678813,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "GND",
+              "kind": "via",
+              "source": "native_via:[29.2, 33.05]",
+              "bbox": [
+                28.9,
+                32.75,
+                29.5,
+                33.349999999999994
+              ],
+              "gapMM": 0.407774724,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.107774724,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "smdpin",
+              "source": "R23.2",
+              "bbox": [
+                31.3536,
+                31.6935,
+                32.2936,
+                32.5065
+              ],
+              "gapMM": 0.396402586,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.196402586,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.7,
+                32.199999999999996,
+                30.400000000000002,
+                32.9
+              ],
+              "gapMM": 0.648528137,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.448528137,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "pairComparisons": 1011,
+          "pathClearIncludingFiniteRegions": false
+        }
+      },
+      {
+        "operation": {
+          "type": "via",
+          "id": "PB10_NW_RETURN_01",
+          "net": "GND",
+          "xy": [
+            30.2,
+            32.9
+          ],
+          "padstack": "L28_VIA030_C060",
+          "padDiameterMM": 0.6,
+          "drillDiameterMM": 0.3
+        },
+        "layer": "TOP",
+        "audit": {
+          "baseFieldIssues": [
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.7,
+                32.199999999999996,
+                30.400000000000002,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.06683851
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.2,
+                32.699999999999996,
+                31.323600000000003,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.050841047
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "via",
+              "source": "native_via:[29.8, 32.3]",
+              "bbox": [
+                29.5,
+                31.999999999999996,
+                30.1,
+                32.599999999999994
+              ],
+              "gapMM": 0.121112209,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.078887791,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.401600000000002,
+                34.0
+              ],
+              "gapMM": 0.225510713,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.074489287,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "nearest": [
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.7,
+                32.199999999999996,
+                30.400000000000002,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.06683851
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.2,
+                32.699999999999996,
+                31.323600000000003,
+                32.9
+              ],
+              "gapMM": 0.0,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.3,
+              "overlapAreaMM2": 0.050841047
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "via",
+              "source": "native_via:[29.8, 32.3]",
+              "bbox": [
+                29.5,
+                31.999999999999996,
+                30.1,
+                32.599999999999994
+              ],
+              "gapMM": 0.121112209,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.078887791,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.401600000000002,
+                34.0
+              ],
+              "gapMM": 0.225510713,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.074489287,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.4, 33.7]",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                30.7,
+                34.0
+              ],
+              "gapMM": 0.224621356,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.024621356,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "smdpin",
+              "source": "R25.1",
+              "bbox": [
+                30.6316,
+                33.2935,
+                31.5716,
+                34.1065
+              ],
+              "gapMM": 0.284058158,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.084058158,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                31.55,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.429840755,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.129840755,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.7, 32.0]",
+              "bbox": [
+                30.4,
+                31.7,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.429571855,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.229571855,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.5,
+                30.65,
+                31.0,
+                32.15
+              ],
+              "gapMM": 0.563121232,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.263121232,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                31.1236,
+                32.1,
+                31.9236,
+                32.9
+              ],
+              "gapMM": 0.628675509,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.328675509,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "pairComparisons": 793
+        }
+      },
+      {
+        "operation": {
+          "type": "via",
+          "id": "PB10_NW_RETURN_01",
+          "net": "GND",
+          "xy": [
+            30.2,
+            32.9
+          ],
+          "padstack": "L28_VIA030_C060",
+          "padDiameterMM": 0.6,
+          "drillDiameterMM": 0.3
+        },
+        "layer": "BOTTOM",
+        "audit": {
+          "baseFieldIssues": [
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.7,
+                31.999999999999996,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.2,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.1,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "via",
+              "source": "native_via:[29.8, 32.3]",
+              "bbox": [
+                29.5,
+                31.999999999999996,
+                30.1,
+                32.599999999999994
+              ],
+              "gapMM": 0.121112209,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.078887791,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.225510713,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.074489287,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "nearest": [
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.7,
+                31.999999999999996,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.2,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.1,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "via",
+              "source": "native_via:[29.8, 32.3]",
+              "bbox": [
+                29.5,
+                31.999999999999996,
+                30.1,
+                32.599999999999994
+              ],
+              "gapMM": 0.121112209,
+              "requiredBaseMM": 0.2,
+              "marginMM": -0.078887791,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                31.3,
+                34.0
+              ],
+              "gapMM": 0.225510713,
+              "requiredBaseMM": 0.3,
+              "marginMM": -0.074489287,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.049999999999997,
+                31.549999999999997,
+                29.900000000000002,
+                32.4
+              ],
+              "gapMM": 0.321209628,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.021209628,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.4, 33.7]",
+              "bbox": [
+                30.099999999999998,
+                33.400000000000006,
+                30.7,
+                34.0
+              ],
+              "gapMM": 0.224621356,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.024621356,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                31.7,
+                31.3,
+                32.599999999999994
+              ],
+              "gapMM": 0.389949494,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.089949494,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                30.4,
+                25.4,
+                37.3,
+                32.3
+              ],
+              "gapMM": 0.429840755,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.129840755,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "V3V3",
+              "kind": "via",
+              "source": "native_via:[30.7, 32.0]",
+              "bbox": [
+                30.4,
+                31.7,
+                31.0,
+                32.3
+              ],
+              "gapMM": 0.429571855,
+              "requiredBaseMM": 0.2,
+              "marginMM": 0.229571855,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.049999999999997,
+                31.45,
+                29.25,
+                31.75
+              ],
+              "gapMM": 1.232748802,
+              "requiredBaseMM": 0.3,
+              "marginMM": 0.932748802,
+              "overlapAreaMM2": 0.0
+            },
+            {
+              "net": "SPI_NSS",
+              "kind": "line",
+              "source": "native_route",
+              "bbox": [
+                29.0,
+                31.4,
+                29.25,
+                31.650000000000002
+              ],
+              "gapMM": 1.310320031,
+              "requiredBaseMM": 0.3,
+              "marginMM": 1.010320031,
+              "overlapAreaMM2": 0.0
+            }
+          ],
+          "pairComparisons": 308
+        }
+      }
+    ],
+    "clearStockViaCentersOnNWLine": [
+      [
+        38.0,
+        26.3
+      ],
+      [
+        37.95,
+        26.35
+      ],
+      [
+        37.9,
+        26.4
+      ],
+      [
+        37.85,
+        26.45
+      ],
+      [
+        37.8,
+        26.5
+      ],
+      [
+        36.85,
+        27.45
+      ]
+    ]
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "status": "PASS_NATIVE_EXPORT_IMPORT_ECO_REVERSE_COMPARE",
+  "originalDsnHashesUnchanged": {
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native\\DE_INTEGRATED_SINGLE.DSN": "eea3f9f698b4062f1acef8d609105994a90a4161645a9c53ee77914790333a5d",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native\\de_integrated_eco_final.dsn": "ca222d42e8a0c430305a88b831dfc1754eba8cf0d3ebf4d85106080998dd4799"
+  },
+  "baselineBoard": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_BASELINE.brd",
+  "ecoBoard": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_ECO.brd",
+  "baselineReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\baseline_readback",
+  "ecoReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\eco_readback",
+  "feedbackSwap": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\feedback\\DE_ECO.swp",
+  "limitations": [
+    "Capture GUI ERC not run.",
+    "SWP generation is verified; applying SWP inside Capture GUI is not verified.",
+    "BRD imports contain unplaced components; no layout/routing/manufacturing signoff is claimed."
+  ],
+  "files": [
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_BASELINE.brd",
+      "sha256": "3e0aa1ee367238fdebb7f18be07339cf07882bf6656e9b6d51c86a5f6ec764fc"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_ECO.brd",
+      "sha256": "bcf066424d7490a81d452ed029cf9ea291e6a7f261a9e26529e939b34e3c588e"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\feedback\\DE_ECO.swp",
+      "sha256": "215ee527e7ef959c5fb662e0bd064772cf194e37a713bc353c66ad4b55320274"
+    }
+  ],
+  "independentChecks": 1578,
+  "independentReport": "independent_compare.json",
+  "nativeProcesses": [
+    {
+      "stage": "baseline_readback",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\allegro.exe",
+        "-product",
+        "Allegro_performance",
+        "-safe",
+        "-nographic",
+        "-readonly",
+        "-s",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\baseline_readback.scr",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_BASELINE.brd"
+      ],
+      "startUTC": "2026-10-19T03:10:22.814042+00:00",
+      "pid": 33344,
+      "exitCode": 0,
+      "completed": true,
+      "endUTC": "2026-10-19T03:10:23.852790+00:00"
+    },
+    {
+      "stage": "eco_readback",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\allegro.exe",
+        "-product",
+        "Allegro_performance",
+        "-safe",
+        "-nographic",
+        "-readonly",
+        "-s",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\eco_readback.scr",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_ECO.brd"
+      ],
+      "startUTC": "2026-10-19T03:10:24.516664+00:00",
+      "pid": 5264,
+      "exitCode": 0,
+      "completed": true,
+      "endUTC": "2026-10-19T03:10:25.625224+00:00"
+    },
+    {
+      "stage": "feedback_swp",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\pstswp.exe",
+        "-swp",
+        "-d",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\eco\\DE_CONTROL.dsn",
+        "-n",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\feedback",
+        "-s",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\feedback\\DE_ECO.swp",
+        "-c",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\allegro.cfg",
+        "-hpath",
+        "HPathForCollision",
+        "-backwd"
+      ],
+      "startUTC": "2026-10-19T03:10:25.971158+00:00",
+      "pid": 32976,
+      "exitCode": 0,
+      "completed": true,
+      "endUTC": "2026-10-19T03:10:26.326151+00:00"
+    },
+    {
+      "stage": "feedback_view",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\genfeedformat.exe",
+        "-x",
+        "-b",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_ECO.brd",
+        "-o",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\feedback"
+      ],
+      "startUTC": "2026-10-19T03:10:25.706739+00:00",
+      "pid": 26788,
+      "exitCode": 0,
+      "completed": true,
+      "endUTC": "2026-10-19T03:10:25.901018+00:00"
+    },
+    {
+      "stage": "import_baseline",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\netrev.exe",
+        "-n",
+        "-e",
+        "-i",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\baseline\\netlist",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_BASELINE.brd"
+      ],
+      "startUTC": "2026-10-19T03:10:22.119704+00:00",
+      "pid": 29768,
+      "exitCode": 0,
+      "completed": true,
+      "endUTC": "2026-10-19T03:10:22.742153+00:00"
+    },
+    {
+      "stage": "import_eco",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\netrev.exe",
+        "-e",
+        "-i",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\eco\\netlist",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_BASELINE.brd",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_ECO.brd"
+      ],
+      "startUTC": "2026-10-19T03:10:23.924566+00:00",
+      "pid": 33080,
+      "exitCode": 0,
+      "completed": true,
+      "endUTC": "2026-10-19T03:10:24.441742+00:00"
+    },
+    {
+      "stage": "pst_baseline",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\pstswp.exe",
+        "-pst",
+        "-d",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\baseline\\DE_CONTROL.dsn",
+        "-n",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\baseline\\netlist",
+        "-c",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\allegro.cfg",
+        "-v",
+        "3",
+        "-l",
+        "255",
+        "-j",
+        "PCB Footprint"
+      ],
+      "startUTC": "2026-10-19T03:10:20.744199+00:00",
+      "pid": 18984,
+      "exitCode": 0,
+      "completed": true,
+      "endUTC": "2026-10-19T03:10:21.389176+00:00"
+    },
+    {
+      "stage": "pst_eco",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\pstswp.exe",
+        "-pst",
+        "-d",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\eco\\DE_CONTROL.dsn",
+        "-n",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\eco\\netlist",
+        "-c",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\allegro.cfg",
+        "-v",
+        "3",
+        "-l",
+        "255",
+        "-j",
+        "PCB Footprint"
+      ],
+      "startUTC": "2026-10-19T03:10:21.458309+00:00",
+      "pid": 32872,
+      "exitCode": 0,
+      "completed": true,
+      "endUTC": "2026-10-19T03:10:22.051341+00:00"
+    }
+  ],
+  "baselineComponents": 80,
+  "ecoComponents": 80,
+  "physicalPinsPerDesign": 272,
+  "netsPerDesign": 69,
+  "placedSymbolsPerDesign": 0,
+  "explicitNoConnectPinsPerDesign": 6,
+  "logicalECOChanges": {
+    "resistors": [
+      "R19 2.2k -> 3.3k",
+      "R20 2.2k -> 3.3k"
+    ],
+    "connectorPins": [
+      "J13.7 GPIO_PB8 -> GPIO_PB9",
+      "J13.8 GPIO_PB9 -> GPIO_PB8"
+    ]
+  },
+  "nativeECOReport": "logs/import_eco/eco.txt",
+  "reverseSWP": "feedback/DE_ECO.swp",
+  "nonfatalDiagnostic": "pstswp reverse mode attempts feedbackview.cdsz unzip first; absent archive emits stderr then the program reads all four VIEW DAT files, generates a Flags-only SWP, and exits 0. Diagnostic is preserved.",
+  "acceptedSchematicPagePolicy": "Single-page native DSN with six circuit modules; preliminary six-page SDK designs failed native packaging and are excluded.",
+  "layerEvidence": "native_layer_evidence.json"
+}

@@ -1,0 +1,73 @@
+FILE_TYPE=FORM_DEFN VERSION=2
+FORM
+FIXED
+PORT 66 6
+HEADER "NC Route"
+
+MESSAGE nerror 0 "A problem occurred, check the logfile (using Viewlog)."
+MESSAGE ndone 0 "NCRoute complete."
+MESSAGE ndemo 0 "Cannot Run in Demo Mode."
+
+TILE
+
+TEXT "Root file name:"
+TLOC 2 2
+ENDTEXT
+
+FIELD filename
+FLOC 14 2
+STRFILLIN 27 1023
+ENDFIELD
+
+FIELD browse
+FLOC 43 2
+MENUBUTTON "..." 3 3
+ENDFIELD
+
+TEXT "Route feedrate:"
+TLOC 2 4
+ENDTEXT
+
+FIELD feed_rate
+FLOC 14 4
+INTFILLIN 3 3
+MIN 1
+ENDFIELD
+
+FIELD separate_files
+FLOC 2 7 
+CHECKLIST "Separate files for plated/non-plated routing"
+ENDFIELD
+
+FIELD execute
+FLOC 50 2
+MENUBUTTON "Route" 14 3
+ENDFIELD
+
+FIELD parameters
+FLOC 50 5
+MENUBUTTON "Parameters..." 14 3
+ENDFIELD
+
+FIELD close
+FLOC 50 8
+MENUBUTTON "OK" 14 3
+ENDFIELD
+
+FIELD cancel
+FLOC 50 11
+MENUBUTTON "Cancel" 14 3
+ENDFIELD
+
+FIELD viewlog
+FLOC 50 14
+MENUBUTTON "Viewlog..." 14 3
+ENDFIELD
+
+FIELD help
+FLOC 50 18
+MENUBUTTON "Help" 14 3
+ENDFIELD
+
+ENDTILE
+ENDFORM

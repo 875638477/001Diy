@@ -1,0 +1,6 @@
+set NOCONFIRM
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/scripts/build29_v2.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/scripts/ground_patch.il") t)
+skill errset(f29PatchGround("D:/001DIY/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/native/F29_CONSTRAINTS_v3.brd" "D:/001DIY/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/logs/ground_patch.txt") t)
+quit
+fillin "yes"

@@ -1,0 +1,59 @@
+
+  NAME
+         axlDBCreateText - add text to the database
+  FUNCTION
+         axlDBCreateText(
+             t_text
+             l_anchorPoint
+             r_textOrientation
+             [t_layer]
+             [o_attach]
+         )
+         ==> l_result/nil
+ 
+  SYNOPSIS
+         Creates a text string in the layout with the arguments as described 
+         below.
+  NEEDS
+         t_text                  - The text string.
+         l_anchorPoint           - The location of the text
+         r_textOrientation       - axlTextOrientation structure:
+                                 defstruct axlTextOrientation
+                                    r_textOrientation ;the orientation of text
+                                    textBlock     ;string - text block name
+                                    rotation      ;rotation in floatnum degrees
+                                    mirrored      ;t-->mirrored, nil --> not mirrored
+                                                  ;'GEOMETRY --> only geometry is mirrored.
+                                    justify       ;"left", "center", "right"
+ 
+                                 Note: As with all SKILL defstructs, use 
+                                  constructor function: make_axlTextOrientation
+                                  to create instances of axlTextOrientation. 
+                                  Use copy function: copy_axlTextOrientation
+                                  to copy instances of axlTextOrientation.
+         t_layer                 - Layer name.
+         o_attach                - axl DBID of an object that the text should
+                                   be attached to. (nil for design).
+  RETURNS
+         l_result/nil:         - nil if not created, or a list containing
+                                         (car) list of axl DBIDs of the text
+                                         (cadr) t if DRCs created or nil.
+  NOTE
+         if o_attach is a symbol instance, then the text is "stand alone", but
+                 a child of the symbol instance.
+         If the t_text string contains NEWLINEs then multiple text records
+                 will be created (and multiple DBIDs returned).
+  SEE ALSO
+         axlTextOrientationCopy, axlDBChangeText
+  EXAMPLE
+ 
+         The following example adds the  text string "Chamfer both sides" 
+         center justified, mirrored and rotated 60 degrees.
+ 
+         myorient = make_axlTextOrientation(
+                                 ?textBlock "8", ?rotation 60.0,
+                                 ?mirrored t, ?justify "center")
+         ret = axlDBCreateText( "Chamfer both sides", 7600:4600,
+                                 myorient, "board geometry/plating_bar", nil)
+                 ==> (dbid:526743 nil)
+

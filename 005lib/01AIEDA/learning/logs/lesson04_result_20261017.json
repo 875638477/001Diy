@@ -1,0 +1,389 @@
+{
+    "date":  "2026-10-17",
+    "timezone":  "Asia/Shanghai",
+    "lesson":  4,
+    "status":  "created_pad_dra_psm_and_verified_fresh_reopen",
+    "trainingOnly":  true,
+    "specification":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\training_spec.json",
+    "units":  "millimeters",
+    "accuracy":  3,
+    "pinCount":  2,
+    "pinCenterDistance":  2,
+    "topCopper":  [
+                      1,
+                      1.5
+                  ],
+    "topSolderMask":  [
+                          1.1,
+                          1.6
+                      ],
+    "topPasteMask":  [
+                         0.9,
+                         1.4
+                     ],
+    "outlineSegments":  8,
+    "placeBound":  {
+                       "bbox":  [
+                                    [
+                                        -1.8,
+                                        -1.1
+                                    ],
+                                    [
+                                        1.8,
+                                        1.1
+                                    ]
+                                ],
+                       "filled":  true
+                   },
+    "refdes":  {
+                   "placeholder":  "U*",
+                   "layer":  "REF DES/SILKSCREEN_TOP",
+                   "xy":  [
+                              0,
+                              1.6
+                          ]
+               },
+    "checks":  {
+                   "pinCount":  true,
+                   "pin1PositionAndType":  true,
+                   "pin1 ETCH/TOP":  true,
+                   "pin1 PIN/SOLDERMASK_TOP":  true,
+                   "pin1 PIN/PASTEMASK_TOP":  true,
+                   "pin2PositionAndType":  true,
+                   "pin2 ETCH/TOP":  true,
+                   "pin2 PIN/SOLDERMASK_TOP":  true,
+                   "pin2 PIN/PASTEMASK_TOP":  true,
+                   "bottomPadsAreNull":  true,
+                   "silkscreenOutline":  true,
+                   "assemblyOutline":  true,
+                   "placeBound":  true,
+                   "refdes":  true,
+                   "createComplete":  true,
+                   "reopenComplete":  true,
+                   "libraryHashesUnchanged":  true,
+                   "allNativeProcessesExited":  true
+               },
+    "libraryArtifacts":  {
+                             "value":  [
+                                           {
+                                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\library\\eda_l04_smd_1000x1500.pad",
+                                               "sha256":  "032BD46D936451F723FA3C7E17F2A9DA4BA4346F84247E34C23F63ACD02C8632"
+                                           },
+                                           {
+                                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\library\\eda_l04_two_pin_training.dra",
+                                               "sha256":  "F3866391446086B7B7B41DDACF6A64E0BAB1D3E33BD495EBF54650E87DD9DCCE"
+                                           },
+                                           {
+                                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\library\\eda_l04_two_pin_training.psm",
+                                               "sha256":  "0228B1681C88D7A48C22A6A5E3B8C69CC9DB9B7E610A41C3F8A20BEAEB0FFD76"
+                                           }
+                                       ],
+                             "Count":  3
+                         },
+    "failedAttempts":  [
+                           {
+                               "run":  "run02_create",
+                               "reason":  "pin outside drawing extents",
+                               "saved":  false
+                           },
+                           {
+                               "run":  "run03_create",
+                               "reason":  "REF** text rejected with illegal characters",
+                               "saved":  false
+                           }
+                       ],
+    "corrections":  [
+                        "Explicit drawing extents -10,-10 to 10,10 mm",
+                        "Use documented U* reference placeholder",
+                        "Read direct line objects as well as path segments",
+                        "Identify old process by PID, executable and start time; PID19604 reused by msedge"
+                    ],
+    "nativeDrcStored":  0,
+    "nativeDrcState":  "t",
+    "nativeCompile":  "completed",
+    "knownWarning":  "SPMHUT-48 logged in both Padstack Editor XML-import journal and new drawing initial unit setup; affected fields not specified; queried specification items match",
+    "previousLessonPrecisionIssueResolved":  false,
+    "compiledPsmPlacedOnBoard":  false,
+    "datasheetQualified":  false,
+    "siPiEmiReviewed":  false,
+    "realProjectModified":  false,
+    "globalHomeOrStartupFileChangeRequested":  false,
+    "desktopControlRetested":  false,
+    "bridgeLoaded":  false,
+    "nextLesson":  "Load compiled package into a training board, rotate and mirror instances, verify pins and layer mapping",
+    "padstackEditorJournalVersion":  "17.2-S045 Windows SPB 64-bit Edition",
+    "preview":  {
+                    "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\preview.png",
+                    "sha256":  "F8E60606990B73FE3258A4AF6547514804C7D411785694D876B8FFF72154DB32",
+                    "method":  "System.Drawing from fresh-reopen TSV data; not a Cadence screenshot",
+                    "productionQualified":  false,
+                    "sourceArchive":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\lesson04_preview_source.txt",
+                    "sourceSha256":  "D716059C6DEFA22BFF461A8E3A2399F883BA0E51741E80082B6CA3D0078D4FE6"
+                },
+    "evidenceHashes":  [
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run01_padxml\\launch.json",
+                               "sha256":  "429BA2309D838D3A0BB590C980EB11AAB6F031A2B270FFECF8B70EA5D90F50B5"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run01_padxml\\stderr.txt",
+                               "sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run01_padxml\\stdout.txt",
+                               "sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run02_create\\allegro.jrl",
+                               "sha256":  "080C78318C3EABB7B041F2236536381D478FAB449951A2B09D83E48EBD236E42"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run02_create\\batch_drc.log",
+                               "sha256":  "F5BCDD50C3F833A8705D0F18527485675CA7E09D63739E6A3560D83F7A6A8352"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run02_create\\create.txt",
+                               "sha256":  "F1A3FE3DAD99BB0E6E0BDBB10AFD4B97D53EABE04FDA385CDF31CEE4F315C013"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run02_create\\launch.json",
+                               "sha256":  "C27F44D79E6EDBB6CF49269421CB0D6C401494DDE0D560CF856D6C679D607BA8"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run02_create\\lesson04_create.executed.il",
+                               "sha256":  "2990DFC80B3B6BD1B5BFD6E9B7FCE35A17DE5BDBF18B2418B68840E330E72E18"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run02_create\\lesson04_create.executed.scr",
+                               "sha256":  "33E612557EAEF25355B69CA7BD4049EC77955C00F2C2874205FFBC874381CB53"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run02_create\\stderr.txt",
+                               "sha256":  "4ECB96522CAFA9079DBEDDE57C18F6B9B9975E26C7EAED87FB3DE28DFE93A91D"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run02_create\\stdout.txt",
+                               "sha256":  "628CD2FAC5A9F61294123B893AD65603FAC6B65BC489C048DB61C5BF62B186F7"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run03_create\\allegro.jrl",
+                               "sha256":  "FF8BC21BE728F9AEEFBCF9C72CEC2FE68A03EF76F82417C954CB7E329AEC9831"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run03_create\\batch_drc.log",
+                               "sha256":  "2BBC930E2B5721B5E709237C4D002A955481B98E54AC450360E91C4D4BCDCACF"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run03_create\\create.txt",
+                               "sha256":  "41A16B30B6A7C93F08E0AC9B7A3F0F406A95293AB0B8194564194C3372CBA61B"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run03_create\\launch.json",
+                               "sha256":  "B3A1E50AFA690F02DA5FD401FC9FDAC9A0E0494828EA71D2B7EEB7598D9F0685"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run03_create\\lesson04_create.executed.il",
+                               "sha256":  "D58C501DA9C05824B8743CD4C0A422002EAA4C421867EA10B1C058844820EC7B"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run03_create\\lesson04_create.executed.scr",
+                               "sha256":  "2748A913680B1F9F9500F5D5458187544BD9387BC083784782CC3792F8694ADB"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run03_create\\stderr.txt",
+                               "sha256":  "4ECB96522CAFA9079DBEDDE57C18F6B9B9975E26C7EAED87FB3DE28DFE93A91D"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run03_create\\stdout.txt",
+                               "sha256":  "3CB39B4CC50F7A547DBDF1F5B3E90AA75638B6FEBA53849BC76E90469E4A29F2"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run03_create\\training_spec.before_refdes_fix.json",
+                               "sha256":  "8E921A25F8DE305561609A3030C19A2AC417F24A9A38599CFC0BD25D50E9646A"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run04_create\\allegro.jrl",
+                               "sha256":  "BCE6E98AD85D354F5D46185F65DA62169005AC3E3D59FE45AC0BAE862718D327"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run04_create\\batch_drc.log",
+                               "sha256":  "C97C4799882FB4F033B46BC8E0413071DF5116FDFB7B9130641F51F872DA843A"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run04_create\\create.txt",
+                               "sha256":  "B6A81EE976D67E6A0B97D76F2FF6E5F58F3ED8ADE7409A42D69C0BAF173DDB78"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run04_create\\eda_l04_two_pin_training.log",
+                               "sha256":  "D1D7521029CCAC5A2B0B38BC29064CBB41A83B9DF60B76CDE748AA96CE83BB6F"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run04_create\\launch.json",
+                               "sha256":  "6196D92AB38C733BECC1DD0E45779DC416003D5AC2D5C04BF94FD33F461B4531"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run04_create\\master.tag",
+                               "sha256":  "8644EC310C97FCFCE720C9EE11D9EC5BE52DF80FA39AC199F316FB89BA3423AF"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run04_create\\stderr.txt",
+                               "sha256":  "4ECB96522CAFA9079DBEDDE57C18F6B9B9975E26C7EAED87FB3DE28DFE93A91D"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run04_create\\stdout.txt",
+                               "sha256":  "F55D52D8387A1434DBAF3A027286097B6888551CDD65CD2515550A2E8A38D994"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run05_reopen\\allegro.jrl",
+                               "sha256":  "AE2A8F0AD518A01176B68CE477DCBD1EA592089F145287205DD90EA49054A5A1"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run05_reopen\\extract.log",
+                               "sha256":  "41C415168920B321F6301F03D1DFA5D8DBE02E383993F3763E900DC0DA615F83"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run05_reopen\\geometry.tsv",
+                               "sha256":  "AA7842FE94CE454B3BE5C811222950F26ACAFA72E10679EC0BA1DB0B244C5E04"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run05_reopen\\launch.json",
+                               "sha256":  "495FB3197CA21611FC39C0B3B2E69524EF9D94E9F5E7F774EB915D778F75BFC1"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run05_reopen\\lesson04_verify.executed.il",
+                               "sha256":  "6000C6B9E40C1B5E9FD7342945C5701FDEB679CEAF670C5387F25253F7A9B1ED"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run05_reopen\\lesson04_verify.executed.scr",
+                               "sha256":  "EA313A1958436E015167C96490D85C499167B13F85C157009769302C8778207B"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run05_reopen\\library_before.json",
+                               "sha256":  "EA45ACD62C4F64FE3E84C52AAD708B9E0D4CF49F408A587002A647D116B8B295"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run05_reopen\\pads.tsv",
+                               "sha256":  "54D4C450294DED2DEC64BFC2BC1F615871625E5EC6617AD93344F71C877A9906"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run05_reopen\\pins.tsv",
+                               "sha256":  "B2C13D6754AE98B052DDDB997D7230A62EB96E254D85210256DDC6990E0AC4D9"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run05_reopen\\segments.tsv",
+                               "sha256":  "AA33575B33BDA0AA12EA448C63BD03E63B25985F228CFC760DA70A8609574C51"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run05_reopen\\stderr.txt",
+                               "sha256":  "1E5425B3C413CD80A27940AA1870905B3DBFCBCBB2DE2201C8AC2E14E2362E57"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run05_reopen\\stdout.txt",
+                               "sha256":  "C6D5B98A4EBE69C99916659A0EC946376029D2986B09D7F8EC3BD1E8CE1669EB"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run05_reopen\\texts.tsv",
+                               "sha256":  "AE51FA0FF22754C6965A5E966E2323C326CD6EE248775476E032CD89582D11CF"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run05_reopen\\verify.txt",
+                               "sha256":  "D2EF7F27666D4831E9505420E0FC0B57BFAD404C43FC90E24BA0138E9F8FBEAE"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run06_reopen\\allegro.jrl",
+                               "sha256":  "ED1C9847A348A16D715F53E4C997AE158379D29BE4103EE1CFAF195BD25A4BE8"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run06_reopen\\extract.log",
+                               "sha256":  "41C415168920B321F6301F03D1DFA5D8DBE02E383993F3763E900DC0DA615F83"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run06_reopen\\geometry.tsv",
+                               "sha256":  "AA7842FE94CE454B3BE5C811222950F26ACAFA72E10679EC0BA1DB0B244C5E04"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run06_reopen\\launch.json",
+                               "sha256":  "0B63BE65E40CDE53E56D969F247D8CBB5CA36E3D9813DC92DA84C7B6927D263C"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run06_reopen\\library_before.json",
+                               "sha256":  "EA45ACD62C4F64FE3E84C52AAD708B9E0D4CF49F408A587002A647D116B8B295"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run06_reopen\\pads.tsv",
+                               "sha256":  "54D4C450294DED2DEC64BFC2BC1F615871625E5EC6617AD93344F71C877A9906"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run06_reopen\\pins.tsv",
+                               "sha256":  "B2C13D6754AE98B052DDDB997D7230A62EB96E254D85210256DDC6990E0AC4D9"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run06_reopen\\segments.tsv",
+                               "sha256":  "35EE484C1F9062FE12F7ACD1D35CF38AEC07DE7936769517909A865DEA6768E2"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run06_reopen\\stderr.txt",
+                               "sha256":  "1E5425B3C413CD80A27940AA1870905B3DBFCBCBB2DE2201C8AC2E14E2362E57"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run06_reopen\\stdout.txt",
+                               "sha256":  "C6D5B98A4EBE69C99916659A0EC946376029D2986B09D7F8EC3BD1E8CE1669EB"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run06_reopen\\texts.tsv",
+                               "sha256":  "AE51FA0FF22754C6965A5E966E2323C326CD6EE248775476E032CD89582D11CF"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson04_package_20261017\\run06_reopen\\verify.txt",
+                               "sha256":  "68483950383733CFB3EF4494BC3F2571850824C1371AD082834CA9E1DFB8A3DD"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\library\\eda_l04_smd_1000x1500.log",
+                               "sha256":  "538AB4592E87BF54858109EFFFBBFD32EC921F7CD656A82C71C36A77971912B3"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\library\\eda_l04_smd_1000x1500.pad",
+                               "sha256":  "032BD46D936451F723FA3C7E17F2A9DA4BA4346F84247E34C23F63ACD02C8632"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\library\\eda_l04_smd_1000x1500.pxml",
+                               "sha256":  "101B59A8A5D6D55C6D52D93E2130D1C3D84C1D818947DC2E0907219E5CBD2B4F"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\library\\eda_l04_two_pin_training.dra",
+                               "sha256":  "F3866391446086B7B7B41DDACF6A64E0BAB1D3E33BD495EBF54650E87DD9DCCE"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\library\\eda_l04_two_pin_training.psm",
+                               "sha256":  "0228B1681C88D7A48C22A6A5E3B8C69CC9DB9B7E610A41C3F8A20BEAEB0FFD76"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\library\\padstack_editor.jrl",
+                               "sha256":  "0037CAADA9C7A4289F927AEA0B8D84246602D9DDE2F5CFFE13385A2AD02269C8"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\training_spec.json",
+                               "sha256":  "AEB77549504F7F61AFAFC45E40624C28A7147A3DAC8D797A6EEE422801188EBB"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\lesson04_create.il",
+                               "sha256":  "FA0DBAB0654E6BA2AEA9A2F1EB337D7360424E0D5D35CBD6DE36D17718C4CB15"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\lesson04_create.scr",
+                               "sha256":  "3AC60E86F51D72218FA4500F141CEFC19C19DD533B43B616D4DE28BE78DF6110"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\lesson04_verify.il",
+                               "sha256":  "B1426085AD798FB67EF5233548EAA0089B67FCD2F5198B49196762F44FE56F91"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\lesson04_verify.scr",
+                               "sha256":  "C5F0EA2758A1C3C100FA3A50D1A99D1109FEF9C8E577D75B799E66F5695E08AE"
+                           },
+                           {
+                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\lesson04_preview_source.txt",
+                               "sha256":  "D716059C6DEFA22BFF461A8E3A2399F883BA0E51741E80082B6CA3D0078D4FE6"
+                           }
+                       ]
+}

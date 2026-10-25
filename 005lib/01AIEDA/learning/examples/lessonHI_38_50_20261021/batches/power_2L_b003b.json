@@ -1,0 +1,642 @@
+{
+  "status": "ENGINEERING_CANDIDATE_FOR_NATIVE_PILOT",
+  "prerequisites": [
+    "power_paths_02d C9 output and ground network implemented",
+    "PC13/14/15 inside fanout coordinated with MCU author, vias about42/40.9/39.9 at y29.6/29.3/28.6",
+    "Existing outwardG31 decoupling loops and C17 preserved"
+  ],
+  "operations": [
+    {
+      "type": "route",
+      "id": "STAR_C9_FEED",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          29.8,
+          30.95
+        ],
+        [
+          30.7,
+          31.85
+        ],
+        [
+          30.7,
+          32
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "C9.1",
+      "to": "V_HI_V3_SOURCE",
+      "purpose": "Main output source after C9, never chain external loads through MCU neck."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_V3_SOURCE",
+      "net": "V3V3",
+      "xy": [
+        30.7,
+        32
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad source bridge via"
+    },
+    {
+      "type": "route",
+      "id": "STAR_BOTTOM_FEED",
+      "net": "V3V3",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          30.7,
+          32
+        ],
+        [
+          30.7,
+          24
+        ],
+        [
+          37,
+          24
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "V_HI_V3_SOURCE",
+      "to": "V_HI_V3_STAR",
+      "purpose": "Bounded outer-layer bridge under SPI bank; TOP GND strap below restores2L short return across slit."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_V3_STAR",
+      "net": "V3V3",
+      "xy": [
+        37,
+        24
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad inside noEP LQFP body, direct feed to .6 bus not through pad24."
+    },
+    {
+      "type": "route",
+      "id": "STAR_SOUTH_BUS",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          37,
+          24
+        ],
+        [
+          43,
+          24
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V_HI_V3_STAR",
+      "to": "NODE_V3_RIGHT_SOUTH",
+      "purpose": "Inside-body bus clear of south pad inner ends by .35mm after halfwidth."
+    },
+    {
+      "type": "route",
+      "id": "STAR_RIGHT_BUS",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          43,
+          24
+        ],
+        [
+          43,
+          29.9
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "NODE_V3_RIGHT_SOUTH",
+      "to": "NODE_V3_RIGHT_NORTH",
+      "purpose": "Right inner bus leaves PC13/14/15 inward fanout atx<=42.0; do not shift to43.25 near GND47."
+    },
+    {
+      "type": "route",
+      "id": "STAR_U1_24",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          24.25
+        ],
+        [
+          37,
+          24.25
+        ],
+        [
+          37,
+          24
+        ]
+      ],
+      "widths": [
+        0.25,
+        0.6
+      ],
+      "from": "U1.24",
+      "to": "V_HI_V3_STAR",
+      "purpose": "1.25mm inward escape, preserve existing outward C13 loop."
+    },
+    {
+      "type": "route",
+      "id": "STAR_U1_36",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          42.75,
+          22.75
+        ],
+        [
+          42.75,
+          24
+        ]
+      ],
+      "widths": [
+        0.25
+      ],
+      "from": "U1.36",
+      "to": "STAR_SOUTH_BUS",
+      "purpose": "1.25mm inward escape, preserve C14 and USB outward corridor."
+    },
+    {
+      "type": "route",
+      "id": "STAR_U1_48",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          29.75
+        ],
+        [
+          43,
+          29.75
+        ]
+      ],
+      "widths": [
+        0.25
+      ],
+      "from": "U1.48",
+      "to": "STAR_RIGHT_BUS",
+      "purpose": "1.25mm inward escape, preserve C15/C16 local branches."
+    },
+    {
+      "type": "route",
+      "id": "STAR_U1_VBAT",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          42.75,
+          31.25
+        ],
+        [
+          42.75,
+          30.15
+        ],
+        [
+          43,
+          29.9
+        ]
+      ],
+      "widths": [
+        0.25,
+        0.25
+      ],
+      "from": "U1.1",
+      "to": "STAR_RIGHT_BUS",
+      "purpose": "1.453553mm total neck incl diagonal, VBAT low load, preserve external C17 and HSE notch."
+    },
+    {
+      "type": "route",
+      "id": "STAR_2L_RETURN_STRAP",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          32.45,
+          25.2748
+        ],
+        [
+          31.2,
+          25.2748
+        ],
+        [
+          30.7,
+          25.7748
+        ],
+        [
+          30.7,
+          29
+        ],
+        [
+          29.8,
+          29
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "G31_C13_GND_VIA",
+      "to": "C9.2",
+      "purpose": "Actual TOP ground strap across BOTTOM V3 bridge, avoids requiring2L return around entire slit; useful also4L, require plane/via graph."
+    },
+    {
+      "type": "route",
+      "id": "V3_VDDA_PRE_FILTER",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          29.8,
+          30.95
+        ],
+        [
+          28.4,
+          32.35
+        ],
+        [
+          22,
+          32.35
+        ],
+        [
+          22,
+          37
+        ],
+        [
+          29.5,
+          37
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "C9.1",
+      "to": "R26.1",
+      "purpose": "Low-current prefilter V3V3 feed detours left of J10, preserving short TOP ADC_INPUT path; no digital loads downstream of R26. Additional length belongs before filter and local C18/C19 decoupling.",
+      "length_mm": 20.529898987322333
+    }
+  ],
+  "rules": [
+    {
+      "id": "HI_U1_INNER_LEFT",
+      "polygon": [
+        [
+          35.1,
+          23.8
+        ],
+        [
+          37.3,
+          23.8
+        ],
+        [
+          37.3,
+          25.1
+        ],
+        [
+          35.1,
+          25.1
+        ]
+      ],
+      "layer": "TOP",
+      "physicalCopy": "current V3V3 .6/.25/maxneck1 sourceCSet",
+      "physicalOnlyDelta": {
+        "necklength_max_mm": 1.3
+      },
+      "actualNewNeck_mm": 1.25,
+      "spacingCopies": [
+        "current POWER_LV",
+        "current GROUND"
+      ],
+      "spacingOnlyDelta": {
+        "smdpin_line": 0.2,
+        "line_line": 0.2
+      }
+    },
+    {
+      "id": "HI_U1_INNER_SOUTH",
+      "polygon": [
+        [
+          41.95,
+          22.1
+        ],
+        [
+          43.55,
+          22.1
+        ],
+        [
+          43.55,
+          24.3
+        ],
+        [
+          41.95,
+          24.3
+        ]
+      ],
+      "layer": "TOP",
+      "physicalCopy": "current V3V3 .6/.25/maxneck1 sourceCSet",
+      "physicalOnlyDelta": {
+        "necklength_max_mm": 1.3
+      },
+      "actualNewNeck_mm": 1.25,
+      "spacingCopies": [
+        "current POWER_LV",
+        "current GROUND"
+      ],
+      "spacingOnlyDelta": {
+        "smdpin_line": 0.2,
+        "line_line": 0.2
+      }
+    },
+    {
+      "id": "HI_U1_INNER_NE",
+      "polygon": [
+        [
+          42.5,
+          28.85
+        ],
+        [
+          44.95,
+          28.85
+        ],
+        [
+          44.95,
+          31.95
+        ],
+        [
+          42.5,
+          31.95
+        ]
+      ],
+      "layer": "TOP",
+      "physicalCopy": "current V3V3 .6/.25/maxneck1 sourceCSet",
+      "physicalOnlyDelta": {
+        "necklength_max_mm": 1.5
+      },
+      "actualNewNecks_mm": {
+        "U1.48": 1.25,
+        "U1.1": 1.453553
+      },
+      "spacingCopies": [
+        "current POWER_LV",
+        "current GROUND"
+      ],
+      "spacingOnlyDelta": {
+        "smdpin_line": 0.2,
+        "line_line": 0.2
+      }
+    }
+  ],
+  "scopeNotes": [
+    "These3new local regions are separate from existing3 G31 outward regions. Keep all global/other fields and hole/via clearances unchanged.",
+    "If native neck algorithm merges new inward and existing outward lines through same pad, report actual measured length before changing limits; do not silently increase beyond1.5.",
+    "V3V3 overall distribution is .6mm. .25 only declared1.25/1.453553mm pad escapes, not long trunk.",
+    "2L BOTTOM power bridge cuts GND locally; require TOP return strap actually connected to existingG31 ground via and C9 ground; recompute GND plane connected components, necks and detours.",
+    "4L BOTTOM feed cannot be called close L3 referenced until actual L3 GND generated; existing actual L2 is continuous and remains uncut by this route.",
+    "CAN/header loads branch independently at C9/main source, not downstream of MCU pin escapes.",
+    "03 original x28.4 y32.35..37 crossed ADC_INPUT at y34. Original rejected,03b detours x22. Full-group geometry and native DRC must confirm J10 PTH clearance and actual ground return."
+  ],
+  "revision": "03b preserves original03 history; fixes ADC_INPUT crossing by rerouting low-current prefilter supply",
+  "constraintOperations": [
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_U1_INNER_LEFT_P_2L",
+      "copyFrom": "HI2L_P_POWER_LV",
+      "values": {
+        "necklength_max": "1.3 MM"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_U1_INNER_LEFT_S_POWER_2L",
+      "copyFrom": "HI2L_S_POWER_LV",
+      "values": {
+        "smdpin_line": "0.2 MM",
+        "line_line": "0.2 MM"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_U1_INNER_LEFT_S_GROUND_2L",
+      "copyFrom": "HI2L_S_GROUND",
+      "values": {
+        "smdpin_line": "0.2 MM",
+        "line_line": "0.2 MM"
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_U1_INNER_LEFT",
+      "layer": "TOP",
+      "polygon": [
+        [
+          35.1,
+          23.8
+        ],
+        [
+          37.3,
+          23.8
+        ],
+        [
+          37.3,
+          25.1
+        ],
+        [
+          35.1,
+          25.1
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_POWER_LV_P",
+          "cset": "HI_U1_INNER_LEFT_P_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_POWER_LV_S",
+          "cset": "HI_U1_INNER_LEFT_S_POWER_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GROUND_S",
+          "cset": "HI_U1_INNER_LEFT_S_GROUND_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_U1_INNER_SOUTH_P_2L",
+      "copyFrom": "HI2L_P_POWER_LV",
+      "values": {
+        "necklength_max": "1.3 MM"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_U1_INNER_SOUTH_S_POWER_2L",
+      "copyFrom": "HI2L_S_POWER_LV",
+      "values": {
+        "smdpin_line": "0.2 MM",
+        "line_line": "0.2 MM"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_U1_INNER_SOUTH_S_GROUND_2L",
+      "copyFrom": "HI2L_S_GROUND",
+      "values": {
+        "smdpin_line": "0.2 MM",
+        "line_line": "0.2 MM"
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_U1_INNER_SOUTH",
+      "layer": "TOP",
+      "polygon": [
+        [
+          41.95,
+          22.1
+        ],
+        [
+          43.55,
+          22.1
+        ],
+        [
+          43.55,
+          24.3
+        ],
+        [
+          41.95,
+          24.3
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_POWER_LV_P",
+          "cset": "HI_U1_INNER_SOUTH_P_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_POWER_LV_S",
+          "cset": "HI_U1_INNER_SOUTH_S_POWER_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GROUND_S",
+          "cset": "HI_U1_INNER_SOUTH_S_GROUND_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_U1_INNER_NE_P_2L",
+      "copyFrom": "HI2L_P_POWER_LV",
+      "values": {
+        "necklength_max": "1.5 MM"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_U1_INNER_NE_S_POWER_2L",
+      "copyFrom": "HI2L_S_POWER_LV",
+      "values": {
+        "smdpin_line": "0.2 MM",
+        "line_line": "0.2 MM"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_U1_INNER_NE_S_GROUND_2L",
+      "copyFrom": "HI2L_S_GROUND",
+      "values": {
+        "smdpin_line": "0.2 MM",
+        "line_line": "0.2 MM"
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_U1_INNER_NE",
+      "layer": "TOP",
+      "polygon": [
+        [
+          42.5,
+          28.85
+        ],
+        [
+          44.95,
+          28.85
+        ],
+        [
+          44.95,
+          31.95
+        ],
+        [
+          42.5,
+          31.95
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_POWER_LV_P",
+          "cset": "HI_U1_INNER_NE_P_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_POWER_LV_S",
+          "cset": "HI_U1_INNER_NE_S_POWER_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GROUND_S",
+          "cset": "HI_U1_INNER_NE_S_GROUND_2L"
+        }
+      ]
+    }
+  ],
+  "engineeringSource": {
+    "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\power_star_03b.json",
+    "sha256": "C05C40DBFE84F2E41B3C190A1B610E2AF79481A4A790F72A2C63F1660E03C161"
+  },
+  "nativeVariant": "2L",
+  "adaptationNotes": [
+    "All CSet source templates are copied, not dynamic parents. Region scope follows native classification per domain.",
+    "VDDA is separated into its own 4L physical class before region-class assignment so its direct .3/.2 P_VDDA_030 cannot be overridden by copied .6/.25 POWER physical region.",
+    "Original budgets preserved for native merged-neck/overlapping-region feedback; do not raise automatically."
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "variant": "2L",
+  "status": "TEST_PLAN_ONLY_ALL_MEASUREMENTS_NOT_RUN",
+  "boardSHA256": "aa3bfc0e01b06cb1058462439c71e56bc316f1f2929859b6a224320be1013420",
+  "coordinateSystem": "Native board absolute mm; component pad XY; top view Y+ upward. SVG displays Y reversed for page only.",
+  "notCertifiedAsTestPoints": true,
+  "powerInputDesignV": [
+    9,
+    16
+  ],
+  "V3V3NormalLoadMaxA": 0.15,
+  "externalGPIOAndHeadersCombinedMaxA": 0.01,
+  "ambientDesignC": [
+    0,
+    40
+  ],
+  "initialCurrentLimitA": null,
+  "initialCurrentLimitReason": "Confirm from actual assembly, startup and safe power budget; not fuse rating or output rail load rating.",
+  "points": [
+    {
+      "id": "JK59-2L-01",
+      "label": "1",
+      "net": "VIN_RAW",
+      "point": "J1.1",
+      "xy": [
+        6.0,
+        14.27
+      ],
+      "groundPoint": "J1.2",
+      "groundXY": [
+        6.0,
+        11.73
+      ],
+      "expectation": "Design input9-16V; first approved startup at9V, current limit to be confirmed",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-02",
+      "label": "2",
+      "net": "VIN_FUSED",
+      "point": "F1.2",
+      "xy": [
+        10.8764,
+        13.0
+      ],
+      "groundPoint": "J1.2",
+      "groundXY": [
+        6.0,
+        11.73
+      ],
+      "expectation": "Fuse drop/continuity under known input and load",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-03",
+      "label": "3",
+      "net": "VIN_PROT",
+      "point": "C1.1",
+      "xy": [
+        9.95,
+        18.3
+      ],
+      "groundPoint": "C1.2",
+      "groundXY": [
+        12.45,
+        18.3
+      ],
+      "expectation": "After fuse+reverse diode; no surge/TVS certification",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-04",
+      "label": "4",
+      "net": "VIN_PROT",
+      "point": "U2.3",
+      "xy": [
+        24.2,
+        20.05
+      ],
+      "groundPoint": "U2.1",
+      "groundXY": [
+        24.2,
+        21.95
+      ],
+      "expectation": "Local buck input and startup/ripple",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-05",
+      "label": "5",
+      "net": "V5",
+      "point": "C5.1",
+      "xy": [
+        14.4,
+        23.1
+      ],
+      "groundPoint": "C5.2",
+      "groundXY": [
+        14.4,
+        26.148
+      ],
+      "expectation": "Design nominal5.010815V; source calculation4.876105-5.145987V",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-06",
+      "label": "6",
+      "net": "V5",
+      "point": "C8.1",
+      "xy": [
+        24.2,
+        31.0
+      ],
+      "groundPoint": "C8.2",
+      "groundXY": [
+        24.2,
+        28.968
+      ],
+      "expectation": "LDO input; compare to V5 under actual load",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-07",
+      "label": "7",
+      "net": "V3V3",
+      "point": "C9.1",
+      "xy": [
+        29.8,
+        30.95
+      ],
+      "groundPoint": "C9.2",
+      "groundXY": [
+        29.8,
+        28.918
+      ],
+      "expectation": "Nominal3.3V; IC conditional static full-temperature1.5% window3.2505-3.3495V",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-08",
+      "label": "8",
+      "net": "V3V3",
+      "point": "U1.1",
+      "xy": [
+        42.75,
+        31.25
+      ],
+      "groundPoint": "U1.47",
+      "groundXY": [
+        44.25,
+        29.25
+      ],
+      "expectation": "Verify actual supply terminal; do not probe fine pitch without suitable access",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-09",
+      "label": "9",
+      "net": "V3V3",
+      "point": "U1.24",
+      "xy": [
+        35.75,
+        24.25
+      ],
+      "groundPoint": "U1.23",
+      "groundXY": [
+        35.75,
+        24.75
+      ],
+      "expectation": "Verify local MCU supply and ripple",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-10",
+      "label": "10",
+      "net": "V3V3",
+      "point": "U1.36",
+      "xy": [
+        42.75,
+        22.75
+      ],
+      "groundPoint": "U1.35",
+      "groundXY": [
+        42.25,
+        22.75
+      ],
+      "expectation": "Verify local MCU supply and ripple",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-11",
+      "label": "11",
+      "net": "V3V3",
+      "point": "U1.48",
+      "xy": [
+        44.25,
+        29.75
+      ],
+      "groundPoint": "U1.47",
+      "groundXY": [
+        44.25,
+        29.25
+      ],
+      "expectation": "Verify local MCU supply and ripple",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-12",
+      "label": "12",
+      "net": "V3V3",
+      "point": "U5.3",
+      "xy": [
+        64.0,
+        13.46
+      ],
+      "groundPoint": "U5.2",
+      "groundXY": [
+        64.0,
+        14.73
+      ],
+      "expectation": "Verify CAN supply, loading and startup",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-13",
+      "label": "13",
+      "net": "USB_VBUS",
+      "point": "J2.A4_B9",
+      "xy": [
+        37.6,
+        7.355
+      ],
+      "groundPoint": "J2.A1_B12",
+      "groundXY": [
+        36.8,
+        7.355
+      ],
+      "expectation": "Sense only, never supply V5/V3V3; host/cable conditions recorded",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-14",
+      "label": "14",
+      "net": "VDDA",
+      "point": "C18.1",
+      "xy": [
+        37.0,
+        33.2
+      ],
+      "groundPoint": "C18.2",
+      "groundXY": [
+        37.0,
+        34.7748
+      ],
+      "expectation": "Nominal3.3V after R26; check noise and reference",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-15",
+      "label": "15",
+      "net": "NRST",
+      "point": "C21.1",
+      "xy": [
+        39.3764,
+        36.25
+      ],
+      "groundPoint": "C21.2",
+      "groundXY": [
+        37.8016,
+        36.25
+      ],
+      "expectation": "Verify default pull state/ramp under actual assembly; logic thresholds per ST",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-16",
+      "label": "16",
+      "net": "BOOT0",
+      "point": "R28.1",
+      "xy": [
+        52.8984,
+        28.0
+      ],
+      "groundPoint": "R28.2",
+      "groundXY": [
+        51.3236,
+        28.0
+      ],
+      "expectation": "Verify default pull state/ramp under actual assembly; logic thresholds per ST",
+      "measurement": null,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "JK59-2L-17",
+      "label": "17",
+      "net": "BOOT1",
+      "point": "R29.1",
+      "xy": [
+        31.4,
+        23.0
+      ],
+      "groundPoint": "R29.2",
+      "groundXY": [
+        29.8252,
+        23.0
+      ],
+      "expectation": "Verify default pull state/ramp under actual assembly; logic thresholds per ST",
+      "measurement": null,
+      "result": "NOT_RUN"
+    }
+  ]
+}

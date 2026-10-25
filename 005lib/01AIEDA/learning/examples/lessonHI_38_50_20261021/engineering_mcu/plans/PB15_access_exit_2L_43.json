@@ -1,0 +1,89 @@
+{
+  "status": "CANDIDATE_ACCESS_EXIT_PENDING_NATIVE",
+  "variant": "2L",
+  "batchId": "PB15_access_exit_2L_43",
+  "operations": [
+    {
+      "type": "deleteVia",
+      "id": "PB15_EAST_RETURN_RIP",
+      "net": "GND",
+      "xy": [
+        38,
+        20
+      ]
+    },
+    {
+      "type": "deleteSegment",
+      "id": "PB15_UP_TAIL_RIP",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          38.5,
+          20.7
+        ],
+        [
+          38.5,
+          22.3
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "via",
+      "id": "PB15_EAST_RETURN_RELOCATED",
+      "net": "GND",
+      "xy": [
+        36.55,
+        19.6
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26,
+      "purpose": "Retain a real nearby application-ground stitch while opening the southern GPIO outlet; refresh actual plane connection and all-layer via-only parent permissions."
+    },
+    {
+      "type": "route",
+      "id": "PB15_DOWN_NORMAL_EXIT",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "width": 0.2,
+      "points": [
+        [
+          38.5,
+          20.7
+        ],
+        [
+          38.1,
+          20.3
+        ],
+        [
+          38.1,
+          19.7
+        ]
+      ],
+      "purpose": "Replace upward dead-end partial with accessible southern normal-width route, preserving MCU TOP source and all power/ADC/HSE copper."
+    }
+  ],
+  "partialEndpoints": {
+    "GPIO_PB15": {
+      "xy": [
+        38.1,
+        19.7
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.28"
+    }
+  },
+  "issues": [],
+  "returnDistancesMM": {
+    "newGPIOendToGround": 1.5532224567009107,
+    "PA10sourceToGround": 3.565459297201416,
+    "attachSourceToGround": 3.063494736408077
+  },
+  "pending": [
+    "Actual application-ground graph/plane geometry, not nominal same-net label",
+    "Recopy all-layer actual via permission parent at relocated return",
+    "Complete PB15 long path/reference and native DRC before acceptance"
+  ]
+}

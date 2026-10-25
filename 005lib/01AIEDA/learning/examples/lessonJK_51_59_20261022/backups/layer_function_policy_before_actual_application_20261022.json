@@ -1,0 +1,44 @@
+{
+  "source": "Direct user instruction 2026-10-22 Asia/Shanghai",
+  "physicalLayerNames": [
+    "TOP",
+    "L2",
+    "L3",
+    "BOTTOM"
+  ],
+  "preferredFunctions": {
+    "TOP": [
+      "components",
+      "signal"
+    ],
+    "L2": [
+      "continuous_common_GND_plane"
+    ],
+    "L3": [
+      "power_plane"
+    ],
+    "BOTTOM": [
+      "signal"
+    ]
+  },
+  "ordinaryInnerSignalRoutingApproved": false,
+  "trainingImplementationProposal": {
+    "L2": "common continuous GND replaces old isolated quiet island/void strategy",
+    "L3": "single V3V3 plane, other power rails retain existing surface copper",
+    "status": "NATIVE_REBUILD_PENDING"
+  },
+  "legacyB019": {
+    "L2": "GND plus HSE quiet separation",
+    "L3": "GND",
+    "conformsToNewDefault": false
+  },
+  "previousL2SignalCandidates": "HISTORICAL_COMPARISON_ONLY_DO_NOT_EXECUTE",
+  "mustVerify": [
+    "actual plane net ownership and geometry",
+    "GND and V3V3 endpoint connectivity",
+    "actual fill up-to-date/islands/openings",
+    "BOTTOM reference to real power copper",
+    "GND-power decoupling return at reference changes"
+  ],
+  "templateAndShortcutsChanged": false
+}

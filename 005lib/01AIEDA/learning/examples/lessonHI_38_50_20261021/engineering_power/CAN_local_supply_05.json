@@ -1,0 +1,168 @@
+{
+  "status": "CANDIDATE_NEEDS_MAIN_V3_FEED_AND_GROUP_NATIVE_REVIEW",
+  "operations": [
+    {
+      "type": "route",
+      "id": "CAN_VCC_LOCAL",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          59.8,
+          13.46
+        ],
+        [
+          61.8,
+          13.46
+        ],
+        [
+          64,
+          13.46
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "C12.1",
+      "to": "U5.3",
+      "purpose": "Independent main-source supply must reachC12positive; C11.1 inline local100nF toVCC, .6not throughMCUescape."
+    },
+    {
+      "type": "route",
+      "id": "CAN_GND_LOCAL",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          64,
+          14.73
+        ],
+        [
+          62.7,
+          14.73
+        ],
+        [
+          61.8,
+          15.0348
+        ],
+        [
+          59.8,
+          15.0348
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "U5.2",
+      "to": "C12.2",
+      "purpose": "DirectTOPwide GNDlink fromC11/C12negative totransceiverGND, not depend only on distantplane."
+    },
+    {
+      "type": "route",
+      "id": "CAN_GND_VIA_A",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          62.7,
+          14.73
+        ],
+        [
+          62.6,
+          14.73
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "CAN_GND_LOCAL",
+      "to": "V_HI_CAN_GND_A",
+      "purpose": "Offpad nearU5GND andC11 HFloop."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_CAN_GND_A",
+      "net": "GND",
+      "xy": [
+        62.6,
+        14.73
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "LocalGNDreference via, powercurrentnotthin signalreturn."
+    },
+    {
+      "type": "route",
+      "id": "CAN_GND_VIA_B",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          60.8,
+          15.0348
+        ],
+        [
+          60.8,
+          15.8348
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "CAN_GND_LOCAL",
+      "to": "V_HI_CAN_GND_B",
+      "purpose": "Second groundvia offC11/C12negativepads."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_CAN_GND_B",
+      "net": "GND",
+      "xy": [
+        60.8,
+        15.8348
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Common reference parallelgroundvia, actualplane connectivity required."
+    },
+    {
+      "type": "route",
+      "id": "CAN_TX_PULLUP_V3",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          59.8,
+          13.46
+        ],
+        [
+          58.2,
+          13.46
+        ],
+        [
+          58.2,
+          17.9
+        ],
+        [
+          60.4016,
+          17.9
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "C12.1",
+      "to": "R14.1",
+      "purpose": "10kTXDidle pullup receives independent3V3; do not call a33ohm dampingresistor."
+    }
+  ],
+  "rules": [],
+  "sourceEndpoint": "C12.1 requires separatelyplanned.6mainV3V3feed fromC9/mainstar takeoff, not from U1pad/decapneck.",
+  "scopeNotes": [
+    "C11=100nF/C12=1uF. DirectTOP supplyandground form localcurrentloop plusreference vias. No guarantee of actual capMPN/DCbias/ESD/EMC.",
+    "OrdinaryUART/I2C/SPI/SWD routes must not thread through CANH/LbetweenU5andJ3 or throughdecouplingloop. MAXCAN60mA includednormal150mA budget."
+  ]
+}

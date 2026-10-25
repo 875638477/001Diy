@@ -1,0 +1,63 @@
+{
+  "status": "PASS_NATIVE_LOCAL_VIA_APPROVAL_PILOTS_BOTH_VARIANTS",
+  "variants": {
+    "4L": {
+      "status": "PASS_NATIVE_LOCAL_VIA_APPROVAL_AND_OUTSIDE_NEGATIVE_TRANSACTION_ROLLBACK",
+      "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native\\HI_4L_USB_aux_4L_b014.brd",
+      "sourceSHA256": "873A3BE37F23723CFDB65A86DD38C0358B00D11D96C64146C9E7276817E90A9B",
+      "topOnlyRegion": {
+        "insideDRCs": 3,
+        "outsideDRCs": 4
+      },
+      "allActualConductorLayerRegion": {
+        "insideDRCs": 0,
+        "outsideDRCs": 4
+      },
+      "rollbackViaCount": 77,
+      "sourceUnchanged": true,
+      "log": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\tinyVia_region_approval_4L_02",
+      "scope": "Two temporary isolated signal vias, actual native axlDRCItem physical Via List rule. No save, no fullboard DRC request; formal source vias and return topology still pending."
+    },
+    "2L": {
+      "status": "PASS_NATIVE_LOCAL_VIA_APPROVAL_AND_OUTSIDE_NEGATIVE_TRANSACTION_ROLLBACK",
+      "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native\\HI_2L_USB_aux_2L_b014.brd",
+      "sourceSHA256": "3D84945A5CC18046C82883328D0A743A670D5961D831D87251B8A6A0CDFFACC9",
+      "topOnlyRegion": {
+        "insideDRCs": 1,
+        "outsideDRCs": 2
+      },
+      "allActualConductorLayerRegion": {
+        "insideDRCs": 0,
+        "outsideDRCs": 2
+      },
+      "rollbackViaCount": 86,
+      "sourceUnchanged": true,
+      "log": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\tinyVia_region_approval_2L_01",
+      "scope": "Two temporary isolated signal vias, actual native axlDRCItem physical Via List rule. No save, no fullboard DRC request; formal source vias and return topology still pending."
+    }
+  },
+  "requiredImplementation": "Private throughvia approval must cover every actual traversed conductor layer. Do not spread .16 spacing/neck exceptions or inner-layer allowetch while adding via-list-only inner-layer region copies. Outside region original L28-only approval remains.",
+  "caveat": "DBGetDesign()->drcs can retain invalid/stale dbids after scoped checks (DRC_ALL_LAYERS nil in log); numeric scoped results and actual TOP_ONLY DRC attributes are evidence. Final wholeboard full update still mandatory.",
+  "officialSources": [
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlDRCItem.txt",
+      "sha256": "8F27E75086180451DE445F6A7AB7CA20734AAEA345164FA30EB725FE98AC90CE"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlRegionCreate.txt",
+      "sha256": "140DA2FC14F1819F7125AD68ED1DE59FC885582A0B85FC83B9BA239BB5624D8F"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlRegionAdd.txt",
+      "sha256": "1484C95F7F918B149F0ADD6EE0833513A9636EE30463917357F114C99DFEAC56"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlCnsClassTableCreate.txt",
+      "sha256": "887A840ED678FC5409117A17AB06792F34E49C518CDDEE00CE8186B8DD6CDAAB"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlCNSGetSpacing.txt",
+      "sha256": "0666ADA6B1E6AE5D4475423423ED9AA101D6A8EDD6B627584848DE5F9ABECF08"
+    }
+  ]
+}

@@ -1,0 +1,462 @@
+{
+  "scope": "independent critical electrical spec review, no native CAD/ERC/hardware claim",
+  "source_spec_sha256": "6b1ca3e3f1eb0bbd6ddc20bf78f82149c50063fedfac8467e04bd72853b5b257",
+  "count": 40,
+  "pass_count": 40,
+  "checks": [
+    {
+      "check": "unique_reference_designators",
+      "actual": 52,
+      "expected": 52,
+      "pass": true
+    },
+    {
+      "check": "vendor_pin_names_TPS54202DDCR",
+      "actual": [
+        "GND",
+        "SW",
+        "VIN",
+        "FB",
+        "EN",
+        "BOOT"
+      ],
+      "expected": [
+        "GND",
+        "SW",
+        "VIN",
+        "FB",
+        "EN",
+        "BOOT"
+      ],
+      "pass": true
+    },
+    {
+      "check": "vendor_pin_names_TLV75533PDBVR",
+      "actual": [
+        "IN",
+        "GND",
+        "EN",
+        "NC",
+        "OUT"
+      ],
+      "expected": [
+        "IN",
+        "GND",
+        "EN",
+        "NC",
+        "OUT"
+      ],
+      "pass": true
+    },
+    {
+      "check": "vendor_pin_names_TCAN332DR",
+      "actual": [
+        "TXD",
+        "GND",
+        "VCC",
+        "RXD",
+        "NC5",
+        "CANL",
+        "CANH",
+        "NC8"
+      ],
+      "expected": [
+        "TXD",
+        "GND",
+        "VCC",
+        "RXD",
+        "NC5",
+        "CANL",
+        "CANH",
+        "NC8"
+      ],
+      "pass": true
+    },
+    {
+      "check": "vendor_pin_names_2N7002",
+      "actual": [
+        "G",
+        "S",
+        "D"
+      ],
+      "expected": [
+        "G",
+        "S",
+        "D"
+      ],
+      "pass": true
+    },
+    {
+      "check": "vendor_pin_names_DMP2035U-7",
+      "actual": [
+        "G",
+        "S",
+        "D"
+      ],
+      "expected": [
+        "G",
+        "S",
+        "D"
+      ],
+      "pass": true
+    },
+    {
+      "check": "vendor_pin_names_USBLC6-2SC6",
+      "actual": [
+        "IO1A",
+        "GND",
+        "IO2A",
+        "IO2B",
+        "VBUS",
+        "IO1B"
+      ],
+      "expected": [
+        "IO1A",
+        "GND",
+        "IO2A",
+        "IO2B",
+        "VBUS",
+        "IO1B"
+      ],
+      "pass": true
+    },
+    {
+      "check": "critical_net_U_BUCK",
+      "actual": {
+        "1": "GND",
+        "2": "BUCK_SW",
+        "3": "VIN_PROT",
+        "4": "BUCK_FB",
+        "5": null,
+        "6": "BUCK_BOOT"
+      },
+      "expected": {
+        "1": "GND",
+        "2": "BUCK_SW",
+        "3": "VIN_PROT",
+        "4": "BUCK_FB",
+        "5": null,
+        "6": "BUCK_BOOT"
+      },
+      "pass": true
+    },
+    {
+      "check": "critical_net_U_LDO",
+      "actual": {
+        "1": "V5",
+        "2": "GND",
+        "3": "V5",
+        "4": null,
+        "5": "V3V3"
+      },
+      "expected": {
+        "1": "V5",
+        "2": "GND",
+        "3": "V5",
+        "4": null,
+        "5": "V3V3"
+      },
+      "pass": true
+    },
+    {
+      "check": "critical_net_U_CAN",
+      "actual": {
+        "1": "CAN_TXD",
+        "2": "GND",
+        "3": "V3V3",
+        "4": "CAN_RXD",
+        "5": null,
+        "6": "CAN_L",
+        "7": "CAN_H",
+        "8": null
+      },
+      "expected": {
+        "1": "CAN_TXD",
+        "2": "GND",
+        "3": "V3V3",
+        "4": "CAN_RXD",
+        "5": null,
+        "6": "CAN_L",
+        "7": "CAN_H",
+        "8": null
+      },
+      "pass": true
+    },
+    {
+      "check": "critical_net_Q_VBUS",
+      "actual": {
+        "1": "VBUS_GATE",
+        "2": "GND",
+        "3": "VBUS_PRESENT_N"
+      },
+      "expected": {
+        "1": "VBUS_GATE",
+        "2": "GND",
+        "3": "VBUS_PRESENT_N"
+      },
+      "pass": true
+    },
+    {
+      "check": "critical_net_Q_ATTACH",
+      "actual": {
+        "1": "USB_ATTACH_N",
+        "2": "V3V3",
+        "3": "USB_PULLUP_SRC"
+      },
+      "expected": {
+        "1": "USB_ATTACH_N",
+        "2": "V3V3",
+        "3": "USB_PULLUP_SRC"
+      },
+      "pass": true
+    },
+    {
+      "check": "critical_net_U_USB_ESD",
+      "actual": {
+        "1": "USB_DP",
+        "2": "GND",
+        "3": "USB_DM",
+        "4": "USB_DM",
+        "5": "USB_VBUS",
+        "6": "USB_DP"
+      },
+      "expected": {
+        "1": "USB_DP",
+        "2": "GND",
+        "3": "USB_DM",
+        "4": "USB_DM",
+        "5": "USB_VBUS",
+        "6": "USB_DP"
+      },
+      "pass": true
+    },
+    {
+      "check": "critical_net_D_REV",
+      "actual": {
+        "1": "VIN_PROT",
+        "2": "VIN_FUSED"
+      },
+      "expected": {
+        "1": "VIN_PROT",
+        "2": "VIN_FUSED"
+      },
+      "pass": true
+    },
+    {
+      "check": "bootstrap_is_between_BOOT_and_SW",
+      "actual": [
+        "BUCK_BOOT",
+        "BUCK_SW"
+      ],
+      "expected": [
+        "BUCK_BOOT",
+        "BUCK_SW"
+      ],
+      "pass": true
+    },
+    {
+      "check": "cc1_dedicated_Rd",
+      "actual": [
+        "GND",
+        "USB_CC1"
+      ],
+      "expected": [
+        "GND",
+        "USB_CC1"
+      ],
+      "pass": true
+    },
+    {
+      "check": "cc2_dedicated_Rd",
+      "actual": [
+        "GND",
+        "USB_CC2"
+      ],
+      "expected": [
+        "GND",
+        "USB_CC2"
+      ],
+      "pass": true
+    },
+    {
+      "check": "SBU_explicit_NC",
+      "actual": [
+        null,
+        null
+      ],
+      "expected": [
+        null,
+        null
+      ],
+      "pass": true
+    },
+    {
+      "check": "VBUS_gate_R_is10k",
+      "actual": "10k 1%",
+      "expected": "10k 1%",
+      "pass": true
+    },
+    {
+      "check": "VBUS_net_only_expected_endpoints",
+      "actual": [
+        "C_USB_VBUS",
+        "J_USB",
+        "R_VBUS_GATE",
+        "U_USB_ESD"
+      ],
+      "expected": [
+        "C_USB_VBUS",
+        "J_USB",
+        "R_VBUS_GATE",
+        "U_USB_ESD"
+      ],
+      "pass": true
+    },
+    {
+      "check": "I2C_open_drain_pullups_identical",
+      "actual": [
+        "2.2k 1%",
+        "2.2k 1%"
+      ],
+      "expected": [
+        "2.2k 1%",
+        "2.2k 1%"
+      ],
+      "pass": true
+    },
+    {
+      "check": "inductor_real_MPN",
+      "actual": "XAL6060-153MEC",
+      "expected": "XAL6060-153MEC",
+      "pass": true
+    },
+    {
+      "check": "inductor_shortlead_1_is_SW",
+      "actual": "BUCK_SW",
+      "expected": "BUCK_SW",
+      "pass": true
+    },
+    {
+      "check": "USB_profile_fit_DNP_disjoint",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "check": "USB_selects_exactly_one_driver_path",
+      "actual": [
+        "R_CAN_RX",
+        "R_CAN_TX",
+        "R_USB_DM",
+        "R_USB_DP"
+      ],
+      "expected": [
+        "R_CAN_RX",
+        "R_CAN_TX",
+        "R_USB_DM",
+        "R_USB_DP"
+      ],
+      "pass": true
+    },
+    {
+      "check": "USB_PA12_USB_path",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "USB_PA11_USB_path",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "USB_PA12_CAN_path",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "USB_PA11_CAN_path",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "USB_VBUS_not_power_short",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "CAN_profile_fit_DNP_disjoint",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "check": "CAN_selects_exactly_one_driver_path",
+      "actual": [
+        "R_CAN_RX",
+        "R_CAN_TX",
+        "R_USB_DM",
+        "R_USB_DP"
+      ],
+      "expected": [
+        "R_CAN_RX",
+        "R_CAN_TX",
+        "R_USB_DM",
+        "R_USB_DP"
+      ],
+      "pass": true
+    },
+    {
+      "check": "CAN_PA12_USB_path",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "CAN_PA11_USB_path",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "CAN_PA12_CAN_path",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "CAN_PA11_CAN_path",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "CAN_VBUS_not_power_short",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "check": "buck_static_max_below_LDO_5V5",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "I2C_R2k2_within_limits",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "VBUS_gate_min_above_spec4V5",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    }
+  ]
+}

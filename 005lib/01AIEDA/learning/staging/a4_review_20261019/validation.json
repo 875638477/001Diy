@@ -1,0 +1,1457 @@
+{
+  "schema": "capture_a4_readback_validation_v1",
+  "generated_at": "2026-10-19T03:52:39.329656+00:00",
+  "status": "PASS",
+  "inputs": {
+    "spec": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\integrated_circuit.json",
+    "pages": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\a4_review_20261019\\after_pages.tsv",
+    "instances": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\a4_review_20261019\\after_instances.tsv",
+    "pins": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\a4_review_20261019\\after_pins.tsv",
+    "wires": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\a4_review_20261019\\after_wires.tsv",
+    "aliases": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\a4_review_20261019\\after_aliases.tsv",
+    "offpages": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\a4_review_20261019\\after_offpages.tsv",
+    "layout_plan": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\a4_review_20261019\\layout_plan.json"
+  },
+  "counts": {
+    "pages": 12,
+    "instances": 80,
+    "pins": 272,
+    "wires": 266,
+    "aliases": 153,
+    "offpages": 113,
+    "unique_references": 80,
+    "unique_physical_pins": 272,
+    "connected_net_names": 69,
+    "explicit_no_connect": 6
+  },
+  "checks": {
+    "total": 9375,
+    "passed": 9375,
+    "failed": 0,
+    "by_category": {
+      "input": {
+        "total": 14,
+        "passed": 14
+      },
+      "counts": {
+        "total": 6,
+        "passed": 6
+      },
+      "pages": {
+        "total": 84,
+        "passed": 84
+      },
+      "instances": {
+        "total": 321,
+        "passed": 321
+      },
+      "geometry": {
+        "total": 6188,
+        "passed": 6188
+      },
+      "pins": {
+        "total": 1905,
+        "passed": 1905
+      },
+      "aliases": {
+        "total": 153,
+        "passed": 153
+      },
+      "offpages": {
+        "total": 452,
+        "passed": 452
+      },
+      "layout": {
+        "total": 252,
+        "passed": 252
+      }
+    }
+  },
+  "failures": [],
+  "pages": {
+    "ADC_GPIO": {
+      "page": "ADC_GPIO",
+      "size": "A4",
+      "metric": "1",
+      "width_native": "297000",
+      "height_native": "210000",
+      "pintopin": "2540",
+      "doc_per_inch": "100.0",
+      "granularity": "3.937007874015748",
+      "doc_width": "1169",
+      "doc_height": "826",
+      "draw_width": 1169.0,
+      "draw_height": 826.0
+    },
+    "RESET_BOOT": {
+      "page": "RESET_BOOT",
+      "size": "A4",
+      "metric": "1",
+      "width_native": "297000",
+      "height_native": "210000",
+      "pintopin": "2540",
+      "doc_per_inch": "100.0",
+      "granularity": "3.937007874015748",
+      "doc_width": "1169",
+      "doc_height": "826",
+      "draw_width": 1169.0,
+      "draw_height": 826.0
+    },
+    "CLOCK_DEBUG": {
+      "page": "CLOCK_DEBUG",
+      "size": "A4",
+      "metric": "1",
+      "width_native": "297000",
+      "height_native": "210000",
+      "pintopin": "2540",
+      "doc_per_inch": "100.0",
+      "granularity": "3.937007874015748",
+      "doc_width": "1169",
+      "doc_height": "826",
+      "draw_width": 1169.0,
+      "draw_height": 826.0
+    },
+    "UART_I2C": {
+      "page": "UART_I2C",
+      "size": "A4",
+      "metric": "1",
+      "width_native": "297000",
+      "height_native": "210000",
+      "pintopin": "2540",
+      "doc_per_inch": "100.0",
+      "granularity": "3.937007874015748",
+      "doc_width": "1169",
+      "doc_height": "826",
+      "draw_width": 1169.0,
+      "draw_height": 826.0
+    },
+    "SPI": {
+      "page": "SPI",
+      "size": "A4",
+      "metric": "1",
+      "width_native": "297000",
+      "height_native": "210000",
+      "pintopin": "2540",
+      "doc_per_inch": "100.0",
+      "granularity": "3.937007874015748",
+      "doc_width": "1169",
+      "doc_height": "826",
+      "draw_width": 1169.0,
+      "draw_height": 826.0
+    },
+    "MCU_CORE": {
+      "page": "MCU_CORE",
+      "size": "A4",
+      "metric": "1",
+      "width_native": "297000",
+      "height_native": "210000",
+      "pintopin": "2540",
+      "doc_per_inch": "100.0",
+      "granularity": "3.937007874015748",
+      "doc_width": "1169",
+      "doc_height": "826",
+      "draw_width": 1169.0,
+      "draw_height": 826.0
+    },
+    "MCU_SUPPLY": {
+      "page": "MCU_SUPPLY",
+      "size": "A4",
+      "metric": "1",
+      "width_native": "297000",
+      "height_native": "210000",
+      "pintopin": "2540",
+      "doc_per_inch": "100.0",
+      "granularity": "3.937007874015748",
+      "doc_width": "1169",
+      "doc_height": "826",
+      "draw_width": 1169.0,
+      "draw_height": 826.0
+    },
+    "POWER_INPUT_LDO": {
+      "page": "POWER_INPUT_LDO",
+      "size": "A4",
+      "metric": "1",
+      "width_native": "297000",
+      "height_native": "210000",
+      "pintopin": "2540",
+      "doc_per_inch": "100.0",
+      "granularity": "3.937007874015748",
+      "doc_width": "1169",
+      "doc_height": "826",
+      "draw_width": 1169.0,
+      "draw_height": 826.0
+    },
+    "POWER_BUCK": {
+      "page": "POWER_BUCK",
+      "size": "A4",
+      "metric": "1",
+      "width_native": "297000",
+      "height_native": "210000",
+      "pintopin": "2540",
+      "doc_per_inch": "100.0",
+      "granularity": "3.937007874015748",
+      "doc_width": "1169",
+      "doc_height": "826",
+      "draw_width": 1169.0,
+      "draw_height": 826.0
+    },
+    "USB_PORT": {
+      "page": "USB_PORT",
+      "size": "A4",
+      "metric": "1",
+      "width_native": "297000",
+      "height_native": "210000",
+      "pintopin": "2540",
+      "doc_per_inch": "100.0",
+      "granularity": "3.937007874015748",
+      "doc_width": "1169",
+      "doc_height": "826",
+      "draw_width": 1169.0,
+      "draw_height": 826.0
+    },
+    "USB_SENSE_ATTACH": {
+      "page": "USB_SENSE_ATTACH",
+      "size": "A4",
+      "metric": "1",
+      "width_native": "297000",
+      "height_native": "210000",
+      "pintopin": "2540",
+      "doc_per_inch": "100.0",
+      "granularity": "3.937007874015748",
+      "doc_width": "1169",
+      "doc_height": "826",
+      "draw_width": 1169.0,
+      "draw_height": 826.0
+    },
+    "CAN": {
+      "page": "CAN",
+      "size": "A4",
+      "metric": "1",
+      "width_native": "297000",
+      "height_native": "210000",
+      "pintopin": "2540",
+      "doc_per_inch": "100.0",
+      "granularity": "3.937007874015748",
+      "doc_width": "1169",
+      "doc_height": "826",
+      "draw_width": 1169.0,
+      "draw_height": 826.0
+    }
+  },
+  "geometry": {
+    "objects_checked": {
+      "instance_origin": 80,
+      "instance_model_body": 80,
+      "instance_model_pin_geometry": 544,
+      "reference_text_estimate": 80,
+      "value_text_estimate": 80,
+      "pin_hotspot": 272,
+      "wire": 266,
+      "alias_text_estimate": 153,
+      "offpage_native_bbox": 113,
+      "offpage_hotspot": 113,
+      "offpage_name_text_estimate": 113,
+      "module_planned_bbox": 80
+    },
+    "page_extents_by_kind": {
+      "ADC_GPIO": {
+        "instance_origin": [
+          240.0,
+          100.0,
+          860.0,
+          500.0
+        ],
+        "instance_model_body": [
+          240.0,
+          100.0,
+          940.0,
+          600.0
+        ],
+        "instance_model_pin_geometry": [
+          220.0,
+          120.0,
+          960.0,
+          580.0
+        ],
+        "reference_text_estimate": [
+          240.0,
+          70.0,
+          879.5,
+          490.0
+        ],
+        "value_text_estimate": [
+          240.0,
+          160.0,
+          938.0,
+          640.0
+        ],
+        "pin_hotspot": [
+          220.0,
+          120.0,
+          960.0,
+          580.0
+        ],
+        "wire": [
+          90.0,
+          120.0,
+          1090.0,
+          580.0
+        ],
+        "alias_text_estimate": [
+          100.0,
+          110.0,
+          999.5,
+          550.0
+        ],
+        "offpage_native_bbox": [
+          90.0,
+          110.0,
+          1090.0,
+          590.0
+        ],
+        "offpage_hotspot": [
+          90.0,
+          120.0,
+          1090.0,
+          580.0
+        ],
+        "offpage_name_text_estimate": [
+          102.0,
+          105.0,
+          1029.0,
+          585.0
+        ],
+        "module_planned_bbox": [
+          50.0,
+          70.0,
+          1130.0,
+          660.0
+        ]
+      },
+      "RESET_BOOT": {
+        "instance_origin": [
+          240.0,
+          100.0,
+          860.0,
+          520.0
+        ],
+        "instance_model_body": [
+          240.0,
+          100.0,
+          940.0,
+          560.0
+        ],
+        "instance_model_pin_geometry": [
+          220.0,
+          120.0,
+          960.0,
+          540.0
+        ],
+        "reference_text_estimate": [
+          240.0,
+          70.0,
+          879.5,
+          510.0
+        ],
+        "value_text_estimate": [
+          240.0,
+          160.0,
+          892.5,
+          600.0
+        ],
+        "pin_hotspot": [
+          220.0,
+          120.0,
+          960.0,
+          540.0
+        ],
+        "wire": [
+          90.0,
+          120.0,
+          1090.0,
+          540.0
+        ],
+        "alias_text_estimate": [
+          100.0,
+          110.0,
+          1058.0,
+          550.0
+        ],
+        "offpage_native_bbox": [
+          90.0,
+          110.0,
+          1090.0,
+          410.0
+        ],
+        "offpage_hotspot": [
+          90.0,
+          120.0,
+          1090.0,
+          400.0
+        ],
+        "offpage_name_text_estimate": [
+          102.0,
+          105.0,
+          1022.5,
+          405.0
+        ],
+        "module_planned_bbox": [
+          50.0,
+          70.0,
+          1130.0,
+          620.0
+        ]
+      },
+      "CLOCK_DEBUG": {
+        "instance_origin": [
+          240.0,
+          100.0,
+          860.0,
+          380.0
+        ],
+        "instance_model_body": [
+          240.0,
+          100.0,
+          940.0,
+          420.0
+        ],
+        "instance_model_pin_geometry": [
+          220.0,
+          120.0,
+          960.0,
+          400.0
+        ],
+        "reference_text_estimate": [
+          240.0,
+          70.0,
+          879.5,
+          370.0
+        ],
+        "value_text_estimate": [
+          240.0,
+          160.0,
+          886.0,
+          460.0
+        ],
+        "pin_hotspot": [
+          220.0,
+          120.0,
+          960.0,
+          400.0
+        ],
+        "wire": [
+          90.0,
+          120.0,
+          1090.0,
+          400.0
+        ],
+        "alias_text_estimate": [
+          100.0,
+          110.0,
+          1032.0,
+          410.0
+        ],
+        "offpage_native_bbox": [
+          90.0,
+          110.0,
+          720.0,
+          310.0
+        ],
+        "offpage_hotspot": [
+          90.0,
+          120.0,
+          710.0,
+          300.0
+        ],
+        "offpage_name_text_estimate": [
+          102.0,
+          105.0,
+          767.5,
+          305.0
+        ],
+        "module_planned_bbox": [
+          50.0,
+          70.0,
+          1130.0,
+          480.0
+        ]
+      },
+      "UART_I2C": {
+        "instance_origin": [
+          240.0,
+          100.0,
+          860.0,
+          520.0
+        ],
+        "instance_model_body": [
+          240.0,
+          100.0,
+          940.0,
+          560.0
+        ],
+        "instance_model_pin_geometry": [
+          220.0,
+          120.0,
+          960.0,
+          540.0
+        ],
+        "reference_text_estimate": [
+          240.0,
+          70.0,
+          879.5,
+          510.0
+        ],
+        "value_text_estimate": [
+          240.0,
+          160.0,
+          886.0,
+          600.0
+        ],
+        "pin_hotspot": [
+          220.0,
+          120.0,
+          960.0,
+          540.0
+        ],
+        "wire": [
+          90.0,
+          120.0,
+          1090.0,
+          540.0
+        ],
+        "alias_text_estimate": [
+          100.0,
+          110.0,
+          1025.5,
+          550.0
+        ],
+        "offpage_native_bbox": [
+          90.0,
+          110.0,
+          720.0,
+          310.0
+        ],
+        "offpage_hotspot": [
+          90.0,
+          120.0,
+          710.0,
+          300.0
+        ],
+        "offpage_name_text_estimate": [
+          102.0,
+          105.0,
+          800.0,
+          305.0
+        ],
+        "module_planned_bbox": [
+          50.0,
+          70.0,
+          1130.0,
+          620.0
+        ]
+      },
+      "SPI": {
+        "instance_origin": [
+          240.0,
+          100.0,
+          860.0,
+          420.0
+        ],
+        "instance_model_body": [
+          240.0,
+          100.0,
+          940.0,
+          460.0
+        ],
+        "instance_model_pin_geometry": [
+          220.0,
+          120.0,
+          960.0,
+          440.0
+        ],
+        "reference_text_estimate": [
+          240.0,
+          70.0,
+          879.5,
+          410.0
+        ],
+        "value_text_estimate": [
+          240.0,
+          160.0,
+          879.5,
+          500.0
+        ],
+        "pin_hotspot": [
+          220.0,
+          120.0,
+          960.0,
+          440.0
+        ],
+        "wire": [
+          90.0,
+          120.0,
+          1090.0,
+          440.0
+        ],
+        "alias_text_estimate": [
+          100.0,
+          110.0,
+          1032.0,
+          450.0
+        ],
+        "offpage_native_bbox": [
+          90.0,
+          110.0,
+          720.0,
+          410.0
+        ],
+        "offpage_hotspot": [
+          90.0,
+          120.0,
+          710.0,
+          400.0
+        ],
+        "offpage_name_text_estimate": [
+          102.0,
+          105.0,
+          800.0,
+          405.0
+        ],
+        "module_planned_bbox": [
+          50.0,
+          70.0,
+          1130.0,
+          520.0
+        ]
+      },
+      "MCU_CORE": {
+        "instance_origin": [
+          240.0,
+          100.0,
+          240.0,
+          100.0
+        ],
+        "instance_model_body": [
+          240.0,
+          100.0,
+          480.0,
+          600.0
+        ],
+        "instance_model_pin_geometry": [
+          220.0,
+          120.0,
+          500.0,
+          580.0
+        ],
+        "reference_text_estimate": [
+          240.0,
+          70.0,
+          253.0,
+          90.0
+        ],
+        "value_text_estimate": [
+          240.0,
+          620.0,
+          324.5,
+          640.0
+        ],
+        "pin_hotspot": [
+          220.0,
+          120.0,
+          500.0,
+          580.0
+        ],
+        "wire": [
+          90.0,
+          120.0,
+          630.0,
+          580.0
+        ],
+        "alias_text_estimate": [
+          100.0,
+          310.0,
+          546.0,
+          590.0
+        ],
+        "offpage_native_bbox": [
+          90.0,
+          110.0,
+          630.0,
+          550.0
+        ],
+        "offpage_hotspot": [
+          90.0,
+          120.0,
+          630.0,
+          540.0
+        ],
+        "offpage_name_text_estimate": [
+          102.0,
+          105.0,
+          600.5,
+          545.0
+        ],
+        "module_planned_bbox": [
+          50.0,
+          70.0,
+          670.0,
+          660.0
+        ]
+      },
+      "MCU_SUPPLY": {
+        "instance_origin": [
+          240.0,
+          100.0,
+          860.0,
+          660.0
+        ],
+        "instance_model_body": [
+          240.0,
+          100.0,
+          940.0,
+          700.0
+        ],
+        "instance_model_pin_geometry": [
+          220.0,
+          120.0,
+          960.0,
+          680.0
+        ],
+        "reference_text_estimate": [
+          240.0,
+          70.0,
+          879.5,
+          650.0
+        ],
+        "value_text_estimate": [
+          240.0,
+          160.0,
+          892.5,
+          740.0
+        ],
+        "pin_hotspot": [
+          220.0,
+          120.0,
+          960.0,
+          680.0
+        ],
+        "wire": [
+          90.0,
+          120.0,
+          1090.0,
+          680.0
+        ],
+        "alias_text_estimate": [
+          100.0,
+          110.0,
+          999.5,
+          690.0
+        ],
+        "offpage_native_bbox": [
+          90.0,
+          110.0,
+          1090.0,
+          410.0
+        ],
+        "offpage_hotspot": [
+          90.0,
+          120.0,
+          1090.0,
+          400.0
+        ],
+        "offpage_name_text_estimate": [
+          102.0,
+          105.0,
+          1029.0,
+          405.0
+        ],
+        "module_planned_bbox": [
+          50.0,
+          70.0,
+          1130.0,
+          760.0
+        ]
+      },
+      "POWER_INPUT_LDO": {
+        "instance_origin": [
+          240.0,
+          100.0,
+          860.0,
+          660.0
+        ],
+        "instance_model_body": [
+          240.0,
+          100.0,
+          940.0,
+          700.0
+        ],
+        "instance_model_pin_geometry": [
+          220.0,
+          120.0,
+          960.0,
+          680.0
+        ],
+        "reference_text_estimate": [
+          240.0,
+          70.0,
+          873.0,
+          650.0
+        ],
+        "value_text_estimate": [
+          240.0,
+          160.0,
+          892.5,
+          740.0
+        ],
+        "pin_hotspot": [
+          220.0,
+          120.0,
+          960.0,
+          680.0
+        ],
+        "wire": [
+          90.0,
+          120.0,
+          1090.0,
+          680.0
+        ],
+        "alias_text_estimate": [
+          100.0,
+          110.0,
+          1038.5,
+          690.0
+        ],
+        "offpage_native_bbox": [
+          90.0,
+          110.0,
+          630.0,
+          310.0
+        ],
+        "offpage_hotspot": [
+          90.0,
+          120.0,
+          630.0,
+          300.0
+        ],
+        "offpage_name_text_estimate": [
+          102.0,
+          105.0,
+          569.0,
+          305.0
+        ],
+        "module_planned_bbox": [
+          50.0,
+          70.0,
+          1130.0,
+          760.0
+        ]
+      },
+      "POWER_BUCK": {
+        "instance_origin": [
+          240.0,
+          100.0,
+          860.0,
+          560.0
+        ],
+        "instance_model_body": [
+          240.0,
+          100.0,
+          940.0,
+          600.0
+        ],
+        "instance_model_pin_geometry": [
+          220.0,
+          120.0,
+          960.0,
+          580.0
+        ],
+        "reference_text_estimate": [
+          240.0,
+          70.0,
+          873.0,
+          550.0
+        ],
+        "value_text_estimate": [
+          240.0,
+          160.0,
+          931.5,
+          640.0
+        ],
+        "pin_hotspot": [
+          220.0,
+          120.0,
+          960.0,
+          580.0
+        ],
+        "wire": [
+          90.0,
+          120.0,
+          1090.0,
+          580.0
+        ],
+        "alias_text_estimate": [
+          100.0,
+          110.0,
+          1025.5,
+          590.0
+        ],
+        "offpage_native_bbox": [
+          90.0,
+          110.0,
+          1090.0,
+          270.0
+        ],
+        "offpage_hotspot": [
+          90.0,
+          120.0,
+          1090.0,
+          260.0
+        ],
+        "offpage_name_text_estimate": [
+          102.0,
+          105.0,
+          1016.0,
+          265.0
+        ],
+        "module_planned_bbox": [
+          50.0,
+          70.0,
+          1130.0,
+          660.0
+        ]
+      },
+      "USB_PORT": {
+        "instance_origin": [
+          240.0,
+          100.0,
+          860.0,
+          560.0
+        ],
+        "instance_model_body": [
+          240.0,
+          100.0,
+          940.0,
+          600.0
+        ],
+        "instance_model_pin_geometry": [
+          220.0,
+          120.0,
+          960.0,
+          580.0
+        ],
+        "reference_text_estimate": [
+          240.0,
+          70.0,
+          879.5,
+          550.0
+        ],
+        "value_text_estimate": [
+          240.0,
+          160.0,
+          892.5,
+          640.0
+        ],
+        "pin_hotspot": [
+          220.0,
+          120.0,
+          960.0,
+          580.0
+        ],
+        "wire": [
+          90.0,
+          120.0,
+          1090.0,
+          580.0
+        ],
+        "alias_text_estimate": [
+          100.0,
+          110.0,
+          1019.0,
+          590.0
+        ],
+        "offpage_native_bbox": [
+          90.0,
+          110.0,
+          720.0,
+          590.0
+        ],
+        "offpage_hotspot": [
+          90.0,
+          120.0,
+          710.0,
+          580.0
+        ],
+        "offpage_name_text_estimate": [
+          102.0,
+          105.0,
+          793.5,
+          585.0
+        ],
+        "module_planned_bbox": [
+          50.0,
+          70.0,
+          1130.0,
+          660.0
+        ]
+      },
+      "USB_SENSE_ATTACH": {
+        "instance_origin": [
+          240.0,
+          100.0,
+          860.0,
+          520.0
+        ],
+        "instance_model_body": [
+          240.0,
+          100.0,
+          940.0,
+          560.0
+        ],
+        "instance_model_pin_geometry": [
+          220.0,
+          120.0,
+          960.0,
+          540.0
+        ],
+        "reference_text_estimate": [
+          240.0,
+          70.0,
+          879.5,
+          510.0
+        ],
+        "value_text_estimate": [
+          240.0,
+          160.0,
+          886.0,
+          600.0
+        ],
+        "pin_hotspot": [
+          220.0,
+          120.0,
+          960.0,
+          540.0
+        ],
+        "wire": [
+          90.0,
+          120.0,
+          1090.0,
+          540.0
+        ],
+        "alias_text_estimate": [
+          100.0,
+          110.0,
+          1071.0,
+          550.0
+        ],
+        "offpage_native_bbox": [
+          90.0,
+          110.0,
+          1090.0,
+          550.0
+        ],
+        "offpage_hotspot": [
+          90.0,
+          120.0,
+          1090.0,
+          540.0
+        ],
+        "offpage_name_text_estimate": [
+          102.0,
+          105.0,
+          1042.0,
+          545.0
+        ],
+        "module_planned_bbox": [
+          50.0,
+          70.0,
+          1130.0,
+          620.0
+        ]
+      },
+      "CAN": {
+        "instance_origin": [
+          240.0,
+          100.0,
+          860.0,
+          600.0
+        ],
+        "instance_model_body": [
+          240.0,
+          100.0,
+          940.0,
+          640.0
+        ],
+        "instance_model_pin_geometry": [
+          220.0,
+          120.0,
+          960.0,
+          620.0
+        ],
+        "reference_text_estimate": [
+          240.0,
+          70.0,
+          879.5,
+          590.0
+        ],
+        "value_text_estimate": [
+          240.0,
+          160.0,
+          892.5,
+          680.0
+        ],
+        "pin_hotspot": [
+          220.0,
+          120.0,
+          960.0,
+          620.0
+        ],
+        "wire": [
+          90.0,
+          120.0,
+          1090.0,
+          620.0
+        ],
+        "alias_text_estimate": [
+          100.0,
+          110.0,
+          1025.5,
+          630.0
+        ],
+        "offpage_native_bbox": [
+          90.0,
+          130.0,
+          720.0,
+          490.0
+        ],
+        "offpage_hotspot": [
+          90.0,
+          140.0,
+          710.0,
+          480.0
+        ],
+        "offpage_name_text_estimate": [
+          102.0,
+          125.0,
+          793.5,
+          485.0
+        ],
+        "module_planned_bbox": [
+          50.0,
+          70.0,
+          1130.0,
+          700.0
+        ]
+      }
+    },
+    "empty_native_instance_bbox_references": [
+      "J11",
+      "J13",
+      "J12",
+      "J10",
+      "R32",
+      "C24",
+      "R30",
+      "R27",
+      "J8",
+      "C21",
+      "J7",
+      "R28",
+      "R29",
+      "R31",
+      "C22",
+      "J9",
+      "C23",
+      "Y1",
+      "R16",
+      "R17",
+      "R18",
+      "J4",
+      "R19",
+      "J5",
+      "R20",
+      "R24",
+      "J6",
+      "R25",
+      "R21",
+      "R22",
+      "R23",
+      "U1",
+      "C17",
+      "R26",
+      "C13",
+      "C18",
+      "C14",
+      "C19",
+      "C15",
+      "C20",
+      "C16",
+      "C3",
+      "J1",
+      "C8",
+      "F1",
+      "C9",
+      "D1",
+      "C1",
+      "U3",
+      "C2",
+      "C4",
+      "C7",
+      "L1",
+      "C5",
+      "C6",
+      "U2",
+      "R1",
+      "R2",
+      "C10",
+      "R5",
+      "U4",
+      "J2",
+      "R6",
+      "R3",
+      "R4",
+      "R7",
+      "R8",
+      "R9",
+      "Q1",
+      "R10",
+      "R11",
+      "Q2",
+      "R13",
+      "R14",
+      "J3",
+      "R15",
+      "C11",
+      "C12",
+      "U5",
+      "R12"
+    ],
+    "instance_boundary_source": "Nonempty native display bbox where available; otherwise original-spec body/pin geometry translated by native instance x/y, independently checked against absolute native pin hotspots, wires, ports and estimated Ref/Value/alias text. Zero native bbox is never counted as a passing object boundary.",
+    "text_estimate_policy": "Horizontal left-justified text: width=len(text)*abs(font_height)*0.65; default font_height=-10; reserve one font height above and below anchor. Native instance bbox also covers pin labels and displayed attributes.",
+    "module_plan_provided": true,
+    "module_boxes": 80,
+    "native_offpage_name_anchors": 113,
+    "estimated_offpage_name_anchors": 0,
+    "offpage_name_anchor_policy": "Use absolute native Name display-property name_x/name_y when supplied. For older TSV evidence only, estimate 10 units inward from the actual port hotspot. Font size -10 and text width remain conservative approximations; actual Capture glyph extents are not measured.",
+    "coincident_endpoints_are_not_reported_as_text_or_module_overlap": true
+  },
+  "cross_page_connectivity": {
+    "net_pages": {
+      "V3V3": [
+        "ADC_GPIO",
+        "CAN",
+        "CLOCK_DEBUG",
+        "MCU_CORE",
+        "MCU_SUPPLY",
+        "POWER_INPUT_LDO",
+        "RESET_BOOT",
+        "SPI",
+        "UART_I2C",
+        "USB_SENSE_ATTACH"
+      ],
+      "GPIO_PC13": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "GPIO_PC14": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "GPIO_PC15": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "OSC_IN": [
+        "CLOCK_DEBUG",
+        "MCU_CORE"
+      ],
+      "OSC_OUT": [
+        "CLOCK_DEBUG",
+        "MCU_CORE"
+      ],
+      "NRST": [
+        "CLOCK_DEBUG",
+        "MCU_CORE",
+        "RESET_BOOT"
+      ],
+      "GND": [
+        "ADC_GPIO",
+        "CAN",
+        "CLOCK_DEBUG",
+        "MCU_CORE",
+        "MCU_SUPPLY",
+        "POWER_BUCK",
+        "POWER_INPUT_LDO",
+        "RESET_BOOT",
+        "SPI",
+        "UART_I2C",
+        "USB_PORT",
+        "USB_SENSE_ATTACH"
+      ],
+      "VDDA": [
+        "MCU_CORE",
+        "MCU_SUPPLY"
+      ],
+      "ADC0": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "GPIO_PA1": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "GPIO_PA2": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "GPIO_PA3": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "PA4_SPI_NSS": [
+        "MCU_CORE",
+        "SPI"
+      ],
+      "PA5_SPI_SCK": [
+        "MCU_CORE",
+        "SPI"
+      ],
+      "PA6_SPI_MISO": [
+        "MCU_CORE",
+        "SPI"
+      ],
+      "PA7_SPI_MOSI": [
+        "MCU_CORE",
+        "SPI"
+      ],
+      "VBUS_PRESENT_N": [
+        "MCU_CORE",
+        "USB_SENSE_ATTACH"
+      ],
+      "GPIO_PB1": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "BOOT1": [
+        "MCU_CORE",
+        "RESET_BOOT"
+      ],
+      "GPIO_PB10": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "GPIO_PB11": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "GPIO_PB12": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "GPIO_PB13": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "GPIO_PB14": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "GPIO_PB15": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "USB_ATTACH_N": [
+        "MCU_CORE",
+        "USB_SENSE_ATTACH"
+      ],
+      "PA9_UART_TX": [
+        "MCU_CORE",
+        "UART_I2C"
+      ],
+      "PA10_UART_RX": [
+        "MCU_CORE",
+        "UART_I2C"
+      ],
+      "PA11_SHARED": [
+        "CAN",
+        "MCU_CORE",
+        "USB_PORT"
+      ],
+      "PA12_SHARED": [
+        "CAN",
+        "MCU_CORE",
+        "USB_PORT"
+      ],
+      "SWDIO": [
+        "CLOCK_DEBUG",
+        "MCU_CORE"
+      ],
+      "SWCLK": [
+        "CLOCK_DEBUG",
+        "MCU_CORE"
+      ],
+      "GPIO_PA15": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "SWO": [
+        "CLOCK_DEBUG",
+        "MCU_CORE"
+      ],
+      "GPIO_PB4": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "GPIO_PB5": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "I2C_SCL": [
+        "MCU_CORE",
+        "UART_I2C"
+      ],
+      "I2C_SDA": [
+        "MCU_CORE",
+        "UART_I2C"
+      ],
+      "BOOT0": [
+        "MCU_CORE",
+        "RESET_BOOT"
+      ],
+      "GPIO_PB8": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "GPIO_PB9": [
+        "ADC_GPIO",
+        "MCU_CORE"
+      ],
+      "VIN_PROT": [
+        "POWER_BUCK",
+        "POWER_INPUT_LDO"
+      ],
+      "V5": [
+        "POWER_BUCK",
+        "POWER_INPUT_LDO"
+      ],
+      "USB_VBUS": [
+        "USB_PORT",
+        "USB_SENSE_ATTACH"
+      ],
+      "USB_DP": [
+        "USB_PORT",
+        "USB_SENSE_ATTACH"
+      ]
+    },
+    "required_page_net_pairs": 113,
+    "observed_unique_page_net_pairs": 113,
+    "missing_page_net_pairs": [],
+    "additional_page_net_pairs": []
+  },
+  "limitations": [
+    "This validates native reopened TSV evidence; it does not independently parse the binary DSN.",
+    "Text bounds are conservative estimates, not GUI-rendered glyph extents. Aliases have no native bbox in this evidence schema.",
+    "Headless native instance display bboxes may be uncomputed (all zero); these are excluded and explicitly listed. The fallback assumes unchanged, unrotated source-spec symbol geometry and original display-property positions.",
+    "Electrical pin-net comparison and off-page endpoint geometry do not replace Capture ERC, PCB ECO revalidation, or a visual page review.",
+    "Only module rectangles supplied with --layout-plan are checked for mutual overlap; shared electrical endpoints are allowed."
+  ]
+}

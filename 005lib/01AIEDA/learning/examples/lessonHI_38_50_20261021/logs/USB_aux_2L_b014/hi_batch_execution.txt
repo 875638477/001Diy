@@ -1,0 +1,69 @@
+HI_BATCH_DRC_BEFORE=t
+HI_ASSEMBLY_ONLINE_DRC_TEMPORARILY_DISABLED=nil
+HI_CSET_COPY domain=spacing name="HI_USB_CC1_J2_S_2L" copyTemplate="HI2L_S_CLASSCLASS_10" changes=((smdpin_line "0.2 MM") (line_line "0.2 MM"))
+HI_REGION_CLASS region="HI_USB_CC1_J2_ESCAPE" class1="HI2L_USB_FS_S" class2="HI2L_USB_AUX_S" domain=spacing cset="HI_USB_CC1_J2_S_2L" table=(objType "classTable" readOnly t prop propList:000001C3647B0020 assembly nil sameNet nil physical nil spacing "HI_USB_CC1_J2_S_2L" region dbid:000001C364EDD040 netclass2 dbid:000001C364E64CD8 netclass1 dbid:000001C364E60C60)
+HI_REGION_GEOMETRY (prop nil bBox ((38.35 7.25) (39.6 8.95)) readOnly t net nil objType "polygon" segments (dbid:000001C364EDD460 dbid:000001C364EDD4B0 dbid:000001C364EDD500 dbid:000001C364EDD550) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:000001C364EDD040))
+HI_EXISTING_SPACING_FIELDS_BEFORE cset="HI_USB_J2_SOURCE_S_2L" allowedKeys=(line_line) snapshots=(("BOTTOM" nil) ("TOP" nil) (nil nil))
+HI_EXISTING_SPACING_FIELDS_AFTER cset="HI_USB_J2_SOURCE_S_2L" layer="BOTTOM" values=nil
+HI_EXISTING_SPACING_FIELDS_AFTER cset="HI_USB_J2_SOURCE_S_2L" layer="TOP" values=nil
+HI_EXISTING_SPACING_FIELDS_AFTER cset="HI_USB_J2_SOURCE_S_2L" layer=nil values=nil
+HI_EXISTING_SPACING_ONLY_DECLARED_KEYS_CHANGED cset="HI_USB_J2_SOURCE_S_2L" allowedKeys=(line_line)
+LOCAL_ROUTE	HI_2L_USB_PULLUP_SRC_1_R1	"USB_PULLUP_SRC"	"ETCH/TOP"	((42.8748 14.6) (47.85 14.6) (48.0 14.7718))	(0.2 0.2)	((dbid:000001C364EE04F0) nil)
+LOCAL_ROUTE	HI_2L_VBUS_GATE_1_R1	"VBUS_GATE"	"ETCH/TOP"	((50.6764 7.0) (50.7 9.2) (51.0475 9.5282))	(0.2 0.2)	((dbid:000001C364EE06D8) nil)
+LOCAL_ROUTE	HI_2L_VBUS_GATE_2_R1	"VBUS_GATE"	"ETCH/TOP"	((56.2 9.1016) (54.25 9.1) (53.6 8.45) (52.15 8.45) (51.0475 9.5282))	(0.2 0.2 0.2 0.2)	((dbid:000001C364EE0960) nil)
+LOCAL_ROUTE	HI_2L_VBUS_PRESENT_N_1_R1	"VBUS_PRESENT_N"	"ETCH/TOP"	((56.2 14.6764) (53.9 14.7) (52.0 12.8) (52.0 12.0718))	(0.2 0.2 0.2)	((dbid:000001C364EE0C88) nil)
+LOCAL_ROUTE	HI_2L_UART_RX_1_R1	"UART_RX"	"ETCH/TOP"	((68.1016 25.0) (69.35 23.75) (74.0 23.73))	(0.2 0.2)	((dbid:000001C364EE0F60) nil)
+HI_VIA id="HI_2L_USB_ATTACH_N_1_V1" net="USB_ATTACH_N" xy=(50.8 16.3) padstack="L28_VIA030_C060" result=(dbid:000001C364EE11E8 nil)
+HI_VIA id="HI_2L_USB_ATTACH_N_1_V2" net="USB_ATTACH_N" xy=(47.95 13.45) padstack="L28_VIA030_C060" result=(dbid:000001C364EFCF38 nil)
+LOCAL_ROUTE	HI_2L_USB_ATTACH_N_1_R1	"USB_ATTACH_N"	"ETCH/TOP"	((50.1764 17.2) (50.2 16.9) (50.8 16.3))	(0.2 0.2)	((dbid:000001C364EFD400) nil)
+LOCAL_ROUTE	HI_2L_USB_ATTACH_N_1_R2	"USB_ATTACH_N"	"ETCH/BOTTOM"	((50.8 16.3) (47.95 13.45))	(0.2)	((dbid:000001C364EFD688) nil)
+LOCAL_ROUTE	HI_2L_USB_ATTACH_N_1_R3	"USB_ATTACH_N"	"ETCH/TOP"	((47.95 13.45) (47.95 13.15) (47.0475 12.2282))	(0.2 0.2)	((dbid:000001C364EFE3C0) nil)
+LOCAL_ROUTE	CC1_ENTRY	"USB_CC1"	"ETCH/TOP"	((38.75 7.355) (38.75 8.3) (36.9484 10.1016) (35.0 10.1016))	(0.2 0.2 0.2)	((dbid:000001C364EFE648) nil)
+LOCAL_ROUTE	CC2_ENTRY	"USB_CC2"	"ETCH/TOP"	((41.75 7.355) (41.75 8.01) (42.1 8.36) (44.4 8.36) (45.5 9.46) (45.5 10.1016))	(0.2 0.2 0.2 0.2 0.2)	((dbid:000001C364EFE880) nil)
+LOCAL_ROUTE	CC_R3_GND	"GND"	"ETCH/TOP"	((35.0 11.6764) (36.1 11.6764))	(0.6)	((dbid:000001C364EFEB58) nil)
+HI_VIA id="CC_R3_GND_V" net="GND" xy=(36.1 11.6764) padstack="L28_VIA030_C060" result=(dbid:000001C364EFEC50 nil)
+LOCAL_ROUTE	CC_R4_GND	"GND"	"ETCH/TOP"	((45.5 11.6764) (43.9 11.6764) (43.8 11.5764))	(0.6 0.6)	((dbid:000001C364F03228) nil)
+LOCAL_ROUTE	VBUS_LEFT_ESCAPE	"USB_VBUS"	"ETCH/TOP"	((37.6 7.355) (37.6 8.2) (36.9 8.9) (36.9 9.2))	(0.4 0.4 0.4)	((dbid:000001C364F055D0) nil)
+HI_VIA id="VBUS_LEFT_V" net="USB_VBUS" xy=(36.9 9.2) padstack="L28_VIA030_C060" result=(dbid:000001C364F05768 nil)
+HI_DELETE_VIA_EXACT_BEGIN id="USB_RETURN_LEFT_RIP" countBefore=80 target=dbid:000001C364E79890 attrs=(relations nil prop nil bBox ((37.85 5.5) (38.45 6.1)) readOnly t pads (pad:000001C364A0E1D8 pad:000001C364A0E1B0 pad:000001C364A0E188 pad:000001C364A0E160 pad:000001C364A0E138 pad:000001C364A0E110 pad:000001C364A0E0E8 pad:000001C364A0E0C0 pad:000001C364A0E098 pad:000001C364A0E070 pad:000001C364A0E048 pad:000001C364A0E020) branch dbid:000001C364E734F0 parentGroups nil pluralViaConnect nil pluralVia nil fixedByTestPoint nil isThrough t xy (38.15 5.8) testPoint nil name "L28_VIA030_C060" startEnd ("ETCH/TOP" "ETCH/BOTTOM") rotation 0.0 symbolEtch nil parent dbid:000001C364E734F0 mirrorType "NO" isMirrored nil definition dbid:000001C364DD04B8 net dbid:000001C364DC8A08 objType "via")
+HI_DELETE_VIA_EXACT_COMPLETE id="USB_RETURN_LEFT_RIP" net="GND" xy=(38.15 5.8) padstack="L28_VIA030_C060" countAfter=79 otherViaSignaturesUnchanged=t
+HI_VIA id="USB_RETURN_LEFT_NEW" net="GND" xy=(38.3 5.6) padstack="L28_VIA030_C060" result=(dbid:000001C364F06290 nil)
+HI_DELETE_VIA_EXACT_BEGIN id="USB_RETURN_RIGHT_RIP" countBefore=80 target=dbid:000001C364E79920 attrs=(relations nil prop nil bBox ((41.4 5.5) (42.0 6.1)) readOnly t pads (pad:000001C364A0E3B8 pad:000001C364A0E390 pad:000001C364A0E368 pad:000001C364A0E340 pad:000001C364A0E318 pad:000001C364A0E2F0 pad:000001C364A0E2C8 pad:000001C364A0E2A0 pad:000001C364A0E278 pad:000001C364A0E250 pad:000001C364A0E228 pad:000001C364A0E200) branch dbid:000001C364E734F0 parentGroups nil net dbid:000001C364DC8A08 pluralViaConnect nil pluralVia nil fixedByTestPoint nil isThrough t xy (41.7 5.8) testPoint nil name "L28_VIA030_C060" startEnd ("ETCH/TOP" "ETCH/BOTTOM") rotation 0.0 symbolEtch nil parent dbid:000001C364E734F0 mirrorType "NO" isMirrored nil definition dbid:000001C364DD04B8 objType "via")
+HI_DELETE_VIA_EXACT_COMPLETE id="USB_RETURN_RIGHT_RIP" net="GND" xy=(41.7 5.8) padstack="L28_VIA030_C060" countAfter=79 otherViaSignaturesUnchanged=t
+HI_VIA id="USB_RETURN_RIGHT_NEW" net="GND" xy=(41.0 4.7) padstack="L28_VIA030_C060" result=(dbid:000001C364F08668 nil)
+LOCAL_ROUTE	VBUS_LEFT_LOW_ROUTE	"USB_VBUS"	"ETCH/BOTTOM"	((36.9 9.2) (39.0 7.1) (39.0 6.05) (39.0 5.15) (39.0 3.7) (42.0 3.7))	(0.4 0.4 0.2 0.4 0.4)	((dbid:000001C364F0AA40) nil)
+LOCAL_ROUTE	VBUS_RIGHT_UNDER_HOUSING	"USB_VBUS"	"ETCH/TOP"	((42.4 7.355) (42.4 6.95) (42.21 6.95) (42.21 6.51) (42.0 6.3) (42.0 3.7))	(0.4 0.2 0.2 0.2 0.4)	((dbid:000001C364F0C788) nil)
+HI_VIA id="VBUS_RIGHT_V" net="USB_VBUS" xy=(42.0 3.7) padstack="L28_VIA030_C060" result=(dbid:000001C364F0FAD8 nil)
+LOCAL_ROUTE	VBUS_RIGHT_TO_CLAMP	"USB_VBUS"	"ETCH/BOTTOM"	((42.0 3.7) (42.0 8.4) (42.8016 9.2016) (43.8 9.2016))	(0.4 0.4 0.4)	((dbid:000001C364F12F70) nil)
+HI_VIA id="VBUS_SENSE_V" net="USB_VBUS" xy=(47.8 7.0) padstack="L28_VIA030_C060" result=(dbid:000001C364F16AB0 nil)
+LOCAL_ROUTE	VBUS_SENSE_TOP	"USB_VBUS"	"ETCH/TOP"	((47.8 7.0) (49.1016 7.0))	(0.4)	((dbid:000001C364F16F78) nil)
+LOCAL_ROUTE	VBUS_SENSE_BOTTOM	"USB_VBUS"	"ETCH/BOTTOM"	((43.8 9.2016) (45.5984 9.2016) (47.8 7.0))	(0.4 0.4)	((dbid:000001C364F172F0) nil)
+HI_VIA id="APP_RETURN_HI_2L_USB_ATTACH_N_1_V1" net="GND" xy=(51.411 17.028) padstack="L28_VIA030_C060" result=(dbid:000001C364F1D738 nil)
+HI_VIA id="APP_RETURN_HI_2L_USB_ATTACH_N_1_V2" net="GND" xy=(47.0 13.45) padstack="L28_VIA030_C060" result=(dbid:000001C364F1FAB0 nil)
+HI_VIA id="APP_RETURN_VBUS_LEFT_V" net="GND" xy=(36.077 8.725) padstack="L28_VIA030_C060" result=(dbid:000001C364F21E28 nil)
+HI_VIA id="APP_RETURN_VBUS_SENSE_V" net="GND" xy=(46.907 6.675) padstack="L28_VIA030_C060" result=(dbid:000001C364F241A0 nil)
+HI_UNWIND_DRC_RESTORED=t
+HI_FULL_DRC_REQUEST_BEGIN time="Oct 22 02:38:00 2026" g_mode=t online=t physicalModes=((allow_padconnect off) (allow_ts on) (allow_etch on) (bbvia_stagger_max off) (bbvia_stagger_min on) (vias on) (width_max on) (width_min on)) spacingModes=((bbvia_gap on) (shape_shape on) (bondpad_bondpad on) (bondpad_shape on) (bondpad_line on) (hole_via on) (hole_thrupin on) (hole_hole on) (hole_shape on) (hole_line on) (uvia_bondpad on) (uvia_testvia on) (uvia_uvia on) (uvia_bbvia on) (uvia_via on) (uvia_testpin on) (uvia_smdpin on) (uvia_thrupin on) (uvia_shape on) (uvia_line on) (bbvia_bondpad on) (bbvia_testvia on) (bbvia_bbvia on) (bbvia_via on) (bbvia_testpin on) (bbvia_smdpin on) (bbvia_thrupin on) (bbvia_shape on) (bbvia_line on) (via_bondpad on) (via_via on) (via_shape on) (via_line on) (testvia_bondpad on) (testvia_testvia on) (testvia_via on) (testvia_smdpin on) (testvia_thrupin on) (testvia_shape on) (testvia_line on) (testpin_bondpad on) (testpin_testvia on) (testpin_via on) (testpin_testpin on) (testpin_smdpin on) (testpin_thrupin on) (testpin_shape on) (testpin_line on) (smdpin_bondpad on) (smdpin_via on) (smdpin_smdpin on) (smdpin_shape on) (smdpin_line on) (thrupin_bondpad on) (thrupin_via on) (thrupin_smdpin on) (thrupin_thrupin on) (thrupin_shape on) (thrupin_line on) (line_shape on) (line_line on)) electricalModes=((Minimum_Line_Width on) (Maximum_Line_Width on) (Relative_Propagation_Delay off) (Propagation_Delay off) (Maximum_Via_Count on) (Match_Via_Count off) (Maximum_Stub_Length off) (Parallelism off) (Impedance off) (Maximum_Crosstalk off) (Maximum_Peak_Crosstalk off) (Maximum_Exposed_Length off) (Total_Etch_Length off) (Differential_Pair_Primary_Gap on) (LayerSet_group off) (Impedance_Fanout_Max_Length off) (Max_Ignored_Reference_Path_Deviation_Length off))
+HI_FULL_DRC_REQUEST_RETURN time="Oct 22 02:40:06 2026" result=0 online=t storedDRCs=0
+DRC_STATUS	HI_BATCH_FINAL	0	t
+HI_ENDPOINT_PROOF from="R11.1" to="Q2.3" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="R7.2" to="Q1.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R8.1" to="Q1.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R9.2" to="Q1.3" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="R10.2" to="Q2.1" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="R18.1" to="J4.3" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="R3.2" to="U1.23" expected=t actual=t objects=250
+HI_ENDPOINT_PROOF from="R4.2" to="U1.23" expected=t actual=t objects=250
+HI_ENDPOINT_PROOF from="J2.A5" to="R3.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="J2.B5" to="R4.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="J2.A4_B9" to="C10.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="J2.B4_A9" to="C10.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="R7.1" to="C10.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="CC_R3_GND_V" to="U1.23" expected=t actual=t objects=250
+HI_ENDPOINT_PROOF from="USB_RETURN_LEFT_NEW" to="U1.23" expected=t actual=t objects=250
+HI_ENDPOINT_PROOF from="USB_RETURN_RIGHT_NEW" to="U1.23" expected=t actual=t objects=250
+HI_ENDPOINT_PROOF from="APP_RETURN_HI_2L_USB_ATTACH_N_1_V1" to="U1.23" expected=t actual=t objects=250
+HI_ENDPOINT_PROOF from="APP_RETURN_HI_2L_USB_ATTACH_N_1_V2" to="U1.23" expected=t actual=t objects=250
+HI_ENDPOINT_PROOF from="APP_RETURN_VBUS_LEFT_V" to="U1.23" expected=t actual=t objects=250
+HI_ENDPOINT_PROOF from="APP_RETURN_VBUS_SENSE_V" to="U1.23" expected=t actual=t objects=250
+HI_BATCH_COMPLETED drcCount=0 status=CANDIDATE_DRC_ZERO_NOT_ENGINEERING_RELEASE board="D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native/HI_2L_USB_aux_2L_b014.brd"

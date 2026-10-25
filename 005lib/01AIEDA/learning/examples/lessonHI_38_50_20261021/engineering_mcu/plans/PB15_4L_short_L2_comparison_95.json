@@ -1,0 +1,354 @@
+{
+  "status": "ENGINEERING_COMPARISON_ONLY_NEW_L2_ROUTE_NOT_AUTHORIZED_NATIVE",
+  "variant": "4L",
+  "base": "PB15_attach_4L_87 derived b016 + North51 + existing 81 four-net candidates; final must rebase actual b019",
+  "sourcePrerequisites": "87 ATTACH+.14 and PB1-L change require root/native review",
+  "operations": [
+    {
+      "type": "route",
+      "id": "PB15_95_R0",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          47.1,
+          23.3
+        ],
+        [
+          47.6,
+          23.8
+        ],
+        [
+          48.7,
+          23.8
+        ],
+        [
+          48.9,
+          23.68
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "PB15_95_GPIO_PB15_V1",
+      "net": "GPIO_PB15",
+      "xy": [
+        48.9,
+        23.68
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "PB15_95_R2",
+      "net": "GPIO_PB15",
+      "layer": "L2",
+      "points": [
+        [
+          48.9,
+          23.68
+        ],
+        [
+          49,
+          23.78
+        ],
+        [
+          49,
+          25.75
+        ],
+        [
+          52.2,
+          28.95
+        ],
+        [
+          52.2,
+          30.8
+        ],
+        [
+          51.6,
+          31.4
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "PB15_95_GPIO_PB15_V3",
+      "net": "GPIO_PB15",
+      "xy": [
+        51.6,
+        31.4
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "PB15_95_GND_V4",
+      "net": "GND",
+      "xy": [
+        50.7,
+        31.3
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3
+    },
+    {
+      "type": "route",
+      "id": "PB15_95_R5",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          51.6,
+          31.4
+        ],
+        [
+          51.2,
+          31.8
+        ],
+        [
+          51.2,
+          39.6
+        ],
+        [
+          52.3,
+          40.7
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "PB15_95_GPIO_PB15_V6",
+      "net": "GPIO_PB15",
+      "xy": [
+        52.3,
+        40.7
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "PB15_95_GND_V7",
+      "net": "GND",
+      "xy": [
+        53.1,
+        40.7
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3
+    },
+    {
+      "type": "route",
+      "id": "PB15_95_R8",
+      "net": "GPIO_PB15",
+      "layer": "TOP",
+      "points": [
+        [
+          52.3,
+          40.7
+        ],
+        [
+          52.3,
+          42.4
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "PB15_95_GPIO_PB15_V9",
+      "net": "GPIO_PB15",
+      "xy": [
+        52.3,
+        42.4
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "PB15_95_GND_V10",
+      "net": "GND",
+      "xy": [
+        53.4,
+        42.4
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3
+    },
+    {
+      "type": "route",
+      "id": "PB15_95_R11",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          52.3,
+          42.4
+        ],
+        [
+          58.19,
+          48.29
+        ],
+        [
+          58.19,
+          55
+        ]
+      ],
+      "width": 0.2
+    }
+  ],
+  "proofs": [
+    {
+      "fromTerminal": "U1.28",
+      "toTerminal": "J13.3",
+      "expectedConnected": true
+    }
+  ],
+  "checks": [
+    {
+      "id": "PB15_95_R0",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB15_95_GPIO_PB15_V1",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB15_95_GPIO_PB15_V3",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB15_95_GND_V4",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB15_95_R5",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB15_95_GPIO_PB15_V6",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB15_95_GND_V7",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB15_95_R8",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB15_95_GPIO_PB15_V9",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB15_95_GND_V10",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB15_95_R11",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "L2_CONSERVATIVE_THROUGH_PAD_CHECK",
+      "clear": true,
+      "hits": []
+    }
+  ],
+  "signalLength": {
+    "sourceTOPmm": 2.1785533905932732,
+    "sourcePortalBOTTOMmm": 10.896826747151145,
+    "newByLayerMM": {
+      "TOP": 1.6999999999999957,
+      "BOTTOM": 27.001383082917528,
+      "L2": 9.335432893255074
+    },
+    "totalMM": 51.112196113917015
+  },
+  "returnPlan": [
+    {
+      "signalVia": [
+        48.9,
+        23.68
+      ],
+      "groundVia": [
+        48.2,
+        25
+      ],
+      "distanceMM": 1.494121815649579,
+      "groundRole": "Existing actual common-GND return via retained"
+    },
+    {
+      "signalVia": [
+        51.6,
+        31.4
+      ],
+      "groundVia": [
+        50.7,
+        31.3
+      ],
+      "distanceMM": 0.9055385138137401,
+      "groundRole": "New common-GND PTH required"
+    },
+    {
+      "signalVia": [
+        52.3,
+        40.7
+      ],
+      "groundVia": [
+        53.1,
+        40.7
+      ],
+      "distanceMM": 0.8,
+      "groundRole": "New common-GND PTH required"
+    },
+    {
+      "signalVia": [
+        52.3,
+        42.4
+      ],
+      "groundVia": [
+        53.4,
+        42.4
+      ],
+      "distanceMM": 1.1,
+      "groundRole": "New common-GND PTH required"
+    }
+  ],
+  "requiredNativeRules": [
+    "Finite L2 GPIO_PB15 physical allowEtch width.20, inherited spacing preserved; global L2 other signals still no etch",
+    "Private via approval all four conductor layers at exact new signal-via points",
+    "No broad spacing or neck relaxation"
+  ],
+  "pending": [
+    "Root engineering choice whether L2 short bridge is preferable to outer-layer ordinary-bank relayout",
+    "L2 exact actual pad shapes, void and ref-layer patch connectivity",
+    "TOP-reference consequences of about9.34mm L2 slot with explicit field-width buffer, and continuous L3 return",
+    "All new GND vias true common-terminal graph, no floating patches",
+    "Fresh native scoped/full DRC, all pin edges, USB/HSE negatives and wholeboard counts"
+  ]
+}

@@ -1,0 +1,11 @@
+from pathlib import Path
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+s=(R/'scripts/precheck_power_geometry.py').read_text()
+s=s.replace("base=json.loads((R/'source/normalized_actual_4L.json').read_text())","base=json.loads((R.parent/'inventory/checkpoints/power_4L_b003c/normalized.json').read_text())")
+s=s.replace("files=['power_critical_paths_01.json','power_paths_02d.json','power_star_03.json']","files=['interface_CAN_routes_04.json','CAN_local_supply_05.json']")
+s=s.replace("  if c['ref']=='C3':\n   for v in b:v[1]-=.6\n","")
+s=s.replace("def clearance(a,b):","def clearance(a,b):\n if a in {'CAN_H','CAN_L'} or b in {'CAN_H','CAN_L'}:return .3 if a in {'V3V3','GND','V5'} or b in {'V3V3','GND','V5'} else .25")
+s=s.replace("'readouts/power_geometry_precheck.json'","'readouts/CAN_04_05_geometry_precheck.json'")
+s=s.replace("Initial G snapshot plus proposed C3 shift.","FrozenHI4L03c actual snapshot; no pendingplacementchanges.")
+(R/'scripts/precheck_CAN04_05.py').write_text(s)
+print('preparedCAN04_05screen')

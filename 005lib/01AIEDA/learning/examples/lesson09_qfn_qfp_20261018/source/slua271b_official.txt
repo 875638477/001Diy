@@ -1,0 +1,874 @@
+=== PDF PAGE 1 ===
+Application Note
+QFN and SON PCB Attachment
+Steve Kummerl, Bernhard Lange, Dominic Nguyen
+Texas Instruments
+ABSTRACT
+Quad flatpack no lead (QFN) packages and small-outline no lead (SON) packages are leadless packages with 
+electrical connections made through lands on the bottom side of the component to the surface of the connecting 
+substrate (PCB or ceramic). This application report includes introductory information about attaching QFN and 
+SON devices to printed circuit boards (PCBs).
+Table of Contents
+1 Texas Instruments Quad Flatpack No Leads and Small-Outline No Leads.......................................................................3
+1.1 Introduction........................................................................................................................................................................ 3
+2 Manufacturing Considerations..............................................................................................................................................4
+2.1 SMT Process......................................................................................................................................................................4
+3 Printed Circuit Board (PCB) Design Guidelines.................................................................................................................. 5
+3.1 Land Pad Styles.................................................................................................................................................................5
+3.2 Land Pad Design................................................................................................................................................................5
+3.3 Lead Finger Pad PCB Design............................................................................................................................................6
+3.4 Exposed Pad PCB Design................................................................................................................................................. 7
+3.5 Solder Mask....................................................................................................................................................................... 8
+3.6 Surface Finishes................................................................................................................................................................ 9
+3.7 Board Layout Considerations.............................................................................................................................................9
+4 Solder Paste Screen Printing Process............................................................................................................................... 10
+4.1 Solder Paste.....................................................................................................................................................................10
+4.2 Solder Stencils................................................................................................................................................................. 10
+4.3 Lead Finger Stencil Design..............................................................................................................................................10
+4.4 Exposed-Pad Stencil Design............................................................................................................................................11
+5 Package to Board Assembly Process................................................................................................................................ 13
+5.1 Placement and Alignment................................................................................................................................................ 13
+5.2 Solder Reflow...................................................................................................................................................................13
+www.ti.com
+Table of Contents
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+QFN and SON PCB Attachment
+1
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 2 ===
+5.3 PCB Cleaning...................................................................................................................................................................14
+5.4 Inspection.........................................................................................................................................................................14
+6 Rework Guidelines (Hot Gas Convection and Manual).....................................................................................................16
+6.1 Compound Removal........................................................................................................................................................ 16
+6.2 Site Redress.....................................................................................................................................................................17
+6.3 Component Replacement and Reflow............................................................................................................................. 17
+6.4 Manual Rework Considerations....................................................................................................................................... 19
+7 Revision History................................................................................................................................................................... 20
+List of Figures
+Figure 1-1. QFN Structure........................................................................................................................................................... 3
+Figure 2-1. Packing Material Label Information With Moisture Sensitivity Level (MSL).............................................................. 4
+Figure 3-1. QFN and SON Outline Dimensions...........................................................................................................................5
+Figure 3-2. PCB Land Pattern..................................................................................................................................................... 6
+Figure 3-3. Substrate or PCB Lead Finger Geometry................................................................................................................. 6
+Figure 3-4. X-Ray Images for Reference.....................................................................................................................................8
+Figure 3-5. PCB Solder Mask and Keep-Out Area Example.......................................................................................................8
+Figure 3-6. Avoid Excessive Bending.......................................................................................................................................... 9
+Figure 4-1. Solder Stencil Profile...............................................................................................................................................10
+Figure 4-2. Aspect and Area Ratio Illustration........................................................................................................................... 11
+Figure 4-3. Example Land Pattern and Exposed-Pad Stencil Design....................................................................................... 12
+Figure 5-1. Package Self Alignment at Reflow.......................................................................................................................... 14
+Figure 5-2. QFN and SON Pb and Pb-Free Example Reflow Profiles.......................................................................................14
+Figure 5-3. Illustration of Typical Fillet Formation......................................................................................................................15
+Figure 6-1. Example Mini Stencil...............................................................................................................................................18
+Figure 6-2. Example Hot Gas Convection Nozzle..................................................................................................................... 18
+Figure 6-3. Preheater.................................................................................................................................................................19
+Figure 6-4. Manual Rework Damage.........................................................................................................................................20
+List of Tables
+Table 2-1. Essentials for Assembly Quality..................................................................................................................................4
+Table 3-1. PCB Dimension Definitions.........................................................................................................................................6
+Table 6-1. Pb-Free Solder Component Removal.......................................................................................................................16
+Table 6-2. Pb-Free Solder Component Placement....................................................................................................................19
+Trademarks
+All trademarks are the property of their respective owners.
+Trademarks
+www.ti.com
+2
+QFN and SON PCB Attachment
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 3 ===
+1 Texas Instruments Quad Flatpack No Leads and Small-Outline No Leads
+1.1 Introduction
+Quad flatpack no lead (QFN) packages and small-outline no lead (SON) packages are thermally enhanced 
+plastic packages that use conventional copper leadframe technology. This construction results in a cost-effective 
+advanced packaging solution that helps to maximize board space with improved electrical and thermal 
+performance over traditional leaded packages.
+QFNs have solder lands on all four sides of the package. SONs typically have solder lands on two sides of the 
+package.
+QFNs and SONs are available in a number of formats. QFNs and SONs are molded and mechanically 
+singulated from a matrix leadframe. Package size is determined by several key factors including die size, 
+number of terminations, etc.
+All QFNs and SONs are leadless packages with electrical connections made via lands on the bottom side of 
+the component to the surface of the connecting substrate [printed circuit boards (PCB), ceramic]. The standard 
+QFN and SON package has an exposed pad that enhances the thermal and electrical characteristics, enabling 
+high-power and high-frequency applications.
+Note
+This QFN and SON PCB application report is intended as a guide. Precise process development and 
+experimentation are needed to optimize specific applications/performance.
+QFN STRUCTURE AND STITCH BONDS
+Figure 1-1. QFN Structure
+www.ti.com
+Texas Instruments Quad Flatpack No Leads and Small-Outline No Leads
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+QFN and SON PCB Attachment
+3
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 4 ===
+2 Manufacturing Considerations
+2.1 SMT Process
+Many factors contribute to a high-yielding assembly process. A few of the key focus areas and their contributing 
+factors are highlighted in Table 2-1.
+Table 2-1. Essentials for Assembly Quality
+Solder paste quality
+Uniform viscosity and texture. Free from foreign material. Solder paste must be used before the expiration date. 
+Shipment and storage temperatures must be maintained at the proper temperature. Paste must be protected 
+from drying out on the solder stencil.
+PCB quality
+Clean, flat, plated, or coated solder land area. Attachment surface must be clean and free of solder-mask 
+residue.
+Placement accuracy
+Tight tolerances are not usually required. QFN and SON packages self center as long as a major portion (more 
+than 50%) of the lead finger is in contact with the solder-paste-covered land area on the board. Alignment marks 
+(fiducials) on the PCB are helpful for verifying correct placement of parts.
+Solder reflow profile
+The solder reflow temperature is dependent on the PCB design, PCB thickness, and peak reflow temperature 
+according to the moisture sensitivity level (MSL) of components, component density, and the recommended 
+profile of the solder paste being used. A reflow profile must be developed for each PCB type using various QFN 
+and SON packages. See Figure 5-2 in Section 5.2 for the reflow profile.
+Solder volume
+Solder volume is important to ensure optimum contact of all intended solder connections.
+MSL
+Caution
+Label
+Inner Box/Reel Labels
+E4
+Customer
+Assembly Site & Assembly Date Code (YYWW)
+JEDEC Pb-Free Logo & Finish Code
+Ordered PN
+High-Temp
+& Low-Temp
+MSL Ratings
+Figure 2-1. Packing Material Label Information With Moisture Sensitivity Level (MSL)
+Manufacturing Considerations
+www.ti.com
+4
+QFN and SON PCB Attachment
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 5 ===
+3 Printed Circuit Board (PCB) Design Guidelines
+One of the key efforts in implementing the QFN and SON package on a substrate motherboard is the design 
+of the land pad. The QFN and SON has lead fingers exposed on the bottom side of the package. Electrical 
+and mechanical connections between the component and motherboard can be made by soldering the part using 
+screen printed solder paste and reflowing after placement. To ensure consistent solder joint geometries, it is 
+essential to design the land pattern considering the component exposed leadframe pattern.
+3.1 Land Pad Styles
+There are two basic designs for PCB land pads for the QFN and SON package—the copper defined or non-
+solder mask defined style (NSMD) and the solder mask defined style (SMD). The industry has debated the 
+merits of both styles of land pads and although TI recommends the copper defined style land pad (NSMD), both 
+styles are acceptable for use with the QFN and SON package.
+NSMD pads are recommended over SMD pads due to the tighter tolerance on copper etching compared to 
+solder masking. In addition, the NSMD pads help to contain the solder paste within the solder mask opening. 
+NSDM, by definition, also provides a larger copper pad area and allows the solder to anchor to the edges of the 
+copper pads, thus providing an increase in wettable surface area.
+3.2 Land Pad Design
+IPC-7351 is one of the industry standard guidelines for developing PCB pad patterns. Because the QFN and 
+SON is a new package style, this application report is intended as a guide and should be used with the IPC-7351 
+in designing an optimum PCB land pattern.
+Figure 3-1 identifies the various QFN and SON dimensions required to design a matching substrate pad 
+pattern. Because most packages are square with dimension D = E and the leads are along the E direction 
+for dual packages, the side-view dimensions (D, S, D2 and L) are used to determine the land length on the 
+motherboard PCB or substrate. Figure 3-2 shows the motherboard PCB or substrate land pattern dimensions to 
+be established. Table 3-1 offers a description of these dimensions.
+S
+6
+5
+9
+DETAIL B
+D
+L
+(NE-1)x e
+DETAIL 1
+6
+5
+3
+Terminal
+Tip
+Terminal
+Tip
+EVEN TERMINAL SIDE
+ODD TERMINAL SIDE
+L
+e
+e/2
+e
+DATUM A OR B
+(ND-1)x e
+N N-1
+E2
+E2/2
+D2/2
+D2
+EXPOSED PAD
+INDEX AREA
+(D/2 xE/2)
+-A-
+-8-
+D
+D/2
+4
+000 G 2x
+qqq C 2x
+E/2
+E
+Figure 3-1. QFN and SON Outline Dimensions
+www.ti.com
+Printed Circuit Board (PCB) Design Guidelines
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+QFN and SON PCB Attachment
+5
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 6 ===
+Zmax
+Gmin
+Amax
+D2th
+CPL
+CLL
+Y
+X
+Figure 3-2. PCB Land Pattern
+Table 3-1. PCB Dimension Definitions
+Symbol
+Description
+Amax
+Outer extents of pad widths per each side
+Zmax (1)
+Outside pad terminal dimension typically 0.8 mm larger than the package body as a starting point
+Gmin (1)
+Inside pad terminal dimension
+X
+Lead pad width
+Y
+Lead pad height
+CLL
+Corner pad edge to adjacent inside pad distance
+CPL
+Central pad to inside edge of lead pad distance which should not be reduced to smaller than 0.2 mm
+(1)
+The dimensions Zmax and Gmin are the outside and inside pad terminal dimensions, respectively. X and Y identify the pad width and 
+length, respectively. Clearance dimensions CLL and CPL are defined to prevent solder bridging.
+3.3 Lead Finger Pad PCB Design
+It is recommended that the PCB lead finger pad be designed a minimum of 0,1 mm longer than the package 
+land length (also known as the toe length) and be extended 0,05 mm towards the center line of the package 
+(also known as the heel). TI uses a typical value of 0,4 mm toe length beyond the package body as a standard 
+to optimize solder volume which should be considered as a model starting point for board designs. The PCB 
+pad width must be a minimum 0,05 mm (0,025 mm per side) wider than the terminal width on the package (see 
+Figure 3-3). However, to avoid solder bridging for components having lead pitches of 0,5 mm, the pad width 
+should be reduced to 0,28 mm or smaller. The 0,28 mm width was based on a 0,5 mm pitch component having 
+a max terminal width of 0,3 mm per the mechanical drawing. In the event that a board supplier can't achieve 
+a solder mask web between 0,28 mm wide pads, the width should be reduced to accommodate the board 
+supplier's solder-mask web tolerances. For board designs that require the minimum land pattern, the stencil 
+design parameters of aspect ratio and area ratio must be considered to have a manufacturable land pattern 
+design. Stencils typically are designed with a relationship to the land pattern, so both must be considered closely 
+when minimizing. IPC-7525 describes the necessary parameters when designing the stencil.
+0.4 mm
+0.05 mm
+Min 0.025 mm
+Per Side for Lead Pitches
+Greater than 0,.65 mm
+Figure 3-3. Substrate or PCB Lead Finger Geometry
+Printed Circuit Board (PCB) Design Guidelines
+www.ti.com
+6
+QFN and SON PCB Attachment
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 7 ===
+3.4 Exposed Pad PCB Design
+The construction of the exposed pad enables enhanced thermal and electrical characteristics. To take full 
+advantage of this feature, the pad must be physically connected to the PCB substrate with solder. The published 
+data for thermal performance, θJA, is based on a four-layer PCB incorporating vias that act as the thermal path to 
+the layers, also known as a JEDEC High K board design per JESD51-7.
+The dimensions of the thermal pad on the PCB should be equal to the exposed pad on the QFN and SON. 
+Adequate clearance (CPL) is necessary to prevent solder bridging. Experiments have concluded that a minimum 
+clearance of 0,2 mm is satisfactory for most designs.
+3.4.1 Thermal Pad Via Design
+The number of vias represented in TI example land patterns located near the end of the data sheets should 
+be considered as an example starting point. Not all applications require vias. The need for vias depends on 
+the amount of power the device dissipates. If the board routing becomes too challenging to employ the use of 
+thermal vias, contact your local TI representative for further guidance. The center thermal pad, however, should 
+always be soldered to the board for mechanical strength and reliability. For thermally challenging applications, 
+TI recommends that the thermal vias be placed on a pitch of approximately 1,0 mm. Per standard PCB 
+manufacturing capabilities, 0,3 mm diameter drill holes are recommended as a starting point, but a smaller via 
+offers less risk of solder volume loss. On applications where solder volume loss through the vias is of concern, 
+plugging or tenting can be used to achieve a repeatable process.
+Vias that are plugged eliminate the risk of solder volume loss. If plugging the via is not economically suitable, 
+tenting also can offer benefit. Tenting from the back or topside of the board can cause processing issues with 
+some printed circuit board manufacturers due to chemistry entrapment during the plating process. In the case 
+of plugging or tenting from the backside of the board, the voiding potential can increase due to the air trapped 
+within the tented via. Check with your board fabrication site for recommendations.
+Another solder-mask tenting technique is to tent from the top of the board. The via solder-mask diameter must 
+be 0,1 mm larger than the via hole diameter when tenting. Another variation is to create a cross-hatch pattern 
+of solder mask to create a predictable area of coverage. Trials have shown that via tenting from the top is less 
+likely to produce random voids between the exposed pad and the PCB pad. See Figure 3-4 for x-ray results of 
+various via tenting structures.
+For finishes that use an organic solder preserve (OSP), not tenting any vias from the top or bottom of board has 
+shown repeatable performance in soldering. In addition, optimizing the profile to achieve maximum flux activity 
+during the critical reflow stage reduces the amount of voiding seen. Trials have shown that an excessive soak 
+time, which activates the majority of the flux before the melting temperature of the alloy, results in large voids. 
+Check with your solder paste manufacturer if an alternative profile can offer more flux activity through the critical 
+melting phase of the alloy used.
+www.ti.com
+Printed Circuit Board (PCB) Design Guidelines
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+QFN and SON PCB Attachment
+7
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 8 ===
+OSP No Tenting
+OSP Cross Hatch
+Solder Mask Pattern
+ENIG w/Solder Mask Plug
+w/o plating over via
+HASL No Tenting
+ENIG w/o vias
+·
+OSP = Organic Solder Preserve
+Figure 3-4. X-Ray Images for Reference
+3.5 Solder Mask
+As described in Section 3.1, a non-solder mask defined pad (NSMD) is recommended over solder mask defined 
+(SMD) to produce consistent solder joint geometries. The solder mask can be designed around each individual 
+lead finger for lead pitches 0,65 mm and above. Check with your board fabrication site for solder-mask openings, 
+but typically the NSMD openings are 0,1 mm to 0,14 mm larger than the lead finger pad size. For a lead pitch of 
+0,5 mm, it is recommended to design the solder mask around all pads on each side with a clearance of 0,05 mm 
+or smaller, so consult your board fabrication site for tolerance requirements.
+To maximize the solder mask in the corner regions, it is necessary to round the inner corner on each row (see 
+Figure 3-5). This ensures sufficient solder mask in the corner of the PCB footprint design and also prevents the 
+metal feature from encroaching beyond an air gap of 0,2 mm. In addition, it has been observed that some QFN 
+configurations utilize an exposed metal pin 1 feature beneath the component, which has a potential of shorting to 
+a via if present in this region. Therefore, TI recommends maintaining a routing and via keep-out area next to pin 
+1 on all QFN designs to guard against this risk and offer more flexibility when selecting different suppliers (see 
+Figure 3-5).
+Figure 3-5. PCB Solder Mask and Keep-Out Area Example
+Printed Circuit Board (PCB) Design Guidelines
+www.ti.com
+8
+QFN and SON PCB Attachment
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 9 ===
+3.6 Surface Finishes
+There are a variety of surface finishes commonly available. The key factor in selecting an acceptable surface 
+finish is to ensure that the land pads have a uniform coating. Irregular surface plating, uneven solder paste 
+thickness, and crowning of the solder plating can reduce overall surface mount yields. Bare copper with an 
+organic solderability preservative (OSP) coating, electroless nickel immersion gold, or electroplated nickel-gold 
+finishes have been shown to provide an acceptable land pad surface. One type of surface finish that has shown 
+irregular processing is referred to as a "dry film process". This is because the copper undercut effect caused 
+during the dry film removal prevents optimal sidewall wetting during the reflow process.
+The advantages of plating over OSPs are:
+•
+Shelf life
+•
+Permanent coverage of copper vias and other features not exposed to a solder process, and
+•
+Contamination resistance
+Even with these differences, OSPs have shown robust performance in industry. In summary, a controlled 
+assembly process for QFN and SON soldering relies on a flat uniform attachment site. Achieving a flat uniform 
+surface leads to a greater control of solder-paste print uniformity, resulting in an overall robust process.
+3.7 Board Layout Considerations
+There are a wide variety of QFN packages on the market that have varying thicknesses. Location of the thinner 
+format QFN packages should be carefully considered when laying out the board design to avoid regions of 
+extreme deflection during manufacture (see Figure 3-6). Excessive bending of the substrate can lead to package 
+damage and should be avoided in the assembly flow.
+Avoid Excessive Bending
+Avoid Excessive Bending
+Figure 3-6. Avoid Excessive Bending
+www.ti.com
+Printed Circuit Board (PCB) Design Guidelines
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+QFN and SON PCB Attachment
+9
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 10 ===
+4 Solder Paste Screen Printing Process
+4.1 Solder Paste
+The quality of the paste print is an important factor in producing high-yield assemblies. The paste is the vehicle 
+that provides the flux and solder alloy necessary for a reliable and repeatable assembly process. A low residue, 
+no-clean solder (SN63/Pb37 or SAC alloy) paste is commonly used in mounting QFN and SON, however, water-
+soluble flux materials can be used as well if the residues can be adequately cleaned from the board. Typically, 
+the choice of solder paste determines the profile and reflow parameters. Most paste manufacturers provide a 
+suggested thermal profile for their products and must be referenced before manufacturing. Special SMD-specific 
+solder pastes are being marketed by paste vendors that minimize voiding in the solder joint. If low-standoff 
+parts such as CSPs and QFNs are to be used, highly aggressive solder fluxes are not recommended unless 
+they can be cleaned from under the parts. TI recommends that the solder-paste manufacturer’s recommended 
+temperature profile be used to optimize flux activity within the MSL (moisture sensitivity level) guidelines for the 
+most thermally sensitive component. Refer to J-STD-033 for more details on MSL classification.
+4.2 Solder Stencils
+The formation of consistent solder joints is a necessity. The contrast between a large exposed pad and small 
+lead fingers of the QFN and SON can present a challenge in producing an even standoff height. To this end, 
+careful consideration must be applied to the stencil design.
+The stencil thickness, as well as the stencil opening geometry, determines the precise volume of solder paste 
+deposited onto the device land pattern. Stencil alignment accuracy and consistent solder volume transfer are 
+critical for uniform reflow solder processing.
+Stencils are usually made of nickel buildup or stainless steel, with a nickel buildup stencil offering a smoother 
+side wall over a laser-cut stainless steel stencil. Apertures are typically trapezoidal, which helps to ensure 
+uniform release of the solder paste and reduce smearing (see Figure 4-1).
+The solder-joint thickness of QFN and SON lead fingers is typically between 0,050 mm to 0,075 mm, which has 
+a direct relationship to the amount of solder printed on the center thermal pad area. Thickness of stencils used 
+in manufacturing varies from 0,100 mm to 0,150 mm (0.004 in to 0.006 in) range, with a typical 0,125 mm stencil 
+design for 0,5 mm pitch components. The actual thickness of a stencil is dependent on other surface-mount 
+devices on the PCB, in addition to the area and aspect ratio of the minimum aperture used.
+Use a squeegee with a durometer of 95 or harder, such as stainless steel. The blade angle and speed must 
+be fine tuned to ensure an even paste transfer. An inspection of the printed solder paste is recommended 
+before placing parts. A repeatable solder deposit is the most important factor for robust reflow yields further 
+downstream in the process. As a guide, a stencil thickness of 0,125 mm (0.005 in) for QFN and SON 
+components is recommended. IPC-7525 outlines the necessary parameters to consider when designing the 
+stencil.
+Stencil Apertures Should be Tapered to
+Stencil
+PCB
+C
+Side View
+A
+B
+Figure 4-1. Solder Stencil Profile
+4.3 Lead Finger Stencil Design
+The stencil aperture is typically designed to match the PCB or substrate pad size 1:1 (1:1 is recommended on 
+periphery lead fingers and not the center thermal pad – see Section 4.4 for exposed pad recommendations). 
+For fine-pitch QFN and SON components of 0,5 mm and below, it can be necessary to reduce the stencil 
+Solder Paste Screen Printing Process
+www.ti.com
+10
+QFN and SON PCB Attachment
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 11 ===
+aperture by 20% to prevent shorting beneath the QFN, paying special attention that the area or aspect ratios are 
+not exceeded. This reduction is recommended in cases where the SMT equipment placement force is not well 
+regulated, leading to shorting from excessive solder-paste squeeze out. For 0,4-mm pitch components, a pad 
+width of 0,2 mm is recommended to aid solder-paste printing and to achieve a gap of 0,2 mm between pads.
+Lead finger stencil dimensions depend on the specific QFN and SON lead finger dimensions. For example, 
+on a 0,5-mm pitch device with 0,85-mm x 0,28-mm wide pads, a stencil aperture of 0,23 mm x 0,8 mm and 
+thickness of 0,125 mm should be used to achieve adequate print volume and area ratio requirements as outlined 
+in IPC-7525 (see Figure 4-2). In cases where the board land pattern must be minimized, the stencil aspect and 
+area ratios should be considered before board design.
+The area ratio of the stencil is critical for the printing to get good paste release. For very small apertures 
+where the area ratio is less than 0.66, the stencil must be nickel formed. This type of stencil has superior 
+release characteristics over stencils that have been produced by laser. Experiments have shown that nickel-
+formed stencils print with area ratios down to 0.57. Check with your stencil supplier for recommendations when 
+designing an aperture with a challenging area ratio.
+The aspect ratio relates to the manufacture of stencils. Stencil manufacturers require the aspect ratios (see 
+Figure 4-2) to be greater than 1.5 (see IPC-7525).
+The higher the area ratio, the better the solder paste releases, in addition to depositing more volume. Stencil 
+thickness is inversely proportional to the area ratio. So the thinner the stencil, the higher the area ratio will be, 
+ultimately resulting in a robust solder-paste release (see IPC-7525).
+W
+L
+T
+T
+W
+=
+Stencil Foil Thickness
+Width of Aperture Opening
+Aspect Ratio =
+2 x (L + W) x T
+W x L
+=
+Area of Aperture Walls
+Area of Aperture Opening
+Area Ratio =
+Figure 4-2. Aspect and Area Ratio Illustration
+4.4 Exposed-Pad Stencil Design
+The QFN and SON package is thermally and electrically efficient due to the exposed die attach pad on the under 
+side of the package. The exposed die must be soldered to the PCB or motherboard substrate.
+It is good practice to minimize the presence of voids within the exposed pad interconnection. Total elimination is 
+difficult, but the design of the exposed pad stencil is crucial. The proposed stencil design enables out-gassing 
+of the solder paste during reflow and also regulates the finished solder thickness. Typically, the solder-paste 
+coverage is approximately 50% to 70% of the pad area (see Figure 4-3). Designing an aperture that prints solder 
+1:1 with the exposed pad results in excessive metal volume that can "float" the part and cause opens and other 
+manufacturing defects. In addition, the amount of voiding post reflow in the thermal pad solder joint should not 
+exceed 50% in high-power applications (to be verified using an x-ray). Based on a JEDEC High K board stackup, 
+25% has been determined to be a point of diminishing thermal performance returns, but TI prefers a limit of 50% 
+to be set (reference JESD51-7).
+www.ti.com
+Solder Paste Screen Printing Process
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+QFN and SON PCB Attachment
+11
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 12 ===
+Figure 4-3. Example Land Pattern and Exposed-Pad Stencil Design
+Solder Paste Screen Printing Process
+www.ti.com
+12
+QFN and SON PCB Attachment
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 13 ===
+5 Package to Board Assembly Process
+5.1 Placement and Alignment
+The pick and place accuracy governs the package placement and rotational (theta) alignment. This accuracy is 
+equipment and process dependent. Slightly misaligned parts (less than 50% off the pad center) automatically 
+self align during reflow (see Figure 5-1).
+Grossly misaligned packages (greater than 50% off pad center) must be removed before reflow, as they can 
+develop electrical shorts resulting from solder bridges if they are subjected to reflow. There are two popular 
+methods for package alignment using machine vision:
+•
+Package silhouette, also called "back lighting". The vision system locates the package outline.
+•
+Lead-frame recognition, also called "front lighting". Some vision systems can directly locate the lead-frame 
+pattern.
+Both methods are acceptable for QFN and SON placement. The front lighting recognition type alignment tends 
+to be more accurate, but is also slower because more complex vision processing is required on the pick and 
+place machine.
+The package silhouette method allows the pick and place system to run faster, but it is generally less accurate. 
+Both methods are acceptable and have been successfully demonstrated by major pick and place equipment 
+vendors and contract assembly houses.
+A starting placement force of 1.5N is recommended and should be minimized where possible. After a placement 
+force is selected, inspect all four sides of the QFN package to make sure that each side is seated in the solder 
+paste. Excessive pressure can cause shorting due to solder squeeze out from under the part and, in extreme 
+cases, can potentially crack the package. Location of the thinner QFN packages should be carefully considered. 
+Excessive bending of the substrate can also lead to package damage and should be avoided in the assembly 
+flow.
+5.2 Solder Reflow
+There are no special requirements necessary when reflowing QFN and SON components. As with all SMT 
+components, it is important that profiles be checked on all new board designs. In addition, if there are 
+multiple packages on the board, the profile must be checked at different locations on the board. Component 
+temperatures can vary because of surrounding components, location of the device on the board, and package 
+densities.
+To maximize the self-alignment effect of QFN and SON, it is recommended that the maximum reflow 
+temperature specified for the solder paste not be exceeded. A good guide is to subject the PCB to a temperature 
+ramp not exceeding 4°C per second.
+The reflow profile guidelines (see Figure 5-2) are based on the temperature at the actual solder-pad to PCB 
+land-pad solder joint location. The actual temperature at the solder joint is often different than the temperature 
+settings in the reflow/rework system, due to the location of the system thermocouple used to monitor the 
+temperature.
+Specific production reflow and rework systems vary depending on manufacturer and model. Therefore, system 
+specific profiles must be established using thermocouples at the actual solder joint locations.
+TI has tested and qualified QFNs and SONs for three reflow operations according to JEDEC J-STD-020. This 
+allows one reflow operation per side of the PCB (assuming the use of a double-sided PCB) and one rework 
+operation if necessary.
+TI recommends use of the temperature profile from the solder-paste manufacturer to optimize flux activity 
+within the MSL guidelines for the most thermally sensitive component. See J-STD-033 for more details on MSL 
+classification.
+www.ti.com
+Package to Board Assembly Process
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+QFN and SON PCB Attachment
+13
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 14 ===
+Before Reflow
+During Reflow
+After Reflow
+Figure 5-1. Package Self Alignment at Reflow
+183
+165
+Time
+135
+Temperature (ºC)
+Min. 60 sec.
+Max. 120 sec.
+Max. 235°C, Min. 195 C
+°
+Min. 30 sec.
+Max. 90 sec.
+220
+180
+Time
+150
+Min. 60 sec.
+Max. 120 sec.
+Max. 260 C, Min. 230 C
+°
+°
+Min 30 sec.
+Max. 90 sec.
+Temperature (ºC)
+Pb-Free Temperature Profile Example
+SnPb Temperature Profile Example
+Figure 5-2. QFN and SON Pb and Pb-Free Example Reflow Profiles
+5.3 PCB Cleaning
+If a low-residue no-clean solder paste is used, PCB cleaning typically is not required. With the elimination of 
+materials containing chlorofluorocarbon (CFC), most companies have moved to either a no-clean or aqueous 
+flux-based system. No-clean fluxes and solders minimize the harmful effects that residues left on the board 
+can cause in the form of corrosion. Because a wide variety of no-clean solder pastes are available, perform 
+application-specific evaluations to identify if any remaining residues can cause harm to the assembly. Contact 
+your solder-paste supplier for testing performed and recommended-use conditions.
+Evaluate the cleaning process for water-soluble fluxes and give special attention to cleaning under the QFN 
+component. Due to the wide variety of cleaning mediums on the market outside of TI’s control, each customer 
+should discuss material interactions with their supplier before cleaning. In addition to cleaning, the drying of 
+circuit boards of any residual cleaning medium must be considered to prevent potential issues such as corrosion.
+5.4 Inspection
+Inspection of QFNs and SONs on a PCB typically is accomplished by using transmission type x-ray equipment.
+In most cases, 100-percent inspection is not performed. Typically, x-ray inspection is used to establish process 
+parameters and then to monitor the production equipment and process. Transmission x-ray can detect bridging, 
+shorts, opens, and solder voids. There are many different types of x-ray inspection equipment available and 
+Package to Board Assembly Process
+www.ti.com
+14
+QFN and SON PCB Attachment
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 15 ===
+functionality varies. X-ray inspection system features range from manual to automated optical inspection (AOI). 
+Different systems also provide single-dimensional or multidimensional inspection capabilities.
+As explained in Section 5.2, QFNs and SONs self align to the land pad using surface tension during the solder 
+reflow process. As a result, it is unlikely that a QFN and SON is marginally misaligned. If a misalignment does 
+occur, it is likely to be by an entire pad. This effect makes it possible to do a gross visual alignment check after 
+the reflow. Fiducial marks on the PCB can aid visual checks of the PCB and also are useful for manually placing 
+units during any rework.
+The exterior fillet formation can vary based on manufacturing factors, such as flux activity, solder volumes, and 
+overall standoff height. Due to factors outside of TI’s control, no assurance for consistent solder fillet heights 
+on the package sides during assembly can be made. IPC-A610D does not require a side fillet, since the side 
+terminations are not plated. While it can appear the wetting is reduced on the side of the component, the solder 
+joint underneath is not affected (see Figure 5-3).
+Figure 5-3. Illustration of Typical Fillet Formation
+www.ti.com
+Package to Board Assembly Process
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+QFN and SON PCB Attachment
+15
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 16 ===
+6 Rework Guidelines (Hot Gas Convection and Manual)
+Rework equipment has continued to progress rapidly to address chip scale packages. Many manufacturers 
+use a single rework station to incorporate multiple rework process steps, such as component removal, site 
+redress, solder paste and flux application, alignment, component placement, and reflow. The advancement of 
+beam-splitting imaging for alignment, placement, and other areas, such as characterizing and storing individual 
+component reflow profiles, has greatly simplified the rework process.
+Because QFNs and SONs allow more functionality and features on smaller products, one area of concern is 
+thermal separation of adjoining components during the rework process. Some manufacturers have addressed 
+this concern by designing hot gas nozzles that maintain the keep-out zone area around the rework component to 
+thermally isolate adjacent components during the reflow process.
+Original equipment manufacturers have different requirements for solder-paste and flux-only applications during 
+the rework process. For those who require solder paste, microstencils and squeegees have been developed. 
+These microstencils are aligned using the same beam-splitting imaging as the component placement. 
+Microsqueegees allow for simple, uniform solder-paste coverage across the microstencil. Section 6.3 shows 
+the technique of screen-printing solder to the component before placement.
+6.1 Compound Removal
+It is highly recommended to bake out the board before rework to reduce the risk of delaminating either the board 
+or part. Removing the component is by far the easiest part of the rework process. After the thermal profile is 
+optimized, the process parameters are used to remove the device.
+The gas nozzle used during this process surrounds the device and seals against the board. The QFN or SON is 
+heated from the top side with hot gas, while residual heat is exhausted up and away from adjacent components. 
+The anti-crushing feature in the nozzle prevents excessive top-side force from being applied to the QFN and 
+SON. The entire assembly is also heated from the bottom side with an under-board heater to help prevent 
+warpage. Preheating the board to a fixed temperature before the component is heated also helps to ensure 
+process repeatability. When the reflow process is complete, the nozzle vacuum cup is automatically activated 
+and the component is slowly lifted off the pads. The vacuum cup in the nozzle is designed to disengage if the 
+component has not fully reflowed for any reason. This prevents the potential for lifting pads. The application of 
+flux is recommended for QFN and SON removal.
+Table 6-1 lists generic guidelines to remove QFN packages assembled on a 0.056-in FR4 board. It is 
+recommended to modify heating profiles for different board thicknesses and equipment used. Parts must not 
+exceed the peak temperature as listed on the MSL label. Parts and boards must be baked out before rework to 
+reduce the risk of delamination.
+Table 6-1. Pb-Free Solder Component Removal
+1.
+Apply flux paste to component.
+2.
+Align nozzle over part to be removed.
+3.
+Maintain nozzle 0.050-in over device. Take care to prevent overtravel of the vacuum tip, which can damage the part or vacuum tip 
+when measuring this distance.
+4.
+Preheat board to 90°C, nozzle warming up 20% air flow, 125°C
+5.
+Soak stage: 20% air flow, 225°C, 90 s
+6.
+Ramp stage: 20% air flow, 335°C, 30 s
+7.
+Reflow stage: 25% air flow, 370°C, 65 s
+8.
+Enable vacuum at the end of the reflow cycle, lower vacuum nozzle, and remove part.
+9.
+Cool down stage: 40% air flow, 25°C, 50 s
+10.
+Turn off the vacuum and remove part from nozzle.
+11.
+Using any metal tweezers or rough handling can damage the part and render it unanalyzable.
+12.
+Do not reuse the part after it is removed.
+Rework Guidelines (Hot Gas Convection and Manual)
+www.ti.com
+16
+QFN and SON PCB Attachment
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 17 ===
+6.2 Site Redress
+After the QFN and SON has been removed, the residual solder that remains on the board pads must be 
+removed. The QFN or SON PCB site is very fragile due to its extremely small pad sizes. To avoid damaging 
+the pads or solder mask, the site redress process must be performed very carefully. Apply flux to the site after 
+component removal. Use a temperature-controlled soldering iron fitted with a small flat blade to gently apply 
+solder braid that has been presoaked in flux over the PCB pads.
+Remove residual flux from the site with alcohol and a lint-free swab. Then inspect the site before the 
+replacement process. Do not use the removed part. The added volume of solder on the removed part causes 
+coplanarity issues and inconsistent solder volume. Performing site redress on the periphery leads of the 
+component can also cause unforeseen damage.
+6.3 Component Replacement and Reflow
+The first step before replacement is to apply solder paste either to the board or directly to the component. 
+Depending on the application, one of these two methods can be more advantageous, due to factors such as 
+board density and ease of access to the rework site. Evaluate which method is best on a case-by-case basis. 
+Both methods require the use of a mini stencil. Figure 6-1 shows the steps to screen print solder directly onto the 
+component. The solder paste is applied to the part using a fixture courtesy of Photo Stencil.
+A component insertion tool ensures proper registration of lightweight QFNs and SONs onto the printed circuit 
+board. In addition, the insertion tool eliminates manual handling of the component, which can deposit unwanted 
+skin oil on the component pads.
+Optical systems used for alignment consist of a beam-splitting prism combined with an inspection microscope or 
+video camera fitted with a zoom lens. This optical system allows the operator to see a magnified image of the 
+bottom side of the QFN and SON superimposed over the corresponding PCB land pattern.
+Alignment and placement of the QFN and SON must be accurate to within 0,1 mm. When the QFN and SON is 
+correctly aligned, the X-Y table is locked to prevent further movement. The nozzle (Figure 6-2) is lowered until it 
+lightly contacts the board. The nozzle vacuum is automatically deactivated and the thermal reflow cycle begins. 
+PC-based software provides the process control necessary to ensure repeatable results. Once the cool-down 
+stage is complete, the nozzle is raised and the assembly is removed for inspection.
+Figure 6-1 shows generic guidelines to remove QFN packages assembled on a 0.056-in FR4 board. It is 
+recommended to modify heating profiles for different board thicknesses and equipment used. Parts must not 
+exceed the peak temperature as listed on the MSL label. Parts and boards must be baked out before rework to 
+reduce the risk of delamination.
+www.ti.com
+Rework Guidelines (Hot Gas Convection and Manual)
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+QFN and SON PCB Attachment
+17
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 18 ===
+Figure 6-1. Example Mini Stencil
+Example Air-Vac Rework Nozzle
+for QFN Package sizes between 2.15 mm to 4.5 mm
+ā
+ā
+ā
+NMX188DVG
+- .188” Exhaust Opening
+-
+- VTMX020-35 Vacuum Tip
+A larger nozzle will be required
+for larger package sizes.
+Refer to www.air-vac-eng.com
+for recommended nozzle sizes
+by package dimension
+Used for QFN Package sizes
+between 2.15 mm to 4.5 mm
+Hot Gas Convection Nozzle
+Figure 6-2. Example Hot Gas Convection Nozzle
+Rework Guidelines (Hot Gas Convection and Manual)
+www.ti.com
+18
+QFN and SON PCB Attachment
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 19 ===
+Table 6-2. Pb-Free Solder Component Placement
+1.
+Apply solder paste to component or board using mini-screen printing tool (see Figure 6-4).
+2.
+Align device over pads.
+3.
+Place device on board. Take care to prevent overtravel during placement, which can damage the part or vacuum tip.
+4.
+Raise nozzle 0.050-in
+5.
+Preheat board to 90°C, nozzle warming up 20% air flow, 125°C.
+6.
+Soak stage: 20% air flow, 225°C, 90 s
+7.
+Ramp stage: 20% air flow, 335°C, 30 s
+8.
+Reflow stage: 25% air flow, 370°C, 65 s
+9.
+Cool down stage: 40% air flow, 25°C, 50 s
+6.4 Manual Rework Considerations
+If manual touch-up is required, it is highly recommended to bake out the board and replacement components 
+before rework, which reduces the risk of delaminating either the board or part. Use of a preheater (see Figure 
+6-3) is also strongly recommended to reduce the risk of temperature overshoot. By using a preheater, the 
+soldering iron tip size and potential for temperature overshoot can be reduced, resulting in a robust manual 
+soldering iron process.
+IPC7711 recommends initial use of the lowest possible tip temperature. It is also recommended that the smallest 
+tip size be used, which mitigates temperature overshoot and reduces the risk of delaminating either the board or 
+component.
+Damage can result when a soldering iron comes in contact with the periphery lead, and pressure is applied to 
+the side of the QFN part. Avoid contacting the side of the QFN part when performing manual rework with a 
+soldering iron or damage will occur (see Figure 6-4). If manual soldering is used, the soldering iron tip should 
+only contact the board pad without contacting the side of the component. In general a temperature-controlled hot 
+gas convection repair method is recommended over manual soldering because the risk of applying excessive 
+force is eliminated. The maximum rework temperature as measured on the package should not exceed the MSL 
+rating as specified on the shipping label. See Figure 2-1 for an example of the MSL label.
+Figure 6-3. Preheater
+www.ti.com
+Rework Guidelines (Hot Gas Convection and Manual)
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+QFN and SON PCB Attachment
+19
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 20 ===
+Figure 6-4. Manual Rework Damage
+7 Revision History
+Changes from Revision B (August 2018) to Revision C (December 2023)
+Page
+•
+Updated the numbering format for tables, figures, and cross-references throughout the document................. 1
+Changes from July 25, 2007 to August 28, 2018
+Page
+•
+Editorial and format changes throughout document...........................................................................................1
+Revision History
+www.ti.com
+20
+QFN and SON PCB Attachment
+SLUA271C – JUNE 2002 – REVISED DECEMBER 2023
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PDF PAGE 21 ===
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATA SHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you 
+will fully indemnify TI and its representatives against, any claims, damages, costs, losses, and liabilities arising out of your use of these 
+resources.
+TI’s products are provided subject to TI’s Terms of Sale or other applicable terms available either on ti.com or provided in conjunction with 
+such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable warranties or warranty disclaimers for 
+TI products.
+TI objects to and rejects any additional or different terms you may have proposed. IMPORTANT NOTICE
+Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+Copyright © 2023, Texas Instruments Incorporated

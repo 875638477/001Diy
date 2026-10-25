@@ -1,0 +1,308 @@
+===== PDF page 4 =====
+4 Pin Configuration and Functions
+1
+TXD
+8
+ S
+2
+GND
+7
+ CANH
+3
+VCC 
+6
+ CANL
+4
+RXD
+5
+ SHDN
+Not to scale
+Figure 4-1. TCAN330 D, DCN Packages, 8-Pin 
+SOIC, SOT-23, (Top View)
+1
+TXD
+8
+ NC
+2
+GND
+7
+ CANH
+3
+VCC 
+6
+ CANL
+4
+RXD
+5
+ NC
+Not to scale
+Figure 4-2. TCAN332 D, DCN Packages, 8-Pin 
+SOIC, SOT-23, (Top View)
+1
+TXD
+8
+ STB
+2
+GND
+7
+ CANH
+3
+VCC 
+6
+ CANL
+4
+RXD
+5
+ SHDN
+Not to scale
+Figure 4-3. TCAN334 D, DCN Packages, 8-Pin 
+SOIC, SOT-23, (Top View)
+1
+TXD
+8
+ S
+2
+GND
+7
+ CANH
+3
+VCC 
+6
+ CANL
+4
+RXD
+5
+ FAULT
+Not to scale
+Figure 4-4. TCAN337 D, DCN Packages, 8-Pin 
+SOIC, SOT-23, (Top View)
+Table 4-1. Pin Functions
+PIN
+I/O
+DESCRIPTION
+NAME
+TCAN330
+TCAN332
+TCAN334
+TCAN337
+TXD
+1
+1
+1
+1
+I
+CAN transmit data input (LOW for dominant and HIGH for recessive bus 
+states), integrated pull up
+GND
+2
+2
+2
+2
+GND
+Ground connection
+VCC
+3
+3
+3
+3
+Supply
+3.3-V supply voltage
+RXD
+4
+4
+4
+4
+O
+CAN receive data output (LOW for dominant and HIGH for recessive bus 
+states), tri-state
+SHDN
+5
+—
+5
+—
+I
+Drive high for shutdown mode. Internal pull-down.
+NC
+—
+5
+—
+—
+NC
+No Connect – Not internally connected
+FAULT
+—
+—
+—
+5
+O
+Open drain fault output pin.
+CANL
+6
+6
+6
+6
+I/O
+Low level CAN bus line
+CANH
+7
+7
+7
+7
+I/O
+High level CAN bus line
+S
+8
+—
+—
+8
+I
+Drive high for silent mode, integrated pull down
+NC
+—
+8
+—
+—
+NC
+No Connect – Not internally connected
+STB
+—
+—
+8
+—
+I
+Drive high for low power standby mode, integrated pull down
+TCAN330, TCAN332, TCAN334, TCAN337
+TCAN330G, TCAN332G, TCAN334G, TCAN337G
+SLLSEQ7F – DECEMBER 2015 – REVISED MAY 2025
+www.ti.com
+4
+Submit Document Feedback
+Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TCAN330 TCAN332 TCAN334 TCAN337 TCAN330G TCAN332G TCAN334G TCAN337G
+
+===== PDF page 29 =====
+7.3.2 Differential Signal
+CAN is a differential bus where complementary signals are sent over two wires and the voltage difference 
+between the two wires defines the logical state of the bus. The differential CAN receiver monitors this voltage 
+difference and outputs the bus state with a single ended logic level output signal.
+75% SAMPLE POINT
+500 mV Threshold
+900 mV Threshold
+NOISE MARGIN
+NOISE MARGIN
+RECEIVER DETECTION WINDOW
+Figure 7-6. Typical Differential Output Waveform
+The CAN driver creates the differential voltage between CANH and CANL in the dominant state. The dominant 
+differential output of the TCAN33x is greater than 1.5V and less than 3V across a 60Ω load as defined by the 
+ISO11898 standard. These are the same limiting values for 5V supplied CAN transceivers. The bus termination 
+resistors drive the recessive bus state and not the CAN driver.
+A CAN receiver is required to output a recessive state when less than 500 mV of differential voltage exists on 
+the bus, and a dominant state when more than 900mV of differential voltage exists on the bus. The CAN receiver 
+must do this with common-mode input voltages from –2V to 7V. The TCAN33x family receivers meet these same 
+input specifications as 5V supplied receivers.
+7.3.3 Common-Mode Signal and EMC Performance
+A common-mode signal is an average voltage of the two signal wires that the differential receiver rejects. The 
+common-mode signal comes from the CAN driver, ground noise, and coupled bus noise. Since the bias voltage 
+of the recessive state of the device is dependent on VCC, any noise present or variation of VCC has an effect on 
+this bias voltage seen by the bus. The TCAN33x family has the recessive bias voltage set higher than 0.5 x VCC 
+to match common mode in recessive mode to dominant mode. This results in superior EMC performance.
+7.4 Power Supply Recommendations
+For reliable operation at all data rates and supply voltages, each supply should be decoupled with a 100nF 
+ceramic capacitor located as close to the VCC supply pins as possible. The TPS76333 is a linear voltage 
+regulator suitable for the 3.3V supply.
+7.5 Layout
+7.5.1 Layout Guidelines
+TCAN33x family of devices incorporates integrated IEC 61000-4-2 ESD protection. Should the system requires 
+additional protection against ESD, EFT or surge, additional external protection and filtering circuitry may be 
+needed.
+In order for the PCB design to be successful, start with design of the protection and filtering circuitry. Because 
+ESD and EFT transients have a wide frequency bandwidth from approximately 3MHz to 3GHz, high frequency 
+layout techniques must be applied during PCB design.
+www.ti.com
+TCAN330, TCAN332, TCAN334, TCAN337
+TCAN330G, TCAN332G, TCAN334G, TCAN337G
+SLLSEQ7F – DECEMBER 2015 – REVISED MAY 2025
+Copyright © 2025 Texas Instruments Incorporated
+Submit Document Feedback
+29
+Product Folder Links: TCAN330 TCAN332 TCAN334 TCAN337 TCAN330G TCAN332G TCAN334G TCAN337G
+
+===== PDF page 30 =====
+Design the bus protection components in the direction of the signal path. Do not force the transient current 
+to divert from the signal path to reach the protection device. Below is a list of layout recommendations when 
+designing a CAN transceiver into an application.
+•
+Transient Protection on CANH and CANL: Transient Voltage Suppression (TVS) and capacitors (D1, C5 and 
+C7 shown in Figure 7-7) can be used for additional system level protection. These devices must be placed as 
+close to the connector as possible. This prevents the transient energy and noise from penetrating into other 
+nets on the board.
+•
+Bus Termination on CANH and CANL: Figure 7-7 shows split termination where the termination is split into 
+two resistors, R5 and R6, with the center or split tap of the termination connected to ground through capacitor 
+C6. Split termination provides common mode filtering for the bus. When termination is placed on the board 
+instead of directly on the bus, care must be taken to ensure the terminating node is not removed from the 
+bus, as this causes signal integrity issues if the bus is not properly terminated on both ends.
+•
+Decoupling Capacitors on VCC: Bypass and bulk capacitors must be placed as close as possible to the supply 
+pins of transceiver (examples are C2 and C3).
+•
+Ground and power connections: Use at least two vias for VCC and ground connections of bypass capacitors 
+and protection devices to minimize trace and via inductance.
+•
+Digital inputs and outputs: To limit current of digital lines, serial resistors may be used. Examples are R1, R2, 
+R3 and R4.
+•
+Filtering noise on digital inputs and outputs: To filter noise on the digital I/O lines, a capacitor may be used 
+close to the input side of the I/O as shown by C1, C8 and C4.
+•
+Fault Output Pin (TCAN337 only): Because the FAULT output pin is an open drain output, an external pullup 
+resistor is required to pull the pin voltage high for normal operation (R7).
+•
+TXD input pin: If an open-drain host processor is used to drive the TXD pin of the device, an external pullup 
+resistor between 1kΩ and 10kΩ must be used to help drive the recessive input state of the device (weak 
+internal pullup resistor).
+7.5.2 Layout Example
+R4
+SHDN
+C8
+1
+2
+3
+4
+U1
+TCAN33x
+8
+7
+6
+5
+R5
+R6
+C6
+C5
+D1
+J1
+C3
+C2
+VCC
+GND
+C1
+R1
+R2
+R3
+S/STB
+C7
+TXD
+RXD
+C4
+R7
+VCC
+FAULT
+Figure 7-7. Layout Example
+TCAN330, TCAN332, TCAN334, TCAN337
+TCAN330G, TCAN332G, TCAN334G, TCAN337G
+SLLSEQ7F – DECEMBER 2015 – REVISED MAY 2025
+www.ti.com
+30
+Submit Document Feedback
+Copyright © 2025 Texas Instruments Incorporated
+Product Folder Links: TCAN330 TCAN332 TCAN334 TCAN337 TCAN330G TCAN332G TCAN334G TCAN337G

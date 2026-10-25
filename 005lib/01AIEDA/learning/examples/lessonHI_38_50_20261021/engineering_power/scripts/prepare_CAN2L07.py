@@ -1,0 +1,7 @@
+from pathlib import Path
+import json,copy
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';q=json.loads((P/'CAN_RXD_2L_engineered_06.json').read_text());q['batchId']='CAN_RXD_2L_engineered_07';q['supersedesRejectedCandidate']='CAN06 VBUsuppervertical34.55 to newGND35.2,18.5 gap.25<actual.3; moveonlypendingVBUSuppervertical .15left, not GNDreturn/GPIOcorridor.'
+op=next(o for o in q['operations']if o['id']=='HI_2L_VBUS_PRESENT_N_1_R1');op['points']=[[34.6,26.85],[36.05,25.4],[36.05,23.6],[35.6,23.15],[34.75,23.15],[34.55,22.95],[34.4,22.8],[34.4,18.15],[35.3,17.25],[35.3,9.3],[34.55,8.55],[34.55,5.85],[37.35,3.05],[42.9,3.05],[45.75,5.9],[47.7,5.9],[51.15,9.35],[51.15,11.7]];q['replacePendingOperations'][0]['replacement']=copy.deepcopy(op)
+q['requiredFuturePlans']=['plans/J2_GND_entry_2L_01.json','engineering_power/UART_RX_receiver_bridge_2L_03.json','engineering_power/remaining_returns_2L_v19_02.json']
+q['engineering']['upperSenseAdjustment']='OnlypendingVBUSuppervertical34.55→34.4over18.15..22.8 gives.4mmgaptoGND35.2,18.5, keepsotherfrozenGPIOsource/criticalpower/USBunchanged.'
+(P/'CAN_RXD_2L_engineered_07.json').write_text(json.dumps(q,indent=2)+'\n',encoding='utf-8');print('PreparedCAN07withJ2entryrequirement')

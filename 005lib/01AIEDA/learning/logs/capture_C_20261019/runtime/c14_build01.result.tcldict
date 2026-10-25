@@ -1,0 +1,24 @@
+id c14_build01 code 1 result {DboState failed: SetUserPropStringValue MPN} started_ms 1792375164418 finished_ms 1792375164427 errorinfo {DboState failed: SetUserPropStringValue MPN
+    while executing
+"error "DboState failed: $context""
+    (procedure "::C12::check" line 2)
+    invoked from within
+"::C12::check $s $context"
+    (procedure "check" line 1)
+    invoked from within
+"check [$o SetUserPropStringValue [c $k] [c $v]] "SetUserPropStringValue $k""
+    (procedure "properties" line 2)
+    invoked from within
+"properties $part {MPN QMI8610_MPN_V1 LIB_REV C14_V1 C14_INST_OVERRIDE LIB_DEFAULT_V1 C14_LIB_ONLY LIB_ONLY_V1}"
+    (procedure "::C14Run::build" line 14)
+    invoked from within
+"::C14Run::build"
+    (file "D:/001DIY/005lib/01AIEDA/learning/scripts/c14_build_baseline.tcl" line 55)
+    invoked from within
+"source {D:/001DIY/005lib/01AIEDA/learning/scripts/c14_build_baseline.tcl}"
+    (file "D:/001DIY/005lib/01AIEDA/learning/staging/capture_C_20261019/queue/c14_build01.tcl.running" line 1)
+    invoked from within
+"source D:/001DIY/005lib/01AIEDA/learning/staging/capture_C_20261019/queue/c14_build01.tcl.running"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 [list source $running]"}

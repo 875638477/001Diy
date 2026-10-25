@@ -1,0 +1,58 @@
+{
+  "status": "USER_NEW_DEFAULT_RECORDED_NOT_PHYSICALLY_APPLIED",
+  "sourceBoardSHA256": "B7A32330992F49609339E33C00BE92D989D0EA0C4AF64ED2763D0678DE14B501",
+  "sourceBoard": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native_candidates\\HI_4L_padentry_normalized_b019_DRC_PENDING.brd",
+  "oldActual": {
+    "TOP": "components+signals+localpower",
+    "L2": "GND common+HSE quiet island/void",
+    "L3": "GND",
+    "BOTTOM": "signals+localpower"
+  },
+  "newRequired": {
+    "TOP": "components+signals",
+    "L2": "continuousGND;noSignalBridges",
+    "L3": "powerDomainsToBeDesigned",
+    "BOTTOM": "signals"
+  },
+  "fixedNames": [
+    "TOP",
+    "L2",
+    "L3",
+    "BOTTOM"
+  ],
+  "rules": [
+    {
+      "id": "STACK-01",
+      "rule": "Actual L2 continuousGND: no nonGND signal bridges; existing quiet island/permanentvoid must be re-evaluated, not merely inherited.",
+      "acceptance": "Native actual generated GND/voids/pads and all layer signal objects verified; intended continuity supported by geometry."
+    },
+    {
+      "id": "STACK-02",
+      "rule": "Select actual L3 power domains from physical load/voltage needs. Do not automatically split all rails across the full board. V3V3 may dominate, V5 local supply may remain outer-layer if justified; no unreviewed choice is applied here.",
+      "acceptance": "Each real polygon has net, feeder, load/current, decoupling, isolation/clearance and boundary record."
+    },
+    {
+      "id": "STACK-03",
+      "rule": "BOTTOM signals use actual adjacent L3 reference. Avoid crossing L3 power splits/voids; old L3GND projected coverage cannot certify new planes.",
+      "acceptance": "Per critical full trace-footprint projection after fill, plus real return/capacitor path and connector ground check."
+    },
+    {
+      "id": "STACK-04",
+      "rule": "TOP-L2 GND to BOTTOM-L3 power transition changes reference. GNDstitchvia only joins GND; it cannot directly bond power toGND. Require real close decoupling/appropriate return or change route layer.",
+      "acceptance": "Real capacitor pin/net/placement/return conductor proof; both signal-via antipads and return detours reviewed. No blanket1.5mm approval."
+    },
+    {
+      "id": "STACK-05",
+      "rule": "Preserve local CIN/SW/BOOT/COUT/FB and MCUdecoupling loops; new power plane connectivity does not replace local caps or justify long thin necks.",
+      "acceptance": "Actual power current branches, effective capMPN, supply/thermal limits and new via/thermal bottlenecks checked."
+    },
+    {
+      "id": "STACK-06",
+      "rule": "Fixed uppercase names and full15/17Film templates remain; physicalMASK not added. Electrical function changes require actual copper and native readback.",
+      "acceptance": "New checkpointSHA, physical/layer net and fullArtwork/output review; all original input boards/templates preserved."
+    }
+  ],
+  "legacyEvidenceBoundary": "All j52 actual projection and b019 GND common results are evidence about old actual L3GND only. They are not new-default SI/PI acceptance.",
+  "physicalChangeApplied": false,
+  "newCadenceRun": false
+}

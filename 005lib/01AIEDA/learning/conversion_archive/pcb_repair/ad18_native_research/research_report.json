@@ -1,0 +1,69 @@
+﻿{
+    "checked_at":  "2026-10-23",
+    "task":  "Read-only Altium source connectivity semantics and AD18 native compile/export feasibility",
+    "altium_executed":  false,
+    "original_source_modified":  false,
+    "installed_application":  {
+                                  "path":  "C:\\Program0\\AD18\\X2.exe",
+                                  "evidence":  "Uninstall registry InstallLocation and DisplayIcon, executable exists; no AD process was running at time checked",
+                                  "registry_display_version":  "18.0.7.293",
+                                  "note":  "DXP.exe App Paths absence did not mean Altium absent; AD18 executable is X2.exe"
+                              },
+    "source_project":  {
+                           "options":  {
+                                           "AllowSheetEntryNetNames":  1,
+                                           "PowerPortNamesTakePriority":  0,
+                                           "AllowPortNetNames":  0,
+                                           "NetlistSinglePinNets":  0,
+                                           "NameNetsHierarchically":  0,
+                                           "HierarchyMode":  0,
+                                           "AppendSheetNumberToLocalNets":  0
+                                       },
+                           "path":  "D:\\001DIY\\004computer\\lga1700\\lga1700_AD\\lga1700.PrjPCB"
+                       },
+    "gnda_semantics":  {
+                           "source_url":  "https://www.altium.com/documentation/altium-designer/schematic/creating-circuit-connectivity",
+                           "priority_option":  "PowerPortNamesTakePriority changes naming precedence: off means labels before power ports; on means power ports before labels. It does not itself introduce physical or logical connectivity between different identifier types.",
+                           "source_sections":  [
+                                                   "Net Label Notes: different identifier types, AGND example",
+                                                   "Net Naming Options: Power Port Names Take Priority",
+                                                   "Two Separate Nets That Have the Same Name"
+                                               ],
+                           "exact_quote":  "Net identifiers of different types do not automatically connect to one another even if they share the same name.",
+                           "source_branch_evidence":  "SIO - IT8613E has a separate 3-pin GNDA power-port branch and a 5-pin branch with both GNDA and SIO_GNDA net labels. Keep branches separate when matching schematic topology; chosen final name and duplicate-name diagnostics should be confirmed by AD native compilation.",
+                           "official_conclusion":  "A same-name net label and power port do not automatically connect. Physical wiring or another valid connectivity path is needed.",
+                           "same_type_rules":  "Net labels normally connect same-name labels on the same sheet; project Global scope extends labels. Same-name power ports connect project-wide unless localized by hierarchy.",
+                           "limitation":  "Official rules plus parsed ASCII geometry support separation; no native compile has yet been run. Duplicate named separate nets can be merged when transferred to PCB, so name equality alone is insufficient as an authority for schematic equivalence."
+                       },
+    "ad18_local_interfaces":  {
+                                  "scripting_ins":  "C:\\Program0\\AD18\\System\\ScriptingSystem.ins:41-43 declares RunScript, RunScriptFile, RunScriptText",
+                                  "orcad_generator":  "C:\\Program0\\AD18\\System\\OrcadPCB2.OUT: Name=OrCadPCB2Netlist, Module=OUT_ORCAD.dll, CanGenerateNetlist=True",
+                                  "local_samples":  "No DelphiScript .pas or .PrjScr examples found in the targeted AD18 Examples/Templates and Public Documents locations checked. No full-disk scan was performed.",
+                                  "compile_rcs":  "C:\\Program0\\AD18\\System\\WorkspaceManager.rcs:281 declares WorkspaceManager:Compile with Action=Compile|ObjectKind=Project",
+                                  "protel_generator":  "C:\\Program0\\AD18\\System\\ProtelNetlist.OUT: Name=ProtelNetlist, Module=OUT_ProtelNetlist.dll, CanGenerateNetlist=True",
+                                  "project_netlist_rcs":  "C:\\Program0\\AD18\\System\\WorkspaceManager.rcs:299 declares WorkspaceManager:GenerateReport with ObjectKind=Netlist|Index=%1; index is plugin/menu dependent"
+                              },
+    "recommended_native_audit":  {
+                                     "status":  "Prepared but not runtime validated; no AD launch has been performed",
+                                     "faq_url":  "https://www.altium.com/documentation/altium-dxp-developer/delphi-sdk-how-to-faq",
+                                     "compatibility_note":  "Workspace Manager API documentation predates AD18 and the installed command declarations confirm scripting/compile presence. Runtime bindings and license availability still require an isolated AD18 trial.",
+                                     "steps":  [
+                                                   "Copy the AD project plus its 35 source SchDoc documents into this isolated research folder, preserving project-relative paths.",
+                                                   "Run the prepared DelphiScript in the installed AD18 against only that copied project.",
+                                                   "DM_Compile, then obtain DM_DocumentFlattened and export each native net by a numeric net_index plus each associated pin.",
+                                                   "Also export all component pins on physical documents to capture unused/no-net pins.",
+                                                   "Compare partitions by pins and net_index; compare final names separately, because same-name source nets may still be distinct."
+                                               ],
+                                     "source_url":  "https://www.altium.com/documentation/altium-dxp-developer/workspace-manager-api"
+                                 },
+    "external_execution":  {
+                               "command_note":  "The caret shown before | in the official example is cmd.exe escaping, not part of the Altium process parameter. Use a single argument in PowerShell or a proper process ArgumentList.",
+                               "command_process":  "-RScriptingSystem:RunScript(ProjectName=...|ProcName=...)",
+                               "official_url":  "https://resources.altium.com/p/continuous-integration-implementation-using-altium-designer",
+                               "process_alternative":  "ScriptingSystem:RunScriptFile with FileName=\u003cpas path\u003e|ProcName=DumpCompiledConnectivity is documented for form-free DelphiScript unit files, and the process exists locally in AD18.",
+                               "output_job_route":  "An independently configured copied OutJob with a Protel netlist generator can be opened as OUTPUTJOB and run through WorkspaceManager:GenerateReport, ObjectKind=OutputBatch, Action=Run. Do not hard-code a dynamically numbered Netlist Index.",
+                               "official_example_version":  "AD19 official Altium CI article, 2019/2020; not a guarantee of unattended AD18 behavior",
+                               "process_url":  "https://www.altium.com/documentation/altium-designer/scripting/running-scripts",
+                               "caution":  "This is a GUI application automation entry, not a separate headless compiler. Do not call TerminateWithExitCode or CloseObject All on an existing user session."
+                           }
+}

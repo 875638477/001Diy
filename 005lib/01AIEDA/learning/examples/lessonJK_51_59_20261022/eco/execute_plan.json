@@ -1,0 +1,91 @@
+{
+  "status": "PREPARED_ONLY_NOT_EXECUTED_BY_THIS_AGENT",
+  "executor": "f29 sole native owner",
+  "scope": "Unplaced DE demonstration only. Never use these PSTs/DSNs on HI b019, newdefault stack trial or routed user boards.",
+  "outputRoot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\DE_REPLAY_ONLY",
+  "inputRoot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\source_inputs",
+  "preconditions": [
+    "Source package allSHA rechecked.",
+    "New output dir must be created under JK/eco/DE_REPLAY_ONLY; no overwrite of source_inputs or oldflow.",
+    "Copy source_inputs/DE_BASELINE.brd to DE_REPLAY_ONLY/DE_BASELINE_WORKING.brd before any native tool.",
+    "Task-local TEMP/TMP/ALLEGRO_PCBENV/cwd/runtime/logs all under outputRoot. No globalHOME edits.",
+    "Use copied private library directory for psmpath/padpath; no source public library mutation.",
+    "Historical scripts copied as evidence only: their relativeROOT, CLI and library assumptions must be adapted explicitly, not blindly launched."
+  ],
+  "historicalOfficialNetrev": {
+    "sourcePath": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\logs\\import_eco\\launch.json",
+    "sourceSHA256": "48EED43CA562A56A55000ACCFD49B5C28BB56E65265F3FA9D66089A9C8DC0820",
+    "sourceCopy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\source_inputs\\historical_commands\\import_eco_launch.json",
+    "completedHistoricalArgs": [
+      "C:\\Program0\\Cadence\\spb172\\tools\\bin\\netrev.exe",
+      "-e",
+      "-i",
+      "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\eco\\netlist",
+      "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_BASELINE.brd",
+      "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_ECO.brd"
+    ],
+    "historicalExitCode": 0,
+    "officialDocPath": "C:\\Program0\\Cadence\\spb172\\doc\\ncoms\\nchap.html",
+    "officialDocSHA256": "D1171D7917B620CA55ED0A0C74A3441AF55B8EE320A33BA0C8F22F5143FB6FE9",
+    "copiedOfficialDoc": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\source_inputs\\official_docs\\nchap.html",
+    "flagSemantics": {
+      "-e": "Missing footprint is an error; this is not an ECO enable flag.",
+      "-i": "Use the specified PST directory.",
+      "-n": "Create a new board during logic import; DO NOT use for applying ECO to copied existing baseline.",
+      "-d": "Disables DRC; not part of historical replay command and not proposed here."
+    }
+  },
+  "plannedCommands": [
+    {
+      "stage": "readonly_baseline",
+      "method": "Use task-local copy of de_board_read.il and Allegro -readonly to export fresh native80/272/69/placed0 before ECO.",
+      "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\DE_REPLAY_ONLY\\DE_BASELINE_WORKING.brd"
+    },
+    {
+      "stage": "import_eco",
+      "executable": "C:\\Program0\\Cadence\\spb172\\tools\\bin\\netrev.exe",
+      "args": [
+        "-e",
+        "-i",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\source_inputs\\eco\\netlist",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\DE_REPLAY_ONLY\\DE_BASELINE_WORKING.brd",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\DE_REPLAY_ONLY\\DE_ECO_REPLAY.brd"
+      ],
+      "assertNoFlagN": true
+    },
+    {
+      "stage": "fresh_readonly_eco",
+      "method": "Export actual component values/package and every272pin-net after native save/close/reopen.",
+      "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\DE_REPLAY_ONLY\\DE_ECO_REPLAY.brd"
+    }
+  ],
+  "optionalRegeneratePST": {
+    "executable": "C:\\Program0\\Cadence\\spb172\\tools\\bin\\pstswp.exe",
+    "args": [
+      "-pst",
+      "-d",
+      "<workingDSNcopy>",
+      "-n",
+      "<newOutputNetlist>",
+      "-c",
+      "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\source_inputs\\historical_flow\\allegro.cfg",
+      "-v",
+      "3",
+      "-l",
+      "255",
+      "-j",
+      "PCB Footprint"
+    ],
+    "restriction": "Only another copy under outputRoot; PST packaging can rewrite workingDSN bytes. Never modify authored source_inputs DSNs."
+  },
+  "optionalFeedback": "Historical genfeedformat.exe and pstswp.exe -swp launch vectors are copied. If replaying reverse output, adapt to new output and record actualSWP. Generating SWP is distinct from CaptureGUI applying it.",
+  "acceptance": [
+    "Native completed exit0 + saved marker is necessary but not sufficient.",
+    "Fresh baseline and ECO80component/272pin/69net/6NC and placed0; no additions/removals/package changes.",
+    "ExactlyR19/R20 VALUE2.2k->3.3k and exactlyJ13.7/8 PB8/PB9 exchange. Every otherpin-net/value unchanged.",
+    "No unexpected reverseSWP deltas if feedback replay included; GUIapply remains separate unless actually observed.",
+    "All source_input bytes/source originals unchanged after replay.",
+    "Report this as controlled ECO reproducibility exercise, not routed manufacturing/HI completion."
+  ],
+  "expectedDelta": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\expected_delta.json"
+}

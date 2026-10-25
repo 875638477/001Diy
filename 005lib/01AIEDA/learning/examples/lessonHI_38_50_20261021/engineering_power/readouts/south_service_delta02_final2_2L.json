@@ -1,0 +1,7505 @@
+{
+  "status": "NO_DEFINITE_OVERLAP_SPACING_AND_NATIVE_REVIEW_PENDING",
+  "checkpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\USB_aux_2L_b014",
+  "plans": [
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\GPIO_north_joint_fanout_02.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\source\\GPIO_south_root_v8_jointdelta02.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\GPIO_left_joint_fanout_07.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\NSS_pullup_local_relayout_01.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\RIGHT10_FULL_2L_v11.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\ordinary_remote_2L_v9.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\source\\root_south_service_2L_jointdelta02.json"
+  ],
+  "placementChanges": [
+    {
+      "ref": "R16",
+      "xy": [
+        45.5,
+        19.9
+      ],
+      "rotation": 0,
+      "purpose": "Move source-series resistor to the same east routing side as UART/SWD/USB services; avoid actual18-28mm westward detour and release south-west GPIO window. pin1(45.6016,19.9),pin2(47.1764,19.9)."
+    },
+    {
+      "ref": "C13",
+      "xy": [
+        34.0,
+        22.4984
+      ],
+      "rotation": 90,
+      "purpose": "Move +.6X/-1.1Y to release leftGPIO bank while preserving direct TOP cap loops; VDD leg slightly longer, VSS leg shorter, total loop length modestly reduced."
+    },
+    {
+      "ref": "R21",
+      "xy": [
+        33.7016,
+        30.6
+      ],
+      "rotation": 180
+    },
+    {
+      "ref": "R23",
+      "xy": [
+        33.5,
+        32
+      ],
+      "rotation": 180
+    },
+    {
+      "ref": "R25",
+      "xy": [
+        31,
+        33.7
+      ],
+      "rotation": 0
+    },
+    {
+      "ref": "R32",
+      "xy": [
+        31,
+        35.5
+      ],
+      "rotation": 0
+    },
+    {
+      "ref": "C15",
+      "xy": [
+        47.3,
+        30.4016
+      ],
+      "rotation": 270,
+      "purpose": "Free PB8/PB9 source copper, maintain local direct VDD/VSS loop"
+    },
+    {
+      "ref": "R28",
+      "xy": [
+        53,
+        28
+      ],
+      "rotation": 180,
+      "purpose": "BOOT0 pulldown removes old ground pad/thermal obstruction from PB5 fanout"
+    }
+  ],
+  "deletedSegments": [
+    {
+      "oldQuietShape": {
+        "layer": "ETCH/BOTTOM",
+        "net": "GND",
+        "filled": true,
+        "boundary": null,
+        "generated": null,
+        "fillOOD": null,
+        "bbox": [
+          [
+            37.2,
+            28.5
+          ],
+          [
+            47.5,
+            39.4
+          ]
+        ],
+        "area": 62.31,
+        "vertices": [
+          [
+            [
+              45.1,
+              28.5
+            ],
+            0.0
+          ],
+          [
+            [
+              45.8,
+              28.5
+            ],
+            0.0
+          ],
+          [
+            [
+              45.8,
+              31.25
+            ],
+            0.0
+          ],
+          [
+            [
+              45.1,
+              31.95
+            ],
+            0.0
+          ],
+          [
+            [
+              45.3,
+              31.95
+            ],
+            0.0
+          ],
+          [
+            [
+              45.3,
+              33.2
+            ],
+            0.0
+          ],
+          [
+            [
+              47.5,
+              33.2
+            ],
+            0.0
+          ],
+          [
+            [
+              47.5,
+              39.4
+            ],
+            0.0
+          ],
+          [
+            [
+              37.2,
+              39.4
+            ],
+            0.0
+          ],
+          [
+            [
+              37.2,
+              36.8
+            ],
+            0.0
+          ],
+          [
+            [
+              40.0,
+              36.8
+            ],
+            0.0
+          ],
+          [
+            [
+              40.0,
+              32.8
+            ],
+            0.0
+          ],
+          [
+            [
+              40.6,
+              32.8
+            ],
+            0.0
+          ],
+          [
+            [
+              40.6,
+              31.95
+            ],
+            0.0
+          ],
+          [
+            [
+              44.4,
+              31.95
+            ],
+            0.0
+          ],
+          [
+            [
+              45.1,
+              31.25
+            ],
+            0.0
+          ]
+        ],
+        "holes": null
+      },
+      "replacementFromPlan": "RIGHT10_FULL_2L_v11"
+    },
+    {
+      "operation": "GPIO_NORTH_RIP_PC15_VERTICAL",
+      "actual": {
+        "kind": "line",
+        "net": "GPIO_PC15",
+        "layer": "ETCH/BOTTOM",
+        "startEnd": [
+          [
+            40.3,
+            28.9
+          ],
+          [
+            40.3,
+            30.3
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((40.2 28.8) (40.4 30.4)) isEtch t font nil lineType vertical layer \"ETCH/BOTTOM\" width 0.2 startEnd ((40.3 28.9) (40.3 30.3)) parent dbid:0000014D38881200 net dbid:0000014D387CA180 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GPIO_PC15",
+            "layer": "ETCH/BOTTOM",
+            "startEnd": [
+              [
+                40.3,
+                28.9
+              ],
+              [
+                40.3,
+                30.3
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  35.3,
+                  28.8
+                ],
+                [
+                  40.4,
+                  30.4
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA180",
+              "segments",
+              [
+                "dbid:0000014D38881280",
+                "dbid:0000014D388812D0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38808328",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/BOTTOM",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38808328"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "GPIO_NORTH_RIP_PC15_WEST",
+      "actual": {
+        "kind": "line",
+        "net": "GPIO_PC15",
+        "layer": "ETCH/BOTTOM",
+        "startEnd": [
+          [
+            40.3,
+            30.3
+          ],
+          [
+            35.4,
+            30.3
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((35.3 30.2) (40.4 30.4)) isEtch t font nil lineType horizontal layer \"ETCH/BOTTOM\" width 0.2 startEnd ((40.3 30.3) (35.4 30.3)) parent dbid:0000014D38881200 net dbid:0000014D387CA180 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GPIO_PC15",
+            "layer": "ETCH/BOTTOM",
+            "startEnd": [
+              [
+                40.3,
+                30.3
+              ],
+              [
+                35.4,
+                30.3
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  35.3,
+                  28.8
+                ],
+                [
+                  40.4,
+                  30.4
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA180",
+              "segments",
+              [
+                "dbid:0000014D38881280",
+                "dbid:0000014D388812D0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38808328",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/BOTTOM",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38808328"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "SOUTH_RIP_C14_GND_0",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            42.25,
+            22.75
+          ],
+          [
+            42.25,
+            21.95
+          ]
+        ],
+        "width": 0.25,
+        "attributes": "(prop nil readOnly t bBox ((42.125 21.825) (42.375 22.875)) isEtch t font nil lineType vertical layer \"ETCH/TOP\" width 0.25 startEnd ((42.25 22.75) (42.25 21.95)) parent dbid:0000014D3885CE00 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                42.25,
+                22.75
+              ],
+              [
+                42.25,
+                21.95
+              ]
+            ],
+            "width": 0.25,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  41.55,
+                  20.0
+                ],
+                [
+                  42.6252,
+                  22.875
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885CE80",
+                "dbid:0000014D3885CED0",
+                "dbid:0000014D3885CF20",
+                "dbid:0000014D3885CF70"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              4.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              null,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "SOUTH_RIP_C14_GND_1",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            42.25,
+            21.95
+          ],
+          [
+            41.85,
+            21.55
+          ]
+        ],
+        "width": 0.25,
+        "attributes": "(prop nil readOnly t bBox ((41.725 21.425) (42.375 22.075)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.25 startEnd ((42.25 21.95) (41.85 21.55)) parent dbid:0000014D3885CE00 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                42.25,
+                21.95
+              ],
+              [
+                41.85,
+                21.55
+              ]
+            ],
+            "width": 0.25,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  41.55,
+                  20.0
+                ],
+                [
+                  42.6252,
+                  22.875
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885CE80",
+                "dbid:0000014D3885CED0",
+                "dbid:0000014D3885CF20",
+                "dbid:0000014D3885CF70"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              4.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              null,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "SOUTH_RIP_C14_GND_2",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            41.85,
+            21.55
+          ],
+          [
+            42.3252,
+            21.0748
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((41.55 20.7748) (42.6252 21.85)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.6 startEnd ((41.85 21.55) (42.3252 21.0748)) parent dbid:0000014D3885CE00 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                41.85,
+                21.55
+              ],
+              [
+                42.3252,
+                21.0748
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  41.55,
+                  20.0
+                ],
+                [
+                  42.6252,
+                  22.875
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885CE80",
+                "dbid:0000014D3885CED0",
+                "dbid:0000014D3885CF20",
+                "dbid:0000014D3885CF70"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              4.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              null,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "SOUTH_RIP_C14_GND_3",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            42.3252,
+            21.0748
+          ],
+          [
+            42.3252,
+            20.3
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((42.0252 20.0) (42.6252 21.3748)) isEtch t font nil lineType vertical layer \"ETCH/TOP\" width 0.6 startEnd ((42.3252 21.0748) (42.3252 20.3)) parent dbid:0000014D3885CE00 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                42.3252,
+                21.0748
+              ],
+              [
+                42.3252,
+                20.3
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  41.55,
+                  20.0
+                ],
+                [
+                  42.6252,
+                  22.875
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885CE80",
+                "dbid:0000014D3885CED0",
+                "dbid:0000014D3885CF20",
+                "dbid:0000014D3885CF70"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              4.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              null,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "LEFT_RIP_0",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            35.75,
+            24.75
+          ],
+          [
+            34.95,
+            24.75
+          ]
+        ],
+        "width": 0.25,
+        "attributes": "(prop nil readOnly t bBox ((34.825 24.625) (35.875 24.875)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.25 startEnd ((35.75 24.75) (34.95 24.75)) parent dbid:0000014D3885CA00 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                35.75,
+                24.75
+              ],
+              [
+                34.95,
+                24.75
+              ]
+            ],
+            "width": 0.25,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  33.1,
+                  24.625
+                ],
+                [
+                  35.875,
+                  25.5748
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885CA80",
+                "dbid:0000014D3885CAD0",
+                "dbid:0000014D3885CB20"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              null,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "LEFT_RIP_1",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            34.95,
+            24.75
+          ],
+          [
+            34.55,
+            25.15
+          ]
+        ],
+        "width": 0.25,
+        "attributes": "(prop nil readOnly t bBox ((34.425 24.625) (35.075 25.275)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.25 startEnd ((34.95 24.75) (34.55 25.15)) parent dbid:0000014D3885CA00 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                34.95,
+                24.75
+              ],
+              [
+                34.55,
+                25.15
+              ]
+            ],
+            "width": 0.25,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  33.1,
+                  24.625
+                ],
+                [
+                  35.875,
+                  25.5748
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885CA80",
+                "dbid:0000014D3885CAD0",
+                "dbid:0000014D3885CB20"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              null,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "LEFT_RIP_2",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            34.55,
+            25.15
+          ],
+          [
+            33.4,
+            25.2748
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((33.1 24.85) (34.85 25.5748)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.6 startEnd ((34.55 25.15) (33.4 25.2748)) parent dbid:0000014D3885CA00 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                34.55,
+                25.15
+              ],
+              [
+                33.4,
+                25.2748
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  33.1,
+                  24.625
+                ],
+                [
+                  35.875,
+                  25.5748
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885CA80",
+                "dbid:0000014D3885CAD0",
+                "dbid:0000014D3885CB20"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              null,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "LEFT_RIP_3",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            33.4,
+            25.2748
+          ],
+          [
+            32.45,
+            25.2748
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((32.15 24.9748) (33.7 25.5748)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.6 startEnd ((33.4 25.2748) (32.45 25.2748)) parent dbid:0000014D3885CBC0 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                33.4,
+                25.2748
+              ],
+              [
+                32.45,
+                25.2748
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  32.15,
+                  24.9748
+                ],
+                [
+                  33.7,
+                  25.5748
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885CB70"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              1.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "LEFT_RIP_4",
+      "actual": {
+        "kind": "line",
+        "net": "V3V3",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            35.75,
+            24.25
+          ],
+          [
+            34.95,
+            24.25
+          ]
+        ],
+        "width": 0.25,
+        "attributes": "(prop nil readOnly t bBox ((34.825 24.125) (35.875 24.375)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.25 startEnd ((35.75 24.25) (34.95 24.25)) parent dbid:0000014D3885C890 net dbid:0000014D387CA798 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "V3V3",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                35.75,
+                24.25
+              ],
+              [
+                34.95,
+                24.25
+              ]
+            ],
+            "width": 0.25,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  33.1,
+                  23.4
+                ],
+                [
+                  35.875,
+                  24.375
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA798",
+              "segments",
+              [
+                "dbid:0000014D3885C910",
+                "dbid:0000014D3885C960",
+                "dbid:0000014D3885C9B0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              null,
+              "branch",
+              "dbid:0000014D3887E578",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3887E578"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "LEFT_RIP_5",
+      "actual": {
+        "kind": "line",
+        "net": "V3V3",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            34.95,
+            24.25
+          ],
+          [
+            34.55,
+            23.85
+          ]
+        ],
+        "width": 0.25,
+        "attributes": "(prop nil readOnly t bBox ((34.425 23.725) (35.075 24.375)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.25 startEnd ((34.95 24.25) (34.55 23.85)) parent dbid:0000014D3885C890 net dbid:0000014D387CA798 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "V3V3",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                34.95,
+                24.25
+              ],
+              [
+                34.55,
+                23.85
+              ]
+            ],
+            "width": 0.25,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  33.1,
+                  23.4
+                ],
+                [
+                  35.875,
+                  24.375
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA798",
+              "segments",
+              [
+                "dbid:0000014D3885C910",
+                "dbid:0000014D3885C960",
+                "dbid:0000014D3885C9B0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              null,
+              "branch",
+              "dbid:0000014D3887E578",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3887E578"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "LEFT_RIP_6",
+      "actual": {
+        "kind": "line",
+        "net": "V3V3",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            34.55,
+            23.85
+          ],
+          [
+            33.4,
+            23.7
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((33.1 23.4) (34.85 24.15)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.6 startEnd ((34.55 23.85) (33.4 23.7)) parent dbid:0000014D3885C890 net dbid:0000014D387CA798 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "V3V3",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                34.55,
+                23.85
+              ],
+              [
+                33.4,
+                23.7
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  33.1,
+                  23.4
+                ],
+                [
+                  35.875,
+                  24.375
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA798",
+              "segments",
+              [
+                "dbid:0000014D3885C910",
+                "dbid:0000014D3885C960",
+                "dbid:0000014D3885C9B0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              null,
+              "branch",
+              "dbid:0000014D3887E578",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3887E578"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "LEFT_RIP_7",
+      "actual": {
+        "kind": "line",
+        "net": "V3V3",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            33.3,
+            22.5
+          ],
+          [
+            33.3,
+            24.0
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((33.0 22.2) (33.6 24.3)) isEtch t font nil lineType vertical layer \"ETCH/TOP\" width 0.6 startEnd ((33.3 22.5) (33.3 24.0)) parent dbid:0000014D3887F970 net dbid:0000014D387CA798 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "V3V3",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                33.3,
+                22.5
+              ],
+              [
+                33.3,
+                24.0
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  33.0,
+                  22.2
+                ],
+                [
+                  37.3,
+                  24.3
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA798",
+              "segments",
+              [
+                "dbid:0000014D3887F920",
+                "dbid:0000014D3887E6C0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3887E578",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3887E578"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "LEFT_RIP_8",
+      "actual": {
+        "kind": "line",
+        "net": "V3V3",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            33.3,
+            24.0
+          ],
+          [
+            37.0,
+            24.0
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((33.0 23.7) (37.3 24.3)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.6 startEnd ((33.3 24.0) (37.0 24.0)) parent dbid:0000014D3887F970 net dbid:0000014D387CA798 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "V3V3",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                33.3,
+                24.0
+              ],
+              [
+                37.0,
+                24.0
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  33.0,
+                  22.2
+                ],
+                [
+                  37.3,
+                  24.3
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA798",
+              "segments",
+              [
+                "dbid:0000014D3887F920",
+                "dbid:0000014D3887E6C0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3887E578",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3887E578"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_0",
+      "actual": {
+        "kind": "line",
+        "net": "PA4_SPI_NSS",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            35.75,
+            29.25
+          ],
+          [
+            36.8,
+            29.25
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((35.65 29.15) (36.9 29.35)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.2 startEnd ((35.75 29.25) (36.8 29.25)) parent dbid:0000014D38882C70 net dbid:0000014D387CAD48 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "PA4_SPI_NSS",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                35.75,
+                29.25
+              ],
+              [
+                36.8,
+                29.25
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  35.65,
+                  26.1
+                ],
+                [
+                  39.1,
+                  29.35
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAD48",
+              "segments",
+              [
+                "dbid:0000014D38882CF0",
+                "dbid:0000014D38882D40",
+                "dbid:0000014D38882D90"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3880C358",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3880C358"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_1",
+      "actual": {
+        "kind": "line",
+        "net": "PA4_SPI_NSS",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            36.8,
+            29.25
+          ],
+          [
+            39.0,
+            27.05
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((36.7 26.95) (39.1 29.35)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.2 startEnd ((36.8 29.25) (39.0 27.05)) parent dbid:0000014D38882C70 net dbid:0000014D387CAD48 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "PA4_SPI_NSS",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                36.8,
+                29.25
+              ],
+              [
+                39.0,
+                27.05
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  35.65,
+                  26.1
+                ],
+                [
+                  39.1,
+                  29.35
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAD48",
+              "segments",
+              [
+                "dbid:0000014D38882CF0",
+                "dbid:0000014D38882D40",
+                "dbid:0000014D38882D90"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3880C358",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3880C358"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_2",
+      "actual": {
+        "kind": "line",
+        "net": "PA4_SPI_NSS",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            39.0,
+            27.05
+          ],
+          [
+            39.0,
+            26.2
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((38.9 26.1) (39.1 27.15)) isEtch t font nil lineType vertical layer \"ETCH/TOP\" width 0.2 startEnd ((39.0 27.05) (39.0 26.2)) parent dbid:0000014D38882C70 net dbid:0000014D387CAD48 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "PA4_SPI_NSS",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                39.0,
+                27.05
+              ],
+              [
+                39.0,
+                26.2
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  35.65,
+                  26.1
+                ],
+                [
+                  39.1,
+                  29.35
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAD48",
+              "segments",
+              [
+                "dbid:0000014D38882CF0",
+                "dbid:0000014D38882D40",
+                "dbid:0000014D38882D90"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3880C358",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3880C358"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_3",
+      "actual": {
+        "kind": "line",
+        "net": "PA4_SPI_NSS",
+        "layer": "ETCH/BOTTOM",
+        "startEnd": [
+          [
+            39.0,
+            26.2
+          ],
+          [
+            39.0,
+            21.3
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((38.9 21.2) (39.1 26.3)) isEtch t font nil lineType vertical layer \"ETCH/BOTTOM\" width 0.2 startEnd ((39.0 26.2) (39.0 21.3)) parent dbid:0000014D38882F00 net dbid:0000014D387CAD48 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "PA4_SPI_NSS",
+            "layer": "ETCH/BOTTOM",
+            "startEnd": [
+              [
+                39.0,
+                26.2
+              ],
+              [
+                39.0,
+                21.3
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  32.1,
+                  21.2
+                ],
+                [
+                  39.1,
+                  26.3
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAD48",
+              "segments",
+              [
+                "dbid:0000014D38882F80",
+                "dbid:0000014D38882FD0",
+                "dbid:0000014D38883020"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3880C358",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/BOTTOM",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3880C358"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_4",
+      "actual": {
+        "kind": "line",
+        "net": "PA4_SPI_NSS",
+        "layer": "ETCH/BOTTOM",
+        "startEnd": [
+          [
+            39.0,
+            21.3
+          ],
+          [
+            32.2,
+            21.3
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((32.1 21.2) (39.1 21.4)) isEtch t font nil lineType horizontal layer \"ETCH/BOTTOM\" width 0.2 startEnd ((39.0 21.3) (32.2 21.3)) parent dbid:0000014D38882F00 net dbid:0000014D387CAD48 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "PA4_SPI_NSS",
+            "layer": "ETCH/BOTTOM",
+            "startEnd": [
+              [
+                39.0,
+                21.3
+              ],
+              [
+                32.2,
+                21.3
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  32.1,
+                  21.2
+                ],
+                [
+                  39.1,
+                  26.3
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAD48",
+              "segments",
+              [
+                "dbid:0000014D38882F80",
+                "dbid:0000014D38882FD0",
+                "dbid:0000014D38883020"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3880C358",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/BOTTOM",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3880C358"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_5",
+      "actual": {
+        "kind": "line",
+        "net": "PA4_SPI_NSS",
+        "layer": "ETCH/BOTTOM",
+        "startEnd": [
+          [
+            32.2,
+            21.3
+          ],
+          [
+            32.2,
+            22.0
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((32.1 21.2) (32.3 22.1)) isEtch t font nil lineType vertical layer \"ETCH/BOTTOM\" width 0.2 startEnd ((32.2 21.3) (32.2 22.0)) parent dbid:0000014D38882F00 net dbid:0000014D387CAD48 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "PA4_SPI_NSS",
+            "layer": "ETCH/BOTTOM",
+            "startEnd": [
+              [
+                32.2,
+                21.3
+              ],
+              [
+                32.2,
+                22.0
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  32.1,
+                  21.2
+                ],
+                [
+                  39.1,
+                  26.3
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAD48",
+              "segments",
+              [
+                "dbid:0000014D38882F80",
+                "dbid:0000014D38882FD0",
+                "dbid:0000014D38883020"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3880C358",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/BOTTOM",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3880C358"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_6",
+      "actual": {
+        "kind": "line",
+        "net": "PA4_SPI_NSS",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            32.2,
+            22.0
+          ],
+          [
+            32.0,
+            21.0
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((31.9 20.9) (32.3 22.1)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.2 startEnd ((32.2 22.0) (32.0 21.0)) parent dbid:0000014D38883070 net dbid:0000014D387CAD48 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "PA4_SPI_NSS",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                32.2,
+                22.0
+              ],
+              [
+                32.0,
+                21.0
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  31.9,
+                  20.9
+                ],
+                [
+                  32.3,
+                  22.1
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAD48",
+              "segments",
+              [
+                "dbid:0000014D388830F0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              1.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3880C358",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3880C358"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_VIA_[39, 26.2]",
+      "actualVia": {
+        "padstack": "L28_VIA030_C060",
+        "xy": [
+          39.0,
+          26.2
+        ],
+        "net": "PA4_SPI_NSS",
+        "usage": "Through_via",
+        "drill": 0.3,
+        "pads": [
+          {
+            "layer": "ETCH/TOP",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                0.3
+              ]
+            ]
+          },
+          {
+            "layer": "ETCH/BOTTOM",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                0.3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "NSS01_DEL_VIA_[32.2, 22]",
+      "actualVia": {
+        "padstack": "L28_VIA030_C060",
+        "xy": [
+          32.2,
+          22.0
+        ],
+        "net": "PA4_SPI_NSS",
+        "usage": "Through_via",
+        "drill": 0.3,
+        "pads": [
+          {
+            "layer": "ETCH/TOP",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                0.3
+              ]
+            ]
+          },
+          {
+            "layer": "ETCH/BOTTOM",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                0.3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "NSS01_DEL_9",
+      "actual": {
+        "kind": "line",
+        "net": "PA4_SPI_NSS",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            32.93,
+            33.02
+          ],
+          [
+            32.7984,
+            33.02
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((32.6984 32.92) (33.03 33.12)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.2 startEnd ((32.93 33.02) (32.7984 33.02)) parent dbid:0000014D38882AB0 net dbid:0000014D387CAD48 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "PA4_SPI_NSS",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                32.93,
+                33.02
+              ],
+              [
+                32.7984,
+                33.02
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  32.6984,
+                  29.15
+                ],
+                [
+                  35.85,
+                  33.12
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAD48",
+              "segments",
+              [
+                "dbid:0000014D38882B30",
+                "dbid:0000014D38882B80",
+                "dbid:0000014D38882BD0",
+                "dbid:0000014D38882C20"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              4.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3880C358",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3880C358"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_10",
+      "actual": {
+        "kind": "line",
+        "net": "PA4_SPI_NSS",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            34.8,
+            31.15
+          ],
+          [
+            32.93,
+            33.02
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((32.83 31.05) (34.9 33.12)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.2 startEnd ((34.8 31.15) (32.93 33.02)) parent dbid:0000014D38882AB0 net dbid:0000014D387CAD48 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "PA4_SPI_NSS",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                34.8,
+                31.15
+              ],
+              [
+                32.93,
+                33.02
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  32.6984,
+                  29.15
+                ],
+                [
+                  35.85,
+                  33.12
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAD48",
+              "segments",
+              [
+                "dbid:0000014D38882B30",
+                "dbid:0000014D38882B80",
+                "dbid:0000014D38882BD0",
+                "dbid:0000014D38882C20"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              4.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3880C358",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3880C358"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_13",
+      "actual": {
+        "kind": "line",
+        "net": "PA5_SPI_SCK",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            34.385,
+            30.215
+          ],
+          [
+            33.6,
+            31.0
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((33.5 30.115) (34.485 31.1)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.2 startEnd ((34.385 30.215) (33.6 31.0)) parent dbid:0000014D38883310 net dbid:0000014D387C9F78 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "PA5_SPI_SCK",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                34.385,
+                30.215
+              ],
+              [
+                33.6,
+                31.0
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  33.5,
+                  28.65
+                ],
+                [
+                  35.85,
+                  31.1
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387C9F78",
+              "segments",
+              [
+                "dbid:0000014D38883390",
+                "dbid:0000014D388833E0",
+                "dbid:0000014D38883430"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3880C708",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3880C708"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_15",
+      "actual": {
+        "kind": "line",
+        "net": "ADC0",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            32.8,
+            35.0
+          ],
+          [
+            32.6764,
+            35.0
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((32.5764 34.9) (32.9 35.1)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.2 startEnd ((32.8 35.0) (32.6764 35.0)) parent dbid:0000014D38878168 net dbid:0000014D387CA8D0 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "ADC0",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                32.8,
+                35.0
+              ],
+              [
+                32.6764,
+                35.0
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  32.5764,
+                  32.9
+                ],
+                [
+                  34.9,
+                  35.1
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA8D0",
+              "segments",
+              [
+                "dbid:0000014D388781E8",
+                "dbid:0000014D38878238"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38817CB0",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38817CB0"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_16",
+      "actual": {
+        "kind": "line",
+        "net": "ADC0",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            34.8,
+            33.0
+          ],
+          [
+            32.8,
+            35.0
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((32.7 32.9) (34.9 35.1)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.2 startEnd ((34.8 33.0) (32.8 35.0)) parent dbid:0000014D38878168 net dbid:0000014D387CA8D0 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "ADC0",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                34.8,
+                33.0
+              ],
+              [
+                32.8,
+                35.0
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  32.5764,
+                  32.9
+                ],
+                [
+                  34.9,
+                  35.1
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA8D0",
+              "segments",
+              [
+                "dbid:0000014D388781E8",
+                "dbid:0000014D38878238"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38817CB0",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38817CB0"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_17",
+      "actual": {
+        "kind": "line",
+        "net": "ADC_IN",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            29.8,
+            34.0
+          ],
+          [
+            26.27,
+            34.0
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((26.17 33.9) (29.9 34.1)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.2 startEnd ((29.8 34.0) (26.27 34.0)) parent dbid:0000014D388783C8 net dbid:0000014D387CA048 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "ADC_IN",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                29.8,
+                34.0
+              ],
+              [
+                26.27,
+                34.0
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  26.17,
+                  33.9
+                ],
+                [
+                  31.2016,
+                  35.1
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA048",
+              "segments",
+              [
+                "dbid:0000014D38878448",
+                "dbid:0000014D38878498",
+                "dbid:0000014D388784E8"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38815048",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38815048"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_18",
+      "actual": {
+        "kind": "line",
+        "net": "ADC_IN",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            30.8,
+            35.0
+          ],
+          [
+            29.8,
+            34.0
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((29.7 33.9) (30.9 35.1)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.2 startEnd ((30.8 35.0) (29.8 34.0)) parent dbid:0000014D388783C8 net dbid:0000014D387CA048 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "ADC_IN",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                30.8,
+                35.0
+              ],
+              [
+                29.8,
+                34.0
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  26.17,
+                  33.9
+                ],
+                [
+                  31.2016,
+                  35.1
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA048",
+              "segments",
+              [
+                "dbid:0000014D38878448",
+                "dbid:0000014D38878498",
+                "dbid:0000014D388784E8"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38815048",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38815048"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_19",
+      "actual": {
+        "kind": "line",
+        "net": "ADC_IN",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            31.1016,
+            35.0
+          ],
+          [
+            30.8,
+            35.0
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((30.7 34.9) (31.2016 35.1)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.2 startEnd ((31.1016 35.0) (30.8 35.0)) parent dbid:0000014D388783C8 net dbid:0000014D387CA048 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "ADC_IN",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                31.1016,
+                35.0
+              ],
+              [
+                30.8,
+                35.0
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  26.17,
+                  33.9
+                ],
+                [
+                  31.2016,
+                  35.1
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA048",
+              "segments",
+              [
+                "dbid:0000014D38878448",
+                "dbid:0000014D38878498",
+                "dbid:0000014D388784E8"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38815048",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38815048"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_22",
+      "actual": {
+        "kind": "line",
+        "net": "V3V3",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            29.8,
+            30.95
+          ],
+          [
+            30.7,
+            31.85
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((29.5 30.65) (31.0 32.15)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.6 startEnd ((29.8 30.95) (30.7 31.85)) parent dbid:0000014D388739A8 net dbid:0000014D387CA798 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "V3V3",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                29.8,
+                30.95
+              ],
+              [
+                30.7,
+                31.85
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  29.5,
+                  30.65
+                ],
+                [
+                  31.0,
+                  32.3
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA798",
+              "segments",
+              [
+                "dbid:0000014D38873A28",
+                "dbid:0000014D38873A78"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3887E578",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3887E578"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_23",
+      "actual": {
+        "kind": "line",
+        "net": "V3V3",
+        "layer": "ETCH/BOTTOM",
+        "startEnd": [
+          [
+            30.7,
+            32.0
+          ],
+          [
+            37.0,
+            25.7
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((30.4 25.4) (37.3 32.3)) isEtch t font nil lineType odd layer \"ETCH/BOTTOM\" width 0.6 startEnd ((30.7 32.0) (37.0 25.7)) parent dbid:0000014D3887E5A0 net dbid:0000014D387CA798 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "V3V3",
+            "layer": "ETCH/BOTTOM",
+            "startEnd": [
+              [
+                30.7,
+                32.0
+              ],
+              [
+                37.0,
+                25.7
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  30.4,
+                  23.7
+                ],
+                [
+                  37.3,
+                  32.3
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA798",
+              "segments",
+              [
+                "dbid:0000014D3887E620",
+                "dbid:0000014D3887E670"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3887E578",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/BOTTOM",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3887E578"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_DEL_STAR_C9_VIA",
+      "actualVia": {
+        "padstack": "L28_VIA030_C060",
+        "xy": [
+          30.7,
+          32.0
+        ],
+        "net": "V3V3",
+        "usage": "Through_via",
+        "drill": 0.3,
+        "pads": [
+          {
+            "layer": "ETCH/TOP",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                0.3
+              ]
+            ]
+          },
+          {
+            "layer": "ETCH/BOTTOM",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                0.3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "NSS01_DEL_STAR_C9_SHORT_VERTICAL",
+      "actual": {
+        "kind": "line",
+        "net": "V3V3",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            30.7,
+            31.85
+          ],
+          [
+            30.7,
+            32.0
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((30.4 31.55) (31.0 32.3)) isEtch t font nil lineType vertical layer \"ETCH/TOP\" width 0.6 startEnd ((30.7 31.85) (30.7 32.0)) parent dbid:0000014D388739A8 net dbid:0000014D387CA798 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "V3V3",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                30.7,
+                31.85
+              ],
+              [
+                30.7,
+                32.0
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  29.5,
+                  30.65
+                ],
+                [
+                  31.0,
+                  32.3
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA798",
+              "segments",
+              [
+                "dbid:0000014D38873A28",
+                "dbid:0000014D38873A78"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3887E578",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3887E578"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_2L_DEL_0",
+      "actual": {
+        "kind": "line",
+        "net": "SPI_SCK",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            31.85,
+            31.0
+          ],
+          [
+            30.8,
+            29.95
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((30.7 29.85) (31.95 31.1)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.2 startEnd ((31.85 31.0) (30.8 29.95)) parent dbid:0000014D38885C98 net dbid:0000014D387CB430 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "SPI_SCK",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                31.85,
+                31.0
+              ],
+              [
+                30.8,
+                29.95
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  30.7,
+                  29.85
+                ],
+                [
+                  32.1252,
+                  31.1
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CB430",
+              "segments",
+              [
+                "dbid:0000014D38885D18",
+                "dbid:0000014D38885D68"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38885B50",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38885B50"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_2L_DEL_1",
+      "actual": {
+        "kind": "line",
+        "net": "SPI_SCK",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            32.0252,
+            31.0
+          ],
+          [
+            31.85,
+            31.0
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((31.75 30.9) (32.1252 31.1)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.2 startEnd ((32.0252 31.0) (31.85 31.0)) parent dbid:0000014D38885C98 net dbid:0000014D387CB430 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "SPI_SCK",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                32.0252,
+                31.0
+              ],
+              [
+                31.85,
+                31.0
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  30.7,
+                  29.85
+                ],
+                [
+                  32.1252,
+                  31.1
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CB430",
+              "segments",
+              [
+                "dbid:0000014D38885D18",
+                "dbid:0000014D38885D68"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38885B50",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38885B50"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_2L_DEL_3",
+      "actual": {
+        "kind": "line",
+        "net": "SPI_NSS",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            30.16,
+            33.02
+          ],
+          [
+            29.6,
+            32.46
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((29.5 32.36) (30.26 33.12)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.2 startEnd ((30.16 33.02) (29.6 32.46)) parent dbid:0000014D38886E50 net dbid:0000014D387CA388 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "SPI_NSS",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                30.16,
+                33.02
+              ],
+              [
+                29.6,
+                32.46
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  29.5,
+                  32.36
+                ],
+                [
+                  31.3236,
+                  33.12
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA388",
+              "segments",
+              [
+                "dbid:0000014D38886ED0",
+                "dbid:0000014D38886F20"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38886D08",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38886D08"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_2L_DEL_4",
+      "actual": {
+        "kind": "line",
+        "net": "SPI_NSS",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            31.2236,
+            33.02
+          ],
+          [
+            30.16,
+            33.02
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((30.06 32.92) (31.3236 33.12)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.2 startEnd ((31.2236 33.02) (30.16 33.02)) parent dbid:0000014D38886E50 net dbid:0000014D387CA388 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "SPI_NSS",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                31.2236,
+                33.02
+              ],
+              [
+                30.16,
+                33.02
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  29.5,
+                  32.36
+                ],
+                [
+                  31.3236,
+                  33.12
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA388",
+              "segments",
+              [
+                "dbid:0000014D38886ED0",
+                "dbid:0000014D38886F20"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38886D08",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38886D08"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "NSS01_2L_SHORTEN_GUARD_DEL",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/BOTTOM",
+        "startEnd": [
+          [
+            29.9,
+            31.55
+          ],
+          [
+            27.1,
+            31.55
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((26.8 31.25) (30.2 31.85)) isEtch t font nil lineType horizontal layer \"ETCH/BOTTOM\" width 0.6 startEnd ((29.9 31.55) (27.1 31.55)) parent dbid:0000014D38887850 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/BOTTOM",
+            "startEnd": [
+              [
+                29.9,
+                31.55
+              ],
+              [
+                27.1,
+                31.55
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  26.8,
+                  31.25
+                ],
+                [
+                  30.2,
+                  31.85
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D388878D0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              1.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/BOTTOM",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "OLD_PC14",
+      "actualVia": {
+        "padstack": "L28_VIA030_C060",
+        "xy": [
+          45.6,
+          25.2
+        ],
+        "net": "GPIO_PC14",
+        "usage": "Through_via",
+        "drill": 0.3,
+        "pads": [
+          {
+            "layer": "ETCH/TOP",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                0.3
+              ]
+            ]
+          },
+          {
+            "layer": "ETCH/BOTTOM",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                0.3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "OLD_PC14_GND",
+      "actualVia": {
+        "padstack": "L28_VIA030_C060",
+        "xy": [
+          46.95,
+          24.9
+        ],
+        "net": "GND",
+        "usage": "Through_via",
+        "drill": 0.3,
+        "pads": [
+          {
+            "layer": "ETCH/TOP",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                0.3
+              ]
+            ]
+          },
+          {
+            "layer": "ETCH/BOTTOM",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                0.3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "OLD_HSE_ANCHOR",
+      "actualVia": {
+        "padstack": "L28_VIA030_C060",
+        "xy": [
+          45.45,
+          28.85
+        ],
+        "net": "GND",
+        "usage": "Through_via",
+        "drill": 0.3,
+        "pads": [
+          {
+            "layer": "ETCH/TOP",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                0.3
+              ]
+            ]
+          },
+          {
+            "layer": "ETCH/BOTTOM",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                0.3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "OLD_C15_COMMON_GND",
+      "actualVia": {
+        "padstack": "L28_VIA030_C060",
+        "xy": [
+          47.45,
+          28.7252
+        ],
+        "net": "GND",
+        "usage": "Through_via",
+        "drill": 0.3,
+        "pads": [
+          {
+            "layer": "ETCH/TOP",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                0.3
+              ]
+            ]
+          },
+          {
+            "layer": "ETCH/BOTTOM",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.3,
+                -0.3
+              ],
+              [
+                0.3,
+                0.3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "RIGHT_RIP_0",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            45.05,
+            29.25
+          ],
+          [
+            45.45,
+            28.85
+          ]
+        ],
+        "width": 0.25,
+        "attributes": "(prop nil readOnly t bBox ((44.925 28.725) (45.575 29.375)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.25 startEnd ((45.05 29.25) (45.45 28.85)) parent dbid:0000014D3885D200 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                45.05,
+                29.25
+              ],
+              [
+                45.45,
+                28.85
+              ]
+            ],
+            "width": 0.25,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  44.125,
+                  28.725
+                ],
+                [
+                  45.575,
+                  29.375
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885D280",
+                "dbid:0000014D3885D2D0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "RIGHT_RIP_1",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            44.25,
+            29.25
+          ],
+          [
+            45.05,
+            29.25
+          ]
+        ],
+        "width": 0.25,
+        "attributes": "(prop nil readOnly t bBox ((44.125 29.125) (45.175 29.375)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.25 startEnd ((44.25 29.25) (45.05 29.25)) parent dbid:0000014D3885D200 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                44.25,
+                29.25
+              ],
+              [
+                45.05,
+                29.25
+              ]
+            ],
+            "width": 0.25,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  44.125,
+                  28.725
+                ],
+                [
+                  45.575,
+                  29.375
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885D280",
+                "dbid:0000014D3885D2D0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "RIGHT_RIP_2",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            45.45,
+            28.85
+          ],
+          [
+            46.5,
+            28.7252
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((45.15 28.4252) (46.8 29.15)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.6 startEnd ((45.45 28.85) (46.5 28.7252)) parent dbid:0000014D388763D8 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                45.45,
+                28.85
+              ],
+              [
+                46.5,
+                28.7252
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  45.15,
+                  28.4252
+                ],
+                [
+                  46.8,
+                  29.15
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885D320"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              1.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "RIGHT_RIP_3",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            46.5,
+            28.7252
+          ],
+          [
+            47.45,
+            28.7252
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((46.2 28.4252) (47.75 29.0252)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.6 startEnd ((46.5 28.7252) (47.45 28.7252)) parent dbid:0000014D3885D3C0 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                46.5,
+                28.7252
+              ],
+              [
+                47.45,
+                28.7252
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  46.2,
+                  28.4252
+                ],
+                [
+                  47.75,
+                  29.0252
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885D370"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              1.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "RIGHT_RIP_4",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            47.9428,
+            28.7252
+          ],
+          [
+            47.45,
+            28.7252
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((47.15 28.4252) (48.2428 29.0252)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.6 startEnd ((47.9428 28.7252) (47.45 28.7252)) parent dbid:0000014D3885DDB8 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                47.9428,
+                28.7252
+              ],
+              [
+                47.45,
+                28.7252
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  47.15,
+                  27.968
+                ],
+                [
+                  49.8,
+                  29.0252
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885DE38",
+                "dbid:0000014D3885DE88",
+                "dbid:0000014D3885DED8"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "RIGHT_RIP_5",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            48.4,
+            28.268
+          ],
+          [
+            47.9428,
+            28.7252
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((47.6428 27.968) (48.7 29.0252)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.6 startEnd ((48.4 28.268) (47.9428 28.7252)) parent dbid:0000014D3885DDB8 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                48.4,
+                28.268
+              ],
+              [
+                47.9428,
+                28.7252
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  47.15,
+                  27.968
+                ],
+                [
+                  49.8,
+                  29.0252
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885DE38",
+                "dbid:0000014D3885DE88",
+                "dbid:0000014D3885DED8"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "RIGHT_RIP_6",
+      "actual": {
+        "kind": "line",
+        "net": "GND",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            49.5,
+            28.268
+          ],
+          [
+            48.4,
+            28.268
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((48.1 27.968) (49.8 28.568)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.6 startEnd ((49.5 28.268) (48.4 28.268)) parent dbid:0000014D3885DDB8 net dbid:0000014D387CAA08 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GND",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                49.5,
+                28.268
+              ],
+              [
+                48.4,
+                28.268
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  47.15,
+                  27.968
+                ],
+                [
+                  49.8,
+                  29.0252
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CAA08",
+              "segments",
+              [
+                "dbid:0000014D3885DE38",
+                "dbid:0000014D3885DE88",
+                "dbid:0000014D3885DED8"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D38875120",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D38875120"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "RIGHT_RIP_7",
+      "actual": {
+        "kind": "line",
+        "net": "V3V3",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            45.45,
+            30.15
+          ],
+          [
+            46.5,
+            30.3
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((45.15 29.85) (46.8 30.6)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.6 startEnd ((45.45 30.15) (46.5 30.3)) parent dbid:0000014D3885D090 net dbid:0000014D387CA798 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "V3V3",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                45.45,
+                30.15
+              ],
+              [
+                46.5,
+                30.3
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  44.125,
+                  29.625
+                ],
+                [
+                  46.8,
+                  30.6
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA798",
+              "segments",
+              [
+                "dbid:0000014D3885D110",
+                "dbid:0000014D3885D160",
+                "dbid:0000014D3885D1B0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              null,
+              "branch",
+              "dbid:0000014D3887E578",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3887E578"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "RIGHT_RIP_8",
+      "actual": {
+        "kind": "line",
+        "net": "V3V3",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            45.05,
+            29.75
+          ],
+          [
+            45.45,
+            30.15
+          ]
+        ],
+        "width": 0.25,
+        "attributes": "(prop nil readOnly t bBox ((44.925 29.625) (45.575 30.275)) isEtch t font nil lineType odd layer \"ETCH/TOP\" width 0.25 startEnd ((45.05 29.75) (45.45 30.15)) parent dbid:0000014D3885D090 net dbid:0000014D387CA798 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "V3V3",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                45.05,
+                29.75
+              ],
+              [
+                45.45,
+                30.15
+              ]
+            ],
+            "width": 0.25,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  44.125,
+                  29.625
+                ],
+                [
+                  46.8,
+                  30.6
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA798",
+              "segments",
+              [
+                "dbid:0000014D3885D110",
+                "dbid:0000014D3885D160",
+                "dbid:0000014D3885D1B0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              null,
+              "branch",
+              "dbid:0000014D3887E578",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3887E578"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "RIGHT_RIP_9",
+      "actual": {
+        "kind": "line",
+        "net": "V3V3",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            44.25,
+            29.75
+          ],
+          [
+            45.05,
+            29.75
+          ]
+        ],
+        "width": 0.25,
+        "attributes": "(prop nil readOnly t bBox ((44.125 29.625) (45.175 29.875)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.25 startEnd ((44.25 29.75) (45.05 29.75)) parent dbid:0000014D3885D090 net dbid:0000014D387CA798 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "V3V3",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                44.25,
+                29.75
+              ],
+              [
+                45.05,
+                29.75
+              ]
+            ],
+            "width": 0.25,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  44.125,
+                  29.625
+                ],
+                [
+                  46.8,
+                  30.6
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA798",
+              "segments",
+              [
+                "dbid:0000014D3885D110",
+                "dbid:0000014D3885D160",
+                "dbid:0000014D3885D1B0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              3.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              null,
+              "branch",
+              "dbid:0000014D3887E578",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3887E578"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "RIGHT_RIP_10",
+      "actual": {
+        "kind": "line",
+        "net": "V3V3",
+        "layer": "ETCH/TOP",
+        "startEnd": [
+          [
+            49.5,
+            30.3
+          ],
+          [
+            46.5,
+            30.3
+          ]
+        ],
+        "width": 0.6,
+        "attributes": "(prop nil readOnly t bBox ((46.2 30.0) (49.8 30.6)) isEtch t font nil lineType horizontal layer \"ETCH/TOP\" width 0.6 startEnd ((49.5 30.3) (46.5 30.3)) parent dbid:0000014D3885DCE8 net dbid:0000014D387CA798 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "V3V3",
+            "layer": "ETCH/TOP",
+            "startEnd": [
+              [
+                49.5,
+                30.3
+              ],
+              [
+                46.5,
+                30.3
+              ]
+            ],
+            "width": 0.6,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  46.2,
+                  30.0
+                ],
+                [
+                  49.8,
+                  30.6
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387CA798",
+              "segments",
+              [
+                "dbid:0000014D3885DD68"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              1.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D3887E578",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/TOP",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D3887E578"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    },
+    {
+      "operation": "RIGHT_RIP_11",
+      "actual": {
+        "kind": "line",
+        "net": "GPIO_PC14",
+        "layer": "ETCH/BOTTOM",
+        "startEnd": [
+          [
+            43.6,
+            25.2
+          ],
+          [
+            45.6,
+            25.2
+          ]
+        ],
+        "width": 0.2,
+        "attributes": "(prop nil readOnly t bBox ((43.5 25.1) (45.7 25.3)) isEtch t font nil lineType horizontal layer \"ETCH/BOTTOM\" width 0.2 startEnd ((43.6 25.2) (45.6 25.2)) parent dbid:0000014D388810E0 net dbid:0000014D387C9BD0 objType \"line\")",
+        "nativeProvenance": [
+          {
+            "net": "GPIO_PC14",
+            "layer": "ETCH/BOTTOM",
+            "startEnd": [
+              [
+                43.6,
+                25.2
+              ],
+              [
+                45.6,
+                25.2
+              ]
+            ],
+            "width": 0.2,
+            "isEtch": true,
+            "thermal": false,
+            "lineThermal": false,
+            "parentThermal": false,
+            "parentType": "path",
+            "parentAttributes": [
+              "prop",
+              null,
+              "bBox",
+              [
+                [
+                  40.9,
+                  25.1
+                ],
+                [
+                  45.7,
+                  27.9
+                ]
+              ],
+              "readOnly",
+              true,
+              "net",
+              "dbid:0000014D387C9BD0",
+              "segments",
+              [
+                "dbid:0000014D38881160",
+                "dbid:0000014D388811B0"
+              ],
+              "isEtch",
+              true,
+              "nSegs",
+              2.0,
+              "hasArcs",
+              null,
+              "isSameWidth",
+              true,
+              "branch",
+              "dbid:0000014D388083F0",
+              "parentGroups",
+              null,
+              "objType",
+              "path",
+              "thermal",
+              null,
+              "layer",
+              "ETCH/BOTTOM",
+              "symbolEtch",
+              null,
+              "parent",
+              "dbid:0000014D388083F0"
+            ],
+            "grandparentType": "branch"
+          }
+        ],
+        "generatedThermal": false,
+        "fixedManualCline": true
+      }
+    }
+  ],
+  "operations": 220,
+  "piecesChecked": 402,
+  "definiteOverlapPieces": 0,
+  "spacingWarningPieces": 61,
+  "issues": [
+    {
+      "operation": "GPIO_NORTH_PC15_DIRECT_WEST",
+      "net": "GPIO_PC15",
+      "type": "line",
+      "segment": 0,
+      "layer": "BOTTOM",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "native_via",
+          "otherKind": "via",
+          "otherBounds": [
+            38.400000000000006,
+            29.2,
+            39.0,
+            29.8
+          ],
+          "actualCopperGapMM": 0.2,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "GPIO_PA1_INWARD_FANOUT",
+      "net": "GPIO_PA1",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "ADC0",
+          "otherSource": "U1.10",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            38.1,
+            30.65,
+            38.4,
+            31.85
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_26_NECK",
+      "net": "GPIO_PB13",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB12",
+          "otherSource": "SOUTH_SOURCE_25_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            37.17,
+            22.020000000000003,
+            37.33,
+            22.83
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB12",
+          "otherSource": "SOUTH_SOURCE_25_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            36.92,
+            21.770000000000003,
+            37.33,
+            22.18
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_26_NECK",
+      "net": "GPIO_PB13",
+      "type": "line",
+      "segment": 2,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB12",
+          "otherSource": "SOUTH_SOURCE_25_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            36.74,
+            20.99,
+            37.26,
+            21.51
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB12",
+          "otherSource": "SOUTH_SOURCE_25_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            37.17,
+            22.020000000000003,
+            37.33,
+            22.83
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB12",
+          "otherSource": "SOUTH_SOURCE_25_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            36.92,
+            21.770000000000003,
+            37.33,
+            22.18
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_27_NECK",
+      "net": "GPIO_PB14",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB13",
+          "otherSource": "SOUTH_SOURCE_26_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            37.67,
+            22.020000000000003,
+            37.83,
+            22.83
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB13",
+          "otherSource": "SOUTH_SOURCE_26_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            37.42,
+            21.770000000000003,
+            37.83,
+            22.18
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_27_NECK",
+      "net": "GPIO_PB14",
+      "type": "line",
+      "segment": 2,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB13",
+          "otherSource": "SOUTH_SOURCE_26_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            37.67,
+            22.020000000000003,
+            37.83,
+            22.83
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB13",
+          "otherSource": "SOUTH_SOURCE_26_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            37.42,
+            21.770000000000003,
+            37.83,
+            22.18
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_27_VIA",
+      "net": "GPIO_PB14",
+      "type": "via",
+      "segment": null,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB13",
+          "otherSource": "SOUTH_SOURCE_26_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            37.42,
+            20.67,
+            37.58,
+            21.93
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_28_NECK",
+      "net": "GPIO_PB15",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB14",
+          "otherSource": "SOUTH_SOURCE_27_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            38.17,
+            22.020000000000003,
+            38.33,
+            22.83
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB14",
+          "otherSource": "SOUTH_SOURCE_27_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            37.92,
+            21.770000000000003,
+            38.33,
+            22.18
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_28_NECK",
+      "net": "GPIO_PB15",
+      "type": "line",
+      "segment": 2,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB14",
+          "otherSource": "SOUTH_SOURCE_27_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            37.74,
+            20.99,
+            38.26,
+            21.51
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB14",
+          "otherSource": "SOUTH_SOURCE_27_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            38.17,
+            22.020000000000003,
+            38.33,
+            22.83
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB14",
+          "otherSource": "SOUTH_SOURCE_27_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            37.92,
+            21.770000000000003,
+            38.33,
+            22.18
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_29_NECK",
+      "net": "USB_ATTACH_N",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB15",
+          "otherSource": "SOUTH_SOURCE_28_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            38.67,
+            22.020000000000003,
+            38.83,
+            22.83
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB15",
+          "otherSource": "SOUTH_SOURCE_28_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            38.42,
+            21.770000000000003,
+            38.83,
+            22.18
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_29_NECK",
+      "net": "USB_ATTACH_N",
+      "type": "line",
+      "segment": 2,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB15",
+          "otherSource": "SOUTH_SOURCE_28_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            38.67,
+            22.020000000000003,
+            38.83,
+            22.83
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB15",
+          "otherSource": "SOUTH_SOURCE_28_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            38.42,
+            21.770000000000003,
+            38.83,
+            22.18
+          ],
+          "actualCopperGapMM": 0.193553,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_29_VIA",
+      "net": "USB_ATTACH_N",
+      "type": "via",
+      "segment": null,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB15",
+          "otherSource": "SOUTH_SOURCE_28_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            38.42,
+            20.62,
+            38.58,
+            21.93
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_31_NECK",
+      "net": "PA10_UART_RX",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "U1.32",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            40.6,
+            22.15,
+            40.9,
+            23.35
+          ],
+          "actualCopperGapMM": 0.27,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.49,
+            21.649199999999997,
+            40.85,
+            22.0092
+          ],
+          "actualCopperGapMM": 0.274221,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.49,
+            20.04,
+            40.690000000000005,
+            21.8492
+          ],
+          "actualCopperGapMM": 0.274221,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.65,
+            21.809199999999997,
+            40.85,
+            22.85
+          ],
+          "actualCopperGapMM": 0.32,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_31_NECK",
+      "net": "PA10_UART_RX",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.49,
+            21.649199999999997,
+            40.85,
+            22.0092
+          ],
+          "actualCopperGapMM": 0.274221,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.49,
+            20.04,
+            40.690000000000005,
+            21.8492
+          ],
+          "actualCopperGapMM": 0.274221,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "U1.32",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            40.6,
+            22.15,
+            40.9,
+            23.35
+          ],
+          "actualCopperGapMM": 0.284019,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.65,
+            21.809199999999997,
+            40.85,
+            22.85
+          ],
+          "actualCopperGapMM": 0.32,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_31_NECK",
+      "net": "PA10_UART_RX",
+      "type": "line",
+      "segment": 2,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "PA9_UART_TX",
+          "otherSource": "SOUTH_SOURCE_30_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            39.440000000000005,
+            21.439999999999998,
+            39.96,
+            21.96
+          ],
+          "actualCopperGapMM": 0.18,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.49,
+            21.649199999999997,
+            40.85,
+            22.0092
+          ],
+          "actualCopperGapMM": 0.19,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.49,
+            20.04,
+            40.690000000000005,
+            21.8492
+          ],
+          "actualCopperGapMM": 0.19,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "U1.32",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            40.6,
+            22.15,
+            40.9,
+            23.35
+          ],
+          "actualCopperGapMM": 0.321683,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.65,
+            21.809199999999997,
+            40.85,
+            22.85
+          ],
+          "actualCopperGapMM": 0.35,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_31_NECK",
+      "net": "PA10_UART_RX",
+      "type": "line",
+      "segment": 3,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.49,
+            20.04,
+            40.690000000000005,
+            21.8492
+          ],
+          "actualCopperGapMM": 0.19,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.49,
+            21.649199999999997,
+            40.85,
+            22.0092
+          ],
+          "actualCopperGapMM": 0.402195,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_31_NECK",
+      "net": "PA10_UART_RX",
+      "type": "line",
+      "segment": 4,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.49,
+            20.04,
+            40.690000000000005,
+            21.8492
+          ],
+          "actualCopperGapMM": 0.41,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            39.3,
+            18.849999999999998,
+            40.690000000000005,
+            20.240000000000002
+          ],
+          "actualCopperGapMM": 0.491751,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_31_VIA",
+      "net": "PA10_UART_RX",
+      "type": "via",
+      "segment": null,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.49,
+            20.04,
+            40.690000000000005,
+            21.8492
+          ],
+          "actualCopperGapMM": 0.23,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA11_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            39.3,
+            18.849999999999998,
+            40.690000000000005,
+            20.240000000000002
+          ],
+          "actualCopperGapMM": 0.311751,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_34_NECK",
+      "net": "SWDIO",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "U1.35",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            42.1,
+            22.15,
+            42.4,
+            23.35
+          ],
+          "actualCopperGapMM": 0.27,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA12_SHARED",
+          "otherSource": "U1.33",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            41.1,
+            22.15,
+            41.4,
+            23.35
+          ],
+          "actualCopperGapMM": 0.27,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA12_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            41.15,
+            21.799999999999997,
+            41.35,
+            22.85
+          ],
+          "actualCopperGapMM": 0.32,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA12_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.85,
+            21.5,
+            41.35,
+            22.0
+          ],
+          "actualCopperGapMM": 0.32,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_34_NECK",
+      "net": "SWDIO",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "PA12_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            41.15,
+            21.799999999999997,
+            41.35,
+            22.85
+          ],
+          "actualCopperGapMM": 0.314975,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA12_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.85,
+            21.5,
+            41.35,
+            22.0
+          ],
+          "actualCopperGapMM": 0.314975,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA12_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.85,
+            19.9,
+            41.050000000000004,
+            21.700000000000003
+          ],
+          "actualCopperGapMM": 0.37,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA12_SHARED",
+          "otherSource": "U1.33",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            41.1,
+            22.15,
+            41.4,
+            23.35
+          ],
+          "actualCopperGapMM": 0.49012,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_34_NECK",
+      "net": "SWDIO",
+      "type": "line",
+      "segment": 2,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "PA12_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.85,
+            21.5,
+            41.35,
+            22.0
+          ],
+          "actualCopperGapMM": 0.314975,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA12_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            41.15,
+            21.799999999999997,
+            41.35,
+            22.85
+          ],
+          "actualCopperGapMM": 0.334892,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA12_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.85,
+            19.9,
+            41.050000000000004,
+            21.700000000000003
+          ],
+          "actualCopperGapMM": 0.37,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_SOURCE_34_VIA",
+      "net": "SWDIO",
+      "type": "via",
+      "segment": null,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "PA12_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.85,
+            19.9,
+            41.050000000000004,
+            21.700000000000003
+          ],
+          "actualCopperGapMM": 0.19,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA12_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            40.85,
+            21.5,
+            41.35,
+            22.0
+          ],
+          "actualCopperGapMM": 0.276396,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "PA12_SHARED",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            41.15,
+            21.799999999999997,
+            41.35,
+            22.85
+          ],
+          "actualCopperGapMM": 0.336647,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_C14_GND_NECK",
+      "net": "GND",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "V3V3",
+          "otherSource": "U1.36",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            42.6,
+            22.15,
+            42.9,
+            23.35
+          ],
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "SWDIO",
+          "otherSource": "U1.34",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            41.6,
+            22.15,
+            41.9,
+            23.35
+          ],
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "V3V3",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            42.625,
+            21.425,
+            43.275,
+            22.075
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "V3V3",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            42.625,
+            21.825,
+            42.875,
+            22.875
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "V3V3",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            42.625,
+            22.625,
+            42.875,
+            24.125
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "SWDIO",
+          "otherSource": "SOUTH_SOURCE_34_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            41.67,
+            21.62,
+            41.83,
+            22.83
+          ],
+          "actualCopperGapMM": 0.295,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "SWDIO",
+          "otherSource": "SOUTH_SOURCE_34_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            41.42,
+            21.37,
+            41.83,
+            21.779999999999998
+          ],
+          "actualCopperGapMM": 0.295,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_C14_GND_WIDE",
+      "net": "GND",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "SWDIO",
+          "otherSource": "SOUTH_SOURCE_34_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            41.24,
+            20.99,
+            41.76,
+            21.51
+          ],
+          "actualCopperGapMM": 0.198419,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "SWDIO",
+          "otherSource": "SOUTH_SOURCE_34_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            41.67,
+            21.62,
+            41.83,
+            22.83
+          ],
+          "actualCopperGapMM": 0.224697,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "SWDIO",
+          "otherSource": "SOUTH_SOURCE_34_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            41.42,
+            21.37,
+            41.83,
+            21.779999999999998
+          ],
+          "actualCopperGapMM": 0.224697,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "V3V3",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            42.85,
+            20.5,
+            44.199999999999996,
+            21.85
+          ],
+          "actualCopperGapMM": 0.26646,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_C14_GND_WIDE",
+      "net": "GND",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "SWDIO",
+          "otherSource": "SOUTH_SOURCE_34_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            41.24,
+            20.99,
+            41.76,
+            21.51
+          ],
+          "actualCopperGapMM": 0.2652,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "V3V3",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            42.85,
+            20.5,
+            44.199999999999996,
+            21.85
+          ],
+          "actualCopperGapMM": 0.26646,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "SOUTH_GPIO15_BOTTOM_NECK",
+      "net": "GPIO_PB15",
+      "type": "line",
+      "segment": 0,
+      "layer": "BOTTOM",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB14",
+          "otherSource": "SOUTH_SOURCE_27_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            37.74,
+            20.99,
+            38.26,
+            21.51
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "USB_ATTACH_N",
+          "otherSource": "SOUTH_SOURCE_29_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            38.74,
+            20.939999999999998,
+            39.26,
+            21.46
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "LEFT_C13_VDD24_NECK",
+      "net": "V3V3",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "U1.23",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            35.15,
+            24.6,
+            36.35,
+            24.9
+          ],
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            35.625,
+            24.625,
+            36.605,
+            24.875
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "LEFT_C13_VSS23_NECK",
+      "net": "GND",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "V3V3",
+          "otherSource": "U1.24",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            35.15,
+            24.1,
+            36.35,
+            24.4
+          ],
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB11",
+          "otherSource": "U1.22",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            35.15,
+            25.1,
+            36.35,
+            25.4
+          ],
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "V3V3",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            35.625,
+            24.125,
+            37.125,
+            24.375
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "V3V3",
+          "otherSource": "LEFT_C13_VDD24_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            34.975,
+            23.475,
+            35.875,
+            24.375
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "LEFT_C13_VSS23_WIDE",
+      "net": "GND",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "V3V3",
+          "otherSource": "U1.24",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            35.15,
+            24.1,
+            36.35,
+            24.4
+          ],
+          "actualCopperGapMM": 0.2703,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB11",
+          "otherSource": "U1.22",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            35.15,
+            25.1,
+            36.35,
+            25.4
+          ],
+          "actualCopperGapMM": 0.2703,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "LEFT_SOURCE_19_NECK",
+      "net": "GPIO_PB1",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "native_via",
+          "otherKind": "via",
+          "otherBounds": [
+            37.1,
+            27.099999999999998,
+            37.699999999999996,
+            27.7
+          ],
+          "actualCopperGapMM": 0.27,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "LEFT_SOURCE_19_NECK",
+      "net": "GPIO_PB1",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "native_via",
+          "otherKind": "via",
+          "otherBounds": [
+            37.1,
+            27.099999999999998,
+            37.699999999999996,
+            27.7
+          ],
+          "actualCopperGapMM": 0.223532,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "LEFT_SOURCE_19_NECK",
+      "net": "GPIO_PB1",
+      "type": "line",
+      "segment": 2,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "native_via",
+          "otherKind": "via",
+          "otherBounds": [
+            37.1,
+            27.099999999999998,
+            37.699999999999996,
+            27.7
+          ],
+          "actualCopperGapMM": 0.293311,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "LEFT_SOURCE_21_NECK",
+      "net": "GPIO_PB10",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            36.6523141727648,
+            24.9223141727648,
+            38.2996858272352,
+            25.5696858272352
+          ],
+          "actualCopperGapMM": 0.228321,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "LEFT_SOURCE_21_NECK",
+      "net": "GPIO_PB10",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB1",
+          "otherSource": "LEFT_SOURCE_19_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            35.67,
+            26.67,
+            37.48,
+            26.83
+          ],
+          "actualCopperGapMM": 0.19,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            36.6523141727648,
+            24.9223141727648,
+            38.2996858272352,
+            25.5696858272352
+          ],
+          "actualCopperGapMM": 0.228321,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "LEFT_SOURCE_21_NECK",
+      "net": "GPIO_PB10",
+      "type": "line",
+      "segment": 2,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB1",
+          "otherSource": "LEFT_SOURCE_19_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            35.67,
+            26.67,
+            37.48,
+            26.83
+          ],
+          "actualCopperGapMM": 0.19,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB1",
+          "otherSource": "LEFT_SOURCE_19_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            37.32017601298877,
+            26.67017601298877,
+            37.97982398701123,
+            27.02982398701123
+          ],
+          "actualCopperGapMM": 0.190176,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "LEFT_SOURCE_22_NECK",
+      "net": "GPIO_PB11",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "LEFT_C13_VSS23_WIDE",
+          "otherKind": "line",
+          "otherBounds": [
+            33.7,
+            23.75,
+            35.0,
+            25.05
+          ],
+          "actualCopperGapMM": 0.204056,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "U1.23",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            35.15,
+            24.6,
+            36.35,
+            24.9
+          ],
+          "actualCopperGapMM": 0.27,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            35.625,
+            24.625,
+            36.605,
+            24.875
+          ],
+          "actualCopperGapMM": 0.295,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "LEFT_C13_VSS23_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            34.575,
+            24.625,
+            35.875,
+            24.875
+          ],
+          "actualCopperGapMM": 0.295,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "LEFT_SOURCE_22_NECK",
+      "net": "GPIO_PB11",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "LEFT_C13_VSS23_WIDE",
+          "otherKind": "line",
+          "otherBounds": [
+            33.7,
+            23.75,
+            35.0,
+            25.05
+          ],
+          "actualCopperGapMM": 0.204056,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "LEFT_C13_VSS23_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            34.575,
+            24.625,
+            35.875,
+            24.875
+          ],
+          "actualCopperGapMM": 0.295,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "LEFT_BOOT1_SOURCE_VIA",
+      "net": "BOOT1",
+      "type": "via",
+      "segment": null,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB11",
+          "otherSource": "LEFT_SOURCE_22_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            33.620000000000005,
+            25.42,
+            34.83,
+            25.58
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "NSS01_2L_ADD_2",
+      "net": "SPI_SCK",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "SPI_MISO",
+          "otherSource": "native_via",
+          "otherKind": "via",
+          "otherBounds": [
+            31.349999999999998,
+            29.47,
+            31.95,
+            30.07
+          ],
+          "actualCopperGapMM": 0.186899,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_VSS47_NECK",
+      "net": "GND",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "V3V3",
+          "otherSource": "U1.48",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            43.65,
+            29.6,
+            44.85,
+            29.9
+          ],
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB9",
+          "otherSource": "U1.46",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            43.65,
+            28.6,
+            44.85,
+            28.9
+          ],
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "V3V3",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            42.875,
+            29.625,
+            44.375,
+            29.875
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_VSS47_NECK",
+      "net": "GND",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "V3V3",
+          "otherSource": "U1.48",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            43.65,
+            29.6,
+            44.85,
+            29.9
+          ],
+          "actualCopperGapMM": 0.263909,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB9",
+          "otherSource": "U1.46",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            43.65,
+            28.6,
+            44.85,
+            28.9
+          ],
+          "actualCopperGapMM": 0.278185,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_VSS47_CAP_GROUND",
+      "net": "GND",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "V3V3",
+          "otherSource": "U1.48",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            43.65,
+            29.6,
+            44.85,
+            29.9
+          ],
+          "actualCopperGapMM": 0.259105,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_VDD48_NECK",
+      "net": "V3V3",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "U1.47",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            43.65,
+            29.1,
+            44.85,
+            29.4
+          ],
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "RIGHT_VSS47_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            44.125,
+            29.125,
+            45.175,
+            29.375
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_VDD48_NECK",
+      "net": "V3V3",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "U1.47",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            43.65,
+            29.1,
+            44.85,
+            29.4
+          ],
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "RIGHT_VSS47_CAP_GROUND",
+          "otherKind": "line",
+          "otherBounds": [
+            45.1,
+            29.2,
+            46.0,
+            29.8
+          ],
+          "actualCopperGapMM": 0.246751,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "RIGHT_VSS47_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            44.125,
+            29.125,
+            45.175,
+            29.375
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_VDD48_CAP",
+      "net": "V3V3",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "RIGHT_VSS47_CAP_GROUND",
+          "otherKind": "line",
+          "otherBounds": [
+            45.1,
+            29.2,
+            46.0,
+            29.8
+          ],
+          "actualCopperGapMM": 0.239831,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "RIGHT_VSS47_CAP_GROUND",
+          "otherKind": "line",
+          "otherBounds": [
+            45.40000294413459,
+            29.10000294413459,
+            46.64999705586541,
+            29.799997055865408
+          ],
+          "actualCopperGapMM": 0.239867,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_SWO_VIA",
+      "net": "SWO",
+      "type": "via",
+      "segment": null,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PA15",
+          "otherSource": "RIGHT_GPIO_PA15_TOP",
+          "otherKind": "line",
+          "otherBounds": [
+            45.02,
+            24.57,
+            46.43,
+            24.729999999999997
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PA15",
+          "otherSource": "RIGHT_GPIO_PA15_TOP",
+          "otherKind": "line",
+          "otherBounds": [
+            46.25,
+            24.549999999999997,
+            46.9,
+            24.75
+          ],
+          "actualCopperGapMM": 0.162221,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_GPIO_PB4_TOP",
+      "net": "GPIO_PB4",
+      "type": "line",
+      "segment": 2,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "SWO",
+          "otherSource": "RIGHT_SWO_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            45.940000000000005,
+            24.889999999999997,
+            46.46,
+            25.41
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_GPIO_PB4_TOP",
+      "net": "GPIO_PB4",
+      "type": "line",
+      "segment": 3,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "SWO",
+          "otherSource": "RIGHT_SWO_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            45.940000000000005,
+            24.889999999999997,
+            46.46,
+            25.41
+          ],
+          "actualCopperGapMM": 0.162291,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_GPIO_PB5_VIA",
+      "net": "GPIO_PB5",
+      "type": "via",
+      "segment": null,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB4",
+          "otherSource": "RIGHT_GPIO_PB4_TOP",
+          "otherKind": "line",
+          "otherBounds": [
+            45.02,
+            25.57,
+            46.43,
+            25.729999999999997
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PB4",
+          "otherSource": "RIGHT_GPIO_PB4_TOP",
+          "otherKind": "line",
+          "otherBounds": [
+            46.25,
+            25.549999999999997,
+            46.9,
+            25.75
+          ],
+          "actualCopperGapMM": 0.162221,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_I2C_SCL_TOP",
+      "net": "I2C_SCL",
+      "type": "line",
+      "segment": 2,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB5",
+          "otherSource": "RIGHT_GPIO_PB5_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            45.940000000000005,
+            25.889999999999997,
+            46.46,
+            26.41
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_I2C_SCL_TOP",
+      "net": "I2C_SCL",
+      "type": "line",
+      "segment": 3,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB5",
+          "otherSource": "RIGHT_GPIO_PB5_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            45.940000000000005,
+            25.889999999999997,
+            46.46,
+            26.41
+          ],
+          "actualCopperGapMM": 0.162291,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_I2C_SDA_VIA",
+      "net": "I2C_SDA",
+      "type": "via",
+      "segment": null,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "I2C_SCL",
+          "otherSource": "RIGHT_I2C_SCL_TOP",
+          "otherKind": "line",
+          "otherBounds": [
+            45.02,
+            26.57,
+            46.43,
+            26.729999999999997
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "I2C_SCL",
+          "otherSource": "RIGHT_I2C_SCL_TOP",
+          "otherKind": "line",
+          "otherBounds": [
+            46.25,
+            26.549999999999997,
+            46.9,
+            26.75
+          ],
+          "actualCopperGapMM": 0.162221,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_BOOT0_TOP",
+      "net": "BOOT0",
+      "type": "line",
+      "segment": 2,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "I2C_SDA",
+          "otherSource": "RIGHT_I2C_SDA_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            45.940000000000005,
+            26.889999999999997,
+            46.46,
+            27.41
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_BOOT0_TOP",
+      "net": "BOOT0",
+      "type": "line",
+      "segment": 3,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "I2C_SDA",
+          "otherSource": "RIGHT_I2C_SDA_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            45.940000000000005,
+            26.889999999999997,
+            46.46,
+            27.41
+          ],
+          "actualCopperGapMM": 0.162291,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_GPIO_PB8_VIA",
+      "net": "GPIO_PB8",
+      "type": "via",
+      "segment": null,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "BOOT0",
+          "otherSource": "RIGHT_BOOT0_TOP",
+          "otherKind": "line",
+          "otherBounds": [
+            45.02,
+            27.57,
+            46.43,
+            27.729999999999997
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "BOOT0",
+          "otherSource": "RIGHT_BOOT0_TOP",
+          "otherKind": "line",
+          "otherBounds": [
+            46.25,
+            27.549999999999997,
+            46.9,
+            27.75
+          ],
+          "actualCopperGapMM": 0.162221,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_GPIO_PB9_TOP",
+      "net": "GPIO_PB9",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "U1.47",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            43.65,
+            29.1,
+            44.85,
+            29.4
+          ],
+          "actualCopperGapMM": 0.27,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "RIGHT_VSS47_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            44.125,
+            29.125,
+            45.175,
+            29.375
+          ],
+          "actualCopperGapMM": 0.295,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "RIGHT_VSS47_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            44.925,
+            29.125,
+            45.425,
+            29.625
+          ],
+          "actualCopperGapMM": 0.297782,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_GPIO_PB9_TOP",
+      "net": "GPIO_PB9",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "RIGHT_VSS47_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            44.125,
+            29.125,
+            45.175,
+            29.375
+          ],
+          "actualCopperGapMM": 0.295,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "RIGHT_VSS47_NECK",
+          "otherKind": "line",
+          "otherBounds": [
+            44.925,
+            29.125,
+            45.425,
+            29.625
+          ],
+          "actualCopperGapMM": 0.297782,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_GPIO_PB9_VIA",
+      "net": "GPIO_PB9",
+      "type": "via",
+      "segment": null,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB8",
+          "otherSource": "RIGHT_GPIO_PB8_TOP",
+          "otherKind": "line",
+          "otherBounds": [
+            45.02,
+            28.07,
+            46.28,
+            28.229999999999997
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "RIGHT_VSS47_CAP_GROUND",
+          "otherKind": "line",
+          "otherBounds": [
+            45.40000294413459,
+            29.10000294413459,
+            46.64999705586541,
+            29.799997055865408
+          ],
+          "actualCopperGapMM": 0.280118,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "RIGHT_VSS47_CAP_GROUND",
+          "otherKind": "line",
+          "otherBounds": [
+            45.1,
+            29.2,
+            46.0,
+            29.8
+          ],
+          "actualCopperGapMM": 0.29,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_GPIO_PB9_BOTTOM_ANCHOR",
+      "net": "GPIO_PB9",
+      "type": "line",
+      "segment": 0,
+      "layer": "BOTTOM",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB8",
+          "otherSource": "RIGHT_GPIO_PB8_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            45.940000000000005,
+            27.889999999999997,
+            46.46,
+            28.41
+          ],
+          "actualCopperGapMM": 0.16,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_GPIO_PB9_BOTTOM_ANCHOR",
+      "net": "GPIO_PB9",
+      "type": "line",
+      "segment": 1,
+      "layer": "BOTTOM",
+      "issues": [
+        {
+          "otherNet": "GPIO_PB8",
+          "otherSource": "RIGHT_GPIO_PB8_VIA",
+          "otherKind": "via",
+          "otherBounds": [
+            45.940000000000005,
+            27.889999999999997,
+            46.46,
+            28.41
+          ],
+          "actualCopperGapMM": 0.162291,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "RIGHT_BOOT_DIRECT_TOP",
+      "net": "BOOT0",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "R28.2",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            50.8536,
+            27.5935,
+            51.7936,
+            28.406499999999998
+          ],
+          "actualCopperGapMM": 0.1935,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    }
+  ],
+  "scope": "Conservative native pad BBOX plus actual cline-width copper; bbox rounded/circle corners may overestimate. New candidate rules/regions not fully resolved, so spacing warnings are BASE-rule diagnostics, not native errors. No-overlap does not certify clearance, conductive graph, neck counts, dynamic/reference copper, thermal/EMI or manufacturing."
+}

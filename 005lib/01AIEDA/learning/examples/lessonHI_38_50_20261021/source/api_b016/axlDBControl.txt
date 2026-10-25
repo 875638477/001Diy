@@ -1,0 +1,267 @@
+
+  NAME
+         axlDBControl - inquire and set special database controls
+  FUNCTION
+         axlDBControl(
+                 s_name
+                 [g_value]
+         )
+         ==> g_currentValue/ls_names
+  SYNOPSIS
+         Inquires and/or sets the value of a special database control. 
+         If setting a value, the return is the old value of the control.
+ 
+         A side effect of most of these controls is if a form is active that
+         is displaying the current setting it may not be updated. Additional
+         side effects of individual controls are listed.
+ 
+         Note: Display several display options have been moved to 
+         axlDBDisplayControl but for backward compatibility are still 
+         supported via this interface.
+ 
+         Items currently supported:
+ 
+         Name:   busRats
+         Value:  t to nil
+         Set?:   Yes
+         Description: Queries and changes the bus rats option
+         Equiv:  Prmed Display group
+         Side Effects: If changing should do ratsnestDistance first
+ 
+         Name:   drcEnable
+         Value:  t or nil
+         Set?:   Yes
+         Description: Enables or Disables DRC/CBD system 
+         Equiv:  Same as status form drc on/off buttons
+         Side Effects: does not perform a batch DRC
+ 
+         Name:   ratsnestDistance
+         Value:  t or nil
+         Set?:   Yes
+         Description: Accesses the ratsnest display mode
+                 t - pin to pin
+                 nil - closest dangling net cline/via
+         Equiv:  Same as status form Ratsnest Dist control
+         Side Effects: Will recalculate the display when this is changed.
+ 
+         Name:   activeTextBlock
+         Value:  1 to maxTextBlock
+         Set?:   Yes
+         Description: Accesses the active text block number
+         Equiv:  Same as status form text block
+         Side Effects: None
+ 
+         Name:   maxTextBlock
+         Value:  16 to 64
+         Set?:   No
+         Description: Reports the maximum text block number
+         Equiv:  None.
+         Side Effects: None.
+ 
+         Name:   activeLayer
+         Value:  <class>/<subclass>
+         Set?:   Yes
+         Description: Accesses the current active class/subclass
+            TIP: To obtain subclass do
+                    cadr( parseString(axlDBControl('activeLayer "/")) )
+         Equiv:  Same as ministatus display
+         Side Effects: None
+ 
+         Name:   activeAltLayer
+         Value:  <subclass>
+         Set?:   Yes
+         Description: Accesses the current alternative etch layer 
+         Equiv:  Same as ministatus display when in add connect.
+         Side Effects: None
+ 
+         Name:   defaultSymbolHeight
+         Value:  float
+         Set?:   Yes
+         Description: Sets the default symbol height of the database
+         Equiv:  Prmed form DRC Symbol Height
+         Side Effects: Will set DRC out of date and does not update status
+                 form if it is present.
+ 
+         Name:   symbolRotation
+         Value:  float
+         Set?:   Yes
+         Description: Sets the initial symbol rotation 
+         Equiv:  Prmed form's symbol angle
+         Side Effects: None
+ 
+         Name:   symbolMirror
+         Value:  t/nil
+         Set?:   Yes
+         Description: Sets the initial symbol mirror.
+         Equiv:  Prmed form's Symbol mirror.
+         Side Effects: None
+ 
+         Name:   schematicBrand
+         Value:  none concepthdl, capture, scald
+         Set?:   No
+         Description: Queries current database schematic branding
+         Equiv:  See  netin allegro dialog
+         Side Effects: None
+ 
+         Name:   cmgrEnabledFlow
+         Value:  t or nil
+         Set?:   Yes  (only if flag is set)
+         Description: Reports if board is in contraint manager enabled
+                 flow. Only valid in HDL Concept Flow.
+                 t - Cadence schematic cmgr flow enabled (5 pst files required)
+                 nil - traditional Cadence schematic flow (3 pst files)
+         Equiv:  Import Logic Branding shows 
+                         "Contraint Manager Enabled Flow"
+         Side Effects: It is not advisable to clear this flag. This
+                 interface is provided for those customers who enabled
+                 the flow and want to restore the tradition flow.
+                 You need to do addition work on the schematic side to
+                 clear their option.
+ 
+         Name:   cdszFile
+         Value:  t or nil
+         Set?:   t or nil
+         Description: Reports if a single cdsz file was used by netrev instead 
+                 of multiple pst files. If t, then genfeedformat will output
+                 a cdsz file.
+ 
+         Name:   schematicDir
+         Value:  directory path
+         Set?:   Yes
+         Description: Queries/changes the the Cadence schematic directory 
+                 path. This is the directory location for the Cadence pst 
+                 files. This does not support 3rd party netlist location.
+                 If database is unbranded (see above) then the directory
+                 location is not stored.
+                 Existance of location is not verified.
+         Equiv:  Import Logic Branding Cadence Tab
+         Side Effects: none
+ 
+         Name:   testPointFixed
+         Value:  t or nil
+         Set?:   Yes
+         Description: Sets global flag to lock test points
+                 t - test points fixed
+                 nil - not fixed
+         Equiv:  Same as testprep param "Fixed test points"
+         Side Effects: None
+ 
+         Name:   ecsetApplyRipupEtch
+         Value:  t or nil
+         Set?:   Yes
+         Description: If enabled. and the schedule is anything
+                other than min tree, ripup any etch that disagrees with 
+                the schedule. Etch many be ripped up when a refdes is
+                renamed due to this option. Only applicable with 
+                "expert" level tools. Apply's setting at system level to
+                all open designs.
+                 t - ripup etch
+                 nil - preserve etch
+         Equiv:  Same as constraint manager tools->options "Rip up etch..."
+         Side Effects: None
+ 
+         Name:   maxEtchLayers
+         Value:  number
+         Set?:   No
+         Description: Returns maximum number of etch subclasses
+         Equiv:  none
+         Side Effects: none
+ 
+         Name:   maxNameLength
+         Value:  number
+         Set?:   Yes
+         Description: Sets maximum name length. Minimum is 31 and maximum
+                 is 255. For designs, you cannot set it lower then the 
+                 current length. For new designs, the initial value is set by 
+                 the value in the env variable allegro_long_name_size.
+         Equiv:  Design Parameter Editor, Long Name Size
+ 
+         Name:   dynamicFillMode
+         Value:  wysiwyg, rough,  nil (Disabled) (must be a symbol not a string)
+         Set?:   Yes
+         Description: Controls filling of dynamic shapes
+         Equiv:  shape global param
+         Side Effects: Disabled in symbol editor
+ 
+         Name:   dynamicFilletsOn
+         Value:  t nil
+         Set?:   Yes
+         Description: Controls filling of dynamic shapes
+         Equiv:  Gloss param fillet - dynamic fillets option
+         Side Effects: Disabled in symbol editor and lower level
+                 PCB tools. When enabled will update design with fillets.
+ 
+         Name:   newFlashMode
+         Value:  t/nil
+         Set?:   Yes
+         Description: Returns if board is running old style (nil)
+                 or new style (t) flash mode (WYSIWYG negative artwork using 
+                 fsm files) Note WYSIWYG is now Smooth in the display.
+         Equiv:  none
+         Side Effects: If you change the mode to t without updating flash symbols,
+                 wrong artwork may occur. You should only change the mode
+                 at design creation time before any padstacks with flashes
+                 are loaded into the design.
+ 
+         Name:   maxAttachementSize
+         Value:  integer value in bytes
+         Set?:   No
+         Description: Returns the largest attachment size (axlCreateAttachment)
+                 that may be attached to the database
+         Equiv:  None.
+         Side Effects: None.
+ 
+         Name:   dbSize
+         Value:  int
+         Set?:   No
+         Description: returns current database size (memory footprint)
+         Equiv:  none
+         Side Effects: none
+ 
+         Name:   retainElecCnsOnNets
+         Value:  t or nil
+         Set?:   Yes
+         Description: Queries and changes the retain electrical constraints on nets
+         Equiv:  netrev based option
+         Side Effects: This should only be set on new designs. With populated designs
+                existing Electrical constraints will remain at xnet level. Setting
+                the option will not promote existing settings to the xnet.
+ 
+         Name:   mirrorUserMask
+         Value:  t or nil
+         Set?:   t or nil
+         Description: Most designs with padstack user mask layers offer Allegro 
+                 mirror capability (layers with suffix _TOP will mirror to layer suffix
+                 _BOTTOM and vice versa). When padstack user mask layers was introduced
+                 in 16.2, they did not offer this capability. New designs will offer
+                 this capability but designs containing user mask layers that were created
+                 in 16.2 or 16.3 will have this mirror option disabled.
+                 a cdsz file.
+ 
+         Name:   xnetState
+         Value:  dml, gates, or off
+         Set?:   No
+         Description: Queries current database xnet state
+         Equiv:  none
+         Side Effects: none
+ 
+  TIPS
+         - See axlBackDrillGet to get backdrill status
+  NEEDS
+         s_name: symbol name of control. nil returns all possible names
+         s_value: optional symbol value to set. Usually a t or a nil.
+  RETURNS
+         See above
+         ls_names - If name is nil then returns a list of all controls.
+  SEE ALSO
+         axlDBDisplayControl
+  EXAMPLES:
+         -) set drc system off
+                 old = axlDBControl('drcEnable, nil)
+         -) get current value of pin-2-pin ratsnest
+                 current = axlDBControl('ratsnestDistance)
+         -) get all names supported by this interface
+                 listOfNames = axlDBControl(nil)
+         -) set dynamic shape mode to smooth
+                 old = axlDBControl('dynamicFillMode, 'wysiwyg)
+

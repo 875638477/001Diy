@@ -1,0 +1,2705 @@
+{
+  "status": "CANDIDATE_V5_NO_OVERLAP_OR_SUB020_IN_COMPLETE_LOCAL_SCREEN_NATIVE_RULES_PENDING",
+  "date": "2026-10-21",
+  "scope": "HI38-50 MCU/HSE/ADC/NRST first batch; native sole executor f29; not all-board routing or manufacturing approval",
+  "sourceG": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020",
+  "units": "mm",
+  "placementChanges": [
+    {
+      "ref": "C21",
+      "xy": [
+        39.478,
+        36.25
+      ],
+      "rotation": 180,
+      "purpose": "Same PlaceBound as37.7,36.25 r0 but swap pad ends: NRST39.3764,right / GND37.8016,left. Removes VDDA/ground route crossings. PlaceBound spacing is not actual body/assembly qualification."
+    },
+    {
+      "ref": "C24",
+      "xy": [
+        34.8,
+        32.8984
+      ],
+      "rotation": 90,
+      "purpose": "Shift left .2 so .60 VDDA branch atx35.9 has actual .3935mm to each GND/ADC pad edge"
+    },
+    {
+      "ref": "R23",
+      "xy": [
+        32.9,
+        33.0
+      ],
+      "rotation": 180,
+      "purpose": "Move SPI NSS series resistor left.8016mm; frees ADC0 diagonal to shiftedC24 without less-than.3 coppergap. Preserve electrical role/value."
+    },
+    {
+      "ref": "U4",
+      "xy": [
+        40.25,
+        11.4
+      ],
+      "rotation": 180,
+      "purpose": "Create1.62mm raw y gap J2 tips→U4 input copper; preserve short ESD entry"
+    },
+    {
+      "ref": "R5",
+      "xy": [
+        41.1,
+        18.5
+      ],
+      "rotation": 270,
+      "purpose": "Symmetric toR6 aroundx40.25 and clearC14"
+    },
+    {
+      "ref": "R12",
+      "xy": [
+        42.8,
+        18.3
+      ],
+      "rotation": 0,
+      "purpose": "Reduce DNP CAN shared stub"
+    },
+    {
+      "ref": "R13",
+      "xy": [
+        38,
+        18.3
+      ],
+      "rotation": 180,
+      "purpose": "Reduce DNP CAN shared stub"
+    },
+    {
+      "ref": "R11",
+      "xy": [
+        42.9764,
+        14.6
+      ],
+      "rotation": 180,
+      "purpose": "DPpad2=(41.3,14.6), sourcepad1=(42.8748,14.6). Directly adjacent maintrunk: .845mm4L or.4mm2L; cannot put.94mm pad onto.41mm-centered4Lpair without short toDM."
+    }
+  ],
+  "operations": [
+    {
+      "type": "route",
+      "id": "HSE_IN",
+      "net": "OSC_IN",
+      "layer": "TOP",
+      "points": [
+        [
+          40.75,
+          31.25
+        ],
+        [
+          40.75,
+          32.3
+        ],
+        [
+          43,
+          32.3
+        ],
+        [
+          44.4,
+          33.7
+        ]
+      ],
+      "purpose": "Short high-impedance input, source entry port then quiet island; north GPIO must not cross",
+      "width": 0.2,
+      "from": [
+        "U1",
+        "5"
+      ],
+      "to": [
+        "Y1",
+        "1"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "HSE_IN_LOAD",
+      "net": "OSC_IN",
+      "layer": "TOP",
+      "points": [
+        [
+          44.4,
+          33.7
+        ],
+        [
+          44.7,
+          34.0
+        ],
+        [
+          46.2,
+          34.0
+        ]
+      ],
+      "purpose": "No test branch; load capacitor at resonator side",
+      "width": 0.2,
+      "from": [
+        "Y1",
+        "1"
+      ],
+      "to": [
+        "C22",
+        "1"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "HSE_OUT",
+      "net": "OSC_OUT",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          31.25
+        ],
+        [
+          40.25,
+          32.15
+        ],
+        [
+          40.2,
+          32.2
+        ],
+        [
+          40.2,
+          33.2
+        ]
+      ],
+      "purpose": "Retain series component; no unrequested calculated drive resistor",
+      "width": 0.2,
+      "from": [
+        "U1",
+        "6"
+      ],
+      "to": [
+        "R31",
+        "1"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "HSE_XTAL_OUT",
+      "net": "XTAL_OUT",
+      "layer": "TOP",
+      "points": [
+        [
+          40.2,
+          34.7748
+        ],
+        [
+          40.3,
+          34.8748
+        ],
+        [
+          40.3,
+          37.7
+        ],
+        [
+          42,
+          37.7
+        ]
+      ],
+      "purpose": "Inside oscillator shadow only",
+      "width": 0.2,
+      "from": [
+        "R31",
+        "2"
+      ],
+      "to": [
+        "Y1",
+        "3"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "HSE_OUT_LOAD",
+      "net": "XTAL_OUT",
+      "layer": "TOP",
+      "points": [
+        [
+          40.3,
+          37.7
+        ],
+        [
+          39.8,
+          37.7
+        ]
+      ],
+      "purpose": "Branch at output arm not long test stub",
+      "width": 0.2,
+      "from": [
+        "R31",
+        "2"
+      ],
+      "to": [
+        "C23",
+        "1"
+      ]
+    },
+    {
+      "type": "via",
+      "id": "HSE_LOCAL_C22",
+      "net": "GND",
+      "xy": [
+        47.1,
+        35.5748
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "ONLY local quiet island; global GND void on all copper layers traversed",
+      "tentRequirement": "No mask aperture on TOP/BOTTOM unless explicitly outside body and qualified; verify Artwork drawMissingPadApertures and actual aperture data."
+    },
+    {
+      "type": "via",
+      "id": "HSE_LOCAL_C23",
+      "net": "GND",
+      "xy": [
+        37.7,
+        37.7
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "ONLY local quiet island; global GND void on all copper layers traversed",
+      "tentRequirement": "No mask aperture on TOP/BOTTOM unless explicitly outside body and qualified; verify Artwork drawMissingPadApertures and actual aperture data."
+    },
+    {
+      "type": "via",
+      "id": "HSE_SINGLE_ANCHOR",
+      "net": "GND",
+      "xy": [
+        45.45,
+        28.85
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "ONLY quiet-to-application bridge via at retained VSS47->C15.GND bend; global planes void, local island/stem reaches this via; TOP existing GND bend is sole intended contact",
+      "tentRequirement": "No mask aperture on TOP/BOTTOM unless explicitly outside body and qualified; verify Artwork drawMissingPadApertures and actual aperture data.",
+      "isolationChallengeTarget": true
+    },
+    {
+      "type": "route",
+      "id": "HSE_C22_RETURN",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          46.2,
+          35.5748
+        ],
+        [
+          47.1,
+          35.5748
+        ]
+      ],
+      "purpose": "Quiet cap ground into local island only",
+      "width": 0.6,
+      "from": [
+        "C22",
+        "2"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "HSE_C23_RETURN",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          38.2252,
+          37.7
+        ],
+        [
+          37.7,
+          37.7
+        ]
+      ],
+      "purpose": "Quiet cap ground into local island only",
+      "width": 0.6,
+      "from": [
+        "C23",
+        "2"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "HSE_GUARD_LEFT_NORTH",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          37.7,
+          37.7
+        ],
+        [
+          37,
+          37.7
+        ],
+        [
+          37,
+          39.8
+        ],
+        [
+          42.2,
+          39.8
+        ]
+      ],
+      "purpose": "Quiet TOP guard; intentionally open case-ground escape port x42.2..44.2",
+      "width": 0.6,
+      "from": [
+        "C23",
+        "2"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "HSE_GUARD_RIGHT_NORTH",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          47.1,
+          35.5748
+        ],
+        [
+          47.8,
+          35.5748
+        ],
+        [
+          47.8,
+          39.8
+        ],
+        [
+          44.2,
+          39.8
+        ]
+      ],
+      "purpose": "Quiet TOP guard with separate case-return opening",
+      "width": 0.6,
+      "from": [
+        "C22",
+        "2"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "HSE_GUARD_RIGHT_LOWER",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          47.8,
+          35.5748
+        ],
+        [
+          47.8,
+          33.5
+        ]
+      ],
+      "purpose": "Quiet guard stops below C17 application ground, does not contact it",
+      "width": 0.6
+    },
+    {
+      "type": "via",
+      "id": "HSE_CASE_APP",
+      "net": "GND",
+      "xy": [
+        43.2,
+        40.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Application GND OUTSIDE local moat; must remain reached after unique TOP anchor deletion",
+      "tentRequirement": "No mask aperture on TOP/BOTTOM unless explicitly outside body and qualified; verify Artwork drawMissingPadApertures and actual aperture data."
+    },
+    {
+      "type": "route",
+      "id": "HSE_CASE4_APP",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          42,
+          33.7
+        ],
+        [
+          42,
+          34.8
+        ],
+        [
+          43.2,
+          36.0
+        ],
+        [
+          43.2,
+          40.8
+        ]
+      ],
+      "purpose": "Metal case application return, separate from quiet guard and local vias",
+      "width": 0.6,
+      "from": [
+        "Y1",
+        "4"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "HSE_CASE2_APP",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          44.4,
+          37.7
+        ],
+        [
+          43.2,
+          38.9
+        ],
+        [
+          43.2,
+          40.8
+        ]
+      ],
+      "purpose": "Case branch through north guard opening; no guard intersection",
+      "width": 0.6,
+      "from": [
+        "Y1",
+        "2"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "VDDA_PIN_CAP",
+      "net": "VDDA",
+      "layer": "TOP",
+      "points": [
+        [
+          38.75,
+          31.25
+        ],
+        [
+          38.75,
+          32.55
+        ],
+        [
+          38.1,
+          33.2
+        ],
+        [
+          37,
+          33.2
+        ]
+      ],
+      "purpose": "1.30mm whole pin-centered neck, then .60; explicit north spacing exception .20 only",
+      "widths": [
+        0.25,
+        0.6,
+        0.6
+      ],
+      "from": [
+        "U1",
+        "9"
+      ],
+      "to": [
+        "C18",
+        "1"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "VDDA_CAP_BULK",
+      "net": "VDDA",
+      "layer": "TOP",
+      "points": [
+        [
+          37,
+          33.2
+        ],
+        [
+          36.5,
+          33.2
+        ],
+        [
+          35.9,
+          33.8
+        ],
+        [
+          35.9,
+          35.9
+        ],
+        [
+          34.8,
+          37
+        ]
+      ],
+      "purpose": "Pass real gap between shifted C24 and C18; .3935 each-side copper margin",
+      "width": 0.6,
+      "from": [
+        "C18",
+        "1"
+      ],
+      "to": [
+        "C19",
+        "1"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "VDDA_BULKS",
+      "net": "VDDA",
+      "layer": "TOP",
+      "points": [
+        [
+          34.8,
+          37
+        ],
+        [
+          32.2,
+          37
+        ]
+      ],
+      "purpose": "Local low-frequency reservoir",
+      "width": 0.6,
+      "from": [
+        "C19",
+        "1"
+      ],
+      "to": [
+        "C20",
+        "1"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "VDDA_FILTER",
+      "net": "VDDA",
+      "layer": "TOP",
+      "points": [
+        [
+          32.2,
+          37
+        ],
+        [
+          31.4,
+          37
+        ],
+        [
+          30.9,
+          37.5
+        ],
+        [
+          30.9,
+          38.1748
+        ],
+        [
+          30.5,
+          38.5748
+        ],
+        [
+          29.5,
+          38.5748
+        ]
+      ],
+      "purpose": "Avoid R26 V3V3 pad1 and C20 GND pad2",
+      "width": 0.6,
+      "from": [
+        "C20",
+        "1"
+      ],
+      "to": [
+        "R26",
+        "2"
+      ]
+    },
+    {
+      "type": "via",
+      "id": "VSSA8_APP",
+      "net": "GND",
+      "xy": [
+        38.7,
+        29.5
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Application reference under MCU, not oscillator island",
+      "tentRequirement": "No mask aperture on TOP/BOTTOM unless explicitly outside body and qualified; verify Artwork drawMissingPadApertures and actual aperture data."
+    },
+    {
+      "type": "route",
+      "id": "VSSA8_INWARD",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          39.25,
+          31.25
+        ],
+        [
+          39.25,
+          30.05
+        ],
+        [
+          38.7,
+          29.5
+        ]
+      ],
+      "purpose": "Pin-centered inward escape: 1.2 neck then wide; local north .20 spacing",
+      "widths": [
+        0.25,
+        0.6
+      ],
+      "from": [
+        "U1",
+        "8"
+      ]
+    },
+    {
+      "type": "via",
+      "id": "C18_APP_GND",
+      "net": "GND",
+      "xy": [
+        37.9,
+        34.7748
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Application plane outside all oscillator voids; offpad/tented as needed",
+      "tentRequirement": "No mask aperture on TOP/BOTTOM unless explicitly outside body and qualified; verify Artwork drawMissingPadApertures and actual aperture data."
+    },
+    {
+      "type": "route",
+      "id": "C18_APP_GND_TRACE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          37,
+          34.7748
+        ],
+        [
+          37.9,
+          34.7748
+        ]
+      ],
+      "purpose": "Short independent application return, never local oscillator island",
+      "width": 0.6,
+      "from": [
+        "C18",
+        "2"
+      ]
+    },
+    {
+      "type": "via",
+      "id": "C19_APP_GND",
+      "net": "GND",
+      "xy": [
+        34.8,
+        39.7
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Application plane outside all oscillator voids; offpad/tented as needed",
+      "tentRequirement": "No mask aperture on TOP/BOTTOM unless explicitly outside body and qualified; verify Artwork drawMissingPadApertures and actual aperture data."
+    },
+    {
+      "type": "route",
+      "id": "C19_APP_GND_TRACE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          34.8,
+          38.5748
+        ],
+        [
+          34.8,
+          39.7
+        ]
+      ],
+      "purpose": "Short independent application return, never local oscillator island",
+      "width": 0.6,
+      "from": [
+        "C19",
+        "2"
+      ]
+    },
+    {
+      "type": "via",
+      "id": "C20_APP_GND",
+      "net": "GND",
+      "xy": [
+        32.2,
+        40.1
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Application plane outside all oscillator voids; offpad/tented as needed",
+      "tentRequirement": "No mask aperture on TOP/BOTTOM unless explicitly outside body and qualified; verify Artwork drawMissingPadApertures and actual aperture data."
+    },
+    {
+      "type": "route",
+      "id": "C20_APP_GND_TRACE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          32.2,
+          39.032
+        ],
+        [
+          32.2,
+          40.1
+        ]
+      ],
+      "purpose": "Short independent application return, never local oscillator island",
+      "width": 0.6,
+      "from": [
+        "C20",
+        "2"
+      ]
+    },
+    {
+      "type": "via",
+      "id": "C24_APP_GND",
+      "net": "GND",
+      "xy": [
+        34.4,
+        35.7
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Application plane outside all oscillator voids; offpad/tented as needed",
+      "tentRequirement": "No mask aperture on TOP/BOTTOM unless explicitly outside body and qualified; verify Artwork drawMissingPadApertures and actual aperture data."
+    },
+    {
+      "type": "route",
+      "id": "C24_APP_GND_TRACE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          34.8,
+          34.5748
+        ],
+        [
+          34.4,
+          34.9748
+        ],
+        [
+          34.4,
+          35.7
+        ]
+      ],
+      "purpose": "Short independent application return, never local oscillator island",
+      "width": 0.6,
+      "from": [
+        "C24",
+        "2"
+      ]
+    },
+    {
+      "type": "via",
+      "id": "C21_APP_GND",
+      "net": "GND",
+      "xy": [
+        36.95,
+        36.25
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Application plane outside all oscillator voids; offpad/tented as needed",
+      "tentRequirement": "No mask aperture on TOP/BOTTOM unless explicitly outside body and qualified; verify Artwork drawMissingPadApertures and actual aperture data."
+    },
+    {
+      "type": "route",
+      "id": "C21_APP_GND_TRACE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          37.8016,
+          36.25
+        ],
+        [
+          36.95,
+          36.25
+        ]
+      ],
+      "purpose": "Short independent application return, never local oscillator island",
+      "width": 0.6,
+      "from": [
+        "C21",
+        "2"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "ADC_PIN_CAP",
+      "net": "ADC0",
+      "layer": "TOP",
+      "points": [
+        [
+          38.25,
+          31.25
+        ],
+        [
+          38.25,
+          32.2
+        ],
+        [
+          35.6,
+          32.2
+        ],
+        [
+          34.8,
+          33
+        ]
+      ],
+      "purpose": "No reference slot; local north exception only for fine-pitch power neighbor",
+      "width": 0.2,
+      "from": [
+        "U1",
+        "10"
+      ],
+      "to": [
+        "C24",
+        "1"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "ADC_CAP_SERIES",
+      "net": "ADC0",
+      "layer": "TOP",
+      "points": [
+        [
+          34.8,
+          33
+        ],
+        [
+          32.8,
+          35
+        ],
+        [
+          32.6764,
+          35
+        ]
+      ],
+      "purpose": "Keep RC on MCU side; avoids C24.GND2",
+      "width": 0.2,
+      "from": [
+        "C24",
+        "1"
+      ],
+      "to": [
+        "R32",
+        "2"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "ADC_INPUT",
+      "net": "ADC_IN",
+      "layer": "TOP",
+      "points": [
+        [
+          31.1016,
+          35
+        ],
+        [
+          30.8,
+          35
+        ],
+        [
+          29.8,
+          34
+        ],
+        [
+          26.27,
+          34
+        ]
+      ],
+      "purpose": "Quiet paired-return input, no SW/buck corridor",
+      "width": 0.2,
+      "from": [
+        "R32",
+        "1"
+      ],
+      "to": [
+        "J10",
+        "1"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "NRST_PIN_CAP",
+      "net": "NRST",
+      "layer": "TOP",
+      "points": [
+        [
+          39.75,
+          31.25
+        ],
+        [
+          39.75,
+          32.05
+        ],
+        [
+          39.35,
+          32.45
+        ],
+        [
+          39.35,
+          35.3
+        ],
+        [
+          39.35,
+          36.2236
+        ],
+        [
+          39.3764,
+          36.25
+        ]
+      ],
+      "purpose": "After C21 move avoids VDDA cap pad and quiet island/moat; reset capacitor ~5.8mm route engineering tradeoff",
+      "width": 0.2,
+      "from": [
+        "U1",
+        "7"
+      ],
+      "to": [
+        "C21",
+        "1"
+      ]
+    },
+    {
+      "type": "via",
+      "id": "NRST_SERVICE",
+      "net": "NRST",
+      "xy": [
+        38.7,
+        35.3
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Branch service net only after local C21; BOTTOM route outside HSE shadow, layer permission explicit",
+      "tentRequirement": "No mask aperture on TOP/BOTTOM unless explicitly outside body and qualified; verify Artwork drawMissingPadApertures and actual aperture data."
+    },
+    {
+      "type": "route",
+      "id": "NRST_SERVICE_TAP",
+      "net": "NRST",
+      "layer": "TOP",
+      "points": [
+        [
+          39.35,
+          35.3
+        ],
+        [
+          38.7,
+          35.3
+        ]
+      ],
+      "purpose": "Branch to R27/J7/J9 routed later outside reserved oscillator area",
+      "width": 0.2,
+      "from": [
+        "C21",
+        "1"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "VBAT_PIN_CAP",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          42.75,
+          31.25
+        ],
+        [
+          43.55,
+          31.25
+        ],
+        [
+          46.2016,
+          31.25
+        ],
+        [
+          46.2016,
+          32.4
+        ]
+      ],
+      "purpose": "VBAT tied V3V3 needs own100nF; inward/side escape does not cross OSC_IN",
+      "widths": [
+        0.25,
+        0.6,
+        0.6
+      ],
+      "from": [
+        "U1",
+        "1"
+      ],
+      "to": [
+        "C17",
+        "1"
+      ]
+    },
+    {
+      "type": "via",
+      "id": "VBAT_C17_APP",
+      "net": "GND",
+      "xy": [
+        48.9,
+        32.4
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Application GND outside oscillator moat, not quiet guard",
+      "tentRequirement": "No mask aperture on TOP/BOTTOM unless explicitly outside body and qualified; verify Artwork drawMissingPadApertures and actual aperture data."
+    },
+    {
+      "type": "route",
+      "id": "VBAT_C17_RETURN",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          47.7764,
+          32.4
+        ],
+        [
+          48.9,
+          32.4
+        ]
+      ],
+      "purpose": "Keep application decoupling return outside quiet island",
+      "width": 0.6,
+      "from": [
+        "C17",
+        "2"
+      ]
+    },
+    {
+      "type": "via",
+      "id": "USB_DP_MIRROR_A",
+      "net": "USB_DP",
+      "xy": [
+        39.75,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060_OR_VERIFIED_TENTED_PRIVATE_VARIANT",
+      "purpose": "Underhousing tented",
+      "mustBeTented": true
+    },
+    {
+      "type": "via",
+      "id": "USB_DP_MIRROR_B",
+      "net": "USB_DP",
+      "xy": [
+        40.75,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060_OR_VERIFIED_TENTED_PRIVATE_VARIANT",
+      "purpose": "Underhousing tented",
+      "mustBeTented": true
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_A6_TO_MIRROR",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          39.75,
+          7.355
+        ],
+        [
+          39.75,
+          5.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "",
+      "from": [
+        "J2",
+        "A6"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_B6_TO_MIRROR",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          40.75,
+          7.355
+        ],
+        [
+          40.75,
+          5.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "",
+      "from": [
+        "J2",
+        "B6"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_MIRROR_BOTTOM",
+      "net": "USB_DP",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39.75,
+          5.8
+        ],
+        [
+          40.75,
+          5.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Shortest1mm BOTTOM mirrorcrossing; avoid matching doglegs that damage reference."
+    },
+    {
+      "type": "route",
+      "id": "USB_DM_A7_MERGE",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          7.355
+        ],
+        [
+          40.25,
+          8.6
+        ],
+        [
+          39.25,
+          8.6
+        ],
+        [
+          39.25,
+          7.355
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "ShortestTOPmirrorjoin behindconnector tips; underhousing reference patch avoids extra data U slot.",
+      "from": [
+        "J2",
+        "A7"
+      ],
+      "to": [
+        "J2",
+        "B7"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_ENTRY",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          40.75,
+          7.355
+        ],
+        [
+          40.75,
+          8.6
+        ],
+        [
+          41.2,
+          9.05
+        ],
+        [
+          41.2,
+          10.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Directflowthroughprotection input",
+      "from": [
+        "J2",
+        "B6"
+      ],
+      "to": [
+        "U4",
+        "6"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DM_ENTRY",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          39.25,
+          7.355
+        ],
+        [
+          39.25,
+          8.6
+        ],
+        [
+          39.3,
+          8.65
+        ],
+        [
+          39.3,
+          10.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Directflowthroughprotection input",
+      "from": [
+        "J2",
+        "B7"
+      ],
+      "to": [
+        "U4",
+        "4"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_SHARED_DP",
+      "net": "PA12_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          41.1,
+          18.3984
+        ],
+        [
+          41.1,
+          19.85
+        ],
+        [
+          40.95,
+          20.0
+        ],
+        [
+          40.95,
+          21.6
+        ],
+        [
+          41.25,
+          21.9
+        ],
+        [
+          41.25,
+          22.75
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "PassleftofC14groundloop, .2finepitchport; preservelocalclasspairexception",
+      "from": [
+        "R5",
+        "1"
+      ],
+      "to": [
+        "U1",
+        "33"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_SHARED_DM",
+      "net": "PA11_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          39.4,
+          18.3984
+        ],
+        [
+          39.4,
+          18.95
+        ],
+        [
+          40.45,
+          20.0
+        ],
+        [
+          40.45,
+          21.6
+        ],
+        [
+          40.75,
+          21.9
+        ],
+        [
+          40.75,
+          22.75
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "NoCANtrunk; routewithDPgeometrycheck, skewnotassumed",
+      "from": [
+        "R6",
+        "1"
+      ],
+      "to": [
+        "U1",
+        "32"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DNP_STUB_DP",
+      "net": "PA12_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          41.1,
+          18.3984
+        ],
+        [
+          42.8032,
+          18.3984
+        ],
+        [
+          42.9016,
+          18.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "ExplicitDNPoffmainstub~1.8424mm",
+      "from": [
+        "R5",
+        "1"
+      ],
+      "to": [
+        "R12",
+        "1"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DNP_STUB_DM",
+      "net": "PA11_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          39.4,
+          18.3984
+        ],
+        [
+          37.9968,
+          18.3984
+        ],
+        [
+          37.8984,
+          18.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "ExplicitDNPoffmainstub~1.5424mm",
+      "from": [
+        "R6",
+        "1"
+      ],
+      "to": [
+        "R13",
+        "1"
+      ]
+    },
+    {
+      "type": "via",
+      "id": "USB_RETURN_LEFT",
+      "net": "GND",
+      "xy": [
+        38.15,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060_OR_VERIFIED_TENTED_PRIVATE_VARIANT",
+      "purpose": "ActualTOP/BOTTOM/L2/L3 applicationreturn; outside signalvia antipads",
+      "mustBeTented": true
+    },
+    {
+      "type": "via",
+      "id": "USB_RETURN_RIGHT",
+      "net": "GND",
+      "xy": [
+        41.7,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060_OR_VERIFIED_TENTED_PRIVATE_VARIANT",
+      "purpose": "ActualTOP/BOTTOM/L2/L3 applicationreturn; outside signalvia antipads",
+      "mustBeTented": true
+    },
+    {
+      "type": "route",
+      "id": "USB_U4_DP_FLOW",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          41.2,
+          10.1
+        ],
+        [
+          41.2,
+          12.7
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "U4",
+        "6"
+      ],
+      "to": [
+        "U4",
+        "1"
+      ],
+      "purpose": "ActualshortPCB copperflowthroughmatchingpads, noPIN_SHORT softwarewaiver. Packageinternalparallelconductorunknown; symmetric portwidth."
+    },
+    {
+      "type": "route",
+      "id": "USB_U4_DM_FLOW",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          39.3,
+          10.1
+        ],
+        [
+          39.3,
+          12.7
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "U4",
+        "4"
+      ],
+      "to": [
+        "U4",
+        "3"
+      ],
+      "purpose": "ActualmatchingPCBflow, currentDRC/neck/ESDreturngeometrycheck."
+    },
+    {
+      "type": "route",
+      "id": "USB2L_DP_PORT1",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          41.2,
+          12.7
+        ],
+        [
+          41.2,
+          13.905
+        ],
+        [
+          40.905,
+          14.2
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Shortnarrowportexplicitlynonuniform",
+      "from": [
+        "U4",
+        "1"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB2L_DM_PORT1",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          39.3,
+          12.7
+        ],
+        [
+          39.3,
+          13.905
+        ],
+        [
+          39.595,
+          14.2
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Symmetricnarrowport",
+      "from": [
+        "U4",
+        "3"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB2L_DP_WIDE",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          40.905,
+          14.2
+        ],
+        [
+          40.905,
+          16.6286
+        ],
+        [
+          41.1,
+          16.8236
+        ]
+      ],
+      "width": 1.15,
+      "purpose": "Onlyfreeparallelbulksegment,w1.15gap.15,h1.524; notwholepath90",
+      "to": [
+        "R5",
+        "2"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB2L_DM_WIDE",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          39.595,
+          14.2
+        ],
+        [
+          39.595,
+          16.6286
+        ],
+        [
+          39.4,
+          16.8236
+        ]
+      ],
+      "width": 1.15,
+      "purpose": "Same geometry; native neighboring copper and transitionspending",
+      "to": [
+        "R6",
+        "2"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_PULLUP_BRANCH",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          40.905,
+          14.6
+        ],
+        [
+          41.3,
+          14.6
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "USB_DP_TRUNK_NODE",
+        "14.6"
+      ],
+      "to": [
+        "R11",
+        "2"
+      ],
+      "purpose": "RequiredFS pullup shorttee; sourceotherendtoQ2 may be longer"
+    },
+    {
+      "type": "route",
+      "id": "STAR_C9_FEED",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          29.8,
+          30.95
+        ],
+        [
+          30.7,
+          31.85
+        ],
+        [
+          30.7,
+          32
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "C9.1",
+      "to": "V_HI_V3_SOURCE",
+      "purpose": "Main output source after C9, never chain external loads through MCU neck."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_V3_SOURCE",
+      "net": "V3V3",
+      "xy": [
+        30.7,
+        32
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad source bridge via"
+    },
+    {
+      "type": "route",
+      "id": "STAR_BOTTOM_FEED",
+      "net": "V3V3",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          30.7,
+          32
+        ],
+        [
+          30.7,
+          24
+        ],
+        [
+          37,
+          24
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "V_HI_V3_SOURCE",
+      "to": "V_HI_V3_STAR",
+      "purpose": "Bounded outer-layer bridge under SPI bank; TOP GND strap below restores2L short return across slit."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_V3_STAR",
+      "net": "V3V3",
+      "xy": [
+        37,
+        24
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad inside noEP LQFP body, direct feed to .6 bus not through pad24."
+    },
+    {
+      "type": "route",
+      "id": "STAR_SOUTH_BUS",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          37,
+          24
+        ],
+        [
+          43,
+          24
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V_HI_V3_STAR",
+      "to": "NODE_V3_RIGHT_SOUTH",
+      "purpose": "Inside-body bus clear of south pad inner ends by .35mm after halfwidth."
+    },
+    {
+      "type": "route",
+      "id": "STAR_RIGHT_BUS",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          43,
+          24
+        ],
+        [
+          43,
+          29.9
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "NODE_V3_RIGHT_SOUTH",
+      "to": "NODE_V3_RIGHT_NORTH",
+      "purpose": "Right inner bus leaves PC13/14/15 inward fanout atx<=42.0; do not shift to43.25 near GND47."
+    },
+    {
+      "type": "route",
+      "id": "STAR_U1_24",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          24.25
+        ],
+        [
+          37,
+          24.25
+        ],
+        [
+          37,
+          24
+        ]
+      ],
+      "widths": [
+        0.25,
+        0.6
+      ],
+      "from": "U1.24",
+      "to": "V_HI_V3_STAR",
+      "purpose": "1.25mm inward escape, preserve existing outward C13 loop."
+    },
+    {
+      "type": "route",
+      "id": "STAR_U1_36",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          42.75,
+          22.75
+        ],
+        [
+          42.75,
+          24
+        ]
+      ],
+      "widths": [
+        0.25
+      ],
+      "from": "U1.36",
+      "to": "STAR_SOUTH_BUS",
+      "purpose": "1.25mm inward escape, preserve C14 and USB outward corridor."
+    },
+    {
+      "type": "route",
+      "id": "STAR_U1_48",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          29.75
+        ],
+        [
+          43,
+          29.75
+        ]
+      ],
+      "widths": [
+        0.25
+      ],
+      "from": "U1.48",
+      "to": "STAR_RIGHT_BUS",
+      "purpose": "1.25mm inward escape, preserve C15/C16 local branches."
+    },
+    {
+      "type": "route",
+      "id": "STAR_U1_VBAT",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          42.75,
+          31.25
+        ],
+        [
+          42.75,
+          30.15
+        ],
+        [
+          43,
+          29.9
+        ]
+      ],
+      "widths": [
+        0.25,
+        0.25
+      ],
+      "from": "U1.1",
+      "to": "STAR_RIGHT_BUS",
+      "purpose": "1.453553mm total neck incl diagonal, VBAT low load, preserve external C17 and HSE notch."
+    },
+    {
+      "type": "route",
+      "id": "STAR_2L_RETURN_STRAP",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          32.45,
+          25.2748
+        ],
+        [
+          31.2,
+          25.2748
+        ],
+        [
+          30.7,
+          25.7748
+        ],
+        [
+          30.7,
+          29
+        ],
+        [
+          29.8,
+          29
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "G31_C13_GND_VIA",
+      "to": "C9.2",
+      "purpose": "Actual TOP ground strap across BOTTOM V3 bridge, avoids requiring2L return around entire slit; useful also4L, require plane/via graph."
+    },
+    {
+      "type": "route",
+      "id": "V3_VDDA_PRE_FILTER",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          29.8,
+          30.95
+        ],
+        [
+          28.4,
+          32.35
+        ],
+        [
+          22,
+          32.35
+        ],
+        [
+          22,
+          37
+        ],
+        [
+          29.5,
+          37
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "C9.1",
+      "to": "R26.1",
+      "purpose": "Low-current prefilter V3V3 feed detours left of J10, preserving short TOP ADC_INPUT path; no digital loads downstream of R26. Additional length belongs before filter and local C18/C19 decoupling.",
+      "length_mm": 20.529898987322333
+    },
+    {
+      "type": "route",
+      "id": "ESD_U4_RETURN",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          12.7
+        ],
+        [
+          40.25,
+          11.8
+        ],
+        [
+          40,
+          11.4
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "U4.2",
+      "to": "V_HI_ESD_A",
+      "purpose": "Shortest bodyward return avoids protected pair at y>13.6; GND supply track not through thin digitaltrace."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_ESD_A",
+      "net": "GND",
+      "xy": [
+        40,
+        11.4
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad body ground via, clear DMx39.3 and VBUSpin5."
+    },
+    {
+      "type": "route",
+      "id": "ESD_U4_SECOND_VIA",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          11.8
+        ],
+        [
+          40.5,
+          11.6
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "ESD_U4_RETURN",
+      "to": "V_HI_ESD_B",
+      "purpose": "Parallel body via retained without old40.9 data collision."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_ESD_B",
+      "net": "GND",
+      "xy": [
+        40.5,
+        11.6
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad .3drill/.6copper, pairdrill gap .2385mm; native hole rules must verify."
+    },
+    {
+      "type": "route",
+      "id": "ESD_C10_RETURN",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          42.7,
+          10.7764
+        ],
+        [
+          43.8,
+          10.7764
+        ],
+        [
+          43.8,
+          11.5764
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "C10.2",
+      "to": "V_HI_C10_B",
+      "purpose": "ESD VBUS decoupling capacitor local HFground, physical return joins actual commonplane."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_C10_A",
+      "net": "GND",
+      "xy": [
+        43.8,
+        10.7764
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad C10ground directly next to pad."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_C10_B",
+      "net": "GND",
+      "xy": [
+        43.8,
+        11.5764
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Secondcapgroundvia .8pitch, not a via in solder aperture."
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC13_TOP",
+      "net": "GPIO_PC13",
+      "layer": "TOP",
+      "points": [
+        [
+          42.25,
+          31.25
+        ],
+        [
+          42.25,
+          29.15
+        ],
+        [
+          42,
+          28.9
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "U1",
+        "2"
+      ],
+      "purpose": "Shortinsideescape; noHSEshadowcross"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_GPIO_PC13_VIA",
+      "net": "GPIO_PC13",
+      "xy": [
+        42,
+        28.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "OffpadunderLQFP; masktent/return/referencecheck"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC14_TOP",
+      "net": "GPIO_PC14",
+      "layer": "TOP",
+      "points": [
+        [
+          41.75,
+          31.25
+        ],
+        [
+          41.75,
+          29.8
+        ],
+        [
+          41,
+          29.8
+        ],
+        [
+          41,
+          27.8
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "U1",
+        "3"
+      ],
+      "purpose": "Shortinsideescape; noHSEshadowcross"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_GPIO_PC14_VIA",
+      "net": "GPIO_PC14",
+      "xy": [
+        41,
+        27.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "OffpadunderLQFP; masktent/return/referencecheck"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC15_TOP",
+      "net": "GPIO_PC15",
+      "layer": "TOP",
+      "points": [
+        [
+          41.25,
+          31.25
+        ],
+        [
+          41.25,
+          30.25
+        ],
+        [
+          40.3,
+          30.25
+        ],
+        [
+          40.3,
+          28.9
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "U1",
+        "4"
+      ],
+      "purpose": "Shortinsideescape; noHSEshadowcross"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_GPIO_PC15_VIA",
+      "net": "GPIO_PC15",
+      "xy": [
+        40.3,
+        28.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "OffpadunderLQFP; masktent/return/referencecheck"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC13_BOTTOM_START",
+      "net": "GPIO_PC13",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          42,
+          28.9
+        ],
+        [
+          42,
+          31.1
+        ],
+        [
+          35.8,
+          31.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "OnlypartialwestescapeunderMCU, completeordinaryGPIOoutsideHSEmoat;2LactualTOPreferencecoverageandgaplengthmustbechecked"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC14_BOTTOM_START",
+      "net": "GPIO_PC14",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          41,
+          27.8
+        ],
+        [
+          41,
+          28.0
+        ],
+        [
+          39.5,
+          28.0
+        ],
+        [
+          39.5,
+          28.5
+        ],
+        [
+          35,
+          28.5
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "OnlypartialwestescapeunderMCU, completeordinaryGPIOoutsideHSEmoat;2LactualTOPreferencecoverageandgaplengthmustbechecked"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC15_BOTTOM_START",
+      "net": "GPIO_PC15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.3,
+          28.9
+        ],
+        [
+          40.3,
+          30.3
+        ],
+        [
+          35.4,
+          30.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "OnlypartialwestescapeunderMCU, completeordinaryGPIOoutsideHSEmoat;2LactualTOPreferencecoverageandgaplengthmustbechecked"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_RETURN_EAST",
+      "net": "GND",
+      "xy": [
+        42,
+        27.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "NearbyapplicationGNDreturn tiesactualTOPreference to2LBOTTOM or4LL2/L3. Physicalplaneconnectivityrequired."
+    },
+    {
+      "type": "via",
+      "id": "GPIO_RETURN_WEST",
+      "net": "GND",
+      "xy": [
+        39.8,
+        27.3
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "NearbyapplicationGNDreturn tiesactualTOPreference to2LBOTTOM or4LL2/L3. Physicalplaneconnectivityrequired."
+    }
+  ],
+  "oscillatorReference": {
+    "net": "GND",
+    "islandPolygon": [
+      [
+        45.1,
+        28.5
+      ],
+      [
+        45.8,
+        28.5
+      ],
+      [
+        45.8,
+        31.25
+      ],
+      [
+        45.1,
+        31.95
+      ],
+      [
+        45.3,
+        31.95
+      ],
+      [
+        45.3,
+        33.2
+      ],
+      [
+        47.5,
+        33.2
+      ],
+      [
+        47.5,
+        39.4
+      ],
+      [
+        37.2,
+        39.4
+      ],
+      [
+        37.2,
+        36.8
+      ],
+      [
+        40.0,
+        36.8
+      ],
+      [
+        40.0,
+        32.8
+      ],
+      [
+        40.6,
+        32.8
+      ],
+      [
+        40.6,
+        31.95
+      ],
+      [
+        44.4,
+        31.95
+      ],
+      [
+        45.1,
+        31.25
+      ]
+    ],
+    "applicationGroundVoidPolygon": [
+      [
+        44.75,
+        28.15
+      ],
+      [
+        46.15,
+        28.15
+      ],
+      [
+        46.15,
+        31.4
+      ],
+      [
+        45.65,
+        31.9
+      ],
+      [
+        45.65,
+        32.85
+      ],
+      [
+        47.85,
+        32.85
+      ],
+      [
+        47.85,
+        39.75
+      ],
+      [
+        36.85,
+        39.75
+      ],
+      [
+        36.85,
+        36.45
+      ],
+      [
+        39.65,
+        36.45
+      ],
+      [
+        39.65,
+        32.45
+      ],
+      [
+        40.25,
+        32.45
+      ],
+      [
+        40.25,
+        31.6
+      ],
+      [
+        44.25,
+        31.6
+      ],
+      [
+        44.75,
+        31.1
+      ]
+    ],
+    "localLayer": {
+      "2L": "BOTTOM",
+      "4L": "L2"
+    },
+    "allOtherCopperLayers": "No application-GND metal under local HSE vias or inside moat; explicit void on any global L3/BOTTOM/TOP pour. Allow only quiet TOP routes/guard and separate case traces without connecting intersection.",
+    "singleBridgeOperation": "HSE_SINGLE_ANCHOR",
+    "allThroughViaPadChecks": [
+      "HSE_LOCAL_C22",
+      "HSE_LOCAL_C23",
+      "HSE_SINGLE_ANCHOR"
+    ],
+    "negativeChallenge": "Transaction delete only HSE_SINGLE_ANCHOR via45.45,28.85: C22.2/C23.2/localshape/quietguard stay mutually connected but must not reach VSS47/globalGND/Y1case; existing C15/VSS47/global and Y1.2/.4 remain connected. Restore via/transaction, update+DRC and save/reopen. No TOP segment is newly designated mandatory anchor.",
+    "guardPort": "North x42.2..44.2 intentionally open for case return; source ports south for oscillator nets; do not bridge with same-net fills",
+    "neckProjectionException": "Main HSE shadow excludes C17 app decoupling via/right-bottom notch. The narrow GND connection neck near source VSS47 can have a short nearby/projecting VBAT feed in dense source escape; it is not an unrelated digital route corridor or a claim of zero field coupling."
+  },
+  "regions": [
+    {
+      "id": "HI_MCU_NORTH_ESCAPE",
+      "layer": "TOP",
+      "polygon": [
+        [
+          37.7,
+          29.25
+        ],
+        [
+          43.9,
+          29.25
+        ],
+        [
+          43.9,
+          32.9
+        ],
+        [
+          37.7,
+          32.9
+        ]
+      ],
+      "purpose": "Only short fine-pitch north MCU entries; narrow to actual per-net route after native feedback",
+      "bindings": [
+        {
+          "netClasses": [
+            "NC_ANALOG_SENSITIVE_S",
+            "NC_OSCILLATOR_S",
+            "NC_POWER_LV_S"
+          ],
+          "spacingCopyFrom": "their own source CSet",
+          "change": {
+            "smdpin_line": 0.2,
+            "line_line": 0.2
+          },
+          "preserve": "All other rules and global.30 unchanged; class-pair exceptions separately readback where applicable"
+        },
+        {
+          "netClasses": [
+            "VDDA",
+            "GND",
+            "V3V3"
+          ],
+          "physicalChange": {
+            "necklength_max": 1.4
+          },
+          "preserve": "Other P_POWER/P_GND fields; exact net/class scope, no global width waiver"
+        }
+      ]
+    }
+  ],
+  "reservedAreas": [
+    {
+      "id": "HSE_QUIET_SHADOW",
+      "polygon": [
+        [
+          44.75,
+          28.15
+        ],
+        [
+          46.15,
+          28.15
+        ],
+        [
+          46.15,
+          31.4
+        ],
+        [
+          45.65,
+          31.9
+        ],
+        [
+          45.65,
+          32.85
+        ],
+        [
+          47.85,
+          32.85
+        ],
+        [
+          47.85,
+          39.75
+        ],
+        [
+          36.85,
+          39.75
+        ],
+        [
+          36.85,
+          36.45
+        ],
+        [
+          39.65,
+          36.45
+        ],
+        [
+          39.65,
+          32.45
+        ],
+        [
+          40.25,
+          32.45
+        ],
+        [
+          40.25,
+          31.6
+        ],
+        [
+          44.25,
+          31.6
+        ],
+        [
+          44.75,
+          31.1
+        ]
+      ],
+      "allowedNets": [
+        "OSC_IN",
+        "OSC_OUT",
+        "XTAL_OUT",
+        "GND"
+      ],
+      "forbidden": "PC13/14/15, SPI/I2C/USB/clock/test branches and unrelated power/returns on all layers; case GND only defined separate TOP path; quiet/app GND not interchangeable",
+      "sourceEscapeException": "Only short VBAT/VDD source-area feed near narrow grounding neck as separately checked; no PC13/14/15 or arbitrary fast signal crossing."
+    },
+    {
+      "id": "ADC_TOP_CORRIDOR",
+      "polygon": [
+        [
+          26,
+          31.8
+        ],
+        [
+          39,
+          31.8
+        ],
+        [
+          39,
+          39.8
+        ],
+        [
+          26,
+          39.8
+        ]
+      ],
+      "allowedNets": [
+        "ADC_IN",
+        "ADC0",
+        "VDDA",
+        "GND",
+        "NRST"
+      ],
+      "purpose": "Not blanket route keepout, prioritize measured paths and return over arbitrary ordinary digital cut"
+    }
+  ],
+  "gpioNorthEscape": {
+    "pins": [
+      [
+        "U1",
+        "2"
+      ],
+      [
+        "U1",
+        "3"
+      ],
+      [
+        "U1",
+        "4"
+      ]
+    ],
+    "strategy": "Inward TOP axial toward MCU body to offpad throughvia, then BOTTOM under MCU and south/west of HSE moat, return TOP outside shadow. Explicit BOTTOM permission on those nets; GND return near transitions; 2L add measured TOP reference copper and avoid slicing appground. Native must allocate nonoverlapping via sites (not all same y at .5 pitch) after current obstacles; do not just send north across OSC_IN.",
+    "candidateTOPFanouts": [
+      {
+        "ref": "U1",
+        "pin": "2",
+        "net": "GPIO_PC13",
+        "points": [
+          [
+            42.25,
+            31.25
+          ],
+          [
+            42.25,
+            29.85
+          ],
+          [
+            42,
+            29.6
+          ]
+        ],
+        "width": 0.2,
+        "via": [
+          42,
+          29.6
+        ]
+      },
+      {
+        "ref": "U1",
+        "pin": "3",
+        "net": "GPIO_PC14",
+        "points": [
+          [
+            41.75,
+            31.25
+          ],
+          [
+            41.75,
+            30.3
+          ],
+          [
+            40.9,
+            29.45
+          ],
+          [
+            40.9,
+            29.3
+          ]
+        ],
+        "width": 0.2,
+        "via": [
+          40.9,
+          29.3
+        ]
+      },
+      {
+        "ref": "U1",
+        "pin": "4",
+        "net": "GPIO_PC15",
+        "points": [
+          [
+            41.25,
+            31.25
+          ],
+          [
+            41.25,
+            30.85
+          ],
+          [
+            39.9,
+            29.5
+          ],
+          [
+            39.9,
+            28.6
+          ]
+        ],
+        "width": 0.2,
+        "via": [
+          39.9,
+          28.6
+        ]
+      }
+    ],
+    "candidateBOTTOMFirstEscape": [
+      {
+        "net": "GPIO_PC13",
+        "points": [
+          [
+            42,
+            29.6
+          ],
+          [
+            42,
+            30.2
+          ],
+          [
+            41.1,
+            31.1
+          ],
+          [
+            36.4,
+            31.1
+          ]
+        ]
+      },
+      {
+        "net": "GPIO_PC14",
+        "points": [
+          [
+            40.9,
+            29.3
+          ],
+          [
+            40.9,
+            30.3
+          ],
+          [
+            36,
+            30.3
+          ]
+        ]
+      },
+      {
+        "net": "GPIO_PC15",
+        "points": [
+          [
+            39.9,
+            28.6
+          ],
+          [
+            39.8,
+            28.7
+          ],
+          [
+            35.6,
+            28.7
+          ]
+        ]
+      }
+    ],
+    "acceptance": "These are candidate staggered fanouts only; native actual GND vias/plane/return/crossings further west must be read back. BOTTOM TOP-reference copper essential2L;4L L3 actual plane and nearby return transition vias required. Do not claim whole net complete from these partial escape points."
+  },
+  "acceptance": [
+    "Native all lines/pads/vias/nets readback and independent exact geometry",
+    "Current dynamic fill/DRC and explicit applicable CSet fields, no blanket waiver",
+    "Physical shape polygons and moat with all throughvia layer pads verified",
+    "Only unique intentional oscillator-to-application GND anchor; reversible isolation challenge",
+    "HSE startup/CL/drive/effective capacitor tolerance and real assembly remain open"
+  ],
+  "supersedes": "v1 anchor hits new powerstar; v2 anchor hits retained C15 VDD route. Both rejected before execution. v3 root proposed via at existing VSS47 C15 GND bend, no extra TOP crossing.",
+  "geometryPrecheckChanges": "Full-copper v3 screen found four NRST/VDDA/GND overlaps plus ADC-vsR23.1 spacing. Flipped moved C21 ends, rerouted NRST east of VDDA, moved service/GND vias and shifted R23left to resolve. Exact screen saved separately. v5 moves C24 appGNDvia to34.4,35.7 and XTAL_OUT vertical to40.3, preserving global.3 outside north escape region rather than extending exceptions."
+}

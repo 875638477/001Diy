@@ -1,0 +1,140 @@
+{
+  "status": "ACTUAL_COPPER_AND_L2_L3_GND_SELECTION_NEEDS_NATIVE",
+  "signals": [
+    {
+      "signal": "HI_4L_SPI_SCK_1_V1",
+      "xy": [
+        31.0,
+        29.95
+      ],
+      "ground": "SPI4_RETURN_1",
+      "groundXY": [
+        30.95,
+        29.0
+      ],
+      "distance_mm": 0.9513148795220218,
+      "newVia": true,
+      "minimumExtraConservativeClearance_mm": 0.09999999999999859
+    },
+    {
+      "signal": "HI_4L_SPI_MISO_1_V1",
+      "xy": [
+        31.65,
+        28.2
+      ],
+      "ground": "SPI4_RETURN_1",
+      "groundXY": [
+        30.95,
+        29.0
+      ],
+      "distance_mm": 1.063014581273465,
+      "newVia": false
+    },
+    {
+      "signal": "HI_4L_SPI_MISO_1_V2",
+      "xy": [
+        15.7,
+        29.3
+      ],
+      "ground": "SPI4_RETURN_2",
+      "groundXY": [
+        15.1,
+        28.55
+      ],
+      "distance_mm": 0.9604686356149271,
+      "newVia": true,
+      "minimumExtraConservativeClearance_mm": 0.01263388113857905
+    },
+    {
+      "signal": "HI_4L_SPI_MOSI_1_V1",
+      "xy": [
+        32.7,
+        26.25
+      ],
+      "ground": "BASE_GND10",
+      "groundXY": [
+        32.45,
+        25.2748
+      ],
+      "distance_mm": 1.0067348409586319,
+      "newVia": false
+    },
+    {
+      "signal": "HI_4L_SPI_MOSI_1_V2",
+      "xy": [
+        12.65,
+        28.65
+      ],
+      "ground": "SPI4_RETURN_3",
+      "groundXY": [
+        12.2,
+        27.8
+      ],
+      "distance_mm": 0.9617692030835658,
+      "newVia": true,
+      "minimumExtraConservativeClearance_mm": 0.1499999999999957
+    },
+    {
+      "signal": "HI_4L_SPI_NSS_1_V1",
+      "xy": [
+        29.8,
+        32.3
+      ],
+      "ground": "SPI4_RETURN_4",
+      "groundXY": [
+        29.2,
+        33.05
+      ],
+      "distance_mm": 0.9604686356149282,
+      "newVia": true,
+      "minimumExtraConservativeClearance_mm": 0.16057948385060689
+    }
+  ],
+  "newGroundVias": [
+    {
+      "type": "via",
+      "id": "SPI4_RETURN_1",
+      "net": "GND",
+      "xy": [
+        30.95,
+        29.0
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Chosen by actual all-layer copper/pad clearance and native existing L2/L3 GND annulus coverage, not guessed coordinate"
+    },
+    {
+      "type": "via",
+      "id": "SPI4_RETURN_2",
+      "net": "GND",
+      "xy": [
+        15.1,
+        28.55
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Chosen by actual all-layer copper/pad clearance and native existing L2/L3 GND annulus coverage, not guessed coordinate"
+    },
+    {
+      "type": "via",
+      "id": "SPI4_RETURN_3",
+      "net": "GND",
+      "xy": [
+        12.2,
+        27.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Chosen by actual all-layer copper/pad clearance and native existing L2/L3 GND annulus coverage, not guessed coordinate"
+    },
+    {
+      "type": "via",
+      "id": "SPI4_RETURN_4",
+      "net": "GND",
+      "xy": [
+        29.2,
+        33.05
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Chosen by actual all-layer copper/pad clearance and native existing L2/L3 GND annulus coverage, not guessed coordinate"
+    }
+  ],
+  "source": "postcritical_4L_b010"
+}

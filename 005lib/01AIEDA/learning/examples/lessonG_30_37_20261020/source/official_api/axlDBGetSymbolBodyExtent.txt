@@ -1,0 +1,29 @@
+
+  NAME
+         axlDBGetSymbolBodyExtent - get symbol body extents
+  SYNOPSIS
+         axlDBGetSymbolBodyExtent(
+                 o_dbid
+         )
+         -> bBox/nil
+  FUNCTION
+         This returns the body extent of a symbol. Unlike the bBox associated with
+         a dbid a body extents is either
+           1) the extent box created by the union of all shapes on
+                 layers PACKAGE_GEOMETRY (PLACE_BOUND_TOP, PLACE_BOUND_BOTTOM,
+                 DFA_BOUND_TOP, DFA_BOUND_BOTTOM) and EMBEDDED_GEOMETRY (PLACE_BOUND
+                 and DFA_BOUND)
+           3) the symbol bbox -- union of all items in sybmol
+ 
+        The symbol instance extent box is based upon the design origin while the symdef
+        box is based upon the symbo origin.
+  NEEDS
+         o_dbid - a symbol instance or definition
+  RETURNS
+         bBox - body box of symbol (minX:minY maxX:maxY)
+         nil - dbid is not a symbol instance (symbol) or definution (symdef)
+  SEE ALSO
+         axlDBAltOrigin 
+  EXAMPLES
+ 
+

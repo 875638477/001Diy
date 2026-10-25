@@ -1,0 +1,130 @@
+{
+  "status": "PARTIAL_CANDIDATE_REQUIRES_ENGINEERING_CORRECTION",
+  "batchId": "GPIO6_2L_target63",
+  "variant": "2L",
+  "sourceExpectedSHA256": "4AC553CF77DA21A3BA7E2B4E9142DDE1707571B7E4A80B17FCA975C46876D6A5",
+  "sourceNativeLog": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_clearance_2L_b016_DRC_PENDING_stored",
+  "operations": [],
+  "proofs": [],
+  "candidateReviews": [
+    {
+      "net": "GPIO_PB15",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 5.2
+    },
+    {
+      "net": "GPIO_PB14",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 11.8
+    },
+    {
+      "net": "GPIO_PB13",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 11.67
+    },
+    {
+      "net": "GPIO_PB12",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 11.72
+    },
+    {
+      "net": "GPIO_PB10",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 11.81
+    },
+    {
+      "net": "GPIO_PB1",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 11.57
+    }
+  ],
+  "failures": [
+    {
+      "net": "GPIO_PB15",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB15_ENGINEERED_ANCHOR",
+          "to": "GPIO_PB15_TARGET63",
+          "reason": "No legal target grid cell under the supplied rule/policy"
+        }
+      ]
+    },
+    {
+      "net": "GPIO_PB14",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB14_ENGINEERED_ANCHOR",
+          "to": "GPIO_PB14_TARGET63",
+          "reason": "No geometric candidate after 700001 expanded cells; reached=[{'layer': 'TOP', 'count': 97616, 'bbox': [12.8, 7.15, 63.550000000000004, 44.050000000000004], 'nearestTargetMM': 10.2637712367336}, {'layer': 'BOTTOM', 'count': 167777, 'bbox': [12.75, 7.15, 63.75, 42.85], 'nearestTargetMM': 12.091525958289958}]"
+        }
+      ]
+    },
+    {
+      "net": "GPIO_PB13",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB13_ENGINEERED_ANCHOR",
+          "to": "GPIO_PB13_TARGET63",
+          "reason": "No geometric candidate after 700001 expanded cells; reached=[{'layer': 'TOP', 'count': 91064, 'bbox': [12.8, 7.15, 57.45, 44.1], 'nearestTargetMM': 9.732676918504998}, {'layer': 'BOTTOM', 'count': 145000, 'bbox': [12.75, 7.15, 58.95, 42.85], 'nearestTargetMM': 11.667261889578032}]"
+        }
+      ]
+    },
+    {
+      "net": "GPIO_PB12",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB12_ENGINEERED_ANCHOR",
+          "to": "GPIO_PB12_TARGET63",
+          "reason": "No geometric candidate after 700001 expanded cells; reached=[{'layer': 'TOP', 'count': 92758, 'bbox': [12.8, 7.15, 57.45, 44.1], 'nearestTargetMM': 9.210048859805246}, {'layer': 'BOTTOM', 'count': 149572, 'bbox': [12.75, 7.15, 60.25, 42.85], 'nearestTargetMM': 11.2429978208661}]"
+        }
+      ]
+    },
+    {
+      "net": "GPIO_PB10",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB10_ENGINEERED_ANCHOR",
+          "to": "GPIO_PB10_TARGET63",
+          "reason": "No geometric candidate after 700001 expanded cells; reached=[{'layer': 'TOP', 'count': 95034, 'bbox': [12.8, 7.15, 63.150000000000006, 44.1], 'nearestTargetMM': 8.196645655388549}, {'layer': 'BOTTOM', 'count': 165061, 'bbox': [12.75, 7.15, 63.300000000000004, 42.85], 'nearestTargetMM': 10.394469683442246}]"
+        }
+      ]
+    },
+    {
+      "net": "GPIO_PB1",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB1_ENGINEERED_ANCHOR",
+          "to": "GPIO_PB1_TARGET63",
+          "reason": "No geometric candidate after 700001 expanded cells; reached=[{'layer': 'TOP', 'count': 93436, 'bbox': [12.8, 7.15, 61.550000000000004, 44.1], 'nearestTargetMM': 7.7100583655378365}, {'layer': 'BOTTOM', 'count': 161381, 'bbox': [12.75, 7.15, 62.650000000000006, 42.85], 'nearestTargetMM': 9.970205614730316}]"
+        }
+      ]
+    }
+  ],
+  "scope": "Only specified ordinary nets; explicit critical routes excluded. Paths obey supplied geometry/clearance/keepout policies but this is not native DRC approval, automatic product routing, reference certification or manufacturing release.",
+  "pending": [
+    "Native batch create/update/DRC/fresh reopen",
+    "Actual reference continuity along both layers",
+    "Signal transition nearby GND return connections",
+    "Whole-board plane island/neck review",
+    "Physical/electrical class exceptions at actual positions"
+  ],
+  "seconds": 63.77
+}

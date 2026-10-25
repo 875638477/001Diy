@@ -1,0 +1,64 @@
+{
+  "status": "DEFINITE_COPPER_OVERLAPS",
+  "checkpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\padentry_2L_b019_DRC_PENDING",
+  "plans": [
+    "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power/USB_COMMON_RETURN_STITCH_2L_02.json"
+  ],
+  "placementChanges": [],
+  "deletedSegments": [],
+  "operations": 3,
+  "piecesChecked": 5,
+  "movedPadPairsChecked": 0,
+  "placeBoundOverlapPairs": [],
+  "definiteOverlapPieces": 1,
+  "spacingWarningPieces": 2,
+  "issues": [
+    {
+      "operation": "USB_RETURN_SLOT_NORTH",
+      "net": "GND",
+      "type": "via",
+      "segment": null,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "CAN_TXD",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            44.3764,
+            18.2,
+            47.800000000000004,
+            18.400000000000002
+          ],
+          "actualCopperGapMM": 0.0,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "USB_RETURN_SLOT_TOP_NORMAL",
+      "net": "GND",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "CAN_TXD",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            44.3764,
+            18.2,
+            47.800000000000004,
+            18.400000000000002
+          ],
+          "actualCopperGapMM": 0.0,
+          "baseRuleMM": 0.3,
+          "actualOverlap": true
+        }
+      ]
+    }
+  ],
+  "scope": "Conservative native pad BBOX plus actual cline-width copper; bbox rounded/circle corners may overestimate. New candidate rules/regions not fully resolved, so spacing warnings are BASE-rule diagnostics, not native errors. No-overlap does not certify clearance, conductive graph, neck counts, dynamic/reference copper, thermal/EMI or manufacturing."
+}

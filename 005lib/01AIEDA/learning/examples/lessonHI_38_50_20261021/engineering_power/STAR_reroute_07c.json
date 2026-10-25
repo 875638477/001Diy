@@ -1,0 +1,197 @@
+{
+  "status": "REROUTE_CANDIDATE_NEEDS_FULL_GROUP_SCREEN_NATIVE",
+  "operations": [
+    {
+      "type": "deleteSegment",
+      "id": "RIPUP_STAR_OLD_1",
+      "net": "V3V3",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          30.7,
+          32
+        ],
+        [
+          30.7,
+          24
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Delete uniqueactualsegment bynet/layer/exactstartEnd(orreverse)/width only; neverdeleteentiremergedpath. Preserveallothercopper."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "RIPUP_STAR_OLD_2",
+      "net": "V3V3",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          30.7,
+          24
+        ],
+        [
+          37,
+          24
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Delete uniqueactualsegment bynet/layer/exactstartEnd(orreverse)/width only; neverdeleteentiremergedpath. Preserveallothercopper."
+    },
+    {
+      "type": "route",
+      "id": "STAR_BOTTOM_FEED_DIAGONAL",
+      "net": "V3V3",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          30.7,
+          32
+        ],
+        [
+          37,
+          25.7
+        ],
+        [
+          37,
+          24
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "V_HI_V3_SOURCE",
+      "to": "V_HI_V3_STAR",
+      "purpose": "H45realreroute: oldverticalx30.7 blockedSPIwestheaderescape; diagonal opensx31.65/y27.9 corridor without longMOSI detour."
+    },
+    {
+      "type": "route",
+      "id": "STAR_PERIPH_TAP_TOP",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          37,
+          24
+        ],
+        [
+          33.3,
+          24
+        ],
+        [
+          33.3,
+          22.5
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "V_HI_V3_STAR",
+      "to": "V3_PERIPH_SOURCE_TOP",
+      "purpose": "Peripheralmain .6C9takeofffromstarvia, notMCUpadneck. SameTOP eliminatesproposedsecondvia33.3,22.5 andBOTTOMhorizontalbranch. ActualGND23padgap.30/oldGNDlinegap.325."
+    },
+    {
+      "type": "route",
+      "id": "STAR_DIAG_GROUND_RETURN",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          24.75
+        ],
+        [
+          36.48,
+          24.75
+        ],
+        [
+          36.952,
+          25.222
+        ],
+        [
+          38,
+          25.27
+        ]
+      ],
+      "widths": [
+        0.25,
+        0.25,
+        0.6
+      ],
+      "from": "U1.23",
+      "to": "V_HI_STAR_GND_EAST",
+      "purpose": "Newneck1.397508<=existingG31max1.4; normal.6startswithGPIO22padgap.302, viaunchanged. Avoidold1.465391neck overlappingoriginal1.4region."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_STAR_GND_EAST",
+      "net": "GND",
+      "xy": [
+        38,
+        25.27
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "EastofnewBOTTOMstarvertical, gap.40;TOP .6normalreturn gap.42 toexistingVDD24 .6tip, .35 toGPIO22pad."
+    }
+  ],
+  "rules": [
+    {
+      "id": "HI_STAR_RETURN_GND",
+      "layer": "TOP",
+      "polygon": [
+        [
+          35.15,
+          24.45
+        ],
+        [
+          38.4,
+          24.45
+        ],
+        [
+          38.4,
+          25.7
+        ],
+        [
+          35.15,
+          25.7
+        ]
+      ],
+      "physicalCopy": "actualbaseGND.6/.25/maxneck1CSet, withallfieldsandviapermissionspreserved",
+      "physicalOnlyDelta": {
+        "necklength_max_mm": 1.4
+      },
+      "appliesTo": "GNDonly:4LG31_GND_P,2LHI2L_GROUND_P",
+      "actualNeck_mm": 1.3975088014401007,
+      "spacing": "No newspacingcopy. ExistingHI_U1_INNER_LEFT POWER/GROUND spacing.2 alreadycoversnearestpin22corner; outside normal.3 satisfies."
+    }
+  ],
+  "placementChanges": [],
+  "prerequisites": [
+    "StartfromstableMCU6checkpoint, preserveUSB/ESDintendedroutes andallG31localdecaps.",
+    "Exactoldsegmentmatchmustbeunique; logdeleteddbid/net/layer/startEnd/width andparentremainingsegments; ifnotuniquestopbatch.",
+    "UseV3_peripheral_distribution_06b, not06 oldBOTTOMtap/via.",
+    "NewGNDneck1.397508 requires GND-only tinyTOPregionmax1.4; allglobalvalues/POWER neck budgets and allspacingfieldsunchanged. Ifnative findsotheractualDRC, stopnotblindrelax."
+  ],
+  "returnedGroundIntent": "2Lnewdiagonalreferencevoid differsfromoldverticalslot. RetainedC13-C9TOPgroundbridge remainsdirectlocalground; addedVSS23->eastviaTOPbridge physicallycrossesnewverticalx37slot. Actualplaneconnectedcomponents/width/detour andGNDnode proofsneedrecheckafterfill.",
+  "affectedHistoricalClaims": [
+    "Old03creview remainsvalidforitsfrozencheckpoint only; not proofnewreroute.",
+    "Deleteoldverticalandhorizontalratherthanaddingparallelpowerloop. Allirrelevantcopperandnetlistunchanged."
+  ],
+  "criticalLengths_mm": {
+    "newDiagonal": 8.909545442950499,
+    "newVertical": 1.7,
+    "newGNDNeck": 1.3975088014401007
+  },
+  "revision": "07c nativeb009 proved1.4oldregionwins atoverlap; geometryshortenedtoneck1.397508, newregion1.4 matchesold, noexistingor globalrulechange.",
+  "rejectedPrior": [
+    {
+      "file": "STAR_reroute_07.json",
+      "reason": "OnlynewGNDbridge draftfailed: pin22AABB andretainedVDD24tip. Deletedpowersegments/newdiagonal/TOPtap themselves clear."
+    },
+    {
+      "file": "STAR_reroute_07b.json",
+      "reason": "NativeoverlappingG31max1.4 actualnewneck1.4654, 1DRC. Do not raiseoldrule;07c flares earlier by.048/.048."
+    }
+  ]
+}

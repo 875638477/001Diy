@@ -1,0 +1,3 @@
+from pathlib import Path
+import hashlib,json
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');dst=R/'source/api_b016';D=Path(r'C:\Program0\Cadence\SPB172\share\pcb\examples\skill\DOC\FUNCS');e=[{'source':str(D/p.name),'copy':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest().upper(),'scope':'Official17.2 local API actually read/used during b016 native construction/review.'} for p in sorted(dst.glob('*.txt'))];(dst/'manifest.json').write_text(json.dumps(e,indent=2),encoding='utf8')

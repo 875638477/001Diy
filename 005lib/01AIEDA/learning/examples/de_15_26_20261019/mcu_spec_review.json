@@ -1,0 +1,81 @@
+{
+  "date_client": "2026-10-19 Asia/Shanghai",
+  "scope": "MCUsource/specconsistencyreview; notnativeERC orhardwareacceptance",
+  "pass": true,
+  "count": 11,
+  "checks": [
+    {
+      "check": "48 unique physical pins",
+      "pass": true,
+      "detail": "unique integers1..48, noEP49"
+    },
+    {
+      "check": "power numbers match visually inspected DS5319 Figure8",
+      "pass": true,
+      "detail": "sourceDS5319 PDF26/36"
+    },
+    {
+      "check": "no invented external regulator or reference pins",
+      "pass": true,
+      "detail": "LQFP48 VREFinternallyVDDA/VSSA; noexposedVCAP"
+    },
+    {
+      "check": "digital decoupling one per VDD pair",
+      "pass": true,
+      "detail": "actual3pairs notgeneric5pairs"
+    },
+    {
+      "check": "bulk explicitly on VDD3",
+      "pass": true,
+      "detail": "DS5319 Figure14 caution"
+    },
+    {
+      "check": "USB and CAN selection exclusive",
+      "pass": true,
+      "detail": "physicalpinconflict+shared512BSRAM; noPB8/PB9remapselection"
+    },
+    {
+      "check": "SWD separate from normal interfaces",
+      "pass": true,
+      "detail": "DS5319 PDF26/table5"
+    },
+    {
+      "check": "crystal load and small-signal startup calculation",
+      "pass": true,
+      "detail": {
+        "load_pF": 18.0,
+        "gmcrit_mA_per_V": 1.2633093633394379,
+        "gain_margin": 19.789293680144095,
+        "scope": "calculationonly; drive/startup/frequencytestopen"
+      }
+    },
+    {
+      "check": "crystal top-view terminals and dimensions",
+      "pass": true,
+      "detail": "AbraconABM3B PDF3 TOPVIEW visuallychecked; bottomviewnotcopied"
+    },
+    {
+      "check": "ADC acquisition and slow external RC separately checked",
+      "pass": true,
+      "detail": {
+        "internal_model_required_us": 0.2328974526681416,
+        "selected_sample_us": 5.958333333333334,
+        "external_RC_step_ms": 1.9408121055678467,
+        "period_ms": 10.0,
+        "anti_alias_claim": false
+      }
+    },
+    {
+      "check": "datasheet copy identical to B9 official archive",
+      "pass": true,
+      "detail": {
+        "original": "examples\\lesson09_qfn_qfp_20261018\\source\\stm32f103c8_official.pdf",
+        "copy": "sources\\de_15_26_20261019\\DS5319.pdf",
+        "sha256": "1e54ce18e6c34c5b4a78986f26e245e143748c721009fc9af5953795c30686bc"
+      }
+    }
+  ],
+  "data_sha256": "ca2b115bb33297cf9d88edb7486bc0ad33817b5dcca0d7032a9036e80dcc0c7d",
+  "native_CAD": "recordedbyrootseparately",
+  "hardware_tests": "notperformed"
+}

@@ -1,0 +1,107 @@
+{
+  "root": "D:/001DIY/005lib/01AIEDA",
+  "edits": [
+    {
+      "file": "EDA.md",
+      "replace": [
+        [
+          "第 1—4 课完成各自实操范围；本轮完成 QMI8610 真实封装（第 8 课）及第 5 课部分 PSM 实例变换验收，下一步继续第 5 课剩余内容。",
+          "第 1—5 课已完成各自声明范围；第7课基础孔/层叠和第8课QMI8610封装CAD实操完成；第6课原生精确操作/回退子项通过，界面部分待续。下一步进入第9课，保留第6/7课尚未验收项。"
+        ],
+        [
+          "### 分阶段计划与验收",
+          "### PCB 层名固定规范（用户指定，2026-10-18）\n\n2层 **TOP-BOTTOM**；4层 **TOP-L2-L3-BOTTOM**；6层 **TOP-L2-L3-L4-L5-BOTTOM**；更多层依此连续延伸。层功能另行记录，保持现有快捷方式可用。01env/drill*.txt为对应光绘模板，先按实际Cross Section核对物理层序，再核光绘映射。长期规范见 [pcb_layer_naming.md](learning/notes/pcb_layer_naming.md)；drill12.txt现有多出L12的差异已记录，未改模板。\n\n### 分阶段计划与验收"
+        ],
+        [
+          "Allegro 已实读器件/封装/引脚/网络、位置/方向、层叠及代表焊盘几何；菜单与 Capture Tcl 待验证",
+          "Allegro 已实读设计数据，完成实例变换、过滤/可见性、网格/事务回退和精度实测；界面菜单与Capture内部待验证"
+        ],
+        [
+          "已创建练习库和 QMI8610 真实 .pad/.dra/.psm，并完成公共PSM实例引脚变换检查；Capture 符号及完整实例文字/高度检查待做",
+          "已完成QMI8610库及PSM实例pin/文字/高度传播验收，PTH/带铜环NPTH/slot及四层映射；Capture符号、纯无铜NPTH和制造输出专项待做"
+        ],
+        [
+          "1. QMI8610 PCB 封装及公共库交付已完成，见第 19 节；PSM 载入/旋转/镜像引脚已核对。继续第 5 课的移动/编辑、文字与高度传播验收，再按课程学习 Capture。",
+          "1. 第5课及第7课基础实操完成，第6课原生子项通过，见第20节。下一步第9课QFP/QFN与裸露焊盘；同时保留第6课界面操作、第7课纯无铜NPTH/实际除铜及负片flash验收项。"
+        ]
+      ],
+      "append": "\n## 20. 第 5—7 课续学与实操验收（2026-10-18）\n\n用户授权继续下一步或两三课程，并要求完整记录、确认真正学过。本轮完成第5课声明范围、第7课基础孔/层叠声明范围，以及第6课原生接口子项；界面和未验收工程项明确保留，不把读资料或试过一次当作掌握。\n\n| 课程 | 本轮已实操并验收 | 状态及边界 |\n| --- | --- | --- |\n| 5 PCB实例变换 | 公共PSM载入；真实move/rotate/mirror；48pins×6层、铜多边形、9文字和3PB高度；保存重开；独立复现实验 | 本课声明范围完成。独立验证13,088项通过。初次返回类型包装错误与Qt退出ASSERT保留；新的repeat创建/重开均exit0、12份TSV一致、ASSERT未复现，原因未定位 |\n| 6 精确操作与回退 | 可见性、过滤框选、网格显式恢复；事务Start/Mark/Oops/Rollback/Commit；9个小坐标量化；0.101mm线bbox/vertices；提交后重开 | 原生子项通过，整课部分完成。桌面仍native pipe缺失；交互菜单/视图/撤销待做；半DBU差异已在新mm/3板复现，旧mil/0根因仍未证明 |\n| 7 孔与层叠 | PTH、带铜环NPTH、镀铜slot；0°/90°6pins；package保存编译重开；TOP-L2-L3-BOTTOM四层映射重开；默认文字/高度重开 | 基础几何/层叠范围完成，650项几何检查通过。纯无铜NPTH无人值守干净导入、真实dynamicshape避铜、负片thermal flash和制造输出仍未验收 |\n\n完整学习笔记：\n- [第5课：实例移动/旋转/镜像](learning/notes/lesson05_instances_20261018.md)\n- [第6课：精确坐标/过滤/网格/事务](learning/notes/lesson06_operations_20261018.md)\n- [第7课：PTH/NPTH/槽孔/层叠](learning/notes/lesson07_padstacks_20261018.md)\n\n每课均保留源码、SCR入口、练习原生文件、原始失败尝试、stdout/stderr/journal、启动参数/进程结束、只读前后哈希与JSON外部验收。产物分别在learning/examples/lesson05_instances、lesson06_operations、lesson07_padstacks；本轮统一验收索引见learning/logs/lessons05_07_result_20261018.json。\n\n第7课警告已实际学习并保留：\n1. NULL机械孔先定义ANTI却无THERMAL，触发三层配对警告。\n2. 改为NULL+KEEPOUT后，因无有效pad支撑Keepout被删除，并提示无默认内部pad；这是实际定义失效，不能当作避铜通过。\n3. 官方允许的会被钻掉的小spot pad仍触发“drill exceeds pad”尺寸警告，是用途可解释但批处理有警告的案例，未擅自关闭校验。\n4. 最终另建有铜环的NON_PLATED孔教学样例，正常导入并读回；它不是对纯无铜孔的伪修复。孔壁镀铜与板面铜环、跨层连接是不同概念。\n5. 圆孔实测用drillDiameter，drillSizeWidth/Height返回0；槽孔用Width/Height核X/Y，不能用单一diameter概括槽。详细出处与证据见第7课笔记。\n\n公共QMI8610库及用户实际硬件工程未修改；隔离实验脚本不改变全局HOME/快捷方式。成功的原生操作不表示桌面连接已恢复。\n\n## 21. 用户固定PCB层名和光绘模板规则（2026-10-18）\n\n用户明确要求：2层TOP-BOTTOM；4层TOP-L2-L3-BOTTOM；6层TOP-L2-L3-L4-L5-BOTTOM；更多层按TOP、L2至L(N−1)、BOTTOM延伸。今后所有PCB建板及设计遵守大写准确名称和物理次序，层功能另行记录，保持现有快捷方式与模板可用。\n\nD:\\001DIY\\005lib\\01env\\drill*.txt 是对应光绘层信息/脚本。本轮只读盘点13份并保存各文件原始SHA、铜Film/ETCH映射；未执行、未改模板或快捷方式。第7四层练习实际读回TOP-L2-L3-BOTTOM。\n\n发现一处现有模板差异：drill12.txt第67—72行多定义L12/ETCH/L12，整个铜Film名单为TOP,L2…L12,BOTTOM，共13项；按12层规则应到L11。此差异已单列，未擅改文件。Film的?sequence参数不能代替Cross Section物理次序。\n\n长期规范见 [pcb_layer_naming.md](learning/notes/pcb_layer_naming.md)，原始盘点见 [模板清单](learning/logs/layer_template_inventory_20261018.json)。\n\n## 22. 另一个窗口提供的extracta方法（2026-10-18）\n\n用户提供了另窗口说明截图：通过Cadence原生extracta读取BRD并导出网络/引脚、器件、线段、过孔、层及已保存检查统计。该方法有助于后续精细几何核验，本轮确认17.2安装目录有extracta.exe，并查到官方ecoms/echap.html的extracta帮助；本轮没有运行截图对应工程。\n\n截图具体统计作为另窗口报告来源保留，实际结论需关联源BRD、模板、日志。布线、回流、差分间距、PI/SI/EMI质量仍按实际铜、层叠和设计意图审查。详细方法及待实测项见 [extracta记录](learning/notes/extracta_readback_20261018.md)。\n"
+    },
+    {
+      "file": "课程索引.md",
+      "replace": [
+        [
+          "第 1—4 课已完成各自声明范围的实操/记录；本轮按用户实际任务完成第 8 课 QMI8610 封装 CAD 验收，并实测第 5 课部分 PSM 实例变换，下一步继续第 5 课剩余内容。",
+          "第1—5课完成各自声明范围；第7课基础孔/层叠和第8课QMI8610封装CAD实操完成，第6课原生操作子项通过、界面部分待续。下一步第9课，同时保留第6/7课未验收专项。"
+        ],
+        [
+          "- 已知限制：桌面控制尚未恢复，Capture 内部 Tcl 待验证；已验证的原生 CLI/SKILL 可继续用于适用操作。第 3 课几何精度疑点继续保留。",
+          "- 固定PCB层名：2层TOP-BOTTOM；4层TOP-L2-L3-BOTTOM；6层TOP-L2-L3-L4-L5-BOTTOM，更多层连续延伸。对照01env/drill*.txt，保持现有快捷方式。见[长期规范](learning/notes/pcb_layer_naming.md)。\n- 已知限制：桌面控制尚未恢复，Capture内部待验证；第6课原生精度测试复现半DBU差异，第3课旧样例原因继续保留。"
+        ],
+        [
+          "| 部分完成：公共PSM载入、0°/90°及底层引脚；移动/编辑、文字/高度待做 | [QMI8610实操](learning/notes/qmi8610_package_20261018.md) |",
+          "| 已完成本课原生实操与持久性验收 | [完整笔记](learning/notes/lesson05_instances_20261018.md) |"
+        ],
+        [
+          "| 完成一组可回退精细操作；区分显示误差与真实几何，追查第 3 课精度问题。 | 待学习 |  |",
+          "| 完成一组可回退精细操作；区分显示误差与真实几何，追查第 3 课精度问题。 | 部分完成：原生过滤/网格/事务/量化通过；界面与旧差异根因待续 | [完整笔记](learning/notes/lesson06_operations_20261018.md) |"
+        ],
+        [
+          "| 建立练习 .pad，按尺寸和各层结构读回核对。 | 待学习 |  |",
+          "| 建立练习 .pad，按尺寸和各层结构读回核对。 | 基础孔/层叠验收完成；纯无铜NPTH、实际除铜/负片flash另列待做 | [完整笔记](learning/notes/lesson07_padstacks_20261018.md) |"
+        ],
+        [
+          "铜厚、介质、总厚、层功能、参考平面、孔结构与板厂能力。",
+          "铜厚、介质、总厚、层功能、参考平面、孔结构与板厂能力；固定TOP-L2-…-BOTTOM命名与01env光绘映射。"
+        ]
+      ]
+    },
+    {
+      "file": "lib文本索引.md",
+      "replace": [],
+      "append": "\n\n## PCB层名与光绘模板（用户固定要求，2026-10-18）\n\n2层TOP-BOTTOM；4层TOP-L2-L3-BOTTOM；6层TOP-L2-L3-L4-L5-BOTTOM，更多层依此连续延伸。D:\\001DIY\\005lib\\01env\\drill*.txt为对应光绘信息/脚本，保持现有快捷方式。长期规范：learning/notes/pcb_layer_naming.md。只读盘点发现drill12.txt多定义L12，按12层规则应截至L11；差异已记录，模板未修改。本轮第5—7课练习全部在01AIEDA，没有向公共库新增教学孔。\n"
+    },
+    {
+      "file": "learning/notes/lesson05_instances_20261018.md",
+      "replace": [
+        [
+          "本文基于已保存的 create02/reopen 证据，root 最终重复运行及异常复核尚待补录。",
+          "本文基于create02/reopen及已完成的repeat独立复现实验，后者创建/重开实际exitCode均为0，原始Qt异常本次未复现，原因未定位。"
+        ],
+        [
+          "独立复核临时目录：",
+          "独立复核原始临时目录（验证器已归档到examples/lesson05_instances/scripts/validate_lesson05.py，报告已归档validation.json）："
+        ],
+        [
+          "本文，待 root 归档。",
+          "本文，已归档至learning/notes/lesson05_instances_20261018.md。"
+        ]
+      ],
+      "append": "\n## 11. 最终独立复现与本轮后续（2026-10-18）\n\n在全新repeat子目录再次执行相同原生操作，可靠subprocess启动器记录创建PID17028、重开PID19252，两者正常exitCode0，无Qt ASSERT；12份原生TSV与原实验逐字节一致。readonly前后板SHA为A39169ED7D2C9A31CCFB93F2C1122826CCE212D56AB3E16F63566B941D5352EC。repeat/validation.json保存对比证据，原始create02 ASSERT仍保留，异常原因未推断。\n\n已补 [读回预览](../examples/lesson05_instances/preview.png) 与绘图源码scripts/draw_preview.py，图中文字只显示锚点/方向。第6课实际执行的是另行审查修正后的lesson06_operations/scripts/lesson06.il，精确操作/回退子项通过，见[第6课笔记](lesson06_operations_20261018.md)；旧建议源码未执行与实际第6课结果分别记录。\n\n本课声明范围已完成。当前层叠命名统一遵守[PCB层名规范](pcb_layer_naming.md)，后续双/四/六层不能另起GND/POWER/IN1等替代层名。\n"
+    },
+    {
+      "file": "learning/notes/lesson06_operations_20261018.md",
+      "replace": [
+        [
+          "validation.json由scripts/validate_lessons05_06_and_layers.py",
+          "validation.json由learning/scripts/validate_lessons05_06_and_layers.py"
+        ]
+      ]
+    },
+    {
+      "file": "learning/notes/pcb_layer_naming.md",
+      "replace": [],
+      "append": "\n## 本次已发现的模板差异\n\n13份模板中，drill12.txt的铜Film定义为TOP,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12,BOTTOM，共13项。L12定义在第67—72行；按12层固定规范应为TOP,L2至L11,BOTTOM。已通知用户并记录差异，未修改模板。其余12份的铜Film名称/次序与对应层数规则一致；13份铜Film的ETCH引用均对应自身层名。本次只核模板映射，未执行光绘生产输出。\n"
+    },
+    {
+      "file": "learning/notes/extracta_readback_20261018.md",
+      "replace": [
+        [
+          ".br﻿d",
+          ".brd"
+        ]
+      ],
+      "append": "\n## 已查的本机官方入口\n\nC:/Program0/Cadence/SPB172/doc/ecoms/echap.html，extracta条目（约6630行）给出：\n`extracta [args] [drawing] [cmdfile] [outfile...]`。\n官方说明必须提供cmdfile以取得设计的flattened视图信息，进一步视图/字段见Completing the Design User Guide。acoms/achap.html约10674行说明“!”是extracta字段分隔符，解析不能随意按空格拆；algrostart/chap3.html约1403行提醒某些报告单位配置来源，读取输出时应同时核单位。\n\n本轮只核官方说明及本机程序存在，未把截图对应操作记为本轮已复现。下一次实际使用时保存命令文件、字段、单位、BRD哈希、输出日志，并和SKILL同对象读回交叉验证。\n"
+    }
+  ]
+}

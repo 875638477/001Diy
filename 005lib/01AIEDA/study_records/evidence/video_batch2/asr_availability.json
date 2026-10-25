@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "report_generated_at_utc": "2026-10-17 03:00:03 UTC",
+  "purpose": "\u53ea\u8bfb\u786e\u8ba4\u672c\u673a\u5df2\u6709\u4e2d\u6587\u79bb\u7ebf ASR \u80fd\u529b\uff1b\u4e0d\u8bfb\u89c6\u9891\u6216\u97f3\u9891\u3001\u4e0d\u8f6c\u5f55\u3001\u4e0d\u8c03\u7528\u9ea6\u514b\u98ce\u3002",
+  "time_context": {
+    "timezone": "Asia/Shanghai",
+    "client_date": "2026-10-17",
+    "checks_started_at": "2026-10-17T10:56:37.6058163+08:00",
+    "checks_ended_at": "2026-10-17T10:59:14.2200462+08:00"
+  },
+  "conclusion": {
+    "status": "no_confirmed_usable_chinese_offline_asr_in_current_session",
+    "registered_chinese_recognizer": true,
+    "python_asr_packages_found": false,
+    "system_speech_initialization_and_dictation_load_verified": false,
+    "offline_transcription_attempted": false,
+    "explanation": "System.Speech \u53ef\u679a\u4e3e zh-CN MS-2052-80-DESK\uff0c\u4f46 x64 \u548c x86 \u663e\u5f0f\u521d\u59cb\u5316\u5747\u5931\u8d25\uff0c\u672a\u6210\u529f\u52a0\u8f7d DictationGrammar\u3002\u4ec5\u6709\u6ce8\u518c\u4fe1\u606f\u4e0d\u8bc1\u660e\u8bc6\u522b\u8d44\u6e90\u53ef\u7528\uff1b\u4e0d\u628a\u7cfb\u7edf\u4e2d\u6587\u8bed\u8a00\u5305\u5f53\u4f5c ASR \u6a21\u578b\u3002"
+  },
+  "scope_and_credentials": {
+    "network_used": false,
+    "installed_or_downloaded_software": false,
+    "credentials_required_or_read": false,
+    "audio_or_video_read": false,
+    "microphone_access": false,
+    "gui_started": false,
+    "privacy_or_chat_caches_accessed": false,
+    "registry_modified": false,
+    "permissions_elevated": false,
+    "recognition_started": false,
+    "files_written_only": [
+      "D:\\001DIY\\005lib\\01AIEDA\\study_records\\evidence\\video_batch2\\asr_availability.json",
+      "D:\\001DIY\\005lib\\01AIEDA\\study_records\\evidence\\video_batch2\\asr_availability.txt"
+    ]
+  },
+  "environment_and_windows_registration": {
+    "checked_at_local": "2026-10-17T10:58:41.8478715+08:00",
+    "checked_at_utc": "2026-10-17T02:58:41.8478715Z",
+    "powershell_version": "5.1.26100.9711",
+    "os_version": "Microsoft Windows NT 10.0.26200.0",
+    "process_is_64bit": true,
+    "recognizers": [
+      {
+        "id": "MS-2052-80-DESK",
+        "name": "MS-2052-80-DESK",
+        "culture": "zh-CN",
+        "description": "Microsoft Speech Recognizer 8.0 for Windows (Chinese Simplified - PRC)",
+        "additional_info": {
+          "Alternates": "CC;Dictation",
+          "AudioFormats": "16;18;20;22;45;53;{6F50E21C-E30E-4B50-95E9-21E8F23D15BD}",
+          "CommandAndControl": "",
+          "Desktop": "",
+          "Dictation": "",
+          "DictationInCFG": "Anywhere;Trailing",
+          "Hypotheses": "",
+          "Language": "804",
+          "Name": "MS-2052-80-DESK",
+          "SpeakingStyle": "Discrete;Continuous",
+          "SupportedLocales": "804;1004;4",
+          "Vendor": "Microsoft",
+          "VendorPreferred": "",
+          "Version": "8.0",
+          "WildcardInCFG": "Anywhere;Trailing",
+          "windowsV6compatible": "",
+          "WordSequences": "Anywhere;Trailing"
+        }
+      }
+    ]
+  },
+  "python_environments": [
+    {
+      "checked_at": "2026-10-17T10:58:41.853279+08:00",
+      "executable": "C:\\Espressif\\tools\\python\\python.exe",
+      "version": "3.11.15 (main, Apr 14 2026, 14:31:26) [MSC v.1944 64 bit (AMD64)]",
+      "packages": {
+        "whisper": {
+          "importable": false,
+          "origin": null
+        },
+        "faster_whisper": {
+          "importable": false,
+          "origin": null
+        },
+        "vosk": {
+          "importable": false,
+          "origin": null
+        },
+        "speech_recognition": {
+          "importable": false,
+          "origin": null
+        },
+        "torch": {
+          "importable": false,
+          "origin": null
+        },
+        "transformers": {
+          "importable": false,
+          "origin": null
+        },
+        "sherpa_onnx": {
+          "importable": false,
+          "origin": null
+        },
+        "onnxruntime": {
+          "importable": false,
+          "origin": null
+        },
+        "funasr": {
+          "importable": false,
+          "origin": null
+        },
+        "modelscope": {
+          "importable": false,
+          "origin": null
+        },
+        "torchaudio": {
+          "importable": false,
+          "origin": null
+        },
+        "ctranslate2": {
+          "importable": false,
+          "origin": null
+        }
+      }
+    },
+    {
+      "checked_at": "2026-10-17T10:57:40.214057+08:00",
+      "executable": "C:\\Users\\Administrator\\AppData\\Roaming\\uv\\python\\cpython-3.14.7-windows-x86_64-none\\python.exe",
+      "version": "3.14.7 (main, Aug  7 2026, 02:26:22) [MSC v.1944 64 bit (AMD64)]",
+      "packages": {
+        "whisper": {
+          "importable": false,
+          "origin": null
+        },
+        "faster_whisper": {
+          "importable": false,
+          "origin": null
+        },
+        "vosk": {
+          "importable": false,
+          "origin": null
+        },
+        "speech_recognition": {
+          "importable": false,
+          "origin": null
+        },
+        "torch": {
+          "importable": false,
+          "origin": null
+        },
+        "transformers": {
+          "importable": false,
+          "origin": null
+        },
+        "sherpa_onnx": {
+          "importable": false,
+          "origin": null
+        },
+        "onnxruntime": {
+          "importable": false,
+          "origin": null
+        },
+        "funasr": {
+          "importable": false,
+          "origin": null
+        },
+        "modelscope": {
+          "importable": false,
+          "origin": null
+        },
+        "torchaudio": {
+          "importable": false,
+          "origin": null
+        },
+        "ctranslate2": {
+          "importable": false,
+          "origin": null
+        }
+      }
+    }
+  ],
+  "python_probe_method": "\u5bf9 PATH \u7684 python.exe \u4e0e py -0p \u767b\u8bb0\u7684\u89e3\u91ca\u5668\u4f7f\u7528 importlib.util.find_spec\uff0c\u4ec5\u67e5\u627e\u6a21\u5757\uff0c\u4e0d\u5bfc\u5165\u6a21\u578b\u6216\u8fd0\u884c\u8bc6\u522b\u3002",
+  "python_launcher_inventory": {
+    "command": "py -0p",
+    "output": " -V:Astral/CPython3.14.7 * C:\\Users\\Administrator\\AppData\\Roaming\\uv\\python\\cpython-3.14.7-windows-x86_64-none\\python.exe"
+  },
+  "path_cli_lookup": {
+    "command": "Get-Command whisper, faster-whisper, vosk-transcriber, sherpa-onnx -ErrorAction SilentlyContinue",
+    "matches": []
+  },
+  "model_file_name_scan": {
+    "command": "rg --files D:\\001DIY\\005lib D:\\005study -g '*.onnx' -g '*.pt' -g 'ggml-*.bin' -g 'ggml*.bin' -g 'am.conf' -g 'final.mdl' -g '*whisper*' -g '*vosk*' -g '*sherpa*'",
+    "roots": [
+      "D:\\001DIY\\005lib",
+      "D:\\005study"
+    ],
+    "matches": [],
+    "rg_exit_code": 1,
+    "interpretation": "\u5728\u8fd9\u4e24\u4e2a\u8d44\u6599/\u5de5\u4f5c\u76ee\u5f55\u6309\u7ed9\u5b9a\u6587\u4ef6\u540d\u89c4\u5219\u672a\u627e\u5230\u5019\u9009\uff1b\u4e0d\u7b49\u4e8e\u5168\u673a\u6ca1\u6709\u6a21\u578b\u3002\u6ca1\u6709\u68c0\u67e5\u79c1\u4eba\u7f13\u5b58\u3001\u9690\u85cf\u76ee\u5f55\u6216\u6240\u6709\u865a\u62df\u73af\u5883\u3002"
+  },
+  "windows_x64_initialization": {
+    "checked_at": "2026-10-17T10:58:13.1955088+08:00",
+    "process_is_64bit": true,
+    "os_is_64bit": true,
+    "attempts": [
+      {
+        "mode": "RecognizerInfo",
+        "constructed": false,
+        "dictation_grammar_loaded": false,
+        "audio_input": "never_set",
+        "recognition_started": false,
+        "error_chain": [
+          {
+            "message": "\u4f7f\u7528\u201c1\u201d\u4e2a\u53c2\u6570\u8c03\u7528\u201c.ctor\u201d\u65f6\u53d1\u751f\u5f02\u5e38:\u201c\u627e\u4e0d\u5230\u5177\u6709\u6240\u9700 ID \u7684\u8bc6\u522b\u5668\u3002\u201d",
+            "hresult": -2146233087,
+            "type": "System.Management.Automation.MethodInvocationException"
+          },
+          {
+            "message": "\u627e\u4e0d\u5230\u5177\u6709\u6240\u9700 ID \u7684\u8bc6\u522b\u5668\u3002",
+            "hresult": -2147024809,
+            "type": "System.ArgumentException"
+          },
+          {
+            "message": "\u5728\u6b64\u7cfb\u7edf\u4e0a\u8bed\u97f3\u8bc6\u522b\u4e0d\u53ef\u7528\u3002\u627e\u4e0d\u5230 SAPI \u548c\u8bed\u97f3\u8bc6\u522b\u5f15\u64ce\u3002",
+            "hresult": -2146233031,
+            "type": "System.PlatformNotSupportedException"
+          }
+        ]
+      },
+      {
+        "mode": "CultureInfo",
+        "constructed": false,
+        "dictation_grammar_loaded": false,
+        "audio_input": "never_set",
+        "recognition_started": false,
+        "error_chain": [
+          {
+            "message": "\u4f7f\u7528\u201c1\u201d\u4e2a\u53c2\u6570\u8c03\u7528\u201c.ctor\u201d\u65f6\u53d1\u751f\u5f02\u5e38:\u201cAccess is denied. (\u5f02\u5e38\u6765\u81ea HRESULT:0x80070005 (E_ACCESSDENIED))\u201d",
+            "hresult": -2146233087,
+            "type": "System.Management.Automation.MethodInvocationException"
+          },
+          {
+            "message": "Access is denied. (\u5f02\u5e38\u6765\u81ea HRESULT:0x80070005 (E_ACCESSDENIED))",
+            "hresult": -2147024891,
+            "type": "System.UnauthorizedAccessException"
+          }
+        ]
+      },
+      {
+        "mode": "Default",
+        "constructed": true,
+        "dictation_grammar_loaded": false,
+        "audio_input": "never_set",
+        "recognition_started": false,
+        "id": null,
+        "error_chain": [
+          {
+            "message": "\u4f7f\u7528\u201c1\u201d\u4e2a\u53c2\u6570\u8c03\u7528\u201cLoadGrammar\u201d\u65f6\u53d1\u751f\u5f02\u5e38:\u201c\u672a\u5c06\u5bf9\u8c61\u5f15\u7528\u8bbe\u7f6e\u5230\u5bf9\u8c61\u7684\u5b9e\u4f8b\u3002\u201d",
+            "hresult": -2146233087,
+            "type": "System.Management.Automation.MethodInvocationException"
+          },
+          {
+            "message": "\u672a\u5c06\u5bf9\u8c61\u5f15\u7528\u8bbe\u7f6e\u5230\u5bf9\u8c61\u7684\u5b9e\u4f8b\u3002",
+            "hresult": -2147467261,
+            "type": "System.NullReferenceException"
+          }
+        ],
+        "disposed": true
+      }
+    ],
+    "winrt": [
+      {
+        "name": "SystemSpeechLanguage",
+        "getter_is_static": true,
+        "value_is_null": true,
+        "language_tag": null
+      },
+      {
+        "name": "SupportedGrammarLanguages",
+        "getter_is_static": true,
+        "value_is_null": false,
+        "language_tags": []
+      },
+      {
+        "name": "SupportedTopicLanguages",
+        "getter_is_static": true,
+        "value_is_null": false,
+        "language_tags": []
+      }
+    ]
+  },
+  "windows_x86_initialization": {
+    "executable": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "checked_at": "2026-10-17T10:59:14.2200462+08:00",
+    "process_is_64bit": false,
+    "recognizers": [
+      {
+        "culture": "zh-CN",
+        "description": "Microsoft Speech Recognizer 8.0 for Windows (Chinese Simplified - PRC)",
+        "id": "MS-2052-80-DESK"
+      }
+    ],
+    "constructed": false,
+    "dictation_grammar_loaded": false,
+    "audio_input": "never_set",
+    "recognition_started": false,
+    "error_chain": [
+      {
+        "message": "Exception calling \".ctor\" with \"1\" argument(s): \"No recognizer of the required ID found.\"",
+        "hresult": -2146233087,
+        "type": "System.Management.Automation.MethodInvocationException"
+      },
+      {
+        "message": "No recognizer of the required ID found.",
+        "hresult": -2147024809,
+        "type": "System.ArgumentException"
+      },
+      {
+        "message": "Speech Recognition is not available on this system. SAPI and Speech Recognition engines cannot be found.",
+        "hresult": -2146233031,
+        "type": "System.PlatformNotSupportedException"
+      }
+    ]
+  },
+  "limitations": [
+    "\u5f53\u524d\u53d7\u9650\u8fdb\u7a0b\u53ef\u679a\u4e3e\u6ce8\u518c\u9879\uff0c\u4f46\u663e\u5f0f\u6784\u9020\u629b\u51fa PlatformNotSupportedException\uff1bCultureInfo \u6784\u9020\u8fd8\u51fa\u73b0 E_ACCESSDENIED\u3002\u65e0\u6cd5\u4ec5\u51ed\u8fd9\u4e9b\u9519\u8bef\u533a\u5206\u7f3a\u5c11\u8fd0\u884c\u8d44\u6e90\u3001\u6ce8\u518c\u5f02\u5e38\u6216\u5f53\u524d\u4f1a\u8bdd\u8bbf\u95ee\u9650\u5236\u3002",
+    "x86 \u9a8c\u8bc1\u540c\u6837\u5931\u8d25\uff0c\u672a\u53d1\u73b0\u901a\u8fc7\u5207\u6362\u4f4d\u6570\u5373\u53ef\u8fd0\u884c\u7684\u8bc1\u636e\uff1b\u672c\u6b21\u6ca1\u6709\u63d0\u9ad8\u6743\u9650\u6216\u4fee\u6539\u6ce8\u518c\u8868\u3002",
+    "\u9ed8\u8ba4 x64 \u6784\u9020\u867d\u8fd4\u56de\u5bf9\u8c61\uff0cRecognizerInfo \u4e3a\u7a7a\u4e14 LoadGrammar \u629b NullReferenceException\uff0c\u4e0d\u6784\u6210\u53ef\u7528\u8bc1\u660e\u3002",
+    "WinRT SpeechRecognizer \u7c7b\u578b\u53ef\u89e3\u6790\uff1bSystemSpeechLanguage \u8fd4\u56de null\uff0c\u4e24\u4e2a\u652f\u6301\u8bed\u8a00\u5217\u8868\u4e3a\u7a7a\u3002\u672c\u6b21\u672a\u521b\u5efa WinRT recognizer\u3001\u672a\u6267\u884c\u7f16\u8bd1\u6216\u8bed\u97f3\u8f93\u5165\uff0c\u4e0d\u63a8\u65ad\u8be5\u7cfb\u7edf\u5728\u5176\u4ed6\u4f1a\u8bdd\u7edd\u5bf9\u4e0d\u53ef\u7528\u3002",
+    "\u6ca1\u6709\u5b9e\u9645\u97f3\u9891\u8f93\u5165\u6216\u8bc6\u522b\u7ed3\u679c\uff0c\u4e0d\u80fd\u8bc4\u4f30\u51c6\u786e\u7387\u3001\u6280\u672f\u8bcd\u6216\u957f\u97f3\u9891\u5904\u7406\u80fd\u529b\u3002",
+    "Python \u68c0\u67e5\u53ea\u8986\u76d6\u5f53\u524d\u53ef\u6267\u884c\u547d\u4ee4\u548c py \u767b\u8bb0\u7684\u4e24\u4e2a\u73af\u5883\uff1b\u6a21\u578b\u626b\u63cf\u53ea\u8986\u76d6\u660e\u786e\u5217\u51fa\u7684\u8d44\u6599\u76ee\u5f55\u4e0e\u6587\u4ef6\u540d\u89c4\u5219\u3002"
+  ],
+  "source_audio_action": {
+    "extraction_attempted": false,
+    "wav_created": false,
+    "transcript_created": false,
+    "reason": "\u7236\u4efb\u52a1\u8981\u6c42\u5728 recognizer \u53ef\u521d\u59cb\u5316\u4e14\u53ef\u52a0\u8f7d DictationGrammar \u540e\u624d\u5c1d\u8bd5\u672c\u5730\u8f6c\u5f55\uff1b\u524d\u63d0\u672a\u6ee1\u8db3\u3002"
+  },
+  "probe_evidence": [
+    {
+      "label": "python_path_probe",
+      "chunk_id": "8db7bb",
+      "wall_time_seconds": 0.1475347,
+      "exit_code": 0,
+      "original_token_count": 293,
+      "output": "{\r\n  \"checked_at\": \"2026-10-17T10:58:41.853279+08:00\",\r\n  \"executable\": \"C:\\\\Espressif\\\\tools\\\\python\\\\python.exe\",\r\n  \"version\": \"3.11.15 (main, Apr 14 2026, 14:31:26) [MSC v.1944 64 bit (AMD64)]\",\r\n  \"packages\": {\r\n    \"whisper\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"faster_whisper\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"vosk\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"speech_recognition\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"torch\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"transformers\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"sherpa_onnx\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"onnxruntime\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"funasr\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"modelscope\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"torchaudio\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"ctranslate2\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    }\r\n  }\r\n}\r\n"
+    },
+    {
+      "label": "python_launcher_registered_environment_probe",
+      "chunk_id": "cad419",
+      "wall_time_seconds": 0.3689697,
+      "exit_code": 0,
+      "original_token_count": 308,
+      "output": "{\r\n  \"checked_at\": \"2026-10-17T10:57:40.214057+08:00\",\r\n  \"executable\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Roaming\\\\uv\\\\python\\\\cpython-3.14.7-windows-x86_64-none\\\\python.exe\",\r\n  \"version\": \"3.14.7 (main, Aug  7 2026, 02:26:22) [MSC v.1944 64 bit (AMD64)]\",\r\n  \"packages\": {\r\n    \"whisper\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"faster_whisper\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"vosk\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"speech_recognition\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"torch\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"transformers\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"sherpa_onnx\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"onnxruntime\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"funasr\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"modelscope\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"torchaudio\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    },\r\n    \"ctranslate2\": {\r\n      \"importable\": false,\r\n      \"origin\": null\r\n    }\r\n  }\r\n}\r\n"
+    },
+    {
+      "label": "system_speech_registered_recognizers_probe",
+      "chunk_id": "1999a4",
+      "wall_time_seconds": 0.1815479,
+      "exit_code": 0,
+      "original_token_count": 542,
+      "output": "{\r\n    \"checked_at_local\":  \"2026-10-17T10:58:41.8478715+08:00\",\r\n    \"checked_at_utc\":  \"2026-10-17T02:58:41.8478715Z\",\r\n    \"powershell_version\":  \"5.1.26100.9711\",\r\n    \"os_version\":  \"Microsoft Windows NT 10.0.26200.0\",\r\n    \"process_is_64bit\":  true,\r\n    \"recognizers\":  [\r\n                        {\r\n                            \"id\":  \"MS-2052-80-DESK\",\r\n                            \"name\":  \"MS-2052-80-DESK\",\r\n                            \"culture\":  \"zh-CN\",\r\n                            \"description\":  \"Microsoft Speech Recognizer 8.0 for Windows (Chinese Simplified - PRC)\",\r\n                            \"additional_info\":  {\r\n                                                    \"Alternates\":  \"CC;Dictation\",\r\n                                                    \"AudioFormats\":  \"16;18;20;22;45;53;{6F50E21C-E30E-4B50-95E9-21E8F23D15BD}\",\r\n                                                    \"CommandAndControl\":  \"\",\r\n                                                    \"Desktop\":  \"\",\r\n                                                    \"Dictation\":  \"\",\r\n                                                    \"DictationInCFG\":  \"Anywhere;Trailing\",\r\n                                                    \"Hypotheses\":  \"\",\r\n                                                    \"Language\":  \"804\",\r\n                                                    \"Name\":  \"MS-2052-80-DESK\",\r\n                                                    \"SpeakingStyle\":  \"Discrete;Continuous\",\r\n                                                    \"SupportedLocales\":  \"804;1004;4\",\r\n                                                    \"Vendor\":  \"Microsoft\",\r\n                                                    \"VendorPreferred\":  \"\",\r\n                                                    \"Version\":  \"8.0\",\r\n                                                    \"WildcardInCFG\":  \"Anywhere;Trailing\",\r\n                                                    \"windowsV6compatible\":  \"\",\r\n                                                    \"WordSequences\":  \"Anywhere;Trailing\"\r\n                                                }\r\n                        }\r\n                    ]\r\n}\r\n"
+    },
+    {
+      "label": "x64_initialization_and_winrt_static_read_probe",
+      "chunk_id": "f5a0b2",
+      "wall_time_seconds": 0.3035406,
+      "exit_code": 0,
+      "original_token_count": 1321,
+      "output": "{\r\n    \"checked_at\":  \"2026-10-17T10:58:13.1955088+08:00\",\r\n    \"process_is_64bit\":  true,\r\n    \"os_is_64bit\":  true,\r\n    \"attempts\":  [\r\n                     {\r\n                         \"mode\":  \"RecognizerInfo\",\r\n                         \"constructed\":  false,\r\n                         \"dictation_grammar_loaded\":  false,\r\n                         \"audio_input\":  \"never_set\",\r\n                         \"recognition_started\":  false,\r\n                         \"error_chain\":  [\r\n                                             {\r\n                                                 \"message\":  \"\u4f7f\u7528\u201c1\u201d\u4e2a\u53c2\u6570\u8c03\u7528\u201c.ctor\u201d\u65f6\u53d1\u751f\u5f02\u5e38:\u201c\u627e\u4e0d\u5230\u5177\u6709\u6240\u9700 ID \u7684\u8bc6\u522b\u5668\u3002\u201d\",\r\n                                                 \"hresult\":  -2146233087,\r\n                                                 \"type\":  \"System.Management.Automation.MethodInvocationException\"\r\n                                             },\r\n                                             {\r\n                                                 \"message\":  \"\u627e\u4e0d\u5230\u5177\u6709\u6240\u9700 ID \u7684\u8bc6\u522b\u5668\u3002\",\r\n                                                 \"hresult\":  -2147024809,\r\n                                                 \"type\":  \"System.ArgumentException\"\r\n                                             },\r\n                                             {\r\n                                                 \"message\":  \"\u5728\u6b64\u7cfb\u7edf\u4e0a\u8bed\u97f3\u8bc6\u522b\u4e0d\u53ef\u7528\u3002\u627e\u4e0d\u5230 SAPI \u548c\u8bed\u97f3\u8bc6\u522b\u5f15\u64ce\u3002\",\r\n                                                 \"hresult\":  -2146233031,\r\n                                                 \"type\":  \"System.PlatformNotSupportedException\"\r\n                                             }\r\n                                         ]\r\n                     },\r\n                     {\r\n                         \"mode\":  \"CultureInfo\",\r\n                         \"constructed\":  false,\r\n                         \"dictation_grammar_loaded\":  false,\r\n                         \"audio_input\":  \"never_set\",\r\n                         \"recognition_started\":  false,\r\n                         \"error_chain\":  [\r\n                                             {\r\n                                                 \"message\":  \"\u4f7f\u7528\u201c1\u201d\u4e2a\u53c2\u6570\u8c03\u7528\u201c.ctor\u201d\u65f6\u53d1\u751f\u5f02\u5e38:\u201cAccess is denied. (\u5f02\u5e38\u6765\u81ea HRESULT:0x80070005 (E_ACCESSDENIED))\u201d\",\r\n                                                 \"hresult\":  -2146233087,\r\n                                                 \"type\":  \"System.Management.Automation.MethodInvocationException\"\r\n                                             },\r\n                                             {\r\n                                                 \"message\":  \"Access is denied. (\u5f02\u5e38\u6765\u81ea HRESULT:0x80070005 (E_ACCESSDENIED))\",\r\n                                                 \"hresult\":  -2147024891,\r\n                                                 \"type\":  \"System.UnauthorizedAccessException\"\r\n                                             }\r\n                                         ]\r\n                     },\r\n                     {\r\n                         \"mode\":  \"Default\",\r\n                         \"constructed\":  true,\r\n                         \"dictation_grammar_loaded\":  false,\r\n                         \"audio_input\":  \"never_set\",\r\n                         \"recognition_started\":  false,\r\n                         \"id\":  null,\r\n                         \"error_chain\":  [\r\n                                             {\r\n                                                 \"message\":  \"\u4f7f\u7528\u201c1\u201d\u4e2a\u53c2\u6570\u8c03\u7528\u201cLoadGrammar\u201d\u65f6\u53d1\u751f\u5f02\u5e38:\u201c\u672a\u5c06\u5bf9\u8c61\u5f15\u7528\u8bbe\u7f6e\u5230\u5bf9\u8c61\u7684\u5b9e\u4f8b\u3002\u201d\",\r\n                                                 \"hresult\":  -2146233087,\r\n                                                 \"type\":  \"System.Management.Automation.MethodInvocationException\"\r\n                                             },\r\n                                             {\r\n                                                 \"message\":  \"\u672a\u5c06\u5bf9\u8c61\u5f15\u7528\u8bbe\u7f6e\u5230\u5bf9\u8c61\u7684\u5b9e\u4f8b\u3002\",\r\n                                                 \"hresult\":  -2147467261,\r\n                                                 \"type\":  \"System.NullReferenceException\"\r\n                                             }\r\n                                         ],\r\n                         \"disposed\":  true\r\n                     }\r\n                 ],\r\n    \"winrt\":  [\r\n                  {\r\n                      \"name\":  \"SystemSpeechLanguage\",\r\n                      \"getter_is_static\":  true,\r\n                      \"value_is_null\":  true,\r\n                      \"language_tag\":  null\r\n                  },\r\n                  {\r\n                      \"name\":  \"SupportedGrammarLanguages\",\r\n                      \"getter_is_static\":  true,\r\n                      \"value_is_null\":  false,\r\n                      \"language_tags\":  [\r\n\r\n                                        ]\r\n                  },\r\n                  {\r\n                      \"name\":  \"SupportedTopicLanguages\",\r\n                      \"getter_is_static\":  true,\r\n                      \"value_is_null\":  false,\r\n                      \"language_tags\":  [\r\n\r\n                                        ]\r\n                  }\r\n              ]\r\n}\r\n"
+    },
+    {
+      "label": "x86_initialization_probe",
+      "chunk_id": "e1947b",
+      "wall_time_seconds": 1.415902,
+      "exit_code": 0,
+      "original_token_count": 484,
+      "output": "#< CLIXML\r\n{\r\n    \"checked_at\":  \"2026-10-17T10:59:14.2200462+08:00\",\r\n    \"process_is_64bit\":  false,\r\n    \"recognizers\":  [\r\n                        {\r\n                            \"culture\":  \"zh-CN\",\r\n                            \"description\":  \"Microsoft Speech Recognizer 8.0 for Windows (Chinese Simplified - PRC)\",\r\n                            \"id\":  \"MS-2052-80-DESK\"\r\n                        }\r\n                    ],\r\n    \"constructed\":  false,\r\n    \"dictation_grammar_loaded\":  false,\r\n    \"audio_input\":  \"never_set\",\r\n    \"recognition_started\":  false,\r\n    \"error_chain\":  [\r\n                        {\r\n                            \"message\":  \"Exception calling \\\".ctor\\\" with \\\"1\\\" argument(s): \\\"No recognizer of the required ID found.\\\"\",\r\n                            \"hresult\":  -2146233087,\r\n                            \"type\":  \"System.Management.Automation.MethodInvocationException\"\r\n                        },\r\n                        {\r\n                            \"message\":  \"No recognizer of the required ID found.\",\r\n                            \"hresult\":  -2147024809,\r\n                            \"type\":  \"System.ArgumentException\"\r\n                        },\r\n                        {\r\n                            \"message\":  \"Speech Recognition is not available on this system. SAPI and Speech Recognition engines cannot be found.\",\r\n                            \"hresult\":  -2146233031,\r\n                            \"type\":  \"System.PlatformNotSupportedException\"\r\n                        }\r\n                    ]\r\n}\r\n<Objs Version=\"1.1.0.1\" xmlns=\"http://schemas.microsoft.com/powershell/2004/04\"><Obj S=\"progress\" RefId=\"0\"><TN RefId=\"0\"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N=\"SourceId\">1</I64><PR N=\"Record\"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>"
+    },
+    {
+      "label": "model_name_scan",
+      "chunk_id": "298c8f",
+      "wall_time_seconds": 0.2000605,
+      "exit_code": 1,
+      "original_token_count": 0,
+      "output": ""
+    }
+  ]
+}

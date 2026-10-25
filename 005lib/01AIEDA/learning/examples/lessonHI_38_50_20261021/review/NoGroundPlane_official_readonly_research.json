@@ -1,0 +1,36 @@
+{
+  "status": "OFFICIAL_LOCAL_READONLY_RESEARCH_NO_VERIFIED_NATIVE_DRC_NOGROUNDPLANE_FIX",
+  "exactTokenSearch": "NoGroundPlane/EMIinfoType not foundin installeddoc html/txt or sharepcb reviewed il/txt/xml/env. Searchnegative doesnotproveabsence ofsupportprivatefix.",
+  "sources": [
+    {
+      "source": "C:\\Program0\\Cadence\\SPB172\\doc\\sigxpug\\autosolving.html",
+      "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\source\\solver_official_readonly\\sigxpug_autosolving.html",
+      "sha256": "51E980A3D5237049C5042831437BAAB16D2D7D3DA5D644D85C5AED3B9AD7D9AA",
+      "anchors": "1066776/1066778/1066808/1066812",
+      "review": "SigXplorer circuitautoSolve defaultsOff; somecommands override. Scope is extraction/modelsolving, notproof ofPCB DRC NoGroundPlane bypass."
+    },
+    {
+      "source": "C:\\Program0\\Cadence\\SPB172\\doc\\squg\\04_simsetup.html",
+      "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\source\\solver_official_readonly\\squg_04_simsetup.html",
+      "sha256": "4A4CBCADD8CABC39D269A3A9BDBBC2F513CC9F56100CE97431EB86A5CD0B8D1D",
+      "anchors": "926051/926054",
+      "review": "USE_ACCURATE_DELAY_CALCULATION example includes shieldholes in delaymath; not documentedhere as solver-disable or NoGroundPlane remediation."
+    },
+    {
+      "source": "C:\\Program0\\Cadence\\SPB172\\doc\\cmref\\analyze.html",
+      "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\source\\solver_official_readonly\\cmref_analyze.html",
+      "sha256": "DAC3524E0832D6B2B64EB57D3D738CE44338299A98480336C9A4E25FB064703D",
+      "anchors": "1021558/1021560/1021564/1021569",
+      "review": "Electricallength/time andpin/via delay options. DoesnotdocumenttargetNoGroundPlane solver bypass."
+    },
+    {
+      "source": "C:\\Program0\\Cadence\\SPB172\\doc\\sigxpug\\sim.html",
+      "copy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\source\\solver_official_readonly\\sigxpug_sim.html",
+      "sha256": "3AC4DD54D2DA56644EF7188ADCA3BA8B7C89E8734864454D3AD17D869409095B",
+      "anchors": "1004752/1004996",
+      "review": "SigXplorer BEM2D/EMS2D selection for simulation/newmodels. NotanestablishednativeDRC fieldsolverfix."
+    }
+  ],
+  "conclusion": "No supported configuration found that disables only problematic NoGroundPlane construction while preserving allactualPCB differential/spacing/physicalchecks. autoSolve and USE_ACCURATE_DELAY_CALCULATION are not assumed applicable. No environment/PCB/checkmode changed; finalcompleteboard actualfreshDRC remains pending.",
+  "next": "Completeallphysicalroutes+realgroundfill first; retry onegenuinefreshwholeboard withobservable ownedprocesses. Ifrepeats, preservepending and seekversion-specific officialCadencesupport rather than skipchecks."
+}

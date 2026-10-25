@@ -1,0 +1,25 @@
+
+  NAME
+         axlPathLine
+  FUNCTION
+         axlPathLine(
+                 r_path
+                 f_width
+                 l_end_point
+                 )
+         ==> r_path/nil
+  SYNOPSIS
+         Adds a single straight line segment to the end of an existing 
+         r_path structure as specified by the arguments described below. 
+         The start point of the line is the last point in r_path.
+  NEEDS
+         r_path:         Handle of an existing path.
+         f_width:        Width of segment. If f_width is nil, the segment 
+                         takes width given when r_path was created.
+         l_end_point:    End point of line segment in absolute coordinates.
+  RETURNS
+         r_path/nil:     Returns current path structure if successful. 
+                         Otherwise it returns nil.
+  EXAMPLES
+         See Path Functions 
+

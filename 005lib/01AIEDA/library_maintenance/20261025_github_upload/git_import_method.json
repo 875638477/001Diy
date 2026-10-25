@@ -1,0 +1,49 @@
+{
+  "status": "REVIEWED_PACK_BASED_IMPORT_PLAN",
+  "recorded_at_utc": "2026-10-25T05:27:33.121702+00:00",
+  "method": "git fast-import with exact binary lengths, unique-blob reuse and full-tree verification",
+  "base_commit": "6e478a7603b6adbe790ea0ad0409fba48ca27e43",
+  "temporary_ref": "refs/heads/library-upload-20261025",
+  "fastimport_unpackLimit": 0,
+  "force": false,
+  "network_operations": false,
+  "final_root_directories": [
+    "01aeLib",
+    "01AIEDA",
+    "01brdlib",
+    "01captureLib",
+    "01env",
+    "01Pad_lib",
+    "01Psm_lib",
+    "01script_file",
+    "01_3d_step_lib"
+  ],
+  "authorized_remote_deletions": [
+    "README.md"
+  ],
+  "original_manifest_modified": false,
+  "source_originals_rehashed": false,
+  "new_blobs": "Only missing unique blob representatives are read from the verified repository snapshot and checked by size, SHA256 and Git blob SHA1 before completion.",
+  "existing_blobs": "Already verified manifest OIDs are reused only after cat-file confirms blob type and exact byte length.",
+  "verification": "Every entry of the complete imported tree is compared against expected path, mode, type and OID; exact nine roots and single BASE parent are required before main moves.",
+  "postcommit_records_not_in_tree": [
+    "git_import_verification.json",
+    "commit_preparation.json",
+    "upload_result.json",
+    "fast_import.stdout.log",
+    "fast_import.stderr.log",
+    "fast_import_object_check.stdout.log",
+    "fast_import_object_check.stderr.log",
+    "fast_import_tree.stdout.log",
+    "fast_import_tree.stderr.log",
+    "fast_import.marks"
+  ],
+  "script_sha256": "0f3d37cc5102efa6bf86ca4a5cac1b5db8fe0e4878bf14a634c2861c1f14c6a8",
+  "manifest_sha256": "73c220fcc01a8d0877ac7378d531476be172c42701cd63c7c5926d9f763492cd",
+  "snapshot_proof_sha256": "bca7fd8815155fe9bac148cce8bb1eaccef58ef199e433934d529a3afe23b6ee",
+  "documentation": [
+    "https://git-scm.com/docs/git-fast-import",
+    "https://git-scm.com/docs/git-ls-tree",
+    "https://git-scm.com/docs/git-cat-file"
+  ]
+}

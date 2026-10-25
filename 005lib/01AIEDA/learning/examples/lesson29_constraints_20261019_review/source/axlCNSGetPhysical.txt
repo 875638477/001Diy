@@ -1,0 +1,87 @@
+
+  NAME
+    axlCNSGetPhysical - obtain a Physical cset values
+  SYNOPSIS
+    axlCNSGetPhysical(
+         t_cset
+         t_layer
+         s_constraint
+         [g_string]
+         )
+         ==> g_value/nil
+ 
+    axlCNSGetPhysical(
+         t_cset
+         t_layer
+         nil
+         [g_string]
+         )
+         ==> ll_nameValue/nil
+ 
+    axlCNSGetPhysical(
+         nil
+         nil
+         nil
+         ) 
+         ==> ls_cnsTypes
+  FUNCTION
+    In its first operational mode, obtains the value of a physical
+    constraint given a cset and layer.
+ 
+    In second mode of operation, it obtains all physical constraint
+    as name/value pairs for a cset on a layer. This, in turn, may be
+    passed to axlCNSSetPhysical.
+ 
+    For final mode, a list of all supported physical constraints may be 
+    obtained by passing 3 nils to the interface: 
+         axlCNSGetPhysical(nil nil nil)
+ 
+  DATA TYPES
+       - Unless otherwise specified contraints are in current design units
+       - allow_etch: (boolean) t/nil
+       - allow_ts: (symbol) NOT_ALLOWED, ANYWHERE, PINS_ONLY, PIN_VIAS_ONLY
+       - allow_padconnect: (symbol) ALL_ALLOWED, VIAS_PINS_ONLY, VIAS_VIAS_ONLY, NOT_ALLOWED
+       - vias: (string) colon seperate list of via names. Vias are not
+                 layer dependant so are only returned for TOP.
+                 Order is important for etch editing working layer model
+                 see axlCnsGetViaList.  axlCnsGetViaList can be used to get the 
+                 via list as a list of strings.
+       - width_max, dp_neck_gap, dp_primary_gap, necklength_max if set to
+         0 indicate that this value is not used
+ 
+  NEEDS
+         t_cset: name of a physical cset. Can use "" for "DEFAULT".
+         t_layer: ETCH layer name (e.g "ETCH/TOP" or "TOP"). If nil apply
+                 change to all layers.
+         s_constraint: name of constraint. If nil return a set of 
+                 symbol/value pairs of all constraints.
+         g_string: By default returns value in the native units of the
+                 contraint. If g_string is t will always return data
+                 as a string
+  RETURNS
+         g_value: value of constraint in design units except for same_net
+                 which is returned as a t/nil.
+         ll_nameValue - name value pairs of physical constraint symbol
+                 and constraint value for all physical (s_constraint g_value).
+                 '((necklength_min 10.0) (neckwidth_max 5.0) ...)
+         ls_cnsTypes - list of supported physical constraint anmes
+         nil - returns nil on error (or allow_etch)
+  SEE ALSO
+    axlCNSSetPhysical, axlCnsList, axlSubclassRoute
+    axlCnsGetViaList
+  EXAMPLES
+         1) Get minimum line width in default cset, TOP layer
+                 axlCNSGetPhysical("" "TOP" 'width_min)
+         2) Get all physical constraints for DEFAULT, bottom layer
+                 axlCNSGetPhysical("VOLTAGE" "BOTTOM" nil)
+         3) Get via list for default cset
+                 axlCNSGetPhysical("" "TOP" 'vias)
+         4) Get supported physical constraint symbols
+                 axlCNSGetPhysical(nil nil nil)
+         5) Fetch all layers and constraints of physical cset DEFAULT
+                 cset = ""       ;; DEFAULT cset
+                 foreach(subclass axlSubclassRoute()
+                     layer = axlCNSGetPhysical(cset subclass nil)
+                     printf("\nLAYER=%s\n\tconstraints=%L\n" subclass, layer)
+                 )   
+

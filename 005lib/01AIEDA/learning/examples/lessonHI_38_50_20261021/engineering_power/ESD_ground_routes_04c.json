@@ -1,0 +1,233 @@
+{
+  "status": "FULL_GROUP_GEOMETRY_SCREEN_PASSED_AWAIT_NATIVE_AND_REAL_REFERENCE_REVIEW",
+  "prerequisites": [
+    "U4 actualposition(40.25,11.4)180 andGND2(40.25,12.7); must not execute on oldU4y10.0.",
+    "USBdataflowthrough routesx41.2/39.3 y10.1..12.7 merged from MCUagent; oldGNDvia40.9,11.5 forbidden.",
+    "Groundplanes freshgenerated on actualL2/L3 or2Lbottom; everyvia reference reach and returnslot reviewed.",
+    "MergedUSBgeometry must contain .4TOP U4.5escape to40.25,9.3 andBOTTOMbridge toC10; finalplanevoid/reference audit needed2L."
+  ],
+  "operations": [
+    {
+      "type": "route",
+      "id": "ESD_U4_RETURN",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          12.7
+        ],
+        [
+          40.25,
+          11.8
+        ],
+        [
+          40,
+          11.4
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "U4.2",
+      "to": "V_HI_ESD_A",
+      "purpose": "Shortest bodyward return avoids protected pair at y>13.6; GND supply track not through thin digitaltrace."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_ESD_A",
+      "net": "GND",
+      "xy": [
+        40,
+        11.4
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad body ground via, clear DMx39.3 and VBUSpin5."
+    },
+    {
+      "type": "route",
+      "id": "ESD_U4_SECOND_VIA",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          11.8
+        ],
+        [
+          40.5,
+          11.6
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "ESD_U4_RETURN",
+      "to": "V_HI_ESD_B",
+      "purpose": "Parallel body via retained without old40.9 data collision."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_ESD_B",
+      "net": "GND",
+      "xy": [
+        40.5,
+        11.6
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad .3drill/.6copper, pairdrill gap .2385mm; native hole rules must verify."
+    },
+    {
+      "type": "route",
+      "id": "ESD_C10_RETURN",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          42.7,
+          10.7764
+        ],
+        [
+          43.8,
+          10.7764
+        ],
+        [
+          43.8,
+          11.5764
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "C10.2",
+      "to": "V_HI_C10_B",
+      "purpose": "ESD VBUS decoupling capacitor local HFground, physical return joins actual commonplane."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_C10_A",
+      "net": "GND",
+      "xy": [
+        43.8,
+        10.7764
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad C10ground directly next to pad."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_C10_B",
+      "net": "GND",
+      "xy": [
+        43.8,
+        11.5764
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Secondcapgroundvia .8pitch, not a via in solder aperture."
+    },
+    {
+      "type": "route",
+      "id": "ESD_VBUS_U4_ESCAPE",
+      "net": "USB_VBUS",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          10.1
+        ],
+        [
+          40.25,
+          9.3
+        ]
+      ],
+      "widths": [
+        0.4
+      ],
+      "from": "U4.5",
+      "to": "V_HI_ESD_VBUS_LEFT",
+      "purpose": "Normal.4width avoids .3neck length1.2536 exceeding1.0. Do not use.6diagonal nearDMpad4."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_ESD_VBUS_LEFT",
+      "net": "USB_VBUS",
+      "xy": [
+        40.25,
+        9.3
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad ESDrail crosses belowDPonBOTTOM; keepTOP data continuous."
+    },
+    {
+      "type": "route",
+      "id": "ESD_VBUS_BOTTOM_BRIDGE",
+      "net": "USB_VBUS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.25,
+          9.3
+        ],
+        [
+          43.8,
+          9.2016
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V_HI_ESD_VBUS_LEFT",
+      "to": "V_HI_C10_VBUS",
+      "purpose": "Short bridge crossespairedTOPdata only once;2LBOTTOMreference void must be measured and localgroundreturn checked."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_C10_VBUS",
+      "net": "USB_VBUS",
+      "xy": [
+        43.8,
+        9.2016
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad C10VBUS via separated1.5748fromC10GND via at43.8,10.7764."
+    },
+    {
+      "type": "route",
+      "id": "ESD_VBUS_C10",
+      "net": "USB_VBUS",
+      "layer": "TOP",
+      "points": [
+        [
+          43.8,
+          9.2016
+        ],
+        [
+          42.7,
+          9.2016
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V_HI_C10_VBUS",
+      "to": "C10.1",
+      "purpose": "Short local rail capacitorfeed, no USBVBUSpoweringV5/V3."
+    }
+  ],
+  "rules": [],
+  "geometryNotes": [
+    "TwoU4GNDvia copper rings overlap same-net, drillgap~.2385>=.2032 but doesnot automatically approve manufacturing.",
+    "No claim idealinductance or systemESDcertification;2L1.524mm return-height is materiallylarger than4L.2104mm.",
+    "4L TOP seesactualL2 even acrossBOTTOMVBUS bridge.2L TOP_DP crosses finiteBOTTOMreference slot; this is explicittradeoff, not equivalentHFreturn or USB90ohm certification.",
+    "Newleftvia copperannulus extends to9.6, touchingownU4VBUSlandlower9.55 by.05; drilltop9.45 remains.10 off copperland. Actualmask/tenting/assembly condition requires explicit aperture check; no falseclaim isolatedannulus or via-in-pad-approvedprocess."
+  ],
+  "revision": "04c:04b40,8.95via rejected for actualDMmergey8.6 overlap;40.25,9.3 approved fullgroup screen byMCUagentv8.",
+  "historyRejected": [
+    {
+      "file": "ESD_ground_routes_04b.json",
+      "reason": "Via40,8.95 intersects actualDMmergey8.6 horizontal. Previouslocalreview omittedthatsegment. Fullgroupreviewcaughtbeforeexecution."
+    }
+  ]
+}

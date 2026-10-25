@@ -1,0 +1,73 @@
+
+  NAME
+         axlCnsNetFlattened - get an electrical constraint associated with a net
+  FUNCTION
+         axlCnsNetFlattened(
+                 o_netDbid/t_netName
+                 t_cnsName/s_name
+         )
+         ==> t_cnsValue/nil
+  SYNOPSIS
+         If pinpairs are constrainted by a electrical rule (e.g. PROPAGATION_DELAY),
+         the constraints are stored by Allegro on the pinpair not on the net.
+         The only electrical constraints stored on the net are those applied
+         to dynamic pinpairs (the use of the AD:AR, L:S, etc. syntax) or
+         where the rule applies to the net (e.g. MAX_VIAS). 
+         
+         This interface permits the obtaining a view of constraints in the 
+         the more traditional net view where explicit pinpair rules
+         are rolled up to the net. The returned syntax is what is still
+         used by the traditional netlisters (both third party and the 3 file
+         Cadence netlist).
+ 
+         The information reported by the function is the same as reported
+         in show element under the "Properties attached to net" heading.
+         It is also in a format used by the third party netlist (netin)
+         and in the pstxnet.dat file used by netrev.
+ 
+         This does not return all constraint values applied to the net.
+         This means if the constraint is obtained via the electrical constaint 
+         set (ECSET) or overrides extist at the bus or diffpair level. This 
+         information is what is reported in show element under the heading:
+                 "Electrical Constraints assigned to net"
+ 
+         You might ask if we are rolling up pinpairs to the net why this
+         API is called "axlCnsNetRollup". The mapping process inside Allegro
+         is actually called materialization but that is too hard to spell. 
+         What occurs during this process is Allegro maps Electrical 
+         constaints from xnets, matched groups, and pin pairs to nets by 
+         promoting or flattening the electrical property. The goal
+         of this process is to present a traditional "net view" of the
+         constraints and more importantly provide compatibility with
+         schematic netlisters.
+ 
+         Additional constraints may effect the net via the ECset present
+         at either the net, xnet, diffpair or bus level. Additional override
+         properties may exist at the diffpair or bus level Use 
+         axlNetEcsetValueGet if you wish that view but it will not flatten
+         constraints.
+  TIPS
+         If requesting multiple constraints from the same net is is faster to
+         obtain get the dbid of thet net and pass that as first argument instead
+         of using the net name.
+  NEEDS
+         o_netDbid/t_netName - dbid or name (string) of the net 
+         t_cnsName - the property name for the constraint. 
+         s_name - symbol name of DRC check (values returned by 
+                         axlCNSEcsetModeGet(nil). These names may not
+                         exactly match the property name
+  RETURNS
+         t_cnsValue - the value returned as a string
+                         exactall
+         nil - no value defined for the net
+  SEE ALSO
+         axlNetEcsetValueGet
+  EXAMPLES
+         1) get impedance rule by name on net1
+                 rule = axlCnsNetFlattened("NET1" "IMPEDANCE_RULE")
+         2) get impedance rule by DRC check name on net1
+                 rule = axlCnsNetFlattened("NET1" 'Impedance)
+         3) get PROPAGATION_DELAY on MEM_DATA8 using the dbid of net
+                 net = car(axlSelectByName("NET" "MEM_DATA8"))
+                 rule = axlCnsNetFlattened(net "PROPAGATION_DELAY")
+

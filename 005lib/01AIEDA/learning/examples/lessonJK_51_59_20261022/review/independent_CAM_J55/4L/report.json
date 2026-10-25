@@ -1,0 +1,742 @@
+{
+  "status": "INDEPENDENT_CAM_FORMAT_AND_SOURCE_MAPPING_REVIEW_NOT_PRODUCTION_RELEASE",
+  "variant": "4L",
+  "scope": "Actual exported J55 corrected training CAM from official Cadence17.2; unchanged routing/holes compared with b019 audit; file parsing/rendering independent using official Gerbonara1.6.3 package.",
+  "checks": [
+    {
+      "name": "Exact complete original Film filenames",
+      "pass": true,
+      "detail": [
+        "TOP",
+        "L2",
+        "L3",
+        "BOTTOM",
+        "PASTTOP",
+        "PASTBOTTOM",
+        "SKILTOP",
+        "SKILBOTTOM",
+        "SOLDTOP",
+        "SOLDBOTTOM",
+        "DRILL",
+        "OUTlie",
+        "PDFTOP",
+        "PDFBOTTOM",
+        "DisTOP",
+        "DisBOTTOM",
+        "DisAll"
+      ]
+    },
+    {
+      "name": "BOTTOM header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "BOTTOM MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "BOTTOM header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "ETCH/BOTTOM",
+        "PIN/BOTTOM",
+        "VIA CLASS/BOTTOM",
+        "BOARD GEOMETRY/OUTLINE"
+      ]
+    },
+    {
+      "name": "BOTTOM native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "DisAll header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DisAll MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DisAll header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "CONSTRAINT REGION/TOP",
+        "CONSTRAINT REGION/L2",
+        "CONSTRAINT REGION/L3",
+        "CONSTRAINT REGION/BOTTOM",
+        "CONSTRAINT REGION/ALL",
+        "BOARD GEOMETRY/FILM_FORMAT",
+        "ROUTE KEEPOUT/TOP",
+        "ROUTE KEEPOUT/BOTTOM",
+        "ROUTE KEEPOUT/ALL",
+        "ETCH/TOP",
+        "ETCH/BOTTOM",
+        "DRAWING FORMAT/DRAWING_ORIGIN",
+        "BOARD GEOMETRY/ASSEMBLY_NOTES",
+        "BOARD GEOMETRY/DXF",
+        "BOARD GEOMETRY/DXFTOP",
+        "BOARD GEOMETRY/DXFBOTTOM",
+        "BOARD GEOMETRY/SILKSCREEN_TOP",
+        "BOARD GEOMETRY/SILKSCREEN_BOTTOM",
+        "BOARD GEOMETRY/DIMENSION",
+        "PACKAGE GEOMETRY/SILKSCREEN_TOP",
+        "PACKAGE GEOMETRY/SILKSCREEN_BOTTOM",
+        "BOARD GEOMETRY/OUTLINE",
+        "VIA CLASS/TOP",
+        "VIA CLASS/BOTTOM",
+        "PIN/TOP",
+        "PACKAGE KEEPIN/ALL",
+        "ROUTE KEEPIN/ALL",
+        "PIN/BOTTOM",
+        "MANUFACTURING/PHOTOPLOT_OUTLINE",
+        "MANUFACTURING/NCLEGEND-1-4"
+      ]
+    },
+    {
+      "name": "DisAll native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "DisBOTTOM header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DisBOTTOM MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DisBOTTOM header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "ROUTE KEEPOUT/ALL",
+        "ROUTE KEEPOUT/BOTTOM",
+        "DRAWING FORMAT/DRAWING_ORIGIN",
+        "MANUFACTURING/PHOTOPLOT_OUTLINE",
+        "PACKAGE KEEPIN/ALL",
+        "ROUTE KEEPIN/ALL",
+        "BOARD GEOMETRY/OUTLINE",
+        "BOARD GEOMETRY/DXFBOTTOM",
+        "PACKAGE GEOMETRY/SILKSCREEN_BOTTOM",
+        "BOARD GEOMETRY/DXF_BOTTOM",
+        "PIN/BOTTOM"
+      ]
+    },
+    {
+      "name": "DisBOTTOM native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "DisTOP header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DisTOP MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DisTOP header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "ROUTE KEEPOUT/ALL",
+        "ROUTE KEEPOUT/TOP",
+        "DRAWING FORMAT/DRAWING_ORIGIN",
+        "MANUFACTURING/PHOTOPLOT_OUTLINE",
+        "PACKAGE KEEPIN/ALL",
+        "ROUTE KEEPIN/ALL",
+        "BOARD GEOMETRY/OUTLINE",
+        "BOARD GEOMETRY/DXFTOP",
+        "PACKAGE GEOMETRY/SILKSCREEN_TOP",
+        "BOARD GEOMETRY/DXF_TOP",
+        "PIN/TOP"
+      ]
+    },
+    {
+      "name": "DisTOP native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "DRILL header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DRILL MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DRILL header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "BOARD GEOMETRY/ASSEMBLY_NOTES",
+        "MANUFACTURING/NCDRILL_LEGEND",
+        "MANUFACTURING/NCDRILL_FIGURE",
+        "MANUFACTURING/NCLEGEND-1-4",
+        "BOARD GEOMETRY/DIMENSION"
+      ]
+    },
+    {
+      "name": "DRILL native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "L2 header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "L2 MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "L2 header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "ETCH/L2",
+        "PIN/L2",
+        "VIA CLASS/L2",
+        "BOARD GEOMETRY/OUTLINE"
+      ]
+    },
+    {
+      "name": "L2 native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "L3 header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "L3 MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "L3 header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "ETCH/L3",
+        "PIN/L3",
+        "VIA CLASS/L3",
+        "BOARD GEOMETRY/OUTLINE"
+      ]
+    },
+    {
+      "name": "L3 native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "OUTlie header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "OUTlie MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "OUTlie header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "BOARD GEOMETRY/OUTLINE",
+        "BOARD GEOMETRY/FILM_FORMAT"
+      ]
+    },
+    {
+      "name": "OUTlie native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "PASTBOTTOM header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PASTBOTTOM MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PASTBOTTOM header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "PIN/PASTEMASK_BOTTOM",
+        "PACKAGE GEOMETRY/PASTEMASK_BOTTOM"
+      ]
+    },
+    {
+      "name": "PASTBOTTOM native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "PASTTOP header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PASTTOP MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PASTTOP header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "PIN/PASTEMASK_TOP",
+        "PACKAGE GEOMETRY/PASTEMASK_TOP"
+      ]
+    },
+    {
+      "name": "PASTTOP native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "PDFBOTTOM header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PDFBOTTOM MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PDFBOTTOM header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "REF DES/ASSEMBLY_BOTTOM",
+        "PACKAGE GEOMETRY/SILKSCREEN_BOTTOM",
+        "BOARD GEOMETRY/OUTLINE"
+      ]
+    },
+    {
+      "name": "PDFBOTTOM native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "Yes",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "PDFTOP header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PDFTOP MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PDFTOP header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "REF DES/ASSEMBLY_TOP",
+        "PACKAGE GEOMETRY/SILKSCREEN_TOP",
+        "BOARD GEOMETRY/OUTLINE"
+      ]
+    },
+    {
+      "name": "PDFTOP native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "SKILBOTTOM header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SKILBOTTOM MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SKILBOTTOM header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "PACKAGE GEOMETRY/SILKSCREEN_BOTTOM"
+      ]
+    },
+    {
+      "name": "SKILBOTTOM native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "SKILTOP header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SKILTOP MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SKILTOP header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "PACKAGE GEOMETRY/SILKSCREEN_TOP"
+      ]
+    },
+    {
+      "name": "SKILTOP native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "SOLDBOTTOM header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SOLDBOTTOM MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SOLDBOTTOM header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "VIA CLASS/SOLDERMASK_BOTTOM",
+        "PIN/SOLDERMASK_BOTTOM",
+        "PACKAGE GEOMETRY/SOLDERMASK_BOTTOM",
+        "BOARD GEOMETRY/SOLDERMASK_BOTTOM"
+      ]
+    },
+    {
+      "name": "SOLDBOTTOM native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "SOLDTOP header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SOLDTOP MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SOLDTOP header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "VIA CLASS/SOLDERMASK_TOP",
+        "PIN/SOLDERMASK_TOP",
+        "PACKAGE GEOMETRY/SOLDERMASK_TOP",
+        "BOARD GEOMETRY/SOLDERMASK_TOP"
+      ]
+    },
+    {
+      "name": "SOLDTOP native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "TOP header Film identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "TOP MM and3.6 Gerber format",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "TOP header class/subclass mapping",
+      "pass": true,
+      "detail": [
+        "ETCH/TOP",
+        "PIN/TOP",
+        "VIA CLASS/TOP",
+        "BOARD GEOMETRY/OUTLINE"
+      ]
+    },
+    {
+      "name": "TOP native Film offset/rotation/mirroring preserved",
+      "pass": true,
+      "detail": {
+        "expectedMirror": "No",
+        "scope": "PDFBOTTOM mirrored assembly view is intentional native template option, not mirrored bottom fabrication copper"
+      }
+    },
+    {
+      "name": "Mechanical outline8edges actual80x60chamfer",
+      "pass": true,
+      "detail": {
+        "nominalWidthMM": 80,
+        "nominalHeightMM": 60,
+        "nominalAreaMM2": 4792.0,
+        "lineWidthMM": 0.0025
+      }
+    },
+    {
+      "name": "PTH exact native circle centre/diameter multiset",
+      "pass": true,
+      "detail": {
+        "actualCount": 207,
+        "expectedCount": 207,
+        "toolTable": {
+          "1": 0.26,
+          "2": 0.3,
+          "3": 0.762,
+          "4": 1.0,
+          "5": 0.65,
+          "6": 2.0
+        }
+      }
+    },
+    {
+      "name": "PTH second independent decoder matches unchanged raw commands",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "NPTH exact native circle centre/diameter multiset",
+      "pass": true,
+      "detail": {
+        "actualCount": 6,
+        "expectedCount": 6,
+        "toolTable": {
+          "1": 0.26,
+          "2": 0.3,
+          "3": 0.762,
+          "4": 1.0,
+          "5": 0.65,
+          "6": 2.0
+        }
+      }
+    },
+    {
+      "name": "NPTH second independent decoder matches unchanged raw commands",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Plated slot SH1 centre/finished size",
+      "pass": true,
+      "detail": {
+        "center": [
+          35.68,
+          6.779999999999999
+        ],
+        "width": 0.6,
+        "finishedBoundsSizeMM": [
+          0.6,
+          1.7002000000000002
+        ],
+        "nativePin": "J2.SH1",
+        "nativeSlotSizeMM": [
+          0.6,
+          1.7
+        ],
+        "maxDimensionDifferenceMM": 0.00020000000000020002
+      }
+    },
+    {
+      "name": "Plated slot SH2 centre/finished size",
+      "pass": true,
+      "detail": {
+        "center": [
+          44.32,
+          6.779999999999999
+        ],
+        "width": 0.6,
+        "finishedBoundsSizeMM": [
+          0.6,
+          1.7002000000000002
+        ],
+        "nativePin": "J2.SH2",
+        "nativeSlotSizeMM": [
+          0.6,
+          1.7
+        ],
+        "maxDimensionDifferenceMM": 0.00020000000000020002
+      }
+    },
+    {
+      "name": "Plated slot SH3 centre/finished size",
+      "pass": true,
+      "detail": {
+        "center": [
+          35.68,
+          2.6
+        ],
+        "width": 0.6,
+        "finishedBoundsSizeMM": [
+          0.6,
+          1.4
+        ],
+        "nativePin": "J2.SH3",
+        "nativeSlotSizeMM": [
+          0.6,
+          1.4
+        ],
+        "maxDimensionDifferenceMM": 0.0
+      }
+    },
+    {
+      "name": "Plated slot SH4 centre/finished size",
+      "pass": true,
+      "detail": {
+        "center": [
+          44.32,
+          2.6
+        ],
+        "width": 0.6,
+        "finishedBoundsSizeMM": [
+          0.6,
+          1.4
+        ],
+        "nativePin": "J2.SH4",
+        "nativeSlotSizeMM": [
+          0.6,
+          1.4
+        ],
+        "maxDimensionDifferenceMM": 0.0
+      }
+    },
+    {
+      "name": "Exactly4J2 plated slots routed not round-drilled",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "TOP mask278 actual pad/mechanical openings",
+      "pass": true,
+      "detail": 278
+    },
+    {
+      "name": "TOP stencil211 openings including DNP",
+      "pass": true,
+      "detail": 211
+    },
+    {
+      "name": "DNP R12.1 stencil disclosed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DNP R12.2 stencil disclosed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DNP R13.1 stencil disclosed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DNP R13.2 stencil disclosed",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "passed": 85,
+  "failed": [],
+  "issues": [
+    {
+      "id": "JK56-PARSER-PDFBOTTOM",
+      "kind": "PARSER_WARNING",
+      "warnings": [
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\J55_corrected_4L_TRAINING_NOT_FOR_FAB\\PDFBOTTOM.art:20 \"IR0*IPPOS*OFA0.00000B0.00000*MIA1B0*SFA1.00000B1.00000\": Deprecated MI (mirror image) statement found. This deprecated since rev. I1 (Dec 2012)."
+      ]
+    },
+    {
+      "id": "JK56-CAM-NPTH-COMMENT",
+      "kind": "INDEPENDENT_PARSER_COMPATIBILITY",
+      "detail": "Original Cadence NC tool table is global T05/T06; Holesize comments use local1/2. Gerbonara1.6.3 raises mismatching indices on comments. Raw files untouched; independent raw command parse and second parser with only metadata comments removed agree."
+    },
+    {
+      "id": "JK56-TEMPLATE-TEXT",
+      "kind": "EXPLICIT_TEMPLATE_OUTPUT_SCOPE",
+      "detail": "Original SKILTOP Film includes only PACKAGE GEOMETRY/SILKSCREEN_TOP, omits REF DES/SILKSCREEN_TOP. PDFTOP includes assembly REFDES but not COMPONENT VALUE/ASSEMBLY_TOP. Native three-text compliance does not prove those texts appear in template Gerber. Separate companion exports required; original01env untouched."
+    },
+    {
+      "id": "JK56-RELEASE",
+      "kind": "DESIGN_REMAINS_UNRELEASED",
+      "detail": "Seven GPIO joins pending, USB4/full-board DRC incomplete, original native log says DRC_OUT_OF_DATE. Gerber successful decode is not board signoff."
+    }
+  ],
+  "filmCount": 17,
+  "PTHCircleCount": 207,
+  "NPTHCircleCount": 6,
+  "slotCount": 4,
+  "contactSheet": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_CAM_J55\\4L\\ACTUAL_CAM_CONTACT_SHEET.png",
+  "visualReviewed": true,
+  "wholeBoardDRC": null,
+  "boardConnectionComplete": false,
+  "fourLayerRole": "LEGACY_L2_GND_L3_GND",
+  "unitsInput": "MM Gerber3.6 and NC3.4 explicitly, not guessed from filename",
+  "originalFilesEdited": false,
+  "visualQARecord": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\cam56_visual_qa.json"
+}

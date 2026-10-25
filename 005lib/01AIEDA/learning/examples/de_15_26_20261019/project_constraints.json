@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-19 Asia/Shanghai",
+  "status": "Teaching assumptions, not user product requirements or hardware signoff",
+  "MCU": "STM32F103C8T6",
+  "normal_supply": {
+    "input_V": [
+      9,
+      16
+    ],
+    "V3V3_load_max_A": 0.15,
+    "ambient_C": [
+      0,
+      40
+    ],
+    "header_combined_load_max_A": 0.01,
+    "external_GPIO_plus_header_load_max_A": 0.01,
+    "USB_VBUS": "sense+ESD only; must never connect to V5 or V3V3",
+    "no_external_backfeed": "SWD and headers are reference outputs only; probe Vtarget must sense, not power; TLV755 has no reverse blocking",
+    "current_budget_revision": "Final normal150mA/Ta0-40C supersedes initial120mA/Ta0-50C after MCU50mA+CAN60mA+external10mA leaves no pullup margin. Fault180mA not normal guarantee.",
+    "native_historical_L1_requirement": "L1 saved REQUIREMENTS still says covers nominal120mA as original design context; not inductor current rating. Actual Isat5.8A/Irms4.5A unchanged and final150mA load/thermal review controls. No native rerun needed."
+  },
+  "USB": {
+    "mode": "self-powered Full-Speed device; mutually exclusive with CAN",
+    "VBUS": "sense and ESD only; no board power/backfeed",
+    "bench_VBUS_min_V": 4.75
+  },
+  "CAN": {
+    "max_rate_bps": 500000,
+    "max_bench_cable_m": 1,
+    "bus_fault_outside_normal_budget": true
+  },
+  "I2C": {
+    "default_rate_Hz": 100000,
+    "conditional_max_Hz": 400000,
+    "total_C_max_pF": 100,
+    "baseline_R_ohm": 2200,
+    "ECO_R_ohm": 3300,
+    "note": "RC budget does not validate maximum bus timing; same ST datasheet table/footnote inconsistency retained"
+  },
+  "SPI": {
+    "rate_max_Hz": 1000000,
+    "bench_length_max_m": 0.1
+  },
+  "ADC": {
+    "input_V": [
+      0,
+      3.0
+    ],
+    "source_bandwidth_max_Hz": 1,
+    "source_R_max_ohm": 1000,
+    "rate_Hz": 100
+  },
+  "board": {
+    "outline_frozen": false,
+    "production_stackup_defined": false,
+    "actual_host_conductors": [
+      "TOP",
+      "BOTTOM"
+    ],
+    "unplaced": true
+  },
+  "pending": [
+    "GUI ERC/Apply SWP",
+    "hardware clock/ADC/USB/CAN tests",
+    "thermal/power-off/reverse-current/stability tests",
+    "final passive/connector MPN and exact land certification",
+    "PCB outline/placement/routing/manufacturing signoff"
+  ]
+}

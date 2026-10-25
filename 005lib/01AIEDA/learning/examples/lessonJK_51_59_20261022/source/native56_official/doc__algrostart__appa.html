@@ -1,0 +1,804 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html xmlns="http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Getting Started with Physical Design -- A</title>
+<META NAME="Approver" CONTENT="Technical Publications">
+<META NAME="Author" CONTENT="Technical Publications">
+<META NAME="CreateDate" CONTENT="2018-04-17">
+<META NAME="CreateTime" CONTENT="1523941070">
+<META NAME="DataType" CONTENT="Manuals">
+<META NAME="Description" CONTENT="Describes how to use Allegro PCB Editor, Allegro Package Designer, and System-in-Package tools.">
+<META NAME="DocTitle" CONTENT="Getting Started with Physical Design">
+<META NAME="DocType" CONTENT="User Guide">
+<META NAME="EdmsRelease" CONTENT="FM-Wiki-2.0_HF2">
+<META NAME="FileTitle" CONTENT="A">
+<META NAME="FileType" CONTENT="Chapter">
+<META NAME="Group" CONTENT="Allegro User Guide">
+<META NAME="Keyword" CONTENT="algrostart">
+<META NAME="Language" CONTENT="English">
+<META NAME="ModifiedDate" CONTENT="2018-04-17">
+<META NAME="ModifiedTime" CONTENT="1523941070">
+<META NAME="NextFile" CONTENT="appb.html">
+<META NAME="Order" CONTENT="2">
+<META NAME="PageCount" CONTENT="8">
+<META NAME="Platform" CONTENT="ALL">
+<META NAME="PrevFile" CONTENT="chap4.html">
+<META NAME="Product" CONTENT="Allegro PCB Editor, Cadence SiP Digital, Cadence SiP RF">
+<META NAME="ProductFamily" CONTENT="Silicon-Package-Board Co-Design, Silicon-Package-Board Co-Design, Silicon-Package-Board Co-Design">
+<META NAME="ProductVersion" CONTENT="17.2-2016">
+<META NAME="RightsManagement" CONTENT="Copyright 19912017 Cadence Design Systems Inc.">
+<META NAME="Title" CONTENT="Getting Started with Physical Design -- A">
+<META NAME="TopicTags" CONTENT="FALSE">
+<META NAME="Version" CONTENT="17.2-2016">
+  </head>
+  <body style="margin-left: 5%;">
+    <a name="pagetop"></a>
+    <a name="firstpage"></a>
+    <!-- Begin Buttons -->
+    <table width="650" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td height="36" width="650" colspan="10">
+          <img src="images/header_doc.gif" width="650" height="34">
+        </td>
+      </tr>
+      <tr>
+        <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+
+                </td>
+<td height="20" width="73">
+<a href="algrostartTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+
+        <td>
+          <a href="chap4.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+        </td>
+        <td>
+          <a href="appb.html"><img src="images/nav_next.gif" alt="Next" border="0"></a>
+        </td>
+        <td height="20">
+          <a>
+<a href="algrostart.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+
+          </a>
+        </td>
+        <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+
+        </td>
+        <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+
+        </td>
+        <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+
+        </td>
+        <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+
+        </td>
+      </tr>
+    </table>
+    <!-- End Buttons -->
+    <p>
+    <hr>
+    <p>
+      <h3>
+        <center>
+          <font >
+            <div>Allegro&#174; User Guide: Getting Started with Physical Design</div>
+            <font >
+              <div>Product Version 17.2&#45;2016 April 2016</div>
+            </font>
+          </font>
+        </center>
+      </h3>
+      <br>
+    </p>
+    <div>
+      <h1>A<a name="1032615">&nbsp;</a></h1>
+      <h1><a name="1033473">Configuration</a></h1>
+      <p><a name="1033478">This appendix explains how to configure the Allegro layout editors after you install the Cadence software. For additional information, see the "What's New" document. </a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1033086" title="A" name="1032640"><font color="#0000ff"><u>UNIX&#45;Based Installation Directory Information and Troubleshooting</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.872">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.128319999999995">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1035569" title="A" name="1032644"><font color="#0000ff"><u>Files That Reference the Installation Directory</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.872">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.128319999999995">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1033109" title="A" name="1032648"><font color="#0000ff"><u>Checking File References to the Installation Directory</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.872">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.128319999999995">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1033118" title="A" name="1032652"><font color="#0000ff"><u>Automatically Correcting Installation Directory References</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1033179" title="A" name="1032656"><font color="#0000ff"><u>Windows&#45;Based Installation Directory Information</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1033182" title="A" name="1032660"><font color="#0000ff"><u>Licensing Issues ­</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1033238" title="A" name="1032676"><font color="#0000ff"><u>Compatibility for Libraries and Designs</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1034818" title="A" name="1032728"><font color="#0000ff"><u>IBM DFS</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1033086">UNIX&#45;Based Installation Directory Information and Troubleshooting</a></h2>
+      <p><a name="1033087">After you install Cadence software, configuration files are modified to reference the installation directories you specified during installation. This section describes:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1034388">The files that reference installation directories include</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033089">How to verify the files are edited correctly</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033090">A sample </a>cshrc file</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033091">A sample </a>profile file</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033092">How to automatically edit incorrect references</a></td>
+          </tr>
+        </table>
+      </div>
+      <h3><a name="1035569">Files That Reference the Installation Directory</a></h3>
+      <p><a name="1035570">When you install the layout editor using </a>softload, the following files are automatically edited to reference the installation directory you specified during softload:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033096">&#60;install_dir&#62;&#47;tools&#47;pcb&#47;bin&#47;cshrc</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033097">&#60;install_dir&#62;&#47;tools&#47;pcb&#47;bin&#47;profile</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1033098">where </a>&#60;install_dir&#62; is the actual installation directory you specified during softload. For example, &#60;install_dir&#62; could be &#47;usr&#47;cds, as in the following example:</p>
+      <p align="left"><a name="1033518"><img src="images/appa.08.1.1.png" width="663" height="64" alt=""><br></a></p>
+      <h3><a name="1033109">Checking File References to the Installation Directory</a></h3>
+      <p><a name="1033110">If you have problems running the layout editor after installation, verify that the following variables correctly reference the installation directory: </a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033111">In the </a>&#60;install_dir&#62;&#47;tools&#47;pcb&#47;bin&#47;cshrc file</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1033112">set CDS_ROOT = &#60;</a>install_dir&#62;</blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033113">In the </a>&#60;install_dir&#62;&#47;tools&#47;pcb&#47;bin&#47;profile file</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1033114">CDS_ROOT=</a>&#60;install_dir&#62;</blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033115">In the </a>&#60;install_dir&#62;&#47;tools&#47;pcb&#47;text&#47;<font color="#000000"><em>Allegro&#47;APDH</em></font>elp file, many variables reference the installation directory.</td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1033116">If the </a>cshrc, profile, and Allegro&#47;APDHelp files contain incorrect references to the installation directory, you can edit them individually, or run the setup_Allegro&#47;APD script to automatically correct all three files, as described in the following section.</p>
+      <h3><a name="1033118">Automatically Correcting Installation Directory References</a></h3>
+      <p><a name="1033119">During</a> installation, the setup_Allegro script saves the original versions of the cshrc, profile, and Allegro&#47;APDHelp files in their respective directories. These original files have the extension .<font size="2" face="'Courier New'" color="#000000">fcs</font></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033120"><font size="2" face="'Courier New'" color="#000000">&#60;install_dir&#62;&#47;tools&#47;pcb&#47;bin&#47;cshrc.fcs</font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033121"><font size="2" face="'Courier New'" color="#000000">&#60;install_dir&#62;&#47;tools&#47;pcb&#47;text&#47;profile.fcs</font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033122"><font size="2" face="'Courier New'" color="#000000">&#60;install_dir&#62;&#47;tools&#47;pcb&#47;text&#47;Allegro&#47;APDHelp.fcs</font></a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1033123">The </a>setup_Allegro&#47;APD script edits these original versions to create the following files:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033124"><font size="2" face="'Courier New'" color="#000000">tools&#47;pcb&#47;bin&#47;cshrc</font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033125"><font size="2" face="'Courier New'" color="#000000">tools&#47;pcb&#47;text&#47;profile</font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033126"><font size="2" face="'Courier New'" color="#000000">tools&#47;pcb&#47;text&#47;Allegro&#47;APDHelp</font></a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1033127">Do not edit the original </a><font size="2" face="'Courier New'" color="#000000">.fcs</font> files.The setup_Allegro&#47;APD script does not run correctly if these files have been modified. You can, however, edit the resulting cshrc, profile or Allegro&#47;APDHelp files.</p>
+      <p><a name="1033128">To use </a>setup_Allegro&#47;APD to place the correct install_dir directory references in the cshrc, profile and Allegro&#47;APDHelp files:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1033129">Change directories to the installation directory:</a></td>
+          </tr>
+        </table>
+      </div>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033130">&nbsp;&nbsp;&nbsp;&nbsp;cd &#60;</a><em>install_dir</em>&#62;</font>
+      </p>
+      <blockquote><a name="1033131">The installation directory is the directory immediately above the </a>tools directory. </blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1033132">Type </a></td>
+          </tr>
+        </table>
+      </div>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033133">&nbsp;&nbsp;&nbsp;&nbsp;tools&#47;pcb&#47;bin&#47;setup_Allegro&#47;APD &#60;</a><em>platform</em>&#62; [&#60;<em>path</em>&#62;]</font>
+      </p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="197.78303999999997">
+              <div>
+                <nobr>where platform is one of the following platform specifications:</nobr>
+              </div>
+            </td>
+            <td><a name="1033134">&nbsp;</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033136">sun4v&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sun Sparc running Solaris</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033504">hppa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HP Precision Architecture running HP&#45;UX</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033503">ibmrs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IBM rs6000 running AIX</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033502">wint&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows NT (Intel)</a></font>
+      </blockquote>
+      <p><a name="1033137">path </a>Is the path to the specified install directory, install_dir. This enables you to run the layout editor from a directory other than the one where the layout editor is installed. If not specified, install_dir defaults to the current working directory.</p>
+      <p><a name="1033139">For example, if your administrator installed the layout editor on </a></p>
+      <blockquote><a name="1033140">AServer:&#47;cds&#47;9504</a></blockquote>
+      <p><a name="1033141">and you have Network Filesystem (NFS) mounted the installation directory on your workstation as </a></p>
+      <blockquote><a name="1033142">Yourworkstation:&#47;usr&#47;cds</a></blockquote>
+      <p><a name="1033143">the paths in the installation directory references the path <br></a>&#47;cds&#47;9402 rather than your local path of &#47;usr&#47;cds. Portions of the Allegro software do not run correctly unless your local path to the software matches the path specified in the configuration files.</p>
+      <p><a name="1033144">To resolve this, do one of the following:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033145">Mount the server directories on your workstation just as they are installed on the server.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+<blockquote>        <font color="#000000"><a name="1033146">	mount AServer:&#47;cds&#47;9504 &#47;cds&#47;9504</a></font></blockquote>
+      </blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033147">Create a symbolic link on your workstation that points from the installation directory to your local NFS mount point.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+<blockquote>        <font color="#000000"><a name="1033148">	ln &#45;s &#47;usr&#47;cds &#47;cds&#47;9504</a></font></blockquote>
+      </blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033149">Have your administrator modify the configuration files on the server to match the directory paths on your workstation.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1033150">On the host where the software is installed (</a>AServer), change directories to &#47;cds&#47;9504 and enter the following command:</blockquote>
+      <p align="left"><a name="1033537"><img src="images/appa.08.1.2.png" width="571" height="50" alt=""><br></a></p>
+      <blockquote><a name="1033162">The default working directory for the</a> install_dir becomes <br>&#47;usr&#47;cds.</blockquote>
+      <h4><a name="1033163">Example cshrc File</a></h4>
+      <p><a name="1033164">The following is a sample of the </a>tools&#47;pcb&#47;bin&#47;cshrc file configured for an install_dir specified as &#47;usr&#47;cds.</p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033165">set CDS_ROOT = &#47;usr&#47;cds </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033505">set TOOLSDIR = $CDS_ROOT&#47;tools</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033166">setenv ALGROPATH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$TOOLSDIR&#47;pcb&#47;bin</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033167">set path = (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$TOOLSDIR&#47;bin \</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033507">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ALGROPATH \</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033508">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$path )</a></font>
+      </blockquote>
+      <h4><a name="1033168">Example profile File</a></h4>
+      <p><a name="1033169">To use a sample local </a>profile file (~&#47;.profile)</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/arrwrite.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1033170">At the Korn Shell command line, type</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033171">CDS_ROOT=&#47;usr&#47;cds</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033172">TOOLSDIR=$CDS_ROOT&#47;tools</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033173">ALGROPATH=$TOOLSDIR&#47;pcb&#47;bin</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033175">PATH=$TOOLSDIR&#47;bin:$ALGROPATH:$PATH;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033513">export PATH</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1033516">&nbsp;</a></font>
+      </blockquote>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1033177">Do not set the </a>TELENV variable if you use the standard Cadence installation hierarchy.</p>
+      <h3><a name="1034166">Displaying UI Dialog Boxes Correctly</a></h3>
+      <p><a name="1034167">If the secondary (child) dialog boxes disappear behind the main UI of the layout editor, you need to modify the window manager to keep child windows on top.</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1034170">For HP and AIX</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1034171">The typical window manager default configuration is </a></blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1034174">secondariesOnTop:True</a></font>
+      </blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1034175">For Solaris</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1034178">The typical window manager default configuration is </a></blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1034176">secondariesOnTop:False</a></font>
+      </blockquote>
+      <p><a name="1034188">If you run CDE, add the following to your ~&#47; .Xdefaults file</a></p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1034189">DTwm*secondariesOnTop:True</a></font>
+      </blockquote>
+      <p><a name="1034190">If you want to restrict this behavior to certain programs, add the following to your ~&#47; .Xdefaults file</a></p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1034191">DTwm*&#60;program&#62;*secondariesOnTop:True</a></font>
+      </blockquote>
+      <p><a name="1034196">For example:</a></p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1034197">DTwm*Allegro*secondariesOnTop:True</a></font>
+      </blockquote>
+      <p><a name="1034206">Add an entry to the file for each program. When finished, restart the window manager.</a></p>
+      <h2><a name="1033179">Windows&#45;Based Installation Directory Information</a></h2>
+      <p><a name="1033180">The Allegro software directory structure for Windows is identical to that on UNIX platforms. However, Windows does not install </a>chsrc or profile files. </p>
+      <h2><a name="1033182">Licensing Issues ­</a></h2>
+      <p><a name="1034146">For detailed information on licensing Cadence products for Unix and Windows environments, see the installation manual that accompanies the CD&#45;ROM.</a></p>
+      <h2><a name="1033238">Compatibility for Libraries and Designs</a></h2>
+      <h3><a name="1033240">Symbol Library and Padstacks</a></h3>
+      <p><a name="1033241">All library symbols created with previous releases of Allegro software are compatible with this release. Before loading the generic library, be sure that customized component symbols are not in the same directory in which you load the layout editor. </a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <strong><em><img src="images/caution.gif" alt="ParagraphBullet" border="0"></em></strong>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <strong><em><a name="1033242">Loading this generic the layout editor library overwrites the symbol library. The CAE libraries will not be affected. Before using any the layout editor library symbols, carefully review them to ensure that they meet your physical design criteria.</a></em></strong>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1034818">IBM DFS</a></h2>
+      <p><a name="1034819">Distributed File System (DFS) is an IBM networking protocol. Before Release 10.0, databases could become corrupted if the volume that contained the database became full during the database save. This corruption was due to a deficiency in DFS, not the layout editor.</a></p>
+      <p><a name="1033322">Starting in Release 10.0, the editor detects that a volume is DFS and takes appropriate action to ensure the database is written correctly. Unfortunately, this means that writing databases across the network takes about twice as long as in pre&#45;10.0 versions because the editor verifies the data as it is written to disk. Database reads are not affected.</a></p>
+      <p><a name="1033323">You can disable this DFS safety feature by setting the </a><font size="2" face="'Courier New'" color="#000000">afs_nosync</font> environment variable. With this variable set, databases save as fast as in previous releases, but the file write safety check is not performed.</p>
+      <p><a name="1033324">By default, this additional checking takes place automatically as long as the system uses the standard "&#47;dfs" naming convention.</a></p>
+    </div>
+    <br>
+    <a href="#pagetop">Return to top of page</a>
+    <hr>
+    <hr align="left">
+    <div style="text-align: left;">
+      <!-- Begin Buttons -->      <table width="650" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+
+                    </td>
+<td height="20" width="73">
+<a href="algrostartTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+
+          <td>
+            <a href="chap4.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+          </td>
+          <td>
+            <a href="appb.html"><img src="images/nav_next.gif" alt="Next" border="0"></a>
+          </td>
+          <td>
+            <a>
+<a href="algrostart.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+
+            </a>
+          </td>
+          <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+
+          </td>
+          <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+
+          </td>
+          <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+
+          </td>
+          <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+
+          </td>
+        </tr>
+      </table>
+      <!-- End Buttons -->
+    </div>
+    <br>
+    <font size="-1" >
+For support, see <a href="http://support.cadence.com" target="_blank">Cadence Online Support</a> service.</font>
+    <br>
+    <br>
+    <font size="-1" >
+      <i>Copyright &#169; 2017, <a href="http://www.cadence.com">Cadence Design Systems, Inc.</a></i>
+    </font>
+    <br>
+    <font size="-1" >
+All rights reserved.</font>
+    <br>
+    <br>
+  </body>
+</html>

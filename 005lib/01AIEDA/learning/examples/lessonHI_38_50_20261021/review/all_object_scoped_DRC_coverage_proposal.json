@@ -1,0 +1,54 @@
+{
+  "status": "OFFICIAL_API_COVERAGE_DESIGN_ONLY_NOT_EXECUTED_NO_MODE_CHANGES",
+  "sources": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\source\\api_scoped_coverage\\manifest.json",
+  "keySemantics": {
+    "axlDRCItem(nil,objectOrUniqueList)": "nil selects numericcount. DoesnotdisableDRC. Anydbidexceptdesign acceptedbypublishedcontract; currentmaster/domainmodes govern. Runtime nil result meanserror, notzero.",
+    "axlDRCItem(t,objects)": "t selects DRCobjectlist, notbatchallchecks. Waived/duplicate suppression canmakefewer markers thannumericcount.",
+    "axlDRCUpdate(nil)": "Entire-design interactive-on checks, notjustanobjectcountformat.",
+    "axlDRCUpdate(t)": "Entire-design onplusbatch-only checks; finalgoldrequest remains mandatory.",
+    "axlDRCGetCount()": "Canbeoutofdate; never proof ofrecomputation.",
+    "axlDBCheck": "Database integrity/consistency check, notsubstitute forspacing/electrical/designDRC."
+  },
+  "proposedScopesInSeparateObservedStages": [
+    {
+      "name": "NETS_69",
+      "objects": "All69 actualrealnets, uniqueDBIDs, includesunconnected; exclude6NCpseudonetsbuttheirpins checkedbelow.",
+      "risk": "Electrical/DP checking maystill invoke solver; scopeisnotanapprovedsolver bypass."
+    },
+    {
+      "name": "COMPONENTS_SYMBOLS",
+      "objects": "80components andeveryactualplaced symbols includingstandalone mechanicalNPTHmountings, dedupDBID.",
+      "boundary": "Nativeanydbidcontract supportsinputtype; observedcount0 alone doesnotproveeverydesignwidecheckhasrun."
+    },
+    {
+      "name": "ALL_PHYSICAL_PINS_AND_VIAS",
+      "objects": "272 electricalpins+6 realNPTH mechanicalpins=278 uniquephysicalpinobjects; allactualviaobjects, notjustnamednetmembers. Includeactualempty-numberJ2pins.",
+      "boundary": "DedupbyDBID beforecalling; NPTHnotgroundconnections; matrixsame-net/hole rules depend oncurrentmodes."
+    },
+    {
+      "name": "ROUTES_SHAPES",
+      "objects": "Allactualclineparents thenactualETCHshapes/staticquiet/dynamicBOUNDARYmothers separately; retainmanual/thermal/generationrolecounts.",
+      "boundary": "Geometry/shapeparentIDs dedup; no treatingmotherbboxasfilledcopper. Checks mayoverlap netscope; neversumcountsasuniquetotal."
+    },
+    {
+      "name": "BOARD_MECHANICAL_AND_CONSTRAINT_OBJECTS",
+      "objects": "ActualDESIGN_OUTLINE/keepinRoute/keepinPlace roots, route/packagekeepouts andconstraintregiongeometry ifsupported; neverpassdesignrootitself.",
+      "boundary": "Explicitlyrecordnil/unsupported/inputtypes. Component/shapechecks do not establishcoverageforallentiredesign/batch-only rules."
+    }
+  ],
+  "requiredEvidence": [
+    "SourceSHA before/after, readonly/newdisposabletaskcopyonly; noSave.",
+    "Before/after unchanged masterDRC plusDesign/Physical/Spacing/Electrical/SameNetmode snapshots; printon/off/batch separately.",
+    "Allobjecttypedinventory withuniqueDBID, physicalidentity/geometricselector andexpectedcount; logeachstage BEGIN/END/return/markers/time.",
+    "Existingwaiver/externalDRC state disclosed; no waive/deletecheckmarker as remediation.",
+    "Strict physicalpositive challenges can establishactualwidth/spacing/keepout applicability inaseparateunsavedtransaction but cannotproveeveryunviolatedrulechecked.",
+    "Ifastagehangs itremainsINCOMPLETE; ownedprocesshandlingfollowsloggedPID/start/exe/SHAprotection. Otherstagesmayprovidebounded independent evidence butcannotrelabelfailedstagepass.",
+    "Finalcompleteboard still genuinefresh axlDRCUpdate(t); ifblocked reportwholeBoardDRC=null andlistbatch-only/global/external/not-onchecks gaps."
+  ],
+  "notClaimed": [
+    "Allobjectscopedchecks areNOTequivalenttoentiredesign onplusbatchchecks.",
+    "NoAPIargumenttodomain-filter axlDRCItem wasfoundinrevieweddocument. NoElectricalModeOff workaround proposed/applied.",
+    "Doesnotcertifyunknownpartheight/assembly/fabrication/USBimpedance/PI/SI/EMI."
+  ],
+  "fallbackLabel": "SCOPED_UNIQUE_OBJECT_CHECKS_WITH_CURRENT_MODES_COMPLETED_WHOLE_BOARD_BATCH_CHECK_PENDING"
+}

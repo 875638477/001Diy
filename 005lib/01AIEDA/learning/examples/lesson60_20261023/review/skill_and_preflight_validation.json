@@ -1,0 +1,127 @@
+{
+  "skillValidator": {
+    "path": "C:\\Users\\Administrator\\.codex\\skills\\.system\\skill-creator\\scripts\\quick_validate.py",
+    "sha256": "6068513D924ED3559E186DFCDEAD7439129828DCF402167FD925C06DFFBF2806",
+    "passed": true,
+    "message": "Skill is valid!",
+    "yamlSource": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\tooling\\pyyaml_6_0_3"
+  },
+  "preflightBehaviorChecks": [
+    {
+      "case": "current",
+      "command": [
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\tools\\python_3_14_0\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\skills\\cadence17-learning\\scripts\\preflight.py",
+        "--root",
+        "D:\\001DIY\\005lib\\01AIEDA",
+        "--cadence-root",
+        "C:\\Program0\\Cadence\\SPB172"
+      ],
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "matched": true,
+      "result": {
+        "status": "LEARNING_FILES_AND_FIXED_FIXTURE_CHECKED",
+        "root": "D:\\001DIY\\005lib\\01AIEDA",
+        "pythonVersion": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+        "requiredFiles": [
+          {
+            "relative": "EDA.md",
+            "exists": true
+          },
+          {
+            "relative": "课程索引.md",
+            "exists": true
+          },
+          {
+            "relative": "learning/notes/pcb_layer_naming.md",
+            "exists": true
+          },
+          {
+            "relative": "learning/notes/package_defaults.md",
+            "exists": true
+          }
+        ],
+        "historicalFixture": {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\4L\\JK_4L_L2_GND_L3_V3V3_STACK_TRAINING_NOT_RELEASED.brd",
+          "expectedSHA256": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+          "actualSHA256": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+          "matched": true
+        },
+        "cadenceInventory": {
+          "configured": true,
+          "allegroExeExists": true,
+          "captureExeExists": true,
+          "installationRoot": "C:\\Program0\\Cadence\\SPB172"
+        },
+        "nativeExecution": "NOT_TESTED_BY_PREFLIGHT",
+        "license": "NOT_TESTED_BY_PREFLIGHT",
+        "GUI": "NOT_TESTED_BY_PREFLIGHT",
+        "secondPhysicalComputer": "NOT_TESTED",
+        "readOnly": true
+      },
+      "stderr": ""
+    },
+    {
+      "case": "absent_root",
+      "command": [
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\tools\\python_3_14_0\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\skills\\cadence17-learning\\scripts\\preflight.py",
+        "--root",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\review\\no_such_learning_root",
+        "--cadence-root",
+        "C:\\Program0\\Cadence\\SPB172"
+      ],
+      "exitCode": 2,
+      "expectedExitCode": 2,
+      "matched": true,
+      "result": {
+        "status": "LEARNING_INPUTS_MISSING_OR_DIFFERENT",
+        "root": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\review\\no_such_learning_root",
+        "pythonVersion": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+        "requiredFiles": [
+          {
+            "relative": "EDA.md",
+            "exists": false
+          },
+          {
+            "relative": "课程索引.md",
+            "exists": false
+          },
+          {
+            "relative": "learning/notes/pcb_layer_naming.md",
+            "exists": false
+          },
+          {
+            "relative": "learning/notes/package_defaults.md",
+            "exists": false
+          }
+        ],
+        "historicalFixture": {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\review\\no_such_learning_root\\learning\\examples\\lessonJK_51_59_20261022\\native\\4L\\JK_4L_L2_GND_L3_V3V3_STACK_TRAINING_NOT_RELEASED.brd",
+          "expectedSHA256": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+          "actualSHA256": null,
+          "matched": false
+        },
+        "cadenceInventory": {
+          "configured": true,
+          "allegroExeExists": true,
+          "captureExeExists": true,
+          "installationRoot": "C:\\Program0\\Cadence\\SPB172"
+        },
+        "nativeExecution": "NOT_TESTED_BY_PREFLIGHT",
+        "license": "NOT_TESTED_BY_PREFLIGHT",
+        "GUI": "NOT_TESTED_BY_PREFLIGHT",
+        "secondPhysicalComputer": "NOT_TESTED",
+        "readOnly": true
+      },
+      "stderr": ""
+    }
+  ],
+  "passed": true,
+  "nativeRunImplied": false
+}

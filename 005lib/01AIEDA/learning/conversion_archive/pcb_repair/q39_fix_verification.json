@@ -1,0 +1,82 @@
+﻿{
+    "schema_version":  1,
+    "verification":  "Native read-only Capture Dbo audit of copied derivative DSN compared against native original audit",
+    "source_dsn":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\lga1700_pcb_repair_20261023\\inputs\\LGA1700.DSN",
+    "derivative_dsn":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\lga1700_pcb_repair_20261023\\sch_name_fix\\LGA1700.DSN",
+    "source_audit_input_matches_source":  true,
+    "native_audit_exit_code":  0,
+    "before":  {
+                   "pages":  35,
+                   "instances":  1131,
+                   "pins":  6608,
+                   "wires":  8613,
+                   "offpages":  0
+               },
+    "after":  {
+                  "pages":  35,
+                  "instances":  1131,
+                  "pins":  6608,
+                  "wires":  8613,
+                  "offpages":  0
+              },
+    "pages_table_identical":  true,
+    "pages_table_differences":  [
+
+                                ],
+    "pins_table_identical":  true,
+    "pins_table_differences":  [
+
+                               ],
+    "instance_field_differences":  [
+                                       {
+                                           "page":  "5V_DUAL",
+                                           "reference":  "Q39",
+                                           "full_reference":  "Q39",
+                                           "field":  "footprint",
+                                           "before":  "SOT-23-3_L2_9-W1_3-P1_90-LS2_4-BR",
+                                           "after":  "OT-23-3_L2_9-W1_3-P1_90-LS2_1"
+                                       }
+                                   ],
+    "only_expected_Q39_footprint_changed":  true,
+    "q39_original_footprint_preserved":  true,
+    "q39_metadata":  [
+                         {
+                             "page":  "5V_DUAL",
+                             "full_reference":  "Q39",
+                             "footprint":  "OT-23-3_L2_9-W1_3-P1_90-LS2_1",
+                             "AD_ORIGINAL_PCB_FOOTPRINT":  "SOT-23-3_L2_9-W1_3-P1_90-LS2_4-BR"
+                         }
+                     ],
+    "dsn_hashes_unchanged_by_audit":  true,
+    "dsn_hash_checks":  [
+                            {
+                                "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\lga1700_pcb_repair_20261023\\inputs\\LGA1700.DSN",
+                                "before_sha256":  "9C9FED5B55D65CFB9F20CFE14719DCB79CCC97A540D6A646ED449924EB67FD92",
+                                "after_sha256":  "9C9FED5B55D65CFB9F20CFE14719DCB79CCC97A540D6A646ED449924EB67FD92",
+                                "unchanged":  true
+                            },
+                            {
+                                "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\lga1700_pcb_repair_20261023\\sch_name_fix\\LGA1700.DSN",
+                                "before_sha256":  "EDC47FAC18E63FB4D408915500CB4953B7F1AC85D6B40F04717F7AD9C663D902",
+                                "after_sha256":  "EDC47FAC18E63FB4D408915500CB4953B7F1AC85D6B40F04717F7AD9C663D902",
+                                "unchanged":  true
+                            },
+                            {
+                                "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\lga1700_pcb_repair_20261023\\sch_name_fix_audit\\input\\LGA1700.DSN",
+                                "before_sha256":  "EDC47FAC18E63FB4D408915500CB4953B7F1AC85D6B40F04717F7AD9C663D902",
+                                "after_sha256":  "EDC47FAC18E63FB4D408915500CB4953B7F1AC85D6B40F04717F7AD9C663D902",
+                                "unchanged":  true
+                            }
+                        ],
+    "passed":  true,
+    "scope_limits":  [
+                         "Tables cover page counts, instance identity/value/footprint/location, pin number/name/NC/net/location, per-page wire counts and off-page connector counts.",
+                         "Wire geometry and unsampled properties were not compared; no claim of a full binary semantic diff.",
+                         "No DSN save or property setter was invoked by the audit. Native audit ran on an isolated copied derivative DSN."
+                     ],
+    "evidence":  {
+                     "original_audit":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\lga1700_pcb_repair_20261023\\sch_audit",
+                     "derivative_audit":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\lga1700_pcb_repair_20261023\\sch_name_fix_audit",
+                     "derivative_native_result":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\lga1700_pcb_repair_20261023\\sch_name_fix_audit\\audit_result.tcldict"
+                 }
+}

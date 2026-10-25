@@ -1,0 +1,1000 @@
+{
+  "status": "PARTIAL_CANDIDATE_REQUIRES_ENGINEERING_CORRECTION",
+  "batchId": "root_service_longs_2L_v13",
+  "variant": "2L",
+  "sourceExpectedSHA256": "24DDF112FFCC9B7A8F44401B406BBBCEC7523B3A5F42E73A816A7D3349BCF602",
+  "sourceNativeLog": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_SPI_external_2L_b012_stored_only",
+  "requiredFutureSourcePlans": [
+    {
+      "path": "engineering_mcu/plans/GPIO_north_joint_fanout_02.json",
+      "sha256": "02c08daaa4ade31a98001e681012a0c879cabf719b88b914d023c95f320ae714"
+    },
+    {
+      "path": "engineering_mcu/plans/GPIO_south_joint_fanout_05.json",
+      "sha256": "123804b3d22d936ab6daa56cda39d5b35c000cd94588c951d5461becefb915aa"
+    },
+    {
+      "path": "engineering_mcu/plans/GPIO_left_joint_fanout_04.json",
+      "sha256": "5e300afd66a4bc364cbd9b440b4b0c8983547d61e29d9c0d0321af55cbbd53dc"
+    },
+    {
+      "path": "engineering_power/RIGHT10_source_joint_v2.json",
+      "sha256": "bb13390baf184320b02d55b8aef43d4c25df20ed443f17dc5a6ed5d99a509d47"
+    },
+    {
+      "path": "plans/ordinary_remote_2L_v8.json",
+      "sha256": "8065a92b9c3ed255c8421b768024afcf8a16158c6fd7a686540fcc510a533389"
+    },
+    {
+      "path": "plans/aux_remote_2L_v9.json",
+      "sha256": "a053ac2500b34e70a06b98e319540c45a7ec5182430e03af78ecd2b6b5a92af4"
+    },
+    {
+      "path": "plans/CC_entry_2L_v4.json",
+      "sha256": "e1df8f645fc224a0ea9431b6423bd1e76c3550bc423815ff2e70d8fc2ca7ef2f"
+    },
+    {
+      "path": "plans/VBUS_entry_2L_v3.json",
+      "sha256": "18c6fb1a159771bbe637f526d2d20d8719e052dd3acfc225238906ee5bf4fdec"
+    },
+    {
+      "path": "plans/USB_aux_returns_2L_03.json",
+      "sha256": "0884db2a173b63f9f55ccdf0ace018b00ceb2bd42bf31c25a9910dfe03dbaebb"
+    }
+  ],
+  "requiredPlacementChanges": [
+    {
+      "ref": "R16",
+      "xy": [
+        36.9016,
+        19.9
+      ],
+      "rotation": 180,
+      "purpose": "Free south GPIO/UART fanout window while preserving 33R electrical identity; pin1(36.8,19.9),pin2(35.2252,19.9)."
+    },
+    {
+      "ref": "C13",
+      "xy": [
+        34.0,
+        22.4984
+      ],
+      "rotation": 90,
+      "purpose": "Move +.6X/-1.1Y to release leftGPIO bank while preserving direct TOP cap loops; VDD leg slightly longer, VSS leg shorter, total loop length modestly reduced."
+    },
+    {
+      "ref": "C15",
+      "xy": [
+        47.3,
+        30.4016
+      ],
+      "rotation": 270,
+      "purpose": "Free PB8/PB9 source copper, maintain local direct VDD/VSS loop"
+    },
+    {
+      "ref": "R28",
+      "xy": [
+        53,
+        28
+      ],
+      "rotation": 180,
+      "purpose": "BOOT0 pulldown removes old ground pad/thermal obstruction from PB5 fanout"
+    }
+  ],
+  "operations": [
+    {
+      "type": "via",
+      "id": "HI_2L_PA10_UART_RX_1_V1",
+      "net": "PA10_UART_RX",
+      "xy": [
+        44.9,
+        20.5
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_PA10_UART_RX_1_R1",
+      "net": "PA10_UART_RX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.0,
+          20.5
+        ],
+        [
+          44.9,
+          20.5
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_PA10_UART_RX_1_R2",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          44.9,
+          20.5
+        ],
+        [
+          47.1,
+          20.5
+        ],
+        [
+          50.1,
+          23.5
+        ],
+        [
+          50.1016,
+          23.5
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "via",
+      "id": "HI_2L_PA9_UART_TX_1_V1",
+      "net": "PA9_UART_TX",
+      "xy": [
+        35.4,
+        18.95
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_PA9_UART_TX_1_R1",
+      "net": "PA9_UART_TX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39.7,
+          21.7
+        ],
+        [
+          41.05,
+          21.7
+        ],
+        [
+          41.4,
+          22.05
+        ],
+        [
+          44.35,
+          22.05
+        ],
+        [
+          45.55,
+          20.85
+        ],
+        [
+          45.55,
+          20.15
+        ],
+        [
+          44.0,
+          18.6
+        ],
+        [
+          35.75,
+          18.6
+        ],
+        [
+          35.4,
+          18.95
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_PA9_UART_TX_1_R2",
+      "net": "PA9_UART_TX",
+      "layer": "TOP",
+      "points": [
+        [
+          35.4,
+          18.95
+        ],
+        [
+          35.55,
+          18.95
+        ],
+        [
+          35.75,
+          19.15
+        ],
+        [
+          36.05,
+          19.15
+        ],
+        [
+          36.8,
+          19.9
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "via",
+      "id": "HI_2L_USB_ATTACH_N_1_V1",
+      "net": "USB_ATTACH_N",
+      "xy": [
+        43.55,
+        22.7
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "via",
+      "id": "HI_2L_USB_ATTACH_N_1_V2",
+      "net": "USB_ATTACH_N",
+      "xy": [
+        46.15,
+        21.15
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_USB_ATTACH_N_1_R1",
+      "net": "USB_ATTACH_N",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39.0,
+          21.2
+        ],
+        [
+          39.1,
+          21.3
+        ],
+        [
+          39.1,
+          21.95
+        ],
+        [
+          39.85,
+          22.7
+        ],
+        [
+          43.55,
+          22.7
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_USB_ATTACH_N_1_R2",
+      "net": "USB_ATTACH_N",
+      "layer": "TOP",
+      "points": [
+        [
+          43.55,
+          22.7
+        ],
+        [
+          44.6,
+          22.7
+        ],
+        [
+          46.15,
+          21.15
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_USB_ATTACH_N_1_R3",
+      "net": "USB_ATTACH_N",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.15,
+          21.15
+        ],
+        [
+          47.05,
+          20.25
+        ],
+        [
+          47.05,
+          17.95
+        ],
+        [
+          48.7,
+          16.3
+        ],
+        [
+          50.8,
+          16.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_USB_ATTACH_N_1_R4",
+      "net": "USB_ATTACH_N",
+      "layer": "TOP",
+      "points": [
+        [
+          50.8,
+          16.3
+        ],
+        [
+          50.8,
+          16.55
+        ],
+        [
+          50.2,
+          17.15
+        ],
+        [
+          50.2,
+          17.2
+        ],
+        [
+          50.1764,
+          17.2
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "via",
+      "id": "HI_2L_UART_TX_1_V1",
+      "net": "UART_TX",
+      "xy": [
+        59.45,
+        12.45
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_UART_TX_1_R1",
+      "net": "UART_TX",
+      "layer": "TOP",
+      "points": [
+        [
+          35.2252,
+          19.9
+        ],
+        [
+          35.25,
+          19.9
+        ],
+        [
+          35.25,
+          19.8
+        ],
+        [
+          34.15,
+          18.7
+        ],
+        [
+          34.15,
+          6.25
+        ],
+        [
+          37.35,
+          3.05
+        ],
+        [
+          42.9,
+          3.05
+        ],
+        [
+          45.75,
+          5.9
+        ],
+        [
+          54.45,
+          5.9
+        ],
+        [
+          59.45,
+          10.9
+        ],
+        [
+          59.45,
+          12.45
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_UART_TX_1_R2",
+      "net": "UART_TX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          59.45,
+          12.45
+        ],
+        [
+          61.85,
+          14.85
+        ],
+        [
+          61.85,
+          15.1
+        ],
+        [
+          73.0,
+          26.25
+        ],
+        [
+          74.0,
+          26.25
+        ],
+        [
+          74.0,
+          26.27
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_UART_RX_1_R1",
+      "net": "UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          51.6764,
+          23.5
+        ],
+        [
+          66.6,
+          23.5
+        ],
+        [
+          68.1,
+          25.0
+        ],
+        [
+          68.1016,
+          25.0
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "via",
+      "id": "HI_2L_CAN_RXD_1_V1",
+      "net": "CAN_RXD",
+      "xy": [
+        61.45,
+        9.65
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "via",
+      "id": "HI_2L_CAN_RXD_1_V2",
+      "net": "CAN_RXD",
+      "xy": [
+        34.85,
+        12.65
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_CAN_RXD_1_R1",
+      "net": "CAN_RXD",
+      "layer": "TOP",
+      "points": [
+        [
+          64.0,
+          12.19
+        ],
+        [
+          64.0,
+          12.2
+        ],
+        [
+          61.45,
+          9.65
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_CAN_RXD_1_R2",
+      "net": "CAN_RXD",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          61.45,
+          9.65
+        ],
+        [
+          51.45,
+          9.65
+        ],
+        [
+          45.6,
+          3.8
+        ],
+        [
+          42.95,
+          3.8
+        ],
+        [
+          42.2,
+          3.05
+        ],
+        [
+          37.35,
+          3.05
+        ],
+        [
+          34.85,
+          5.55
+        ],
+        [
+          34.85,
+          12.65
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_CAN_RXD_1_R3",
+      "net": "CAN_RXD",
+      "layer": "TOP",
+      "points": [
+        [
+          34.85,
+          12.65
+        ],
+        [
+          34.85,
+          16.85
+        ],
+        [
+          36.3,
+          18.3
+        ],
+        [
+          36.3236,
+          18.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "via",
+      "id": "HI_2L_NRST_1_V1",
+      "net": "NRST",
+      "xy": [
+        39.05,
+        42.1
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_NRST_1_R1",
+      "net": "NRST",
+      "layer": "TOP",
+      "points": [
+        [
+          39.6764,
+          41.3
+        ],
+        [
+          39.7,
+          41.3
+        ],
+        [
+          39.7,
+          41.45
+        ],
+        [
+          39.05,
+          42.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_NRST_1_R2",
+      "net": "NRST",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39.05,
+          42.1
+        ],
+        [
+          37.5,
+          40.55
+        ],
+        [
+          36.65,
+          40.55
+        ],
+        [
+          36.2,
+          40.1
+        ],
+        [
+          36.2,
+          35.9
+        ],
+        [
+          36.6,
+          35.5
+        ],
+        [
+          37.7,
+          35.5
+        ],
+        [
+          37.75,
+          35.55
+        ],
+        [
+          38.45,
+          35.55
+        ],
+        [
+          38.7,
+          35.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_NRST_2_R1",
+      "net": "NRST",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          34.27,
+          43.0
+        ],
+        [
+          34.25,
+          43.0
+        ],
+        [
+          38.15,
+          43.0
+        ],
+        [
+          39.05,
+          42.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_NRST_2_R2",
+      "net": "NRST",
+      "layer": "TOP",
+      "points": [
+        [
+          39.05,
+          42.1
+        ],
+        [
+          39.05,
+          41.95
+        ],
+        [
+          39.7,
+          41.3
+        ],
+        [
+          39.6764,
+          41.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "via",
+      "id": "HI_2L_NRST_3_V1",
+      "net": "NRST",
+      "xy": [
+        61.15,
+        24.15
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_NRST_3_R1",
+      "net": "NRST",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          61.16,
+          20.0
+        ],
+        [
+          61.15,
+          20.0
+        ],
+        [
+          61.15,
+          24.15
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_NRST_3_R2",
+      "net": "NRST",
+      "layer": "TOP",
+      "points": [
+        [
+          61.15,
+          24.15
+        ],
+        [
+          55.1,
+          30.2
+        ],
+        [
+          55.1,
+          34.2
+        ],
+        [
+          47.2,
+          42.1
+        ],
+        [
+          39.05,
+          42.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_NRST_3_R3",
+      "net": "NRST",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39.05,
+          42.1
+        ],
+        [
+          37.5,
+          40.55
+        ],
+        [
+          36.65,
+          40.55
+        ],
+        [
+          36.2,
+          40.1
+        ],
+        [
+          36.2,
+          35.9
+        ],
+        [
+          36.6,
+          35.5
+        ],
+        [
+          37.7,
+          35.5
+        ],
+        [
+          37.75,
+          35.55
+        ],
+        [
+          38.45,
+          35.55
+        ],
+        [
+          38.7,
+          35.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    }
+  ],
+  "proofs": [
+    {
+      "from": "U1.31",
+      "to": "R17.1",
+      "connected": true
+    },
+    {
+      "from": "U1.30",
+      "to": "R16.1",
+      "connected": true
+    },
+    {
+      "from": "U1.29",
+      "to": "R10.2",
+      "connected": true
+    },
+    {
+      "from": "R16.2",
+      "to": "J4.2",
+      "connected": true
+    },
+    {
+      "from": "R17.2",
+      "to": "R18.1",
+      "connected": true
+    },
+    {
+      "from": "U5.4",
+      "to": "R13.2",
+      "connected": true
+    },
+    {
+      "from": "R27.2",
+      "to": "C21.1",
+      "connected": true
+    },
+    {
+      "from": "J7.1",
+      "to": "R27.2",
+      "connected": true
+    },
+    {
+      "from": "J9.5",
+      "to": "C21.1",
+      "connected": true
+    }
+  ],
+  "candidateReviews": [
+    {
+      "net": "PA10_UART_RX",
+      "joins": 1,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 1,
+      "seconds": 9.99
+    },
+    {
+      "net": "PA9_UART_TX",
+      "joins": 1,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 1,
+      "seconds": 8.89
+    },
+    {
+      "net": "USB_ATTACH_N",
+      "joins": 1,
+      "nativeInitialMinimumJoins": 2.0,
+      "remainingCandidateComponents": 1,
+      "seconds": 11.87
+    },
+    {
+      "net": "SWDIO",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 9.11
+    },
+    {
+      "net": "UART_TX",
+      "joins": 1,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 1,
+      "seconds": 14.8
+    },
+    {
+      "net": "UART_RX",
+      "joins": 1,
+      "nativeInitialMinimumJoins": 2.0,
+      "remainingCandidateComponents": 1,
+      "seconds": 8.48
+    },
+    {
+      "net": "CAN_RXD",
+      "joins": 1,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 1,
+      "seconds": 20.75
+    },
+    {
+      "net": "VBUS_PRESENT_N",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 2.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 11.63
+    },
+    {
+      "net": "NRST",
+      "joins": 3,
+      "nativeInitialMinimumJoins": 3.0,
+      "remainingCandidateComponents": 1,
+      "seconds": 41.08
+    }
+  ],
+  "failures": [
+    {
+      "net": "SWDIO",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "ANCHOR_SWDIO",
+          "to": "J9.3",
+          "reason": "No geometric candidate after 426 expanded cells"
+        }
+      ]
+    },
+    {
+      "net": "VBUS_PRESENT_N",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "VBUS_PRESENT_INWARD",
+          "to": "Q1.3",
+          "reason": "No geometric candidate after 1363 expanded cells"
+        },
+        {
+          "from": "VBUS_PRESENT_INWARD",
+          "to": "R9.2",
+          "reason": "No geometric candidate after 1363 expanded cells"
+        }
+      ]
+    }
+  ],
+  "scope": "Only specified ordinary nets; explicit critical routes excluded. Paths obey supplied geometry/clearance/keepout policies but this is not native DRC approval, automatic product routing, reference certification or manufacturing release.",
+  "pending": [
+    "Native batch create/update/DRC/fresh reopen",
+    "Actual reference continuity along both layers",
+    "Signal transition nearby GND return connections",
+    "Whole-board plane island/neck review",
+    "Physical/electrical class exceptions at actual positions"
+  ],
+  "seconds": 136.6
+}

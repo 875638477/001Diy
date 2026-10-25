@@ -1,0 +1,90 @@
+
+  NAME
+         axlDBCreatePath - add a "path" (line or cline) to the database
+ 
+  FUNCTION
+         axlDBCreatePath(
+             r_path
+             [t_layer]
+             [t_netName]/['line]
+             [o_parent]
+             [lo_props]
+             [s_font]
+         )
+         ==> l_result/nil
+ 
+  SYNOPSIS
+         Creates a path figure (line or cline). axlDBCreatePath does not add 
+         a net name to etch when the etch is not connected to a pin, via, or 
+         shape. If etch is added, it ties to the first net it touches, 
+         otherwise remains "not on a net" as specified by the arguments
+         described below.
+ 
+         Clines may merge with other clines so the result coordinates 
+         may be a superset of the provided coordinates. This is not
+         currenty true for line types.
+ 
+         Normally if you want to attach properties to a newly created
+         object you would call axlDBAddProp after creating the object.
+         CLINEs may merge with existing CLINEs so the object you
+         end up adding properties may not match the one you created.
+         The lo_props option deals with the issue. You can add
+         your properies when creating the CLINE and if the property list
+         on your CLINE differs from any merge target CLINEs we will
+         not merge your CLINE. 
+ 
+         We support LINES with the interface even though lines do not
+         merge.
+ 
+         Allegro restricts the layers that allow fonts (s_font). ETCH layers may
+         never have fonted lines.
+  NEEDS
+         r_path:         Existing path consisting of the straight-line and 
+                         arc segments previously created by axlPath functions
+         t_layer:        Layer on which path figure is to created. Default 
+                         is active layer.
+         t_netName:      Name of the net of which the path figure is to be a
+                         member. If the net t_netName does not exist, 
+                         axlDBCreatePath considers it an error, does not 
+                         create any path, and returns nil.
+         'line:          by default a path create on an Etch layer will
+                         create clines. When you pass t
+         o_parent:       dbid of object to be parent of the path figure 
+                         (symbol instance or nil for design itself). If you 
+                         attach etch figures to a symbol parent, the figures 
+                         are not associated with the symbol, and do not move 
+                         with it.  (symbol instance or nil for design).
+         [lo_props]      Optional list of property name/value pairs
+                         See axlDBAddProp for format.
+         [s_font]        Optional line font, may have
+                          'SOLID 'HIDDEN 'PHANTOM 'DOTTED 'CENTER.
+                           nil is the same as 'SOLID
+ 
+  RETURNS
+         l_result/nil:   Returns nil if nothing was created. Otherwise the 
+                         function returns a list:
+                            * (car) list of dbids of all path figures 
+                                 created or modified
+                            * (cadr) t if DRCs created. Otherwise it returns 
+                                 nil.
+  SEE ALSO
+         axlDBAddProp
+  EXAMPLE
+         path = axlPathStart( list(100:0 100:500))
+ 
+         ; create path on current default layer
+         axlDBCreatePath(path)
+ 
+         ; create a cline path on top etch layer and assign to GND
+         axlDBCreatePath(path "ETCH/TOP" "gnd")
+ 
+         ; create a line path on top etch layer 
+         axlDBCreatePath(path "ETCH/TOP" 'line)
+ 
+         ; have user create a two pick path on board geometry outline
+         axlDBCreatePath( axlEnterPath() "BOARD GEOMETRY/OUTLINE")
+ 
+         ; create a cline path on top etch layer with properties
+         propList = list( '(FIXED t)  )
+         axlDBCreatePath(path "ETCH/TOP" "gnd" nil propList)
+

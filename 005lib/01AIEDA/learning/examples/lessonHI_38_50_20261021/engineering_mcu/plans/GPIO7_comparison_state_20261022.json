@@ -1,0 +1,409 @@
+{
+  "status": "ENGINEERING_COMPARISON_NOT_NATIVE_APPROVAL",
+  "date": "2026-10-22",
+  "headerNativeXY": [
+    40,
+    55
+  ],
+  "headerComparisonXY": [
+    18,
+    9
+  ],
+  "rotation": 90,
+  "preserved": [
+    "All original live R27/C11 V3 copper",
+    "J2 fixed mechanical datum",
+    "North51 six routed signal paths",
+    "MCU direct VDD/cap/GND loops",
+    "HSE unique anchor/guards/moat",
+    "ADC/C9/MCU pose and main feed geometry for comparisons 59/68/71/72"
+  ],
+  "variants": {
+    "2L": {
+      "nativeNorthHeaderIndependent59": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\GPIO7_2L_independent59.json",
+        "sha256": "9c2789e3333e048e7c5346ae6dedfbba5bb36e65b5fa7a2eb7a97353c9ef680e",
+        "status": "PARTIAL_CANDIDATE_REQUIRES_ENGINEERING_CORRECTION",
+        "metrics": [
+          {
+            "net": "GPIO_PB1",
+            "pathFound": false,
+            "incrementalLengthMM": 0,
+            "newSignalVias": 0
+          },
+          {
+            "net": "GPIO_PB10",
+            "pathFound": false,
+            "incrementalLengthMM": 0,
+            "newSignalVias": 0
+          },
+          {
+            "net": "GPIO_PB11",
+            "pathFound": false,
+            "incrementalLengthMM": 0,
+            "newSignalVias": 0
+          },
+          {
+            "net": "GPIO_PB12",
+            "pathFound": false,
+            "incrementalLengthMM": 0,
+            "newSignalVias": 0
+          },
+          {
+            "net": "GPIO_PB13",
+            "pathFound": false,
+            "incrementalLengthMM": 0,
+            "newSignalVias": 0
+          },
+          {
+            "net": "GPIO_PB14",
+            "pathFound": true,
+            "incrementalLengthMM": 79.5392,
+            "newSignalVias": 6
+          },
+          {
+            "net": "GPIO_PB15",
+            "pathFound": true,
+            "incrementalLengthMM": 79.3797,
+            "newSignalVias": 7
+          }
+        ],
+        "conflicts": 0,
+        "jointIteration": null,
+        "notions": "Independent path lengths are not simultaneous routing feasibility. PB15 explicit access bridge 59 is not included in helper route metric; add its own length and 2 vias when comparing physical whole paths."
+      },
+      "southHeaderIndependent71": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\GPIO7_2L_independent71.json",
+        "sha256": "99224da3f7971435231c02f67ce0f8da30d24b3bb5639bf53a8797dca72cdf15",
+        "status": "GEOMETRIC_CANDIDATE_WITH_PENDING_NATIVE_AND_RETURN_REVIEW",
+        "metrics": [
+          {
+            "net": "GPIO_PB1",
+            "pathFound": true,
+            "incrementalLengthMM": 38.3385,
+            "newSignalVias": 2
+          },
+          {
+            "net": "GPIO_PB10",
+            "pathFound": true,
+            "incrementalLengthMM": 34.9021,
+            "newSignalVias": 2
+          },
+          {
+            "net": "GPIO_PB11",
+            "pathFound": true,
+            "incrementalLengthMM": 29.3565,
+            "newSignalVias": 1
+          },
+          {
+            "net": "GPIO_PB12",
+            "pathFound": true,
+            "incrementalLengthMM": 23.7273,
+            "newSignalVias": 2
+          },
+          {
+            "net": "GPIO_PB13",
+            "pathFound": true,
+            "incrementalLengthMM": 20.8744,
+            "newSignalVias": 2
+          },
+          {
+            "net": "GPIO_PB14",
+            "pathFound": true,
+            "incrementalLengthMM": 20.0959,
+            "newSignalVias": 2
+          },
+          {
+            "net": "GPIO_PB15",
+            "pathFound": true,
+            "incrementalLengthMM": 79.3797,
+            "newSignalVias": 7
+          }
+        ],
+        "conflicts": 0,
+        "jointIteration": null,
+        "notions": "Independent path lengths are not simultaneous routing feasibility. PB15 explicit access bridge 59 is not included in helper route metric; add its own length and 2 vias when comparing physical whole paths."
+      },
+      "southHeaderJoint72": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\GPIO7_2L_negotiated72.json",
+        "sha256": "0d447a104eba6db60ef30588872845bfc44090308a8af6a914368f88ea488594",
+        "status": "NEGOTIATION_PARTIAL_NOT_FOR_EXECUTION",
+        "metrics": [
+          {
+            "net": "GPIO_PB1",
+            "pathFound": true,
+            "incrementalLengthMM": 39.3557,
+            "newSignalVias": 6
+          },
+          {
+            "net": "GPIO_PB10",
+            "pathFound": true,
+            "incrementalLengthMM": 41.6163,
+            "newSignalVias": 4
+          },
+          {
+            "net": "GPIO_PB11",
+            "pathFound": true,
+            "incrementalLengthMM": 52.2607,
+            "newSignalVias": 2
+          },
+          {
+            "net": "GPIO_PB12",
+            "pathFound": true,
+            "incrementalLengthMM": 34.2084,
+            "newSignalVias": 4
+          },
+          {
+            "net": "GPIO_PB13",
+            "pathFound": true,
+            "incrementalLengthMM": 26.1158,
+            "newSignalVias": 3
+          },
+          {
+            "net": "GPIO_PB14",
+            "pathFound": true,
+            "incrementalLengthMM": 25.4281,
+            "newSignalVias": 3
+          },
+          {
+            "net": "GPIO_PB15",
+            "pathFound": true,
+            "incrementalLengthMM": 79.3797,
+            "newSignalVias": 7
+          }
+        ],
+        "conflicts": 10,
+        "jointIteration": 12,
+        "notions": "Independent path lengths are not simultaneous routing feasibility. PB15 explicit access bridge 59 is not included in helper route metric; add its own length and 2 vias when comparing physical whole paths."
+      },
+      "manualPB1Inward80": {
+        "status": "LOCAL_GEOMETRY_CANDIDATE_NOT_FULL_NET",
+        "allNewFeaturesContinuousCopperClear": true,
+        "newPB1LengthToWestHookMM": 20.024650788387046,
+        "westernConnectedHook": [
+          34.2,
+          20
+        ],
+        "newBodyVia": [
+          41.9,
+          26.79
+        ],
+        "newTinySignalViaCount": 3,
+        "oldSignalViaRetired": [
+          38.3,
+          27.35
+        ],
+        "V3PTHold": [
+          37,
+          24
+        ],
+        "V3PTHnew": [
+          37.2,
+          24.3
+        ],
+        "V3ViaCountDelta": 0,
+        "requires": [
+          "Parent geometric and PI/reference review",
+          "New all-layer tiny via approvals, inherited global classes unchanged",
+          "Old stitch aliases explicitly migrate and native all-pin edges remain",
+          "Native graph/DRC/fresh reopen/HSE negative/reference review",
+          "Full source hook to moved J12 terminal route"
+        ]
+      }
+    },
+    "4L": {
+      "nativeNorthHeaderIndependent59": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\GPIO7_4L_independent59.json",
+        "sha256": "7ad5c54847b23abe36a8a394ae1297c6157a6085e00d7edfff843b0537c1eb10",
+        "status": "PARTIAL_CANDIDATE_REQUIRES_ENGINEERING_CORRECTION",
+        "metrics": [
+          {
+            "net": "GPIO_PB1",
+            "pathFound": true,
+            "incrementalLengthMM": 90.8483,
+            "newSignalVias": 7
+          },
+          {
+            "net": "GPIO_PB10",
+            "pathFound": true,
+            "incrementalLengthMM": 88.237,
+            "newSignalVias": 8
+          },
+          {
+            "net": "GPIO_PB11",
+            "pathFound": false,
+            "incrementalLengthMM": 0,
+            "newSignalVias": 0
+          },
+          {
+            "net": "GPIO_PB12",
+            "pathFound": false,
+            "incrementalLengthMM": 0,
+            "newSignalVias": 0
+          },
+          {
+            "net": "GPIO_PB13",
+            "pathFound": false,
+            "incrementalLengthMM": 0,
+            "newSignalVias": 0
+          },
+          {
+            "net": "GPIO_PB14",
+            "pathFound": true,
+            "incrementalLengthMM": 84.7212,
+            "newSignalVias": 6
+          },
+          {
+            "net": "GPIO_PB15",
+            "pathFound": true,
+            "incrementalLengthMM": 84.5617,
+            "newSignalVias": 7
+          }
+        ],
+        "conflicts": 0,
+        "jointIteration": null,
+        "notions": "Independent path lengths are not simultaneous routing feasibility. PB15 explicit access bridge 59 is not included in helper route metric; add its own length and 2 vias when comparing physical whole paths."
+      },
+      "southHeaderIndependent71": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\GPIO7_4L_independent71.json",
+        "sha256": "7549d9699a5cbbdf5df7bc4be56585d555cc08cc601b80ede7754823b52528c6",
+        "status": "GEOMETRIC_CANDIDATE_WITH_PENDING_NATIVE_AND_RETURN_REVIEW",
+        "metrics": [
+          {
+            "net": "GPIO_PB1",
+            "pathFound": true,
+            "incrementalLengthMM": 38.977,
+            "newSignalVias": 3
+          },
+          {
+            "net": "GPIO_PB10",
+            "pathFound": true,
+            "incrementalLengthMM": 35.5406,
+            "newSignalVias": 3
+          },
+          {
+            "net": "GPIO_PB11",
+            "pathFound": true,
+            "incrementalLengthMM": 29.3686,
+            "newSignalVias": 1
+          },
+          {
+            "net": "GPIO_PB12",
+            "pathFound": true,
+            "incrementalLengthMM": 24.8929,
+            "newSignalVias": 2
+          },
+          {
+            "net": "GPIO_PB13",
+            "pathFound": true,
+            "incrementalLengthMM": 22.636,
+            "newSignalVias": 1
+          },
+          {
+            "net": "GPIO_PB14",
+            "pathFound": true,
+            "incrementalLengthMM": 20.7988,
+            "newSignalVias": 2
+          },
+          {
+            "net": "GPIO_PB15",
+            "pathFound": true,
+            "incrementalLengthMM": 84.5617,
+            "newSignalVias": 7
+          }
+        ],
+        "conflicts": 0,
+        "jointIteration": null,
+        "notions": "Independent path lengths are not simultaneous routing feasibility. PB15 explicit access bridge 59 is not included in helper route metric; add its own length and 2 vias when comparing physical whole paths."
+      },
+      "southHeaderJoint72": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\GPIO7_4L_negotiated72.json",
+        "sha256": "45549d9685d88826b39c80a33dc1c82a5e213cdf9fdca3f0fe4af7d147b99df2",
+        "status": "NEGOTIATION_PARTIAL_NOT_FOR_EXECUTION",
+        "metrics": [
+          {
+            "net": "GPIO_PB1",
+            "pathFound": true,
+            "incrementalLengthMM": 38.977,
+            "newSignalVias": 3
+          },
+          {
+            "net": "GPIO_PB10",
+            "pathFound": true,
+            "incrementalLengthMM": 35.5406,
+            "newSignalVias": 3
+          },
+          {
+            "net": "GPIO_PB11",
+            "pathFound": true,
+            "incrementalLengthMM": 52.7811,
+            "newSignalVias": 2
+          },
+          {
+            "net": "GPIO_PB12",
+            "pathFound": true,
+            "incrementalLengthMM": 28.598,
+            "newSignalVias": 2
+          },
+          {
+            "net": "GPIO_PB13",
+            "pathFound": true,
+            "incrementalLengthMM": 25.1695,
+            "newSignalVias": 3
+          },
+          {
+            "net": "GPIO_PB14",
+            "pathFound": true,
+            "incrementalLengthMM": 20.7988,
+            "newSignalVias": 2
+          },
+          {
+            "net": "GPIO_PB15",
+            "pathFound": true,
+            "incrementalLengthMM": 87.6546,
+            "newSignalVias": 6
+          }
+        ],
+        "conflicts": 22,
+        "jointIteration": 12,
+        "notions": "Independent path lengths are not simultaneous routing feasibility. PB15 explicit access bridge 59 is not included in helper route metric; add its own length and 2 vias when comparing physical whole paths."
+      },
+      "manualPB1Inward80": {
+        "status": "LOCAL_GEOMETRY_CANDIDATE_NOT_FULL_NET",
+        "allNewFeaturesContinuousCopperClear": true,
+        "newPB1LengthToWestHookMM": 20.024650788387046,
+        "westernConnectedHook": [
+          34.2,
+          20
+        ],
+        "newBodyVia": [
+          41.9,
+          26.79
+        ],
+        "newTinySignalViaCount": 3,
+        "oldSignalViaRetired": [
+          38.3,
+          27.35
+        ],
+        "V3PTHold": [
+          37,
+          24
+        ],
+        "V3PTHnew": [
+          37.2,
+          24.3
+        ],
+        "V3ViaCountDelta": 0,
+        "requires": [
+          "Parent geometric and PI/reference review",
+          "New all-layer tiny via approvals, inherited global classes unchanged",
+          "Old stitch aliases explicitly migrate and native all-pin edges remain",
+          "Native graph/DRC/fresh reopen/HSE negative/reference review",
+          "Full source hook to moved J12 terminal route"
+        ]
+      }
+    }
+  },
+  "jointBottleneck": "Several South native source accesses independently choose the same BOTTOM x36.4..36.8/y17.45 transition followed by TOP diagonal to x34.65/y15.3..15.7 and BOTTOM west toward new header. Actual UART_RXD/VBUS_PRESENT_N/CAN_RXD and source return copper constrain that narrow crossing; independent clear paths do not reserve simultaneous lanes. 72 bounded joint iterations did not converge and are not executable.",
+  "next": "Pause global negotiated loops. Inspect actual TOP/BOTTOM coordinate preview; compare manual source/access corridor allocation, then route all 7 with explicit layer changes and actual return. No header relocation has been executed."
+}

@@ -1,0 +1,114 @@
+{
+  "status": "PB15_ENGINEERED_BRIDGE_CANDIDATE_NOT_NATIVE",
+  "operations": [
+    {
+      "type": "deleteVia",
+      "id": "PB15_MID_RETURN_RIP",
+      "net": "GND",
+      "xy": [
+        38,
+        20
+      ]
+    },
+    {
+      "type": "via",
+      "id": "PB15_MID_RETURN_NEW",
+      "net": "GND",
+      "xy": [
+        34.2,
+        18.6
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "PB15_LOCAL_BRIDGE_VIA",
+      "net": "GPIO_PB15",
+      "xy": [
+        37.7,
+        19.5
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "PB15_WEST_BRIDGE_VIA",
+      "net": "GPIO_PB15",
+      "xy": [
+        34.2,
+        19.6
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "PB15_ESCAPE_NORMAL_BOTTOM",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "width": 0.2,
+      "points": [
+        [
+          38.5,
+          20.675
+        ],
+        [
+          38.1,
+          20.3
+        ],
+        [
+          37.7,
+          19.9
+        ],
+        [
+          37.7,
+          19.5
+        ]
+      ]
+    },
+    {
+      "type": "route",
+      "id": "PB15_SHORT_WEST_TOP_BRIDGE",
+      "net": "GPIO_PB15",
+      "layer": "TOP",
+      "width": 0.2,
+      "points": [
+        [
+          37.7,
+          19.5
+        ],
+        [
+          34.3,
+          19.5
+        ],
+        [
+          34.2,
+          19.6
+        ]
+      ]
+    }
+  ],
+  "issues": [],
+  "ruleIntent": "All GPIO copper .2mm normal width. MID ground move uses local all-layer actual approved-via-only; no spacing or neck relaxation. Need final actual common-ground proof and per-source finite return review. Old source TOP+original via preserved.",
+  "expectedEndpoints": {
+    "GPIO_PB15": {
+      "connectedTo": "U1.28",
+      "xy": [
+        34.2,
+        19.6
+      ],
+      "layers": [
+        "TOP",
+        "BOTTOM"
+      ]
+    }
+  },
+  "sourceCheckpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\clearance_4L_b016_DRC_PENDING",
+  "sourceNormalizedSHA256": "77a14f3cefb642dc0a724b086446b15d2681e9bd74bfb420a059df2d9dbc91c1",
+  "base": "actualb016 source, all South8 deletion already executed; do not repeat"
+}

@@ -1,0 +1,52 @@
+{
+  "root_native_run": {
+    "channel": "official native Capture database DLL loaded in Tclsh; GUI Capture not established by this evidence",
+    "log": "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\capture_C_20261019\\runtime\\create12a.result.tcldict",
+    "pins_tsv": "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\capture_C_20261019\\c12_reopen\\c12_pins.tsv",
+    "pins_tsv_sha256": "15a169788ae7f31b2bae6303d935129f8f3cac7955589d7f66b5a0010504c2a5",
+    "pin_count": 16,
+    "power_pins": [
+      2,
+      3,
+      8,
+      15
+    ],
+    "all_pin_visibility": 1,
+    "all_number_visibility": 1,
+    "power_raw_global": 1,
+    "nonpower_raw_global": 0
+  },
+  "failure_diagnosis": "Initial verifier combined visibility and raw global and incorrectly required every library pin global=0. No actual hidden pin observed.",
+  "corrective_action": "Keep POWER types; separately check visible/numberVisible=1 and raw POWER global=1; verify final net isolation by actual wiring in C13, not this library bit.",
+  "setter_order_probe": "Prepared ::C12::ProbePowerFlags for a new separate OLB; not invoked by this agent.",
+  "original_olb_modified_by_this_agent": false,
+  "original_logs_modified": false,
+  "source_docs": [
+    "C:\\Program0\\Cadence\\spb172\\doc\\cap_ug\\Making_power_pins_visible.html",
+    "C:\\Program0\\Cadence\\spb172\\doc\\cap_ug\\Creating_a_Part_Body.html",
+    "C:\\Program0\\Cadence\\spb172\\tools\\capture\\tclscripts\\cdnTclEncrypted\\orPrmDboStreamer.tcl"
+  ],
+  "native_api_invoked_by_this_agent": false,
+  "preserved_first_run_files_snapshot": [
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson12_capture\\c12_qmi8610.olb",
+      "exists": true,
+      "sha256_at_review": "f72bd5b156049a1abb155b1863c2a9c9d0d36c94f020f8a7ff70f416ea7dfacc"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\capture_C_20261019\\runtime\\create12a.result.tcldict",
+      "exists": true,
+      "sha256_at_review": "fb55db3d35b3915e64a44df2f049073baf755de4a129a4894dab6ccc493ca1e0"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\capture_C_20261019\\c12_reopen\\c12_pins.tsv",
+      "exists": true,
+      "sha256_at_review": "15a169788ae7f31b2bae6303d935129f8f3cac7955589d7f66b5a0010504c2a5"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\capture_C_20261019\\c12_reopen\\c12_readback_result.tcldict",
+      "exists": true,
+      "sha256_at_review": "68eb14c0e70dec84ebead7545fb3472234f85e269ec165de4f926e60157d7bd9"
+    }
+  ]
+}

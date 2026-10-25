@@ -1,0 +1,97 @@
+
+  NAME
+     axlGetParam - Function to retrieved a named parameter record.
+  SYNOPSIS
+    axlGetParam (
+         t_parm_name
+    ) =>o_paramDbid/nil
+ 
+    axlGetParam (
+         nil
+    ) =>lt_params
+  FUNCTION
+      Fetches parameter dbid for named object. Supported paramter
+      names are shown below. Attributes of a parameter are describted
+      in Chapter 2, The Allegro Database User Model.
+  NEEDS
+     nil - returns list of parameters supported.
+     t_parm_name = name of the parameter to seek.  Current legal naming 
+         conventions:
+             paramTextBlock:<#> where # is 1-<N> e.g. paramTextBlock:1
+                 where N is number of text blocks ( axlDBGetTextBlockCount() )
+ 
+             paramDesign
+ 
+             paramDisplay
+ 
+             paramLayerGroup:<name> where name is legal Allegro 
+                                 class name
+                 Note in ICP products a pseudo class call WIRE
+                 with a single subclass exist called WIRE. This
+                 supports bondwires and is typically not displayed
+                 in the Options panel drop-down.
+             paramLayerGroup:name>/paramLayer:<name>
+ 
+             artwork - list of film names
+             artwork:<filmName> - a film given by filmName
+ 
+             testprep - see axlParamTestprepDoc
+ 
+             fillet - see axlParamFilletDoc
+  RETURNS
+      o_paramDbid: returns a dbid of the requested parameter or nil if not legal.
+      lt_params: returns list of parameter names supported.
+  EXAMPLE
+ 
+    1) Fetch etch layer (to find all members of the etch class)
+ 
+      Skill> etch_parm = axlGetParam("paramLayerGroup:ETCH")
+            param:123456
+ 
+      Skill> etch_parm->??
+         (objType "paramLayerGroup" name "ETCH" visible
+                 -1 nChildren 4 groupMembers 
+                 ("TOP" "GND" "VCC" "BOTTOM")
+                 color -1
+         )
+ 
+      Skill> etch_parm->color
+         -1
+ 
+      Skill> etch_parm->groupMembers
+         ("TOP" "GND" "VCC" "BOTTOM")
+ 
+ 
+     2) Access artwork records
+         ;A) get all list of possible records
+             Skill > p = axlGetParam("artwork")
+             Skill > p->??
+             (objType "artwork" nChildren 4 groupMembers
+                 ("TOP" "GND" "VCC" "BOTTOM")
+                 )
+         
+         ;B) get info on film record "VCC"
+             r = axlGetParam("artwork:VCC")
+             Skill > r->??
+             (objType "artwork" groupMembers 
+             ("ETCH/VCC" "PIN/VCC" "VIA CLASS/VCC") vectorBasedPad
+                 t suppressShapeFill t useApertureRotation nil
+                 drawMissingPadApertures nil suppressUnconnectPads t fullContact
+                 nil mirrored nil shapeBoundingBox 100.0
+                 offset (0.0 0.0) rotation 0 undefineLineWidth
+                 0.0 negative t name "VCC"
+             )
+ 
+         ;C) Delete a TOP paramater record
+             axlDeleteObject("artwork:TOP")
+ 
+      3) Design (paramDesign) modification
+         axlDBChangeDesignOrigin: change design origin
+         axlDBChangeDesignExtents: change extents
+         axlDBChangeDesignUnits: change units and/or accuracy
+ 
+         Also see axlParamDesignDoc
+        
+ 
+ ----------------------------------------------------------------------- */
+

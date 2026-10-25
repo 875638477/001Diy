@@ -1,0 +1,13 @@
+{
+ "status":"ACTUAL_TRY11_GEOMETRY_VERIFIED_NATIVE_CONNECTIVITY_PENDING",
+ "variant":"2L",
+ "basis":"Actual unsaved try11 native graph: J2.SH4 at44.32,2.6 belongs common GND component1; J2.SH2 at44.32,6.78 belongs isolated component2. This is a new real TOP copper bridge, never an assumed internal shell PIN_SHORT.",
+ "operations":[{"type":"route","id":"SH2_TO_COMMON_SH4_TOP_BRIDGE","net":"GND","layer":"TOP","points":[[44.32,6.78],[44.32,2.6]],"width":0.6,"from":"J2.SH2","to":"J2.SH4","purpose":"Short4.18mm normal-width actual copper along right shield lands reconnects device-side GND to existing common plated SH4; preserves USB pair/ESD/CC/sense and adds no drill"}],
+ "proofs":[{"id":"SH2_SH4_EXTERNAL_COPPER_BRIDGE","from":"J2.SH2","to":"J2.SH4","connected":true},{"id":"SH2_COMMON_RESTORED","from":"C1.2","to":"J2.SH2","connected":true},{"id":"RIGHT_DEVICE_GND_COMMON_RESTORED","from":"J2.B1_A12","to":"C1.2","connected":true}],
+ "engineeringReview":"readouts/SH2_return12_candidates.json",
+ "nativeOriginalComponentEvidence":"readouts/SH2_actual_native_graph12.json",
+ "checks":"No foreign copper overlap or actual spacing-field violation; native ROUTE_KEEPOUT included by CopperScene.path_clear. Uses real center coordinates6.78/2.6, not earlier guessed6.295. Actual target belongs nativecommoncomponent1 even though plane sampler at drillcenter has no copper.",
+ "requiredNative":["normal0 scopedGND/CAN_RXD/VBUS_PRESENT_N/USB_CC1/2 and full prior endpoint proofs", "actual bridge netGND, shell pin identity unchanged", "HSE anchor negative still passes", "all dynamic reference definitions/priority/global modes preserved", "fresh full final whole-board DRC and physical return review later"],
+ "rejected":"C10ground TOP vertical x45.3 crosses USB_CC2 R4.1 and its incoming line, rejected. New via46.8,2.2 is geometrically possible but less direct and unnecessary because SH4 is already nativecommon.",
+ "notClaimed":"No connector internal conductivity assumption, no PI/SI/EMI certification, no manufacturing/assembly release. Existing USB shell stake1.6board mismatch remains open."
+}

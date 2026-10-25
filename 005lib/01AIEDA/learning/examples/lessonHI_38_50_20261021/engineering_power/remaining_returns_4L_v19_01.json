@@ -1,0 +1,125 @@
+{
+  "batchId": "remaining_returns_4L_v19_01",
+  "status": "CANDIDATE_PARENT_POINTS_FULL_FUTURE_REVIEW_PENDING",
+  "variant": "4L",
+  "operations": [
+    {
+      "type": "via",
+      "id": "REM19_RETURN_NRST",
+      "net": "GND",
+      "xy": [
+        40.1,
+        42.2
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "CandidatecommonGNDreturn for NRST; must prove actualcommoncopper after full dynamicrefresh"
+    },
+    {
+      "type": "via",
+      "id": "REM19_RETURN_UART_TX",
+      "net": "GND",
+      "xy": [
+        54.45,
+        17.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "CandidatecommonGNDreturn for UART_TX; must prove actualcommoncopper after full dynamicrefresh"
+    },
+    {
+      "type": "via",
+      "id": "REM19_RETURN_CAN_RXD_SOURCE",
+      "net": "GND",
+      "xy": [
+        61.7,
+        11.2
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "CandidatecommonGNDreturn for CAN_RXD_SOURCE; must prove actualcommoncopper after full dynamicrefresh"
+    },
+    {
+      "type": "via",
+      "id": "REM19_RETURN_CAN_RXD_DEST",
+      "net": "GND",
+      "xy": [
+        36.5,
+        16.1
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "CandidatecommonGNDreturn for CAN_RXD_DEST; must prove actualcommoncopper after full dynamicrefresh"
+    },
+    {
+      "type": "via",
+      "id": "REM19_RETURN_VBUS_PRESENT_N",
+      "net": "GND",
+      "xy": [
+        49.7,
+        13.5
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "CandidatecommonGNDreturn for VBUS_PRESENT_N; must prove actualcommoncopper after full dynamicrefresh"
+    }
+  ],
+  "engineeringReturns": [
+    {
+      "signal": "NRST",
+      "signalViaXY": [
+        39.05,
+        42.1
+      ],
+      "groundViaXY": [
+        40.1,
+        42.2
+      ],
+      "distanceMM": 1.0547511554864537
+    },
+    {
+      "signal": "UART_TX",
+      "signalViaXY": [
+        54.85,
+        18.95
+      ],
+      "groundViaXY": [
+        54.45,
+        17.8
+      ],
+      "distanceMM": 1.2175795661885902
+    },
+    {
+      "signal": "CAN_RXD_SOURCE",
+      "signalViaXY": [
+        61.45,
+        12.2
+      ],
+      "groundViaXY": [
+        61.7,
+        11.2
+      ],
+      "distanceMM": 1.0307764064044151
+    },
+    {
+      "signal": "CAN_RXD_DEST",
+      "signalViaXY": [
+        37.65,
+        16.7
+      ],
+      "groundViaXY": [
+        36.5,
+        16.1
+      ],
+      "distanceMM": 1.2971121771072824
+    },
+    {
+      "signal": "VBUS_PRESENT_N",
+      "signalViaXY": [
+        50.85,
+        12.85
+      ],
+      "groundViaXY": [
+        49.7,
+        13.5
+      ],
+      "distanceMM": 1.3209844813622895
+    }
+  ],
+  "scope": "Do not treat quietcap/island grounds as common. Geometryon allfuture source+UART03+remaining19; not native approval."
+}

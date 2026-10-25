@@ -1,0 +1,285 @@
+{
+  "variant": "4L",
+  "checks": [
+    {
+      "id": "ROOT_PB14_GATE01_13",
+      "type": "via",
+      "net": "USB_ATTACH_N",
+      "clearGlobal": false,
+      "padKeepoutHit": true,
+      "hits": [
+        {
+          "layer": "TOP",
+          "net": "PA11_SHARED",
+          "kind": "smdpin",
+          "source": "R6.1",
+          "bbox": [
+            38.9935,
+            17.9284,
+            39.8065,
+            18.8684
+          ],
+          "actualGapMM": -0.26,
+          "globalRequiredMM": 0.5
+        },
+        {
+          "layer": "TOP",
+          "net": "PA11_SHARED",
+          "kind": "smdpin",
+          "source": "R13.1",
+          "bbox": [
+            37.4284,
+            17.8935,
+            38.3684,
+            18.7065
+          ],
+          "actualGapMM": 0.3715999999999988,
+          "globalRequiredMM": 0.5
+        },
+        {
+          "layer": "TOP",
+          "net": "PA11_SHARED",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            37.8968,
+            18.298399999999997,
+            39.5,
+            18.4984
+          ],
+          "actualGapMM": -0.15839999999999876,
+          "globalRequiredMM": 0.5
+        },
+        {
+          "layer": "TOP",
+          "net": "PA11_SHARED",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            39.3,
+            18.849999999999998,
+            40.7,
+            20.25
+          ],
+          "actualGapMM": 0.171777469782259,
+          "globalRequiredMM": 0.5
+        },
+        {
+          "layer": "TOP",
+          "net": "PA11_SHARED",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            39.3,
+            18.298399999999997,
+            39.5,
+            19.05
+          ],
+          "actualGapMM": 0.03999999999999715,
+          "globalRequiredMM": 0.5
+        }
+      ]
+    },
+    {
+      "id": "ROOT_PB14_GATE01_14",
+      "type": "via",
+      "net": "GND",
+      "clearGlobal": true,
+      "padKeepoutHit": false,
+      "hits": []
+    },
+    {
+      "id": "ROOT_PB14_GATE01_15",
+      "type": "route",
+      "net": "USB_ATTACH_N",
+      "clearUnderPolicy": false,
+      "collision": "LINESTRING (39.181 22.680999999999997, 39 22.5, 39 21.888104423952743)",
+      "nearGlobalRuleHits": [
+        {
+          "net": "GPIO_PB15",
+          "kind": "smdpin",
+          "source": "U1.28",
+          "bbox": [
+            38.6,
+            22.15,
+            38.9,
+            23.35
+          ],
+          "actualGapMM": 0.02000000000000142,
+          "globalRequiredMM": 0.2
+        },
+        {
+          "net": "GPIO_PB15",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            38.67,
+            22.020000000000003,
+            38.83,
+            22.83
+          ],
+          "actualGapMM": 0.0900000000000017,
+          "globalRequiredMM": 0.2
+        },
+        {
+          "net": "GPIO_PB15",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            38.42,
+            21.770000000000003,
+            38.83,
+            22.18
+          ],
+          "actualGapMM": 0.0900000000000017,
+          "globalRequiredMM": 0.2
+        }
+      ]
+    },
+    {
+      "id": "ROOT_PB14_GATE01_16",
+      "type": "route",
+      "net": "USB_ATTACH_N",
+      "clearUnderPolicy": false,
+      "collision": "LINESTRING (39 20.438707201702776, 39 18.6)",
+      "nearGlobalRuleHits": [
+        {
+          "net": "PA11_SHARED",
+          "kind": "smdpin",
+          "source": "R6.1",
+          "bbox": [
+            38.9935,
+            17.9284,
+            39.8065,
+            18.8684
+          ],
+          "actualGapMM": -0.1,
+          "globalRequiredMM": 0.5
+        },
+        {
+          "net": "GND",
+          "kind": "via",
+          "source": "native_via",
+          "bbox": [
+            37.93,
+            19.18,
+            38.970000000000006,
+            20.22
+          ],
+          "actualGapMM": -0.07000000000000597,
+          "globalRequiredMM": 0.3
+        },
+        {
+          "net": "PA11_SHARED",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            37.8968,
+            18.298399999999997,
+            39.5,
+            18.4984
+          ],
+          "actualGapMM": 0.0016000000000012393,
+          "globalRequiredMM": 0.5
+        },
+        {
+          "net": "PA11_SHARED",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            39.3,
+            18.849999999999998,
+            40.7,
+            20.25
+          ],
+          "actualGapMM": 0.19999999999999715,
+          "globalRequiredMM": 0.5
+        },
+        {
+          "net": "PA11_SHARED",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            39.3,
+            18.298399999999997,
+            39.5,
+            19.05
+          ],
+          "actualGapMM": 0.19999999999999715,
+          "globalRequiredMM": 0.5
+        },
+        {
+          "net": "GPIO_PB15",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            38.42,
+            21.770000000000003,
+            38.83,
+            22.18
+          ],
+          "actualGapMM": 0.20890872965260385,
+          "globalRequiredMM": 0.2
+        }
+      ]
+    },
+    {
+      "id": "ROOT_PB14_GATE01_17",
+      "type": "route",
+      "net": "USB_ATTACH_N",
+      "clearUnderPolicy": false,
+      "collision": "LINESTRING (39 18.6, 39.7 18.6)",
+      "nearGlobalRuleHits": []
+    },
+    {
+      "id": "ROOT_PB14_GATE01_18",
+      "type": "route",
+      "net": "GPIO_PB14",
+      "clearUnderPolicy": false,
+      "collision": "LINESTRING (39.45 19.849942350986236, 39.45 19.15, 37.9 19.15, 37.9 18)",
+      "nearGlobalRuleHits": [
+        {
+          "net": "USB_ATTACH_N",
+          "kind": "via",
+          "source": "native_via",
+          "bbox": [
+            38.48,
+            18.080000000000002,
+            39.52,
+            19.12
+          ],
+          "actualGapMM": -0.07000000000000242,
+          "globalRequiredMM": 0.2
+        },
+        {
+          "net": "GND",
+          "kind": "via",
+          "source": "native_via",
+          "bbox": [
+            37.93,
+            19.18,
+            38.970000000000006,
+            20.22
+          ],
+          "actualGapMM": -0.06999999999999887,
+          "globalRequiredMM": 0.3
+        },
+        {
+          "net": "VBUS_PRESENT_N",
+          "kind": "line",
+          "source": "native_route",
+          "bbox": [
+            34.449999999999996,
+            17.049999999999997,
+            38.5,
+            21.1
+          ],
+          "actualGapMM": 0.04748737341529022,
+          "globalRequiredMM": 0.2
+        }
+      ]
+    }
+  ],
+  "operationCount": 19,
+  "status": "DERIVED_GEOMETRY_REVIEW_ONLY_NOT_NATIVE_NOT_RELEASED"
+}

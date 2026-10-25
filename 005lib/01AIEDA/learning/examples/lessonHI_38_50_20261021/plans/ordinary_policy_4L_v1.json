@@ -1,0 +1,1757 @@
+{
+  "status": "CONSTRAINED_ORDINARY_POLICY_V1_MCU6",
+  "manualOnlyNets": [
+    "ADC0",
+    "ADC_IN",
+    "BUCK_BOOT",
+    "BUCK_FB",
+    "BUCK_SW",
+    "CAN_H",
+    "CAN_L",
+    "GND",
+    "GPIO_PC13",
+    "GPIO_PC14",
+    "GPIO_PC15",
+    "NRST",
+    "OSC_IN",
+    "OSC_OUT",
+    "PA11_SHARED",
+    "PA12_SHARED",
+    "USB_CC1",
+    "USB_CC2",
+    "USB_DM",
+    "USB_DP",
+    "USB_VBUS",
+    "V3V3",
+    "V5",
+    "VDDA",
+    "VIN_FUSED",
+    "VIN_PROT",
+    "VIN_RAW",
+    "XTAL_OUT"
+  ],
+  "regionOverrides": [
+    {
+      "id": "G31_U1_ESCAPE",
+      "layer": "TOP",
+      "polygon": [
+        [
+          34.2,
+          23.5
+        ],
+        [
+          36.5,
+          23.5
+        ],
+        [
+          36.5,
+          25.5
+        ],
+        [
+          34.2,
+          25.5
+        ]
+      ],
+      "nets": [
+        "GND",
+        "V3V3",
+        "V5",
+        "VDDA"
+      ],
+      "kinds": [
+        "smdpin",
+        "line"
+      ],
+      "gap": 0.2,
+      "basis": "Existing native region, NC_POWER_LV_S-to-any; only smdpin_line and line_line"
+    },
+    {
+      "id": "G31_U1_ESCAPE",
+      "layer": "TOP",
+      "polygon": [
+        [
+          41.5,
+          21.2
+        ],
+        [
+          43.5,
+          21.2
+        ],
+        [
+          43.5,
+          23.5
+        ],
+        [
+          41.5,
+          23.5
+        ]
+      ],
+      "nets": [
+        "GND",
+        "V3V3",
+        "V5",
+        "VDDA"
+      ],
+      "kinds": [
+        "smdpin",
+        "line"
+      ],
+      "gap": 0.2,
+      "basis": "Existing native region, NC_POWER_LV_S-to-any; only smdpin_line and line_line"
+    },
+    {
+      "id": "G31_U1_ESCAPE",
+      "layer": "TOP",
+      "polygon": [
+        [
+          43.5,
+          28.5
+        ],
+        [
+          45.8,
+          28.5
+        ],
+        [
+          45.8,
+          30.5
+        ],
+        [
+          43.5,
+          30.5
+        ]
+      ],
+      "nets": [
+        "GND",
+        "V3V3",
+        "V5",
+        "VDDA"
+      ],
+      "kinds": [
+        "smdpin",
+        "line"
+      ],
+      "gap": 0.2,
+      "basis": "Existing native region, NC_POWER_LV_S-to-any; only smdpin_line and line_line"
+    },
+    {
+      "id": "HI_MCU_NORTH_ESCAPE",
+      "polygon": [
+        [
+          37.7,
+          29.25
+        ],
+        [
+          43.9,
+          29.25
+        ],
+        [
+          43.9,
+          32.9
+        ],
+        [
+          37.7,
+          32.9
+        ]
+      ],
+      "layer": "TOP",
+      "nets": [
+        "GND",
+        "V3V3",
+        "VDDA",
+        "ADC0",
+        "ADC_IN",
+        "NRST",
+        "OSC_IN",
+        "OSC_OUT",
+        "XTAL_OUT"
+      ],
+      "kinds": [
+        "smdpin",
+        "line"
+      ],
+      "gap": 0.2,
+      "basis": "Match executed MCU6 finite north spacing override; no via/other-spacing waiver."
+    }
+  ],
+  "reservedAreas": [
+    {
+      "id": "SWITCHING_BLOCK",
+      "polygon": [
+        [
+          10,
+          14
+        ],
+        [
+          31,
+          14
+        ],
+        [
+          31,
+          25.5
+        ],
+        [
+          10,
+          25.5
+        ]
+      ],
+      "layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "allowedNets": [
+        "GND",
+        "VIN_RAW",
+        "VIN_FUSED",
+        "VIN_PROT",
+        "V5",
+        "BUCK_SW",
+        "BUCK_BOOT",
+        "BUCK_FB"
+      ],
+      "basis": "Reserve hot-loop and feedback block from unrelated digital traversal."
+    },
+    {
+      "id": "HSE_ACTUAL_MOAT_AND_STEM",
+      "polygon": [
+        [
+          44.75,
+          28.15
+        ],
+        [
+          46.15,
+          28.15
+        ],
+        [
+          46.15,
+          31.4
+        ],
+        [
+          45.65,
+          31.9
+        ],
+        [
+          45.65,
+          32.85
+        ],
+        [
+          47.85,
+          32.85
+        ],
+        [
+          47.85,
+          39.75
+        ],
+        [
+          36.85,
+          39.75
+        ],
+        [
+          36.85,
+          36.45
+        ],
+        [
+          39.65,
+          36.45
+        ],
+        [
+          39.65,
+          32.45
+        ],
+        [
+          40.25,
+          32.45
+        ],
+        [
+          40.25,
+          31.6
+        ],
+        [
+          44.25,
+          31.6
+        ],
+        [
+          44.75,
+          31.1
+        ]
+      ],
+      "layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "allowedNets": [
+        "OSC_IN",
+        "OSC_OUT",
+        "XTAL_OUT",
+        "GND"
+      ],
+      "basis": "Executed MCU6 quiet island and sole reference anchor. No ordinary traversal or stitches."
+    },
+    {
+      "id": "ADC_REFERENCE_ADC_PIN_CAP",
+      "polygon": [
+        [
+          37.45673632355869,
+          31.65
+        ],
+        [
+          35.5,
+          31.65
+        ],
+        [
+          35.37319129068952,
+          31.662489567737897
+        ],
+        [
+          35.25125576896269,
+          31.69947830386766
+        ],
+        [
+          35.13887934853726,
+          31.759544752003343
+        ],
+        [
+          35.04038059222874,
+          31.84038059222874
+        ],
+        [
+          34.34038059222874,
+          32.54038059222874
+        ],
+        [
+          34.25954475200334,
+          32.63887934853726
+        ],
+        [
+          34.19947830386766,
+          32.75125576896269
+        ],
+        [
+          34.1624895677379,
+          32.87319129068952
+        ],
+        [
+          34.15,
+          33.0
+        ],
+        [
+          34.1624895677379,
+          33.12680870931048
+        ],
+        [
+          34.19947830386766,
+          33.24874423103731
+        ],
+        [
+          34.25954475200334,
+          33.36112065146274
+        ],
+        [
+          34.34038059222874,
+          33.45961940777126
+        ],
+        [
+          34.438879348537256,
+          33.540455247996654
+        ],
+        [
+          34.55125576896269,
+          33.60052169613234
+        ],
+        [
+          34.673191290689516,
+          33.6375104322621
+        ],
+        [
+          34.8,
+          33.65
+        ],
+        [
+          34.92680870931048,
+          33.6375104322621
+        ],
+        [
+          35.048744231037304,
+          33.60052169613234
+        ],
+        [
+          35.16112065146274,
+          33.540455247996654
+        ],
+        [
+          35.259619407771254,
+          33.45961940777126
+        ],
+        [
+          35.769238815542515,
+          32.949999999999996
+        ],
+        [
+          37.7,
+          32.949999999999996
+        ],
+        [
+          37.826808709310484,
+          32.937510432262094
+        ],
+        [
+          37.94874423103731,
+          32.90052169613234
+        ],
+        [
+          38.04326367644131,
+          32.85
+        ],
+        [
+          38.25,
+          32.85
+        ],
+        [
+          38.37680870931048,
+          32.8375104322621
+        ],
+        [
+          38.49874423103731,
+          32.80052169613234
+        ],
+        [
+          38.61112065146274,
+          32.74045524799666
+        ],
+        [
+          38.70961940777126,
+          32.65961940777126
+        ],
+        [
+          38.790455247996654,
+          32.561120651462744
+        ],
+        [
+          38.85052169613234,
+          32.44874423103731
+        ],
+        [
+          38.8875104322621,
+          32.326808709310484
+        ],
+        [
+          38.9,
+          32.2
+        ],
+        [
+          38.9,
+          31.25
+        ],
+        [
+          38.8875104322621,
+          31.123191290689515
+        ],
+        [
+          38.85052169613234,
+          31.001255768962693
+        ],
+        [
+          38.790455247996654,
+          30.88887934853726
+        ],
+        [
+          38.70961940777126,
+          30.790380592228743
+        ],
+        [
+          38.61112065146274,
+          30.709544752003346
+        ],
+        [
+          38.49874423103731,
+          30.649478303867664
+        ],
+        [
+          38.37680870931048,
+          30.6124895677379
+        ],
+        [
+          38.25,
+          30.6
+        ],
+        [
+          38.12319129068952,
+          30.6124895677379
+        ],
+        [
+          38.00125576896269,
+          30.649478303867664
+        ],
+        [
+          37.88887934853726,
+          30.709544752003346
+        ],
+        [
+          37.79038059222874,
+          30.790380592228743
+        ],
+        [
+          37.709544752003346,
+          30.88887934853726
+        ],
+        [
+          37.64947830386766,
+          31.001255768962693
+        ],
+        [
+          37.6124895677379,
+          31.123191290689515
+        ],
+        [
+          37.6,
+          31.25
+        ],
+        [
+          37.6,
+          31.58469190303751
+        ],
+        [
+          37.55125576896269,
+          31.599478303867667
+        ],
+        [
+          37.45673632355869,
+          31.65
+        ]
+      ],
+      "layers": [
+        "BOTTOM"
+      ],
+      "allowedNets": [
+        "GND",
+        "ADC0",
+        "ADC_IN"
+      ],
+      "basis": "Protect actual bottom reference below the short sensitive TOP ADC path."
+    },
+    {
+      "id": "ADC_REFERENCE_ADC_CAP_SERIES",
+      "polygon": [
+        [
+          32.5046339593556,
+          34.37612722510188
+        ],
+        [
+          32.427655768962694,
+          34.39947830386767
+        ],
+        [
+          32.31527934853726,
+          34.459544752003346
+        ],
+        [
+          32.216780592228744,
+          34.54038059222874
+        ],
+        [
+          32.13594475200335,
+          34.63887934853726
+        ],
+        [
+          32.07587830386766,
+          34.75125576896269
+        ],
+        [
+          32.038889567737904,
+          34.87319129068952
+        ],
+        [
+          32.0264,
+          35.0
+        ],
+        [
+          32.038889567737904,
+          35.12680870931048
+        ],
+        [
+          32.07587830386766,
+          35.24874423103731
+        ],
+        [
+          32.13594475200335,
+          35.36112065146274
+        ],
+        [
+          32.216780592228744,
+          35.45961940777126
+        ],
+        [
+          32.31527934853726,
+          35.540455247996654
+        ],
+        [
+          32.427655768962694,
+          35.60052169613234
+        ],
+        [
+          32.54959129068952,
+          35.6375104322621
+        ],
+        [
+          32.6764,
+          35.65
+        ],
+        [
+          32.8,
+          35.65
+        ],
+        [
+          32.92680870931048,
+          35.6375104322621
+        ],
+        [
+          33.048744231037304,
+          35.60052169613234
+        ],
+        [
+          33.16112065146274,
+          35.540455247996654
+        ],
+        [
+          33.259619407771254,
+          35.45961940777126
+        ],
+        [
+          35.259619407771254,
+          33.45961940777126
+        ],
+        [
+          35.34045524799665,
+          33.36112065146274
+        ],
+        [
+          35.40052169613234,
+          33.24874423103731
+        ],
+        [
+          35.437510432262094,
+          33.12680870931048
+        ],
+        [
+          35.449999999999996,
+          33.0
+        ],
+        [
+          35.437510432262094,
+          32.87319129068952
+        ],
+        [
+          35.40052169613234,
+          32.75125576896269
+        ],
+        [
+          35.34045524799665,
+          32.63887934853726
+        ],
+        [
+          35.259619407771254,
+          32.54038059222874
+        ],
+        [
+          35.16112065146274,
+          32.459544752003346
+        ],
+        [
+          35.048744231037304,
+          32.39947830386766
+        ],
+        [
+          34.92680870931048,
+          32.3624895677379
+        ],
+        [
+          34.8,
+          32.35
+        ],
+        [
+          34.673191290689516,
+          32.3624895677379
+        ],
+        [
+          34.55125576896269,
+          32.39947830386766
+        ],
+        [
+          34.438879348537256,
+          32.459544752003346
+        ],
+        [
+          34.34038059222874,
+          32.54038059222874
+        ],
+        [
+          32.5046339593556,
+          34.37612722510188
+        ]
+      ],
+      "layers": [
+        "BOTTOM"
+      ],
+      "allowedNets": [
+        "GND",
+        "ADC0",
+        "ADC_IN"
+      ],
+      "basis": "Protect actual bottom reference below the short sensitive TOP ADC path."
+    },
+    {
+      "id": "ADC_REFERENCE_ADC_INPUT",
+      "polygon": [
+        [
+          31.069238815542516,
+          34.35
+        ],
+        [
+          30.259619407771257,
+          33.54038059222874
+        ],
+        [
+          30.161120651462742,
+          33.459544752003346
+        ],
+        [
+          30.048744231037308,
+          33.39947830386766
+        ],
+        [
+          29.926808709310485,
+          33.3624895677379
+        ],
+        [
+          29.8,
+          33.35
+        ],
+        [
+          26.27,
+          33.35
+        ],
+        [
+          26.143191290689515,
+          33.3624895677379
+        ],
+        [
+          26.02125576896269,
+          33.39947830386767
+        ],
+        [
+          25.90887934853726,
+          33.459544752003346
+        ],
+        [
+          25.810380592228743,
+          33.54038059222874
+        ],
+        [
+          25.729544752003346,
+          33.63887934853726
+        ],
+        [
+          25.669478303867663,
+          33.75125576896269
+        ],
+        [
+          25.6324895677379,
+          33.87319129068952
+        ],
+        [
+          25.62,
+          34.0
+        ],
+        [
+          25.6324895677379,
+          34.12680870931048
+        ],
+        [
+          25.669478303867663,
+          34.24874423103731
+        ],
+        [
+          25.729544752003346,
+          34.36112065146274
+        ],
+        [
+          25.810380592228743,
+          34.45961940777126
+        ],
+        [
+          25.90887934853726,
+          34.540455247996654
+        ],
+        [
+          26.021255768962693,
+          34.60052169613234
+        ],
+        [
+          26.143191290689515,
+          34.6375104322621
+        ],
+        [
+          26.27,
+          34.65
+        ],
+        [
+          29.530761184457486,
+          34.65
+        ],
+        [
+          30.340380592228744,
+          35.45961940777126
+        ],
+        [
+          30.43887934853726,
+          35.540455247996654
+        ],
+        [
+          30.551255768962694,
+          35.60052169613234
+        ],
+        [
+          30.673191290689516,
+          35.6375104322621
+        ],
+        [
+          30.8,
+          35.65
+        ],
+        [
+          31.1016,
+          35.65
+        ],
+        [
+          31.228408709310486,
+          35.6375104322621
+        ],
+        [
+          31.350344231037308,
+          35.60052169613234
+        ],
+        [
+          31.462720651462742,
+          35.540455247996654
+        ],
+        [
+          31.561219407771258,
+          35.45961940777126
+        ],
+        [
+          31.642055247996655,
+          35.36112065146274
+        ],
+        [
+          31.702121696132338,
+          35.24874423103731
+        ],
+        [
+          31.739110432262102,
+          35.12680870931048
+        ],
+        [
+          31.7516,
+          35.0
+        ],
+        [
+          31.739110432262102,
+          34.87319129068952
+        ],
+        [
+          31.702121696132338,
+          34.75125576896269
+        ],
+        [
+          31.642055247996655,
+          34.63887934853726
+        ],
+        [
+          31.561219407771258,
+          34.54038059222874
+        ],
+        [
+          31.462720651462742,
+          34.459544752003346
+        ],
+        [
+          31.350344231037308,
+          34.39947830386766
+        ],
+        [
+          31.228408709310486,
+          34.3624895677379
+        ],
+        [
+          31.1016,
+          34.35
+        ],
+        [
+          31.069238815542516,
+          34.35
+        ]
+      ],
+      "layers": [
+        "BOTTOM"
+      ],
+      "allowedNets": [
+        "GND",
+        "ADC0",
+        "ADC_IN"
+      ],
+      "basis": "Protect actual bottom reference below the short sensitive TOP ADC path."
+    },
+    {
+      "id": "USB_TRUNK",
+      "polygon": [
+        [
+          38.0,
+          7.9
+        ],
+        [
+          42.6,
+          7.9
+        ],
+        [
+          42.6,
+          18.0
+        ],
+        [
+          38,
+          18.0
+        ]
+      ],
+      "layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "allowedNets": [
+        "USB_DP",
+        "USB_DM",
+        "USB_VBUS",
+        "GND"
+      ],
+      "basis": "Keep ordinary signals away from protected USB trunk and its opposite-layer reference."
+    }
+  ],
+  "noGlobalGroundViaAreas": [
+    [
+      [
+        44.75,
+        28.15
+      ],
+      [
+        46.15,
+        28.15
+      ],
+      [
+        46.15,
+        31.4
+      ],
+      [
+        45.65,
+        31.9
+      ],
+      [
+        45.65,
+        32.85
+      ],
+      [
+        47.85,
+        32.85
+      ],
+      [
+        47.85,
+        39.75
+      ],
+      [
+        36.85,
+        39.75
+      ],
+      [
+        36.85,
+        36.45
+      ],
+      [
+        39.65,
+        36.45
+      ],
+      [
+        39.65,
+        32.45
+      ],
+      [
+        40.25,
+        32.45
+      ],
+      [
+        40.25,
+        31.6
+      ],
+      [
+        44.25,
+        31.6
+      ],
+      [
+        44.75,
+        31.1
+      ]
+    ],
+    [
+      [
+        36.45,
+        36.05
+      ],
+      [
+        48.2,
+        36.05
+      ],
+      [
+        48.2,
+        40.45
+      ],
+      [
+        36.45,
+        40.45
+      ]
+    ]
+  ],
+  "viaCostMM": 7.0,
+  "bottomCost": 1.25,
+  "scope": "Candidate search only. Actual dynamic plane, all region/class interactions, native DRC, graph and return geometry remain required. Future literal critical paths are temporary obstacles, never treated as electrically executed.",
+  "variant": "4L",
+  "pendingOperations": [
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC13_TOP",
+      "net": "GPIO_PC13",
+      "layer": "TOP",
+      "points": [
+        [
+          42.25,
+          31.25
+        ],
+        [
+          42.25,
+          29.15
+        ],
+        [
+          42,
+          28.9
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "U1",
+        "2"
+      ],
+      "purpose": "Shortinsideescape; noHSEshadowcross"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_GPIO_PC13_VIA",
+      "net": "GPIO_PC13",
+      "xy": [
+        42,
+        28.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "OffpadunderLQFP; masktent/return/referencecheck"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC14_TOP",
+      "net": "GPIO_PC14",
+      "layer": "TOP",
+      "points": [
+        [
+          41.75,
+          31.25
+        ],
+        [
+          41.75,
+          29.8
+        ],
+        [
+          41,
+          29.8
+        ],
+        [
+          41,
+          27.8
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "U1",
+        "3"
+      ],
+      "purpose": "Shortinsideescape; noHSEshadowcross"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_GPIO_PC14_VIA",
+      "net": "GPIO_PC14",
+      "xy": [
+        41,
+        27.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "OffpadunderLQFP; masktent/return/referencecheck"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC15_TOP",
+      "net": "GPIO_PC15",
+      "layer": "TOP",
+      "points": [
+        [
+          41.25,
+          31.25
+        ],
+        [
+          41.25,
+          30.25
+        ],
+        [
+          40.3,
+          30.25
+        ],
+        [
+          40.3,
+          28.9
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "U1",
+        "4"
+      ],
+      "purpose": "Shortinsideescape; noHSEshadowcross"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_GPIO_PC15_VIA",
+      "net": "GPIO_PC15",
+      "xy": [
+        40.3,
+        28.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "OffpadunderLQFP; masktent/return/referencecheck"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC13_BOTTOM_START",
+      "net": "GPIO_PC13",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          42,
+          28.9
+        ],
+        [
+          42,
+          31.1
+        ],
+        [
+          35.8,
+          31.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "OnlypartialwestescapeunderMCU, completeordinaryGPIOoutsideHSEmoat;2LactualTOPreferencecoverageandgaplengthmustbechecked"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC14_BOTTOM_START",
+      "net": "GPIO_PC14",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          41,
+          27.8
+        ],
+        [
+          41,
+          28.0
+        ],
+        [
+          39.5,
+          28.0
+        ],
+        [
+          39.5,
+          28.5
+        ],
+        [
+          35,
+          28.5
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "OnlypartialwestescapeunderMCU, completeordinaryGPIOoutsideHSEmoat;2LactualTOPreferencecoverageandgaplengthmustbechecked"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC15_BOTTOM_START",
+      "net": "GPIO_PC15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.3,
+          28.9
+        ],
+        [
+          40.3,
+          30.3
+        ],
+        [
+          35.4,
+          30.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "OnlypartialwestescapeunderMCU, completeordinaryGPIOoutsideHSEmoat;2LactualTOPreferencecoverageandgaplengthmustbechecked"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_RETURN_EAST",
+      "net": "GND",
+      "xy": [
+        42,
+        27.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "NearbyapplicationGNDreturn tiesactualTOPreference to2LBOTTOM or4LL2/L3. Physicalplaneconnectivityrequired."
+    },
+    {
+      "type": "via",
+      "id": "GPIO_RETURN_WEST",
+      "net": "GND",
+      "xy": [
+        39.8,
+        27.3
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "NearbyapplicationGNDreturn tiesactualTOPreference to2LBOTTOM or4LL2/L3. Physicalplaneconnectivityrequired."
+    },
+    {
+      "type": "via",
+      "id": "USB_DP_MIRROR_A",
+      "net": "USB_DP",
+      "xy": [
+        39.75,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060_OR_VERIFIED_TENTED_PRIVATE_VARIANT",
+      "purpose": "Underhousing tented",
+      "mustBeTented": true
+    },
+    {
+      "type": "via",
+      "id": "USB_DP_MIRROR_B",
+      "net": "USB_DP",
+      "xy": [
+        40.75,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060_OR_VERIFIED_TENTED_PRIVATE_VARIANT",
+      "purpose": "Underhousing tented",
+      "mustBeTented": true
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_A6_TO_MIRROR",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          39.75,
+          7.355
+        ],
+        [
+          39.75,
+          5.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "",
+      "from": [
+        "J2",
+        "A6"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_B6_TO_MIRROR",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          40.75,
+          7.355
+        ],
+        [
+          40.75,
+          5.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "",
+      "from": [
+        "J2",
+        "B6"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_MIRROR_BOTTOM",
+      "net": "USB_DP",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39.75,
+          5.8
+        ],
+        [
+          40.75,
+          5.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Shortest1mm BOTTOM mirrorcrossing; avoid matching doglegs that damage reference."
+    },
+    {
+      "type": "route",
+      "id": "USB_DM_A7_MERGE",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          7.355
+        ],
+        [
+          40.25,
+          8.6
+        ],
+        [
+          39.25,
+          8.6
+        ],
+        [
+          39.25,
+          7.355
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "ShortestTOPmirrorjoin behindconnector tips; underhousing reference patch avoids extra data U slot.",
+      "from": [
+        "J2",
+        "A7"
+      ],
+      "to": [
+        "J2",
+        "B7"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_ENTRY",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          40.75,
+          7.355
+        ],
+        [
+          40.75,
+          8.6
+        ],
+        [
+          41.2,
+          9.05
+        ],
+        [
+          41.2,
+          10.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Directflowthroughprotection input",
+      "from": [
+        "J2",
+        "B6"
+      ],
+      "to": [
+        "U4",
+        "6"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DM_ENTRY",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          39.25,
+          7.355
+        ],
+        [
+          39.25,
+          8.6
+        ],
+        [
+          39.3,
+          8.65
+        ],
+        [
+          39.3,
+          10.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Directflowthroughprotection input",
+      "from": [
+        "J2",
+        "B7"
+      ],
+      "to": [
+        "U4",
+        "4"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_SHARED_DP",
+      "net": "PA12_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          41.1,
+          18.3984
+        ],
+        [
+          41.1,
+          19.85
+        ],
+        [
+          40.95,
+          20.0
+        ],
+        [
+          40.95,
+          21.6
+        ],
+        [
+          41.25,
+          21.9
+        ],
+        [
+          41.25,
+          22.75
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "PassleftofC14groundloop, .2finepitchport; preservelocalclasspairexception",
+      "from": [
+        "R5",
+        "1"
+      ],
+      "to": [
+        "U1",
+        "33"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DNP_STUB_DP",
+      "net": "PA12_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          41.1,
+          18.3984
+        ],
+        [
+          42.8032,
+          18.3984
+        ],
+        [
+          42.9016,
+          18.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "ExplicitDNPoffmainstub~1.8424mm",
+      "from": [
+        "R5",
+        "1"
+      ],
+      "to": [
+        "R12",
+        "1"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DNP_STUB_DM",
+      "net": "PA11_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          39.4,
+          18.3984
+        ],
+        [
+          37.9968,
+          18.3984
+        ],
+        [
+          37.8984,
+          18.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "ExplicitDNPoffmainstub~1.5424mm",
+      "from": [
+        "R6",
+        "1"
+      ],
+      "to": [
+        "R13",
+        "1"
+      ]
+    },
+    {
+      "type": "via",
+      "id": "USB_RETURN_LEFT",
+      "net": "GND",
+      "xy": [
+        38.15,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060_OR_VERIFIED_TENTED_PRIVATE_VARIANT",
+      "purpose": "ActualTOP/BOTTOM/L2/L3 applicationreturn; outside signalvia antipads",
+      "mustBeTented": true
+    },
+    {
+      "type": "via",
+      "id": "USB_RETURN_RIGHT",
+      "net": "GND",
+      "xy": [
+        41.7,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060_OR_VERIFIED_TENTED_PRIVATE_VARIANT",
+      "purpose": "ActualTOP/BOTTOM/L2/L3 applicationreturn; outside signalvia antipads",
+      "mustBeTented": true
+    },
+    {
+      "type": "route",
+      "id": "USB_U4_DP_FLOW",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          41.2,
+          10.1
+        ],
+        [
+          41.2,
+          12.7
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "U4",
+        "6"
+      ],
+      "to": [
+        "U4",
+        "1"
+      ],
+      "purpose": "ActualshortPCB copperflowthroughmatchingpads, noPIN_SHORT softwarewaiver. Packageinternalparallelconductorunknown; symmetric portwidth."
+    },
+    {
+      "type": "route",
+      "id": "USB_U4_DM_FLOW",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          39.3,
+          10.1
+        ],
+        [
+          39.3,
+          12.7
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "U4",
+        "4"
+      ],
+      "to": [
+        "U4",
+        "3"
+      ],
+      "purpose": "ActualmatchingPCBflow, currentDRC/neck/ESDreturngeometrycheck."
+    },
+    {
+      "type": "route",
+      "id": "USB4L_PROTECTED_DP",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          41.2,
+          12.7
+        ],
+        [
+          41.2,
+          13.3
+        ],
+        [
+          40.455,
+          14.045
+        ],
+        [
+          40.455,
+          15.7
+        ],
+        [
+          41.1,
+          16.345
+        ],
+        [
+          41.1,
+          16.8236
+        ]
+      ],
+      "width": 0.26,
+      "purpose": "TIformula~90ohm straightbulk.26/.15, portsuncoupled andnearbycoppernotmodeled",
+      "from": [
+        "U4",
+        "1"
+      ],
+      "to": [
+        "R5",
+        "2"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB4L_PROTECTED_DM",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          39.3,
+          12.7
+        ],
+        [
+          39.3,
+          13.3
+        ],
+        [
+          40.045,
+          14.045
+        ],
+        [
+          40.045,
+          15.7
+        ],
+        [
+          39.4,
+          16.345
+        ],
+        [
+          39.4,
+          16.8236
+        ]
+      ],
+      "width": 0.26,
+      "purpose": "SymmetrictonativeDPcandidate",
+      "from": [
+        "U4",
+        "3"
+      ],
+      "to": [
+        "R6",
+        "2"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_PULLUP_BRANCH",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          40.455,
+          14.6
+        ],
+        [
+          41.3,
+          14.6
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "USB_DP_TRUNK_NODE",
+        "14.6"
+      ],
+      "to": [
+        "R11",
+        "2"
+      ],
+      "purpose": "RequiredFS pullup shorttee; sourceotherendtoQ2 may be longer"
+    },
+    {
+      "type": "route",
+      "id": "USB_SHARED_DM",
+      "net": "PA11_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          39.4,
+          18.3984
+        ],
+        [
+          39.4,
+          18.95
+        ],
+        [
+          40.45,
+          20.0
+        ],
+        [
+          40.45,
+          21.6
+        ],
+        [
+          40.75,
+          21.9
+        ],
+        [
+          40.75,
+          22.75
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "NoCANtrunk; routewithDPgeometrycheck, skewnotassumed",
+      "from": [
+        "R6",
+        "1"
+      ],
+      "to": [
+        "U1",
+        "32"
+      ]
+    }
+  ]
+}

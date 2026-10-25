@@ -1,0 +1,289 @@
+{
+  "status": "LONG_PATH_GEOMETRY_CANDIDATE_NEEDS_ENGINEERING_REVIEW",
+  "variant": "2L",
+  "sourceExpectedSHA256": "24DDF112FFCC9B7A8F44401B406BBBCEC7523B3A5F42E73A816A7D3349BCF602",
+  "operations": [
+    {
+      "type": "route",
+      "id": "RIGHT_LONG_SWCLK_0_R0",
+      "net": "SWCLK",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.8,
+          24.15
+        ],
+        [
+          46.2,
+          24.15
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit endpoint/corridor long route after engineered source; actual native/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_LONG_SWCLK_0_R1",
+      "net": "SWCLK",
+      "layer": "TOP",
+      "points": [
+        [
+          46.2,
+          24.15
+        ],
+        [
+          49.25,
+          21.1
+        ],
+        [
+          57.5,
+          21.1
+        ],
+        [
+          58.6,
+          20.0
+        ],
+        [
+          58.62,
+          20.0
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit endpoint/corridor long route after engineered source; actual native/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_LONG_SWO_0_R0",
+      "net": "SWO",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.8,
+          25.15
+        ],
+        [
+          46.2,
+          25.15
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit endpoint/corridor long route after engineered source; actual native/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_LONG_SWO_0_R1",
+      "net": "SWO",
+      "layer": "TOP",
+      "points": [
+        [
+          46.2,
+          25.15
+        ],
+        [
+          47.0,
+          25.15
+        ],
+        [
+          50.6,
+          21.55
+        ],
+        [
+          62.15,
+          21.55
+        ],
+        [
+          63.7,
+          20.0
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit endpoint/corridor long route after engineered source; actual native/reference review pending"
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_LONG_GPIO_PB9_0_V0",
+      "net": "GPIO_PB9",
+      "xy": [
+        49.7,
+        31.35
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Candidate transition; final return GND and reference proof mandatory"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_LONG_GPIO_PB9_0_R0",
+      "net": "GPIO_PB9",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.8,
+          28.65
+        ],
+        [
+          46.95,
+          28.8
+        ],
+        [
+          47.15,
+          28.8
+        ],
+        [
+          49.7,
+          31.35
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit endpoint/corridor long route after engineered source; actual native/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_LONG_GPIO_PB9_0_R1",
+      "net": "GPIO_PB9",
+      "layer": "TOP",
+      "points": [
+        [
+          49.7,
+          31.35
+        ],
+        [
+          49.7,
+          40.9
+        ],
+        [
+          62.7,
+          53.9
+        ],
+        [
+          69.8,
+          53.9
+        ],
+        [
+          70.9,
+          55.0
+        ],
+        [
+          70.89,
+          55.0
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit endpoint/corridor long route after engineered source; actual native/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_LONG_GPIO_PB8_0_R0",
+      "net": "GPIO_PB8",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.8,
+          28.15
+        ],
+        [
+          47.7,
+          28.15
+        ],
+        [
+          47.9,
+          27.95
+        ],
+        [
+          48.6,
+          27.95
+        ],
+        [
+          52.9,
+          32.25
+        ],
+        [
+          52.9,
+          39.55
+        ],
+        [
+          68.35,
+          55.0
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit endpoint/corridor long route after engineered source; actual native/reference review pending"
+    }
+  ],
+  "proofs": [
+    {
+      "net": "SWCLK",
+      "source": "U1.37",
+      "target": "J9.4"
+    },
+    {
+      "net": "SWO",
+      "source": "U1.39",
+      "target": "J9.6"
+    },
+    {
+      "net": "GPIO_PB9",
+      "source": "U1.46",
+      "target": "J13.8"
+    },
+    {
+      "net": "GPIO_PB8",
+      "source": "U1.45",
+      "target": "J13.7"
+    }
+  ],
+  "reviews": [
+    {
+      "net": "SWCLK",
+      "source": "ANCHOR_SWCLK",
+      "target": "J9.4",
+      "viaCount": 0,
+      "length_mm": 14.738986283848332,
+      "expanded": 10140
+    },
+    {
+      "net": "SWO",
+      "source": "ANCHOR_SWO",
+      "target": "J9.6",
+      "viaCount": 0,
+      "length_mm": 20.23319984622143,
+      "expanded": 10638
+    },
+    {
+      "net": "GPIO_PB9",
+      "source": "ANCHOR_GPIO_PB9",
+      "target": "J13.8",
+      "viaCount": 1,
+      "length_mm": 40.618787847868,
+      "expanded": 186326
+    },
+    {
+      "net": "GPIO_PB8",
+      "source": "ANCHOR_GPIO_PB8",
+      "target": "J13.7",
+      "viaCount": 0,
+      "length_mm": 37.11356056934325,
+      "expanded": 182149
+    }
+  ],
+  "failures": [
+    {
+      "net": "GPIO_PB5",
+      "source": "ANCHOR_GPIO_PB5",
+      "target": "J13.6",
+      "reason": "No geometric candidate after 400001 expanded cells"
+    },
+    {
+      "net": "GPIO_PB4",
+      "source": "ANCHOR_GPIO_PB4",
+      "target": "J13.5",
+      "reason": "No geometric candidate after 400001 expanded cells"
+    },
+    {
+      "net": "GPIO_PA15",
+      "source": "ANCHOR_GPIO_PA15",
+      "target": "J13.4",
+      "reason": "No geometric candidate after 709 expanded cells"
+    }
+  ],
+  "scope": "Specified right10 long endpoints only; sourcejoint and all declared future plans are obstacles. I2C remote R19/R20 toJ5 from rootv7 retained as separate knowncandidate, no duplicate automaticstar. Signal transitions need final ground. No Cadence invoked."
+}

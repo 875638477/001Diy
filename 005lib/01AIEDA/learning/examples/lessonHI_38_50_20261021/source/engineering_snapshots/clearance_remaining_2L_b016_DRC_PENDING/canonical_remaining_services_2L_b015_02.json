@@ -1,0 +1,963 @@
+{
+  "batchId": "remaining_services_2L_b015_02",
+  "variant": "2L",
+  "status": "REBASED_TO_ACTUAL_B015_REQUIRES_NATIVE_AND_REFERENCE_REVIEW",
+  "sourceCheckpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\source_2L_b015_DRC_PENDING",
+  "sourceExpectedSHA256": "D022917C5F893A104A6C5A98D71326D17FDCA7791750077F54B0B3B6A002BD29",
+  "inputs": [
+    {
+      "path": "plans/root_remaining_2L_v19.json",
+      "sha256": "12156F9AD396A45A41523692766F492344A1AF59577E0378600D58559B4633A5"
+    },
+    {
+      "path": "engineering_power/UART_RX_receiver_bridge_2L_03.json",
+      "sha256": "8251B63248CAC9D8958C636F0279A59B842B321C3937296A84CCE0C3A538C08D"
+    },
+    {
+      "path": "engineering_power/remaining_returns_2L_v19_02.json",
+      "sha256": "663E4A1B333D00C935133E0A7B7B50B50EF9EA642A5E3285165020A21D76900D"
+    },
+    {
+      "path": "plans/J2_GND_entry_2L_02.json",
+      "sha256": "0CDA3A89E0936E09E15ECBAB46B1232936F117C097ACB002BCD28C7E36D5C3F4"
+    },
+    {
+      "path": "engineering_power/CAN_RXD_2L_engineered_07.json",
+      "sha256": "D331E853C55FCB367530EE560DFA56D1DC12CEC90FAB33759812FAB970E040C5"
+    }
+  ],
+  "operations": [
+    {
+      "type": "via",
+      "id": "HI_2L_NRST_1_V1",
+      "net": "NRST",
+      "xy": [
+        39.05,
+        42.1
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_NRST_1_R1",
+      "net": "NRST",
+      "layer": "TOP",
+      "points": [
+        [
+          39.6764,
+          41.3
+        ],
+        [
+          39.7,
+          41.3
+        ],
+        [
+          39.7,
+          41.45
+        ],
+        [
+          39.05,
+          42.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_NRST_1_R2",
+      "net": "NRST",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39.05,
+          42.1
+        ],
+        [
+          37.5,
+          40.55
+        ],
+        [
+          36.65,
+          40.55
+        ],
+        [
+          36.2,
+          40.1
+        ],
+        [
+          36.2,
+          35.9
+        ],
+        [
+          36.6,
+          35.5
+        ],
+        [
+          37.7,
+          35.5
+        ],
+        [
+          37.75,
+          35.55
+        ],
+        [
+          38.45,
+          35.55
+        ],
+        [
+          38.7,
+          35.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_NRST_2_R1",
+      "net": "NRST",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          34.27,
+          43.0
+        ],
+        [
+          34.25,
+          43.0
+        ],
+        [
+          38.15,
+          43.0
+        ],
+        [
+          39.05,
+          42.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_NRST_3_R1",
+      "net": "NRST",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          61.16,
+          20.0
+        ],
+        [
+          61.15,
+          20.0
+        ],
+        [
+          60.25,
+          20.9
+        ],
+        [
+          60.25,
+          26.7
+        ],
+        [
+          60.45,
+          26.9
+        ],
+        [
+          60.45,
+          37.85
+        ],
+        [
+          56.75,
+          41.55
+        ],
+        [
+          37.65,
+          41.55
+        ],
+        [
+          36.65,
+          40.55
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Join already connected NRSTbranch at first exact same-net future-copper intersection; no repeated8mm tail or fabricated bridge."
+    },
+    {
+      "type": "via",
+      "id": "HI_2L_VBUS_PRESENT_N_1_V1",
+      "net": "VBUS_PRESENT_N",
+      "xy": [
+        51.15,
+        11.7
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_VBUS_PRESENT_N_1_R2",
+      "net": "VBUS_PRESENT_N",
+      "layer": "TOP",
+      "points": [
+        [
+          51.15,
+          11.7
+        ],
+        [
+          51.65,
+          11.7
+        ],
+        [
+          52.0,
+          12.05
+        ],
+        [
+          52.0,
+          12.0718
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "via",
+      "id": "HI_2L_UART_TX_1_V1",
+      "net": "UART_TX",
+      "xy": [
+        54.85,
+        18.95
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_UART_TX_1_R1",
+      "net": "UART_TX",
+      "layer": "TOP",
+      "points": [
+        [
+          47.1764,
+          19.9
+        ],
+        [
+          47.2,
+          19.9
+        ],
+        [
+          48.4,
+          21.1
+        ],
+        [
+          51.9,
+          21.1
+        ],
+        [
+          52.45,
+          20.55
+        ],
+        [
+          52.45,
+          19.05
+        ],
+        [
+          52.6,
+          18.9
+        ],
+        [
+          54.8,
+          18.9
+        ],
+        [
+          54.85,
+          18.95
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_UART_TX_1_R2",
+      "net": "UART_TX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          54.85,
+          18.95
+        ],
+        [
+          55.15,
+          18.95
+        ],
+        [
+          55.55,
+          18.55
+        ],
+        [
+          66.3,
+          18.55
+        ],
+        [
+          74.0,
+          26.25
+        ],
+        [
+          74.0,
+          26.27
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "deleteVia",
+      "id": "UART_RX_REMOVE_REDUNDANT_PB4_RETURN",
+      "net": "GND",
+      "xy": [
+        61.8,
+        24.95
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "PB4signalthroughvia61.8,25.85 already has retainedcommonGND62.6,25.65 distance.824621mm; remove redundantvia blocking receiver, never remove both."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "UART_RX_SOURCE_REPOSE_DEL_0",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          50.1,
+          22.4
+        ],
+        [
+          50.1,
+          23.4984
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "UART_RX_SOURCE_REPOSE_DEL_1",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          50.1,
+          23.4984
+        ],
+        [
+          50.1016,
+          23.5
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "UART_RX_SOURCE_REPOSE_TOP",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          50.1,
+          22.4
+        ],
+        [
+          50.12,
+          22.42
+        ],
+        [
+          50.12,
+          23.4626
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "R17pin1 precise source match, preserve net/seriesidentity"
+    },
+    {
+      "type": "route",
+      "id": "UART_RX_RECEIVER_TOP_W",
+      "net": "UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          50.12,
+          25.0374
+        ],
+        [
+          50.1326,
+          25.05
+        ],
+        [
+          55.7,
+          25.05
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Receiver normalwidth path preserving existing pairedground and avoiding NRST BOTTOMcorridor; native/refreview mandatory"
+    },
+    {
+      "type": "via",
+      "id": "UART_RX_BRIDGE1_W",
+      "net": "UART_RX",
+      "xy": [
+        55.7,
+        25.05
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "UART_RX_RECEIVER_BOTTOM_B1",
+      "net": "UART_RX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          55.7,
+          25.05
+        ],
+        [
+          56.45,
+          24.3
+        ],
+        [
+          57.05,
+          24.3
+        ],
+        [
+          57.8,
+          25.05
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Receiver normalwidth path preserving existing pairedground and avoiding NRST BOTTOMcorridor; native/refreview mandatory"
+    },
+    {
+      "type": "via",
+      "id": "UART_RX_BRIDGE1_E",
+      "net": "UART_RX",
+      "xy": [
+        57.8,
+        25.05
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "UART_RX_RECEIVER_TOP_E",
+      "net": "UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          57.8,
+          25.05
+        ],
+        [
+          57.92,
+          24.93
+        ],
+        [
+          68.0316,
+          24.93
+        ],
+        [
+          68.1016,
+          25
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Receiver normalwidth path preserving existing pairedground and avoiding NRST BOTTOMcorridor; native/refreview mandatory"
+    },
+    {
+      "type": "via",
+      "id": "REM19_RETURN_NRST",
+      "net": "GND",
+      "xy": [
+        39.55,
+        42.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "CommonGNDreturn NRST; independentallfuturegeometry, nativeactualcommonfill proofpending"
+    },
+    {
+      "type": "via",
+      "id": "REM19_RETURN_UART_TX",
+      "net": "GND",
+      "xy": [
+        54.75,
+        19.75
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "CommonGNDreturn UART_TX; independentallfuturegeometry, nativeactualcommonfill proofpending"
+    },
+    {
+      "type": "via",
+      "id": "REM19_RETURN_VBUS_PRESENT_N",
+      "net": "GND",
+      "xy": [
+        50.95,
+        12.5
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "CommonGNDreturn VBUS_PRESENT_N; independentallfuturegeometry, nativeactualcommonfill proofpending"
+    },
+    {
+      "type": "route",
+      "id": "J2_LEFT_GND_PIN_NECK",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          36.8,
+          7.355
+        ],
+        [
+          35.9,
+          7.355
+        ]
+      ],
+      "width": 0.35,
+      "purpose": "Explicit connector GND pin to existing through-shell common-ground land. .35neck.9mm within global1.0 neck budget; foreignVBUSpad copper gap.325mm, no new waiver."
+    },
+    {
+      "type": "route",
+      "id": "J2_LEFT_GND_SHELL_WIDE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          35.9,
+          7.355
+        ],
+        [
+          35.68,
+          7.355
+        ],
+        [
+          35.68,
+          6.78
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "NormalGNDwidth enters actualSH1/SH2throughland; no signal current assumed through shield before physicalconnection proof."
+    },
+    {
+      "type": "route",
+      "id": "J2_RIGHT_GND_PIN_NECK",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          43.2,
+          7.355
+        ],
+        [
+          44.1,
+          7.355
+        ]
+      ],
+      "width": 0.35,
+      "purpose": "Explicit connector GND pin to existing through-shell common-ground land. .35neck.9mm within global1.0 neck budget; foreignVBUSpad copper gap.325mm, no new waiver."
+    },
+    {
+      "type": "route",
+      "id": "J2_RIGHT_GND_SHELL_WIDE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          44.1,
+          7.355
+        ],
+        [
+          44.32,
+          7.355
+        ],
+        [
+          44.32,
+          6.78
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "NormalGNDwidth enters actualSH1/SH2throughland; no signal current assumed through shield before physicalconnection proof."
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_PHY_V",
+      "net": "CAN_RXD",
+      "xy": [
+        61.45,
+        12.2
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "CAN2L_PHY_TOP",
+      "net": "CAN_RXD",
+      "layer": "TOP",
+      "points": [
+        [
+          64,
+          12.19
+        ],
+        [
+          64,
+          12.2
+        ],
+        [
+          61.45,
+          12.2
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "CAN2L_BOTTOM_PERIMETER",
+      "net": "CAN_RXD",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          61.45,
+          12.2
+        ],
+        [
+          55.8,
+          12.2
+        ],
+        [
+          45,
+          1.4
+        ],
+        [
+          43.4,
+          1.4
+        ],
+        [
+          42.6,
+          2.2
+        ],
+        [
+          37.12,
+          2.2
+        ],
+        [
+          36.32,
+          1.4
+        ],
+        [
+          35,
+          1.4
+        ],
+        [
+          34.45,
+          1.95
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_USB_WEST_V",
+      "net": "CAN_RXD",
+      "xy": [
+        34.45,
+        1.95
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "CAN2L_WEST_TOP_DNP",
+      "net": "CAN_RXD",
+      "layer": "TOP",
+      "points": [
+        [
+          34.45,
+          1.95
+        ],
+        [
+          34.05,
+          2.35
+        ],
+        [
+          34.05,
+          16.05
+        ],
+        [
+          36.3,
+          18.3
+        ],
+        [
+          36.3236,
+          18.3
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_PHY_RETURN",
+      "net": "GND",
+      "xy": [
+        61.7,
+        11.2
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_REFERENCE_CROSS_LEFT",
+      "net": "GND",
+      "xy": [
+        34.25,
+        17.25
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "CommonGND either sideof finiteVBUSsenseBOTTOMslot, pairedwith explicitTOPgroundbridge"
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_REFERENCE_CROSS_RIGHT",
+      "net": "GND",
+      "xy": [
+        35.2,
+        18.5
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "CommonGND either sideof finiteVBUSsenseBOTTOMslot, pairedwith explicitTOPgroundbridge"
+    },
+    {
+      "type": "route",
+      "id": "CAN2L_REFERENCE_COPLANAR_BRIDGE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          34.25,
+          17.25
+        ],
+        [
+          35.2,
+          18.2
+        ],
+        [
+          35.2,
+          18.5
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "TOPactualcommonGNDbridgeacrossBOTTOMslow-sense slot paralleltoCANdiagonal, minCANcoppergap.3071; not unboundedmicrostripclaim"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_VBUS_PRESENT_N_1_R1",
+      "net": "VBUS_PRESENT_N",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          34.6,
+          26.85
+        ],
+        [
+          36.05,
+          25.4
+        ],
+        [
+          36.05,
+          23.6
+        ],
+        [
+          35.6,
+          23.15
+        ],
+        [
+          34.75,
+          23.15
+        ],
+        [
+          34.55,
+          22.95
+        ],
+        [
+          34.4,
+          22.8
+        ],
+        [
+          34.4,
+          18.15
+        ],
+        [
+          35.3,
+          17.25
+        ],
+        [
+          35.3,
+          9.3
+        ],
+        [
+          34.55,
+          8.55
+        ],
+        [
+          34.55,
+          5.85
+        ],
+        [
+          37.35,
+          3.05
+        ],
+        [
+          42.9,
+          3.05
+        ],
+        [
+          45.75,
+          5.9
+        ],
+        [
+          47.7,
+          5.9
+        ],
+        [
+          51.15,
+          9.35
+        ],
+        [
+          51.15,
+          11.7
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Low-speed sensependingreplacement avoids~10mmnearparallelunderTOPCAN; onefiniteorthogonalcross with.6TOPGNDreturnbridge. USBcritical copper unchanged."
+    }
+  ],
+  "placementChanges": [
+    {
+      "ref": "R17",
+      "xy": [
+        50.12,
+        23.361
+      ],
+      "rotation": 90,
+      "purpose": "Requiredreceiverexit geometry from rootservice19; only receiverref moves"
+    }
+  ],
+  "proofs": [
+    {
+      "from": "R27.2",
+      "to": "C21.1",
+      "connected": true
+    },
+    {
+      "from": "J7.1",
+      "to": "C21.1",
+      "connected": true
+    },
+    {
+      "from": "J9.5",
+      "to": "C21.1",
+      "connected": true
+    },
+    {
+      "from": "U1.18",
+      "to": "Q1.3",
+      "connected": true
+    },
+    {
+      "from": "R16.2",
+      "to": "J4.2",
+      "connected": true
+    },
+    {
+      "net": "PA10_UART_RX",
+      "source": "U1.31",
+      "target": "R17.1"
+    },
+    {
+      "net": "UART_RX",
+      "source": "R17.2",
+      "target": "R18.1"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "toAlias": "REM19_RETURN_NRST"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "toAlias": "REM19_RETURN_UART_TX"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "toAlias": "REM19_RETURN_VBUS_PRESENT_N"
+    },
+    {
+      "from": "J2.A1_B12",
+      "to": "J2.SH1",
+      "connected": true
+    },
+    {
+      "from": "J2.B1_A12",
+      "to": "J2.SH2",
+      "connected": true
+    },
+    {
+      "from": "J2.A1_B12",
+      "to": "C10.2",
+      "connected": true
+    },
+    {
+      "from": "J2.B1_A12",
+      "to": "C10.2",
+      "connected": true
+    },
+    {
+      "net": "CAN_RXD",
+      "source": "U5.4",
+      "target": "R13.2"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "target": "J2.SH3"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "toAlias": "CAN2L_PHY_RETURN"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "toAlias": "CAN2L_REFERENCE_CROSS_LEFT"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "toAlias": "CAN2L_REFERENCE_CROSS_RIGHT"
+    }
+  ],
+  "rebaseDecisions": [
+    "Exclude old pending VBUS BOTTOM operation exactly once; replace using CAN07 canonical payload.",
+    "Actual b015 is service18: apply UART03 exact two-segment PA10 ripup and R17 90deg relocation, do not replay SOURCE.",
+    "Source-only operations and placement metadata from old root_remaining19 are already actual b015; no source plans replayed.",
+    "Current b014 aliases remain qualified baseline; source b015 has cached violations and incomplete wholeboard DRC.",
+    "Return-via historical frozen-plane coverage does not certify new actual fill/reference; final HSE negative and actual-common-ground proof required."
+  ],
+  "supersedes": {
+    "path": "plans/remaining_services_2L_b015_01.json",
+    "sha256": "20F238EF987AFF64A525E886DD3AB9DE16EAB3E8D04C423C631197668407811F",
+    "reason": "Only J2 canonical wideleg endpoints corrected to actual SH pin centers."
+  }
+}

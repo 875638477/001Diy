@@ -1,0 +1,59 @@
+
+  NAME
+         axlDBCreateGroup - Create a group of database objects.
+  SYNOPSIS
+         axlDBCreateGroup(
+             t_name
+             t_type
+             lo_groupMembers
+         ) ==> o_dbid/nil
+  FUNCTION
+         Creates a new group database object which has members which are
+         specified by lo_groupMembers.
+  NEEDS
+         t_name                  A string providing the name of the group. If
+                                 the name is already used by an existing group,
+                                 this procedure will fail (and return nil).
+ 
+         t_type                  A string which defines the type of group. The
+                                 legal values are:
+                                     "generic"
+                                     "net_group"
+ 
+         lo_groupMembers         A list of axl dbid's. This defines the members
+                                 of the group.  Duplicate dbid entries will be
+                                 silently ignored (i.e. an object will only be
+                                 added to a group once). A single dbid can be
+                                 substituted for a list.
+ 
+                                 There are certain restrictions on the members
+                                 of a group. If they are violated, this
+                                 procedure fails (and return nil). 
+                                     -   For each group type has only certain objects
+                                         that are allowed. For example generic groups 
+                                         only permit: group, component, symbol, net, path, 
+                                         via, shape, polygon, pin, text.
+                                     -   A circular group relationship can not
+                                         be formed. For example, group A can
+                                         not be added as a member of group B if
+                                         group B is directly or indirectly a 
+                                         member of group A.
+ 
+  RETURNS
+         o_dbid          The dbid of the newly formed group.
+         nil             If the group could not be created.
+  SEE ALSO
+         axlDBAddGroupObjects, axlDBDisbandGroup, axlDBRemoveGroupObjects
+  EXAMPLE
+         1) Generic group
+             groupMembers = axlGetSelSet()
+             group_dbid = axlDBCreateGroup("my_group" "generic" groupMembers)
+         2) Net group
+             groupMembers = axlSelectByName("NET" "NET*" t)
+             group_dbid = axlDBCreateGroup("NG1" "net_group" groupMembers)
+  NOTE
+         The order of the group members which is provided when you access the
+         groupMembers property of the group may vary from the order which was
+         provided in lo_groupMembers.
+ 
+

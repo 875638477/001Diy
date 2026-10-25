@@ -1,0 +1,214 @@
+{
+  "status": "REJECTED_GEOMETRIC_CANDIDATE",
+  "variant": "4L",
+  "batchId": "PB15_access_exit_4L_41",
+  "operations": [
+    {
+      "type": "deleteVia",
+      "id": "PB15_EAST_RETURN_RIP",
+      "net": "GND",
+      "xy": [
+        38.8,
+        19.7
+      ]
+    },
+    {
+      "type": "deleteSegment",
+      "id": "PB15_UP_TAIL_RIP",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          38.5,
+          20.675
+        ],
+        [
+          38.5,
+          22.3
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "via",
+      "id": "PB15_EAST_RETURN_RELOCATED",
+      "net": "GND",
+      "xy": [
+        39.1,
+        19.4
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26,
+      "purpose": "Retain a real nearby application-ground stitch while opening the southern GPIO outlet; refresh actual plane connection and all-layer via-only parent permissions."
+    },
+    {
+      "type": "route",
+      "id": "PB15_DOWN_NORMAL_EXIT",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "width": 0.2,
+      "points": [
+        [
+          38.5,
+          20.675
+        ],
+        [
+          38.8,
+          20.4
+        ],
+        [
+          38.8,
+          20.05
+        ],
+        [
+          38.5,
+          19.75
+        ]
+      ],
+      "purpose": "Replace upward dead-end partial with accessible southern normal-width route, preserving MCU TOP source and all power/ADC/HSE copper."
+    }
+  ],
+  "partialEndpoints": {
+    "GPIO_PB15": {
+      "xy": [
+        38.5,
+        19.75
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.28"
+    }
+  },
+  "issues": [
+    {
+      "a": "PB15_EAST_RETURN_RELOCATED",
+      "net": "GND",
+      "b": "native_route",
+      "otherNet": "PA11_SHARED",
+      "layer": "TOP",
+      "d": 0.17033008588990545,
+      "gap": 0.3,
+      "bbox": [
+        39.3,
+        18.849999999999998,
+        40.7,
+        20.25
+      ]
+    },
+    {
+      "a": "PB15_EAST_RETURN_RELOCATED",
+      "net": "GND",
+      "b": "native_route",
+      "otherNet": "PA11_SHARED",
+      "layer": "TOP",
+      "d": 0.18096523716483442,
+      "gap": 0.3,
+      "bbox": [
+        39.3,
+        18.298399999999997,
+        39.5,
+        19.05
+      ]
+    },
+    {
+      "a": "PB15_EAST_RETURN_RELOCATED",
+      "net": "GND",
+      "b": "native_route",
+      "otherNet": "USB_ATTACH_N",
+      "layer": "BOTTOM",
+      "d": 0.24000000000000196,
+      "gap": 0.3,
+      "bbox": [
+        39.6,
+        18.5,
+        39.800000000000004,
+        19.900000000000002
+      ]
+    },
+    {
+      "a": "PB15_DOWN_NORMAL_EXIT",
+      "net": "GPIO_PB15",
+      "b": "native_route",
+      "otherNet": "USB_ATTACH_N",
+      "layer": "BOTTOM",
+      "d": 0.10000317694287891,
+      "gap": 0.2,
+      "bbox": [
+        39.0,
+        19.7,
+        39.800000000000004,
+        20.5
+      ]
+    },
+    {
+      "a": "PB15_DOWN_NORMAL_EXIT",
+      "net": "GPIO_PB15",
+      "b": "native_route",
+      "otherNet": "USB_ATTACH_N",
+      "layer": "BOTTOM",
+      "d": 0.10000317694287891,
+      "gap": 0.2,
+      "bbox": [
+        39.0,
+        20.299999999999997,
+        39.2,
+        21.200000000000003
+      ]
+    },
+    {
+      "a": "PB15_DOWN_NORMAL_EXIT",
+      "net": "GPIO_PB15",
+      "b": "native_route",
+      "otherNet": "USB_ATTACH_N",
+      "layer": "BOTTOM",
+      "d": 0.10000000000000142,
+      "gap": 0.2,
+      "bbox": [
+        39.0,
+        19.7,
+        39.800000000000004,
+        20.5
+      ]
+    },
+    {
+      "a": "PB15_DOWN_NORMAL_EXIT",
+      "net": "GPIO_PB15",
+      "b": "native_route",
+      "otherNet": "USB_ATTACH_N",
+      "layer": "BOTTOM",
+      "d": 0.10000000000000142,
+      "gap": 0.2,
+      "bbox": [
+        39.0,
+        20.299999999999997,
+        39.2,
+        21.200000000000003
+      ]
+    },
+    {
+      "a": "PB15_DOWN_NORMAL_EXIT",
+      "net": "GPIO_PB15",
+      "b": "native_via",
+      "otherNet": "GND",
+      "layer": "BOTTOM",
+      "d": 0.19912340828077868,
+      "gap": 0.3,
+      "bbox": [
+        37.74,
+        19.74,
+        38.26,
+        20.26
+      ]
+    }
+  ],
+  "returnDistancesMM": {
+    "newGPIOendToGround": 0.6946221994724922,
+    "PA10sourceToGround": 1.4212670403551897,
+    "attachSourceToGround": 1.5628499608087785
+  },
+  "pending": [
+    "Actual application-ground graph/plane geometry, not nominal same-net label",
+    "Recopy all-layer actual via permission parent at relocated return",
+    "Complete PB15 long path/reference and native DRC before acceptance"
+  ]
+}

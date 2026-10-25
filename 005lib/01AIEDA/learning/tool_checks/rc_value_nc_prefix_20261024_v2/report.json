@@ -1,0 +1,21 @@
+{
+  "status": "PASS_SYNTHETIC_RC_FORMATTER_FIXTURES",
+  "checks": [
+    "All six requested display-format examples exact",
+    "Milli versus mega, zero ohm, embedded decimal and Ohm spelling kept distinct",
+    "Micro variants and exact pF/nF/uF engineering conversion",
+    "No25V/10% fallback; full source metadata and input object preserved",
+    "Conflicts, ambiguous m/MF, wrong dimension, family/package mismatch and letter codes block candidates",
+    "Explicit NI/DNP states and exact NC_ or trailing assembly markers preserve units and full source/assembly metadata",
+    "NI in package/MPN/history and BOM/Convert/Pin-NoConnect metadata never infer population",
+    "Pure NI has no electrical value and requires review; never fabricated as zero ohm",
+    "Conflicting/unknown assembly states and malformed marker positions are not silently discarded",
+    "Numeric voltage meansV and numeric tolerance means percentage points, never ratio",
+    "Explicit display policy may differ from preserved source tolerance; no implicit1% or TBD approval",
+    "Duplicate references rejected instead of choosing one candidate",
+    "Real CLI writes review report, keeps source bytes and rejects output overwrite",
+    "Every non-null candidate is ASCII"
+  ],
+  "CAD_started": false,
+  "user_library_accessed": false
+}

@@ -1,0 +1,1297 @@
+SOURCE: C:\Program0\Cadence\SPB172\doc\cap_ug\Replacing_and_Updating_Cache.html
+Replacing and Updating Cache
+Replacing and Updating Cache
+When you place the first instance property
+of a part in a project, a copy of the part is created in
+the design cache. The design cache stores a copy of every
+part used in the design. (You can think of it as an
+embedded library.) All instances of the part normally refer
+to this copy in the design cache.
+A cache part also retains a link to the library part on which it
+is based, so you can update or replace all of the parts in
+the design cache to synchronize them with the parts in the
+libraries.
+The project
+manager updates the display of the design cache every
+time you open the cache. Just click on the design cache
+icon to close or open the design cache.
+Using the Replace Cache and Update Cache
+commands
+When you use the Update
+Cache command or the Replace
+Cache command with the option to preserve schematic
+part properties, the part retains all
+instance and occurrence properties. This means you will not
+lose any changes made to pin properties after the part was placed,
+including those made by the Back Annotate or the
+Annotate tools.
+The Replace Cache and Update Cache
+commands are quite similar. However, there are a few
+significant differences between the two commands.
+You can modify a part's link to the library (part
+name, path, and library) with Replace Cache, but
+not with Update Cache. Update Cache only
+brings in new data when the path has not changed and part
+is modified in the library after placing it on
+schematic.
+Another difference is that if the path and library names
+do not change, Replace Cache reloads the part
+definition into the design. However, if Update
+Cache finds that the part name and
+the library names are the same, it does not bring in part
+changes.
+Replacing parts in a design
+If you need to replace a part in your project,
+you could open the schematic page editor to find and delete
+each instance of the part , then
+place the replacement part. If your design includes many
+instances of this part, you can more easily achieve the
+same end with theReplace
+Cache command .
+Restoring parts in a design
+When you delete a part, you also delete all of its
+properties. When you use the Replace Cache command
+to restore the part, the properties of the part instance are
+attached to the replacement part, but the pin properties
+are not restored.
+You can also use the Replace Cache command if you
+want to undo edits to a part on a schematic
+page and restore the part's link to its library.
+You would also use the Replace Cache command after
+you edit a part on a schematic page if you want to undo the
+edits and restore the part's link to its library.
+When you delete a part, all of its properties are
+also deleted. When you use the Replace Cache
+command, properties of the part instance are
+attached to the replacement part; however, the pin
+properties are lost.
+When you use the Update Cache command or the
+Replace Cache command with the option to
+preserve schematic part properties, all instance and
+occurrence properties of the schematic part are
+retained. This means you will not lose any changes made
+to pin properties after the part was
+placed, including those made by the Back
+Annotate or the Annotate tools.
+To replace a part throughout a
+design
+From the design cache, select the part you want to
+replace.
+Choose Design – Replace
+Cache.
+In the dialog box that appears, enter the name of the
+replacement part and the library that contains it.
+Select the Replace schematic part properties
+action if you want to completely replace the part and its
+properties. Otherwise, use the default action to preserve
+schematic part properties.
+Click OK. When the project manager appears
+again, double-click on the design cache to verify that
+the replacement part is listed instead of the original
+part.
+If you need to know a part's library of origin, you
+can select the part in the project manager, then select
+Replace Cache from the Design menu. The
+part name and
+the library and path are listed in the dialog box that
+appears.
+Click Cancel to return to the project
+manager.
+You can discover the library of origin for multiple parts
+by Creating
+a cross reference report.
+Following table
+provides an overview on Update Cache and Replace Cache
+commands:
+Update Cache
+command
+Replace Cache
+command
+Preserve
+schematic
+properties
+Replace schematic
+properties
+without
+preserve
+Refdes
+Replace schematic
+properties
+with
+preserve
+Refdes
+Part (Symbol)
+Graphics
+and
+Pins
+Updated
+Updated
+Updated
+Updated
+Part’s library
+level
+property
+values
+Updated if property
+value
+is not edited
+on
+schematic instance.
+Preserved if value is
+edited
+on schematic.
+Updated if property
+value
+is not edited
+on
+schematic instance.
+Preserved if value is
+edited
+on schematic.
+Updated
+Updated
+Part’s schematic
+level
+properties
+values
+Preserved
+Preserved
+Updated
+Updated
+Part’s reference
+designator
+reference
+values
+Preserved
+Preserved
+Updated
+Preserved
+Pin properties
+values
+Updated if property value
+is not
+edited on
+schematic
+instance.
+Preserved if value is
+edited
+on schematic.
+Updated if property
+value
+is not edited
+on
+schematic instance.
+Preserved if value is
+edited
+on schematic.
+Updated
+Updated
+Package Level
+properties
+values
+(such as
+PCB Footprint)
+Preserved
+Preserved
+Updated
+Updated
+Display location
+settings
+& coordinates
+for pin
+properties
+Updated
+Updated
+Updated
+Updated
+Display location
+settings
+& coordinates
+for part
+properties
+Preserved
+Preserved
+Updated
+Updated
+When you use the Update Cache command or the Replace
+Cache command with the preserve schematic properties
+option on a part, same actions are performed.
+For
+support, see Cadence Online Support service.
+Copyright © 2018, Cadence Design Systems,
+Inc.
+All
+rights reserved.
+
+SOURCE: C:\Program0\Cadence\SPB172\doc\cap_ug\Replacing_and_Updating_the_cache.html
+Replacing and Updating the cache
+Replacing and Updating the cache
+When you place the first instance property
+of a part in a project, a copy of the part is created in
+the design cache. The design cache stores a copy of every
+part used in the design. (You can think of it as an
+embedded library.) All instances of the part normally refer
+to this copy in the design cache.
+A cache part also retains a link to the library part on which it
+is based, so you can update or replace all of the parts in
+the design cache to synchronize them with the parts in the
+libraries.
+The project
+manager updates the display of the design cache every
+time you open the cache. Just click on the design cache
+icon to close or open the design cache.
+Using the Replace Cache and Update Cache
+commands
+When you use the Update
+Cache command or the Replace
+Cache command with the option to preserve schematic
+part properties, the part retains all
+instance and occurrence properties. This means you will not
+lose any changes made to pin properties after the part was placed,
+including those made by the Back Annotate or the
+Annotate tools.
+The Replace Cache and Update Cache
+commands are quite similar. However, there are a couple of
+significant differences between the two commands.
+You can modify a part's link to the library (part
+name, path, and library) with Replace Cache, but
+not with Update Cache. Update cache only
+brings in new data when the path has not changed and part
+is modified in the library after placing it on
+schematic.
+Another difference is that if the path and library names
+do not change, Replace Cache reloads the part definition
+into the design. However, if Update Cache finds
+that the part name and
+the library names are the same, it does not bring in part
+changes.
+Replacing parts in a design
+If you need to replace a part in your project,
+you could open the schematic page editor to find and delete
+each instance of the part , then
+place the replacement part. If your design includes many
+instances of this part, you can more easily achieve the
+same end with theReplace
+Cache command .
+Restoring parts in a design
+When you delete a part, you also delete all of its
+properties. When you use the Replace Cache command
+to restore the part, the properties of the part instance are
+attached to the replacement part, but the pin properties
+are not restored.
+You can also use the Replace Cache command if you
+want to undo edits to a part on a schematic
+page and restore the part's link to its library.
+You would also use the Replace Cache command after
+you edit a part on a schematic page if you want to undo the
+edits and restore the part's link to its library.
+When you delete a part, all of its properties are
+also deleted. When you use the Replace Cache
+command, properties of the part instance are
+attached to the replacement part; however, the pin
+properties are lost.
+Icon
+When you use the Update Cache command or the
+Replace Cache command with the option to
+preserve schematic part properties, all instance and
+occurrence properties of the schematic part are
+retained. This means you will not lose any changes made
+to pin properties after the part was
+placed, including those made by the Back
+Annotate or the Annotate tools.
+To replace a part throughout a
+design
+From the design cache, select the part you want to
+replace.
+Choose Design - Replace Cache.
+In the dialog box that appears, enter the name of the
+replacement part and the library that contains it.
+Select the Replace schematic part properties
+action if you want to completely replace the part and its
+properties. Otherwise, use the default action to preserve
+schematic part properties.
+Click OK. When the project manager appears again,
+double-click on the design cache to verify that the
+replacement part is listed instead of the original
+part.
+If you need to know a part's library of origin, you
+can select the part in the project manager, then select
+Replace Cache from the Design menu. The
+part name and
+the library and path are listed in the dialog box that
+appears.
+Click Cancel to return to the project
+manager.
+You can discover the library of origin for multiple parts
+by Creating
+a cross reference report.
+Following table
+provides an overview on Update Cache and Replace Cache
+commands:
+Update Cache
+command
+Replace Cache
+command
+Preserve
+schematic
+properties
+Replace schematic
+properties
+without
+preserve
+Refdes
+Replace schematic
+properties
+with
+preserve
+Refdes
+Part (Symbol)
+Graphics
+and
+Pins
+Updated
+Updated
+Updated
+Updated
+Part’s library
+level
+property
+values
+Updated if property
+value
+is not edited
+on
+schematic instance.
+Preserved if value is
+edited
+on schematic.
+Updated if property
+value
+is not edited
+on
+schematic instance.
+Preserved if value is
+edited
+on schematic.
+Updated
+Updated
+Part’s schematic
+level
+properties
+values
+Preserved
+Preserved
+Updated
+Updated
+Part’s reference
+designator
+reference
+values
+Preserved
+Preserved
+Updated
+Preserved
+Pin properties
+values
+Updated if property value
+is not
+edited on
+schematic
+instance.
+Preserved if value is
+edited
+on schematic.
+Updated if property
+value
+is not edited
+on
+schematic instance.
+Preserved if value is
+edited
+on schematic.
+Updated
+Updated
+Package Level
+properties
+values
+(such as
+PCB Footprint)
+Preserved
+Preserved
+Updated
+Updated
+Display location
+settings
+& coordinates
+for pin
+properties
+Updated
+Updated
+Updated
+Updated
+Display location
+settings
+& coordinates
+for part
+properties
+Preserved
+Preserved
+Updated
+Updated
+Icon
+When you use the Update Cache command or the Replace
+Cache command with the preserve schematic properties
+option on a part, same actions are performed.
+For
+support, see Cadence Online Support service.
+Copyright © 2016, Cadence Design Systems,
+Inc.
+All
+rights reserved.
+
+SOURCE: C:\Program0\Cadence\SPB172\doc\cap_ug\Exporting_Part_and_Pin_Properties.html
+Exporting Part and Pin Properties
+Exporting Part and Pin Properties
+The Export Properties and Import Properties commands
+provide a means to edit properties of
+parts and pins in a spreadsheet or database program, or in
+a text editor that preserves tab characters. You first
+export the properties to a property file, edit the property
+file in the application of your choice, then import the
+edited properties. See Editing
+Property Files below for important information about
+the format and contents of a property file.
+When you import the edited properties,
+Capture expects to find the schematic pages and parts
+unchanged. After you export properties, do not edit the
+project or library from which the properties were exported
+until after you import the changed properties. If you do,
+the Import Properties command will fail, and you will have
+to export and edit the properties again.
+It is a good idea to update (annotate) part references
+before you export properties.
+Because various popular spreadsheet and database
+applications behave differently, Capture can import
+properties with or without enclosing quotation marks around
+each field in the property file. The fields must be
+tab-delimited, though—all other characters, including
+commas and leading and trailing spaces, are treated as part
+of a field's text. Be sure your spreadsheet or database
+program can save in this format.
+You can change part references by editing the References
+column of the property file.
+The Export Properties command outputs the device
+information for the part. So if a homogeneous part has 2
+sections, it will output information corresponding to both
+the sections. These sections can recognized in the EXP file
+through designator prefix.
+Pin-numbers will be output for each device/section of the
+part.
+For a design, you can export all parts or just the parts in
+selected schematic folders and schematic pages. For a
+library, you can export all parts or just selected parts,
+but you cannot export part aliases. If
+you export and edit properties of a part that has aliases,
+the aliases reflect the changes.
+You cannot select parts in the design cache or library
+cache for export.
+You can add comments to document a property file; any text
+to the right of a semicolon (;) is ignored by the Import
+Properties tool.
+Editing property files
+When you export properties, Capture creates a tab-delimited
+list of keywords, identifiers, and properties, each of
+which is enclosed in double quotation marks. You can edit
+this file in a spreadsheet or database program, or even in
+a text editor (as long as the editor does not convert the
+tabs to spaces). Depending on which tool you use, you may
+see the property file as rows and columns of cells or
+fields or as lines of text.
+The property file starts with a line identifying the
+document as either a design or library. Most subsequent
+lines begin with a keyword and an identifier.
+Do not make changes in the ID, Net Name, and Net ID
+fields in the property file (*.exp). The changes will
+not reflect in your design when you use the Import
+Properties command.
+Making certain changes to the property file will cause the
+column headers and fields to be out of sync and invalidate
+your design You must not:
+change or delete the first line.
+delete the first field in any line.
+delete a field from a HEADER line without also deleting
+the corresponding fields from subsequent lines.
+You can make these
+changes...
+with these results.
+Add a field to a HEADER line and subsequent lines
+(add a column).
+This adds a property and pins with a value in
+this field. The name of the property is the
+string in the HEADER line. The value assigned to
+the part or pin is the string in the
+corresponding field. If the corresponding field
+is empty, Capture adds a property with no value
+and displays the property name as a placeholder.
+Change a property value to
+<null>.
+This deletes any existing property.
+Delete a field from a HEADER line and subsequent
+lines (delete a column).
+This has no effect on any part or pin. Deleting
+columns for properties you don't want to
+change may make the property file easier to edit.
+If you delete a field from a HEADER line without
+also deleting the corresponding fields from
+subsequent lines, Capture reports an error when
+you import the property and does not process any
+changes.
+Change the value of a field.
+Resets the value of the property on the object to
+which it refers.
+The following table illustrates what happens when a part or
+pin has a property or does not have a property when a field
+is in various conditions:
+Condition
+Part or pin has the
+property
+Part or pin does not
+have the property
+Field is not
+<null>
+Property value changes to specified value.
+Property is added with specified value.
+Field is
+<null>
+Removes existing property.
+Object is not affected.
+Field is empty
+Capture shows {Property Name} as place
+holder (when the property is visible).
+Capture shows {Property Name} as place
+holder when the property as visible).
+Capture property files contain the following keywords:
+DESIGN
+Identifies the property file as describing a
+project; specifies the path and filename of the
+project; identifies the mode active when the
+properties were exported.
+LIBRARY
+Identifies the property file as describing a
+library; specifies the path and filename of the
+library.
+HEADER
+Lists all the properties for the parts and pins
+in the design.
+PAGE
+Identifies the current schematic page.
+PART
+Identifies the current part and lists its
+properties. A column without a value signifies
+that the property does not apply to the part, or
+that no value is assigned.
+PIN
+Identifies a pin on the current part and lists
+its properties. A column without a value
+represents either a missing property or a
+property with an empty string for the value. A
+column without a value signifies that the
+property does not apply to the pin, or that no
+value is assigned.
+SYMBOL
+Identifies a symbol and lists its properties. A
+column without a value signifies that the
+property does not apply to the symbol, or that no
+value is assigned.
+Note: It is a good idea to update (annotate) part
+references before you export properties.
+Because various popular spreadsheet and database
+applications behave differently, Capture can import
+properties with or without enclosing quotation marks around
+each field in the property file. The fields must be
+tab-delimited, though—all other characters, including
+commas and leading and trailing spaces, are treated as part
+of a field’s text. Be sure your spreadsheet or
+database program can save in this format.
+To export part properties or part and pin
+properties
+Open the project with the design or library holding the
+parts.
+For a design, select the schematic folders or schematic
+pages containing the part you want to export.
+OR
+For a library, select the parts to export.
+From the Tools menu, choose Export Properties
+command. The Export Properties dialog box appears.
+In the dialog box, specify whether the property file is
+to include the entire design or a selected portion,
+whether you want to export properties for pins as well as
+parts or flat nets, and whether you want to export
+instance or occurrence properties.
+Before you click OK in the dialog box, note the location
+of the export file in the Export File text box.
+Click OK to create the property file.
+If you edit a library provided by OrCAD, it is
+important that you assign a new library name so that
+your changes are not overwritten when you upgrade or
+update your software.
+While importing or exporting a design,
+ensure that the property
+values do not contain a quote ‘
+" '
+symbol.
+For projects
+Capture reports a part once for each place it is used in
+the design. One HEADER line applies to the entire project.
+This abbreviated sample of a property file is formatted
+for presentation. As plain text, the columns do not
+actually line up as shown. In a spreadsheet or database
+program, fields may wrap or appear to be truncated.
+"DESIGN" "C:\CAPTURE\SAMPLES\4BIT.DSN" "PHYSICAL"
+"HEADER" "ID" "Part Reference" "Value"
+"PART" "32" "fulladd_1" "FULLADD"
+"PIN" "0{X}"
+"PIN" "1{Y}"
+"PIN" "2{SUM}"
+"PIN" "3{CARRY_IN}"
+"PIN" "4{CARRY_OUT}"
+"PART" "152" "fulladd_4" "FULLADD"
+"PIN" "0{X}"
+"PIN" "1{Y}"
+"PIN" "2{CARRY_OUT}"
+"PIN" "3{CARRY_IN}"
+"PIN" "4{SUM}"
+"PART" "272" "fulladd_3" "FULLADD"
+"PIN" ...
+:
+"PART" "392" "fulladd_2" "FULLADD"
+"PIN" ...
+:
+"PART" "54" "halfadd_B" "HALFADD"
+"PIN" ...
+:
+"PART" "103" "halfadd_A" "HALFADD"
+"PIN" ...
+:
+"PART" "69" "U?" "74LS04"
+"PIN" ...
+:
+"PART" "74" "U?" "74LS08"
+"PIN" ...
+:
+"PART" "80" "U?" "74LS04"
+"PIN" ...
+:
+"PART" "85" "U?" "74LS32"
+"PIN" ...
+:
+"PART" "174" "halfadd_B" "HALFADD"
+"PIN" ...
+:
+"PART" "223" "halfadd_A" "HALFADD"
+"PIN" ...
+:
+"PART" "189" "U?" "74LS04"
+"PIN" ...
+:
+"PART" "194" "U?" "74LS08"
+"PIN" ...
+:
+"PART" "200" "U?" "74LS04"
+"PIN" ...
+:
+"PART" "294" "halfadd_B" "HALFADD"
+"PIN" ...
+:
+"PART" "343" "halfadd_A" "HALFADD"
+"PIN" ...
+:
+"PART" "309" "U?" "74LS04"
+"PIN" ...
+:
+"PART" "314" "U?" "74LS08"
+"PIN" ...
+:
+"PART" "414" "halfadd_B" "HALFADD"
+"PIN" ...
+:
+"PART" "463" "halfadd_A" "HALFADD"
+"PIN" ...
+:
+"PART" "429" "U?" "74LS04"
+"PIN" ...
+:
+For
+libraries
+Capture reports each part in the library.
+This abbreviated sample of a property file is formatted
+for presentation. As plain text, the columns do not
+actually line up as shown. In a spreadsheet or database
+program, fields may wrap or appear to be truncated.
+"LIBRARY" "C:\CAPTURE\SAMPLES\INTEL.OLB"
+"HEADER" "ID" "Part Reference"
+"PART" "80186.Normal"
+"PIN" "X1"
+"PIN" "X2"
+"PIN" ...
+:
+"PART" "80188.Normal"
+"PIN" "X1"
+"PIN" ...
+:
+"PART" "80286.Normal"
+"PIN" ...
+:
+"PART" "80287.Normal"
+"PIN" ...
+:
+"PART" "8031.Normal"
+"PIN" ...
+:
+"PART" "8032.Normal"
+"PIN" ...
+:
+"PART" "80386.Normal"
+"PIN" ..
+:
+"PART" "80386SX.Normal"
+"PIN" ...
+:
+For
+support, see Cadence Online Support service.
+Copyright © 2018, Cadence Design Systems,
+Inc.
+All
+rights reserved.
+
+SOURCE: C:\Program0\Cadence\SPB172\doc\cap_ug\Assigning_Footprint_Properties.html
+Assigning Footprint Properties
+Assigning Footprint Properties
+Why
+footprint?
+Locating
+Footprints in Install Hierarchy
+Do
+all parts in my design have footprint information?
+Assigning
+footprints to components
+Specifying
+Alternate Footprints
+Why footprint?
+In order to correctly map a logical component to the physical board
+environment, you need to specify the footprint information
+for all design parts that are to be included in the PCB.
+This is an instance-level property that is assigned on all schematic components
+that are to be included in the physical board design.
+Schematic-only parts, such as offpage connectors, do
+not have the footprint information assigned to them. If you
+have simulated your design in PSpice, you might have
+simulation-only parts that should not have footprint
+information associated with them. For more information on
+such parts, see Physical
+Layout of a Simulation Design.
+Locating Footprints in Install Hierarchy
+With PCB Editor installation, Cadence ships a library of
+footprints and padstacks. These can be
+accessed from
+<install_hierarchy>/share/pcb/pcb_lib/symbols.
+If you need to use custom footprints or padstacks, you can copy
+them at <
+install_hierarchy> /share/local/pcb/symbols or
+<install_hierarchy>/share/local/pcb/padstacks,
+respectively. Copying footprint symbols at this location
+ensures that the custom footprints are accessible during
+component placement, without making any modifications to
+the PCB Editor setup.
+In case
+you do not want to copy the footprints, you need to modify
+the PCB Editor setup to include the location of custom
+footprints and custom padstacks in psmpath and padpath variables,
+respectively. For this
+complete the following steps in PCB Editor.
+Choose Setup - User Preferences or use the
+enved command.
+From the Categories list in the User Preferences dialog
+box, select Paths - Library.
+Modify the padpath and psmpath to include
+the location of custom footprints.
+Once you have finalized the footprint location, update the
+capture.ini to ensure that it has a section on Allegro
+Footprints. The variables in this section define the
+directory locations for the psm and pad files. The
+relevant section of the capture.ini is shown in the
+following figure.
+If you are using the custom footprints, the capture.ini
+must be updated such that Dir0 or DIR1 variables point to
+the folder containing the footprints.
+Do all parts in my design have footprint information?
+Capture provides multiple ways to verify whether or not a
+design component has footprint information associated with
+it. Depending on factors such as design size and the
+numbers of components, you can use the method convenient to
+you.
+To check if a part has footprint information, launch
+Property Editor using one of the
+following methods.
+Double-click on the part
+Or
+Right-click on the part and select Edit
+Properties.
+The
+footprint information is displayed against the PCB
+Footprint property.
+To simultaneously check if multiple parts have footprint
+information, select the parts on the schematic page and
+launch Property Editor. The PCB Footprint row displays the
+value for each
+selected part.
+To ensure that all parts in your design have footprint
+information, enable the Check missing/illegal PCB
+Footprint property DRC in the Physical Rules tab of
+the Design Rules check dialog box.
+If required, you can also include the footprint information
+for the parts in the Bill Of Materials (BOM) generated
+for your
+design. To generate a custom BOM with footprint
+information, complete the following tasks.
+In Project Manager, select the design file.
+Choose Tools - Bill of Materials.
+Modify the default entry in the Line Item Definition
+section of the dialog box
+In the Header text box, append \tFootprints.
+In the Combined property string value text box, append
+\t{PCB footprint}.
+Generate BOM.
+The generated BOM has footprint information added in the
+last column.
+Assigning footprints to components
+While
+assigning a footprint to a schematic symbol, ensure that
+the number of pins in the schematic symbol match the number
+of the PCB footprint symbol, and the pin numbers in the
+schematic symbol match the pin numbers in the footprint.
+Assigning Footprint to one component
+Using the
+Property Editor, you can assign or change the footprint
+data associated with a part.
+Select the part
+and launch Property Editor.
+Enter the required value in the text box next to the PCB
+Footprint property.
+Assigning same footprint to multiple
+components
+Select
+the components and launch Property Editor.
+Select
+the PCB Footprint row (or column), right-click and select
+Edit.
+Add the
+required value in the Edit Property Value dialog box.
+For creating a board in PCB Editor, it is must to assign a valid PCB
+Footprint property for each part in the design. This
+includes all mechanical parts in your design, although, in
+this case, you can use a
+"dummy"
+value for the PCB Footprint property. While designing a
+board using Capture-PCB Editor flow, combined property
+strings can be used to pass user-defined properties as PCB
+Footprint property for PCB Netlist generation. This gives
+you the flexibility of defining a user-defined PCB
+Footprint property specifically for the PCB Editor flow. As
+a result, you can define different PCB Footprint properties
+for different PCB flows.
+Icon
+To include a zero pin mechanical part
+in Capture - Allegro flow, add a property
+CLASS with its value as
+MECHANICAL to the part, that is
+CLASS = MECHANICAL, with an appropriate
+PCB footprint.
+Specifying Alternate Footprints
+You can specify Alternate footprints using one of the
+following two methods:
+Using ALT_SYMBOLS property
+Using FPLIST property
+Using ALT_SYMBOLS Property
+While specifying component footprint, the ALT_SYMBOLS
+property can be used to specify a list of alternate
+footprint names that can be used to substitute the primary
+footprint during interactive placement in PCB Editor. The
+ALT_SYMBOLS property can be assigned to a package or to a
+component either at the library-level or at the
+instance-level.
+The syntax of the ALT_SYMBOLS is as follows:
+ALT_SYMBOLS '(Subclass:Symbol,...;Subclass:Symbol,...)'
+where, Subclass
+can either be TOP (or T) for top layer, or BOTTOM
+(or B) for bottom
+layer and Symbol is a standard footprint name.
+For example, you can assign the component 7400 the
+following ALT_SYMBOLS value, T:dip14_3; B:dip14_3
+Follow the steps given below to use ALT_SYMBOLS property to
+specify a list of alternate footprints:
+Add ALT_SYMBOLS property to the component on which you
+want multiple footprint values.
+Add the footprints in the property's value.
+The footprints should follow the syntax given above.
+Update Allegro.cfg file with the following
+information under
+[ComponentDefinitionProps]:
+ALT_SYMBOLS = YES
+Using FPLIST Property
+FPLIST property can also be used to specify a list of
+alternate footprints in Capture. This list substitutes the
+primary footprint during interactive placement in PCB
+Editor. The FPLIST property can be assigned to a package or
+to a component either at the library-level or at the
+instance-level.
+Follow the steps given below to use FPLIST property to
+specify a list of alternate footprints:
+Add FPLIST
+property to the component on which you want
+multiple footprint values.
+Add the footprints in the property's value.
+The footprints can be separated by commas or they can
+follow the syntax given in Using ALT_SYMBOLS
+Property section.
+Update Allegro.cfg file with the following
+information under
+[ComponentDefinitionProps] to map FPLIST
+to ALT_SYMBOLS property.
+FPLIST = ALT_SYMBOLS
+Icon
+Before adding FPLIST = ALT_SYMBOLS,
+verify that ALT_SYMBOLS = YES is
+present in Allegro.cfg. Else,
+add ALT_SYMBOLS = YES to the
+Allegro.cfg.
+For
+support, see Cadence Online Support service.
+Copyright © 2016, Cadence Design Systems,
+Inc.
+All
+rights reserved.
+
+SOURCE: C:\Program0\Cadence\SPB172\doc\cap_ug\Exporting_and_Importing_a_Capture_Library.html
+Exporting and Importing a Capture Library
+Exporting and Importing a Capture Library
+You can convert a Capture library (.olb) to an
+XML (.xml) file. To do so, perform the
+following tasks:
+Launch Capture.
+Select File – Export – Library
+XML.
+The OLB to XML dialog box opens.
+Specify the library file path.
+The XML File field gets updated.
+Change the XML file name and location, if needed.
+To convert a Capture library (.olb) file to an XML file,
+Capture uses an XML schema that is located at the
+following
+location: <installation_directory>\tools\capture\tclscripts\capdb\olb.xsd
+Click OK.
+The XML file is displayed if you had selected the
+View Output option.
+To import an XML to create a Capture library, do the
+following:
+Launch Capture.
+Select File – Import – Library
+XML.
+The XML to OLB dialog box opens.
+Specify the input XML file path.
+The OLB File field gets updated.
+Click the Browse button corresponding to the OLB
+File field if you want to save the generated
+library file at a different location. This is
+optional.
+Select the Overwrite Mode from the drop-down
+list.
+Click OK.
+For
+support, see Cadence Online Support service.
+Copyright © 2018, Cadence Design Systems,
+Inc.
+All
+rights reserved.
+
+SOURCE: C:\Program0\Cadence\SPB172\doc\cap_ug\Exporting_and_Importing_a_Design_from_XML.html
+Exporting and Importing a Design from XML
+Exporting and Importing a Design from XML
+You can export Capture designs to XML format. To do so,
+perform the following tasks:
+Open the required design in Capture.
+Select File – Export – Design
+XML.
+The DSN To XML dialog box opens with the design file
+path already updated in the DSN File field.
+Change the XML file name and location, if needed.
+To convert the Capture design (.dsn) file to an XML
+file, Capture uses an XML schema that is located at
+the following
+path: <installation_directory>\tools\capture\tclscripts\capdb\dsn.xsd
+Click OK.
+To import an XML to create a Capture design, do the
+following:
+Launch Capture.
+Select File – Import – Design
+XML.
+The XML to DSN dialog box opens.
+Specify the input XML file path.
+The DSN File field gets updated.
+Click the Browse button corresponding to the DSN
+File field if you want to save the generated
+design at a different location. This is optional.
+Select the Overwrite Mode from the drop-down
+list.
+Click OK.
+For
+support, see Cadence Online Support service.
+Copyright © 2018, Cadence Design Systems,
+Inc.
+All
+rights reserved.
+
+SOURCE: C:\Program0\Cadence\SPB172\doc\orctclcap\Getting_Library_Part_User_properties.html
+Getting Library Part User properties
+Getting Library Part User properties
+This script does the following:
+Iterates through the specified library
+Finds the specified library part in the specified library
+Displays user properties on the specified library part
+To use the script in Capture, do the following:
+Source the script in Capture using command window, such
+as
+source {D:\displyuserprop.tcl}.
+Use the DisplayUserProp
+command to get the user properties of a specified library
+part, such as DisplayUserProp
+<LibName>
+<PartName>.
+displyuserprop.tcl
+proc PropertyDump { pDataBaseObj } {
+set NullObject NULL
+set stateObj [DboState]
+set userPropValue [DboTclHelper_sMakeCString]
+set userPropName [DboTclHelper_sMakeCString]
+set userPropIter [$pDataBaseObj NewUserPropsIter $stateObj]
+set userProp [$userPropIter NextUserProp $stateObj]
+while {$userProp != $NullObject} {
+$userProp GetName $userPropName
+$userProp GetStringValue $userPropValue
+set propMessage "\t\tUser Property: '[DboTclHelper_sGetConstCharPtr $userPropName]' Value: '[DboTclHelper_sGetConstCharPtr $userPropValue]"
+puts $propMessage
+set userProp [$userPropIter NextUserProp $stateObj]
+}
+}
+proc MakeLibPartDisplayProp {aCell} {
+set lStatus [DboState]
+set lNullObject NULL
+set lPartsIter [$aCell NewPartsIter $lStatus]
+set lPart [$lPartsIter NextPart $lStatus]
+set lCStrPartName [DboTclHelper_sMakeCString ]
+set lCStrPropValue [DboTclHelper_sMakeCString ]
+set lPropFound 0
+while {$lPart != $lNullObject} {
+$lPart GetName $lCStrPartName
+set lPartName [DboTclHelper_sGetConstCharPtr $lCStrPartName]
+puts "Part Name:$lPartName"
+PropertyDump $lPart
+set lPart [$lPartsIter NextPart $lStatus]
+}
+delete_DboCellPartsIter $lPartsIter
+return $lPropFound
+}
+proc MakeLibPackageDisplayProp {aLibName aPackageName} {
+set lSession $::DboSession_s_pDboSession
+DboSession -this $lSession
+set lStatus [DboState]
+set lNullObject NULL
+set lIsLibLoaded 1
+set lLibName [DboTclHelper_sMakeCString $aLibName]
+set lLib [$lSession GetOpenLib $lLibName $lStatus]
+if { $lLib == $lNullObject} {
+set lIsLibLoaded 0
+set lLib [$lSession GetLib $lLibName $lStatus]
+}
+if { $lLib == $lNullObject} {
+puts "Can't open library"
+return
+}
+set pkgIter [$lLib NewPackagesIter $lStatus]
+set pPkg [$pkgIter NextPackage $lStatus]
+set lNullObj NULL
+set pActualPkgName [DboTclHelper_sMakeCString]
+set pPartName [DboTclHelper_sMakeCString]
+set lFound 0
+while {$pPkg!=$lNullObj} {
+# Get Package Name
+$pPkg GetName $pActualPkgName
+set lTclPackageName [DboTclHelper_sGetConstCharPtr $pActualPkgName]
+if {$lTclPackageName==$aPackageName} {
+puts "Found Package"
+set pDeviceIter [$pPkg NewDevicesIter $lStatus]
+set DeviceNullObj NULL
+set pDevice [$pDeviceIter NextDevice $lStatus]
+while {$pDevice!=$DeviceNullObj} {
+set cellObj [$pDevice GetCell $lStatus]
+set lFound [MakeLibPartDisplayProp $cellObj]
+set pDevice [$pDeviceIter NextDevice $lStatus]
+}
+delete_DboPackageDevicesIter $pDeviceIter
+break
+}
+set pPkg [$pkgIter NextPackage $lStatus]
+}
+delete_DboLibPackagesIter $pkgIter
+if { $lFound==1 } {
+puts "Saving the Library"
+$lSession MarkAllLibForSave $lLib
+$lSession SaveLib $lLib
+}
+if { $lIsLibLoaded == 0 } {
+$lSession RemoveLib $lLib
+}
+DboTclHelper_sReleaseAllCreatedPtrs
+}
+proc DisplayUserProp {aLibName aPartName} {
+MakeLibPackageDisplayProp $aLibName $aPartName
+}
+For
+support, see Cadence Online Support service.
+Copyright © 2017, Cadence Design Systems,
+Inc.
+All
+rights reserved.
+
+SOURCE: C:\Program0\Cadence\SPB172\doc\orctclcap\Getting_Pin_Names_from_a_Library_Part.html
+Getting Pin Names from a Library Part
+Getting Pin Names from a Library Part
+You can use this script to get the following details:
+Get the pin names of a selected library added in the
+Project Manager's Library folder.
+Get the pin names of a selected object in a schematic
+page
+Do the following to get pin names of a selected library
+part added in the Project Manager's library folder:
+Source the TCL script file in the Capture command
+window, such as source {d:/GetPinName.tcl}
+Run set lObject [GetSelectedPMItems]
+Run GetPinName $lObject
+Do the following to get pin names of a selected object in a
+schematic page:
+Source the TCL script file in the Capture command window,
+such as source {d:/GetPinName.tcl}
+Select an object in a schematic page
+Run set lObject [GetSelectedObjects]
+Run set lPackage [$lObject GetPackage
+$lStatus]
+Run GetPinName $lPackage
+GetPinName.tcl
+proc GetPinName { pPackage } {
+set lNullObj NULL
+set lType [$pPackage GetObjectType]
+if { $lType != $::DboBaseObject_PACKAGE } {
+return
+}
+set lStatus [DboState]
+#Iterating Device
+set lDeviceIter [$pPackage NewDevicesIter $lStatus]
+set lDevice [$lDeviceIter NextDevice $lStatus]
+while {$lDevice!=$lNullObj} {
+#Getting cell from device
+set lCell [$lDevice GetCell $lStatus]
+#LibPartIter
+set lLipPartIter [$lCell NewPartsIter $lStatus]
+set lPart [$lLipPartIter NextPart $lStatus]
+while {$lPart!=$lNullObj} {
+#PinIter
+set lPinIter [$lPart NewLPinsIter $lStatus]
+set lPin [$lPinIter NextPin $lStatus]
+while {$lPin!=$lNullObj} {
+#Getting Pin Name [GetPinName :- Member Function]
+set lPinName [DboTclHelper_sMakeCString]
+$lPin GetPinName $lPinName
+set lPinNameString [DboTclHelper_sGetConstCharPtr $lPinName]
+puts "PinName :- $lPinNameString"
+#Getting Pin Name [sGetPinName :- Static Function]
+#set lPinName2 [DboSymbolPin_sGetPinName $lPin $lStatus]
+#set lPinNameString2 [DboTclHelper_sGetConstCharPtr $lPinName2]
+#puts "PinName :- $lPinNameString2"
+set lPin [$lPinIter NextPin $lStatus]
+}
+set lPart [$lLipPartIter NextPart $lStatus]
+}
+set lDevice [$lDeviceIter NextDevice $lStatus]
+}
+}
+For
+support, see Cadence Online Support service.
+Copyright © 2017, Cadence Design Systems,
+Inc.
+All
+rights reserved.
+
+SOURCE: C:\Program0\Cadence\SPB172\doc\orctclcap\Change_pin_name_or_pin_number__in_a_library.html
+Change pin name(or pin number) in a library
+Change pin name(or pin number) in a library
+The following script changes the pin name and pin number of
+"GND" pin
+to new name. To run the script, do the following:
+Open a design
+Open any schematic page in the design
+Select a part that has GND pin
+Source the following TCL script in the
+Capture command window, such as source
+{ D:\setNewPinName.tcl}
+Check the properties of the GND
+pin . The pin name changes to GND_NEW and
+pin number changes to
+100.
+setNewPinName.tcl
+#This TCL file updates the pin name and pin number
+#of a GND pin of single selected object to GND_NEW and 100 respectively.
+set lStatus [DboState]
+set lNullObject NULL
+set lObject [GetSelectedObjects]
+set lPackage [$lObject GetPackage $lStatus]
+# Get the first device in the package
+# if you need to change for specific device
+# you can get the device using device designator.
+set lDevice [$lPackage GetDevice 0 $lStatus]
+if { $lDevice != $lNullObject } {
+set lCell [$lDevice GetCell $lStatus]
+#Gets the normal part from the device
+set lNormalPart [$lCell FindPart 0 $lStatus]
+# Since pin location is stored in symbol pin
+# we need to find the symbol pin object for the pin
+# whose pin number we want to change.
+set lLibPartPinIter [$lNormalPart NewLPinsIter $lStatus]
+set lSymbolPin [$lLibPartPinIter NextPin $lStatus]
+set lPinName [DboTclHelper_sMakeCString]
+while {$lSymbolPin != $lNullObject} {
+$lSymbolPin GetPinName $lPinName
+set lPinNameTcl [DboTclHelper_sGetConstCharPtr $lPinName]
+if {$lPinNameTcl=="GND"} {
+#Sets the GND pin to GND_NEW pin
+set lNewName [DboTclHelper_sMakeCString "GND_NEW"]
+$lSymbolPin SetPinName $lNewName
+# If symbol pin found
+# Get the pin position
+set lPinPosition [ $lSymbolPin GetPinPosition $lStatus]
+# Sets new pin number 100
+set lNewPinNumber [DboTclHelper_sMakeCString "100"]
+set lPinPosition [DboTclHelper_sMakeInt $lPinPosition]
+# Changes the pin number
+$lDevice NewPinNumber $lNewPinNumber $lPinPosition 1 -1
+puts "Pin name and Pin number changed successfully"
+break
+}
+set lSymbolPin [$lLibPartPinIter NextPin $lStatus]
+}
+}
+For
+support, see Cadence Online Support service.
+Copyright © 2016, Cadence Design Systems,
+Inc.
+All
+rights reserved.

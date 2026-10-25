@@ -1,0 +1,65 @@
+{
+  "status": "ACTUAL_B019_UNCHANGED_CANDIDATES_ONLY_SOUTH7_NOT_COMPLETED",
+  "asOfLocal": "2026-10-22T07:13:24.338166+08:00",
+  "actual": {
+    "2L": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native_candidates\\HI_2L_padentry_normalized_b019_DRC_PENDING.brd",
+      "sha256": "AA3BFC0E01B06CB1058462439C71E56BC316F1F2929859B6A224320BE1013420",
+      "remainingJoins": 7,
+      "normalPerNetDRCZero": 65,
+      "excluded": [
+        "USB_DP",
+        "USB_DM",
+        "PA11_SHARED",
+        "PA12_SHARED"
+      ],
+      "wholeBoardDRC": null
+    },
+    "4L": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native_candidates\\HI_4L_padentry_normalized_b019_DRC_PENDING.brd",
+      "sha256": "B7A32330992F49609339E33C00BE92D989D0EA0C4AF64ED2763D0678DE14B501",
+      "remainingJoins": 7,
+      "normalPerNetDRCZero": 65,
+      "excluded": [
+        "USB_DP",
+        "USB_DM",
+        "PA11_SHARED",
+        "PA12_SHARED"
+      ],
+      "wholeBoardDRC": null
+    }
+  },
+  "smallNewSourcePortal": {
+    "owner": "f27",
+    "index": "engineering_mcu/plans/PB15_attach_{variant}_87_{delta,check,snapshot,...}.json",
+    "ATTACHViaBefore": [
+      39,
+      21.2
+    ],
+    "ATTACHViaAfter": [
+      39.14,
+      21.2
+    ],
+    "PB15BottomGateX": 38.57,
+    "normalWidthMM": 0.2,
+    "scope": "Derived source portal with80+81 four-net candidate. 4L new source copper cleared; 2L reference protection crossings pending. No full PB15 long path or native application."
+  },
+  "PB14NorthEscape": "Preserve actual via38,21.25, prospective BOTTOM north prefix then eastern corridor only after USB pad footprint; PB1 candidate west L must be reworked jointly. Not completed.",
+  "PB1_PB10": "Joint RIGHT source gates and ordinary row rework under existing rules being reviewed; no native process authorized for these candidates.",
+  "fourLayerL2Alternative": "Only proposed local short escape with explicit net/region allowetch change and L3 reference audit; no constraint changed.",
+  "retired": {
+    "root_gate01": "Invalid radius screening retired by explicit RuntimeError. Direct R6 pad collision independently excludes candidate. Never native.",
+    "root_gate03": "Corrected radius; remaining TOP ATTACH/TX, BOTTOM ATTACH/RX and joint path conflicts. Not executable. Via clear flag includes extra0.01mm engineering margin, not native violation count.",
+    "V3_bar_inward_concept": "Blocked by actual U1.36 VDD inward feed, default .3 power spacing and finite-region boundary. Root oral VBAT1 mapping corrected; no power change."
+  },
+  "backups": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\backups\\docs_before_manual_source_20261022_071324",
+  "nextAcceptance": [
+    "All7 actual endpoint paths together",
+    "Rules and component identity",
+    "Native current copper refill and stage-derived void reevaluation",
+    "Ground and HSE negative/restore",
+    "Physical reference and return geometry",
+    "Whole-board and four USB data/shared DRC coverage",
+    "Fresh reopen and exact scope report"
+  ]
+}

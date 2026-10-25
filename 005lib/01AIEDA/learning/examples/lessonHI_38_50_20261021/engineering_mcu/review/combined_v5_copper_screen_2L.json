@@ -1,0 +1,1199 @@
+{
+  "status": "CANDIDATE_COPPER_SCREEN_ONLY_NATIVE_DRC_PENDING",
+  "date": "2026-10-21T23:16:59.648995+08:00",
+  "versionsRejected": [
+    {
+      "version": "v1",
+      "reason": "via43,29.25 conflicts proposed V3V3starx43"
+    },
+    {
+      "version": "v2",
+      "reason": "via45.45,30.1 overlaps actual retained VDD path near45.45,30.15; reviewer initially omitted real lines and only compared pads; caught before execution"
+    }
+  ],
+  "variants": {
+    "2L": {
+      "snapshot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\normalized_actual_2L.json",
+      "sha256": "b2703a18d7f0ea1d61fc36f32c4080e0c5c3d4253164b69fe4c7d83c7bf4f8cb",
+      "readback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_power_2L_b002d",
+      "nativeTOPCurrentSegments": 98,
+      "anchorMinimumOtherNetCopper": [
+        {
+          "distance": 0.30000000000000426,
+          "id": "U1.46",
+          "net": "GPIO_PB9",
+          "kind": "pad",
+          "points": null
+        },
+        {
+          "distance": 0.4500071960024761,
+          "id": "U1.45",
+          "net": "GPIO_PB8",
+          "kind": "pad",
+          "points": null
+        },
+        {
+          "distance": 0.5599229533981466,
+          "id": "existingRoute118",
+          "net": "V3V3",
+          "kind": "route",
+          "points": [
+            [
+              45.05,
+              29.75
+            ],
+            [
+              45.45,
+              30.15
+            ]
+          ]
+        },
+        {
+          "distance": 0.5599229533981488,
+          "id": "existingRoute119",
+          "net": "V3V3",
+          "kind": "route",
+          "points": [
+            [
+              44.25,
+              29.75
+            ],
+            [
+              45.05,
+              29.75
+            ]
+          ]
+        },
+        {
+          "distance": 0.6604912037627609,
+          "id": "U1.48",
+          "net": "V3V3",
+          "kind": "pad",
+          "points": null
+        },
+        {
+          "distance": 0.7000061680242615,
+          "id": "existingRoute117",
+          "net": "V3V3",
+          "kind": "route",
+          "points": [
+            [
+              45.45,
+              30.15
+            ],
+            [
+              46.5,
+              30.3
+            ]
+          ]
+        },
+        {
+          "distance": 0.8236105418511309,
+          "id": "U1.44",
+          "net": "BOOT0",
+          "kind": "pad",
+          "points": null
+        },
+        {
+          "distance": 0.8724003960322501,
+          "id": "C15.1",
+          "net": "V3V3",
+          "kind": "pad",
+          "points": null
+        },
+        {
+          "distance": 1.1902958666920394,
+          "id": "existingRoute120",
+          "net": "V3V3",
+          "kind": "route",
+          "points": [
+            [
+              49.5,
+              30.3
+            ],
+            [
+              46.5,
+              30.3
+            ]
+          ]
+        },
+        {
+          "distance": 1.2692355065407492,
+          "id": "U1.43",
+          "net": "I2C_SDA",
+          "kind": "pad",
+          "points": null
+        },
+        {
+          "distance": 1.740223354452446,
+          "id": "U1.42",
+          "net": "I2C_SCL",
+          "kind": "pad",
+          "points": null
+        },
+        {
+          "distance": 2.222404372079676,
+          "id": "U1.41",
+          "net": "GPIO_PB5",
+          "kind": "pad",
+          "points": null
+        }
+      ],
+      "anchorMinAtLeastPoint299": true,
+      "candidateIssuesBelowPoint30": [
+        {
+          "a": "GPIO_GPIO_PC14_BOTTOM_START/1",
+          "b": "GPIO_GPIO_PC13_BOTTOM_START/2",
+          "nets": [
+            "GPIO_PC14",
+            "GPIO_PC13"
+          ],
+          "distance": 0.0,
+          "overlap": true,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_BOTTOM_START/1",
+          "b": "GPIO_GPIO_PC13_BOTTOM_START/2",
+          "nets": [
+            "GPIO_PC15",
+            "GPIO_PC13"
+          ],
+          "distance": 0.0,
+          "overlap": true,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_BOTTOM_START/1",
+          "b": "GPIO_GPIO_PC14_BOTTOM_START/2",
+          "nets": [
+            "GPIO_PC15",
+            "GPIO_PC14"
+          ],
+          "distance": 0.0,
+          "overlap": true,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_TOP/2",
+          "b": "VSSA8_INWARD/1",
+          "nets": [
+            "GPIO_PC15",
+            "GND"
+          ],
+          "distance": 0.05000000000000426,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_TOP/1",
+          "b": "VSSA8_INWARD/1",
+          "nets": [
+            "GPIO_PC15",
+            "GND"
+          ],
+          "distance": 0.09256312538910956,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_SHARED_DM/3",
+          "b": "USB_SHARED_DP/2",
+          "nets": [
+            "PA11_SHARED",
+            "PA12_SHARED"
+          ],
+          "distance": 0.15355339059326914,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_SHARED_DM/3",
+          "b": "USB_SHARED_DP/3",
+          "nets": [
+            "PA11_SHARED",
+            "PA12_SHARED"
+          ],
+          "distance": 0.15355339059326914,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_SHARED_DM/4",
+          "b": "USB_SHARED_DP/3",
+          "nets": [
+            "PA11_SHARED",
+            "PA12_SHARED"
+          ],
+          "distance": 0.15355339059326914,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB2L_DM_WIDE/0",
+          "b": "USB2L_DP_WIDE/0",
+          "nets": [
+            "USB_DM",
+            "USB_DP"
+          ],
+          "distance": 0.1599999999999966,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB2L_DM_WIDE/0",
+          "b": "USB2L_DP_WIDE/1",
+          "nets": [
+            "USB_DM",
+            "USB_DP"
+          ],
+          "distance": 0.1599999999999966,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB2L_DM_WIDE/1",
+          "b": "USB2L_DP_WIDE/0",
+          "nets": [
+            "USB_DM",
+            "USB_DP"
+          ],
+          "distance": 0.1599999999999966,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB2L_DM_WIDE/1",
+          "b": "USB2L_DP_WIDE/1",
+          "nets": [
+            "USB_DM",
+            "USB_DP"
+          ],
+          "distance": 0.1599999999999966,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_SHARED_DM/4",
+          "b": "USB_SHARED_DP/2",
+          "nets": [
+            "PA11_SHARED",
+            "PA12_SHARED"
+          ],
+          "distance": 0.16055537325834468,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "NRST_PIN_CAP/2",
+          "b": "VDDA_PIN_CAP/1",
+          "nets": [
+            "NRST",
+            "VDDA"
+          ],
+          "distance": 0.20000000000000287,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "ADC_PIN_CAP/0",
+          "b": "VDDA_PIN_CAP/1",
+          "nets": [
+            "ADC0",
+            "VDDA"
+          ],
+          "distance": 0.20104076400855772,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "ADC_PIN_CAP/1",
+          "b": "VDDA_PIN_CAP/1",
+          "nets": [
+            "ADC0",
+            "VDDA"
+          ],
+          "distance": 0.20104076400855772,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "NRST_PIN_CAP/1",
+          "b": "VDDA_PIN_CAP/1",
+          "nets": [
+            "NRST",
+            "VDDA"
+          ],
+          "distance": 0.20838324683090959,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "VDDA_PIN_CAP/0",
+          "b": "U1.10",
+          "nets": [
+            "VDDA",
+            "ADC0"
+          ],
+          "distance": 0.22500000000000142,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "VDDA_PIN_CAP/0",
+          "b": "U1.8",
+          "nets": [
+            "VDDA",
+            "GND"
+          ],
+          "distance": 0.22500000000000142,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "VSSA8_INWARD/0",
+          "b": "U1.9",
+          "nets": [
+            "GND",
+            "VDDA"
+          ],
+          "distance": 0.22500000000000142,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "VSSA8_INWARD/0",
+          "b": "U1.7",
+          "nets": [
+            "GND",
+            "NRST"
+          ],
+          "distance": 0.22500000000000142,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "VBAT_PIN_CAP/0",
+          "b": "U1.2",
+          "nets": [
+            "V3V3",
+            "GPIO_PC13"
+          ],
+          "distance": 0.22500000000000142,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "STAR_U1_24/0",
+          "b": "U1.23",
+          "nets": [
+            "V3V3",
+            "GND"
+          ],
+          "distance": 0.22500000000000142,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "STAR_U1_36/0",
+          "b": "U1.35",
+          "nets": [
+            "V3V3",
+            "GND"
+          ],
+          "distance": 0.22500000000000142,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "STAR_U1_48/0",
+          "b": "U1.47",
+          "nets": [
+            "V3V3",
+            "GND"
+          ],
+          "distance": 0.22500000000000142,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "STAR_U1_VBAT/0",
+          "b": "U1.2",
+          "nets": [
+            "V3V3",
+            "GPIO_PC13"
+          ],
+          "distance": 0.22500000000000142,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_TOP/1",
+          "b": "VSSA8_INWARD/0",
+          "nets": [
+            "GPIO_PC15",
+            "GND"
+          ],
+          "distance": 0.22500000000000142,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_TOP/2",
+          "b": "VSSA8_INWARD/0",
+          "nets": [
+            "GPIO_PC15",
+            "GND"
+          ],
+          "distance": 0.22500000000000142,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC13_BOTTOM_START/0",
+          "b": "GPIO_GPIO_PC14_VIA",
+          "nets": [
+            "GPIO_PC13",
+            "GPIO_PC14"
+          ],
+          "distance": 0.2265238026955564,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC13_BOTTOM_START/1",
+          "b": "GPIO_GPIO_PC14_VIA",
+          "nets": [
+            "GPIO_PC13",
+            "GPIO_PC14"
+          ],
+          "distance": 0.2265238026955564,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_TOP/0",
+          "b": "GPIO_GPIO_PC14_TOP/1",
+          "nets": [
+            "GPIO_PC15",
+            "GPIO_PC14"
+          ],
+          "distance": 0.24999999999999648,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_TOP/1",
+          "b": "GPIO_GPIO_PC14_TOP/1",
+          "nets": [
+            "GPIO_PC15",
+            "GPIO_PC14"
+          ],
+          "distance": 0.24999999999999648,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_TOP/1",
+          "b": "GPIO_GPIO_PC14_TOP/2",
+          "nets": [
+            "GPIO_PC15",
+            "GPIO_PC14"
+          ],
+          "distance": 0.24999999999999648,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC13_TOP/0",
+          "b": "U1.3",
+          "nets": [
+            "GPIO_PC13",
+            "GPIO_PC14"
+          ],
+          "distance": 0.24999999999999997,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC13_TOP/0",
+          "b": "U1.1",
+          "nets": [
+            "GPIO_PC13",
+            "V3V3"
+          ],
+          "distance": 0.24999999999999997,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "HSE_IN/0",
+          "b": "U1.6",
+          "nets": [
+            "OSC_IN",
+            "OSC_OUT"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "HSE_IN/0",
+          "b": "U1.4",
+          "nets": [
+            "OSC_IN",
+            "GPIO_PC15"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "HSE_OUT/0",
+          "b": "U1.7",
+          "nets": [
+            "OSC_OUT",
+            "NRST"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "HSE_OUT/0",
+          "b": "U1.5",
+          "nets": [
+            "OSC_OUT",
+            "OSC_IN"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "VSSA8_INWARD/0",
+          "b": "VDDA_PIN_CAP/0",
+          "nets": [
+            "GND",
+            "VDDA"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "ADC_PIN_CAP/0",
+          "b": "U1.11",
+          "nets": [
+            "ADC0",
+            "GPIO_PA1"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "ADC_PIN_CAP/0",
+          "b": "U1.9",
+          "nets": [
+            "ADC0",
+            "VDDA"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "ADC_PIN_CAP/1",
+          "b": "U1.12",
+          "nets": [
+            "ADC0",
+            "GPIO_PA2"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "ADC_PIN_CAP/1",
+          "b": "U1.11",
+          "nets": [
+            "ADC0",
+            "GPIO_PA1"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "NRST_PIN_CAP/0",
+          "b": "U1.8",
+          "nets": [
+            "NRST",
+            "GND"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "NRST_PIN_CAP/0",
+          "b": "U1.6",
+          "nets": [
+            "NRST",
+            "OSC_OUT"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_DP_A6_TO_MIRROR/0",
+          "b": "J2.A7",
+          "nets": [
+            "USB_DP",
+            "USB_DM"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_DP_A6_TO_MIRROR/0",
+          "b": "J2.B7",
+          "nets": [
+            "USB_DP",
+            "USB_DM"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_DP_B6_TO_MIRROR/0",
+          "b": "J2.A7",
+          "nets": [
+            "USB_DP",
+            "USB_DM"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_DM_A7_MERGE/0",
+          "b": "J2.B6",
+          "nets": [
+            "USB_DM",
+            "USB_DP"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_DM_A7_MERGE/0",
+          "b": "J2.A6",
+          "nets": [
+            "USB_DM",
+            "USB_DP"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_DM_A7_MERGE/2",
+          "b": "J2.A6",
+          "nets": [
+            "USB_DM",
+            "USB_DP"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_DM_A7_MERGE/2",
+          "b": "J2.A5",
+          "nets": [
+            "USB_DM",
+            "USB_CC1"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_DP_ENTRY/0",
+          "b": "J2.A7",
+          "nets": [
+            "USB_DP",
+            "USB_DM"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_DM_ENTRY/0",
+          "b": "J2.A6",
+          "nets": [
+            "USB_DM",
+            "USB_DP"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_DM_ENTRY/0",
+          "b": "J2.A5",
+          "nets": [
+            "USB_DM",
+            "USB_CC1"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_SHARED_DP/4",
+          "b": "U1.34",
+          "nets": [
+            "PA12_SHARED",
+            "SWDIO"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_SHARED_DP/4",
+          "b": "U1.32",
+          "nets": [
+            "PA12_SHARED",
+            "PA11_SHARED"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_SHARED_DM/4",
+          "b": "U1.33",
+          "nets": [
+            "PA11_SHARED",
+            "PA12_SHARED"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_SHARED_DM/4",
+          "b": "U1.31",
+          "nets": [
+            "PA11_SHARED",
+            "PA10_UART_RX"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "STAR_U1_24/0",
+          "b": "existingRoute15",
+          "nets": [
+            "V3V3",
+            "GND"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "STAR_U1_36/0",
+          "b": "existingRoute11",
+          "nets": [
+            "V3V3",
+            "GND"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "STAR_U1_48/0",
+          "b": "existingRoute20",
+          "nets": [
+            "V3V3",
+            "GND"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC14_TOP/0",
+          "b": "U1.4",
+          "nets": [
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC14_TOP/0",
+          "b": "U1.2",
+          "nets": [
+            "GPIO_PC14",
+            "GPIO_PC13"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_TOP/0",
+          "b": "U1.5",
+          "nets": [
+            "GPIO_PC15",
+            "OSC_IN"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_TOP/0",
+          "b": "U1.3",
+          "nets": [
+            "GPIO_PC15",
+            "GPIO_PC14"
+          ],
+          "distance": 0.25,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "NRST_PIN_CAP/0",
+          "b": "HSE_OUT/1",
+          "nets": [
+            "NRST",
+            "OSC_OUT"
+          ],
+          "distance": 0.27440017858745896,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "NRST_PIN_CAP/1",
+          "b": "HSE_OUT/1",
+          "nets": [
+            "NRST",
+            "OSC_OUT"
+          ],
+          "distance": 0.27440017858745946,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "NRST_PIN_CAP/0",
+          "b": "HSE_OUT/2",
+          "nets": [
+            "NRST",
+            "OSC_OUT"
+          ],
+          "distance": 0.2744001785874634,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "NRST_PIN_CAP/1",
+          "b": "HSE_OUT/2",
+          "nets": [
+            "NRST",
+            "OSC_OUT"
+          ],
+          "distance": 0.274400178587464,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "ADC_PIN_CAP/0",
+          "b": "VDDA_PIN_CAP/0",
+          "nets": [
+            "ADC0",
+            "VDDA"
+          ],
+          "distance": 0.2749999999999986,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "ADC_PIN_CAP/1",
+          "b": "VDDA_PIN_CAP/0",
+          "nets": [
+            "ADC0",
+            "VDDA"
+          ],
+          "distance": 0.2749999999999986,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "NRST_PIN_CAP/0",
+          "b": "VSSA8_INWARD/0",
+          "nets": [
+            "NRST",
+            "GND"
+          ],
+          "distance": 0.2749999999999986,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC13_TOP/0",
+          "b": "VBAT_PIN_CAP/0",
+          "nets": [
+            "GPIO_PC13",
+            "V3V3"
+          ],
+          "distance": 0.2749999999999986,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC13_TOP/0",
+          "b": "STAR_U1_VBAT/0",
+          "nets": [
+            "GPIO_PC13",
+            "V3V3"
+          ],
+          "distance": 0.2749999999999986,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC13_TOP/0",
+          "b": "STAR_U1_VBAT/1",
+          "nets": [
+            "GPIO_PC13",
+            "V3V3"
+          ],
+          "distance": 0.2749999999999986,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "NRST_PIN_CAP/1",
+          "b": "U1.8",
+          "nets": [
+            "NRST",
+            "GND"
+          ],
+          "distance": 0.28890872965259823,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_SHARED_DP/3",
+          "b": "existingRoute9",
+          "nets": [
+            "PA12_SHARED",
+            "GND"
+          ],
+          "distance": 0.2946870344671764,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_SHARED_DP/4",
+          "b": "existingRoute9",
+          "nets": [
+            "PA12_SHARED",
+            "GND"
+          ],
+          "distance": 0.2946870344671764,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "V_HI_V3_SOURCE",
+          "b": "R23.2",
+          "nets": [
+            "V3V3",
+            "SPI_NSS"
+          ],
+          "distance": 0.2959328607203938,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "STAR_C9_FEED/1",
+          "b": "R23.2",
+          "nets": [
+            "V3V3",
+            "SPI_NSS"
+          ],
+          "distance": 0.29593529292571646,
+          "overlap": false,
+          "quietAppIsolation": false
+        }
+      ],
+      "overlapCount": 3,
+      "issuesBelowPoint20": [
+        {
+          "a": "GPIO_GPIO_PC14_BOTTOM_START/1",
+          "b": "GPIO_GPIO_PC13_BOTTOM_START/2",
+          "nets": [
+            "GPIO_PC14",
+            "GPIO_PC13"
+          ],
+          "distance": 0.0,
+          "overlap": true,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_BOTTOM_START/1",
+          "b": "GPIO_GPIO_PC13_BOTTOM_START/2",
+          "nets": [
+            "GPIO_PC15",
+            "GPIO_PC13"
+          ],
+          "distance": 0.0,
+          "overlap": true,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_BOTTOM_START/1",
+          "b": "GPIO_GPIO_PC14_BOTTOM_START/2",
+          "nets": [
+            "GPIO_PC15",
+            "GPIO_PC14"
+          ],
+          "distance": 0.0,
+          "overlap": true,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_TOP/2",
+          "b": "VSSA8_INWARD/1",
+          "nets": [
+            "GPIO_PC15",
+            "GND"
+          ],
+          "distance": 0.05000000000000426,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "GPIO_GPIO_PC15_TOP/1",
+          "b": "VSSA8_INWARD/1",
+          "nets": [
+            "GPIO_PC15",
+            "GND"
+          ],
+          "distance": 0.09256312538910956,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_SHARED_DM/3",
+          "b": "USB_SHARED_DP/2",
+          "nets": [
+            "PA11_SHARED",
+            "PA12_SHARED"
+          ],
+          "distance": 0.15355339059326914,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_SHARED_DM/3",
+          "b": "USB_SHARED_DP/3",
+          "nets": [
+            "PA11_SHARED",
+            "PA12_SHARED"
+          ],
+          "distance": 0.15355339059326914,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_SHARED_DM/4",
+          "b": "USB_SHARED_DP/3",
+          "nets": [
+            "PA11_SHARED",
+            "PA12_SHARED"
+          ],
+          "distance": 0.15355339059326914,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB2L_DM_WIDE/0",
+          "b": "USB2L_DP_WIDE/0",
+          "nets": [
+            "USB_DM",
+            "USB_DP"
+          ],
+          "distance": 0.1599999999999966,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB2L_DM_WIDE/0",
+          "b": "USB2L_DP_WIDE/1",
+          "nets": [
+            "USB_DM",
+            "USB_DP"
+          ],
+          "distance": 0.1599999999999966,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB2L_DM_WIDE/1",
+          "b": "USB2L_DP_WIDE/0",
+          "nets": [
+            "USB_DM",
+            "USB_DP"
+          ],
+          "distance": 0.1599999999999966,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB2L_DM_WIDE/1",
+          "b": "USB2L_DP_WIDE/1",
+          "nets": [
+            "USB_DM",
+            "USB_DP"
+          ],
+          "distance": 0.1599999999999966,
+          "overlap": false,
+          "quietAppIsolation": false
+        },
+        {
+          "a": "USB_SHARED_DM/4",
+          "b": "USB_SHARED_DP/2",
+          "nets": [
+            "PA11_SHARED",
+            "PA12_SHARED"
+          ],
+          "distance": 0.16055537325834468,
+          "overlap": false,
+          "quietAppIsolation": false
+        }
+      ],
+      "islandPolygonValid": true,
+      "voidPolygonValid": true,
+      "islandFullyInsideVoid": true,
+      "moatMinimum": 0.3499999999999943
+    }
+  }
+}

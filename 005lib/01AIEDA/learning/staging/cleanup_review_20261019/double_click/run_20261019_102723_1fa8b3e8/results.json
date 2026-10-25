@@ -1,0 +1,437 @@
+{
+  "passed": true,
+  "checks": 28,
+  "failures": [],
+  "source": "D:\\001DIY\\005lib\\0000Ad_Keil_Cadence_dat_iar_txt.bat",
+  "source_sha256": "ea99126a6ca97bcd1320b7c0e53c3a5cbff173dbb7e1a11cd56b7fab701d7b7a",
+  "fixture_wrapper_sha256": "7b106f1ffa70c7aa6c24f98af599c91d1d95b6b5c0419fcae82c1cf59224338f",
+  "source_unchanged": true,
+  "registry_association_read_only": [
+    {
+      "key": "HKEY_CLASSES_ROOT\\.bat",
+      "value": "",
+      "data": "batfile",
+      "kind": 1
+    },
+    {
+      "key": "HKEY_CLASSES_ROOT\\batfile\\shell\\open\\command",
+      "value": "",
+      "data": "\"%1\" %*",
+      "kind": 1
+    },
+    {
+      "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.bat\\UserChoice",
+      "exists": false
+    }
+  ],
+  "registry_association_unchanged": true,
+  "test_method": "Windows CMD subprocess with controlled stdin; not an Explorer GUI test",
+  "production_cleanup_payload_executed": false,
+  "real_user_cleanup_executed": false,
+  "results": [
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat",
+      "args": [],
+      "parent_delayed_expansion": false,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": true,
+      "paused_before_input": true,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat\nSTUB_ARG_1=\nSTUB_ARG_2=\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n[Cleanup] Press any key to close this window.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat",
+      "args": [],
+      "parent_delayed_expansion": false,
+      "forced_failure": true,
+      "exit_code": 23,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": true,
+      "paused_before_input": true,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat\nSTUB_ARG_1=\nSTUB_ARG_2=\nSTUB_FORCED_FAILURE\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] FAILED - command did not complete. Exit code: 23\r\n[Cleanup] Read the error above. If design tools are open, close them before cleaning.\r\n[Cleanup] Press any key to close this window.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat",
+      "args": [
+        "/preview"
+      ],
+      "parent_delayed_expansion": false,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat\nSTUB_ARG_1=/preview\nSTUB_ARG_2=\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat",
+      "args": [
+        "/help"
+      ],
+      "parent_delayed_expansion": false,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat\nSTUB_ARG_1=/help\nSTUB_ARG_2=\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat",
+      "args": [
+        "/invalid"
+      ],
+      "parent_delayed_expansion": false,
+      "forced_failure": false,
+      "exit_code": 37,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat\nSTUB_ARG_1=/invalid\nSTUB_ARG_2=\nSTUB_INVALID_OPTION\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] FAILED - command did not complete. Exit code: 37\r\n[Cleanup] Read the error above. If design tools are open, close them before cleaning.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat",
+      "args": [
+        "/preview",
+        "/history"
+      ],
+      "parent_delayed_expansion": false,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat\nSTUB_ARG_1=/preview\nSTUB_ARG_2=/history\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat",
+      "args": [],
+      "parent_delayed_expansion": true,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": true,
+      "paused_before_input": true,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat\nSTUB_ARG_1=\nSTUB_ARG_2=\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n[Cleanup] Press any key to close this window.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat",
+      "args": [],
+      "parent_delayed_expansion": true,
+      "forced_failure": true,
+      "exit_code": 23,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": true,
+      "paused_before_input": true,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat\nSTUB_ARG_1=\nSTUB_ARG_2=\nSTUB_FORCED_FAILURE\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] FAILED - command did not complete. Exit code: 23\r\n[Cleanup] Read the error above. If design tools are open, close them before cleaning.\r\n[Cleanup] Press any key to close this window.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat",
+      "args": [
+        "/preview"
+      ],
+      "parent_delayed_expansion": true,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat\nSTUB_ARG_1=/preview\nSTUB_ARG_2=\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat",
+      "args": [
+        "/help"
+      ],
+      "parent_delayed_expansion": true,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat\nSTUB_ARG_1=/help\nSTUB_ARG_2=\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat",
+      "args": [
+        "/invalid"
+      ],
+      "parent_delayed_expansion": true,
+      "forced_failure": false,
+      "exit_code": 37,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat\nSTUB_ARG_1=/invalid\nSTUB_ARG_2=\nSTUB_INVALID_OPTION\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] FAILED - command did not complete. Exit code: 37\r\n[Cleanup] Read the error above. If design tools are open, close them before cleaning.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat",
+      "args": [
+        "/preview",
+        "/history"
+      ],
+      "parent_delayed_expansion": true,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat\nSTUB_ARG_1=/preview\nSTUB_ARG_2=/history\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat",
+      "args": [],
+      "parent_delayed_expansion": false,
+      "forced_failure": false,
+      "exit_code": 9009,
+      "powershell_missing_in_child_environment": true,
+      "expected_pause": true,
+      "paused_before_input": true,
+      "stdout": "[Cleanup] ERROR - Windows PowerShell was not found: \"D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\missing Windows directory\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"\r\n\r\n[Cleanup] FAILED - command did not complete. Exit code: 9009\r\n[Cleanup] Read the error above. If design tools are open, close them before cleaning.\r\n[Cleanup] Press any key to close this window.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\normal\\cleanup.bat",
+      "args": [
+        "/preview"
+      ],
+      "parent_delayed_expansion": false,
+      "forced_failure": false,
+      "exit_code": 9009,
+      "powershell_missing_in_child_environment": true,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "[Cleanup] ERROR - Windows PowerShell was not found: \"D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\missing Windows directory\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"\r\n\r\n[Cleanup] FAILED - command did not complete. Exit code: 9009\r\n[Cleanup] Read the error above. If design tools are open, close them before cleaning.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat",
+      "args": [],
+      "parent_delayed_expansion": false,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": true,
+      "paused_before_input": true,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat\nSTUB_ARG_1=\nSTUB_ARG_2=\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n[Cleanup] Press any key to close this window.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat",
+      "args": [],
+      "parent_delayed_expansion": false,
+      "forced_failure": true,
+      "exit_code": 23,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": true,
+      "paused_before_input": true,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat\nSTUB_ARG_1=\nSTUB_ARG_2=\nSTUB_FORCED_FAILURE\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] FAILED - command did not complete. Exit code: 23\r\n[Cleanup] Read the error above. If design tools are open, close them before cleaning.\r\n[Cleanup] Press any key to close this window.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat",
+      "args": [
+        "/preview"
+      ],
+      "parent_delayed_expansion": false,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat\nSTUB_ARG_1=/preview\nSTUB_ARG_2=\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat",
+      "args": [
+        "/help"
+      ],
+      "parent_delayed_expansion": false,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat\nSTUB_ARG_1=/help\nSTUB_ARG_2=\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat",
+      "args": [
+        "/invalid"
+      ],
+      "parent_delayed_expansion": false,
+      "forced_failure": false,
+      "exit_code": 37,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat\nSTUB_ARG_1=/invalid\nSTUB_ARG_2=\nSTUB_INVALID_OPTION\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] FAILED - command did not complete. Exit code: 37\r\n[Cleanup] Read the error above. If design tools are open, close them before cleaning.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat",
+      "args": [
+        "/preview",
+        "/history"
+      ],
+      "parent_delayed_expansion": false,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat\nSTUB_ARG_1=/preview\nSTUB_ARG_2=/history\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat",
+      "args": [],
+      "parent_delayed_expansion": true,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": true,
+      "paused_before_input": true,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat\nSTUB_ARG_1=\nSTUB_ARG_2=\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n[Cleanup] Press any key to close this window.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat",
+      "args": [],
+      "parent_delayed_expansion": true,
+      "forced_failure": true,
+      "exit_code": 23,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": true,
+      "paused_before_input": true,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat\nSTUB_ARG_1=\nSTUB_ARG_2=\nSTUB_FORCED_FAILURE\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] FAILED - command did not complete. Exit code: 23\r\n[Cleanup] Read the error above. If design tools are open, close them before cleaning.\r\n[Cleanup] Press any key to close this window.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat",
+      "args": [
+        "/preview"
+      ],
+      "parent_delayed_expansion": true,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat\nSTUB_ARG_1=/preview\nSTUB_ARG_2=\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat",
+      "args": [
+        "/help"
+      ],
+      "parent_delayed_expansion": true,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat\nSTUB_ARG_1=/help\nSTUB_ARG_2=\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat",
+      "args": [
+        "/invalid"
+      ],
+      "parent_delayed_expansion": true,
+      "forced_failure": false,
+      "exit_code": 37,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat\nSTUB_ARG_1=/invalid\nSTUB_ARG_2=\nSTUB_INVALID_OPTION\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] FAILED - command did not complete. Exit code: 37\r\n[Cleanup] Read the error above. If design tools are open, close them before cleaning.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat",
+      "args": [
+        "/preview",
+        "/history"
+      ],
+      "parent_delayed_expansion": true,
+      "forced_failure": false,
+      "exit_code": 0,
+      "powershell_missing_in_child_environment": false,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "STUB_ROOT=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\\nSTUB_SELF=D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat\nSTUB_ARG_1=/preview\nSTUB_ARG_2=/history\nSTUB_READY_FOR_WRAPPER\n\r\n[Cleanup] OK - command completed.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat",
+      "args": [],
+      "parent_delayed_expansion": false,
+      "forced_failure": false,
+      "exit_code": 9009,
+      "powershell_missing_in_child_environment": true,
+      "expected_pause": true,
+      "paused_before_input": true,
+      "stdout": "[Cleanup] ERROR - Windows PowerShell was not found: \"D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\missing Windows directory\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"\r\n\r\n[Cleanup] FAILED - command did not complete. Exit code: 9009\r\n[Cleanup] Read the error above. If design tools are open, close them before cleaning.\r\n[Cleanup] Press any key to close this window.\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\中文 ! & (目录)\\清理 ! & (入口).bat",
+      "args": [
+        "/preview"
+      ],
+      "parent_delayed_expansion": false,
+      "forced_failure": false,
+      "exit_code": 9009,
+      "powershell_missing_in_child_environment": true,
+      "expected_pause": false,
+      "paused_before_input": false,
+      "stdout": "[Cleanup] ERROR - Windows PowerShell was not found: \"D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\double_click\\run_20261019_102723_1fa8b3e8\\missing Windows directory\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"\r\n\r\n[Cleanup] FAILED - command did not complete. Exit code: 9009\r\n[Cleanup] Read the error above. If design tools are open, close them before cleaning.\r\n",
+      "stderr": "",
+      "passed": true
+    }
+  ]
+}

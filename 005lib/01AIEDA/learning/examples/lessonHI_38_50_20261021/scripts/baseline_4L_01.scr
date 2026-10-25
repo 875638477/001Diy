@@ -1,0 +1,18 @@
+set NOCONFIRM
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/source/de_board_read.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/source/build29_v2.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/source/read29.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/source/extra_read29.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/source/specific_proof.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/source/more28.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/source/mechanical28.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/source/correction.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/source/inventoryG.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/source/placementG.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/source/local_copperG_v2.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/scripts/network_inventoryHI.il") t)
+skill errset(axlDRCUpdate(t) t)
+skill errset(gSnapshot("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/baseline_4L_01" "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/library") t)
+skill errset(hiNetworkInventory("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/baseline_4L_01") t)
+quit
+fillin "yes"

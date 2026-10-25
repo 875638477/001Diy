@@ -1,0 +1,161 @@
+{
+  "status": "MANUAL_COMPLETE_PB10_SOUTH_CANDIDATE_NOT_NATIVE",
+  "variant": "2L",
+  "operations": [
+    {
+      "type": "route",
+      "id": "PB10_92_R0",
+      "net": "GPIO_PB10",
+      "layer": "TOP",
+      "points": [
+        [
+          28,
+          36.1
+        ],
+        [
+          24,
+          36.1
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "PB10_92_GPIO_PB10_V1",
+      "net": "GPIO_PB10",
+      "xy": [
+        24,
+        36.1
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "PB10_92_GND_V2",
+      "net": "GND",
+      "xy": [
+        25,
+        35.1
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3
+    },
+    {
+      "type": "route",
+      "id": "PB10_92_R3",
+      "net": "GPIO_PB10",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          24,
+          36.1
+        ],
+        [
+          8.5,
+          36.1
+        ],
+        [
+          8.5,
+          11.0
+        ],
+        [
+          7.8,
+          10.3
+        ],
+        [
+          7.8,
+          6.8
+        ],
+        [
+          16.73,
+          6.8
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "PB10_92_GPIO_PB10_V4",
+      "net": "GPIO_PB10",
+      "xy": [
+        16.73,
+        6.8
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "PB10_92_GND_V5",
+      "net": "GND",
+      "xy": [
+        17.73,
+        6.5
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3
+    },
+    {
+      "type": "route",
+      "id": "PB10_92_R6",
+      "net": "GPIO_PB10",
+      "layer": "TOP",
+      "points": [
+        [
+          16.73,
+          6.8
+        ],
+        [
+          16.73,
+          9
+        ]
+      ],
+      "width": 0.2
+    }
+  ],
+  "checks": [
+    {
+      "id": "PB10_92_R0",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB10_92_GPIO_PB10_V1",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB10_92_GND_V2",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB10_92_R3",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB10_92_GPIO_PB10_V4",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB10_92_GND_V5",
+      "clear": true,
+      "hits": []
+    },
+    {
+      "id": "PB10_92_R6",
+      "clear": true,
+      "hits": []
+    }
+  ],
+  "sourcePrerequisites": "f29 b019+80adapted+North4 repack46 then81 four-long and87 Attach+PB15 source; J12 candidate south; supply pending32.19mm",
+  "signalAddedLengthMM": 60.21994949366117,
+  "qualification": "Complete route from explicit TOP portal28,36.1 toJ12.4; source46 and return/reference review independent, no manufacturing/DRC claim"
+}

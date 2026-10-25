@@ -1,0 +1,64 @@
+
+  NAME
+         axlCNSDesignModeGet - inquire constraint modes based on type design
+  FUNCTION
+         axlCNSDesignModeGet(
+                 nil
+         ) ==> ls_constraints
+ 
+         axlCNSDesignModeGet(
+                 'all
+         ) ==> lls_constraintNModes
+ 
+         axlCNSDesignModeGet(
+                 'editable
+         ) ==> t/nil
+ 
+         axlCNSDesignModeGet(
+                 s_name/t_name
+         ) ==> s_mode/nil
+ 
+         axlCNSDesignModeGet(
+                 s_name/t_name
+                 'print
+         ) ==> t_name/nil
+ 
+  SYNOPSIS
+         This fetches the current drc mode(s) for checks that fall
+         into set of design constaints. These constraints pertain
+         to the entire board. To determine the set currently supported
+         do a axlCNSDesignModeGet().
+ 
+         The 'print mode offers the name shown in reports like show element.
+ 
+         This has axlDebug support.
+  CAUTION
+         Future releases may add or subtract constraint checks. The
+         axl interface does guarantee the checks returned by this
+         interface will remain constant from release to release.
+  NEEDS
+         nil: returns all checks in design type DRC
+         'all: returns all checks and current mode
+         'editable: returns t if mode can be change, nil otherwise
+                 nil is returned when in Allegro studio which does
+                 not offer this option
+         s_name: symbol name of check.
+         t_name: string name of check
+         'print: printable constraint name option
+  RETURNS
+         ls_names: - list of checks (s_name ...)
+         lls_names: - list of checks and their mode ((s_name s_mode) ...)
+         s_mode: mode 'on, 'off or 'batch
+         t_name:  the printable constraint name
+  SEE ALSO
+         axlCNSDesignModeSet, axlCNSDesignValueGet
+  EXAMPLES
+         1) get current list of design constaints
+                 axlCNSDesignModeGet(nil)
+         2) get list of settings for all design constraints
+                 axlCNSDesignModeGet('all)
+         3) get current setting of pkg 2 pkg
+                 axlCNSDesignModeGet('Package_to_Package_Spacing)
+         4) get current setting of negative plane islands using a string
+                 axlCNSDesignModeGet("Negative_Plane_Islands")
+

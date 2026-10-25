@@ -1,0 +1,525 @@
+{
+  "status": "FROZEN_EXPLICIT_UNUSED_PARTIAL_DELETION_REQUIRES_NATIVE_GRAPH_FILL_DRC",
+  "batchId": "South_UNUSED_BOTTOM_PARTIALS_4L_01",
+  "variant": "4L",
+  "base": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\source_4L_b015_DRC_PENDING",
+  "afterMandatorySourceFixes": [
+    "root_south_private_via_spacing_4L_01"
+  ],
+  "operations": [
+    {
+      "type": "deleteSegment",
+      "id": "UNUSED_GPIO_PB12_BOTTOM_0",
+      "net": "GPIO_PB12",
+      "layer": "BOTTOM",
+      "width": 0.16,
+      "points": [
+        [
+          36.5,
+          21.25
+        ],
+        [
+          37.0,
+          21.25
+        ]
+      ],
+      "purpose": "Delete explicitly superseded teaching partial tail, preserve TOP MCU-to-source-via copper and source via. This is not a hardware terminal connection."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "UNUSED_GPIO_PB12_BOTTOM_1",
+      "net": "GPIO_PB12",
+      "layer": "BOTTOM",
+      "width": 0.2,
+      "points": [
+        [
+          35.0,
+          21.25
+        ],
+        [
+          36.5,
+          21.25
+        ]
+      ],
+      "purpose": "Delete explicitly superseded teaching partial tail, preserve TOP MCU-to-source-via copper and source via. This is not a hardware terminal connection."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "UNUSED_GPIO_PB13_BOTTOM_0",
+      "net": "GPIO_PB13",
+      "layer": "BOTTOM",
+      "width": 0.16,
+      "points": [
+        [
+          37.5,
+          20.725
+        ],
+        [
+          37.3,
+          20.525
+        ]
+      ],
+      "purpose": "Delete explicitly superseded teaching partial tail, preserve TOP MCU-to-source-via copper and source via. This is not a hardware terminal connection."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "UNUSED_GPIO_PB13_BOTTOM_1",
+      "net": "GPIO_PB13",
+      "layer": "BOTTOM",
+      "width": 0.16,
+      "points": [
+        [
+          37.3,
+          20.525
+        ],
+        [
+          37.3,
+          19.7
+        ]
+      ],
+      "purpose": "Delete explicitly superseded teaching partial tail, preserve TOP MCU-to-source-via copper and source via. This is not a hardware terminal connection."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "UNUSED_GPIO_PB14_BOTTOM_0",
+      "net": "GPIO_PB14",
+      "layer": "BOTTOM",
+      "width": 0.16,
+      "points": [
+        [
+          38.0,
+          21.9
+        ],
+        [
+          38.0,
+          21.25
+        ]
+      ],
+      "purpose": "Delete explicitly superseded teaching partial tail, preserve TOP MCU-to-source-via copper and source via. This is not a hardware terminal connection."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "UNUSED_GPIO_PB14_BOTTOM_1",
+      "net": "GPIO_PB14",
+      "layer": "BOTTOM",
+      "width": 0.2,
+      "points": [
+        [
+          38.0,
+          22.7
+        ],
+        [
+          38.0,
+          21.9
+        ]
+      ],
+      "purpose": "Delete explicitly superseded teaching partial tail, preserve TOP MCU-to-source-via copper and source via. This is not a hardware terminal connection."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "UNUSED_GPIO_PB14_BOTTOM_2",
+      "net": "GPIO_PB14",
+      "layer": "BOTTOM",
+      "width": 0.2,
+      "points": [
+        [
+          35.0,
+          22.7
+        ],
+        [
+          38.0,
+          22.7
+        ]
+      ],
+      "purpose": "Delete explicitly superseded teaching partial tail, preserve TOP MCU-to-source-via copper and source via. This is not a hardware terminal connection."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "UNUSED_GPIO_PB15_BOTTOM_0",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "width": 0.16,
+      "points": [
+        [
+          38.5,
+          20.675
+        ],
+        [
+          38.5,
+          22.3
+        ]
+      ],
+      "purpose": "Delete explicitly superseded teaching partial tail, preserve TOP MCU-to-source-via copper and source via. This is not a hardware terminal connection."
+    }
+  ],
+  "sourceViaProofs": [
+    {
+      "from_": "U1.25",
+      "toVia": {
+        "xy": [
+          37.0,
+          21.25
+        ],
+        "net": "GPIO_PB12",
+        "padstack": "HI_VIA026_C052_TENT"
+      },
+      "mustRemainConnected": true
+    },
+    {
+      "from_": "U1.26",
+      "toVia": {
+        "xy": [
+          37.5,
+          20.725
+        ],
+        "net": "GPIO_PB13",
+        "padstack": "HI_VIA026_C052_TENT"
+      },
+      "mustRemainConnected": true
+    },
+    {
+      "from_": "U1.27",
+      "toVia": {
+        "xy": [
+          38.0,
+          21.25
+        ],
+        "net": "GPIO_PB14",
+        "padstack": "HI_VIA026_C052_TENT"
+      },
+      "mustRemainConnected": true
+    },
+    {
+      "from_": "U1.28",
+      "toVia": {
+        "xy": [
+          38.5,
+          20.675
+        ],
+        "net": "GPIO_PB15",
+        "padstack": "HI_VIA026_C052_TENT"
+      },
+      "mustRemainConnected": true
+    }
+  ],
+  "retireOldVirtualProofTargets": {
+    "GPIO_PB12": [
+      35,
+      21.25
+    ],
+    "GPIO_PB13": [
+      37.3,
+      19.7
+    ],
+    "GPIO_PB14": [
+      35,
+      22.7
+    ],
+    "GPIO_PB15": [
+      38.5,
+      22.3
+    ]
+  },
+  "audit": [
+    {
+      "net": "GPIO_PB12",
+      "sourcePin": "U1.25",
+      "actualSourceVia": {
+        "padstack": "HI_VIA026_C052_TENT",
+        "xy": [
+          37.0,
+          21.25
+        ],
+        "net": "GPIO_PB12",
+        "usage": "Through_via",
+        "drill": 0.26,
+        "pads": [
+          {
+            "layer": "ETCH/TOP",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.26,
+                -0.26
+              ],
+              [
+                0.26,
+                0.26
+              ]
+            ]
+          },
+          {
+            "layer": "ETCH/L2",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.26,
+                -0.26
+              ],
+              [
+                0.26,
+                0.26
+              ]
+            ]
+          },
+          {
+            "layer": "ETCH/L3",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.26,
+                -0.26
+              ],
+              [
+                0.26,
+                0.26
+              ]
+            ]
+          },
+          {
+            "layer": "ETCH/BOTTOM",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.26,
+                -0.26
+              ],
+              [
+                0.26,
+                0.26
+              ]
+            ]
+          }
+        ]
+      },
+      "oldTailTerminalEnd": [
+        [
+          35.0,
+          21.25
+        ]
+      ],
+      "tailDegree": {
+        "(36.5, 21.25)": 2,
+        "(37.0, 21.25)": 1,
+        "(35.0, 21.25)": 1
+      },
+      "hardwarePins": [
+        [
+          "J12.6",
+          [
+            43.81,
+            55.0
+          ]
+        ],
+        [
+          "U1.25",
+          [
+            37.25,
+            22.75
+          ]
+        ]
+      ],
+      "topPreservedObjectCount": 3,
+      "topRoutesSHA256": "f1dfba3f42682da749f90811f756e38f1a534f592d28c0ea993f9612fe0173e3"
+    },
+    {
+      "net": "GPIO_PB13",
+      "sourcePin": "U1.26",
+      "actualSourceVia": {
+        "net": "GPIO_PB13",
+        "xy": [
+          37.5,
+          20.725
+        ],
+        "padstack": "HI_VIA026_C052_TENT"
+      },
+      "oldTailTerminalEnd": [
+        [
+          37.3,
+          19.7
+        ]
+      ],
+      "tailDegree": {
+        "(37.5, 20.725)": 1,
+        "(37.3, 20.525)": 2,
+        "(37.3, 19.7)": 1
+      },
+      "hardwarePins": [
+        [
+          "J12.7",
+          [
+            46.35,
+            55.0
+          ]
+        ],
+        [
+          "U1.26",
+          [
+            37.75,
+            22.75
+          ]
+        ]
+      ],
+      "topPreservedObjectCount": 3,
+      "topRoutesSHA256": "2dc5871197486983c9646346976eaf88d36785aea1f25ca7230b4168ed0bf78e"
+    },
+    {
+      "net": "GPIO_PB14",
+      "sourcePin": "U1.27",
+      "actualSourceVia": {
+        "padstack": "HI_VIA026_C052_TENT",
+        "xy": [
+          38.0,
+          21.25
+        ],
+        "net": "GPIO_PB14",
+        "usage": "Through_via",
+        "drill": 0.26,
+        "pads": [
+          {
+            "layer": "ETCH/TOP",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.26,
+                -0.26
+              ],
+              [
+                0.26,
+                0.26
+              ]
+            ]
+          },
+          {
+            "layer": "ETCH/L2",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.26,
+                -0.26
+              ],
+              [
+                0.26,
+                0.26
+              ]
+            ]
+          },
+          {
+            "layer": "ETCH/L3",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.26,
+                -0.26
+              ],
+              [
+                0.26,
+                0.26
+              ]
+            ]
+          },
+          {
+            "layer": "ETCH/BOTTOM",
+            "figure": "CIRCLE",
+            "bbox": [
+              [
+                -0.26,
+                -0.26
+              ],
+              [
+                0.26,
+                0.26
+              ]
+            ]
+          }
+        ]
+      },
+      "oldTailTerminalEnd": [
+        [
+          35.0,
+          22.7
+        ]
+      ],
+      "tailDegree": {
+        "(38.0, 21.9)": 2,
+        "(38.0, 21.25)": 1,
+        "(38.0, 22.7)": 2,
+        "(35.0, 22.7)": 1
+      },
+      "hardwarePins": [
+        [
+          "J12.8",
+          [
+            48.89,
+            55.0
+          ]
+        ],
+        [
+          "U1.27",
+          [
+            38.25,
+            22.75
+          ]
+        ]
+      ],
+      "topPreservedObjectCount": 3,
+      "topRoutesSHA256": "11a03ac68208b8d4d748d463c39924543edf084495de10aa64ea419c5a803e17"
+    },
+    {
+      "net": "GPIO_PB15",
+      "sourcePin": "U1.28",
+      "actualSourceVia": {
+        "net": "GPIO_PB15",
+        "xy": [
+          38.5,
+          20.675
+        ],
+        "padstack": "HI_VIA026_C052_TENT"
+      },
+      "oldTailTerminalEnd": [
+        [
+          38.5,
+          22.3
+        ]
+      ],
+      "tailDegree": {
+        "(38.5, 20.675)": 1,
+        "(38.5, 22.3)": 1
+      },
+      "hardwarePins": [
+        [
+          "J13.3",
+          [
+            58.19,
+            55.0
+          ]
+        ],
+        [
+          "U1.28",
+          [
+            38.75,
+            22.75
+          ]
+        ]
+      ],
+      "topPreservedObjectCount": 3,
+      "topRoutesSHA256": "4c82d3b8522471d6fd25b032305adc2a2865ea358c3404fb7125c23714724ad0"
+    }
+  ],
+  "preconditions": [
+    "Only these BOTTOM tail line objects uniquely match; no other same-net BOTTOM copper on source snapshot.",
+    "Each tail is one path with degree-one source via and degree-one nonhardware end; all original TOP source copper/source via preserved.",
+    "Do not delete any V3V3/GND copper or via. Unlike the erroneous R27 supply classification, the full source topology and all actual hardware terminals were checked."
+  ],
+  "expectedOutcome": "No hardware terminal contract removed. New proof targets U1 pin to real source via. Complete source-to-header long routes remain pending; refresh fill and prove WEST ground common and cumulative source pins, HSE isolation, no orphan branches.",
+  "inputs": [
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\source_4L_b015_DRC_PENDING\\normalized.json",
+      "sha256": "0e8d167f926114637aed5bc6a9e6f81f4667467bb14ef1f2df75535f1699618e"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\root_south_private_via_spacing_4L_01.json",
+      "sha256": "eaa17e0eb4225b02800dd776aad7a8cd5dc2e08c8e0103c70fa1026b7a3d3721"
+    }
+  ]
+}

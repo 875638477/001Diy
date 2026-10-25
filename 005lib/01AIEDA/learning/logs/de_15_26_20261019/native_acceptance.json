@@ -1,0 +1,7679 @@
+{
+  "date": "2026-10-19 Asia/Shanghai",
+  "scope": "Native readback comparison and explicitly enumerated custom electrical/topology rules; NOT Capture GUI ERC or hardware validation",
+  "status": "PASS",
+  "checks": 1519,
+  "passed": 1519,
+  "summaries": {
+    "single": {
+      "components": 80,
+      "physical_pins": 272,
+      "connected_pins": 266,
+      "nets": 69,
+      "explicit_NC": 6,
+      "custom_rule_failures": []
+    },
+    "eco": {
+      "components": 80,
+      "physical_pins": 272,
+      "connected_pins": 266,
+      "nets": 69,
+      "explicit_NC": 6,
+      "custom_rule_failures": []
+    }
+  },
+  "negative_cases": [
+    {
+      "name": "VDD48_to_GND",
+      "expected": "MCU_DIGITAL_SUPPLY",
+      "detected": [
+        "MCU_DIGITAL_SUPPLY"
+      ],
+      "scope": "Fault injected into a readback-table copy, not into native CAD"
+    },
+    {
+      "name": "VBUS_to_board_V5",
+      "expected": "USB_VBUS_ISOLATION",
+      "detected": [
+        "USB_VBUS_ISOLATION"
+      ],
+      "scope": "Fault injected into a readback-table copy, not into native CAD"
+    },
+    {
+      "name": "CC2_RD_to_V3V3",
+      "expected": "USB_CC2_RD",
+      "detected": [
+        "USB_CC2_RD"
+      ],
+      "scope": "Fault injected into a readback-table copy, not into native CAD"
+    },
+    {
+      "name": "TCAN_NC8_connected",
+      "expected": "TCAN332_NC",
+      "detected": [
+        "TCAN332_NC"
+      ],
+      "scope": "Fault injected into a readback-table copy, not into native CAD"
+    }
+  ],
+  "details": [
+    {
+      "check": "single: exact connected pin map",
+      "passed": true,
+      "detail": {
+        "expected": 266,
+        "actual": 266
+      }
+    },
+    {
+      "check": "single: no duplicate pin memberships",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: complete unique references",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: physical pins complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R31 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R31 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R31 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R31 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R31 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R31 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R27 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R27 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R27 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R27 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R27 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R27 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R14 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R14 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R14 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R14 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R14 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R14 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J11 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J11 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J11 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J11 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J11 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J11 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R24 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R24 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R24 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R24 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R24 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R24 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: F1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: F1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: F1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: F1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: F1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: F1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C9 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C9 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C9 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C9 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C9 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C9 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R9 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R9 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R9 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R9 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R9 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R9 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J8 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J8 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J8 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J8 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J8 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J8 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R17 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R17 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R17 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R17 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R17 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R17 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J6 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J6 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J6 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J6 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J6 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J6 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J13 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J13 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J13 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J13 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J13 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J13 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C17 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C17 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C17 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C17 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C17 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C17 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R5 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R5 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R5 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R5 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R5 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R5 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C22 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C22 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C22 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C22 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C22 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C22 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R3 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R3 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R3 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R3 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R3 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R3 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C21 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C21 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C21 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C21 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C21 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C21 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R15 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R15 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R15 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R15 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R15 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R15 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R2 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R2 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R2 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R2 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R2 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R2 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R25 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R25 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R25 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R25 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R25 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R25 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: D1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: D1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: D1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: D1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: D1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: D1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q2 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q2 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q2 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q2 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q2 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q2 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J9 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J9 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J9 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J9 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J9 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J9 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R18 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R18 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R18 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R18 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R18 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R18 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R26 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R26 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R26 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R26 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R26 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R26 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R6 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R6 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R6 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R6 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R6 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R6 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C11 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C11 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C11 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C11 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C11 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C11 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C4 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C4 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C4 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C4 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C4 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C4 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C23 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C23 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C23 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C23 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C23 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C23 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R4 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R4 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R4 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R4 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R4 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R4 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J7 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J7 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J7 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J7 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J7 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J7 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J3 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J3 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J3 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J3 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J3 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J3 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C7 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C7 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C7 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C7 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C7 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C7 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C13 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C13 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C13 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C13 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C13 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C13 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J5 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J5 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J5 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J5 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J5 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J5 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C18 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C18 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C18 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C18 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C18 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C18 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R7 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R7 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R7 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R7 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R7 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R7 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C12 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C12 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C12 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C12 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C12 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C12 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R10 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R10 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R10 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R10 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R10 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R10 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: L1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: L1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: L1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: L1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: L1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: L1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J10 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J10 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J10 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J10 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J10 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J10 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R21 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R21 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R21 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R21 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R21 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R21 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U4 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U4 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U4 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U4 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U4 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U4 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R28 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R28 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R28 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R28 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R28 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R28 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U3 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U3 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U3 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U3 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U3 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U3 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J12 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J12 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J12 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J12 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J12 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J12 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C14 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C14 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C14 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C14 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C14 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C14 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C2 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C2 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C2 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C2 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C2 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C2 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J4 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J4 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J4 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J4 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J4 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J4 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C19 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C19 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C19 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C19 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C19 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C19 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R8 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R8 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R8 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R8 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R8 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R8 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R12 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R12 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R12 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R12 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R12 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R12 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R11 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R11 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R11 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R11 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R11 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R11 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Y1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Y1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Y1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Y1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Y1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Y1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C5 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C5 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C5 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C5 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C5 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C5 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R32 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R32 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R32 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R32 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R32 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R32 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R22 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R22 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R22 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R22 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R22 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R22 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R29 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R29 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R29 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R29 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R29 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R29 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R19 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R19 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R19 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R19 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R19 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R19 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C15 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C15 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C15 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C15 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C15 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C15 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C3 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C3 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C3 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C3 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C3 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C3 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C20 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C20 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C20 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C20 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C20 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C20 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R13 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R13 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R13 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R13 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R13 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R13 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U5 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U5 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U5 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U5 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U5 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U5 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C6 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C6 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C6 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C6 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C6 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C6 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C24 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C24 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C24 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C24 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C24 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C24 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R23 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R23 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R23 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R23 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R23 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R23 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C8 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C8 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C8 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C8 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C8 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C8 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R30 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R30 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R30 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R30 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R30 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R30 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R16 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R16 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R16 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R16 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R16 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R16 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R20 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R20 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R20 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R20 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R20 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R20 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C16 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C16 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C16 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C16 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C16 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C16 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U2 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U2 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U2 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U2 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U2 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U2 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C10 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C10 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C10 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C10 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C10 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C10 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.7 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.8 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.9 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.10 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.11 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.12 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.13 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.14 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.15 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.16 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.17 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.18 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.19 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.20 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.21 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.22 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.23 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.24 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.25 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.26 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.27 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.28 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.29 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.30 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.31 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.32 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.33 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.34 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.35 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.36 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.37 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.38 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.39 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.40 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.41 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.42 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.43 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.44 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.45 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.46 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.47 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U1.48 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R31.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R31.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R27.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R27.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R14.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R14.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J11.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J11.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J11.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J11.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J11.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J11.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J11.7 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J11.8 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R24.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R24.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: F1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: F1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C9.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C9.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R9.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R9.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J8.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J8.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R17.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R17.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J6.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J6.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J6.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J6.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J6.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J6.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J13.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J13.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J13.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J13.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J13.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J13.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J13.7 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J13.8 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C17.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C17.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R5.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R5.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C22.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C22.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R3.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R3.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C21.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C21.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R15.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R15.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R2.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R2.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R25.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R25.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: D1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: D1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.A1_B12 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.A4_B9 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.B8 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.A5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.B7 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.A6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.A7 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.B6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.A8 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.B5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.B4_A9 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.B1_A12 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.SH1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.SH2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.SH3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J2.SH4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q2.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q2.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q2.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J9.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J9.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J9.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J9.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J9.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J9.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R18.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R18.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R26.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R26.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R6.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R6.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C11.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C11.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C4.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C4.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C23.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C23.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R4.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R4.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J7.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J7.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J3.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J3.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J3.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C7.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C7.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C13.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C13.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J5.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J5.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J5.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J5.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C18.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C18.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R7.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R7.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C12.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C12.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R10.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R10.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: L1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: L1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J10.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J10.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R21.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R21.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U4.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U4.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U4.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U4.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U4.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U4.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R28.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R28.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U3.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U3.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U3.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U3.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U3.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J12.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J12.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J12.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J12.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J12.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J12.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J12.7 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J12.8 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C14.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C14.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C2.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C2.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J4.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J4.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J4.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J4.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C19.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C19.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R8.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R8.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R12.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R12.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R11.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R11.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Y1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Y1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Y1.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Y1.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C5.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C5.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R32.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R32.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R22.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R22.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R29.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R29.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R19.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R19.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C15.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C15.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C3.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C3.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C20.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C20.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: Q1.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R13.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R13.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U5.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U5.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U5.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U5.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U5.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U5.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U5.7 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U5.8 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C6.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C6.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C24.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C24.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R23.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R23.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: J1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C8.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C8.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R30.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R30.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R16.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R16.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R20.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: R20.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C16.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C16.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U2.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U2.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U2.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U2.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U2.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: U2.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C10.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: C10.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "single: explicit topology rules",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "eco: exact connected pin map",
+      "passed": true,
+      "detail": {
+        "expected": 266,
+        "actual": 266
+      }
+    },
+    {
+      "check": "eco: no duplicate pin memberships",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: complete unique references",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: physical pins complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R31 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R31 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R31 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R31 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R31 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R31 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R27 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R27 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R27 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R27 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R27 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R27 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R14 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R14 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R14 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R14 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R14 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R14 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J11 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J11 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J11 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J11 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J11 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J11 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R24 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R24 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R24 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R24 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R24 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R24 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: F1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: F1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: F1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: F1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: F1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: F1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C9 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C9 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C9 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C9 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C9 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C9 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R9 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R9 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R9 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R9 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R9 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R9 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J8 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J8 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J8 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J8 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J8 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J8 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R17 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R17 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R17 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R17 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R17 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R17 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J6 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J6 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J6 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J6 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J6 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J6 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J13 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J13 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J13 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J13 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J13 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J13 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C17 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C17 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C17 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C17 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C17 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C17 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R5 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R5 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R5 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R5 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R5 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R5 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C22 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C22 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C22 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C22 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C22 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C22 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R3 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R3 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R3 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R3 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R3 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R3 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C21 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C21 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C21 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C21 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C21 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C21 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R15 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R15 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R15 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R15 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R15 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R15 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R2 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R2 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R2 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R2 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R2 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R2 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R25 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R25 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R25 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R25 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R25 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R25 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: D1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: D1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: D1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: D1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: D1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: D1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q2 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q2 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q2 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q2 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q2 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q2 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J9 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J9 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J9 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J9 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J9 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J9 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R18 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R18 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R18 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R18 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R18 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R18 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R26 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R26 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R26 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R26 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R26 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R26 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R6 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R6 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R6 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R6 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R6 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R6 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C11 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C11 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C11 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C11 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C11 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C11 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C4 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C4 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C4 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C4 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C4 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C4 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C23 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C23 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C23 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C23 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C23 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C23 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R4 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R4 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R4 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R4 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R4 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R4 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J7 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J7 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J7 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J7 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J7 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J7 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J3 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J3 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J3 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J3 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J3 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J3 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C7 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C7 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C7 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C7 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C7 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C7 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C13 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C13 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C13 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C13 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C13 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C13 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J5 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J5 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J5 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J5 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J5 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J5 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C18 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C18 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C18 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C18 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C18 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C18 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R7 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R7 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R7 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R7 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R7 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R7 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C12 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C12 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C12 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C12 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C12 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C12 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R10 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R10 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R10 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R10 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R10 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R10 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: L1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: L1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: L1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: L1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: L1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: L1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J10 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J10 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J10 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J10 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J10 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J10 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R21 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R21 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R21 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R21 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R21 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R21 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U4 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U4 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U4 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U4 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U4 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U4 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R28 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R28 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R28 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R28 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R28 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R28 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U3 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U3 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U3 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U3 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U3 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U3 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J12 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J12 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J12 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J12 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J12 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J12 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C14 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C14 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C14 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C14 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C14 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C14 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C2 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C2 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C2 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C2 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C2 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C2 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J4 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J4 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J4 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J4 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J4 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J4 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C19 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C19 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C19 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C19 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C19 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C19 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R8 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R8 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R8 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R8 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R8 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R8 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R12 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R12 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R12 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R12 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R12 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R12 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R11 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R11 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R11 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R11 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R11 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R11 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Y1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Y1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Y1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Y1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Y1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Y1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C5 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C5 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C5 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C5 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C5 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C5 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R32 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R32 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R32 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R32 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R32 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R32 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R22 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R22 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R22 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R22 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R22 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R22 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R29 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R29 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R29 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R29 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R29 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R29 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R19 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R19 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R19 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R19 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R19 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R19 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C15 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C15 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C15 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C15 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C15 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C15 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C3 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C3 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C3 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C3 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C3 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C3 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C20 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C20 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C20 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C20 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C20 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C20 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R13 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R13 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R13 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R13 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R13 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R13 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U5 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U5 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U5 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U5 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U5 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U5 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C6 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C6 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C6 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C6 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C6 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C6 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C24 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C24 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C24 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C24 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C24 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C24 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R23 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R23 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R23 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R23 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R23 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R23 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J1 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J1 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J1 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J1 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J1 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J1 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C8 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C8 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C8 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C8 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C8 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C8 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R30 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R30 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R30 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R30 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R30 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R30 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R16 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R16 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R16 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R16 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R16 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R16 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R20 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R20 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R20 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R20 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R20 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R20 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C16 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C16 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C16 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C16 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C16 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C16 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U2 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U2 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U2 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U2 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U2 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U2 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C10 module_id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C10 value",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C10 footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C10 mpn",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C10 ASSEMBLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C10 MPN_STATUS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.7 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.8 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.9 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.10 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.11 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.12 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.13 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.14 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.15 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.16 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.17 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.18 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.19 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.20 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.21 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.22 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.23 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.24 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.25 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.26 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.27 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.28 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.29 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.30 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.31 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.32 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.33 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.34 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.35 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.36 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.37 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.38 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.39 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.40 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.41 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.42 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.43 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.44 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.45 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.46 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.47 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U1.48 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R31.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R31.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R27.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R27.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R14.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R14.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J11.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J11.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J11.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J11.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J11.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J11.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J11.7 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J11.8 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R24.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R24.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: F1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: F1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C9.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C9.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R9.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R9.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J8.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J8.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R17.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R17.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J6.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J6.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J6.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J6.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J6.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J6.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J13.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J13.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J13.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J13.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J13.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J13.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J13.7 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J13.8 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C17.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C17.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R5.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R5.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C22.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C22.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R3.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R3.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C21.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C21.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R15.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R15.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R2.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R2.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R25.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R25.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: D1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: D1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.A1_B12 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.A4_B9 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.B8 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.A5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.B7 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.A6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.A7 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.B6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.A8 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.B5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.B4_A9 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.B1_A12 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.SH1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.SH2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.SH3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J2.SH4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q2.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q2.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q2.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J9.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J9.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J9.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J9.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J9.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J9.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R18.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R18.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R26.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R26.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R6.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R6.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C11.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C11.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C4.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C4.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C23.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C23.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R4.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R4.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J7.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J7.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J3.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J3.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J3.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C7.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C7.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C13.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C13.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J5.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J5.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J5.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J5.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C18.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C18.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R7.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R7.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C12.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C12.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R10.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R10.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: L1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: L1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J10.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J10.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R21.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R21.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U4.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U4.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U4.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U4.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U4.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U4.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R28.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R28.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U3.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U3.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U3.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U3.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U3.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J12.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J12.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J12.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J12.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J12.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J12.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J12.7 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J12.8 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C14.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C14.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C2.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C2.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J4.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J4.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J4.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J4.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C19.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C19.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R8.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R8.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R12.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R12.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R11.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R11.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Y1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Y1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Y1.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Y1.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C5.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C5.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R32.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R32.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R22.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R22.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R29.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R29.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R19.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R19.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C15.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C15.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C3.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C3.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C20.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C20.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: Q1.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R13.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R13.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U5.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U5.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U5.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U5.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U5.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U5.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U5.7 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U5.8 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C6.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C6.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C24.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C24.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R23.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R23.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J1.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: J1.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C8.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C8.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R30.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R30.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R16.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R16.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R20.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: R20.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C16.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C16.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U2.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U2.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U2.3 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U2.4 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U2.5 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: U2.6 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C10.1 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: C10.2 type/name/NC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eco: explicit topology rules",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "ECO exact net differences",
+      "passed": true,
+      "detail": {
+        "J13.7": [
+          "GPIO_PB8",
+          "GPIO_PB9"
+        ],
+        "J13.8": [
+          "GPIO_PB9",
+          "GPIO_PB8"
+        ]
+      }
+    },
+    {
+      "check": "custom rule negative example: VDD48_to_GND",
+      "passed": true,
+      "detail": [
+        "MCU_DIGITAL_SUPPLY"
+      ]
+    },
+    {
+      "check": "custom rule negative example: VBUS_to_board_V5",
+      "passed": true,
+      "detail": [
+        "USB_VBUS_ISOLATION"
+      ]
+    },
+    {
+      "check": "custom rule negative example: CC2_RD_to_V3V3",
+      "passed": true,
+      "detail": [
+        "USB_CC2_RD"
+      ]
+    },
+    {
+      "check": "custom rule negative example: TCAN_NC8_connected",
+      "passed": true,
+      "detail": [
+        "TCAN332_NC"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+
+  NAME
+     axlDBGetConnect - given a dbid, find all the elements connected to it
+  FUNCTION
+     axlDBGetConnect(
+         o_dbid
+         [t_full]
+     )
+     ==> l_result
+  SYNOPSIS
+     With second argument nil or not present:
+         - For pins, vias or Ts returns list of connected clines.
+         - For path (clines) or line/arc (segments) returns list of objects connected
+                 to either end.
+         - For shapes same as t_full=t
+     With second argument t.
+         - For pins, vias or Ts returns full connectivity which is clines
+           shapes, pins, vias or t's.
+         - For path (clines) or line/arc (segements) sames as t_full=nil
+         - For shapes list of connected objects which may be clines,
+                 shapes, pins, vias ro T's.
+  NOTES
+     Usually you want to use the t_fill = t. The nil option operates 
+     in its mode due to legacy considerations; it is used by APD applications.
+ 
+     If passed a segment, it does not report inter-path connectitivity. Thus
+     only the first and last segment of a path report any connectivity.
+     Internal segments of a path always return nil. This is because the
+     Allegro database connectivity model guarantees that internal segments
+     are always connected to their adjacent segments. The list of segments
+     reported in a path (cline) dbid is how the individual segments are connected.
+ 
+  NEEDS
+     o_dbid      - a DB dbid, path (cline), line/arc (segment), shape, pin, via or T.
+     t_full      - see above
+  RETURNS
+     nil         - Nothing connected to o_dbid
+     l_result    - List of dbids connected to o_dbid. If o_dbid is a 
+                   CLINE or SEGMENT, then
+                         l_result = (<list 1st endpoint> <list 2nd endpoint>)
+                   where list1 = nil or elements connected to the 
+                                 first end
+                         list2 = nil or elements connected to the 
+                                 second end
+                   For all other objects returns a lists of connections.
+ 
+                   If no connections returns nil
+

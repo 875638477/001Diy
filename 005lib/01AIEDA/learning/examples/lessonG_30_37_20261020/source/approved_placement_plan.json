@@ -1,0 +1,3595 @@
+{
+  "status": "READY_FOR_NATIVE_PLACEMENT",
+  "units": "mm",
+  "scope": "Teaching placement, not manufacturing released or fully routed",
+  "placements": [
+    {
+      "ref": "J2",
+      "x": 40,
+      "y": 3.675,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "Preserve F27 USB mechanical datum; opening toward y=0",
+      "owner": "root",
+      "extent": [
+        [
+          34.88,
+          -0.325
+        ],
+        [
+          45.12,
+          8.23
+        ]
+      ],
+      "pins": {
+        "B4_A9": {
+          "xy": [
+            42.4,
+            7.355
+          ],
+          "net": "USB_VBUS"
+        },
+        "A4_B9": {
+          "xy": [
+            37.6,
+            7.355
+          ],
+          "net": "USB_VBUS"
+        },
+        "SH4": {
+          "xy": [
+            44.32,
+            2.6
+          ],
+          "net": "GND"
+        },
+        "SH3": {
+          "xy": [
+            35.68,
+            2.6
+          ],
+          "net": "GND"
+        },
+        "SH2": {
+          "xy": [
+            44.32,
+            6.78
+          ],
+          "net": "GND"
+        },
+        "SH1": {
+          "xy": [
+            35.68,
+            6.78
+          ],
+          "net": "GND"
+        },
+        "B8": {
+          "xy": [
+            38.25,
+            7.355
+          ],
+          "net": null
+        },
+        "A8": {
+          "xy": [
+            41.25,
+            7.355
+          ],
+          "net": null
+        },
+        "B1_A12": {
+          "xy": [
+            43.2,
+            7.355
+          ],
+          "net": "GND"
+        },
+        "A1_B12": {
+          "xy": [
+            36.8,
+            7.355
+          ],
+          "net": "GND"
+        },
+        "B6": {
+          "xy": [
+            40.75,
+            7.355
+          ],
+          "net": "USB_DP"
+        },
+        "A6": {
+          "xy": [
+            39.75,
+            7.355
+          ],
+          "net": "USB_DP"
+        },
+        "B7": {
+          "xy": [
+            39.25,
+            7.355
+          ],
+          "net": "USB_DM"
+        },
+        "A7": {
+          "xy": [
+            40.25,
+            7.355
+          ],
+          "net": "USB_DM"
+        },
+        "B5": {
+          "xy": [
+            41.75,
+            7.355
+          ],
+          "net": "USB_CC2"
+        },
+        "A5": {
+          "xy": [
+            38.75,
+            7.355
+          ],
+          "net": "USB_CC1"
+        }
+      }
+    },
+    {
+      "ref": "J3",
+      "x": 74,
+      "y": 12,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "CAN at right edge, keep mating/test access",
+      "owner": "root",
+      "extent": [
+        [
+          72.63,
+          8.09
+        ],
+        [
+          75.37,
+          15.91
+        ]
+      ],
+      "pins": {
+        "3": {
+          "xy": [
+            74.0,
+            9.46
+          ],
+          "net": "GND"
+        },
+        "2": {
+          "xy": [
+            74.0,
+            12.0
+          ],
+          "net": "CAN_L"
+        },
+        "1": {
+          "xy": [
+            74.0,
+            14.54
+          ],
+          "net": "CAN_H"
+        }
+      }
+    },
+    {
+      "ref": "J4",
+      "x": 74,
+      "y": 25,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "UART at right edge, 3.3 V only",
+      "owner": "root",
+      "extent": [
+        [
+          72.63,
+          19.82
+        ],
+        [
+          75.37,
+          30.18
+        ]
+      ],
+      "pins": {
+        "4": {
+          "xy": [
+            74.0,
+            21.19
+          ],
+          "net": "GND"
+        },
+        "3": {
+          "xy": [
+            74.0,
+            23.73
+          ],
+          "net": "UART_RX"
+        },
+        "2": {
+          "xy": [
+            74.0,
+            26.27
+          ],
+          "net": "UART_TX"
+        },
+        "1": {
+          "xy": [
+            74.0,
+            28.81
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "J5",
+      "x": 74,
+      "y": 39,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "I2C at right edge, separate 100 kHz contract",
+      "owner": "root",
+      "extent": [
+        [
+          72.63,
+          33.82
+        ],
+        [
+          75.37,
+          44.18
+        ]
+      ],
+      "pins": {
+        "4": {
+          "xy": [
+            74.0,
+            35.19
+          ],
+          "net": "GND"
+        },
+        "3": {
+          "xy": [
+            74.0,
+            37.73
+          ],
+          "net": "I2C_SDA"
+        },
+        "2": {
+          "xy": [
+            74.0,
+            40.27
+          ],
+          "net": "I2C_SCL"
+        },
+        "1": {
+          "xy": [
+            74.0,
+            42.81
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "J6",
+      "x": 7,
+      "y": 26,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "SPI left edge; fixed actual pin1 origin then 12.7 mm row north",
+      "owner": "root",
+      "extent": [
+        [
+          5.68,
+          24.68
+        ],
+        [
+          8.32,
+          39.8
+        ]
+      ],
+      "pins": {
+        "6": {
+          "xy": [
+            7.0,
+            38.7
+          ],
+          "net": "GND"
+        },
+        "5": {
+          "xy": [
+            7.0,
+            36.16
+          ],
+          "net": "SPI_NSS"
+        },
+        "4": {
+          "xy": [
+            7.0,
+            33.62
+          ],
+          "net": "SPI_MISO"
+        },
+        "3": {
+          "xy": [
+            7.0,
+            31.08
+          ],
+          "net": "SPI_MOSI"
+        },
+        "2": {
+          "xy": [
+            7.0,
+            28.54
+          ],
+          "net": "SPI_SCK"
+        },
+        "1": {
+          "xy": [
+            7.0,
+            26.0
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "J9",
+      "x": 51,
+      "y": 20,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "SWD local 1x6 row accessible south-east of MCU",
+      "owner": "root",
+      "extent": [
+        [
+          49.68,
+          18.68
+        ],
+        [
+          64.8,
+          21.32
+        ]
+      ],
+      "pins": {
+        "6": {
+          "xy": [
+            63.7,
+            20.0
+          ],
+          "net": "SWO"
+        },
+        "5": {
+          "xy": [
+            61.16,
+            20.0
+          ],
+          "net": "NRST"
+        },
+        "4": {
+          "xy": [
+            58.62,
+            20.0
+          ],
+          "net": "SWCLK"
+        },
+        "3": {
+          "xy": [
+            56.08,
+            20.0
+          ],
+          "net": "SWDIO"
+        },
+        "2": {
+          "xy": [
+            53.54,
+            20.0
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            51.0,
+            20.0
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "J11",
+      "x": 18,
+      "y": 55,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "GPIO top edge; rotated real centered vertical header, clear low-height zone",
+      "owner": "root",
+      "extent": [
+        [
+          7.74,
+          53.63
+        ],
+        [
+          28.29,
+          56.37
+        ]
+      ],
+      "pins": {
+        "8": {
+          "xy": [
+            26.89,
+            55.0
+          ],
+          "net": "GPIO_PA3"
+        },
+        "7": {
+          "xy": [
+            24.35,
+            55.0
+          ],
+          "net": "GPIO_PA2"
+        },
+        "6": {
+          "xy": [
+            21.81,
+            55.0
+          ],
+          "net": "GPIO_PA1"
+        },
+        "5": {
+          "xy": [
+            19.27,
+            55.0
+          ],
+          "net": "GPIO_PC15"
+        },
+        "4": {
+          "xy": [
+            16.73,
+            55.0
+          ],
+          "net": "GPIO_PC14"
+        },
+        "3": {
+          "xy": [
+            14.19,
+            55.0
+          ],
+          "net": "GPIO_PC13"
+        },
+        "2": {
+          "xy": [
+            11.65,
+            55.0
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            9.11,
+            55.0
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "J12",
+      "x": 40,
+      "y": 55,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "GPIO top edge; rotated real centered vertical header, clear low-height zone",
+      "owner": "root",
+      "extent": [
+        [
+          29.74,
+          53.63
+        ],
+        [
+          50.29,
+          56.37
+        ]
+      ],
+      "pins": {
+        "8": {
+          "xy": [
+            48.89,
+            55.0
+          ],
+          "net": "GPIO_PB14"
+        },
+        "7": {
+          "xy": [
+            46.35,
+            55.0
+          ],
+          "net": "GPIO_PB13"
+        },
+        "6": {
+          "xy": [
+            43.81,
+            55.0
+          ],
+          "net": "GPIO_PB12"
+        },
+        "5": {
+          "xy": [
+            41.27,
+            55.0
+          ],
+          "net": "GPIO_PB11"
+        },
+        "4": {
+          "xy": [
+            38.73,
+            55.0
+          ],
+          "net": "GPIO_PB10"
+        },
+        "3": {
+          "xy": [
+            36.19,
+            55.0
+          ],
+          "net": "GPIO_PB1"
+        },
+        "2": {
+          "xy": [
+            33.65,
+            55.0
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            31.11,
+            55.0
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "J13",
+      "x": 62,
+      "y": 55,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "GPIO top edge; rotated real centered vertical header, clear low-height zone",
+      "owner": "root",
+      "extent": [
+        [
+          51.74,
+          53.63
+        ],
+        [
+          72.29,
+          56.37
+        ]
+      ],
+      "pins": {
+        "8": {
+          "xy": [
+            70.89,
+            55.0
+          ],
+          "net": "GPIO_PB9"
+        },
+        "7": {
+          "xy": [
+            68.35,
+            55.0
+          ],
+          "net": "GPIO_PB8"
+        },
+        "6": {
+          "xy": [
+            65.81,
+            55.0
+          ],
+          "net": "GPIO_PB5"
+        },
+        "5": {
+          "xy": [
+            63.27,
+            55.0
+          ],
+          "net": "GPIO_PB4"
+        },
+        "4": {
+          "xy": [
+            60.73,
+            55.0
+          ],
+          "net": "GPIO_PA15"
+        },
+        "3": {
+          "xy": [
+            58.19,
+            55.0
+          ],
+          "net": "GPIO_PB15"
+        },
+        "2": {
+          "xy": [
+            55.65,
+            55.0
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            53.11,
+            55.0
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "R23",
+      "x": 33.7016,
+      "y": 33.0,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "NSS upper fanout lane, no overlap with ADC resistor",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          31.314,
+          32.3396
+        ],
+        [
+          34.3112,
+          33.6604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            32.0252,
+            33.0
+          ],
+          "net": "SPI_NSS"
+        },
+        "1": {
+          "xy": [
+            33.6,
+            33.0
+          ],
+          "net": "PA4_SPI_NSS"
+        }
+      }
+    },
+    {
+      "ref": "R21",
+      "x": 33.7016,
+      "y": 31.0,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "SPI SCK source-side fanout lane, preserve pin order",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          31.314,
+          30.3396
+        ],
+        [
+          34.3112,
+          31.6604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            32.0252,
+            31.0
+          ],
+          "net": "SPI_SCK"
+        },
+        "1": {
+          "xy": [
+            33.6,
+            31.0
+          ],
+          "net": "PA5_SPI_SCK"
+        }
+      }
+    },
+    {
+      "ref": "R24",
+      "x": 33.7016,
+      "y": 29.0,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "MISO middle lane clear LDO and BOOT1 pull-down",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          31.314,
+          28.3396
+        ],
+        [
+          34.3112,
+          29.6604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            32.0252,
+            29.0
+          ],
+          "net": "SPI_MISO"
+        },
+        "1": {
+          "xy": [
+            33.6,
+            29.0
+          ],
+          "net": "PA6_SPI_MISO"
+        }
+      }
+    },
+    {
+      "ref": "R22",
+      "x": 33.7016,
+      "y": 27.0,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "MOSI lower lane clear C13 decoupling loop",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          31.314,
+          26.3396
+        ],
+        [
+          34.3112,
+          27.6604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            32.0252,
+            27.0
+          ],
+          "net": "SPI_MOSI"
+        },
+        "1": {
+          "xy": [
+            33.6,
+            27.0
+          ],
+          "net": "PA7_SPI_MOSI"
+        }
+      }
+    },
+    {
+      "ref": "R25",
+      "x": 33.6764,
+      "y": 21.0,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "SPI NSS pullup on quiet DC branch clear ADC resistor, LDO feedback, UART and escape channel",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          31.2888,
+          20.3396
+        ],
+        [
+          34.286,
+          21.6604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            32.0,
+            21.0
+          ],
+          "net": "PA4_SPI_NSS"
+        },
+        "1": {
+          "xy": [
+            33.5748,
+            21.0
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "R19",
+      "x": 56.8236,
+      "y": 35.0,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "I2C SCL pullup clear BOOT service header and tool access",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          56.214,
+          34.3396
+        ],
+        [
+          59.2112,
+          35.6604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            58.5,
+            35.0
+          ],
+          "net": "I2C_SCL"
+        },
+        "1": {
+          "xy": [
+            56.9252,
+            35.0
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "R20",
+      "x": 56.8236,
+      "y": 37.0,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "I2C SDA pullup aligned to SCL group; keep baseline 2.2k",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          56.214,
+          36.3396
+        ],
+        [
+          59.2112,
+          37.6604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            58.5,
+            37.0
+          ],
+          "net": "I2C_SDA"
+        },
+        "1": {
+          "xy": [
+            56.9252,
+            37.0
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "U1",
+      "x": 40,
+      "y": 27,
+      "rotation": 270,
+      "side": "TOP",
+      "purpose": "MCU USB32/33 toward bottom edge; clock/ADC toward upper quiet area",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          34.9,
+          21.9
+        ],
+        [
+          45.1,
+          32.1
+        ]
+      ],
+      "pins": {
+        "47": {
+          "xy": [
+            44.25,
+            29.25
+          ],
+          "net": "GND"
+        },
+        "35": {
+          "xy": [
+            42.25,
+            22.75
+          ],
+          "net": "GND"
+        },
+        "23": {
+          "xy": [
+            35.75,
+            24.75
+          ],
+          "net": "GND"
+        },
+        "8": {
+          "xy": [
+            39.25,
+            31.25
+          ],
+          "net": "GND"
+        },
+        "48": {
+          "xy": [
+            44.25,
+            29.75
+          ],
+          "net": "V3V3"
+        },
+        "36": {
+          "xy": [
+            42.75,
+            22.75
+          ],
+          "net": "V3V3"
+        },
+        "24": {
+          "xy": [
+            35.75,
+            24.25
+          ],
+          "net": "V3V3"
+        },
+        "9": {
+          "xy": [
+            38.75,
+            31.25
+          ],
+          "net": "VDDA"
+        },
+        "1": {
+          "xy": [
+            42.75,
+            31.25
+          ],
+          "net": "V3V3"
+        },
+        "6": {
+          "xy": [
+            40.25,
+            31.25
+          ],
+          "net": "OSC_OUT"
+        },
+        "5": {
+          "xy": [
+            40.75,
+            31.25
+          ],
+          "net": "OSC_IN"
+        },
+        "4": {
+          "xy": [
+            41.25,
+            31.25
+          ],
+          "net": "GPIO_PC15"
+        },
+        "3": {
+          "xy": [
+            41.75,
+            31.25
+          ],
+          "net": "GPIO_PC14"
+        },
+        "2": {
+          "xy": [
+            42.25,
+            31.25
+          ],
+          "net": "GPIO_PC13"
+        },
+        "46": {
+          "xy": [
+            44.25,
+            28.75
+          ],
+          "net": "GPIO_PB9"
+        },
+        "45": {
+          "xy": [
+            44.25,
+            28.25
+          ],
+          "net": "GPIO_PB8"
+        },
+        "43": {
+          "xy": [
+            44.25,
+            27.25
+          ],
+          "net": "I2C_SDA"
+        },
+        "42": {
+          "xy": [
+            44.25,
+            26.75
+          ],
+          "net": "I2C_SCL"
+        },
+        "41": {
+          "xy": [
+            44.25,
+            26.25
+          ],
+          "net": "GPIO_PB5"
+        },
+        "40": {
+          "xy": [
+            44.25,
+            25.75
+          ],
+          "net": "GPIO_PB4"
+        },
+        "39": {
+          "xy": [
+            44.25,
+            25.25
+          ],
+          "net": "SWO"
+        },
+        "20": {
+          "xy": [
+            35.75,
+            26.25
+          ],
+          "net": "BOOT1"
+        },
+        "28": {
+          "xy": [
+            38.75,
+            22.75
+          ],
+          "net": "GPIO_PB15"
+        },
+        "27": {
+          "xy": [
+            38.25,
+            22.75
+          ],
+          "net": "GPIO_PB14"
+        },
+        "26": {
+          "xy": [
+            37.75,
+            22.75
+          ],
+          "net": "GPIO_PB13"
+        },
+        "25": {
+          "xy": [
+            37.25,
+            22.75
+          ],
+          "net": "GPIO_PB12"
+        },
+        "22": {
+          "xy": [
+            35.75,
+            25.25
+          ],
+          "net": "GPIO_PB11"
+        },
+        "21": {
+          "xy": [
+            35.75,
+            25.75
+          ],
+          "net": "GPIO_PB10"
+        },
+        "19": {
+          "xy": [
+            35.75,
+            26.75
+          ],
+          "net": "GPIO_PB1"
+        },
+        "18": {
+          "xy": [
+            35.75,
+            27.25
+          ],
+          "net": "VBUS_PRESENT_N"
+        },
+        "30": {
+          "xy": [
+            39.75,
+            22.75
+          ],
+          "net": "PA9_UART_TX"
+        },
+        "29": {
+          "xy": [
+            39.25,
+            22.75
+          ],
+          "net": "USB_ATTACH_N"
+        },
+        "17": {
+          "xy": [
+            35.75,
+            27.75
+          ],
+          "net": "PA7_SPI_MOSI"
+        },
+        "16": {
+          "xy": [
+            35.75,
+            28.25
+          ],
+          "net": "PA6_SPI_MISO"
+        },
+        "15": {
+          "xy": [
+            35.75,
+            28.75
+          ],
+          "net": "PA5_SPI_SCK"
+        },
+        "14": {
+          "xy": [
+            35.75,
+            29.25
+          ],
+          "net": "PA4_SPI_NSS"
+        },
+        "13": {
+          "xy": [
+            35.75,
+            29.75
+          ],
+          "net": "GPIO_PA3"
+        },
+        "12": {
+          "xy": [
+            37.25,
+            31.25
+          ],
+          "net": "GPIO_PA2"
+        },
+        "38": {
+          "xy": [
+            44.25,
+            24.75
+          ],
+          "net": "GPIO_PA15"
+        },
+        "37": {
+          "xy": [
+            44.25,
+            24.25
+          ],
+          "net": "SWCLK"
+        },
+        "34": {
+          "xy": [
+            41.75,
+            22.75
+          ],
+          "net": "SWDIO"
+        },
+        "33": {
+          "xy": [
+            41.25,
+            22.75
+          ],
+          "net": "PA12_SHARED"
+        },
+        "32": {
+          "xy": [
+            40.75,
+            22.75
+          ],
+          "net": "PA11_SHARED"
+        },
+        "31": {
+          "xy": [
+            40.25,
+            22.75
+          ],
+          "net": "PA10_UART_RX"
+        },
+        "11": {
+          "xy": [
+            37.75,
+            31.25
+          ],
+          "net": "GPIO_PA1"
+        },
+        "10": {
+          "xy": [
+            38.25,
+            31.25
+          ],
+          "net": "ADC0"
+        },
+        "7": {
+          "xy": [
+            39.75,
+            31.25
+          ],
+          "net": "NRST"
+        },
+        "44": {
+          "xy": [
+            44.25,
+            27.75
+          ],
+          "net": "BOOT0"
+        }
+      }
+    },
+    {
+      "ref": "C13",
+      "x": 33.4,
+      "y": 23.5984,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "100nF for U1.24/23; outside left side",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          32.7396,
+          22.9888
+        ],
+        [
+          34.0604,
+          25.986
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            33.4,
+            25.2748
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            33.4,
+            23.7
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "C14",
+      "x": 44.0016,
+      "y": 20.3,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "100nF for U1.36/35; shifted right to preserve USB x40.75..41.25 corridor",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          41.614,
+          19.6396
+        ],
+        [
+          44.6112,
+          20.9604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            42.3252,
+            20.3
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            43.9,
+            20.3
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "C15",
+      "x": 46.5,
+      "y": 30.4016,
+      "rotation": 270,
+      "side": "TOP",
+      "purpose": "100nF for U1.48/47; outside right side",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          45.8396,
+          28.014
+        ],
+        [
+          47.1604,
+          31.0112
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            46.5,
+            28.7252
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            46.5,
+            30.3
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "C16",
+      "x": 49.5,
+      "y": 30.3,
+      "rotation": 270,
+      "side": "TOP",
+      "purpose": "10uF VDD3 bulk; effective capacitance >=4.7uF remains procurement gate",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          48.611,
+          27.506
+        ],
+        [
+          50.389,
+          31.062
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            49.5,
+            28.268
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            49.5,
+            30.3
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "C17",
+      "x": 46.1,
+      "y": 32.4,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "VBAT1 100nF; connected V3V3, no backup battery",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          45.4904,
+          31.7396
+        ],
+        [
+          48.4876,
+          33.0604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            47.7764,
+            32.4
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            46.2016,
+            32.4
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "C18",
+      "x": 37,
+      "y": 33.0984,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "Lift VDDA local capacitor 0.2mm to preserve ADC north-side signal fanout allowance including actual copper and spacing",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          36.3396,
+          32.4888
+        ],
+        [
+          37.6604,
+          35.486
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            37.0,
+            34.7748
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            37.0,
+            33.2
+          ],
+          "net": "VDDA"
+        }
+      }
+    },
+    {
+      "ref": "C19",
+      "x": 34.8,
+      "y": 36.8984,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "VDDA9 additional 100nF, native schematic value retained",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          34.1396,
+          36.2888
+        ],
+        [
+          35.4604,
+          39.286
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            34.8,
+            38.5748
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            34.8,
+            37.0
+          ],
+          "net": "VDDA"
+        }
+      }
+    },
+    {
+      "ref": "C20",
+      "x": 32.2,
+      "y": 37.0,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "VDDA9 2.2uF local reservoir; effective >=1uF gate",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          31.311,
+          36.238
+        ],
+        [
+          33.089,
+          39.794
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            32.2,
+            39.032
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            32.2,
+            37.0
+          ],
+          "net": "VDDA"
+        }
+      }
+    },
+    {
+      "ref": "C21",
+      "x": 38.6,
+      "y": 32.8984,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "NRST7 100nF close to MCU; service header remains farther away",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          37.9396,
+          32.2888
+        ],
+        [
+          39.2604,
+          35.286
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            38.6,
+            34.5748
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            38.6,
+            33.0
+          ],
+          "net": "NRST"
+        }
+      }
+    },
+    {
+      "ref": "C22",
+      "x": 46.2,
+      "y": 33.8984,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "OSC_IN load16pF; adjacent to Y1.1, actual routed parasitics pending",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          45.5396,
+          33.2888
+        ],
+        [
+          46.8604,
+          36.286
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            46.2,
+            35.5748
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            46.2,
+            34.0
+          ],
+          "net": "OSC_IN"
+        }
+      }
+    },
+    {
+      "ref": "C23",
+      "x": 39.9016,
+      "y": 37.7,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "XTAL_OUT load16pF; adjacent to Y1.3, compactness to optimize",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          37.514,
+          37.0396
+        ],
+        [
+          40.5112,
+          38.3604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            38.2252,
+            37.7
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            39.8,
+            37.7
+          ],
+          "net": "XTAL_OUT"
+        }
+      }
+    },
+    {
+      "ref": "C24",
+      "x": 35.0,
+      "y": 32.8984,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "ADC0 PA0.10 100nF, on MCU side of R32",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          34.3396,
+          32.2888
+        ],
+        [
+          35.6604,
+          35.286
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            35.0,
+            34.5748
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            35.0,
+            33.0
+          ],
+          "net": "ADC0"
+        }
+      }
+    },
+    {
+      "ref": "R26",
+      "x": 29.5,
+      "y": 36.8984,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "0R V3V3->VDDA measurement link; not qualified ferrite",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          28.8396,
+          36.2888
+        ],
+        [
+          30.1604,
+          39.286
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            29.5,
+            38.5748
+          ],
+          "net": "VDDA"
+        },
+        "1": {
+          "xy": [
+            29.5,
+            37.0
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "R27",
+      "x": 38.0,
+      "y": 41.3,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "10k NRST pullup; C21 remains at pin7",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          37.3904,
+          40.6396
+        ],
+        [
+          40.3876,
+          41.9604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            39.6764,
+            41.3
+          ],
+          "net": "NRST"
+        },
+        "1": {
+          "xy": [
+            38.1016,
+            41.3
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "R28",
+      "x": 48.6,
+      "y": 26.1,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "BOOT0 10k pulldown; avoid USB direct route",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          46.2124,
+          25.4396
+        ],
+        [
+          49.2096,
+          26.7604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            46.9236,
+            26.1
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            48.4984,
+            26.1
+          ],
+          "net": "BOOT0"
+        }
+      }
+    },
+    {
+      "ref": "R29",
+      "x": 31.5016,
+      "y": 23.0,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "BOOT1 pull-down below left fanout, do not occupy source resistor channel",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          29.114,
+          22.3396
+        ],
+        [
+          32.1112,
+          23.6604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            29.8252,
+            23.0
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            31.4,
+            23.0
+          ],
+          "net": "BOOT1"
+        }
+      }
+    },
+    {
+      "ref": "R30",
+      "x": 56.7,
+      "y": 31.0,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "1k service feed to J8; header coordinate optional for root integration",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          56.0396,
+          30.3904
+        ],
+        [
+          57.3604,
+          33.3876
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            56.7,
+            32.6764
+          ],
+          "net": "BOOT_SERVICE"
+        },
+        "1": {
+          "xy": [
+            56.7,
+            31.1016
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "R31",
+      "x": 40.2,
+      "y": 33.0984,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "0R OSC_OUT tuning position; pin1 faces MCU.6",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          39.5396,
+          32.4888
+        ],
+        [
+          40.8604,
+          35.486
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            40.2,
+            34.7748
+          ],
+          "net": "XTAL_OUT"
+        },
+        "1": {
+          "xy": [
+            40.2,
+            33.2
+          ],
+          "net": "OSC_OUT"
+        }
+      }
+    },
+    {
+      "ref": "R32",
+      "x": 31,
+      "y": 35,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "ADC input resistor upstream of local C24, clear SPI NSS lane",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          30.3904,
+          34.3396
+        ],
+        [
+          33.3876,
+          35.6604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            32.6764,
+            35.0
+          ],
+          "net": "ADC0"
+        },
+        "1": {
+          "xy": [
+            31.1016,
+            35.0
+          ],
+          "net": "ADC_IN"
+        }
+      }
+    },
+    {
+      "ref": "Y1",
+      "x": 43.2,
+      "y": 35.7,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "ABM3B8MHz; pin1 lower-right and pin3 upper-left; B3 balanced arm candidate with lower clock-pad clearance channel; explicit no full AN2867 ground implementation claim",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          41.15,
+          32.5
+        ],
+        [
+          45.25,
+          38.9
+        ]
+      ],
+      "pins": {
+        "3": {
+          "xy": [
+            42.0,
+            37.7
+          ],
+          "net": "XTAL_OUT"
+        },
+        "1": {
+          "xy": [
+            44.4,
+            33.7
+          ],
+          "net": "OSC_IN"
+        },
+        "4": {
+          "xy": [
+            42.0,
+            33.7
+          ],
+          "net": "GND"
+        },
+        "2": {
+          "xy": [
+            44.4,
+            37.7
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "J7",
+      "x": 33.0,
+      "y": 43.0,
+      "rotation": 270,
+      "side": "TOP",
+      "purpose": "RESET service shunt; body avoids x<=30 low-height zone, accessible top",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          30.36,
+          41.63
+        ],
+        [
+          35.64,
+          44.37
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            31.73,
+            43.0
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            34.27,
+            43.0
+          ],
+          "net": "NRST"
+        }
+      }
+    },
+    {
+      "ref": "J8",
+      "x": 54.0,
+      "y": 32.0,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "BOOT0 service jumper; optional coordinate subject global headers",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          52.63,
+          29.36
+        ],
+        [
+          55.37,
+          34.64
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            54.0,
+            30.73
+          ],
+          "net": "BOOT0"
+        },
+        "1": {
+          "xy": [
+            54.0,
+            33.27
+          ],
+          "net": "BOOT_SERVICE"
+        }
+      }
+    },
+    {
+      "ref": "J10",
+      "x": 25.0,
+      "y": 34.0,
+      "rotation": 270,
+      "side": "TOP",
+      "purpose": "ADC input1 points toward R32, input2 GND beside source; outside low-height zone",
+      "owner": "engineering_mcu/placement_mcu.json",
+      "extent": [
+        [
+          22.36,
+          32.63
+        ],
+        [
+          27.64,
+          35.37
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            23.73,
+            34.0
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            26.27,
+            34.0
+          ],
+          "net": "ADC_IN"
+        }
+      }
+    },
+    {
+      "ref": "J1",
+      "x": 6,
+      "y": 13,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "Bench DC entry; exact connector/cable/tool envelope pending",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          4.63,
+          10.36
+        ],
+        [
+          7.37,
+          15.64
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            6.0,
+            11.73
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            6.0,
+            14.27
+          ],
+          "net": "VIN_RAW"
+        }
+      }
+    },
+    {
+      "ref": "F1",
+      "x": 9.2,
+      "y": 13,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "Before reverse diode, visible service fuse",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          8.5904,
+          12.3396
+        ],
+        [
+          11.5876,
+          13.6604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            10.8764,
+            13.0
+          ],
+          "net": "VIN_FUSED"
+        },
+        "1": {
+          "xy": [
+            9.3016,
+            13.0
+          ],
+          "net": "VIN_RAW"
+        }
+      }
+    },
+    {
+      "ref": "D1",
+      "x": 15,
+      "y": 13,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "SS14 anode left, cathode right to VIN_PROT",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          12.2534,
+          11.476
+        ],
+        [
+          17.7906,
+          14.524
+        ]
+      ],
+      "pins": {
+        "1": {
+          "xy": [
+            16.95,
+            13.0
+          ],
+          "net": "VIN_PROT"
+        },
+        "2": {
+          "xy": [
+            13.1,
+            13.0
+          ],
+          "net": "VIN_FUSED"
+        }
+      }
+    },
+    {
+      "ref": "C1",
+      "x": 11.2,
+      "y": 18.3,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "Bulk input after D1; positive pin1; 11mm teaching envelope",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          7.7,
+          14.8
+        ],
+        [
+          14.7,
+          21.8
+        ]
+      ],
+      "pins": {
+        "1": {
+          "xy": [
+            9.95,
+            18.3
+          ],
+          "net": "VIN_PROT"
+        },
+        "2": {
+          "xy": [
+            12.45,
+            18.3
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "C2",
+      "x": 25.2,
+      "y": 15.4,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "22uF VIN local reservoir; retain low impedance ground corridor",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          21.136,
+          14.384
+        ],
+        [
+          26.216,
+          16.416
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            22.152,
+            15.4
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            25.2,
+            15.4
+          ],
+          "net": "VIN_PROT"
+        }
+      }
+    },
+    {
+      "ref": "C3",
+      "x": 26.2,
+      "y": 18.6,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "Closest HF VIN bypass; pin1 toward U2 VIN, pin2 GND via/corridor",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          23.8124,
+          17.9396
+        ],
+        [
+          26.8096,
+          19.2604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            24.5236,
+            18.6
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            26.0984,
+            18.6
+          ],
+          "net": "VIN_PROT"
+        }
+      }
+    },
+    {
+      "ref": "U2",
+      "x": 25.5,
+      "y": 21,
+      "rotation": 270,
+      "side": "TOP",
+      "purpose": "SW left / FB right; high di/dt CIN loop planned separately from output loop",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          23.9582,
+          19.4989
+        ],
+        [
+          27.0507,
+          22.4999
+        ]
+      ],
+      "pins": {
+        "3": {
+          "xy": [
+            24.2,
+            20.05
+          ],
+          "net": "VIN_PROT"
+        },
+        "2": {
+          "xy": [
+            24.2,
+            21.0
+          ],
+          "net": "BUCK_SW"
+        },
+        "1": {
+          "xy": [
+            24.2,
+            21.95
+          ],
+          "net": "GND"
+        },
+        "4": {
+          "xy": [
+            26.8,
+            20.05
+          ],
+          "net": "BUCK_FB"
+        },
+        "5": {
+          "xy": [
+            26.8,
+            21.0
+          ],
+          "net": null
+        },
+        "6": {
+          "xy": [
+            26.8,
+            21.95
+          ],
+          "net": "BUCK_BOOT"
+        }
+      }
+    },
+    {
+      "ref": "C4",
+      "x": 26.7,
+      "y": 23.7,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "BOOT pin1 to U2.6; pin2 to SW not ground",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          24.3124,
+          23.0396
+        ],
+        [
+          27.3096,
+          24.3604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            25.0236,
+            23.7
+          ],
+          "net": "BUCK_SW"
+        },
+        "1": {
+          "xy": [
+            26.5984,
+            23.7
+          ],
+          "net": "BUCK_BOOT"
+        }
+      }
+    },
+    {
+      "ref": "L1",
+      "x": 20,
+      "y": 24,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "Short lead local pin1 right faces U2 SW; real height max6.1mm",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          16.45,
+          20.35
+        ],
+        [
+          23.55,
+          27.65
+        ]
+      ],
+      "pins": {
+        "1": {
+          "xy": [
+            22.02,
+            24.0
+          ],
+          "net": "BUCK_SW"
+        },
+        "2": {
+          "xy": [
+            17.98,
+            24.0
+          ],
+          "net": "V5"
+        }
+      }
+    },
+    {
+      "ref": "C5",
+      "x": 14.4,
+      "y": 23.1,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "Output cap V5 pin1 lower, GND pin2 upper; sample clean V5 here",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          13.384,
+          22.084
+        ],
+        [
+          15.416,
+          27.164
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            14.4,
+            26.148
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            14.4,
+            23.1
+          ],
+          "net": "V5"
+        }
+      }
+    },
+    {
+      "ref": "C6",
+      "x": 11.7,
+      "y": 23.1,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "Parallel output cap next to C5",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          10.684,
+          22.084
+        ],
+        [
+          12.716,
+          27.164
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            11.7,
+            26.148
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            11.7,
+            23.1
+          ],
+          "net": "V5"
+        }
+      }
+    },
+    {
+      "ref": "R1",
+      "x": 31,
+      "y": 19.1,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "Feedback upper resistor; own quiet sense from C5 positive",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          28.6124,
+          18.4396
+        ],
+        [
+          31.6096,
+          19.7604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            29.3236,
+            19.1
+          ],
+          "net": "BUCK_FB"
+        },
+        "1": {
+          "xy": [
+            30.8984,
+            19.1
+          ],
+          "net": "V5"
+        }
+      }
+    },
+    {
+      "ref": "R2",
+      "x": 29.9,
+      "y": 21.3,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "Feedback lower resistor; Kelvin GND to U2.1 outside power return",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          27.5124,
+          20.6396
+        ],
+        [
+          30.5096,
+          21.9604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            28.2236,
+            21.3
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            29.7984,
+            21.3
+          ],
+          "net": "BUCK_FB"
+        }
+      }
+    },
+    {
+      "ref": "C7",
+      "x": 31,
+      "y": 17.3,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "Feedforward across R1; small FB node away from SW",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          28.6124,
+          16.6396
+        ],
+        [
+          31.6096,
+          17.9604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            29.3236,
+            17.3
+          ],
+          "net": "BUCK_FB"
+        },
+        "1": {
+          "xy": [
+            30.8984,
+            17.3
+          ],
+          "net": "V5"
+        }
+      }
+    },
+    {
+      "ref": "U3",
+      "x": 27,
+      "y": 29,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "Shift LDO left/up to free MCU-SPI escape; retain local input/output capacitors",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          25.6,
+          27.3
+        ],
+        [
+          28.45,
+          30.7
+        ]
+      ],
+      "pins": {
+        "5": {
+          "xy": [
+            28.3,
+            29.95
+          ],
+          "net": "V3V3"
+        },
+        "4": {
+          "xy": [
+            28.3,
+            28.05
+          ],
+          "net": null
+        },
+        "1": {
+          "xy": [
+            25.7,
+            29.95
+          ],
+          "net": "V5"
+        },
+        "2": {
+          "xy": [
+            25.7,
+            29.0
+          ],
+          "net": "GND"
+        },
+        "3": {
+          "xy": [
+            25.7,
+            28.05
+          ],
+          "net": "V5"
+        }
+      }
+    },
+    {
+      "ref": "C8",
+      "x": 24.2,
+      "y": 31,
+      "rotation": 270,
+      "side": "TOP",
+      "purpose": "Shift left 0.2mm after native four-layer SMD-to-SMD .1773/.2mm DRC at LDO input group",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          23.311,
+          28.206
+        ],
+        [
+          25.089,
+          31.762
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            24.2,
+            28.968
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            24.2,
+            31.0
+          ],
+          "net": "V5"
+        }
+      }
+    },
+    {
+      "ref": "C9",
+      "x": 29.8,
+      "y": 30.95,
+      "rotation": 270,
+      "side": "TOP",
+      "purpose": "Rotate ground toward U3, then shift right 0.2mm after native .1374/.2mm spacing to NC pin4; NC pad is still copper",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          28.911,
+          28.156
+        ],
+        [
+          30.689,
+          31.712
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            29.8,
+            28.918
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            29.8,
+            30.95
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "U4",
+      "x": 40.25,
+      "y": 10,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "USBLC6 flow-through: connector to6/4, protected side1/3; GND2 at y11.3",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          38.7489,
+          8.4493
+        ],
+        [
+          41.7499,
+          11.5418
+        ]
+      ],
+      "pins": {
+        "5": {
+          "xy": [
+            40.25,
+            8.7
+          ],
+          "net": "USB_VBUS"
+        },
+        "4": {
+          "xy": [
+            39.3,
+            8.7
+          ],
+          "net": "USB_DM"
+        },
+        "3": {
+          "xy": [
+            39.3,
+            11.3
+          ],
+          "net": "USB_DM"
+        },
+        "6": {
+          "xy": [
+            41.2,
+            8.7
+          ],
+          "net": "USB_DP"
+        },
+        "1": {
+          "xy": [
+            41.2,
+            11.3
+          ],
+          "net": "USB_DP"
+        },
+        "2": {
+          "xy": [
+            40.25,
+            11.3
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "C10",
+      "x": 42.7,
+      "y": 9.1,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "USB ESD VBUS bypass, clear USB connector courtyard",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          42.0396,
+          8.4904
+        ],
+        [
+          43.3604,
+          11.4876
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            42.7,
+            10.7764
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            42.7,
+            9.2016
+          ],
+          "net": "USB_VBUS"
+        }
+      }
+    },
+    {
+      "ref": "R3",
+      "x": 35,
+      "y": 10,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "CC1 own5.1k to GND; not combined with CC2",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          34.3396,
+          9.3904
+        ],
+        [
+          35.6604,
+          12.3876
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            35.0,
+            11.6764
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            35.0,
+            10.1016
+          ],
+          "net": "USB_CC1"
+        }
+      }
+    },
+    {
+      "ref": "R4",
+      "x": 45.5,
+      "y": 10,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "CC2 own5.1k to GND; no TypeC all-pins ESD assertion",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          44.8396,
+          9.3904
+        ],
+        [
+          46.1604,
+          12.3876
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            45.5,
+            11.6764
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            45.5,
+            10.1016
+          ],
+          "net": "USB_CC2"
+        }
+      }
+    },
+    {
+      "ref": "R5",
+      "x": 41.4,
+      "y": 18.5,
+      "rotation": 270,
+      "side": "TOP",
+      "purpose": "USB D+ series position pin1 MCU, pin2 USB; history22R unresolved",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          40.7396,
+          16.1124
+        ],
+        [
+          42.0604,
+          19.1096
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            41.4,
+            16.8236
+          ],
+          "net": "USB_DP"
+        },
+        "1": {
+          "xy": [
+            41.4,
+            18.3984
+          ],
+          "net": "PA12_SHARED"
+        }
+      }
+    },
+    {
+      "ref": "R6",
+      "x": 39.4,
+      "y": 18.5,
+      "rotation": 270,
+      "side": "TOP",
+      "purpose": "USB D- series position pin1 MCU, pin2 USB; moved below C14 envelope",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          38.7396,
+          16.1124
+        ],
+        [
+          40.0604,
+          19.1096
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            39.4,
+            16.8236
+          ],
+          "net": "USB_DM"
+        },
+        "1": {
+          "xy": [
+            39.4,
+            18.3984
+          ],
+          "net": "PA11_SHARED"
+        }
+      }
+    },
+    {
+      "ref": "R7",
+      "x": 49,
+      "y": 7,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "USB VBUS sense gate series10k; outside USB pair main corridor",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          48.3904,
+          6.3396
+        ],
+        [
+          51.3876,
+          7.6604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            50.6764,
+            7.0
+          ],
+          "net": "VBUS_GATE"
+        },
+        "1": {
+          "xy": [
+            49.1016,
+            7.0
+          ],
+          "net": "USB_VBUS"
+        }
+      }
+    },
+    {
+      "ref": "R8",
+      "x": 56.2,
+      "y": 9,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "VBUS MOS gate pull-down; keep off protected pair",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          55.5396,
+          8.3904
+        ],
+        [
+          56.8604,
+          11.3876
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            56.2,
+            10.6764
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            56.2,
+            9.1016
+          ],
+          "net": "VBUS_GATE"
+        }
+      }
+    },
+    {
+      "ref": "Q1",
+      "x": 52,
+      "y": 10.8,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "2N7002 VBUS presence sense, source GND; no USB board power",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          50.45,
+          9.05
+        ],
+        [
+          53.55,
+          12.55
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            52.9525,
+            9.5282
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            51.0475,
+            9.5282
+          ],
+          "net": "VBUS_GATE"
+        },
+        "3": {
+          "xy": [
+            52.0,
+            12.0718
+          ],
+          "net": "VBUS_PRESENT_N"
+        }
+      }
+    },
+    {
+      "ref": "R9",
+      "x": 56.2,
+      "y": 13,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "VBUS presence drain pullup to3V3",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          55.5396,
+          12.3904
+        ],
+        [
+          56.8604,
+          15.3876
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            56.2,
+            14.6764
+          ],
+          "net": "VBUS_PRESENT_N"
+        },
+        "1": {
+          "xy": [
+            56.2,
+            13.1016
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "Q2",
+      "x": 48,
+      "y": 13.5,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "D+ attach PMOS source3V3, drain to pullup; default off",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          46.45,
+          11.75
+        ],
+        [
+          49.55,
+          15.25
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            48.9525,
+            12.2282
+          ],
+          "net": "V3V3"
+        },
+        "1": {
+          "xy": [
+            47.0475,
+            12.2282
+          ],
+          "net": "USB_ATTACH_N"
+        },
+        "3": {
+          "xy": [
+            48.0,
+            14.7718
+          ],
+          "net": "USB_PULLUP_SRC"
+        }
+      }
+    },
+    {
+      "ref": "R10",
+      "x": 48.5,
+      "y": 17.2,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "Attach gate-source off resistor local toQ2",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          47.8904,
+          16.5396
+        ],
+        [
+          50.8876,
+          17.8604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            50.1764,
+            17.2
+          ],
+          "net": "USB_ATTACH_N"
+        },
+        "1": {
+          "xy": [
+            48.6016,
+            17.2
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "R11",
+      "x": 46,
+      "y": 16.2,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "1.5k D+ pullup branch; right end source / left end near D+ path",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          43.6124,
+          15.5396
+        ],
+        [
+          46.6096,
+          16.8604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            44.3236,
+            16.2
+          ],
+          "net": "USB_DP"
+        },
+        "1": {
+          "xy": [
+            45.8984,
+            16.2
+          ],
+          "net": "USB_PULLUP_SRC"
+        }
+      }
+    },
+    {
+      "ref": "R12",
+      "x": 43.4,
+      "y": 18.3,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "DNP default USB; CAN_TX select pad branch near R5 shared-side node",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          42.7904,
+          17.6396
+        ],
+        [
+          45.7876,
+          18.9604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            45.0764,
+            18.3
+          ],
+          "net": "CAN_TXD"
+        },
+        "1": {
+          "xy": [
+            43.5016,
+            18.3
+          ],
+          "net": "PA12_SHARED"
+        }
+      }
+    },
+    {
+      "ref": "R13",
+      "x": 37.4,
+      "y": 18.3,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "DNP default USB; CAN_RX select pad branch near R6 shared-side node",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          35.0124,
+          17.6396
+        ],
+        [
+          38.0096,
+          18.9604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            35.7236,
+            18.3
+          ],
+          "net": "CAN_RXD"
+        },
+        "1": {
+          "xy": [
+            37.2984,
+            18.3
+          ],
+          "net": "PA11_SHARED"
+        }
+      }
+    },
+    {
+      "ref": "U5",
+      "x": 64,
+      "y": 16,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "SO8 pin1 origin: digital left, bus pins6/7 right towardJ3",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          63.238,
+          11.555
+        ],
+        [
+          70.35,
+          16.6858
+        ]
+      ],
+      "pins": {
+        "3": {
+          "xy": [
+            64.0,
+            13.46
+          ],
+          "net": "V3V3"
+        },
+        "1": {
+          "xy": [
+            64.0,
+            16.0
+          ],
+          "net": "CAN_TXD"
+        },
+        "4": {
+          "xy": [
+            64.0,
+            12.19
+          ],
+          "net": "CAN_RXD"
+        },
+        "8": {
+          "xy": [
+            69.588,
+            16.0
+          ],
+          "net": null
+        },
+        "5": {
+          "xy": [
+            69.588,
+            12.19
+          ],
+          "net": null
+        },
+        "2": {
+          "xy": [
+            64.0,
+            14.73
+          ],
+          "net": "GND"
+        },
+        "6": {
+          "xy": [
+            69.588,
+            13.46
+          ],
+          "net": "CAN_L"
+        },
+        "7": {
+          "xy": [
+            69.588,
+            14.73
+          ],
+          "net": "CAN_H"
+        }
+      }
+    },
+    {
+      "ref": "C11",
+      "x": 61.8,
+      "y": 13.3584,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "CAN100nF: pin1 aligns U5.3 VCC; pin2 near U5.2GND",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          61.1396,
+          12.7488
+        ],
+        [
+          62.4604,
+          15.746
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            61.8,
+            15.0348
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            61.8,
+            13.46
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "C12",
+      "x": 59.8,
+      "y": 13.3584,
+      "rotation": 90,
+      "side": "TOP",
+      "purpose": "CAN1uF next toHF cap, independent local ground return",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          59.1396,
+          12.7488
+        ],
+        [
+          60.4604,
+          15.746
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            59.8,
+            15.0348
+          ],
+          "net": "GND"
+        },
+        "1": {
+          "xy": [
+            59.8,
+            13.46
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "R14",
+      "x": 60.3,
+      "y": 17.9,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "TXD recessive pullup near U5.1",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          59.6904,
+          17.2396
+        ],
+        [
+          62.6876,
+          18.5604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            61.9764,
+            17.9
+          ],
+          "net": "CAN_TXD"
+        },
+        "1": {
+          "xy": [
+            60.4016,
+            17.9
+          ],
+          "net": "V3V3"
+        }
+      }
+    },
+    {
+      "ref": "R15",
+      "x": 71.5,
+      "y": 14.75,
+      "rotation": 270,
+      "side": "TOP",
+      "purpose": "120R across bus near connector; endpoint-only population",
+      "owner": "engineering_power/placement_power.json",
+      "extent": [
+        [
+          70.484,
+          10.686
+        ],
+        [
+          72.516,
+          15.766
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            71.5,
+            11.702
+          ],
+          "net": "CAN_L"
+        },
+        "1": {
+          "xy": [
+            71.5,
+            14.75
+          ],
+          "net": "CAN_H"
+        }
+      }
+    },
+    {
+      "ref": "R16",
+      "x": 37.6016,
+      "y": 21.0,
+      "rotation": 180,
+      "side": "TOP",
+      "purpose": "UART TX damping at MCU side rather than connector side; output can use other layer",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          35.214,
+          20.3396
+        ],
+        [
+          38.2112,
+          21.6604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            35.9252,
+            21.0
+          ],
+          "net": "UART_TX"
+        },
+        "1": {
+          "xy": [
+            37.5,
+            21.0
+          ],
+          "net": "PA9_UART_TX"
+        }
+      }
+    },
+    {
+      "ref": "R17",
+      "x": 50,
+      "y": 23.5,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "UART RX zero-ohm option clear SWD row",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          49.3904,
+          22.8396
+        ],
+        [
+          52.3876,
+          24.1604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            51.6764,
+            23.5
+          ],
+          "net": "UART_RX"
+        },
+        "1": {
+          "xy": [
+            50.1016,
+            23.5
+          ],
+          "net": "PA10_UART_RX"
+        }
+      }
+    },
+    {
+      "ref": "R18",
+      "x": 68,
+      "y": 25,
+      "rotation": 0,
+      "side": "TOP",
+      "purpose": "UART RX pullup near connector, clear SWD mating/probe area",
+      "owner": "root_global_review_override",
+      "extent": [
+        [
+          67.3904,
+          24.3396
+        ],
+        [
+          70.3876,
+          25.6604
+        ]
+      ],
+      "pins": {
+        "2": {
+          "xy": [
+            69.6764,
+            25.0
+          ],
+          "net": "V3V3"
+        },
+        "1": {
+          "xy": [
+            68.1016,
+            25.0
+          ],
+          "net": "UART_RX"
+        }
+      }
+    }
+  ],
+  "missing": [],
+  "extra": [],
+  "boundingBoxClashes": [],
+  "anyComponentInLowHeightZone": []
+}

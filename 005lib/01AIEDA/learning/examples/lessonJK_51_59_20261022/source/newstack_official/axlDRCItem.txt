@@ -1,0 +1,43 @@
+
+  NAME
+         axlDRCItem - Performs a DRC check on provided dbid(s)
+  FUNCTION
+         axlDRCItem (
+               g_mode
+               o_dbid/lo_dbid
+         ) -> x_cnt/lo_drcDbid/nil
+  SYNOPSIS
+         Performs a DRC check on the indicated item(s). The dbid
+         may be any dbid type (except the design). If the same item
+         appears multiple times in the list then the same DRC error(s)
+         will be returned and the count is the sum of errors created
+         by each dbid.
+ 
+         Has two return options controled via g_mode option
+            nil: return DRC error count
+            t:   return list of DRC errors
+ 
+         This obeys current DRC mode settings which includes the
+         master DRC on/off switch.
+ 
+         Due to Waive and Duplicate DRC suppression processing the list of
+         DRCs returned using g_mode=t may be less then the count returned
+         by g_mode=nil.
+         
+  CAUTIONS
+         - This is not an efficient way of doing a batch DRC.
+         - This is not an efficient method of doing "what if" checks.
+  NEEDS
+         g_mode: t return list of DRCs, nil return count
+         o_dbid: A single 
+  RETURNS
+         x_cnt: Returns number of errors associated with list of items
+         lo_drcDBid: list of DRC dbids
+         nil: no dbids (if g_mode=t) or error in arguments
+  SEE ALSO
+         axlDRCGetCount, axlDBControl, axlDRCWaive, axlDRCUpdate
+  EXAMPLES
+         1) Run a drc check on a net nameed "GND"
+             db = axlDBFindByName('net "GND")
+             cnt = axlDRCItem(nil p)
+

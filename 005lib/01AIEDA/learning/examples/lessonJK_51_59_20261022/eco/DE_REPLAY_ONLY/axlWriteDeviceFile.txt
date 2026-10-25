@@ -1,0 +1,45 @@
+
+  NAME
+     axlWriteDeviceFile - dump 3rd party device file for a component definition
+  SYNOPSIS
+     axlWriteDeviceFile(
+         o_compDefDbid
+         [t_output_dir])
+     ==> t/nil
+     
+  FUNCTION
+     Given a component definition, this function dumps out a third
+     party device file. If no directory or nil given writes to current 
+     directory otherwise writes to given directory.
+ 
+     Name of the file is compDef->deviceType in lower case with a .txt 
+     extension. For example if component definition (compDef) device
+     type is CAP1 then the device file name will be "cap1.txt".
+ 
+     Will also create a devices.map which is normally empty unless
+     the device name has characters that are not legal as a filename.
+ 
+     See netin documentation for device file syntax. Normally if
+     running Cadence Front-end Schematic packages this interface 
+     should not be used.
+  CAUTION
+     Will overwire existing <device> and devices.map in the directory.
+ 
+  NEEDS
+     o_compDefDbid - the component definition of the device file to write out.
+     t_output_dir - the output directory of where to write the files.
+                    optional - current directory is assumed
+ 
+  RETURNS
+     t   - on success
+     nil - on failure, typical failures
+                 - dbid is not a component
+                 - directory does not exist or is not writable
+  SEE ALSO
+     axlWritePackageFile
+  EXAMPLE
+         Write device file of the definition for the 1st component 
+         instance off the design root
+ 
+         axlWriteDeviceFile( car(axlDBGetDesign()->components)->compdef)
+

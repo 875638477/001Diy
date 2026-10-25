@@ -1,0 +1,744 @@
+{
+  "status": "CANDIDATE_V2_MINIMUM_BRANCH_PREFERRED_REFERENCE_AND_MATCHING_EXCEPTIONS_PENDING",
+  "units": "mm",
+  "placementChanges": [
+    {
+      "ref": "U4",
+      "xy": [
+        40.25,
+        11.4
+      ],
+      "rotation": 180,
+      "purpose": "Create1.62mm raw y gap J2 tips→U4 input copper; preserve short ESD entry"
+    },
+    {
+      "ref": "R5",
+      "xy": [
+        41.1,
+        18.5
+      ],
+      "rotation": 270,
+      "purpose": "Symmetric toR6 aroundx40.25 and clearC14"
+    },
+    {
+      "ref": "R12",
+      "xy": [
+        42.8,
+        18.3
+      ],
+      "rotation": 0,
+      "purpose": "Reduce DNP CAN shared stub"
+    },
+    {
+      "ref": "R13",
+      "xy": [
+        38,
+        18.3
+      ],
+      "rotation": 180,
+      "purpose": "Reduce DNP CAN shared stub"
+    },
+    {
+      "ref": "R11",
+      "xy": [
+        42.7,
+        14.5
+      ],
+      "rotation": 270,
+      "purpose": "USB DP pullup branch nearU4 output: pad2=(42.7,12.8236), short1.5mm off-main branch; Q2 slowfeed may longer"
+    }
+  ],
+  "commonOperations": [
+    {
+      "type": "via",
+      "id": "USB_DP_MIRROR_A",
+      "net": "USB_DP",
+      "xy": [
+        39.75,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060_OR_VERIFIED_TENTED_PRIVATE_VARIANT",
+      "purpose": "Underhousing tented",
+      "mustBeTented": true
+    },
+    {
+      "type": "via",
+      "id": "USB_DP_MIRROR_B",
+      "net": "USB_DP",
+      "xy": [
+        40.75,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060_OR_VERIFIED_TENTED_PRIVATE_VARIANT",
+      "purpose": "Underhousing tented",
+      "mustBeTented": true
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_A6_TO_MIRROR",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          39.75,
+          7.355
+        ],
+        [
+          39.75,
+          5.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "",
+      "from": [
+        "J2",
+        "A6"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_B6_TO_MIRROR",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          40.75,
+          7.355
+        ],
+        [
+          40.75,
+          5.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "",
+      "from": [
+        "J2",
+        "B6"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_MIRROR_BOTTOM",
+      "net": "USB_DP",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39.75,
+          5.8
+        ],
+        [
+          40.75,
+          5.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Shortest1mm BOTTOM mirrorcrossing; avoid matching doglegs that damage reference."
+    },
+    {
+      "type": "route",
+      "id": "USB_DM_A7_MERGE",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          7.355
+        ],
+        [
+          40.25,
+          8.6
+        ],
+        [
+          39.25,
+          8.6
+        ],
+        [
+          39.25,
+          7.355
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "ShortestTOPmirrorjoin behindconnector tips; underhousing reference patch avoids extra data U slot.",
+      "from": [
+        "J2",
+        "A7"
+      ],
+      "to": [
+        "J2",
+        "B7"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_ENTRY",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          40.75,
+          7.355
+        ],
+        [
+          40.75,
+          8.6
+        ],
+        [
+          41.2,
+          9.05
+        ],
+        [
+          41.2,
+          10.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Directflowthroughprotection input",
+      "from": [
+        "J2",
+        "B6"
+      ],
+      "to": [
+        "U4",
+        "6"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DM_ENTRY",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          39.25,
+          7.355
+        ],
+        [
+          39.25,
+          8.6
+        ],
+        [
+          39.3,
+          8.65
+        ],
+        [
+          39.3,
+          10.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Directflowthroughprotection input",
+      "from": [
+        "J2",
+        "B7"
+      ],
+      "to": [
+        "U4",
+        "4"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_PULLUP_BRANCH",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          41.2,
+          12.7
+        ],
+        [
+          42.5764,
+          12.7
+        ],
+        [
+          42.7,
+          12.8236
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Required FS pullup keptshort; not CANtestbranch",
+      "from": [
+        "U4",
+        "1"
+      ],
+      "to": [
+        "R11",
+        "2"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_SHARED_DP",
+      "net": "PA12_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          41.1,
+          18.3984
+        ],
+        [
+          41.1,
+          19.85
+        ],
+        [
+          40.95,
+          20.0
+        ],
+        [
+          40.95,
+          21.6
+        ],
+        [
+          41.25,
+          21.9
+        ],
+        [
+          41.25,
+          22.75
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "PassleftofC14groundloop, .2finepitchport; preservelocalclasspairexception",
+      "from": [
+        "R5",
+        "1"
+      ],
+      "to": [
+        "U1",
+        "33"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_SHARED_DM",
+      "net": "PA11_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          39.4,
+          18.3984
+        ],
+        [
+          39.4,
+          18.95
+        ],
+        [
+          40.45,
+          20.0
+        ],
+        [
+          40.45,
+          21.6
+        ],
+        [
+          40.75,
+          21.9
+        ],
+        [
+          40.75,
+          22.75
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "NoCANtrunk; routewithDPgeometrycheck, skewnotassumed",
+      "from": [
+        "R6",
+        "1"
+      ],
+      "to": [
+        "U1",
+        "32"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DNP_STUB_DP",
+      "net": "PA12_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          41.1,
+          18.3984
+        ],
+        [
+          42.8032,
+          18.3984
+        ],
+        [
+          42.9016,
+          18.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "ExplicitDNPoffmainstub~1.8424mm",
+      "from": [
+        "R5",
+        "1"
+      ],
+      "to": [
+        "R12",
+        "1"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "USB_DNP_STUB_DM",
+      "net": "PA11_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          39.4,
+          18.3984
+        ],
+        [
+          37.9968,
+          18.3984
+        ],
+        [
+          37.8984,
+          18.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "ExplicitDNPoffmainstub~1.5424mm",
+      "from": [
+        "R6",
+        "1"
+      ],
+      "to": [
+        "R13",
+        "1"
+      ]
+    },
+    {
+      "type": "via",
+      "id": "USB_RETURN_LEFT",
+      "net": "GND",
+      "xy": [
+        38.15,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060_OR_VERIFIED_TENTED_PRIVATE_VARIANT",
+      "purpose": "ActualTOP/BOTTOM/L2/L3 applicationreturn; outside signalvia antipads",
+      "mustBeTented": true
+    },
+    {
+      "type": "via",
+      "id": "USB_RETURN_RIGHT",
+      "net": "GND",
+      "xy": [
+        41.7,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060_OR_VERIFIED_TENTED_PRIVATE_VARIANT",
+      "purpose": "ActualTOP/BOTTOM/L2/L3 applicationreturn; outside signalvia antipads",
+      "mustBeTented": true
+    }
+  ],
+  "variantOperations": {
+    "4L": [
+      {
+        "type": "route",
+        "id": "USB4L_PROTECTED_DP",
+        "net": "USB_DP",
+        "layer": "TOP",
+        "points": [
+          [
+            41.2,
+            12.7
+          ],
+          [
+            41.2,
+            13.3
+          ],
+          [
+            40.455,
+            14.045
+          ],
+          [
+            40.455,
+            15.7
+          ],
+          [
+            41.1,
+            16.345
+          ],
+          [
+            41.1,
+            16.8236
+          ]
+        ],
+        "width": 0.26,
+        "purpose": "TIformula~90ohm straightbulk.26/.15, portsuncoupled andnearbycoppernotmodeled",
+        "from": [
+          "U4",
+          "1"
+        ],
+        "to": [
+          "R5",
+          "2"
+        ]
+      },
+      {
+        "type": "route",
+        "id": "USB4L_PROTECTED_DM",
+        "net": "USB_DM",
+        "layer": "TOP",
+        "points": [
+          [
+            39.3,
+            12.7
+          ],
+          [
+            39.3,
+            13.3
+          ],
+          [
+            40.045,
+            14.045
+          ],
+          [
+            40.045,
+            15.7
+          ],
+          [
+            39.4,
+            16.345
+          ],
+          [
+            39.4,
+            16.8236
+          ]
+        ],
+        "width": 0.26,
+        "purpose": "SymmetrictonativeDPcandidate",
+        "from": [
+          "U4",
+          "3"
+        ],
+        "to": [
+          "R6",
+          "2"
+        ]
+      }
+    ],
+    "2L": [
+      {
+        "type": "route",
+        "id": "USB2L_DP_PORT1",
+        "net": "USB_DP",
+        "layer": "TOP",
+        "points": [
+          [
+            41.2,
+            12.7
+          ],
+          [
+            41.2,
+            13.9
+          ],
+          [
+            40.9,
+            14.2
+          ]
+        ],
+        "width": 0.2,
+        "purpose": "Shortnarrowportexplicitlynonuniform",
+        "from": [
+          "U4",
+          "1"
+        ]
+      },
+      {
+        "type": "route",
+        "id": "USB2L_DM_PORT1",
+        "net": "USB_DM",
+        "layer": "TOP",
+        "points": [
+          [
+            39.3,
+            12.7
+          ],
+          [
+            39.3,
+            13.9
+          ],
+          [
+            39.6,
+            14.2
+          ]
+        ],
+        "width": 0.2,
+        "purpose": "Symmetricnarrowport",
+        "from": [
+          "U4",
+          "3"
+        ]
+      },
+      {
+        "type": "route",
+        "id": "USB2L_DP_WIDE",
+        "net": "USB_DP",
+        "layer": "TOP",
+        "points": [
+          [
+            40.9,
+            14.2
+          ],
+          [
+            40.9,
+            15.6
+          ]
+        ],
+        "width": 1.15,
+        "purpose": "Onlyfreeparallelbulksegment,w1.15gap.15,h1.524; notwholepath90"
+      },
+      {
+        "type": "route",
+        "id": "USB2L_DM_WIDE",
+        "net": "USB_DM",
+        "layer": "TOP",
+        "points": [
+          [
+            39.6,
+            14.2
+          ],
+          [
+            39.6,
+            15.6
+          ]
+        ],
+        "width": 1.15,
+        "purpose": "Same geometry; native neighboring copper and transitionspending"
+      },
+      {
+        "type": "route",
+        "id": "USB2L_DP_PORT2",
+        "net": "USB_DP",
+        "layer": "TOP",
+        "points": [
+          [
+            40.9,
+            15.6
+          ],
+          [
+            41.1,
+            15.8
+          ],
+          [
+            41.1,
+            16.8236
+          ]
+        ],
+        "width": 0.2,
+        "purpose": "Symmetricwidthtransition/tapercandidate",
+        "to": [
+          "R5",
+          "2"
+        ]
+      },
+      {
+        "type": "route",
+        "id": "USB2L_DM_PORT2",
+        "net": "USB_DM",
+        "layer": "TOP",
+        "points": [
+          [
+            39.6,
+            15.6
+          ],
+          [
+            39.4,
+            15.8
+          ],
+          [
+            39.4,
+            16.8236
+          ]
+        ],
+        "width": 0.2,
+        "purpose": "Finepadbreakoutnot1.15mm",
+        "to": [
+          "R6",
+          "2"
+        ]
+      }
+    ]
+  },
+  "rulesNeeded": [
+    {
+      "id": "HI_J2_MIRROR_BOTTOM",
+      "scope": "USB_DP only, BOTTOM short connector mirror bridge, rectangle x39.35..41.15 y5.3..6.7",
+      "change": "Allow BOTTOM in explicit Region-Class Physical CSet; preservevia whitelist/spacing/width; verify via-count2",
+      "reason": "Existing P_USB_PROVISIONAL forbids BOTTOM; cannot silently violate"
+    },
+    {
+      "id": "HI_USB_MCU_ESCAPE",
+      "scope": "TOP rectangle x39.8..41.6 y21.2..23.4, USB class vs ordinary digital class only",
+      "change": "Region-Class-Class copyS_USB_OTHER_050: smdpin_line/line_line .20 only; originaloutside.50 kept; other fields unchanged",
+      "reason": "AdjacentUART31/SWD34 pad .3 at.5pitch gives.25 edge gap for.2line, so global.5 cannot apply tofirstescape"
+    },
+    {
+      "id": "HI_USB_PORT_BREAKOUT",
+      "scope": "Named J2/U4/R5R6/U1 short port regions only",
+      "change": "Normalwidth.20 atports, separate bulk2L1.15 or4L.26. Length budget derived native; no fullrun neck falsely<=1mm.",
+      "reason": "Wide2L strips cannot fit fine-pitch pads and local ports; nonuniformimpedance explicit."
+    }
+  ],
+  "referenceAndReturn": {
+    "2L": "For BOTTOM mirror branch, add real TOP application-GND reference patch underconnector minusallTOPsignalclearances, tie toBOTTOMvia pair; sample coverage to expose unavoidable local cutout at TOP DM bridge and viaantipads. This is a real local discontinuity, not a fullyuniformmicrostrip. MainTOPpair sees BOTTOM actualGND without longslots.",
+    "4L": "MainTOP seesL2; BOTTOMmirror sees actualL3 GND (must create ifabsent) withreturnviasnearbothends connectingL2/L3/TOP. Viaantipads still localdiscontinuities to measure.",
+    "returnVias": [
+      [
+        38.15,
+        5.8
+      ],
+      [
+        41.7,
+        5.8
+      ]
+    ],
+    "topReferencePatch": [
+      [
+        37.7,
+        4.3
+      ],
+      [
+        42.2,
+        4.3
+      ],
+      [
+        42.2,
+        6.6
+      ],
+      [
+        37.7,
+        6.6
+      ]
+    ],
+    "clearances": "Actualpad/line/mask checks includingNPTH pegs, connectorbody and shell; neverfloodTOPreference over same-layerUSB signals"
+  },
+  "maskAndAssembly": "Signal andground underconnector vias must be tented/no opening in actualMASKfilm. Nullmask pad definition alone insufficient ifArtworkdrawMissingPadAperturescreatesholes. If fallback actualtentvariant needed createprivateHIpadstack andaddapprovedvia list, no publiclib edits. Connectorunderside metalclearance/maskprocess remainmanufacturing open.",
+  "dnpStubs": "R12/R13 retained separate pads and nets evenDNP. Route shared side from R5.1/R6.1 node as short explicit offmain branches; do not carry USB main through CAN branch, do not deleteorignorepads. Measure maxstub native; DNP=openscomponent, not absentPCB copper.",
+  "matching": "Evaluate both TypeC orientation terminal paths (B6/B7 andA6/A7), USB PCB andPA sharedsegments separately, add package/seriescomp discontinuity asunknown. No snakejust to equal totalnetcopper includingbranches; matching cannotreplace reference/impedance.",
+  "manufacturingRelease": false,
+  "candidateLengths": {
+    "USB_DP_A6_TO_MIRROR": 1.5550000000000006,
+    "USB_DP_B6_TO_MIRROR": 1.5550000000000006,
+    "USB_DP_MIRROR_BOTTOM": 1.7656854249492362,
+    "USB_DM_A7_MERGE": 5.5928427124746225,
+    "USB_DP_ENTRY": 2.9313961030678937,
+    "USB_DM_ENTRY": 2.765710678118652,
+    "USB_PULLUP_BRANCH": 1.5511967963093147,
+    "USB_SHARED_DP": 4.537996103067893,
+    "USB_SHARED_DM": 4.9107883092036815,
+    "USB_DNP_STUB_DP": 1.8423586145375102,
+    "USB_DNP_STUB_DM": 1.542358614537508,
+    "orientationB_entrySkew": 0.16568542494924188,
+    "orientationA_entrySkew": -0.551471862576145
+  },
+  "criticalLimit": "2Lwidebulk only1.4mm long: most connector/ESD/resistor/MCUbreakouts remain narrow andnonuniform; cannot claimwhole2L90ohm. ActualMask/Dk/tolerances/returnvoids andmanufacturerconfirmation remainopen. Retainroutegeometryaslearningcomparison; fourlayerpreferredphysicalreference.",
+  "rejectedCandidate": "v1 extra TOP DM U-turn and BOTTOM compensating dogleg reduce branch orientation skew but worsen two-layer reference/pocket topology underhousing; retained original for comparison. Prefer minimumbranch and explicit per-endpoint/connector budget.",
+  "matchingDecision": "Preferredminimumbranch leaves TypeC A6/A7 orientation entry skew about3.276mm versus B6/B7 .166mm. This is explicit mirrorleaf skew, not fullpath matched. Native E_USB_FS_BUDGET1mm may need endpoint-aware justification or a separate E_USB_CONNECTOR_BUDGET copy only for USB_DP/DM; do not modify USB_SHARED or all classes. Exact worst path, delays, reference and finalrule recorded before approval. Manufacturer/hardware compliance remainsopen."
+}

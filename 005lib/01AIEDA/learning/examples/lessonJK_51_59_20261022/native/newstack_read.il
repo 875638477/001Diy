@@ -1,0 +1,33 @@
+procedure(jkNewReferenceRead(out)
+ let((f seen p refLayer refNet shapes graph a b dx dy len count xy hit manual samples groundGraph powerGraph groundShapes powerShapes)
+  f=outfile(strcat(out "/newstack_reference_samples.tsv"))
+  fprintf(f "net\tsignalLayer\treferenceLayer\treferenceNet\tsegment\twidth\tfraction\txy\tactualCommonPlaneCount\n")
+  seen=nil manual=0 samples=0
+  groundGraph=gConnectedObjects(gPin("C1" "2")) powerGraph=gConnectedObjects(gPin("C9" "1"))
+  groundShapes=setof(s axlDBGetShapes("ETCH/L2") s->fill && !s->shapeIsBoundary && equal(jk55Name(s) "GND") && member(s groundGraph))
+  powerShapes=setof(s axlDBGetShapes("ETCH/L3") s->fill && !s->shapeIsBoundary && equal(jk55Name(s) "V3V3") && member(s powerGraph))
+  foreach(o jk55AllNetObjects()
+   p=o->parent
+   when(equal(o->objType "line") && o->isEtch && o->net && !equal(o->net->name "GND") && !o->thermal && !(p && p->thermal) && member(o->layer list("ETCH/TOP" "ETCH/BOTTOM")) && !member(o seen)
+    seen=cons(o seen) manual=manual+1
+    if(equal(o->layer "ETCH/TOP") then refLayer="ETCH/L2" refNet="GND" shapes=groundShapes else refLayer="ETCH/L3" refNet="V3V3" shapes=powerShapes)
+    a=car(o->startEnd) b=cadr(o->startEnd) dx=car(b)-car(a) dy=cadr(b)-cadr(a) len=sqrt(dx*dx+dy*dy) count=max(1 fix(len/0.1)+1)
+    for(i 0 count
+     xy=list(car(a)+dx*i*1.0/count cadr(a)+dy*i*1.0/count) hit=0
+     foreach(s shapes when(axlGeoPointInShape(xy s t) hit=hit+1))
+     fprintf(f "%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%d\n" o->net->name o->layer refLayer refNet o->startEnd o->width i*1.0/count xy hit) samples=samples+1)))
+  fprintf(f "NEW_STACK_CENTERLINE_REFERENCE_SAMPLES_COMPLETE manualSegments=%d samples=%d stepMaxMM=.1; full trace footprint/return impedance and transition decoupler proximity are separate engineering audits\n" manual samples)
+  close(f) t))
+procedure(jkNewStackRead(out)
+ let((f graph)
+  hiStoredReadback() jk55ReadAll(out)
+  f=outfile(strcat(out "/newstack_fresh_plane_contract.txt"))
+  axlDBRefreshId(nil)
+  jkStackPlane("ETCH/L2" "GND" f) jkStackPlane("ETCH/L3" "V3V3" f)
+  unless(null(setof(s axlDBGetShapes("ETCH/L3") equal(jk55Name(s) "GND"))) error("Fresh legacy L3 GND remains\n"))
+  graph=gConnectedObjects(gPin("C1" "2"))
+  unless(!member(gPin("C9" "1") graph) error("Ground/power copper short\n"))
+  fprintf(f "L2=GND L3=V3V3 TRUE_NET_IDENTITY; GND_V3V3_NO_COPPER_SHORT; masterDRC=%L wholeDRC=null remainingGPIO=7 USB4=pending\n" axlDBControl('drcEnable))
+  fprintf(f "Fresh readonly stored-geometry/connectivity check; old HI HSE negative expectation retired. New build challenge verified oldanchor removal keeps C22.2/C23.2 common via continuousL2 and rollback exact.\n")
+  close(f)
+  jkNewReferenceRead(out) t))

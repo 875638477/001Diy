@@ -1,0 +1,11 @@
+﻿{
+  "status": "STOPPED_ON_REFERENCED_ACTIVE_ENTRY_HASH_DRIFT",
+  "attempt": 2,
+  "path": "review/user_four_layer_function_rule_20261022.json",
+  "historicalExpectedSHA256": "121D022097B029EBB16198EC5A0726D4419DE89D30988A7C87244EFC1CCC8CD6",
+  "currentSHA256": "CF767B40C924AC253753FE2179C7946D66D7B25EF646A426732923D989AF05A7",
+  "cause": "Root advanced the active user-rule entry to reflect actual new-stack progress after the old release-gate snapshot. The old sealed artifact files and J55 manifest still match exactly.",
+  "correction": "Do not rewrite the old manifest. Permit only this explicit expected/current pair as a separately logged historical referenced-input drift; capture its current SHA in the new supplement and guard against further changes.",
+  "cadenceExecuted": false,
+  "oldSealedFilesModifiedByThisScript": false
+}

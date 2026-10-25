@@ -1,0 +1,143 @@
+{
+  "status": "INDEPENDENT_HYPOTHETICAL_REFERENCE_TOPOLOGY_REVIEW_NOT_NATIVE",
+  "variant": "4L",
+  "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\RIGHT10_FULL_4L_v11.json",
+  "sourceSHA256": "b3e053d45d702c34571ebd608f05ede7928d63da82f21cb23efe4c297d981ef2",
+  "islandValid": true,
+  "voidValid": true,
+  "islandArea": 62.894999999999996,
+  "voidArea": 77.78998737341533,
+  "islandCoveredByVoid": true,
+  "localThroughViaRegularCopperAudit": [
+    {
+      "net": "GND",
+      "xy": [
+        47.1,
+        35.5748
+      ],
+      "padstack": "L28_VIA030_C060",
+      "intersectionAreaMM2": 0.28271495258395035,
+      "isUniqueAnchor": false,
+      "isQuietCap": true,
+      "allRegularCuWithinApplicationVoid": true,
+      "source": "nativeInherited"
+    },
+    {
+      "net": "GND",
+      "xy": [
+        37.7,
+        37.7
+      ],
+      "padstack": "L28_VIA030_C060",
+      "intersectionAreaMM2": 0.2827149525839504,
+      "isUniqueAnchor": false,
+      "isQuietCap": true,
+      "allRegularCuWithinApplicationVoid": true,
+      "source": "nativeInherited"
+    },
+    {
+      "net": "GND",
+      "xy": [
+        46.35,
+        29.4
+      ],
+      "padstack": "L28_VIA030_C060",
+      "intersectionAreaMM2": 0.20022397872080144,
+      "isUniqueAnchor": true,
+      "isQuietCap": false,
+      "allRegularCuWithinApplicationVoid": true,
+      "source": "HSE_SINGLE_ANCHOR_REWORK"
+    }
+  ],
+  "powerStemProjection": [
+    {
+      "net": "V3V3",
+      "layer": "ETCH/TOP",
+      "xy": [
+        [
+          46.2016,
+          31.25
+        ],
+        [
+          46.2016,
+          32.4
+        ]
+      ],
+      "width": 0.6,
+      "islandProjectionAreaMM2": 0.640014113033587,
+      "source": "nativeInherited"
+    },
+    {
+      "net": "V3V3",
+      "layer": "ETCH/TOP",
+      "xy": [
+        [
+          43.55,
+          31.25
+        ],
+        [
+          46.2016,
+          31.25
+        ]
+      ],
+      "width": 0.6,
+      "islandProjectionAreaMM2": 0.3072749020629648,
+      "source": "nativeInherited"
+    },
+    {
+      "net": "V3V3",
+      "layer": "ETCH/TOP",
+      "xy": [
+        [
+          45.3,
+          30.35
+        ],
+        [
+          47.3,
+          30.3
+        ]
+      ],
+      "width": 0.6,
+      "islandProjectionAreaMM2": 0.4201312294985951,
+      "source": "RIGHT_VDD48_CAP"
+    }
+  ],
+  "nonOscillatorDigitalOrAnalogIslandProjection": [],
+  "positiveHypotheticalGraph": {
+    "localReachesApplication": true,
+    "terminalLocal": {
+      "U1.47": true,
+      "Y1.2": true,
+      "Y1.4": true,
+      "C22.2": true,
+      "C23.2": true
+    },
+    "terminalApplication": {
+      "U1.47": true,
+      "Y1.2": true,
+      "Y1.4": true,
+      "C22.2": true,
+      "C23.2": true
+    },
+    "qualification": "Geometry candidate graph with app-connected via qualification, not native filled plane/physical connect proof."
+  },
+  "anchorRemovedHypotheticalGraph": {
+    "localReachesApplication": false,
+    "terminalLocal": {
+      "U1.47": false,
+      "Y1.2": false,
+      "Y1.4": false,
+      "C22.2": true,
+      "C23.2": true
+    },
+    "terminalApplication": {
+      "U1.47": true,
+      "Y1.2": true,
+      "Y1.4": true,
+      "C22.2": false,
+      "C23.2": false
+    },
+    "qualification": "Geometry candidate graph with app-connected via qualification, not native filled plane/physical connect proof."
+  },
+  "scope": "Uses exact candidate pad/trace/via geometry. L2/BOTTOM actual appfill void, every through-via all-layer pad/antipad and actual native negative/restore challenge remain mandatory. Does not assert computed current path or AN2867 full hardware implementation."
+}

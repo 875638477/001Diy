@@ -1,0 +1,44 @@
+{
+  "status": "PASS_FULL_NATIVE_READBACK_SPACING_CSET_DIFF",
+  "before": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_SPI_external_2L_b012_stored_only\\spacing_csets.tsv",
+  "after": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only\\spacing_csets.tsv",
+  "existingCSetLayerRecordsCompared": 90,
+  "existingFieldValuesCompared": 5445,
+  "onlyActualDifferences": [
+    {
+      "cset": "HI_USB_J2_SOURCE_S_2L",
+      "layer": "TOP",
+      "field": "line_line",
+      "before": 0.5,
+      "after": 0.2
+    },
+    {
+      "cset": "HI_USB_J2_SOURCE_S_2L",
+      "layer": "BOTTOM",
+      "field": "line_line",
+      "before": 0.5,
+      "after": 0.2
+    }
+  ],
+  "newCSetLayerRecords": [
+    [
+      "HI_USB_CC1_J2_S_2L",
+      "TOP"
+    ],
+    [
+      "HI_USB_CC1_J2_S_2L",
+      "BOTTOM"
+    ]
+  ],
+  "inBuildAssertionCaveat": "Original hiSpacingFieldsUpdate queried unsupported symbol all and got nil; that inbuild no-other-field assertion was ineffective. Complete fresh-native CSet TSVs compared here close that gap. SDK corrected to nil and nonempty assertion for future runs.",
+  "evidence": [
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_SPI_external_2L_b012_stored_only\\spacing_csets.tsv",
+      "sha256": "D502D08B4E8E1C7751B0818E9DD8B2103D47DD71E7352BD094CD28DBE43534AC"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only\\spacing_csets.tsv",
+      "sha256": "A465179F497E4C51B32E3274D730691A06BA077C559DE690D3C40AFA684E957C"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+from pathlib import Path
+import json,hashlib,subprocess,sys,shutil
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+s=(R/'scripts/compile_batchHI_v31.py').read_text().replace("['BEFORE_OPERATIONS','AFTER_INITIAL_DELETIONS']","['BEFORE_OPERATIONS','AFTER_INITIAL_DELETIONS','AFTER_SECOND_DELETIONS']")
+s=s.replace(" elif typ=='deferReference':",''' elif typ=='secondExactBatch':
+  rows=[]
+  for d in op['targets']:
+   assert d['type']=='deleteSegment'
+   rows.append('list('+q(d['type'])+' '+q(d['id'])+' '+q(d['net'])+' '+q(d['layer'])+' '+points(d['points'])+' '+num(d['width'])+')')
+  statements.append('hiDeleteExactBatch(f list('+' '.join(rows)+'))')
+  statements.extend(placement_statements);placed_moves=True
+ elif typ=='deferReference':''');(R/'scripts/compile_batchHI_v32.py').write_text(s,encoding='utf8')
+s=(R/'scripts/prepare_b016_retryHI.py').read_text().replace("P.add_argument('--compiler',required=True);","P.add_argument('--compiler',required=True);P.add_argument('--plan');").replace("plan=json.loads(Path(old['plan']).read_text());","plan=json.loads(Path(a.plan if a.plan else old['plan']).read_text());");(R/'scripts/prepare_b016_retryHI_v2.py').write_text(s,encoding='utf8')
+for v,t in [('2L','06'),('4L','03')]:
+ p=R/f'batches/clearance_remaining_{v}_b016_DRC_PENDING.json';d=json.loads(p.read_text());q=R/f'engineering_mcu/plans/VDD24_neck_geometric_fix_{v}_01.json';fix=json.loads(q.read_text());dst=R/f'source/engineering_snapshots/clearance_remaining_{v}_b016_DRC_PENDING/04_VDD24_neck_geometric_fix_{v}_01.json';assert not dst.exists() or dst.read_bytes()==q.read_bytes();shutil.copyfile(q,dst);d['engineeringSources'].append({'source':str(q),'snapshot':str(dst),'sha256':sha(dst)})
+ deletes=[o for o in d['operations'] if o['type'].startswith('delete')];uart=[o for o in deletes if o['id'].startswith('UART_RX_SOURCE_REPOSE_DEL_')];assert len(uart)==2;deletes=[o for o in deletes if o not in uart]+[fix['operations'][0]]
+ defer=[o for o in d['operations'] if o['type']=='deferReference'];adds=[o for o in d['operations'] if not o['type'].startswith('delete') and o['type'] not in ['deferReference','restoreReference','verifyReferences']];early=[o for o in adds if o['net']=='PA10_UART_RX' and o['type']=='route' and o['id'].startswith('SOUTH_RX')];
+ if not early:early=[o for o in adds if o['net']=='PA10_UART_RX' and o['type']=='route' and o['points'][0][0]<41 and o['id']!='UART_RX_SOURCE_REPOSE_TOP']
+ assert len(early)==1,[(o['id'],o.get('points')) for o in adds if o['net']=='PA10_UART_RX'];restores=[o for o in d['operations'] if o['type'] in ['restoreReference','verifyReferences']];d['operations']=deletes+defer+early+[{'type':'secondExactBatch','id':'PA10_R17_EXIT_SECOND_PHASE','net':'PA10_UART_RX','targets':uart}]+[o for o in adds if o not in early]+[fix['operations'][1]]+restores;d['placementSequence']='AFTER_SECOND_DELETIONS';d['constructionOrderEvidence']={'reason':'Keep bridge attached to R17.1 during first source ripup; attach U1.31 revised path before deleting R17 exit. At least one real physical PA10 pin anchors the preserved BOTTOM bridge at every intermediate phase. No forced net reassignment. Full non-target signatures and final physical identity/proofs remain required.','secondPhaseExactTargets':uart,'earlySourceRoute':early,'VDD24GeometryOnlyNormalWidthFix':str(dst),'permanentVoidRestoreOfficial':'Convert empty static outline to dynamic boundary first, then add permanent void directly to BOUNDARY; static-to-dynamic conversion deletes staticvoids.'};out=R/f'batches/clearance_remaining_{v}_b016_phased.json';out.write_text(json.dumps(d,indent=2),encoding='utf8');subprocess.run([sys.executable,str(R/'scripts/prepare_b016_retryHI_v2.py'),'--variant',v,'--try-number',t,'--compiler','32','--plan',str(out)],check=True)

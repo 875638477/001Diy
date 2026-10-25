@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "lesson": 60,
+  "date": "2026-10-23",
+  "categories": [
+    {
+      "id": "M60-01",
+      "kind": "知识/规范",
+      "action": "COPY_RELATIVE_TREE",
+      "examples": [
+        "EDA.md",
+        "课程索引.md",
+        "learning/notes/record_location_rules.md",
+        "package_defaults.md",
+        "pcb_layer_naming.md",
+        "capture_page_defaults.md",
+        "capture_symbol_defaults.md"
+      ],
+      "acceptance": "新会话读入口；区分历史/当前/待验，UTF-8往返。"
+    },
+    {
+      "id": "M60-02",
+      "kind": "来源",
+      "action": "COPY_LOCATORS_AND_PERMITTED_SOURCES",
+      "examples": [
+        "learning/sources",
+        "J/K bench_datasheets manifest",
+        "QMI spec"
+      ],
+      "acceptance": "标题/版本/合法URL或原定位/SHA/PDF实际页及印刷页/视频起止点；未读不记已读。"
+    },
+    {
+      "id": "M60-03",
+      "kind": "自有源工程",
+      "action": "COPY_SELECTED_COMPLETE_BUNDLES",
+      "examples": [
+        "BRD",
+        "DSN/OPJ",
+        "PAD/DRA/PSM",
+        "OLB",
+        "PST",
+        "spec JSON"
+      ],
+      "acceptance": "精确源版本+库依赖+开放项+清单；只复制BRD或Gerber不足。"
+    },
+    {
+      "id": "M60-04",
+      "kind": "外部01env和公共库",
+      "action": "RELINK_VERIFY_AT_TARGET",
+      "examples": [
+        "01env/env",
+        "01script_file/gerber.scr",
+        "drill*.txt",
+        "01Psm_lib",
+        "01Pad_lib",
+        "01captureLib"
+      ],
+      "acceptance": "现场核路径、版本、真实层序/光绘映射，保持层名及o/O；本次不复制修改外部库/01env。"
+    },
+    {
+      "id": "M60-05",
+      "kind": "源码",
+      "action": "PARAMETERIZE_NEW_COPY",
+      "examples": [
+        "Python",
+        "Tcl",
+        "SKILL",
+        "SCR"
+      ],
+      "acceptance": "查安装/工程/queue硬编码，保留旧原文；不重放旧清理或崩溃探针。"
+    },
+    {
+      "id": "M60-06",
+      "kind": "证据",
+      "action": "COPY_SELECTED_LOGS_MANIFEST_BACKUPS",
+      "examples": [
+        "stdout/stderr",
+        "fresh reopen",
+        "失败尝试",
+        "SHA",
+        "回退"
+      ],
+      "acceptance": "成功/失败/未测均保留，旧PID/DBID/ready不证明新会话。"
+    },
+    {
+      "id": "M60-07",
+      "kind": "软件/ABI",
+      "action": "INSTALL_COMPATIBLE_OFFICIAL_LOCAL_DEPENDENCIES",
+      "examples": [
+        "Cadence17.2",
+        "Python3.14 x64",
+        "PyMuPDF1.28.2",
+        "numpy2.5.4/shapely2.2.0",
+        "Gerbonara1.6.3/rtree1.4.1/click8.5.0"
+      ],
+      "acceptance": "目标机合法安装/许可，位数/ABI/import现场核；不打包安装镜像/许可。"
+    },
+    {
+      "id": "M60-08",
+      "kind": "PDF/视频",
+      "action": "OPTIONAL_TOOLS_BY_TASK",
+      "examples": [
+        "PyMuPDF",
+        "可选OCR",
+        "可选ffmpeg/ffprobe"
+      ],
+      "acceptance": "PATH无结果不等于全机未装；OCR/字幕回看原图，未提供视频不记已学。"
+    },
+    {
+      "id": "M60-09",
+      "kind": "异机复现",
+      "action": "FRESH_SMALL_SMOKE_TEST",
+      "acceptance": "同机改目录标SAME_COMPUTER_RELOCATION_ONLY；真实异机未测前NOT_TESTED_ON_ANOTHER_COMPUTER。"
+    },
+    {
+      "id": "M60-10",
+      "kind": "GUI",
+      "action": "FRESH_PROBE_SEPARATELY",
+      "acceptance": "历史native pipe失败不是本轮/永久结论；SDK通过不等于GUI通过。"
+    },
+    {
+      "id": "M60-11",
+      "kind": "知识载体",
+      "action": "LOCAL_FILES_READ_NEXT_SESSION",
+      "acceptance": "复制文件并重新读回；不证明永久训练/自动云同步/执行能力自动继承。"
+    }
+  ],
+  "steps": [
+    "核最新入口/版本/开放项，备份。",
+    "选自有小包及完整依赖，保留相对树和SHA。",
+    "只核本次选定文件，不重哈希旧大组或把迁移当整板验收。",
+    "目标机合法安装兼容软件，不复制许可/安装镜像。",
+    "新配置安装根/记录根/库根，解析校验路径。",
+    "只读查版本/import/手册/库，不输出敏感环境。",
+    "新工作/日志目录，小操作记录本次PID+创建时间/命令/输出，不动用户CAD。",
+    "新进程重开，核真实对象和目标外不变；失败留日志回退。",
+    "GUI另测；同机路径演练与真实异机执行分栏。",
+    "更新新机观察，旧历史和未完成PCB/DFM/实测项保留。"
+  ],
+  "failureTriage": [
+    {
+      "symptom": "native pipe找不到",
+      "meaning": "桌面桥接不可达，不等于CAD没装或BRD损坏。",
+      "next": "本轮新连接探测，原生/GUI分栏。"
+    },
+    {
+      "symptom": "python指WindowsApps",
+      "meaning": "可能只是App Execution Alias。",
+      "next": "绝对解释器读sys.version/sys.executable并import。"
+    },
+    {
+      "symptom": "ModuleNotFoundError/DLL load failed",
+      "meaning": "路径/版本/ABI/位数不符。",
+      "next": "局部配置兼容包并目标机import。"
+    },
+    {
+      "symptom": "Tcl可用但Dbo不存在",
+      "meaning": "语言与Capture SDK/GUI是不同环境。",
+      "next": "核官方DLL、架构、初始化，SDK/菜单分别测。"
+    },
+    {
+      "symptom": "ready存在无新响应",
+      "meaning": "旧queue/ready残留可能误判。",
+      "next": "新会话token目录/关联本次进程，不重放旧request。"
+    },
+    {
+      "symptom": "私有pcbenv缺库/层",
+      "meaning": "TELENV/库映射或旧根未改。",
+      "next": "source官方TELENV，显式当前PSM/PAD，不改全局。"
+    },
+    {
+      "symptom": "返回0无预期结果",
+      "meaning": "cwd变化或命令未执行也可能返回。",
+      "next": "实际路径/完成标记/非空/保存重开与几何。"
+    },
+    {
+      "symptom": "PDF/OCR单位脚号异常",
+      "meaning": "扫描图/缺文字/OCR混淆。",
+      "next": "回看原图，核0/O/1/I、μ/m、mm/mil和版本。"
+    }
+  ]
+}

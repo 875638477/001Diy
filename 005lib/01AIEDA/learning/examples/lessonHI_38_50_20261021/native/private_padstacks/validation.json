@@ -1,0 +1,53 @@
+{
+  "status": "NATIVE_BINARY_AND_2L_4L_PAD_DEFINITION_READBACK_VERIFIED_NOT_BOARD_APPROVED",
+  "name": "HI_VIA026_C052_TENT",
+  "purpose": "Small mechanically drilled plated through-via for individually scoped ordinary-digital source escape only; not laser microvia.",
+  "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\native\\l28_via030_c060.pxml",
+  "sourceSHA256": "DBE22E951B0A6F1EC32D3E621AFDE173C4A20AA57CF4F38C2FE5D237037F5AEA",
+  "pxml": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native\\private_padstacks\\hi_via026_c052_tent.pxml",
+  "pxmlSHA256": "85EF0F3EC5719BC5D137297759055B4C6E413645B77FE790612CD1350D4D2B0A",
+  "drillMM": 0.26,
+  "regularCopperDiameterMM": 0.52,
+  "nominalAnnularRingMM": 0.13,
+  "padTypes": {
+    "BEGIN_LAYER": {
+      "REGULAR": "CIRCLE .52",
+      "ANTIPAD": null,
+      "THERMAL": null
+    },
+    "DEFAULT_INTERNAL": {
+      "REGULAR": "CIRCLE .52",
+      "ANTIPAD": null,
+      "THERMAL": null
+    },
+    "END_LAYER": {
+      "REGULAR": "CIRCLE .52",
+      "ANTIPAD": null,
+      "THERMAL": null
+    }
+  },
+  "topMask": null,
+  "bottomMask": null,
+  "scope": [
+    "Intended for the existing positive-copper dynamic-plane designs. No legacy negative-film antipad/thermal geometry is introduced. Read back actual per-layer REGULAR/ANTIPAD/THERMAL/mask, including actual used via object after import.",
+    "NULL mask geometry and current Film missing-aperture setting alone are not fabrication tent reliability or assembly insulation certification.",
+    "Both fabrication profiles and exact southern source geometry require engineering confirmation before a local approved-via rule is created. Public libraries/global rules unchanged.",
+    "Native import and binary .pad creation deliberately wait for sole Cadence slot to be released."
+  ],
+  "binary": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native\\private_padstacks\\hi_via026_c052_tent.pad",
+  "libraryCopy": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\library\\hi_via026_c052_tent.pad",
+  "binarySHA256": "E0E006B70643DB181244EBA12B12107AE492950729CB4B4C2CC393614C47A4BD",
+  "namePreparationCorrection": {
+    "old": "hi_via026_c052_tented",
+    "oldLength": 21,
+    "new": "hi_via026_c052_tent",
+    "newLength": 19,
+    "reason": "Official17.2axlLoadPadstack PADLIB search documents20-character limit. Corrected before any native import; old prepared PXML retained."
+  },
+  "definitionReadbacks": {
+    "4L": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\private_pad_inspect_4L_01\\private_pad_definition.txt",
+    "2L": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\private_pad_inspect_2L_02\\private_pad_definition.txt"
+  },
+  "actualNativeName": "HI_VIA026_C052_TENT",
+  "verificationScope": "Binary successfully loads into both actual layer stacks. .26mm plated Through_via, regular CIRCLE diameter.52 on every actual copper layer and DEFAULT_INTERNAL; ANTI/THERMAL/KEEPOUT NULL; top/bottom mask NULL. No via instance placed, no production board or approvedvia list modified, no new full DRC requested."
+}

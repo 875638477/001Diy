@@ -1,0 +1,65 @@
+
+  NAME
+         axlDBTransactionStart - begin a database transaction
+  SYNOPSIS
+         axlDBTransactionStart(
+                 ) ==> x_mark/nil
+  FUNCTION
+        This routine should be used to mark the start of a 
+        transaction to the database.  Its returns a 
+        mark to the caller which is passed back to commit, mark, oops or
+        rollback for nested transactions. Only the outermost
+        caller of this function ( first caller ) has control to 
+        commit or rollback the entire transaction.
+ 
+        This is used with other axlDBTransaction functions.
+ 
+        Transactions that are left active when your Skill code terminates
+        are canceled by Allegro. This means you cannot start a transaction
+        and keep it active across Allegro commands as an attempt to
+        support "undo".
+ 
+        Transactions are canceled if you save or open a database.
+  NEEDS
+         nothing
+  RETURNS
+         nil if not successful, or an integer mark if started transaction.
+  EXAMPLE (pseudo code)
+    1) Emulating the Allegro "oops" model. 
+ 
+      mark = axlDBTransactionStart()
+      .. #1 do stuff ..
+      axlDBTransactionMark(mark)
+      .. #2 do stuff ..
+      axlDBTransactionMark(mark)
+      .. #3 do stuff ..
+ 
+      ;; do an oops of last two changes
+      axlDBTransactionOops( mark )               ; oops out #3
+ 
+      axlDBTransactionOops( mark )               ; oops out #2
+ 
+      axlDBTransactionCommit(topList)            ; commit only #1
+ 
+    2) Multiple Start marks
+     i = axlDBTransactionStart()
+         ... do stuff...
+ 
+         j = axlDBTransactionStart()
+         ... stuff...
+         axlDBTransactionCommit(j)      ;; this is not really commited
+                                         ;; til the outer commit
+                                 
+         j = axlDBTransactionStart()
+         ... do more stuff...
+         axlDBTransctionRollback(j)  ;; oops out "do more stuff"
+ 
+     axlDBTransactionCommit(i)      ;; commit changes to database
+         
+  NOTE
+     Database transactions does NOT mark selection sets. Selection set
+         management is left up to the application
+  SEE ALSO
+         axlDBTransactionMark, axlDBTransactionOops,
+         axlDBTransactionCommit, axlDBTransactionRollback
+

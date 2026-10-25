@@ -1,0 +1,254 @@
+{
+  "status": "PARTIAL_CANDIDATE_REQUIRES_ENGINEERING_CORRECTION",
+  "batchId": "root_south_service_4L_v14",
+  "variant": "4L",
+  "sourceExpectedSHA256": "873A3BE37F23723CFDB65A86DD38C0358B00D11D96C64146C9E7276817E90A9B",
+  "sourceNativeLog": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_4L_b014_stored_only",
+  "requiredFutureSourcePlans": [
+    {
+      "path": "engineering_mcu/plans/GPIO_north_joint_fanout_02.json",
+      "sha256": "02c08daaa4ade31a98001e681012a0c879cabf719b88b914d023c95f320ae714"
+    },
+    {
+      "path": "engineering_mcu/plans/GPIO_south_joint_fanout_05.json",
+      "sha256": "123804b3d22d936ab6daa56cda39d5b35c000cd94588c951d5461becefb915aa"
+    },
+    {
+      "path": "engineering_mcu/plans/GPIO_left_joint_fanout_06.json",
+      "sha256": "8ddf7033f4be0884c5a8d29a34177b1702403366cacb1b74486d703a651e832a"
+    },
+    {
+      "path": "engineering_power/RIGHT10_source_joint_v2.json",
+      "sha256": "bb13390baf184320b02d55b8aef43d4c25df20ed443f17dc5a6ed5d99a509d47"
+    },
+    {
+      "path": "plans/ordinary_remote_4L_v8.json",
+      "sha256": "c80f88ba4f903c13862f57ecbeaa504a5813ea3f674f4d340f0fdc68ffa3f030"
+    }
+  ],
+  "requiredPlacementChanges": [
+    {
+      "ref": "R16",
+      "xy": [
+        36.9016,
+        19.9
+      ],
+      "rotation": 180,
+      "purpose": "Free south GPIO/UART fanout window while preserving 33R electrical identity; pin1(36.8,19.9),pin2(35.2252,19.9)."
+    },
+    {
+      "ref": "C13",
+      "xy": [
+        34.0,
+        22.4984
+      ],
+      "rotation": 90,
+      "purpose": "Move +.6X/-1.1Y to release leftGPIO bank while preserving direct TOP cap loops; VDD leg slightly longer, VSS leg shorter, total loop length modestly reduced."
+    },
+    {
+      "ref": "C15",
+      "xy": [
+        47.3,
+        30.4016
+      ],
+      "rotation": 270,
+      "purpose": "Free PB8/PB9 source copper, maintain local direct VDD/VSS loop"
+    },
+    {
+      "ref": "R28",
+      "xy": [
+        53,
+        28
+      ],
+      "rotation": 180,
+      "purpose": "BOOT0 pulldown removes old ground pad/thermal obstruction from PB5 fanout"
+    }
+  ],
+  "operations": [
+    {
+      "type": "route",
+      "id": "HI_4L_SWDIO_1_R1",
+      "net": "SWDIO",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          41.5,
+          21.25
+        ],
+        [
+          42.0,
+          20.75
+        ],
+        [
+          49.55,
+          20.75
+        ],
+        [
+          50.0,
+          21.2
+        ],
+        [
+          54.9,
+          21.2
+        ],
+        [
+          56.1,
+          20.0
+        ],
+        [
+          56.08,
+          20.0
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "via",
+      "id": "HI_4L_PA10_UART_RX_1_V1",
+      "net": "PA10_UART_RX",
+      "xy": [
+        43.55,
+        22.4
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "route",
+      "id": "HI_4L_PA10_UART_RX_1_R1",
+      "net": "PA10_UART_RX",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.0,
+          20.5
+        ],
+        [
+          40.9,
+          21.4
+        ],
+        [
+          40.9,
+          21.55
+        ],
+        [
+          41.75,
+          22.4
+        ],
+        [
+          43.55,
+          22.4
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_4L_PA10_UART_RX_1_R2",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          43.55,
+          22.4
+        ],
+        [
+          49.0,
+          22.4
+        ],
+        [
+          50.1,
+          23.5
+        ],
+        [
+          50.1016,
+          23.5
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    }
+  ],
+  "proofs": [
+    {
+      "from": "U1.34",
+      "to": "J9.3",
+      "connected": true
+    },
+    {
+      "from": "U1.31",
+      "to": "R17.1",
+      "connected": true
+    }
+  ],
+  "candidateReviews": [
+    {
+      "net": "SWDIO",
+      "joins": 1,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 1,
+      "seconds": 7.17
+    },
+    {
+      "net": "PA10_UART_RX",
+      "joins": 1,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 1,
+      "seconds": 9.21
+    },
+    {
+      "net": "PA9_UART_TX",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 6.1
+    },
+    {
+      "net": "USB_ATTACH_N",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 13.12
+    }
+  ],
+  "failures": [
+    {
+      "net": "PA9_UART_TX",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "ANCHOR_PA9_UART_TX",
+          "to": "R16.1",
+          "reason": "No geometric candidate after 10107 expanded cells"
+        }
+      ]
+    },
+    {
+      "net": "USB_ATTACH_N",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "ANCHOR_USB_ATTACH_N",
+          "to": "R10.2",
+          "reason": "No geometric candidate after 10035 expanded cells"
+        },
+        {
+          "from": "ANCHOR_USB_ATTACH_N",
+          "to": "Q2.1",
+          "reason": "No geometric candidate after 10035 expanded cells"
+        }
+      ]
+    }
+  ],
+  "scope": "Only specified ordinary nets; explicit critical routes excluded. Paths obey supplied geometry/clearance/keepout policies but this is not native DRC approval, automatic product routing, reference certification or manufacturing release.",
+  "pending": [
+    "Native batch create/update/DRC/fresh reopen",
+    "Actual reference continuity along both layers",
+    "Signal transition nearby GND return connections",
+    "Whole-board plane island/neck review",
+    "Physical/electrical class exceptions at actual positions"
+  ],
+  "seconds": 35.6
+}

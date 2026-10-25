@@ -1,0 +1,235 @@
+{
+  "status": "EXPLICIT_LOCAL_INTERFACE_CORRIDOR_CANDIDATE",
+  "operations": [
+    {
+      "type": "route",
+      "id": "RIGHT_SCL_EXPLICIT",
+      "net": "I2C_SCL",
+      "layer": "TOP",
+      "points": [
+        [
+          46.8,
+          26.65
+        ],
+        [
+          47,
+          26.45
+        ],
+        [
+          54,
+          26.45
+        ],
+        [
+          55.5,
+          27.95
+        ],
+        [
+          55.5,
+          34.18
+        ],
+        [
+          57.7,
+          34.18
+        ],
+        [
+          58.5,
+          34.98
+        ],
+        [
+          58.5,
+          35
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual interface corridor before long GPIO; actual return and full native review mandatory"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_SDA_EXPLICIT_BOTTOM",
+      "net": "I2C_SDA",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.8,
+          27.15
+        ],
+        [
+          47.2,
+          26.75
+        ],
+        [
+          47.2,
+          25.85
+        ],
+        [
+          58.5,
+          25.85
+        ],
+        [
+          60,
+          27.35
+        ],
+        [
+          60,
+          36.4
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual interface corridor before long GPIO; actual return and full native review mandatory"
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_SDA_FAR_VIA",
+      "net": "I2C_SDA",
+      "xy": [
+        60,
+        36.4
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3,
+      "purpose": "Real interface layer transition, no idle via"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_SDA_FAR_TOP",
+      "net": "I2C_SDA",
+      "layer": "TOP",
+      "points": [
+        [
+          60,
+          36.4
+        ],
+        [
+          59.4,
+          37
+        ],
+        [
+          58.5,
+          37
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual interface corridor before long GPIO; actual return and full native review mandatory"
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_BOOT_SOURCE_VIA",
+      "net": "BOOT0",
+      "xy": [
+        47.3,
+        27.45
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26,
+      "purpose": "Real interface layer transition, no idle via"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_BOOT_SOURCE_TOP",
+      "net": "BOOT0",
+      "layer": "TOP",
+      "points": [
+        [
+          46.8,
+          27.65
+        ],
+        [
+          47.1,
+          27.65
+        ],
+        [
+          47.3,
+          27.45
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual interface corridor before long GPIO; actual return and full native review mandatory"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_BOOT_BOTTOM",
+      "net": "BOOT0",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          47.3,
+          27.45
+        ],
+        [
+          51.15,
+          27.45
+        ],
+        [
+          52.9,
+          29.2
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual interface corridor before long GPIO; actual return and full native review mandatory"
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_BOOT_FAR_VIA",
+      "net": "BOOT0",
+      "xy": [
+        52.9,
+        29.2
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3,
+      "purpose": "Real interface layer transition, no idle via"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_BOOT_FAR_TOP",
+      "net": "BOOT0",
+      "layer": "TOP",
+      "points": [
+        [
+          52.9,
+          29.2
+        ],
+        [
+          52.9,
+          28.0016
+        ],
+        [
+          52.8984,
+          28
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual interface corridor before long GPIO; actual return and full native review mandatory"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_BOOT_R28_J8",
+      "net": "BOOT0",
+      "layer": "TOP",
+      "points": [
+        [
+          52.8984,
+          28
+        ],
+        [
+          53.3,
+          28
+        ],
+        [
+          54,
+          28.7
+        ],
+        [
+          54,
+          30.73
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual interface corridor before long GPIO; actual return and full native review mandatory"
+    }
+  ],
+  "revision": "v6 SCL left of R30 power and above BOOT_SERVICE transition without crossing R19 V3 pad"
+}

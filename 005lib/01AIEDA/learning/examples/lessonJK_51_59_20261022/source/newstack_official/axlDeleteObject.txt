@@ -1,0 +1,77 @@
+
+  NAME
+         axlDeleteObject - delete database elements based on DBID list
+  SYNOPSIS
+         axlDeleteObject(
+                 o_dbid/lo_dbid
+                 [g_mode]
+         ) ==> t/nil
+  FUNCTION
+         Deletes single or list of database objects from database.
+         Deletion of components deletes the symbol owner as well.
+         Deletion of nets is LOGIC only, and leaves the physical objects.
+ 
+         Command allows for ripup of associated etch via the ripup option.
+             axlDeleteObject(lo_dbid 'ripup)
+ 
+         Except for Nets, objects will get erased before they are deleted.
+         Only the Net's Ratsnests will get erases. Other parts of a Net will
+         not get erased because there is no ripup. If a Net is in a highlighted
+         state, it will get dehighlighted.
+ 
+         It allows deletion of the following parameter records:
+             artwork (films)
+                 Both individual films can be deleted and all films
+                 If all films are deleted then next time the 
+                 artwork dialog is opened then it will be 
+                 auto-populated with the default films
+                         
+             subclasses - subclasses must by empty and legal for 
+                         deletion (e.g. can't delete PIN subclasses)
+         When deleting parameter records, the current restriction
+         is to pass just the parameter record. Do not pass multiple
+         parameter objects or to mix them with non-paramter dbids.
+  NEEDS
+         o_dbid/lo_dbid  - list of AXL DBID's or single DBID
+         g_mode  - optional delete options.
+                    'ripup - enable etch ripup option (same as Allegro delete
+                             ripup command ripup option
+  RETURNS
+         t       - was able to delete objects
+         nil     - otherwise
+  CAUTION
+         If passed component or net dbid it will delete the logic. This 
+         is different from the Allegro delete command which deletes
+         only the physical objects associated with the logic 
+         (clines/vias for nets and symbol for components). To 
+         emulate the Allegro delete command behavior select then 
+         set objects selection using axlSetFindFilter with the 
+         "equivlogic" parameter passed to the ?enabled option 
+         (See example below).
+  EXAMPLE
+         1) Following example loops on axlSelect and axlDeleteObject,
+            deleting objects interactively selected by user. This 
+            could be dangerous because object is deleted without 
+            allowing oops (left as an exercise to the reader -- 
+            required use of axlDBStartTransaction and popup 
+            enhancement).
+ 
+         (defun DelElement ()
+             let ((mypopup)
+             "Delete selected Objects"
+             mypopup = axlUIPopupDefine(nil
+                 '(("Done" axlFinishEnterFun)
+                   ("Cancel" axlCancelEnterFun)))
+             axlUIPopupSet(mypopup)
+             axlSetFindFilter(?enabled '("ALL" "EQUIVLOGIC") ?onButtons '("ALL"))
+             while( axlSelect() axlDeleteObject(axlGetSelSet()))
+             axlUIPopupSet( axlUIPopupDefine(nil nil))
+          ))
+ 
+          2) Following deletes the TOP artwork film record:
+              p = axlGetParam("artwork:TOP")
+              axlDeleteObject(p)
+ 
+          3) Following deletes all films:
+              axlDeleteObject( axlGetParam("artwork") )
+

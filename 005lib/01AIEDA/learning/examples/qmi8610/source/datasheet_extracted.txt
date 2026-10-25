@@ -1,0 +1,5867 @@
+=== PDF PAGE 1 ===
+The information contained herein is the exclusive property of QST, and shall not be distributed, 
+reproduced, or disclosed in whole or in part without prior written permission of QST. 
+ 1 / 1 
+ 
+ 
+ 
+ 
+Document# 
+13-52-14 
+Title: 
+QMI8610 Datasheet 
+Rev:  A 
+Originator: 
+MKT/ James Fan 
+ 
+ 
+REVISION RECORD 
+Rev. 
+Date 
+Change Description 
+A 
+5/10/2018 
+Initial Release 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 2 ===
+The information contained herein is the exclusive property of QST, and shall not be distributed, 
+reproduced, or disclosed in whole or in part without prior written permission of QST. 
+ 2 / 2 
+ 
+Low Noise, Wide Bandwidth 6D Inertial 
+Measurement Unit with Motion Co-Processor 
+and Sensor Fusion 
+QMI8610 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Advanced Information
+Features 
+ 
+Low 
+6 mdps/√Hz 
+Gyroscope 
+Noise 
+and 
+Low-Latency, Wide Bandwidth for Drone Flight 
+Control and Gimbal Stabilization 
+ 
+Low Noise 50 µg/√Hz accelerometer 
+ 
+Complete Inertial Measurement Unit (IMU) with 
+Sensor Fusion Library with Specified Orientation 
+Accuracy of ±3º Pitch and Roll, ±5º Yaw/Heading  
+ 
+High-performance XKF3 6/9-axis sensor fusion 
+with in-run calibration for correction of gyro bias 
+drift over-temperature and lifetime 
+ 
+3-Axis Gyroscope and 3-Axis Accelerometer in a 
+Small 3.3 x 3.3 x 1 mm LGA Package 
+ 
+Integrated AttitudeEngineTM Motion Co-processor 
+with Vector DSP Performs Sensor Fusion at 1 kHz 
+Sampling Rate, while Outputting Data to Host 
+Processor at a Lower Rate – Improving Accuracy 
+while Reducing Processor MIPS, Power, and 
+Interrupt Requirements 
+ 
+UniqueChipID (UID) for Serialization of Parts 
+ 
+Large 1536 Byte FIFO can be used to Buffer 9DOF 
+Sensor Data to Lower System Power Dissipation  
+ 
+Motion on Demand Technology for Polling Based 
+Synchronization  
+ 
+Large Dynamic Range from ±32°/s to ±2,560°/s 
+and ±2 g to ±16 g 
+ 
+Low Power and Warm-Start Modes for Effective 
+Power Management 
+ 
+Digitally Programmable Sampling Rate and Filters 
+ 
+Host Serial Interface Supporting I2C or SPI 
+ 
+I2C Master for Interfacing External Magnetometer 
+ 
+Embedded Temperature Sensor  
+ 
+Wide Extended Operating Temperature Range  
+(-40°C to 85°C) 
+Description 
+QMI8610 
+is 
+a 
+complete 
+6D 
+MEMS 
+Inertial 
+Measurement Unit (IMU) with 9-axis sensor fusion and 
+specified system level orientation accuracy. When 
+using the QMI8610 in combination with the supplied 
+XKF3 9D-sensor fusion, the system features an 
+accurate ±3° pitch and roll orientation, and a ±5° 
+yaw/heading typical specification. 
+The QMI8610 is ideal for drone flight control and 
+gimbal stabilization. It features a low 6 mdps/√Hz 
+gyroscope noise and a low latency.  
+The QMI8610 incorporates a 3-axis Gyroscope and a 
+3-axis Accelerometer and can connect an external 
+3-axis magnetometer through an I2C master thus 
+forming a complete 9DOF system.  
+The QMI8610 also incorporates an advanced vector 
+Digital Signal Processor (DSP) motion co-processor 
+called 
+the 
+AttitudeEngine™. 
+The 
+AttitudeEngine 
+efficiently encodes high frequency motion at high 
+internal sampling rates, preserving full accuracy across 
+any output data rate.  
+This enables the application to utilize low Output Data 
+Rates (ODR) or on-demand (host polling) and still 
+acquire accurate 3D motion data. The AttitudeEngine 
+allows reducing the data processing and interrupt load 
+on a host processor with no compromises in 3D motion 
+tracking accuracy. The result is very low total system 
+power in combination with high accuracy, which are 
+essential to many portable and battery powered 
+applications. 
+Applications  
+ 
+Drone Flight Control and Gimbal Stabilization 
+ 
+Optical Image Stabilization (OIS) and Electrical 
+Image Stabilization (EIS) 
+ 
+Virtual Reality and Augmented Reality 
+ 
+Robotic Orientation and Position Tracking 
+ 
+Sport & Fitness Wearables 
+ 
+Pedestrian Navigation and GNSS Augmentation 
+
+=== PDF PAGE 3 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 3 / 3 
+                                                                                  
+ 
+  
+ 
+ 
+CONTENTS 
+CONTENTS ............................................................................................................................................................................... 3 
+1      General Information ........................................................................................................................................................... 5 
+1.1    Ordering Information ........................................................................................................................................................ 5 
+1.2  Marking Information ......................................................................................................................................................... 5 
+1.3  Internal Block Diagram ..................................................................................................................................................... 5 
+1.4  Application Diagrams ....................................................................................................................................................... 6 
+1.5    Package & Pin Information ............................................................................................................................................... 7 
+1.6 
+Recommended External Components .............................................................................................................................. 9 
+2 
+QMI8610 Architecture .................................................................................................................................................... 10 
+2.1  AttitudeEngine Mode Overview ..................................................................................................................................... 11 
+2.2  Advantages of the Attitude Engine Approach ................................................................................................................. 12 
+2.3    9D Sensor Fusion and Auto-Calibration using XKF3 .................................................................................................... 12 
+2.4  Frames of Reference and Conventions for Using QMI8610 ........................................................................................... 13 
+3  
+System, Electrical and Electro-Mechanical Characteristics ............................................................................................ 14 
+3.1    Absolute Maximum Ratings ........................................................................................................................................... 14 
+3.2    Recommended Operating Conditions ............................................................................................................................. 15 
+3.3    System Level Specifications ........................................................................................................................................... 16 
+3.4    Electro-Mechanical Specifications ................................................................................................................................. 17 
+3.5    Accelerometer Programmable Characteristics ................................................................................................................ 20 
+3.6    Gyroscope Programmable Characteristics ...................................................................................................................... 21 
+3.7    Electrical Characteristics ................................................................................................................................................ 22 
+3.8    Temperature Sensor ........................................................................................................................................................ 25 
+4  
+Register Map Overview .................................................................................................................................................. 26 
+5 
+Sensor Configuration Settings and Output Data ............................................................................................................. 30 
+5.1  Typical Sensor Mode Configuration and Output Data .................................................................................................... 30 
+5.2  AttitudeEngine Mode Configuration and Output Data ................................................................................................... 31 
+5.3  General Purpose Register ................................................................................................................................................ 32 
+5.4  Configuration Registers .................................................................................................................................................. 32 
+5.5 
+Status and Count Registers ............................................................................................................................................. 39 
+5.6 
+Sensor Data Output Registers ......................................................................................................................................... 40 
+5.7 
+CTRL 9 Functionality (Executing Pre-defined Commands) ........................................................................................... 45 
+
+=== PDF PAGE 4 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 4 / 4 
+                                                                                  
+ 
+  
+ 
+5.8 
+Interrupts ......................................................................................................................................................................... 51 
+6  
+Operating Modes ............................................................................................................................................................. 54 
+6.1  General Mode Transitioning ........................................................................................................................................... 58 
+6.2    Transition Times ............................................................................................................................................................. 58 
+7 
+FIFO Description ............................................................................................................................................................ 59 
+7.1    Using the FIFO ............................................................................................................................................................... 59 
+7.2    FIFO Register Description .............................................................................................................................................. 61 
+8  
+Wake On Motion (WoM) ................................................................................................................................................ 64 
+8.1  Wake on Motion Introduction ......................................................................................................................................... 64 
+8.2  Accelerometer Configuration .......................................................................................................................................... 65 
+8.3    Wake on Motion Event ................................................................................................................................................... 66 
+8.4    Configuration Procedure ................................................................................................................................................. 66 
+8.5    Wake on Motion Control Registers ................................................................................................................................ 67 
+8.6    Exiting Wake on Motion Mode ...................................................................................................................................... 68 
+9  
+Performing Device Self Test ........................................................................................................................................... 68 
+9.1  Accelerometer Self Test .................................................................................................................................................. 68 
+9.2  Gyroscope Self Test ........................................................................................................................................................ 69 
+10 
+Host Serial Interface ....................................................................................................................................................... 69 
+10.1    Serial Peripheral Interface (SPI) ................................................................................................................................... 69 
+10.2    I2C Interface .................................................................................................................................................................. 75 
+11 
+Package and Handling..................................................................................................................................................... 79 
+11.1    Package Drawing .......................................................................................................................................................... 79 
+11.2    Reflow Specification ..................................................................................................................................................... 80 
+11.3    Storage Specifications ................................................................................................................................................... 81 
+12 
+Related Resources ........................................................................................................................................................... 81 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 5 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 5 / 5 
+                                                                                  
+ 
+  
+ 
+1 General Information 
+1.1 Ordering Information 
+ 
+Table 1.  Ordering Information 
+ 
+Part Number 
+Package 
+Packing Method 
+QMI8610 
+LGA16 
+Tape & Reel 
+ 
+ 
+1.2 Marking Information 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 1. Top Mark 
+ 
+ 
+ 
+1.3 Internal Block Diagram 
+ 
+
+=== PDF PAGE 6 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 6 / 6 
+                                                                                  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+Figure 2. Internal Block Diagram 
+ 
+ 
+1.4 Application Diagrams 
+ 
+ 
+
+=== PDF PAGE 7 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 7 / 7 
+                                                                                  
+ 
+  
+ 
+ 
+ 
+ 
+Figure 3. Typical Application Diagram Showing QMC7983 Magnetometer and QMI8610 I2C Connected to the Host 
+Processor via I2C 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.5 Package & Pin Information 
+ 
+QMI8610
+
+=== PDF PAGE 8 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 8 / 8 
+                                                                                  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+Table 2. Pin Definitions 
+Pin # 
+Name 
+Alternate Name 
+Alternate Name 
+Description 
+1 
+RESV3 
+ 
+ 
+Reserved. Connect to Board Ground (GND) 
+2 
+VDDa 
+ 
+ 
+Power Supply for Analog 
+3 
+GNDa 
+ 
+ 
+Ground for Analog 
+4 
+RESV2 
+ 
+ 
+Reserved. No Connection (NC) 
+5 
+RESV1 
+ 
+ 
+Reserved. No Connection (NC) 
+6 
+SDA2 
+ 
+ 
+Master I2C Serial Data 
+7 
+SCL2 
+ 
+ 
+Master I2CSerial Clock 
+8 
+VDDd 
+ 
+ 
+Power Supply for Digital and IO Pins 
+9 
+SA0(1)(3)  
+SDO 
+ 
+Host I2C Slave Address LSB (SA0);  
+Host 4-Wire SPI Serial Data Output (SDO) 
+Figure 4. Pins Face Down (Top View) 
+Do Not Solder Center Pin (NC) 
+Figure 5. Pins Face Up (Bottom View) 
+Do Not Solder Center Pin (NC) 
+QMI8610
+QMI8610
+
+=== PDF PAGE 9 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 9 / 9 
+                                                                                  
+ 
+  
+ 
+Pin # 
+Name 
+Alternate Name 
+Alternate Name 
+Description 
+10(1) 
+CS 
+ 
+ 
+Host SPI Chip Select (1 = I2C Mode). See SPI Mode 
+Configuration section 
+11 
+INT2 
+DRDY 
+ 
+Interrupt2. Data Ready/FIFO Interrupt 
+12 
+INT1 
+CLKout 
+ 
+Interrupt1. General Purpose Interrupt. Clock out in 
+OIS Mode 
+13 
+SDA 
+SDI(2)(3) 
+SDI(2)(3) 
+Host I2C Serial Data (SDA);  
+Host 4-Wire SPI Serial Data Input (SDI);  
+Host 3-Wire SPI Serial Data Output (SDIO) 
+14 
+SCL 
+SPC(2)(3) 
+ 
+Host I2C Serial Clock (SCL);  
+Host SPI Serial Clock (SPC) 
+15 
+GNDd 
+ 
+ 
+Ground 
+16 
+RST *** 
+ 
+ 
+Reset Input. Assert for at least 5 µs. Part ready for 
+communication 50 µs after assertion. After RST, the 
+device will go through its boot process, please refer to 
+Table 7 and Table 8 for wakeup times. 
+ 
+Notes:  
+1. 
+This pin has an internal 200 K pull up resistor. 
+2. 
+In SPI mode (not in I2C Mode), there is an internal pull down 200 K resistor. 
+3. 
+Refer to Section 11 for detailed configuration information. 
+ 
+1.6 Recommended External Components 
+ 
+Table 3. Recommended External Components 
+ 
+Component 
+Description 
+Parameter 
+Typical 
+Cp1
+ 
+Capacitor 
+Capacitance 
+100 nF 
+Cp2 
+Capacitor 
+Capacitance 
+100 nF 
+Rpu(4)(5) 
+Resistor 
+Resistance 
+10 K 
+
+=== PDF PAGE 10 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 10 / 10 
+                                                                                  
+ 
+  
+ 
+Notes:  
+4. 
+Rpu is only needed when the Host Serial Interface is configured for I2C. They are not needed when the Host Serial 
+Interface is configured for SPI. See I2C Interface section. If Pull-up resistors are used on SCL and SDA, then both SPI and 
+I2C Modes are possible. If a Pull-up is used on SA0, an alternate slave address is used for I2C. SPI Mode will be unaltered 
+with the use of Pull-ups for I2C. 
+5. 
+Actual value required for Rpu depends on capacitance on the I2C bus. 
+ 
+ 
+Figure 6. Typical Electrical Connections 
+ 
+2 QMI8610 Architecture 
+QMI8610 is a smart sensor that combines a high-performance IMU with a powerful Single Instruction Multiple Data 
+(SIMD) based Vector DSP motion co-processor referred to as the AttitudeEngine™ (AE).  
+Included sensor fusion software (XKF3) allows the device to achieve orientation accuracies of ±3º for pitch and roll and 
+±5º for yaw/heading.   
+The QMI8610 includes a microcontroller for data scheduling, combined with Direct Memory Access (DMA) in order to 
+allow efficient data shuttling on the chip. Multi-channel data is easily processed at rates up to 1 kHz with minimal latency in 
+4 
+1 
+16 
+13 
+12 
+9 
+8 
+5 
+NC 
+NC 
+(RESV2) 
+GND 
+VDDa 
+GND 
+(RESV3) 
+SA0 
+CS 
+INT2 
+INT1 
+ 
+NC 
+(RESV1) 
+SDA2 
+SCL2 
+VDDd 
+RST 
+GND 
+SCL 
+SDA 
+GND 
+Cp2 
+VDDa 
+VDD I2C Bus 
+Rpu 
+Rpu 
+SCL/SPC 
+SDA/SDI/SDO 
+Pull-ups should be added when I2C interface is used. 
+GND 
+Cp1 
+VDDd 
+
+=== PDF PAGE 11 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 11 / 11 
+                                                                                  
+ 
+  
+ 
+normal operation (non-OIS modes) and at 8 kHz in OIS modes. 
+An internal block diagram is shown in Figure 2. The MEMS elements are amplified and converted by A/D converters, 
+which are synchronized to a common clock so that all the motion measurements of acceleration, angular rate and magnetic 
+heading are sampled at the same time minimizing any skew between channels. The data is then sent to a signal 
+processing chain that accomplishes decimation, filtering and calibration. 
+Once the data has been processed, it can be sent to the host processor depending on additional configuration settings, 
+such as, enabling the FIFO or using the AttitudeEngine. 
+ 
+ 
+2.1  
+AttitudeEngine Mode Overview 
+ 
+Brief descriptions of the major functions of the AttitudeEngine are discussed below, for more detail see Application 
+note AN-5083. Note that the AttitudeEngine may be enabled or disabled and configured using the CTRL6 register. 
+ 
+ 
+Calibration: QMI8610 applies continuous on-chip calibration of all the sensors (accelerometer, gyroscope, and 
+magnetometer) including scale, offset, and temperature calibration. When used in conjunction with a sensor fusion 
+filter (such as the Fairchild XKF3) running on the host processor, estimated sensor errors can be updated in-use, 
+allowing sensor calibration to be performed in the background without any host intervention. This offloads 
+computationally expensive per-sample re-calibration from the host processor to the QMI8610. 
+ 
+Sample Synchronization: QMI8610 automatically provides highly synchronous output between the various IMU 
+accelerometer and gyroscope channels through the use of fully parallel Σ∆-converters. The QMI8610 also provides 
+time synchronization of data between the IMU and the external magnetometer. 
+ 
+Motion Encoder: Performs 32-bit high-speed dead reckoning calculations at 1 kHz data rates allowing accurate 
+capture of high frequency and coning effects. Orientation and velocity increments are calculated with full coning and 
+sculling compensation and the magnetic field vector from the external magnetometer is rotated to the sensor frame of 
+reference. This allows the lossless encoding (compression) of 6D motion to a low output data rate, while maintaining 
+the accuracy provided by the 1 kHz input and data processing rate. Motion data encoded by the AttitudeEngine is 
+available at a user programmable data rate (1 Hz to 64 Hz). The orientation and velocity increments from the 
+AttitudeEngine are suitable for any 3D motion tracking application (orientation, velocity and position) and may be 
+further fused by the user with information from other sources such as a GNSS receiver or barometer in an optimal 
+estimator. 
+
+=== PDF PAGE 12 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 12 / 12 
+                                                                                  
+ 
+  
+ 
+ 
+Motion on Demand (MoD): QMI8610 allows the host to access encoded motion data asynchronously (polling) and on 
+demand. The motion data in the AttitudeEngine (AE) mode remains accurate even at very low output data rates. This 
+allows easy integration and synchronization with other sensors for state-of-the-art applications such as rolling shutter 
+camera stabilization, optical sensors software de-blurring, GNSS integration and augmented or virtual reality. 
+ 
+2.2  
+Advantages of the Attitude Engine Approach 
+ 
+The advantages of the AttitudeEngine (AE) approach over the traditional sensor approach are many and are briefly 
+discussed below, for more detail see Application note AN-5083. 
+ 
+ 
+Low-Power Architecture: Dead reckoning calculations are performed with the AE vector DSP that is designed to 
+perform essential calculations while achieving high-accuracy and low power simultaneously. The AE approach 
+enables a typical interrupt rate reduction to the host processor of 10x and can be up to 100x for some applications. 
+This significantly enhances the operational life of battery-powered devices without any compromises in 3D motion 
+tracking accuracy. 
+ 
+High Performance: The motion encoder and sample synchronizer enable highly accurate strap down integration that 
+can be fully compensated for coning and sculling artifacts. 
+ 
+2.3 9D Sensor Fusion and Auto-Calibration using XKF3 
+ 
+XKF3 is a sensor fusion algorithm, based on Extended Kalman Filter theory that fuses 3D inertial sensor data 
+(orientation and velocity increments) and 3D magnetometer, also known as ‘9D’, data to optimally estimate 3D orientation 
+with respect to an Earth fixed frame. 
+ 
+A license to use XKF3 in a CMSIS compliant library form for Cortex M0+, M3, M4, M4F, for commercial purposes is 
+provided with the QMI8610 Evaluation Kit (FEBQMI8610MEMS_IMU6D3X).   
+ 
+A restricted-use license for use of XKF3 for commercial purposes is also granted for certain applications when XKF3 is 
+used with the QMI8610. 
+ 
+XKF3 is developed by Xsens™, a pioneering company in inertial based 3D motion tracking. The first generation 9D 
+sensor fusion algorithms were developed by Xsens more than 15 years ago and have been proven in demanding 24/7 
+
+=== PDF PAGE 13 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 13 / 13 
+                                                                                  
+ 
+  
+ 
+continuous use for a broad range of applications; from unmanned underwater robotics to accurate joint angle 
+measurements for rehabilitation and sports. The XKF3 algorithm is wholly owned by Fairchild. 
+ 
+XKF3 works with the FIS series of IMUs such as the QMI8610 and supported magnetometers. Refer to the 
+FEBQMI8610 Evaluation Board document for further details. 
+ 
+For additional information, refer to AN-5084 application note for more details on XKF3 and its benefits 
+ 
+ 
+XKF3 Features: 
+ 
+ 
+Continuous Sensor Auto Calibration, No User Interaction Required 
+ 
+High Accuracy, Real-Time, Low-Latency Optimal estimate of 3D Orientation, up to 1 kHz output data rate 
+ 
+Ultra low system power for 3D Orientation enabled by AttitudeEngine, between 8 to 64 Hz output data rate without any 
+degradation in accuracy 
+ 
+Best-in-Class Immunity to Magnetic Distortions 
+ 
+Best-in-Class Immunity to Transient Accelerations 
+ 
+Flexible use Scenarios, North Referenced, Unreferenced 
+ 
+Extensive Status Reporting for Smooth Integration in Applications 
+ 
+Optimized Library for Popular Microcontrollers 
+ 
+ 
+ 
+ 
+Figure 7. Chip Orientation Coordinate System 
+ 
+ 
+2.4  Frames of Reference and Conventions for Using QMI8610 
+ 
+QMI8610 uses a right-handed coordinate system as the basis for the sensor frame of reference. Acceleration 
+
+=== PDF PAGE 14 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 14 / 14 
+                                                                                  
+ 
+  
+ 
+(ax,
+a
+　
+y,
+a
+　
+z) are given with respect to the X-Y-Z co-ordinate system shown above Increasing accelerations along the 
+positive X-Y-Z axis are considered positive. Angular Rate (x, y, z) around the counter clockwise direction are considered 
+positive. Magnetic fields (mx, my, mz) can be configured to be expressed in the sensor X-Y-Z coordinates as well. Care 
+must be taken to make sure that QMI8610 and the magnetic sensor of choice are mounted on the board so that the 
+coordinate systems of the two sensors are substantially orthogonal. Figure 9 shows the various frames of reference and 
+conventions for using the QMI8610. 
+ 
+The accelerometer, gyroscope, and the optional external magnetometer are enabled or disabled using the aEN, gEN 
+and mEN bits in the CTRL7 register respectively. AE Mode may be enabled or disabled using the sEN bit in CTRL7 register. 
+The outputs available in Typical Sensor Mode and AttitudeEngine™ Modes are outlined below in Table 22 and Table 23. A 
+list and description of QMI8610 Operational Modes is provided in Table 32. A FIFO buffer is also available to store sample 
+history. The FIFO may be configured separately using FIFO_CTRL, FIFO_STATUS and FIFO_DATA. The FIFO control is 
+described in detail in the FIFO Description section. 
+ 
+ 
+ 
+3  System, Electrical and Electro-Mechanical Characteristics 
+3.1 Absolute Maximum Ratings 
+ 
+Stresses exceeding the absolute maximum ratings may damage the device. The device may not function or be 
+operable above the recommended operating conditions. Stressing the parts to these levels is not recommended. In 
+addition, extended exposure to stresses above the recommended operating conditions may affect device reliability. The 
+absolute maximum ratings are stress ratings only. 
+ 
+Table 4. Absolute Maximum Ratings 
+ 
+Symbol 
+Parameter 
+Min. 
+Max. 
+Unit 
+TSTG 
+Storage Temperature 
+-40 
++125 
+°C 
+TPmax 
+Lead Soldering Temperature, 10 Seconds  
+ 
++260 
+°C 
+VDDa 
+Supply Voltage 
+-0.3 
+3.6 
+V 
+VDDd 
+I/O Pins Supply Voltage 
+-0.30 
+2.05 
+V 
+
+=== PDF PAGE 15 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 15 / 15 
+                                                                                  
+ 
+  
+ 
+Symbol 
+Parameter 
+Min. 
+Max. 
+Unit 
+Sg(6) 
+Acceleration g for 0.2 ms (Un-powered) 
+ 
+10,000 
+g 
+ESD(7) 
+Electrostatic Discharge 
+Protection Level 
+Human Body Model per JES001-2014 
+±2000 
+V 
+Charged Device Model per JESD22-C101 
+±500 
+ 
+Notes: 
+6. 
+This is a mechanical shock (g) sensitive device. Proper handling is required to prevent damage to the part. 
+7. 
+This is an ESD-sensitive device. Proper handling is required to prevent damage to the part. 
+ 
+ 
+3.2 Recommended Operating Conditions 
+ 
+The Recommended Operating Conditions table defines the conditions for actual device operation. Recommended 
+operating conditions are specified to ensure optimal performance. Fairchild does not recommend exceeding them or 
+designing to Absolute Maximum Ratings. 
+ 
+Table 5. Recommended Operating Conditions 
+ 
+Symbol 
+Parameter 
+Min. 
+Typ. 
+Max. 
+Unit 
+VDDa 
+Supply Voltage  
+(See Figure 10 for power supply sequencing 
+requirements) 
+2.7 
+3.3 
+3.47 
+V 
+VDDd 
+I/O Pins Supply 
+Voltage 
+1.62 
+1.80 
+1.98 
+V 
+VIL 
+Digital Low Level Input Voltage 
+ 
+ 
+0.3 *VDDd
+V 
+VIH 
+Digital High Level Input Voltage 
+0.7 *VDDd
+ 
+ 
+V 
+VOL 
+Digital Low Level Output Voltage 
+ 
+ 
+0.1 *VDDd
+V 
+VOH 
+Digital High Level Output Voltage 
+0.9 *VDDd
+ 
+ 
+V 
+ 
+Power Supply Sequencing 
+ 
+
+=== PDF PAGE 16 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 16 / 16 
+                                                                                  
+ 
+  
+ 
+ 
+ 
+Figure 8. Power Supply Sequencing (VDDa must reach 90% of final value before VDDd is raised) 
+ 
+ 
+ 
+3.3 System Level Specifications 
+ 
+System level specifications are provided to give guidance on the system performance in a recommended and typical 
+configuration. The recommended system configuration is the QMI8610 and optionally a supported 3D magnetometer used 
+with a supported host processor, running the Fairchild XKF3 9D-sensor fusion and having executed and stored the result of 
+the “Board Level Calibration” routine (see AN-5085 application note). The system performance specifications assume that 
+good engineering practices for the placement conditions of the QMI8610 and 3D magnetometer are taken into account. For 
+example, take care not to place the QMI8610 where strong vibrations may occur or even be amplified; take care not to 
+place the 3D magnetometer where magnetic fields other than the Earth magnetic field may be measured. Typical numbers 
+are provided below unless otherwise noted. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table 6. System Level 3D Orientation Accuracy Specifications 
+
+=== PDF PAGE 17 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 17 / 17 
+                                                                                  
+ 
+  
+ 
+Subsystem 
+Parameter 
+Typical 
+Unit 
+Comments 
+QMI8610+XKF3 
+Quaternion 
+Roll 
+±3 
+deg 
+Requires use of XKF3 software library on 
+host processor. 
+Pitch 
+±3 
+deg
+Requires use of XKF3 software library on 
+host processor. 
+Yaw (Heading) 
+Referenced to North 
+±5 
+deg 
+Requires use of XKF3 software library on 
+host processor, using magnetometer, in a 
+homogenous Earth magnetic field. 
+Yaw (Heading) Unreferenced 
+5-25 
+deg/h 
+From Allan Variance bias instability. 
+Does not require a magnetometer.  
+(See specification above for use with 
+magnetometer.) 
+Fully immune to magnetic distortions. 
+QMI8610+XKF3 
+Quaternion 
+Output Data Rate 
+8 - 1000 
+Hz 
+To benefit from the power saving using the 
+AttitudeEngine, use a max ODR of 64 Hz. 
+ 
+ 
+3.4 Electro-Mechanical Specifications 
+ 
+ 
+VDDd = 1.8 V, VDDa = 3.3 V, T = 25°C unless otherwise noted. See Figure 8 for power supply sequencing requirements 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table 7. Accelerometer Electro-Mechanical Specifications 
+ 
+ 
+
+=== PDF PAGE 18 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 18 / 18 
+                                                                                  
+ 
+  
+ 
+Subsystem 
+Parameter 
+Typical 
+Unit 
+Comments 
+Accelerometer 
+Noise Density 
+50 
+　g/√Hz  High-Resolution Mode 
+Sensitivity Scale Factor 
+Scale Setting
+Sensitivity
+LSB/g 
+16-Bit Output 
+±2 g 
+16,384 
+±4 g 
+8,192 
+±8 g 
+4,096 
+±16 g 
+2,048 
+Cross-Axis Sensitivity 
+±1 
+% 
+ 
+Temperature 
+Coefficient 
+of 
+Offset (TCO) 
+±0.5 
+mg/°C 
+Over-Temperature Range of  
+-40°C to 85°C at Board Level 
+Temperature 
+Coefficient 
+of 
+Sensitivity (TCS) 
+±0.01 
+%/°C 
+ 
+Initial Offset Tolerance 
+±150 
+mg 
+Board Level 
+Initial Sensitivity Tolerance 
+±1 
+% 
+Board Level 
+Non-Linearity 
+±1 
+% 
+Best Fit Line 
+System Turn On Time(8) 
+1.75 
+s 
+From Hardware Reset, No 
+Power, or Power Down to
+Power-on Default state = t0 in
+Figure 11 
+ 
+Accel Turn On Time 
+3 ms + 3/ODR 
+ms 
+Accel Turn on from Power-On 
+Default state or from Low 
+Power state = t2 + t5 in Figure 
+11. 
+ 
+ 
+Note: 
+8. 
+System Turn On Time starts once VDDd and VDDa are within 1% of Final Value. 
+ 
+Table 8. Gyroscope Electro-Mechanical Specifications 
+
+=== PDF PAGE 19 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 19 / 19 
+                                                                                  
+ 
+  
+ 
+Subsystem 
+Parameter 
+Typical 
+Unit 
+Comments 
+Gyroscope 
+Sensitivity 
+Scale 
+Setting 
+Sensitivity
+LSB/dps 
+16-Bit Output 
+±32 dps 
+1024 
+±64 dps 
+512 
+±128 dps
+256 
+±256 dps
+128 
+±512 dps
+64 
+±1024 dps
+32 
+±2048 dps
+16 
+±2560 dps
+8 
+Natural Frequency 
+19.6 
+kHz 
+ 
+Noise Density 
+6 
+mdps/√Hz 
+High-Resolution Mode 
+Non-Linearity 
+0.1 
+% 
+ 
+Cross-Axis Sensitivity 
+±2 
+% 
+ 
+g-Sensitivity 
+±0.1 
+dps/g 
+ 
+System Turn On Time(9) 
+1.75 
+s 
+From Hardware Reset, No Power, 
+or Power Down to Power-on 
+Default state = t0 in Figure 11 
+Gyro Turn On Time 
+60 ms + 3/ODR 
+ms 
+Gyro Turn on from Power-On 
+Default = t1 + t5 in Figure 11 
+Gyro Warm Start Turn On 
+Time 
+5 ms + 3/ODR 
+ms 
+From Gyro Warm-Start to Gyro 
+Only or Accel + Gyro modes = t4 
++ t5 in Figure 11 
+Temperature Coefficient 
+of Offset (TCO) 
+X & Y Axis
+±0.05 
+dps/°C 
+Over-Temperature 
+Range 
+of 
+-40°C to 85°C 
+Z Axis 
+±0.02 
+Temperature Coefficient 
+of Sensitivity (TCS) 
+X & Y Axis
+±0.05 
+%/°C 
+Over-Temperature 
+Range 
+of 
+-40°C to 85°C 
+Z Axis 
+±0.01 
+
+=== PDF PAGE 20 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 20 / 20 
+                                                                                  
+ 
+  
+ 
+Subsystem 
+Parameter 
+Typical 
+Unit 
+Comments 
+Gyroscope 
+Initial Offset Tolerance 
+±10 
+dps 
+Board Level 
+Initial Sensitivity 
+Tolerance 
+±1.5 
+% 
+Board Level 
+ 
+Note: 
+9. 
+System Turn On Time starts once VDDd and VDDa are within 1% of Final Value 
+ 
+Table 9. Magnetometer and AttitudeEngine Range and Scale 
+ 
+Subsystem 
+Parameter 
+Typical 
+Unit 
+Comments 
+Scale 
+Setting 
+Sensitivity 
+Typical 
+Sensor Mode 
+Magnetometer Sensitivity 
+Scale Factor 
+±32 gauss
+1,024 
+LSB/gauss 
+16 Bit Output 
+AE Mode 
+Magnetometer Sensitivity 
+Scale Factor 
+±32 gauss
+1,024 
+LSB/gauss 
+Orientation Increment 
+(quaternion) Sensitivity 
+Scale Factor 
+±1 
+16,384 
+LSB/unit 
+Velocity Increment 
+Sensitivity Scale Factor 
+±32 
+1,024 
+LSB/ms 
+ 
+ 
+3.5 Accelerometer Programmable Characteristics 
+ 
+VDDd = 1.8 V, VDDa = 3.3 V, T = 25°C unless otherwise noted. Typical numbers are provided below unless otherwise 
+noted. All frequencies are ±5% and are synchronized to the gyro oscillator (“drive”) frequency. (See Figure 8 for power 
+supply sequencing requirements.) 
+ 
+Table 10. Accelerometer Noise Density 
+
+=== PDF PAGE 21 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 21 / 21 
+                                                                                  
+ 
+  
+ 
+Mode 
+High-Resolution 
+Low-Power 
+Unit 
+ODR 
+1000 
+250 
+125 
+31.25
+125 
+62.5 
+25 
+3 
+Hz 
+Typical Noise Density 
+50 
+50 
+50 
+50 
+125 
+180 
+285 
+700 
+g/√Hz
+ 
+Table 11. Accelerometer Filter Characteristics(10) 
+ 
+Mode 
+High-Resolution 
+Low-Power 
+Unit
+ODR 
+1000 
+250 
+125 
+31.25 
+125 
+62.5 
+25 
+3 
+Hz 
+Bandwidth 
+500 
+125 
+62.5 
+15.625
+62.5 
+31.25 
+12.5 
+1.5 
+Bandwidth with Low-Pass Filter 
+Enabled (aLPF=1) 
+200 
+50 
+25 
+5 
+25 
+15 
+5 
+0.6 
+Corner Frequency(fc) with 
+High-Pass Filter Enabled (aHPF=1) 
+2.50 
+0.60 
+0.30 
+0.08 
+0.30 
+0.15 
+0.10 
+0.013
+ 
+Note: 
+10. All frequencies are ±5% and are synchronized to the gyro oscillator (“drive”) frequency. 
+ 
+ 
+3.6 Gyroscope Programmable Characteristics 
+ 
+VDDd = 1.8 V, VDDa = 3.3 V, T = 25°C, and represent typical numbers unless otherwise noted. All frequencies are ±5% 
+and are synchronized to the gyro oscillator (“drive”) frequency. (See Figure 8 for power supply sequencing requirements.) 
+ 
+Table 12. Gyroscope Filter Characteristics 
+ 
+Mode 
+High-Resolution 
+Snooze 
+Warm-Start 
+OIS 
+OIS LL 
+Unit 
+ODR 
+gHPF=0 
+1000 
+250 
+125 
+31.25 
+Snooze 
+8100 
+8100 
+Hz 
+Bandwidth  
+gLPF=0 
+500 
+125 
+62.5 
+15.625
+N/A 
+4050 
+2000 
+gLPF=1 
+200 
+50 
+25 
+6 
+N/A 
+345 
+N/A(11) 
+
+=== PDF PAGE 22 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 22 / 22 
+                                                                                  
+ 
+  
+ 
+Mode 
+High-Resolution 
+Snooze 
+Warm-Start 
+OIS 
+OIS LL 
+Unit 
+Corner Frequency (fc) 
+with High-Pass Filter 
+Enabled (gHPF=1) 
+gHPF01=0 
+2.5 
+0.625
+0.3125
+0.08 
+N/A 
+0.1 
+N/A(11) 
+Hz 
+gHPF01=1 
+0.1 
+0.025
+0.0125
+0.0032
+N/A 
+0.1 
+N/A(11) 
+ 
+Note: 
+11. For OIS LL mode, no filters can be enabled; gLPF=0 and gHPF=0 should be maintained. 
+ 
+Table 13. Optical Image Stabilization (OIS) Group Delay 
+ 
+Group Delay 
+At Frequency (Hz) 
+Filter Bandwidth (Hz) 
+Typical 
+Unit 
+10 
+4050 
+0.11 
+ms 
+2000 (OIS LL) 
+0.5 
+345 
+1.1 
+ 
+ 
+3.7 Electrical Characteristics 
+ 
+VDDd = 1.8 V; VDDa = 3.3 V; T = 25°C unless otherwise noted. See Figure 8 for power supply sequencing requirements 
+ 
+Table 14. Electrical Subsystem Characteristics 
+ 
+Symbol 
+Parameter 
+Min. 
+Typ. 
+Max. 
+Unit 
+fSPC 
+Host SPI Interface Speed 
+ 
+10 
+ 
+MHz 
+fSCL 
+Host I2C Interface Speed 
+Standard Mode 
+ 
+100 
+ 
+kHz 
+Fast Mode 
+400 
+fSCL2 
+Master I2C Interface Speed(12) 
+Standard Mode 
+ 
+25 
+ 
+kHz 
+Fast Mode 
+300 
+ 
+
+=== PDF PAGE 23 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 23 / 23 
+                                                                                  
+ 
+  
+ 
+Note: 
+12. When only accelerometer is enabled, I2C master operates at 25 kHz. When gyroscope is enabled, I2C master 
+operates at 300 kHz. 
+ 
+3.7.1 
+Current Consumption 
+ 
+VDDd = 1.8 V, VDDa = 3.3 V, T = 25°C unless otherwise noted. Typical numbers are provided below. (See Figure 8 for 
+power supply sequencing requirements) 
+ 
+Table 15. Current Consumption for Accelerometer Only Typical Sensor Mode (Gyroscope Disabled) 
+ 
+Mode 
+High-Resolution 
+Low-Power 
+Unit 
+ODR 
+1000
+250 
+125 
+31.25 
+125 
+62.5 
+25 
+3 
+Hz 
+Typical Analog Current IDDa(13) 
+220
+220 
+220 
+220 
+35 
+35 
+20 
+7 
+A 
+Typical Digital 
+Current IDDd 
+(14) 
+Filters Disabled  
+(aLPF=0; aHPF=0) 
+100
+70 
+65 
+60 
+20 
+15 
+10 
+8 
+Filters Enabled (aLPF=1; 
+aHPF=1) 
+108
+71 
+66 
+61 
+21 
+16 
+10 
+8 
+ 
+ 
+Table 16. Current Consumption for Gyroscope Only Typical Sensor Mode (Accelerometer Disabled) 
+ 
+Mode 
+High-Resolution 
+Snooze 
+Warm-Start 
+OIS, OIS 
+LL(15) 
+Unit
+ODR 
+1000
+250 
+125 
+31.25
+Snooze 
+8100 
+Hz 
+Typical Analog Current IDDa(13) 
+2540
+2540
+2540
+2540 
+1240 
+2540 
+A 
+Typical Digital 
+Current IDDd 
+(14) 
+Filters Disabled (gLPF=0; 
+gHPF=0; gHPF01=0) 
+740 
+710 
+705 
+700 
+570 
+1100 
+Filters Enabled (gLPF=1; 
+gHPF=1; gHPF01=0) 
+740 
+710 
+705 
+700 
+570 
+1100 
+ 
+
+=== PDF PAGE 24 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 24 / 24 
+                                                                                  
+ 
+  
+ 
+Notes: 
+13. IDDa is the current drawn from the analog supply VDDa. 
+14. IDDd is the current drawn from the digital supply VDDd. 
+15. For OIS LL mode, no filters can be enabled; gLPF=0 and gHPF=0 should be maintained. 
+ 
+ 
+Table 17. Current Consumption for 6DOF Typical Sensor Mode (Accelerometer and Gyroscope Enabled) 
+ 
+Mode 
+High-Resolution 
+Unit
+ODR 
+1000
+250 
+125 
+31.25
+Hz 
+Typical Analog Current IDDa 
+2750
+2750 
+2750 
+2750 
+A 
+Typical Digital 
+Current IDDd 
+Filters Disabled (aLPF=0; gLPF=0;  
+aHPF=0; gHPF=0; gHPF01=0) 
+815 
+780 
+780 
+780 
+Filters Enabled (aLPF=1; gLPF=1;  
+aHPF=1; gHPF=1; gHPF01=0) 
+830 
+790 
+780 
+780 
+ 
+ 
+Table 18. Current Consumption for 6DOF Attitude Engine Mode (without Magnetometer) 
+ 
+Mode 
+ 
+Unit 
+ODR Setting 
+1 
+2 
+4 
+8 
+16 
+32 
+64 
+Hz 
+Typical Analog Current IDDa 
+2750 
+2750 
+2750 
+2750 
+2750 
+2750 
+2750 
+A 
+Typical Digital 
+Current IDDd 
+Filters Disabled 
+(aLPF=0; gLPF=0) 
+930 
+930 
+930 
+930 
+930 
+930 
+930 
+Filters Enabled 
+(aLPF=1; gLPF=1) 
+940 
+940 
+940 
+940 
+940 
+940 
+940 
+ 
+ 
+Table 19. Current Consumption for 9DOF Attitude Engine Mode (with Magnetometer) 
+ 
+
+=== PDF PAGE 25 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 25 / 25 
+                                                                                  
+ 
+  
+ 
+Mode 
+ 
+Unit 
+ODR 
+1 
+2 
+4 
+8 
+16 
+32 
+Hz 
+Typical Analog Current IDDa 
+2750 
+2750 
+2750 
+2750 
+2750 
+2750 
+A 
+Typical Digital 
+Current IDDd 
+With Magnetometer at 
+32 Hz 
+990 
+990 
+990 
+990 
+990 
+990 
+ 
+ 
+3.8 Temperature Sensor 
+ 
+The QMI8610 is equipped with an internal 12-bit embedded temperature sensor that is automatically turned on by 
+default whenever the accelerometer or gyroscope is enabled. The temperature sensor is used internally to correct the 
+temperature dependency of calibration parameters of the accelerometer and gyroscope. The temperature compensation is 
+optimal in the range of -40°C to 85°C with a resolution of 0.0625°C (1/16 °C) or inversely, 16 LSB/ °C. 
+ 
+The QMI8610 outputs the internal chip temperature that the HOST can read. This external output is truncated to an 
+8-bit resolution so that the HOST sees 1°C per LSB resolution. This is not representative of the accuracy used internally to 
+model and compensate for temperature effects on calibration parameters. To read the temperature, the HOST needs to 
+access the TEMP register (see Data Output Registers in Table 21. The HOST should synchronize to the interrupt, INT2, 
+signal to get valid temperature readings. 
+ 
+Table 20. Temperature Sensor Specifications 
+ 
+Subsystem 
+Parameter 
+Typical 
+Unit 
+Digital Temperature Sensor 
+Range 
+-40 to +85 
+°C 
+Internal Resolution 
+12 
+Bits 
+Internal Sensitivity 
+16 
+LSB/°C
+Output Register Width 
+8 
+Bits 
+Output Sensitivity 
+1 
+LSB/°C
+Refresh Rate 
+10 
+Hz 
+ 
+
+=== PDF PAGE 26 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 26 / 26 
+                                                                                  
+ 
+  
+ 
+4  Register Map Overview 
+The QMI8610 has various registers that enable programming and control of the inertial measurement unit and 
+associated on-chip signal processing. The register map may be classified into the following register categories: 
+ 
+ 
+General Purpose Registers 
+ 
+Setup and Control Registers: Controls various aspects of the IMU. 
+ 
+Host Controlled Calibration Registers: Controls and Configures various aspects of the IMU via Host Command 
+interface called CTRL9 　 
+ 
+ 
+Count Register for time stamping the sensor samples 
+ 
+FIFO Registers: To setup the FIFO and detect data availability and over-run. 
+ 
+Data Output Registers: Contains all data for 9D sensors. 
+ 
+QMI8610 registers are divided into two banks of 64 registers with the second register bank reserved for future use. 
+Both register banks may be accessed from I2C or SPI. A detailed description of each register including the register settings 
+necessary to configure the QMI8610 operational modes is provided in Section 5. 
+ 
+Table 21. Register Overview 
+ 
+Name 
+Type 
+Register Address 
+Default 
+Comments 
+Dec Hex 
+Binary 
+General Purpose Registers 
+WHO_AM_I 
+r 
+0 
+00 
+00000000 
+11111100 Device Identifier 
+Setup and Control Registers 
+CTRL1 
+rw 
+2 
+02 
+00000010 
+00000000
+SPI Interface and Sensor Enable (for clock and power 
+management) 
+CTRL2 
+rw 
+3 
+03 
+00000011 
+00000000 Accelerometer: Output Data Rate, Full Scale, Self Test 
+CTRL3 
+rw 
+4 
+04 
+00000100 
+00000000 Gyroscope: Output Data Rate, Full Scale, Self Test 
+CTRL4 
+rw 
+5 
+05 
+00000101 
+00000000
+Magnetometer Settings: Output Data Rate, and Device 
+Selection 
+
+=== PDF PAGE 27 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 27 / 27 
+                                                                                  
+ 
+  
+ 
+Name 
+Type 
+Register Address 
+Default 
+Comment 
+Dec Hex 
+Binary 
+CTRL5 
+rw 
+6 
+06 
+00000110 
+00000000 Data Processing Settings 
+CTRL6 
+rw 
+7 
+07 
+00000111 
+00000000
+AttitudeEngine™ Settings: Output Data Rate, Motion on 
+Demand 
+CTRL7 
+rw 
+8 
+08 
+00001000 
+00000000 Enable Sensors, syncSmpl 
+CTRL8 
+rw 
+9 
+09 
+00001001 
+00000000 Reserved: Not Used 
+CTRL9 
+rw 
+10 
+0A 
+00001010 
+00000000 Host commands 
+Host Controlled Calibration Registers (See CTRL9, Usage is Optional) 
+CAL1_L 
+rw 
+11 
+0B 
+00001011 
+00000000 Calibration Register 
+CAL1_L – lower 8 bits. CAL1_H – upper 8 bits. 
+CAL1_H 
+rw 
+12 
+0C 
+00001100 
+00000000
+CAL2_L 
+rw 
+13 
+0D 
+00001101 
+00000000 Calibration Register 
+CAL2_L – lower 8 bits. CAL2_H – upper 8 bits. 
+CAL2_H 
+rw 
+14 
+0E 
+00001110 
+00000000
+CAL3_L 
+rw 
+15 
+0F 
+00001111 
+00000000 Calibration Register 
+CAL3_L – lower 8 bits. CAL3_H – upper 8 bits. 
+CAL3_H 
+rw 
+16 
+10 
+00010000 
+00000000
+CAL4_L 
+rw 
+17 
+11 
+00010001 
+00000000 Calibration Register 
+CAL4_L – lower 8 bits. CAL4_H – upper 8 bits. 
+CAL4_H 
+rw 
+18 
+12 
+00010010 
+00000000
+FIFO Registers 
+FIFO_CTRL 
+rw 
+19 
+13 
+00010011 
+00000000 FIFO Setup 
+FIFO_DATA 
+r 
+20 
+14 
+00010100 
+00000000 FIFO Data 
+FIFO_STATUS 
+r 
+21 
+15 
+00010101 
+00000000 FIFO Status 
+ 
+ 
+Table 21. Register Overview (Continued) 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 28 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 28 / 28 
+                                                                                  
+ 
+  
+ 
+Name 
+Type 
+Register Address 
+Default 
+Comment 
+Dec 
+Hex 
+Binary 
+Status Registers 
+STATUS0 
+r 
+22 
+16 
+00010110 
+00000000 Output Data Over Run and Data Availability 
+STATUS1 
+r 
+23 
+17 
+00010111 
+00000000
+Miscellaneous Status: Wake on Motion, FIFO ready, 
+CmdDone (CTRL9 protocol bit) 
+Count Register  
+CNT_OUT 
+r 
+24 
+18 
+00011000 00000000 Sample Time Stamp (Count Output) 
+Data Output Registers (16 bits 2’compliment except self test sensor data, AE-REG1 and AE_REG2) 
+AX_L 
+r 
+25 
+19 
+00011001 00000000 X-axis Acceleration  
+AX_L – lower 8 bits. AX_H – upper 8 bits.  
+AX_H 
+r 
+26 
+1A 
+00011010 00000000
+AY_L 
+r 
+27 
+1B 
+00011011 00000000 Y-axis Acceleration  
+AY_L – lower 8 bits. AY_H – upper 8 bits. 
+AY_H 
+r 
+28 
+1C 
+00011100 00000000
+AZ_L 
+r 
+29 
+1D 
+00011101 00000000 Z-axis Acceleration  
+AZ_L – lower 8 bits. AZ_H – upper 8 bits. 
+AZ_H 
+r 
+30 
+1E 
+00011110 00000000
+GX_L 
+r 
+31 
+1F 
+00011111 00000000 X-axis Angular Rate  
+GX_L – lower 8 bits. GX_H – upper 8 bits. 
+GX_H 
+r 
+32 
+20 
+00100000 00000000
+GY_L 
+r 
+33 
+21 
+00100001 00000000 Y-axis Angular Rate  
+GY_L – lower 8 bits. GY_H – upper 8 bits. 
+GY_H 
+r 
+34 
+22 
+00100010 00000000
+GZ_L 
+r 
+35 
+23 
+00100011 00000000 Z-axis Angular Rate  
+GZ_L – lower 8 bits. GZ_H – upper 8 bits. 
+GZ_H 
+r 
+36 
+24 
+00100100 00000000
+MX_L 
+r 
+37 
+25 
+00100101 00000000 X-axis Magnetic Field  
+MX_L – lower 8 bits. MX_H – upper 8 bits. 
+MX_H 
+r 
+38 
+26 
+00100110 00000000
+MY_L 
+r 
+39 
+27 
+00100111 00000000 Y-axis Magnetic Field . 
+MY_L – lower 8 bits. MY_H – upper 8 bits. 
+MY_H 
+r 
+40 
+28 
+00101000 00000000
+MZ_L 
+r 
+41 
+29 
+00101001 00000000 Z-axis Magnetic Field. 
+MZ_L – lower 8 bits. MZ_H – upper 8 bits. 
+MZ_H 
+r 
+42 
+2A 
+00101010 00000000
+dQW_L 
+r 
+45 
+2D 
+00101101 00000000 Quaternion Increment dQW.  dQW_L – lower 8 bits. dQW_H 
+– upper 8 bits; or part of UniqueChipID(16). 
+dQW_H 
+r 
+46 
+2E 
+00101110 00000000
+dQX_L 
+r 
+47 
+2F 
+00101111 00000000 Quaternion Increment dQX. dQX_L – lower 8 bits. dQX_H –
+upper 8 bits; or part of UniqueChipID(16). 
+dQX_H 
+r 
+48 
+30 
+00110000 00000000
+
+=== PDF PAGE 29 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 29 / 29 
+                                                                                  
+ 
+  
+ 
+Name 
+Type 
+Register Address 
+Default 
+Comment 
+Dec 
+Hex 
+Binary 
+dQY_L 
+r 
+49 
+31 
+00110001 00000000 Quaternion Increment dQY. 
+dQY_L – lower 8 bits. dQY_H – upper 8 bits. 
+dQY_H 
+r 
+50 
+32 
+00110010 00000000
+dQZ_L 
+r 
+51 
+33 
+00110011 00000000 Quaternion Increment dQZ  
+dQZ_L – lower 8 bits. dQZ_H – upper 8 bits. 
+dQZ_H 
+r 
+52 
+34 
+00110100 00000000
+dVX_L 
+r 
+53 
+35 
+00110101 00000000 Velocity Increment along X-axis, or X-axis Angular Rate for 
+OIS LL mode, or Self-test sensor data 
+dVX_L – lower 8 bits. dVX_H – upper 8 bits. 
+dVX_H 
+r 
+54 
+36 
+00110110 00000000
+dVY_L 
+r 
+55 
+37 
+00110111 00000000 Velocity Increment along Y-axis, or Y-axis Angular Rate for 
+OIS LL mode, or Self-test sensor data 
+dVY_L – lower 8 bits. dVY_H – upper 8 bits. 
+dVY_H 
+r 
+56 
+38 
+00111000 00000000
+dVZ_L 
+r 
+57 
+39 
+00111001 00000000 Velocity Increment along Z-axis, or Z-axis Angular Rate for 
+OIS LL mode, or Self-test sensor data 
+dVZ_L – lower 8 bits. dVZ_H – upper 8 bits. 
+dVZ_H 
+r 
+58 
+3A 
+00111010 00000000
+ 
+Note: 
+16. UniqueChipID is formed by concatenating dQW_L, dQW_H, dQX_L and dQX_H.  Immediately after reset and before 
+enabling any sensor the Unique ChipID can be read from the output registers (0x2D - 0x30) which are the dQW_L, dQW_H, 
+dQX_L and dQX_H registers 
+ 
+Table 21. Register Overview (Continued) 
+ 
+Name 
+Type 
+Register Address 
+Default 
+Comment 
+Dec 
+Hex 
+Binary 
+Data Output Registers (Continued) 
+TEMP 
+r 
+59 
+3B 
+00111011 00000000 Temperature Output Data  
+AE_REG1 
+r 
+60 
+3C 
+00111100 00000000 AttitudeEngine Register 1 
+AE_REG2 
+r 
+61 
+3D 
+00111101 00000000 AttitudeEngine Register 2 
+ 
+ 
+
+=== PDF PAGE 30 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 30 / 30 
+                                                                                  
+ 
+  
+ 
+ 
+5 Sensor Configuration Settings and Output Data 
+5.1   Typical Sensor Mode Configuration and Output Data 
+ 
+In Typical Sensor Mode, QMI8610 outputs raw sensor values. The sensors are configured and read using the registers 
+described below. The accelerometer, gyroscope and magnetometer can be independently configured. Table 22 
+summarizes these pertinent registers. 
+ 
+Table 22. Typical Sensor Mode Configuration and Output Data 
+ 
+Typical Sensor Configuration and Output Data  
+Description 
+Registers 
+Unit
+Comments 
+Sensor Enable, SPI 3 or 4 
+Wire 
+CTRL1 
+ 
+Control power states, configure SPI communications  
+Enable Sensor, Configure 
+Data Reads 
+CTRL7 
+ 
+Enable sensor mode (sEN = 0). 
+Configure data reads from Sensor Data Output Registers with
+syncSmpl.  
+Individually enable/disable the Accelerometer, Gyroscope and
+Magnetometer using aEN, gEN, and mENbits, respectively.  
+Configure Accelerometer, 
+Enable Self Test 
+CTRL2 
+ 
+Configure Full Scale and Output Data Rate; Enable Self Test 
+Configure Gyroscope, 
+Enable Self Test 
+CTRL3 
+ 
+Configure Full Scale and Output Data Rate; Enable Self Test 
+Configure Magnetometer 
+CTRL4 
+ 
+Configure Output Data Rate and choose device 
+Sensor Filters 
+CTRL5 
+ 
+Configure and Enable/Disable High Pass and Low Pass Filters 
+Status 
+STATUS0, 
+STATUS1 
+ 
+Data Availability, Data Overrun, FIFO ready to be read,  
+CTRL9 Protocol Bit 
+Time Stamp 
+CNT_OUT 
+ 
+Sample Time Stamp (circular register 0-FF) 
+Acceleration 
+A[X,Y,Z]_[H,L] 
+g 
+In Sensor Frame of Reference, Right-handed Coordinate System 
+
+=== PDF PAGE 31 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 31 / 31 
+                                                                                  
+ 
+  
+ 
+Description 
+Registers 
+Unit
+Comments 
+Angular Rate 
+G[X,Y,Z]_[H,L] 
+dps 
+In Sensor Frame of Reference, Right-handed Coordinate System 
+Magnetic Field 
+M[X,Y,Z]_[H,L] gauss
+In Sensor Frame of Reference, Right-handed Coordinate System 
+Temperature 
+TEMP 
+°C 
+Temperature of the sensor  
+FIFO Based Output 
+FIFO_DATA 
+ 
+See FIFO Description section for more details on using the FIFO to 
+store and access multiple samples 
+ 
+ 
+5.2  
+AttitudeEngine Mode Configuration and Output Data 
+ 
+In AE Mode, QMI8610 outputs orientation (quaternion) and velocity increments. 
+Orientation increments are expressed in unit quaternion format. dQ = [QW, QX, QY, QZ] where QW is the scalar 
+component of the quaternion increment and QX, QY and QZ are the (imaginary) vector components of the unit quaternion. 
+Velocity increments are expressed in vector format dV = [VX, VY, VZ].  
+Table 23 summarizes the operation of the AttitudeEngine mode. 
+ 
+Table 23．AttitudeEngine Mode Configuration and Output Registers 
+ 
+AttitudeEngine Mode  
+Configuration 
+Registers 
+Unit
+Comments 
+Sensor Enable, SPI 3 or 4 
+Wire 
+CTRL1 
+ 
+Control power states, SPI communications  
+Enable AttitudeEngine 
+CTRL7 
+ 
+Enable the AttitudeEngine (CTRL7, sEN =1, aEN=1, gEN=1,
+optionally mEN=1 if external magnetometer is available) 
+Configure 
+CTRL6 
+ 
+AttitudeEngine Output Data Rate and Motion on Demand 
+Configure Accelerometer, 
+Enable Self Test 
+CTRL2 
+ 
+Configure Full Scale; Enable Self Test 
+Configure Gyroscope, Enable 
+Self Test 
+CTRL3 
+ 
+Configure Full Scale; Enable Self Test 
+Configure Magnetometer 
+CTRL4 
+ 
+Configure Output Data Rate and choose device  
+
+=== PDF PAGE 32 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 32 / 32 
+                                                                                  
+ 
+  
+ 
+Configuration 
+Registers 
+Unit
+Comments 
+Sensor Filters 
+CTRL5 
+ 
+Configure and Enable/Disable High Pass and Low Pass Filters 
+Quaternion Increment 
+dQ[W,X,Y,Z]_[H,L]
+ 
+Unit Quaternion format in sensor frame  
+Velocity Increment 
+dV[X,Y,Z]_[H,L] 
+ms-1 Rotation compensated velocity increment (based on specific
+force), rotated to sensor frame of reference 
+Magnetic Field 
+M[X,Y,Z]_[H,L] 
+gauss
+Rotation compensated magnetic field (rotated to sensor frame of
+reference) 
+Status 
+STATUS0, 
+STATUS1 
+ 
+Data Availability, Data Overrun, Wake on Motion detected 
+Bias Update, Clipping, 
+Overflow  
+AE_REG1, 
+AEREG_2 
+ 
+Magnetometer and Gyroscope bias update acknowledgement,
+Sensor clipping acknowledgement, Velocity increment overflow
+Temperature 
+TEMP 
+°C
+Temperature of the sensor  
+ 
+ 
+5.3  
+General Purpose Register 
+ 
+Table 24. General Purpose Register Description 
+ 
+Register Name 
+ 
+WHO_AM_I 
+Register Address: 0 (0x00) 
+Bits 
+Name 
+Default 
+Description 
+7:0 
+WHO_AM_I 
+0xFC 
+Device identifier FC - to identify the device is a Fairchild sensor 
+ 
+ 
+5.4  
+Configuration Registers 
+ 
+ 
+This section describes the various operating modes and register configurations of the QMI8610. 
+ 
+Table 25. Configuration Registers Description 
+
+=== PDF PAGE 33 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 33 / 33 
+                                                                                  
+ 
+  
+ 
+Register Name 
+ 
+CTRL1 
+SPI Interface and Sensor Enable. Register Address: 2 (0x02) 
+Bits 
+Name 
+Default 
+Description 
+7 
+SIM 
+1’b0 
+0: Enables 4-wire SPI interface 
+1: Enables 3-wire SPI interface 
+6:1 
+Reserved 
+6’b0 
+Reserved 
+0 
+sensorDisable 
+1’b0 
+0: Enables internal 1 MHz oscillator 
+1: Disables internal 1 MHz oscillator 
+For more detail, see Table 31 and see Figure 11 
+CTRL2 
+Accelerometer Settings: Address: 3 (0x03) 
+Bits 
+Name 
+Default 
+Description 
+7:6 
+Reserved 
+2’b0 
+Reserved 
+5 
+aST 
+1’b0 
+Enable Accelerometer Self Test. For more detail, see Section 9.1 
+4:3 
+aFS<1:0> 
+2’b0 
+Set Accelerometer Full-scale: 
+00 - Accelerometer Full-scale = ±2 g 
+01 - Accelerometer Full-scale = ±4 g 
+10 - Accelerometer Full-scale = ±8 g 
+11 – Accelerometer Full-scale = ±16 g 
+
+=== PDF PAGE 34 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 34 / 34 
+                                                                                  
+ 
+  
+ 
+Bits 
+Name 
+Default 
+Description 
+2:0 
+aODR<2:0>(17) 
+3’b0 
+Set Accelerometer Output Data Rate (ODR): 
+Setting
+ODR 
+Rate (Hz)
+Mode 
+LPF 
+Bandwidth 
+(Hz), aLPF=0 
+LPF 
+Bandwidth 
+(Hz), aLPF=1
+000 
+1000 
+High Resolution
+500 
+200 
+001 
+250 
+High Resolution
+125 
+50 
+010 
+125 
+High Resolution
+62.5 
+25 
+011 
+31.25 
+High Resolution
+15.625 
+5 
+100 
+125 
+Low Power 
+62.5 
+25 
+101 
+62.5 
+Low Power 
+31.25 
+15 
+110 
+25 
+Low Power 
+12 
+5 
+111 
+3 
+Low Power  
+2 
+0.6 
+Table 25 Configuration Register Description (Continued) 
+Register Name 
+ 
+CTRL3 
+Gyroscope Settings: Address 4 (0x04) 
+Bits 
+Name 
+Default 
+Description 
+7 
+Reserved 
+1’b0 
+ 
+6 
+gST 
+1’b0 
+Enable Gyro Self-Test. For more detail, see Section 9.2, Gyroscope 
+Self Test 
+5:3 
+gFS<2:0> 
+3’b0 
+Set Gyroscope Full-scale: 
+000 - ±32 dps 
+001 - ±64 dps  
+010 - ±128 dps  
+011 - ±256 dps  
+100 - ±512 dps  
+101 - ±1024 dps  
+110 - ±2048 dps  
+111 - ±2560 dps  
+
+=== PDF PAGE 35 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 35 / 35 
+                                                                                  
+ 
+  
+ 
+Register Name 
+ 
+CTRL3 
+Gyroscope Settings: Address 4 (0x04) 
+Bits 
+Name 
+Default 
+Description 
+2:0 
+gODR<2:0> (17) 
+3’b0 
+Set Gyroscope Output Data Rate (ODR): 
+Setting
+ODR 
+Rate 
+(Hz)
+Mode 
+LPF 
+Bandwidth 
+(Hz). gLPF=0 
+LPF Bandwidth 
+(Hz), gLPF=1 
+000 
+1000 High-Resolution
+500 
+200 
+001 
+250
+High-Resolution
+125 
+50 
+010 
+125
+High-Resolution
+62.5 
+25 
+011 
+31.25 High-Resolution
+15.625 
+6 
+10X 
+0 
+Gryo 
+Warm-Start 
+(“Snooze”) 
+NA 
+NA 
+110 
+8100
+OIS 
+4050 
+345 
+111 
+8100 OIS LL(错误!未
+找到引用源。)
+2000 
+N/A(错误!未找到引
+用源。) 
+CTRL4 
+Magnetometer Settings: Address: 5 (0x05) 
+Bits 
+Name 
+Default 
+Description 
+7:0 
+Reserved 
+8’b0 
+ 
+ 
+Notes: 
+17. When both the accelerometer and the gyroscope are enabled, it is typical to set the ODR rates for each sensor to be 
+identical, such as when output rates are chosen in the range of 1 kHz to 32 Hz. In case the host requires different ODRs 
+(for example, as with OIS mode) then, the gyroscope output rate should be chosen to be greater than or equal to the 
+accelerometer output rate. NOTE: The accelerometer low power mode is only available when the gyroscope is disabled 
+18. When gODR<2:0>=111 (OIS LL mode) is selected, the gyro data will be written to dVX_L, dVX_H, dVY_L, dVY_H, 
+dVZ_L and dVZ_H registers. See register #53 through #58 for additional details. 
+ 
+Table 25 Configuration Register Description (Continued) 
+
+=== PDF PAGE 36 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 36 / 36 
+                                                                                  
+ 
+  
+ 
+Register Name 
+ 
+CTRL5 
+Sensor Data Processing Settings. Register Address: 6 (0x06) 
+Bits 
+Name 
+Default 
+Description 
+7:5 
+Reserved 
+3’b0 
+ 
+4 
+gHPF01 
+1’b0 
+Set HPF corner frequency. See Table associated with gHPF bit 
+below. 
+3 
+gLPF 
+1’b0 
+0: Disable Gyroscope Low-Pass Filter. 
+1: Enable Gyroscope Low-Pass Filter. 
+2 
+gHPF 
+1’b0 
+0: Disable Gyroscope High-Pass Filter. 
+1: Enable Gyroscope High-Pass Filter (see Table below). 
+High-Pass Filter corner frequency (fc) with gHPF = 1  
+ODR Rate (Hz) 
+gHPF01=1 (Hz) 
+gHPF01=0 (Hz) 
+1000 
+0.1 
+2.5 
+250 
+0.0250 
+0.6250 
+125 
+0.0125 
+0.3125 
+31.25 
+0.0032 
+0.0800 
+8100 (gODR=110) 
+0.1000 
+0.1000 
+8100 (gODR=111) 
+N/A(19) 
+N/A(19) 
+ 
+1 
+aLPF 
+1’b0 
+0: Disable Accelerometer Low-Pass Filter. 
+1: Enable Accelerometer Low-Pass Filter. 
+0 
+aHPF 
+1’b0 
+0: Disable Accelerometer High-Pass Filter 
+1: Enable Accelerometer High-Pass Filter. 
+CTRL6 
+Attitude Engine ODR and Motion on Demand: Address: 7 (0x07) 
+Bits 
+Name 
+Default 
+Description 
+7 
+sMoD 
+1’b0 
+0: Disables Motion on Demand. 
+1: Enables Motion on Demand (Requires sEN=1). 
+
+=== PDF PAGE 37 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 37 / 37 
+                                                                                  
+ 
+  
+ 
+Bits 
+Name 
+Default 
+Description 
+6:3 
+Reserved 
+4’b0 
+ 
+2:0 
+sODR<2:0> 
+3’b0 
+Attitude Engine Output Data Rate (ODR) 
+Setting 
+ODR Rate (Hz) 
+000 
+1 
+001 
+2 
+010 
+4 
+011 
+8 
+100 
+16 
+101 
+32 
+110 
+64(20) 
+111 
+NA 
+ 
+Notes: 
+19. For OIS LL mode, no filters can be enabled. gLPF=0 and gHPF=0 should be maintained. 
+20. This ODR should not be used if magnetometer is enabled. 
+ 
+ 
+Table 25 Configuration Register Description (Continued) 
+ 
+
+=== PDF PAGE 38 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 38 / 38 
+                                                                                  
+ 
+  
+ 
+Register Name 
+ 
+CTRL7 
+Enable Sensors and Configure Data Reads. Register Address: 8 (0x08) 
+Bits 
+Name 
+Default 
+Description 
+7 
+syncSmpl 
+1’b0 
+This bit determines how data are read out of Sensor Data Output Registers of 
+the QMI8610.  
+0: INT2 is placed into edge trigger mode:  the Sensor Data Output Registers 
+are updated at the Output Data Rate (ODR), and INT2 is pulsed at the ODR 
+rate 
+1: INT2 is placed into level mode: the Sensor Data Output Registers are 
+updated at the ODR until the STATUS0 register is read by the host. Reading 
+STATUS0 causes the Sensor Data Output Registers register to stop updating 
+and causes INT2 to be brought low. The Sensor Data Output Registers are not 
+updated until the last byte has been read from them. Once this read is 
+complete, the QMI8610 resumes updating the Sensor Data Output Registers 
+and INT2 will be brought high when new data is available. 
+6:4 
+Reserved 
+3’b0 
+These bits should always be set to 0 
+3 
+sEN 
+1’b0 
+0: Disable AttitudeEngine orientation and velocity increment computation 
+1: Enable AttitudeEngine orientation and velocity increment computation 
+2 
+mEN 
+1’b0 
+0: Magnetometer placed in Standby or Power-down Mode. 
+1: Enable Magnetometer 
+1 
+gEN 
+1’b0 
+0: Gyroscope placed in Standby or Power-down Mode. 
+1: Enable Gyroscope. 
+0 
+aEN 
+1’b0 
+0: Accelerometer placed in Standby or Power-down Mode. 
+1: Enable Accelerometer. 
+CTRL8 
+Reserved – Special Settings. Register Address: 9 (0x09) 
+Bits 
+Name 
+Default 
+Description 
+7:0 
+Reserved 
+0x00 
+Not Used 
+Register Name 
+ 
+
+=== PDF PAGE 39 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 39 / 39 
+                                                                                  
+ 
+  
+ 
+CTRL9 
+Host Commands. Register Address: 10 (0x0A) 
+(See Section 5.7, CTRL 9 Functionality (Executing Pre-defined Commands)) 
+ 
+5.5 Status and Count Registers 
+Table 26. Status and Time Stamp Registers 
+Register Name 
+ 
+STATUS0 
+Output Data Status Register Address: 22 (0x16) 
+Bits 
+Name 
+Default 
+Description 
+7 
+aeOVRN 
+1’b0 
+0: No overrun  
+1: AE data overrun. Previous data overwritten before it was read. 
+6 
+mOVRN 
+1’b0 
+0: No overrun  
+1: Magnetometer data overrun. Previous data overwritten before it was 
+read. 
+5 
+gOVRN 
+1’b0 
+0: No overrun  
+1: Gyroscope data overrun. Previous data overwritten before it was 
+read. 
+4 
+aOVRN 
+1’b0 
+0: No overrun  
+1: Accelerometer data overrun. Previous data overwritten before it was 
+read. 
+3 
+aeDA 
+1’b0 
+AE new data available  
+0: No updates since last read. 
+1: New data available. 
+2 
+mDA 
+1’b0 
+Valid Magnetometer data available  
+0: Magnetometer data is NOT Valid 
+1: Valid Magnetometer data is available at every ODR. If Mag ODR is 
+lower than accelerometer and gyroscope ODR previous valid 
+Magnetometer data will be repeated until new data is available  
+
+=== PDF PAGE 40 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 40 / 40 
+                                                                                  
+ 
+  
+ 
+Bits 
+Name 
+Default 
+Description 
+1 
+gDA 
+1’b0 
+Gyroscope new data available  
+0: No updates since last read. 
+1: New data available. 
+0 
+aDA 
+1’b0 
+Accelerometer new data available  
+0: No updates since last read. 
+1: New data available. 
+STATUS1 
+Miscellaneous Status. Register Address 23 (0x17) 
+Bits 
+Name 
+Default 
+Description 
+7:3 
+Reserved 
+5’b0 
+ 
+2 
+WoM 
+1’b0 
+Wake on Motion detected (see Section 8 for more details) 
+1 
+FIFO_rddy 
+1’b0 
+FIFO ready to be read. 
+0 
+CmdDone 
+1’b0 
+Bit read by Host Processor as part of CTRL9 register protocol. See 
+Section 5.7 for more information. 
+CNT_OUT 
+Sample Time Stamp – Output Count. Register Address: 24 (0x18) 
+Bits 
+Name 
+Default 
+Description 
+7:0 
+CNT_OUT<7:0> 
+0x00 
+Sample time stamp. Count incremented by one for each sample 
+(x, y, z data set) from sensor with highest ODR (circular register 
+0x00-0xFF).  
+ 
+ 
+5.6 Sensor Data Output Registers 
+Table 27. Sensor Data Output Registers Description 
+Register Name 
+ 
+A[X,Y,Z]_[H,L] 
+Acceleration Output. Register Address: 25 – 30, (0x19 – 0x1E) 
+Bits 
+Name 
+Default 
+Description 
+7:0 
+AX_L<7:0> 
+0x00 
+X-axis acceleration in two’s complement. 
+AX_L – lower 8 bits. AX_H – upper 8 bits. 
+7:0 
+AX_H<15:8> 
+0x00 
+
+=== PDF PAGE 41 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 41 / 41 
+                                                                                  
+ 
+  
+ 
+Bits 
+Name 
+Default 
+Description 
+7:0 
+AY_L<7:0> 
+0x00 
+Y-axis acceleration in two’s complement. 
+AY_L – lower 8 bits. AY_H – upper 8 bits. 
+7:0 
+AY_H<15:8> 
+0x00 
+7:0 
+AZ_L<7:0> 
+0x00 
+Z-axis acceleration in two’s complement. 
+AZ_L – lower 8 bits. AZ_H – upper 8 bits. 
+7:0 
+AZ_H<15:8> 
+0x00 
+Register Name 
+ 
+G[X,Y.Z]_[H,L] 
+Angular Rate Output. Register Address: 31 – 36 (0x1F – 0x24) 
+Bits 
+Name 
+Default 
+Description 
+7:0 
+GX_L<7:0> 
+0x00 
+X-axis angular rate in two’s complement. 
+GX_L – lower 8 bits. GX_H – upper 8 bits. 
+7:0 
+GX_H<15:8> 
+0x00 
+7:0 
+GY_L<7:0> 
+0x00 
+Y-axis angular rate in two’s complement. 
+GY_L – lower 8 bits. GY_H – upper 8 bits. 
+7:0 
+GY_H<15:8> 
+0x00 
+7:0 
+GZ_L<7:0> 
+0x00 
+Z-axis angular rate in two’s complement. 
+GZ_L – lower 8 bits. GZ_H – upper 8 bits. 
+7:0 
+GZ_H<15:8> 
+0x00 
+Register Name 
+ 
+M[X,Y,Z]_[H,L] 
+Magnetometer Output. Register Address: 37 - 42. (0x25 – 0x2A) 
+Bits 
+Name 
+Default 
+Description 
+7:0 
+MX_L<7:0> 
+0x00 
+X-axis magnetic field data in two’s complement.  
+MX_L – lower 8 bits. MX_H – upper 8 bits. 
+7:0 
+MX_H<15:8> 
+0x00 
+7:0 
+MY_L<7:0> 
+0x00 
+Y-axis magnetic field data in two’s complement. 
+MY_L – lower 8 bits. MY_H – upper 8 bits. 
+7:0 
+MY_H<15:8> 
+0x00 
+7:0 
+MZ_L<7:0> 
+0x00 
+Z-axis magnetic field data in two’s complement. 
+MZ_L – lower 8 bits. MZ_H – upper 8 bits. 
+7:0 
+MZ_H<15:8> 
+0x00 
+ 
+ 
+Table 27 Sensor Data Output Registers Description (Continued) 
+ 
+ 
+
+=== PDF PAGE 42 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 42 / 42 
+                                                                                  
+ 
+  
+ 
+Register Name 
+ 
+dQ[1,2,3,4]_[H,L] 
+Quaternion Output. Register Addresses: 45 – 52 (0x2D – 0x34) 
+Bits 
+Name 
+Default 
+Description 
+7:0 
+dQW_L<7:0> 
+0x00 
+Quaternion Increment dQW in two’s complement. 
+dQW_L – lower 8 bits. dQW_H – upper 8 bits; or part of 
+UniqueChipID(21) 
+7:0 
+dQW_H<15:8> 
+0x00 
+7:0 
+dQX_L<7:0> 
+0x00 
+Quaternion Increment dQX in two’s complement. 
+dQX_L – lower 8 bits. dQX_H – upper 8 bits; or part of 
+UniqueChipID(21) 
+7:0 
+dQX_H<15:8> 
+0x00 
+7:0 
+dQY_L<7:0> 
+0x00 
+Quaternion Increment dQY in two’s complement. 
+dQY_L – lower 8 bits. dQY_H – upper 8 bits. 
+7:0 
+dQY_H<15:8> 
+0x00 
+7:0 
+dQZ_L<7:0> 
+0x00 
+Quaternion Increment dQZ in two’s complement. 
+dQZ_L – lower 8 bits. dQZ_H – upper 8 bits. 
+7:0 
+dQZ_H<15:8> 
+0x00 
+dV[X,Y,Z]_[H,L] 
+Delta Velocity Output. Register Address: 53 – 58 (0x35– 0x3A) 
+Bits 
+Name 
+Bits 
+Name 
+7:0 
+dVX_L<7:0> 
+0x00 
+X-axis Velocity Increment in two’s complement. 
+dVX_L – lower 8 bits. dVX_H – upper 8 bits. 
+When gODR=111, OIS LL Gyro X-axis data in two’s complement 
+Also used for accelerometer or gyro self test data 
+7:0 
+dVX_H<15:8> 
+0x00 
+7:0 
+dVY_L<7:0> 
+0x00 
+Y-axis Velocity Increment in two’s complement. 
+dVY_L – lower 8 bits. dVY_H – upper 8 bits. 
+When gODR=111, OIS LL Gyro Y-axis data in two’s complement 
+Also used for accelerometer or gyro self test data 
+7:0 
+dVY_H<15:8> 
+0x00 
+7:0 
+dVZ_L<7:0> 
+0x00 
+Z-axis Velocity Increment in two’s complement. 
+dVZ_L – lower 8 bits. dVZ_H – upper 8 bits. 
+When gODR=111, OIS LL Gyro Z-axis data in two’s complement 
+Also used for accelerometer or gyro self test data 
+7:0 
+dVZ_H<15:8> 
+0x00 
+TEMP 
+Temperature Output. Register Address: 59. (0x3B) 
+Bits 
+Name 
+Default 
+Description 
+
+=== PDF PAGE 43 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 43 / 43 
+                                                                                  
+ 
+  
+ 
+7:0 
+TEMP<7:0> 
+0x00 
+Temperature output (°C) in two’s complement. 
+AE_REG1 
+AttitudeEngine Register 1, Address: 60 (0x3C) 
+Bits 
+Name 
+Default 
+Description 
+7 
+MagBiasAck 
+1’b0 
+Acknowledgement that Mag Bias was updated during this time 
+period. 
+6 
+GyroBiasAck 
+1’b0 
+Acknowledgement that Gyro Bias was updated during this time 
+period. 
+5 
+wz_clip 
+1’b0 
+Gyroscope Z-axis data was clipped during the dQ calculation. 
+4 
+wy_clip 
+1’b0 
+Gyroscope Y-axis data was clipped during the dQ calculation. 
+3 
+wx_clip 
+1’b0 
+Gyroscope X-axis data was clipped during the dQ calculation. 
+2 
+az_clip 
+1’b0 
+Accelerometer Z-axis data was clipped during the dQ calculation. 
+1 
+ay_clip 
+1’b0 
+Accelerometer Y-axis data was clipped during the dQ calculation. 
+0 
+ax_clip 
+1’b0 
+Accelerometer X-axis data was clipped during the dQ calculation. 
+ 
+Note: 
+21. UniqueChipID is formed by concatenating dQW_L, dQW_H, dQX_L and dQX_H.  Immediately after reset and before 
+enabling any sensor the Unique ChipID can be read from the output registers (0x2D - 0x30) which are the dQW_L, dQW_H, 
+dQX_L and dQX_H registers  
+ 
+Table 27 Sensor Data Output Registers Description (Continued) 
+Register Name 
+ 
+AE_REG2 
+AttitudeEngine Register 2, Address: 61 (0x3D) 
+Bits 
+Name 
+Default 
+Description 
+7 
+Reserved 
+1’b0 
+ 
+6 
+Reserved 
+1’b0 
+ 
+5 
+mz_clip 
+1’b0 
+Mag Z-axis data was clipped. 
+4 
+my_clip 
+1’b0 
+Mag Y-axis data was clipped. 
+Bits 
+Name 
+Default 
+Description 
+
+=== PDF PAGE 44 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 44 / 44 
+                                                                                  
+ 
+  
+ 
+3 
+mx_clip 
+1’b0 
+Mag X-axis data was clipped. 
+2 
+dvz_of 
+1’b0 
+Velocity Increment overflow along dvz. 
+1 
+dvy_of 
+1’b0 
+Velocity Increment overflow along dvy. 
+0 
+dvx_of 
+1’b0 
+Velocity Increment overflow along dvx. 
+ 
+Table 28. AttitudeEngine Modes and Output Table 
+ 
+Mode/Outputs 
+dQ 
+dV 
+M 
+CNT_OUT 
+Comments on CNT_OUT 
+AttitudeEngine in ODR Mode (Accelerometer and Gyroscope Enabled) 
+CTRL6 Register 
+sEN=1 
+Quaternion 
+Increment  
+Velocity 
+Increment
+No Data
+AttitudeEngine  
+Sample count  
+8-bit data. Count starts at 1, 256 
+count wraps to 0, i.e. Mod(256) 
+sMoD=0 
+CTRL7 Register 
+aEN=1 
+gEN=1 
+mEN=0 
+AttitudeEngine in Motion on Demand (MoD) mode (Accelerometer and Gyroscope enabled) 
+CTRL6 Register 
+sEN=1 
+Quaternion 
+Increment  
+Velocity 
+Increment
+No Data
+Gyroscope 
+Samples 
+in 
+Integration 
+Window  
+8-bit data. Count starts at 1, 256 
+count wraps to 0, i.e. Mod(256) 
+sMoD=1 
+CTRL7 Register 
+aEN=1 
+gEN=1 
+mEN=0 
+AttitudeEngine with Raw Magnetometer in ODR Mode (Accelerometer, Gyroscope and Magnetometer Enabled) 
+CTRL6 Register 
+sEN=1 
+Quaternion 
+Increment  
+Velocity 
+Increment
+Initial 
+Raw 
+Mag 
+Data 
+AttitudeEngine 
+Sample Count 
+8-bit data. Count starts at 1, 256 
+count wraps to 0, i.e. Mod(256) 
+sMoD=0 
+CTRL7 Register 
+aEN=1 
+gEN=1 
+mEN=1 
+ 
+
+=== PDF PAGE 45 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 45 / 45 
+                                                                                  
+ 
+  
+ 
+5.7 CTRL 9 Functionality (Executing Pre-defined Commands) 
+5.7.1 
+CTRL 9 Description 
+ 
+The protocol for executing predefined commands from an external host processor on the QMI8610 is facilitated by the 
+using the Control 9 (CTRL9) register on the QMI8610. The register is available to the host via the SPI /I2C bus. It operates 
+by the host writing a pre-defined value (Command) to the CTRL9 register. The firmware of the QMI8610 evaluates this 
+Command and if a match is found it executes the corresponding pre-defined function. Once the function has been 
+executed, the QMI8610 signals the completion of this by raising INT1 interrupt. The host must acknowledge this by reading 
+STATUS1 register bit 0. This is the CmdDone bit. After this read, the QMI8610 pulls down the INT1 interrupt. This 
+command presentation from the host to the QMI8610 and the subsequent execution and handshake between the host and 
+the FIS1000 will be referred to as the “CTRL9 Protocol”.  
+ 
+There are three types of interactions between the host and QMI8610 that follow the CTRL9 Protocol. 
+ 
+ 
+WCtrl9: The host needs to supply data to QMI8610 prior to the Ctrl9 protocol. (Write – Ctrl9 Protocol)    
+ 
+Ctrl9R: The host gets data from QMI8610 following the Ctrl9 protocol. (Ctrl9 protocol – Read ) 
+ 
+Ctrl9: No data transaction is required prior to or following the Ctrl9 protocol. (Ctrl9). 
+ 
+Note: for CTRL9 to work properly, OIS mode (See CTRL3 register) cannot be enabled. Once CTRL9 has been executed, 
+then OIS mode in CTRL3 register can be enabled. 
+ 
+Table 29. CAL Register Addresses 
+Register Name 
+Register Address 
+Dec 
+Hex 
+CAL1_H 
+11 
+0x0B 
+CAL1_L 
+12 
+0x0C 
+CAL2_H 
+13 
+0x0D 
+Register Name 
+Register Address 
+
+=== PDF PAGE 46 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 46 / 46 
+                                                                                  
+ 
+  
+ 
+Dec 
+Hex 
+CAL2_L 
+14 
+0x0E 
+CAL3_H 
+15 
+0x0F 
+CAL3_L 
+16 
+0x10 
+CAL4_H 
+17 
+0x11 
+CAL4_L 
+18 
+0x12 
+ 
+5.7.2 
+WCtrl9 (Write – CTRL9 Protocol) 
+ 
+1. 
+The host needs to provide the required data for this command to the QMI8610. The host typically does this by placing 
+the data in a set of registers called the CAL buffer. Currently 8 CAL registers are used the following table provides the 
+name and addresses of these registers.  
+ 
+2. 
+Write Ctrl9 register 0x0a with the appropriate Command value. 
+ 
+3. 
+The Device will raise INT1 and set Bit 0 in STATUS1 reg, to 1 once it have executed the appropriate function based on 
+the command value. 
+ 
+4. 
+The host must acknowledge this by reading STATUS1 register bit 0 (CmdDone) which is reset to 0 on reading the 
+register. In addition, INT1 is pulled low, completing the CTRL9 transaction. 
+ 
+5. 
+If any data is expected from the device, it will be available at this time. The location of the data is specified separately 
+for each of the Commands. 
+ 
+ 
+5.7.3 
+Ctrl9R (CTRL9 Protocol - Read) 
+ 
+1. 
+Write Ctrl9 register 0x0A with the appropriate Command value. 
+ 
+2. 
+The Device will raise INT1 and set Bit 0 in STATUS1 register to 1 once it has executed the appropriate function based 
+on the command value.  
+ 
+
+=== PDF PAGE 47 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 47 / 47 
+                                                                                  
+ 
+  
+ 
+3. 
+The host must acknowledge this by reading STATUS1 register bit 0 (CmdDone) which is then reset to 0 upon reading 
+the register. In addition, INT1 is pulled low upon the register read, completing the CTRL9 transaction. 
+Data is available from the device at this time. The location of the data is specified separately for each of the Commands 
+(see Section 5.7.5, CTRL9 Commands in Detail). 
+ 
+ 
+5.7.4 
+Ctrl9 (CTRL9 Protocol Acknowledge) 
+ 
+1. 
+Write CTRL9 register 0x0a with the appropriate Command value. 
+ 
+2. 
+The Device will raise INT1 and set Bit 0 in STATUS1 register to 1 once it has executed the appropriate function based 
+on the command value. 
+ 
+3. 
+The host must acknowledge this by reading STATUS1 register bit 0 (CmdDone) which is then reset to 0 upon reading 
+the register. In addition, INT1 is pulled low, upon the register read, completing the CTRL9 transaction. 
+ 
+ 
+Table 30. CTRL9 Register CMND Values: 
+ 
+CMND Name 
+CTRL9 
+Command 
+Value 
+Protocol 
+Type 
+Description 
+CTRL_CMD_RST_AHPF 
+0x03 
+Ctrl9 
+Reset Accelerometer High Pass Filter 
+from Host 
+CTRL_CMD_RST_GHPF 
+0x04 
+Ctrl9 
+Reset Gyroscope High Pass Filter from 
+Host 
+CTRL_CMD_AE_MAG_OFFSET 
+0x0b 
+WCtrl9 
+Set Magnetometer Offset from Host 
+CTRL_CMD_AE_GYRO_OFFSET 
+0x0e 
+WCtrl9 
+Set Gyroscope Offset from Host for most 
+accurate computation of dQ by AE  
+CTRL_CMD_REQ_MoD 
+0x0c 
+Ctrl9R 
+Get AE Data from Device in MoD Mode 
+CMND Name 
+CTRL9 
+Protocol 
+Description 
+
+=== PDF PAGE 48 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 48 / 48 
+                                                                                  
+ 
+  
+ 
+Command 
+Value 
+Type 
+CTRL_CMD_HOST_ACCEL_OFFSET 
+0x12 
+WCtrl9 
+Set Accelerometer Offset from Host 
+Dynamically 
+CTRL_CMD_HOST_GYRO_OFFSET 
+0x13 
+WCtrl9 
+Set 
+Gyroscope 
+Offset 
+from 
+Host 
+Dynamically 
+CTRL_CMD_HOST_ACCEL_SENSITIVITY 
+0x14 
+WCtrl9 
+Set Accelerometer Sensitivity from Host 
+Dynamically 
+CTRL_CMD_HOST_GYRO_SENSITIVITY 
+0x15 
+WCtrl9 
+Set Gyroscope Sensitivity from Host 
+Dynamically 
+CTRL_CMD_MAG_SKOR_X 
+0x06 
+WCtrl9 
+Set X Magnetometer, Offset and Skew 
+from Host 
+CTRL_CMD_MAG_SKOR_Y 
+0x07 
+WCtrl9 
+Set Y Magnetometer, Offset and Skew 
+from Host 
+CTRL_CMD_MAG_SKOR_Z 
+0x08 
+WCtrl9 
+Set Z Magnetometer, Offset and Skew 
+from Host 
+CTRL_CMD_GET_TCYCLE 
+0x18 
+Ctrl9R 
+Get TCYCLE time from Device 
+CTRL_CMD_REQ_FIFO 
+0x0d 
+Ctrl9R 
+Get FIFO data from Device  
+CTRL_CMD_RST_FIFO 
+0x02 
+Ctrl9 
+Reset FIFO from Host  
+CTRL_CMD_WRITE_WoM_SETTING 
+0x19 
+WCtrl9 
+Set up and enable Wake on Motion 
+ 
+5.7.5 
+CTRL9 Commands in Detail 
+ 
+ 
+CTRL_CMD_RST_AHPF 
+This CTRL command of writing 0x03 to the CTRL9 register 0x0A allows the host to instruct the device to reset the 
+accelerometer high-pass filter. 
+ 
+ 
+CTRL_CMD_RST_GHPF 
+This CTRL9 command of writing 0x04 to the CTRL9 register 0x0A allows the host to instruct the device to reset the 
+gyroscope high-pass Filter. 
+
+=== PDF PAGE 49 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 49 / 49 
+                                                                                  
+ 
+  
+ 
+ 
+ 
+CTRL_CMD_AE_MAG_OFFSET  
+This CTRL9 Command is issued to configure the AE with specific magnetometer offset data. The X, Y & Z magnetometer 
+offset are provided to the device from the host. They are 16 bit each and programmed into the CAL1 to CAL3 registers 
+respectively. Once the AE_REG1[7] is set, then new bias will take effect on the next AE window. 
+ 
+ 
+CTRL_CMD_AE_GYRO_OFFSET  
+This CTRL9 Command is issued to configure the AE with specific Gyro offset data required for dQ computations. The X,Y 
+& Z gyro bias specific for AE engine are provided to the device from the host. They are 16 bit each and programmed into 
+the CAL1 to CAL3 registers respectively. Once the AE_REG1[6] is set, then new bias will take effect on the next AE 
+window. 
+ 
+ 
+CTRL_CMD_REQ_MoD 
+This CTRL9 command is used to retrieve motion data from the QMI8610 when Motion on Demand mode (MoD) is enabled. 
+To enable MoD the device should have the AttitudeEngine orientation enabled. This can be done by enabling the 
+AttitudeEngine by setting CTRL7 Bit 3 (sEN) to 1. Then the MoD mode can be enabled by setting CTRL6 Bit 7 (sMoD) to 1. 
+The CTRL_CMD_REQ_MoD command is then issued by writing 0x0C to CTRL9 register 0x0A. This indicates to the 
+QMI8610 that it is required to supply the motion data to the host. The device immediately makes available the orientation 
+and velocity increments it has computed so far to the host by making it available at output registers 0x25 to 0x3D and raise 
+the INT1 to indicate to the host that valid data is available. 
+ 
+ 
+CTRL_CMD_HOST_ACCEL_OFFSET 
+This CTRL9 command is issued when the host wants to tune the accelerometer offset. The incremental value of the offset 
+should be 16 bit 2’s complement format with 5 bits for signed integer and 11 bits fraction. The value should be placed into 
+the CAL1 to CAL3 register for X, Y, and Z, respectively. The new value provided here will be subtracted from the 
+accelerometer base offset value. The new value is used for dynamic calibration. There will be a delay of up to 3 output 
+samples before this takes effect. Once the host has loaded the offset values in the CALx registers it needs to issue the 
+CTRL9 command by writing the 0x12 to CTRL9 register 0x0A. 
+ 
+ 
+CTRL_CMD_HOST_GYRO_OFFSET 
+This CTRL9 command is issued when the host wants to tune the gyroscope offset. The incremental value of the offset 
+should be 16 bit 2’s complement format with 10 bits for signed integer and 6 bits fraction. The value should be placed into 
+the CAL1 to CAL3 registers for X, Y, and Z, respectively. The new value provided here is subtracted from the gyroscope 
+
+=== PDF PAGE 50 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 50 / 50 
+                                                                                  
+ 
+  
+ 
+base offset value. The new value is used for dynamic calibration. There will be a delay of up to 3 output samples before this 
+takes effect. Once the host has loaded the offset values in the CALx registers it needs to issue the CTRL9 command by 
+writing 0x13 to CTRL9 register 0x0A. 
+ 
+ 
+CTRL_CMD_MAG_SKOR_X  
+This CTRL9 Command is issued to configure the Magnetometer device calibration value. The X Offset, Scale and 2 skew 
+values are provided to the device from the host. They are 16 bits each and programmed into the CAL1 to CAL4 registers. 
+Once the host has loaded the offset values in the CALx registers it needs to issue the CTRL9 command by writing the 0x06 
+to CTRL9 register 0x0a. 
+ 
+ 
+CTRL_CMD_MAG_SKOR_Y 
+This CTRL9 Command is issued to configure the magnetometer device with the calibration value. The Y offset, scale and 2 
+skew values are provided to the device from the host. They are 16 bits each and programmed into the CAL1 to CAL4 
+registers. Once the host has loaded the offset values in the CALx registers it needs to issue the CTRL9 command by 
+writing 0x07 to CTRL9 register 0x0A. 
+ 
+ 
+CTRL_CMD_MAG_SKOR_Z 
+This CTRL9 Command is issued to configure the magnetometer device with the calibration value. The Z offset, scale and 2 
+skew values are provided to the device from the host. They are 16 bits each and programmed into the CAL1 to CAL4 
+registers. Once the host has loaded the offset values in the CALx registers it needs to issue the CTRL9 command by 
+writing 0x08 to CTRL9 register 0x0A. 
+ 
+ 
+CTRL_CMD_GET_TCYCLE  
+This CTRL9 Command can only be issued when the QMI8610 is in the AE Mode. The Host can issue this command to get 
+the exact time in milliseconds between samples (for example 1 Hz ODR may not be exactly 1 sec but could be 0.998 
+seconds). This command is issued by writing 0x18 to CTRL9 register 0x0A. 
+ 
+ 
+CTRL_CMD_REQ_FIFO 
+This CTRL9 Command is issued when the host wants to get data from the FIFO. When the FIFO is enabled it will be 
+indicated to the host by asserting INT2 and thus signaling that a flag condition (like FIFO full) has been reached and that 
+data is available to be read by the host. This Command is issued by writing 0x0D to the CTRL9 register 0x0A. The device 
+will raise INT1 to indicate that it is ready for a FIFO transaction. The host must read the STATUS1 register bit 0 (CmdDone). 
+At this point the host should set the FIFO_rd_mode Bit to 1 (FIFO_CTRL register 0x13 bit 7). The device will direct the 
+
+=== PDF PAGE 51 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 51 / 51 
+                                                                                  
+ 
+  
+ 
+FIFO data to the FIFO_DATA register 0x14 until the FIFO is empty. The host must now set FIFO_rd_mode to 0, which will 
+cause the INT2 to be de-asserted. 
+ 
+ 
+CTRL_CMD_RST_FIFO  
+This CTRL9 command of writing 0x02 to the Ctrl9 register 0x0a allows the host to instruct the device to reset the FIFO. 
+ 
+ 
+CTRL_CMD_WRITE_WOM_SETTING 
+This CTRL9 Command is issued when the host wants to enable/modify the trigger thresholds or blanking interval of the 
+Wake on Motion Feature of the device. Please refer to Section 8 for details for setting up this feature. Once the specified 
+CALx registers are loaded with the appropriate data, the Command is issued by writing 0x19 to CTRL9 register 0x0A. 
+ 
+ 
+CTRL_CMD_HOST_GYRO_SENSITIVITY 
+This CTRL9 command is issued when the host wants to tune the gyroscope sensitivity (scale factor). The incremental 
+value of the scale should be 16 bit 2’s complement format with 3 bits for unsigned integer and 13 bits fraction. The value 
+should be placed into the CAL1 to CAL3 registers for X, Y, and Z, respectively. The new value provided here is multiplied 
+with the gyroscope base scale factor value. The new value is used for dynamic calibration. There will be a delay of up to 3 
+output samples before this takes effect. Once the host has loaded the scale factor values in the CALx registers it needs to 
+issue the CTRL9 command by writing 0x15 to CTRL9 register 0x0A. This CTRL9 command should only be executed when 
+all sensors are disabled. 
+ 
+ 
+CTRL_CMD_HOST_ACCEL_SENSITIVITY 
+This CTRL9 command is issued when the host wants to tune the accelerometer sensitivity (scale factor). The incremental 
+value of the scale should be 16 bit 2’s complement format with 3 bits for unsigned integer and 13 bits fraction. The value 
+should be placed into the CAL1 to CAL3 registers for X, Y, and Z, respectively. The new value provided here is multiplied 
+with the accelerometer base scale factor value. The new value is used for dynamic calibration. There will be a delay of up 
+to 3 output samples before this takes effect. Once the host has loaded the scale factor values in the CALx registers it needs 
+to issue the CTRL9 command by writing 0x14 to CTRL9 register 0x0A. This CTRL9 command should only be executed 
+when all sensors are disabled. 
+ 
+ 
+5.8 Interrupts 
+The QMI8610 has two Interrupt lines; INT1 and INT2. INT1 is used as a general purpose interrupt. The details are 
+described in the specific sections where INT1 and INT2 are used. The following provides a summary of the INT1 and INT2 
+
+=== PDF PAGE 52 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 52 / 52 
+                                                                                  
+ 
+  
+ 
+usage. 
+ 
+5.8.1 
+Interrupt 1 (INT1) 
+ 
+The following summarizes the use of INT1: 
+ 
+Set high for ~4 ms after reset to indicate that the chip is ready for normal operation. 
+ 
+ 
+If any operation has set INT1 it will always be cleared by reading STATUS1 register  
+ 
+ 
+Used as part of the CTRL9 handshake protocol (see section 5.7). For CTRL9 to work properly, OIS mode (See CTRL3 
+register) cannot be enabled. Once CTRL9 has been executed, then OIS mode in CTRL3 register can be enabled. 
+ 
+ 
+During gyroscope OIS mode INT1 is driven by the gyroscope ODR clock (~8 kHz). In this mode all normal INT1 
+functions are disabled. 
+ 
+ 
+When Wake on Motion (WoM) is enabled, INT1 can be selected to indicate WoM (see section 8). 
+ 
+ 
+5.8.2 
+Interrupt 2 (INT2) 
+ 
+NT2 generally indicates data availability. The following indicates when INT2 will be asserted. 
+ 
+Register-Read Mode (FIFO Bypass Mode) 
+In Register-Read mode the accelerometer, gyroscope and magnetometer data are available in the Sensor Data Output 
+registers (A[X,Y,Z]_[H,L]). The updating of these output registers and the functionality of the INT2 interrupt is controlled by 
+the syncSmpl bit as described below. 
+With syncSmpl = 0 (refer to 25, CTRL7 register bit 7), INT2 is placed into edge trigger mode: the Sensor Data Output 
+Registers are updated at the Output Data Rate (ODR), and INT2 is pulsed at the ODR. A rising edge on INT2 indicates that 
+data is available and INT2 is cleared automatically after a short duration. It is the responsibility of the host to detect the 
+rising edge and to latch the data before the next sample occurs. Note that the INT2 pulse width is dependent on the ODR 
+and the sensor. It is not recommended to depend on the level to determine if INT2 has occurred. 
+ 
+With syncSmpl = 1 (refer to 25, CTRL7 register bit 7), INT2 is placed into level mode: The INT2 is asserted when data is 
+
+=== PDF PAGE 53 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 53 / 53 
+                                                                                  
+ 
+  
+ 
+available and remains asserted until the host reads STATUS0 register.  
+The device continues to refresh the output data until the STATUS0 register is read by host.  
+Once the STATUS0 is read by host the QMI8610 will deassert INT2 and stop refreshing the output data. Once the host 
+detects INT2 has been de-asserted it can start reading the output data.  
+Once the last byte of data is read by the host (QMI8610 keeps track) the QMI8610 will start updating the output register 
+and setup the next INT2 when data is available in the output registers. 
+Note: syncSmpl is not supported for any OIS modes 
+ 
+FIFO Enabled Mode (see Section 7) 
+When the FIFO is enabled in the FIFO mode (the mode bits in FIFO_CTRL register set to 01), INT2 is asserted when the 
+FIFO is full or when the watermark is reached. 
+When the FIFO is enabled in the Streaming Mode (the mode bits in FIFO_CTRL register set to 10), INT2 is asserted when 
+the watermark is reached but not when the FIFO is full because in the stream mode the FIFO will continue to fill by 
+overwriting the oldest data in the FIFO. 
+INT2 is cleared in both the FIFO Mode and the Streaming Mode by clearing the FIFO_rd_mode bit in the FIFO_CTRL 
+register. This is done as part of the CTRL9 command CTRL_CMD_REQ_FIFO. 
+Accelerometer and Gyroscope Self-Test Modes (see Section 9) 
+INT2 is asserted to indicate availability of self-test data and is cleared by resetting the aST and gST bits in CTRL2 and 
+CTRL3 registers, respectively. 
+AE Mode 
+In AE Mode, INT2 is asserted when data is available. 
+OIS LL Mode 
+In this mode, the gyroscope operates in a high data rate Optical Image Stability (OIS) mode with Low Latency (LL). Data is 
+transmitted through the SPI interface at 8.1 kHz. The SPI bus can be operated using a 3-wire or 4-wire interface by setting 
+the CTRL1 SIM bit. Data is clocked out on the rising edge of INT2. The accelerometer may be used in this mode with a 
+1 kHz ODR. 
+ 
+
+=== PDF PAGE 54 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 54 / 54 
+                                                                                  
+ 
+  
+ 
+6  Operating Modes 
+The QMI8610 offers a large number of operating modes that may be used to operate the device in a power efficient 
+manner. These modes are described in Table 31 and are shown in Figure 11; they may be configured using the control 
+(CTRL) registers. 
+ 
+Table 31. Operating Modes 
+Mode 
+Description 
+Suggested Configuration 
+Sensor Modes 
+Power-On Default 
+All sensors off, clock is turned on. The current in this mode 
+is typically 15 µA. Note this mode is the default state upon 
+initial power up or after a reset. 
+CTRL1 sensorDisable = 0 
+CTRL7 aEN = 0, gEN = 0,  
+mEN = 0, sEN=0. 
+CTRL2 aODR=000 
+Low Power 
+Same as Power-On Default mode, except in this mode the 
+125 kHz clock is turned on instead of the 1 MHz clock. The 
+current in this mode is typically 5 µA. To enter this mode 
+requires host interaction to set CTRL2 aODR=1xxx. 
+CTRL1 sensorDisable =0 
+CTRL7 aEN = 0, gEN = 0,  
+mEN = 0, sEN=0. 
+CTRL2 aODR=1xx 
+Power-Down 
+All QMI8610 functional blocks are switched off to minimize 
+power consumption. Digital interfaces remain on allowing 
+communication with the device. All configuration register 
+values are preserved and output data register values are 
+maintained. The current in this mode is typically 2 µA. Host 
+must initiate this mode by setting sensorDisable=1 
+CTRL1 sensorDisable =1 
+CTRL7 aEN = 0, gEN = 0,  
+mEN = 0, sEN=0. 
+CTRL2 aODR=xxx 
+Mode 
+Description 
+Suggested Configuration 
+Sensor Modes 
+Accel Only  
+Device configured as an accelerometer only. 
+CTRL7 aEN =1, gEN =0,  
+mEN =0 
+CTRL2 aODR=0xx 
+Low Power Accel Only 
+Device configured in low power accelerometer mode 
+CTRL7 aEN =1, gEN =0,  
+mEN =0 
+CTRL2 aODR=1xx 
+
+=== PDF PAGE 55 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 55 / 55 
+                                                                                  
+ 
+  
+ 
+Gyro Only 
+Device configured as a gyroscope only. 
+CTRL7 aEN =0, gEN =1,  
+mEN =0 
+CTRL2 aODR=000 
+Mag Only  
+Device configured as a magnetometer only. 
+CTRL7 aEN =0, gEN =0,  
+mEN =1 
+CTRL2 aODR=000 
+Accel + Mag  
+Device configured as an accelerometer and magnetometer 
+combination only. Device can be used as a (stabilized) 
+compass. 
+CTRL7 aEN =1, gEN =0, 
+ mEN =1 
+CTRL2 aODR=0xx 
+Accel + Gyro (IMU) 
+Device configured as an Inertial Measurement Unit, i.e. an 
+accelerometer and gyroscope combination sensor. 
+CTRL7 aEN =1, gEN =1,  
+mEN =0 
+CTRL2 aODR=0xx 
+Accel + Gyro + Mag 
+(9DOF)  
+Accelerometer and gyroscope are enabled and combined 
+with an external magnetometer and the device can be used 
+as a 9D orientation sensor (Attitude and Heading 
+Reference). 
+CTRL7 aEN =1, gEN =1,  
+mEN =1 
+CTRL2 aODR=0xx 
+Wake on Motion (WoM) 
+Very low power mode used to wake-up the host by 
+providing an interrupt upon detection of device motion. 
+WoM Mode enabled - see 
+CTRL_CMD_WRITE_WOM_SETTING in Section 5.7.5 and 
+see Section 8, Wake On Motion (WoM) 
+CTRL7 aEN =1, gEN =0,  
+mEN =0 
+CTRL2 aODR = 111  
+Gyro Warm Start 
+This mode turns on the gyroscope drive and shuts off the 
+sense path of the gyroscope. This mode can be used as a 
+low-power mode to turn quickly on the gyroscope without 
+needing to wake-up the gyroscope from the Power On 
+Default state(see Figure 11 and Section 6.2). 
+CTRL3 gODR = 100 
+CTRL2 aODR = 0xx 
+ 
+ 
+Table 31 Operating Modes (Continued) 
+ 
+
+=== PDF PAGE 56 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 56 / 56 
+                                                                                  
+ 
+  
+ 
+Mode 
+Description 
+Suggested Configuration 
+Sensor Modes 
+OIS 
+In this mode, the gyroscope operates in a high data rate 
+Optical Image Stability (OIS) mode. Data is transmitted 
+through the SPI interface at 8.1 kHz. The SPI bus can be 
+operated using a 3-wire or 4-wire interface by setting the 
+CTRL1 SIM bit. Data is clocked out on the falling edge of 
+INT1. The accelerometer is not available in this mode.  
+CTRL3 gODR = 110 
+CTRL2 aODR = 0xx 
+OIS LL 
+In this mode, the gyroscope operates in a high data rate 
+Optical Image Stability (OIS) mode with Low Latency. Data 
+is transmitted through the SPI interface at 8.1 kHz. The SPI 
+bus can be operated using a 3-wire or 4-wire interface by 
+setting the CTRL1 SIM bit. Data is clocked out on the rising 
+edge of INT2. The accelerometer may be used in this mode 
+with a 1 kHz ODR. 
+CTRL3 gODR = 111 
+CTRL2 aODR = 000 
+Hardware Reset 
+RST pin asserted 
+ 
+No Power 
+VDDd and VDDa low 
+ 
+Attitude Engine Modes 
+6DOF AttitudeEngine 
+Mode 
+Attitude Engine Mode with Accel and Gyro. Note that 
+velocity increments and orientation (quaternion) increments 
+will be output rather than sensor values 
+CTRL7 aEN = 1, gEN = 1,  
+sEN = 1 
+CTRL2 aODR=0xx 
+Attitude Engine Modes 
+9DOF AttitudeEngine 
+Mode 
+AttitudeEngine Mode with Accel, Gyro, and  Mag. Note 
+that 
+velocity 
+increments, 
+orientation 
+(quaternion) 
+increments and magnetic field values will be output rather 
+than sensor values 
+CTRL7 aEN = 1, gEN = 1,  
+sEN = 1,  
+mEN = 1 
+CTRL4 (configure 
+magnetometer as needed)  
+Motion On Demand Mode 
+This mode allows Host to sample AttitudeEngine data 
+asynchronously by polling 
+CTRL7 aEN = 1, gEN = 1,  
+sEN = 1 
+CTRL6 sMOD = 1 
+
+=== PDF PAGE 57 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 57 / 57 
+                                                                                  
+ 
+  
+ 
+ 
+ 
+Figure 9. Operating Mode Transition Diagram 
+
+=== PDF PAGE 58 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 58 / 58 
+                                                                                  
+ 
+  
+ 
+ 
+6.1  
+General Mode Transitioning 
+ 
+Upon exiting the No Power state (i.e. on first applying power to the part) or exiting a Hardware Reset state, the part will 
+enter the Power-On Default state. From there, the sensor can be configured in the various modes described in Table 31 
+and as shown in Figure 9. The figure illustrates the timing associated with various mode transitions, and values for these 
+times are given in the section below and in Table 7 and Table 8. 
+ 
+ 
+6.2     Transition Times 
+ 
+The time it takes for data to be present after a mode switch will vary and depends on which mode has been selected. For 
+example, the time it takes for retrieving data from the accelerometer after a mode switch is less than any mode that 
+involves the gyroscope. The times t1, t2, t3 and t4, are defined as the time it takes from INT2 going high to data being 
+present. The time, t5 is the time it takes to have a correct representation of the inertial state. t5 is variable and is associated 
+with the user selected Output Data Rate (ODR). We have defined t5 = (3/ODR) to generally represent that time.  
+ 
+t6 is the time it takes to go from a sensor-powered state to a state where the sensors are off. This time depends on the 
+Output Data Rate (ODR) and ranges from 1/ODR to 2/ODR.  
+ 
+t7 is the transition time between various states where the sensors are off. 
+ 
+t0 is the System Turn On Time, and is the time to enter the Power-On Default state from Hardware Reset, No Power, or 
+Power down. 
+ 
+ Time t0 is the System Turn on Time and is 1.75 seconds. This time only needs to be done once, upon transitioning 
+from either a No Power or Power Down state, or whenever a RST (reset) is issued, which should not be done unless 
+the intent is to have the device to go through its entire boot sequence (see the specification System Turn On Time in 
+both Table 7 and Table 8). 
+ The Gyro Turn on Time (see Table 8) is comprised of t1 (the gyroscope wakeup time) and t5 (the parts filter settling 
+time). t1 is typically 60 ms and t5 is defined as 3/ODR, where ODR is the output data rate in Hertz. 
+ The Accel Turn on Time (see Table 7) is comprised of t2 (the accel wakeup time) and t5 (the parts filter settling time). t2 
+is typically 3 ms, and t5 is defined as 3/ODR, where ODR is the output data rate in Hertz. 
+
+=== PDF PAGE 59 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 59 / 59 
+                                                                                  
+ 
+  
+ 
+ Time t3 is the magnetometer wakeup time, which is typically 12 ms. Transitioning from the Power-On Default state to a 
+Mag Only state or a Mag + Accel state takes the time t3 + t5, where t5 is defined as 3/ODR, where ODR is the output 
+data rate in Hertz. 
+ The Gyro Warm Start Turn On Time (see Table 8) is comprised of t4 (the gyroscope wakeup time from warm-start) and 
+t5 (the parts filter settling time). T4 is typically 5 ms, and t5 is defined as 3/ODR, where ODR is the output data rate in 
+Hertz. 
+ The t7 transition is dependent on data transfer rates and is for I2C at 400 kHz is <100 µs for SPI at 10 Mbps is around 
+40 µs. 
+ 
+ 
+ 
+ 
+ 
+ 
+7 FIFO Description 
+7.1 Using the FIFO 
+ 
+The QMI8610 contains a programmable 1536-byte data buffer, which can be used as a FIFO buffer. The FIFO’s operating 
+mode and configuration are set via the FIFO_CTRL register. FIFO data may consist of gyroscope, accelerometer and 
+magnetometer data and is accessible via the serial interfaces. The FIFO also supports burst reads. The host must 
+complete its burst read prior to the next sensor data period. This time period is defined by the ODR selected. Depending on 
+how many sensors are enabled, the host will need to read increments of 6, 12 or 18 bytes, corresponding to one, two and 
+three sensors active at the same time. This feature helps reduce overall system power consumption by enabling the host 
+processor to read and process the sensor data in bursts and then enter a low-power mode. The interrupt function may be 
+used to alert when new data is available. 
+ 
+
+=== PDF PAGE 60 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 60 / 60 
+                                                                                  
+ 
+  
+ 
+ 
+ 
+Figure 10. FIFO Data Flow 
+ 
+The FIFO size is configured using the FIFO_CTRL register. When the FIFO is enabled for two or more sensors, as is true 
+for all modes that have multiple sensors active, the sensors must be set at the same Output Data Rate (ODR).  
+ 
+The FIFO is read through the I2C/SPI interface by reading the FIFO_DATA register. Any time the Output Registers are read, 
+data is erased from the FIFO memory. 
+The FIFO has multiple operating modes: Bypass, FIFO, and Streaming. The operating modes are set using the mode<1:0> 
+bits in the FIFO_CTRL register. 
+ 
+Enabling FIFO 
+ 
+
+=== PDF PAGE 61 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 61 / 61 
+                                                                                  
+ 
+  
+ 
+The FIFO is configured by writing to the FIFO_CTRL register and is enabled after the accelerometer and/or gyroscope are 
+enabled. If the watermark function is enabled in the FIFO_CTRL register, pin INT2 is asserted when the FIFO watermark 
+level is reached. 
+ 
+ 
+Reading Sensor Data from FIFO  
+Sensor data is read from the FIFO through the following command sequence. (For additional information, see CTRL9 
+description). 
+ Request access to FIFO data buffer by sending CTRL9 command 0x0D. 
+ Set FIFO_rd_mode bit to 1 in FIFO_CTRL. 
+ Read FIFO_DATA register to empty the FIFO.  
+ After FIFO is emptied, set FIFO_rd_mode bit to 0. 
+Note that when only the accelerometer or gyroscope is enabled, the sensor data format at the host interface is:  
+AX_L[0]　
+AX_H[0]]
+　
+　
+AY_L[0]
+　
+　
+AY_H[0]
+　
+　
+AZ_L[0]
+　
+　
+AZ_H[0]
+　
+　
+AX_L[1]
+　
+　
+…
+　
+ 
+When 2 sensors are enabled, the sensor data format is:  
+AX_L[0]　
+AX_H[0]
+　
+　
+AY_L[0]
+　
+　
+AY_H[0]
+　
+　　 
+AZ_L[0]　
+AZ_H[0]
+　
+　
+GX_L[0]
+　
+　
+GX_H[0]
+　
+　　 
+GY_L[0]　
+GY_H[0]
+　
+　
+GZ_L[0]
+　
+　
+GZ_H[0]
+　
+　　 
+AX_L[1]　
+AX_H[1]
+　
+　
+…
+　
+ 
+When 3 sensors are enabled, the sequence will be extended to include the 6 corresponding magnetometer samples. 
+ 
+ 
+ 
+7.2 FIFO Register Description 
+ 
+ 
+Table 32. FIFO Registers Description 
+ 
+ 
+
+=== PDF PAGE 62 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 62 / 62 
+                                                                                  
+ 
+  
+ 
+Register Name 
+ 
+FIFO_CTRL 
+Configure FIFO. Register Address: 19 (0x13) 
+Bits 
+Name 
+Default 
+Description 
+7 
+FIFO_rd_mode 
+1’b0 
+0: Disable FIFO read via FIFO_DATA register. 
+1: Enable FIFO read via FIFO_DATA register. 
+6 
+Reserved 
+1’b0 
+Reserved 
+5:4 
+wtm<1:0> 
+2’b0 
+Set Watermark level. 
+00 – Do not use. 
+01 – Set watermark at ¼ of FIFO size.  
+10 – Set watermark at ½ of FIFO size. 
+11 – Set watermark at ¾ of FIFO size. 
+3:2 
+size<1:0> 
+2’b0 
+Set FIFO size. (See Table 33 for more details.) 
+00 – Set FIFO size at 16 samples for each enabled sensor 
+01 – Set FIFO size at 32 samples for each enabled sensor 
+10 – Set FIFO size at 64 samples for each enabled sensor 
+11 – Set FIFO size at 128 samples for each enabled sensor (up to 2 sensors 
+enabled only) 
+1:0 
+mode<1:0> 
+1’b0 
+Set FIFO Mode. 
+00 – Bypass (FIFO disable). 
+01 – FIFO.  
+10 – Streaming. 
+11 – Not Used 
+FIFO_DATA 
+FIFO Data Register. Register Address: 20 (0x14) 
+Bits 
+Name 
+Default 
+Description 
+7:0 
+data<7:0> 
+8’b0 
+Read this register to read sensor data out of FIFO. 
+FIFO_STATUS 
+FIFO Status. Register Address: 21 (0x15) 
+Bits 
+Name 
+Default 
+Description 
+7 
+resv 
+1’b0 
+Reserved 
+6 
+wtm 
+1’b0 
+Watermark level hit. 
+
+=== PDF PAGE 63 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 63 / 63 
+                                                                                  
+ 
+  
+ 
+Bits 
+Name 
+Default 
+Description 
+5 
+overflow 
+1’b0 
+FIFO over-flow condition. 
+4 
+not_empty 
+1’b0 
+FIFO not empty. 
+3:0 
+fss<3:0> 
+4’b0 
+Indicates FIFO storage level. For more information, see Table 33. 
+ 
+ 
+Table 33. FIFO Storage Level Indicator fss<3:0> Description 
+fss<3:0> Description 
+Comments 
+The FIFO storage level is indicated by the bits fss<3:0> in the FIFO_STATUS register. 
+The value of fss<3:0> represents a coarse value of the FIFO storage level. The 
+coarseness or granularity varies based on the TOTAL FIFO size, as set by the bits 
+size<1:0> in the FIFO_CTRL register.  
+Total FIFO size is the sum of the Accelerometer, Gyroscope and Magnetometer FIFO 
+samples. Each sample for each sensor uses 6 bytes in the FIFO (2 bytes per axis x 3 
+axes). For example, with 2 sensors active and the bits size<1:0> = [11], the FIFO size is 
+256 samples (=2x128), which in bytes is 1536 bytes (=6*2*128). 
+In the table below, the Total FIFO Size lists the total number of sensor samples. Note 
+that this value varies based upon the number of sensors enabled and upon the bits 
+size<1:0> in the FIFO CTRL register .  
+The value of the bits fss<3:0> in the FIFO_STATUS register, represents a coarse 
+sample count, whose granularity is given by the number of sensor samples per LSB, as 
+shown below. 
+FIFO_CTRL 
+register, bits 
+size<1:0> 
+No. of Sensors 
+Enabled 
+(A, G, or M) 
+Total FIFO Size 
+(Total Number of Samples) 
+fss<3:0> Granularity 
+(Number of Sensor Samples per LSB) 
+00 
+1 
+16 
+2 
+01 
+1 
+32 
+4 
+00 
+2 
+00 
+3 
+48 
+4 
+
+=== PDF PAGE 64 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 64 / 64 
+                                                                                  
+ 
+  
+ 
+FIFO_CTRL 
+register, bits 
+size<1:0> 
+No. of Sensors 
+Enabled 
+(A, G, or M) 
+Total FIFO Size 
+(Total Number of Samples) 
+fss<3:0> Granularity 
+(Number of Sensor Samples per LSB) 
+10 
+1 
+64 
+8 
+01 
+2 
+01 
+3 
+96 
+8 
+11 
+1 
+128 
+16 
+10 
+2 
+10 
+3 
+192 
+16 
+11 
+2 
+256 
+32 
+ 
+ 
+ 
+8  Wake On Motion (WoM) 
+8.1  Wake on Motion Introduction 
+ 
+The purpose of the Wake on Motion (WoM) functionality is to allow a system to enter a low power sleep state while the 
+system is static and then to automatically awaken when moved. In this mode the system should use very little power, yet 
+still respond quickly to motion. 
+ 
+It is assumed that the system host processor is responsible for configuring the QMI8610 correctly to place it into Wake on 
+Motion mode, and that the system host processor will reconfigure the QMI8610 as necessary following a WoM interrupt. 
+ 
+Wake on Motion is configured through the CTRL9 command interface (see write-up for 
+CTRL_CMD_WRITE_WOM_SETTING in Section 5.7.5 CTRL9 Commands in Detail). 
+ 
+ 
+ 
+Table 34. Registers used for WoM 
+ 
+
+=== PDF PAGE 65 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 65 / 65 
+                                                                                  
+ 
+  
+ 
+Register (bits) 
+Function 
+CAL1_L (0:7) 
+WoM Threshold: absolute value in mg (with 1mg/LSB resolution) 
+0x00 must be used to indicate that WoM mode is disabled 
+CAL1_H (7;6) 
+WoM interrupt select 
+01 – INT2 (with initial value 0) 
+11 – INT2 (with initial value 1) 
+ 
+00 – INT1 (with initial value 0) 
+10 -  INT2 (with initial value 1) 
+CAL1_H (0:5) 
+Interrupt blanking time (in number of accelerometer samples) 
+ 
+The threshold value is configurable to make the amount of motion required to wake the device controllable by the host 
+application. The special threshold value of 0x00 can be used to disable the WoM mode, returning the interrupt pins to their 
+normal functionality. 
+ 
+The interrupt initial value (1 or 0) and the interrupt pin used for signaling (INT1 or INT2) are selectable to make it easy for 
+system integrators to use the WoM motion mode to wake the host processor from its deepest sleep level. Using the lowest 
+power mode on many microcontrollers requires the use of special wake up pins that may have only a single polarity setting, 
+and thus may not be useable for other special purposes such as timer captures.  
+ 
+The interrupt blanking time is a programmable number of accelerometer samples to ignore when starting WoM mode so 
+that no spurious wake-up events are generated by startup transients. 
+ 
+ 
+ 
+8.2  
+Accelerometer Configuration 
+ 
+For additional tuning of the WoM responsiveness, the precise configuration of the accelerometer is left to the host. This 
+gives the host processor the ability to program the desired sample rate and full-scale range. 
+ 
+ 
+
+=== PDF PAGE 66 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 66 / 66 
+                                                                                  
+ 
+  
+ 
+8.3     Wake on Motion Event 
+ 
+When a Wake on Motion event is detected the QMI8610 will set bit 2 (WoM) in the STATUS1 register. Reading STATUS1 
+by the host will clear the WoM bit and will reset the chosen interrupt line (INT1 or INT2, see previous section) to the value 
+given by the WoM interrupt initial value (see previous section). 
+For each WoM event, the state of the selected interrupt line is toggled. This ensures that while the system is moved, the 
+host processor will receive wakeup interrupts regardless of whether it uses high, low, positive- or negative-edge interrupts. 
+The QMI8610 stays in WoM mode until commanded to enter a new mode by the host processor. 
+ 
+ 
+8.4 Configuration Procedure 
+ 
+The host processor is responsible for all configurations necessary to put the QMI8610 into WoM mode. The specific 
+sequence of operations performed by the host processor to enable WoM is shown in Figure 11. 
+ 
+ 
+Disable sensors. (Write 
+0x00 to CTRL7) 
+Set Accelerometer sample 
+rate and scale (Write 
+CTRL2)
+Set Wake on Motion (WoM) 
+Threshold in CAL1_L;
+select interrupt, polarity and 
+blanking time in CAL1_H
+Execute CTRL9 command 
+to configure WoM mode
+Set Accelerometer enable 
+bit in CTRL7
+
+=== PDF PAGE 67 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 67 / 67 
+                                                                                  
+ 
+  
+ 
+Figure 11. 
+WoM Configuration Commands and Sequence 
+ 
+The WoM bit is cleared upon setting the WoM threshold to a non-zero value, and the selected interrupt pin is configured 
+according to the settings. Special care has been taken that the WoM interrupt does not activate due to any transients when 
+the accelerometer is first enabled. An interrupt blanking time is included that prevents such spurious interrupts to 
+propagate. 
+ 
+8.5 Wake on Motion Control Registers 
+ 
+The WoM configuration is controlled by values written to the CAL1_x registers, as shown in Table 34. 
+ 
+ 
+Figure 12. 
+WoM Example Diagram 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 68 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 68 / 68 
+                                                                                  
+ 
+  
+ 
+8.6 Exiting Wake on Motion Mode 
+ 
+To exit WoM mode the host processor must first clear CTRL7 to disable all sensors, and then write a threshold value of 0x0 
+for the WoM Threshold (see Table 34, Registers used for WoM)and execute the WoM configuration CTRL9 command (see 
+write-up for CTRL_CMD_WRITE_WOM_SETTING in Section 5.7.5 CTRL9 Commands in Detail). On doing this the 
+interrupt pins will return to their normal function. After zeroing the WoM Threshold the host processor may proceed to 
+reconfigure the QMI8610 as normal, as in the case following a reset event. 
+ 
+ 
+ 
+9  Performing Device Self Test 
+9.1  
+Accelerometer Self Test 
+ 
+The accelerometer Self Test is used to determine if the accelerometer is functional and working within acceptable 
+parameters. It does this by using an electrostatic force to actuate the inputs of each axis, AX, AY, and AZ. If the 
+accelerometer mechanical structure responds to this input stimulus by sensing 50 mg or greater we can conclude that the 
+accelerometer is functional. The accelerometer Self Test data is available to be read at registers dVX_L, dVX_H, dVY_L, 
+dVY_H, dVZ_L and dVZ_H. The Host can initiate the Self Test at anytime by using the following procedure. 
+Procedure for accelerometer Self Test: 
+1. Set CTRL7 register to 0x00. 
+2. Wait 1 msec. 
+3. Set CTRL2 register to 0x18 (aFS =3, aODR= 0). 
+4. Wait 1 msec . 
+5. Set CTRL2 register to 0x38. This enables aST (accelerometer Self Test enable bit). 
+6. Wait for the device to drive INT2 high. 
+7. Read DVX_L, DVX_H, DVY_ L, DVY_H, DVZ_L & DVZ_H registers for the Self Test data.  
+8. Set CTRL2 register to 0x18 to disable aST.  
+9. INT2 will be pulled low by the QMI8610. 
+10. Set CTRL2 register to 0x00 ( back to default value at power up) 
+11. Based on the data the host processor determines if the accelerometer response is greater or equal to 50 mg. 
+12. If “yes”, then the accelerometer Self Test has passed. 
+ 
+ 
+
+=== PDF PAGE 69 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 69 / 69 
+                                                                                  
+ 
+  
+ 
+9.2  
+Gyroscope Self Test 
+ 
+The gyroscope Self Test is used to determine if the gyroscope is functional and working within acceptable parameters. It 
+does this by applying an electrostatic force to actuate each of the three X, Y, and Z-axis of the gyroscope and measures 
+the mechanical response on the corresponding X, Y, and Z-axis. If the equivalent magnitude of the output is greater than 
+200 dps for each axis then we can assume that the gyroscope is functional within acceptable parameters. The gyroscope 
+Self Test data is available to be read at output registers dVX_L, dVX_H, dVY_L, dVY_H, dVZ_L & dVZ_H.  
+The Host can initiate the self-test at anytime by using the following procedure. 
+Procedure for gyroscope Self Test: 
+1. 
+Set CTRL7 reg. to 0x00; 
+2. 
+Wait 1 msec 
+3. 
+Set CTRL3 to 0x38 (gFS = 7, gODR= 0) (full scale = 4096 dps) 
+4. 
+Wait 1 msec 
+5. 
+Set CTRL3 register to 0x78. This enables gST (gyroscope Self Test enable bit). 
+6. 
+Wait for the device to drive INT2 high. 
+7. 
+Read DVX_L, DVX_H, DVY_ L, DVY_H, DVZ_L & DVZ_H registers for the self-test Data.  
+8. 
+Set CTRL3 register to 0x38 to disable gST.  
+9. 
+INT2 will be pulled low by device.  
+10. Set CTRL3 register to 0x00 ( back to default value at power up) 
+11. Based on the data the host processor determines if the gyroscope response is greater or equal to 200 dps.  
+12. If “yes” then the gyroscope Self Test has passed. 
+ 
+ 
+10 Host Serial Interface 
+QMI8610 Host Serial Interface supports I2C and SPI slave interfaces. For SPI, it supports both 3-wire and 4-wire modes. 
+The basic timing characteristics for each interface are described below. Through the QMI8610 Host Serial Interface, the 
+host can access, setup and control the QMI8610 Configuration Registers (see Table 25). 
+ 
+10.1 
+Serial Peripheral Interface (SPI) 
+ 
+QMI8610 supports both 3- and 4-wire modes in the SPI slave interface. The SPI 4-wire mode uses two control lines (CS, 
+SPC) and two data lines (SDI, SDO). The SPI 3-wire mode uses the same control lines and one bi-directional data line 
+(SDIO). The SDI /SDIO pin is used for both 3- and 4-wire modes and is configured based on the mode selected. The SPI 
+
+=== PDF PAGE 70 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 70 / 70 
+                                                                                  
+ 
+  
+ 
+interface has been validated at 10 MHz and the timing parameters are measured at that interface frequency. 
+ 
+SPI 3- or 4-wire modes are configured by writing to bit-7 of CTRL1 register. 3-wire mode is selected when bit-7 is 1. The 
+default configuration is 4-wire mode, i.e. bit-7 of CTRL1 is 0. 
+ 
+Figure 13 shows the SPI address and data formats. 
+ 
+SPI Features 
+ 
+ 
+Data is latched on the rising edge of the clock 
+ 
+Data should change on falling edge of clock 
+ 
+Maximum frequency is 10 MHz 
+ 
+Data is delivered MSB first  
+ 
+Support single read/writes and multi cycle (Burst) read/writes. NOTE: burst writes to Configuration registers are NOT 
+supported. These registers should be written in single cycle mode only. 
+ 
+Supports 6-bit Address format and 8-bit data format 
+ 
+Figure 13. 
+SPI Address and Data Form 
+
+=== PDF PAGE 71 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 71 / 71 
+                                                                                  
+ 
+  
+ 
+ 
+In a single cycle read or write transaction, the inc address bit should be set to 0. During a burst read, the master indicates 
+to the slave that the master expects data from the incremented address locations during a read by setting inc to 1. During a 
+burst write, if the inc bit is set to 1, the master indicates to the slave that it is providing data from incremented address 
+locations. Similarly, when the inc bit is set to 0, the master indicates that data is expected from, or is available from the 
+same address respectively during a burst read or write cycle. 
+ 
+      
+ 
+Figure 14. Typical SPI 4-Wire Multi-Slave                 Figure 15. Typical SPI 3-Wire Multi-Slave 
+ 
+In a typical SPI Master/Slave configuration the SPI master shares the SPI clock (SPC), the serial data input (SDI), and the 
+Serial Data Output (SDO) with all the connected SPI slaves devices. Unique Chip Select (CS) lines connect each SPI slave 
+to the master. 
+ 
+Figure 14 and Figure 15 show typical multi-slave 4- and 3-wire configurations. The primary difference between the two 
+configurations is that the SDI and SDO lines are replaced by the bi-directional SDIO line. The SDIO line is driven by the 
+
+=== PDF PAGE 72 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 72 / 72 
+                                                                                  
+ 
+  
+ 
+master with both address and data when it is configured for write mode. During read mode, the SDIO line is driven by the 
+master with the address, and subsequently driven by the “addressed” slave with data.  
+ 
+Figure 16 and Figure 17 illustrate the waveforms for both 4-wire and 3-wire SPI read and write transactions. Note that CS is 
+active during the entire transaction. 
+ 
+ 
+ 
+ 
+Figure 16. 
+SPI 4-Wire Single Byte Read and Write 
+ 
+ 
+
+=== PDF PAGE 73 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 73 / 73 
+                                                                                  
+ 
+  
+ 
+ 
+Figure 17. 
+SPI 4-Wire Multi-Byte Read and Write Transactions 
+ 
+ 
+Figure 18. 
+SPI 3-Wire Single Byte Read and Write Transactions 
+ 
+C S
+SP C
+SP I  3-w ire Single B yte R ead and W rite  
+R ead
+inc
+A 5
+A 4
+A 3
+A 1
+A 0
+D 7
+D 6
+D 5
+D 4
+D 3
+D 2
+D 1
+D 0
+A 2
+SD IO
+1
+0
+1
+1
+R E A D
+IN C
+S ingle R ead
+0
+0
+0
+1
+B urst R ead
+S ingle W rite
+B urst W rite
+
+=== PDF PAGE 74 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 74 / 74 
+                                                                                  
+ 
+  
+ 
+ 
+ 
+Figure 19. 
+SPI 3-Wire Multi-Byte Read and Write Transactions 
+ 
+ 
+10.1.1 SPI Timing Characteristics 
+ 
+The typical operating conditions for the SPI interface are provided in Table 35  
+VDDd = 1.8 V, T = 25°C unless otherwise noted. 
+ 
+Table 35. SPI Interface Timing Characteristics 
+Symbol 
+Parameter 
+Min. 
+Max. 
+Unit 
+tSPC 
+SPI Clock Cycle 
+100 
+ 
+ns 
+fSPC 
+SPI Clock Frequency 
+ 
+10 
+MHz 
+tsCS 
+CS Setup Time 
+6 
+ 
+ns 
+thCS 
+CS Hold Time 
+8 
+ 
+ns 
+tsSDI 
+SDI Input Setup Time  
+5 
+ 
+ns 
+thSDI 
+SDI Input Hold Time 
+15 
+ 
+ns 
+tvSDO 
+SDO Time for Valid Output 
+ 
+50 
+ns 
+thSDO 
+SDO Hold Time for Output 
+9 
+ 
+ns 
+tdSDO 
+SDO Disable Time for Output 
+ 
+50 
+ns 
+
+=== PDF PAGE 75 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 75 / 75 
+                                                                                  
+ 
+  
+ 
+Symbol 
+Parameter 
+Min. 
+Max. 
+Unit 
+tsSDIO 
+SDIO Address Setup Time 
+5 
+ 
+ns 
+thSDIO 
+SDIO Address Hold Time 
+15 
+ 
+ns 
+tvSDIO 
+SDIO Time for Valid Data  
+ 
+50 
+ns 
+tczSDIO 
+SDIO Time from SPC to High Z  
+ 
+50 
+ns 
+tzSDIO 
+SDIO Time from CS to High Z 
+ 
+50 
+ns 
+ 
+ 
+Figure 20. 
+Timing Characteristics for SPI 3- and 4-Wire Interfaces 
+ 
+10.2 
+I2C Interface 
+ 
+Table 36 provides the I2C interface timing characteristics while Figure 21 and Figure 22 illustrate the I2C timing for both fast 
+and standard modes, respectively.  
+During the slave device selection phase, the I2C master supplies the 7-bit I2C slave device address to enable the QMI8610. 
+The 7-bit device address for the QMI8610 is 0x6a (0b1101010) if SA0 is left unconnected, internally there is a weak 
+pull-down of 200 k
+ thereby 
+　
+selecting bit-0=0. In case of a slave device ID conflict, SA0 may be used to change bit-0 of the 
+device address. When SA0 is pulled up externally, the 7-bit device address becomes 0x6b (0b1101011). 
+During the slave register address phase bit-7 of the address is used to enable auto-increment of the target address. When 
+bit-7 is set to 1 the target address is automatically incremented by one.  
+For additional technical details about the I2C standard, such as pull-up resistor sizing the user is referred to “UM10204 
+
+=== PDF PAGE 76 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 76 / 76 
+                                                                                  
+ 
+  
+ 
+I2C-bus specification and user manual” published by NXP B.V. 
+ 
+Table 36. I2C Timing Characteristics 
+Symbol 
+Parameter 
+Conditions 
+Min. 
+Typ. 
+Max. 
+Unit 
+fSCL 
+SCL Clock Frequency 
+Standard Mode 
+ 
+ 
+100 
+kHz 
+Fast Mode 
+ 
+ 
+400 
+tBUF 
+Bus-Free Time between STOP and START 
+Conditions 
+Standard Mode 
+ 
+4700 
+ 
+ns 
+Fast Mode 
+ 
+1300 
+ 
+tHD;STA 
+START or Repeated START Hold Time 
+Standard Mode 
+ 
+4000 
+ 
+ns 
+Fast Mode 
+ 
+600 
+ 
+tLOW 
+SCL LOW Period 
+Standard Mode 
+ 
+4700 
+ 
+ns 
+Fast Mode 
+ 
+1300 
+ 
+tHIGH 
+SCL HIGH Period 
+Standard Mode 
+ 
+4000 
+ 
+ns 
+Fast Mode 
+ 
+600 
+ 
+tSU;STA 
+Repeated START Setup Time 
+Standard Mode 
+ 
+4700 
+ 
+ns 
+Fast Mode 
+ 
+600 
+ 
+tSU;DAT 
+Data Setup Time 
+Standard Mode 
+ 
+250 
+ 
+ns 
+Fast Mode 
+ 
+100 
+ 
+tHD;DAT 
+Data Hold Time 
+Standard Mode 
+0 
+ 
+3450 
+ns 
+Fast Mode 
+0 
+ 
+900 
+tRCL, tR 
+SCL Rise Time 
+Standard Mode 
+ 
+ 
+1000 
+ns 
+Fast Mode 
+20 + 0.1 * CB(22) 
+300 
+tFCL 
+SCL Fall Time 
+Standard Mode 
+ 
+ 
+300 
+ns 
+Fast Mode 
+20 + 0.1 * CB(22) 
+300 
+tRDA, tRCL1 
+SDA Rise Time.  
+Rise Time of SCL after a Repeated START 
+Condition and after ACK Bit 
+Standard Mode 
+ 
+ 
+1000 
+ns 
+Fast Mode 
+20 + 0.1 * CB(22) 
+300 
+
+=== PDF PAGE 77 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 77 / 77 
+                                                                                  
+ 
+  
+ 
+Symbol 
+Parameter 
+Conditions 
+Min. 
+Typ. 
+Max. 
+Unit 
+tFDA 
+SDA Fall Time 
+Standard Mode 
+ 
+ 
+300 
+ns 
+Fast Mode 
+20 + 0.1 * CB(22) 
+300 
+tSU;STO 
+Stop Condition Setup Time 
+Standard Mode 
+ 
+4000 
+ 
+ns 
+Fast Mode 
+ 
+600 
+ 
+ 
+Note: 
+22. CB is the bus capacitance. 
+ 
+ 
+ 
+ 
+Figure 21. I2C Standard Mode Interface Timing 
+
+=== PDF PAGE 78 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 78 / 78 
+                                                                                  
+ 
+  
+ 
+ 
+ 
+Figure 22. 
+I2C Fast Mode Interface Timing 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 79 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 79 / 79 
+                                                                                  
+ 
+  
+ 
+11 Package and Handling 
+11.1 
+Package Drawing 
+ 
+3.40
+(2.18)
+0.32(16x)
+0.61(16X)
+0.50
+5
+8
+4
+1
+9
+12
+13
+16
+(0.25)
+(1.50)
+BOTTOM VIEW
+TOP VIEW
+SIDE VIEW
+NOTES:
+A.  JEDEC PUBLICATION 95 DESIGN REGISTRATION
+      4.25 ISSUE A, EXCEPT FOR BODY SIZE
+      INCREMENT RULE APPLIES TO THIS PACKAGE.
+B.  DIMENSIONS ARE IN MILLIMETERS.
+C.  DIMENSIONS AND TOLERANCES PER
+     ASME Y14.5M, 1994.
+D.  LAND PATTERN RECOMMENDATION IS
+     BASED ON FSC DESIGN ONLY.
+E.  DRAWING FILENAME: MKT-LGA16Arev2.
+F.  FAIRCHILD SEMICONDUCTOR.
+A
+B
+RECOMMENDED LAND PATTERN 
+0.10 C
+0.08 C
+3.30
+3.30
+0.10 C
+2X
+2X
+SEATING
+PLANE
+0.10 C
+PIN #1
+IDENT
+0.10
+C A B
+0.08
+C
+PIN#1
+IDENT
+1
+12
+5
+6
+7
+8
+2
+3
+4
+13
+11
+10
+9
+14
+15
+16
+0.10
+C A B
+0.08
+C
+0.15
+0.05(4X)
+1.50
+1.50
+0.50
+DETAIL A
+0.45
+0.35(16X)
+0.35
+0.25(16X)
+0.55
+0.45
+DETAIL A
+C
+INSULATION
+METALLIZED
+PAD
+1.00 MAX.
+0.95
+0.05
+(0.10)
+0.55
+0.45
+Do not solder center tab
+
+=== PDF PAGE 80 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 80 / 80 
+                                                                                  
+ 
+  
+ 
+Figure 23. 16 Pin LGA 3.3 x 3.3 x 1 mm Package 
+ 
+ 
+11.2 
+Reflow Specification 
+ 
+ 
+Figure 24. 
+Reflow Profile 
+ 
+Profile Freature 
+Pb-Free Assembly Profile 
+Temperature Min.(Tsmin) 
+150°C 
+Temperature Max.(Tsmax) 
+200°C 
+Time(ts)from (Tsmin to Tsmax) 
+60 – 120 seconds 
+Ramp-up Rate (tL to tp) 
+3°C / second max. 
+Liquidous Temperature (TL) 
+217°C 
+Time(tL) Maintained Above (TL) 
+60 – 150 seconds 
+Peak Body Package Temperature
+260 °C +0°C /-5°C 
+Time (tP) within 5 °C of 260 °C 
+30 seconds 
+Ramp – down Rate (Tp to TL) 
+6°C / second max. 
+Time 25°C to Peak Temperature 
+8 minutes max. 
+Table 37. Classification Reflow Profiles 
+
+=== PDF PAGE 81 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 81 / 81 
+                                                                                  
+ 
+  
+ 
+ 
+11.3 
+Storage Specifications 
+ 
+QMI8610 storage specification conforms to IPC/JEDEC J-STD-020D.01 Moisture Sensitivity Level (MSL) 3. 
+Floor life after opening the moisture-sealed bag is 168 hours with storage conditions: Temperature: ambient to ≤30°C and 
+Relative Humidity: 60%RH. 
+ 
+12 Related Resources 
+AN-5083 — Low Power Motion Co-Processor for High Accuracy Tracking Applications  
+AN-5084 — XKF3 Low-Power, Optimal Estimation of 3D Orientation using Inertial and Magnetic Sensing 
+AN-5085 — FIS1100 Board Level Calibration 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 82 ===
+矽睿 
+Document #: 13-52-14 Title:
+QMI8610 Datasheet 
+Rev: A 
+ 
+                                                                                                                   
+The information contained herein is the exclusive property of QST, and shall not be distributed, reproduced, or 
+disclosed in whole or in part without prior written permission of QST. 
+ 82 / 82 
+                                                                                  
+ 
+  
+ 
+ORDERING INFORMATION 
+ 
+Ordering Number 
+Temperature Range 
+Package 
+Packaging 
+ 
+QMI8610-TR  
+ 
+ 
+-40℃~85℃ 
+ 
+LGA 
+ 
+Tape and Reel: 3k pieces/reel 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FIND OUT MORE 
+ 
+For more information on QST’s Sensors contact us at 86-21-50497300. 
+ 
+The application circuits herein constitute typical usage and interface of QST product. QST does not provide warranty 
+or assume liability of customer-designed circuits derived from this description or depiction. 
+ 
+QST reserves the right to make changes to improve reliability, function or design. QST does not assume any liability 
+arising out of the application or use of any product or circuit described herein; neither does it convey any license under 
+its patent rights nor the rights of others.  
+ 
+ISO9001 : 2008 
+ 
+China 
+Patents 
+201510000399.8, 
+201510000425.7, 
+201310426346.3, 
+201310426677.7, 
+201310426729.0, 
+201210585811.3 and 201210553014.7 apply to the technology described.  
+QST 
+First Floor, Building No.2, 
+Chengbei Road 235, Shanghai 
+Document # 13-52-14  Rev .A 
+QST Corporation 

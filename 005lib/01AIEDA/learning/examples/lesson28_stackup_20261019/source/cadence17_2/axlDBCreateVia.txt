@@ -1,0 +1,48 @@
+
+  NAME
+         axlDBCreateVia - add a via to the database
+  FUNCTION
+         axlDBCreateVia(
+             t_padstack/o_padstackDbid
+             l_anchorPoint
+             [t_netName]
+             [g_mirror]
+             [f_rotation]
+             [o_parent]
+         )
+         ==> l_result/nil
+  SYNOPSIS
+        Creates a via in the layout as specified by the arguments described 
+         below.
+  NEEDS
+         t_padstack              - The padstack name for the via.  If a 
+                                 padstack definition with this name is not 
+                                 already in the layout, the function 
+                                 searches in order the libraries specified 
+                                 by PADPATH and loads the definition into 
+                                 the database.
+         o_padstackDbid          - a padstack dbid
+         l_anchorPoint           - The location of the via
+         t_netName               - The net name. (nil is standalone)
+         g_mirror                - t --> via is mirrored, nil --> not.
+                                         - 'GEOMETRY --> only geometry is mirrored.
+         f_rotation              - The rotation angle.
+         o_parent                - axl DBID of object to add the via to
+                                         (symbol instance or nil for design)
+  RETURNS
+         l_result/nil:          - nil if not created, or a list containing
+                                         (car) axl DBID of the via
+                                         (cadr) t if DRCs created or nil.
+ 
+  NOTE
+         axlDBCreateVia cannot create a test point. It will have to be set
+                 via axlTestPoint function.
+  EXAMPLE
+         The following example adds a standalone via using padstack "pad1" 
+         at x 5600 y4200 on net "sclkl," mirrored and rotated.
+ 
+         myvia = axlDBCreateVia( "pad1", 5600:4200, "sclkl", t, 45.0, nil)
+                 ==> (dbid:526745 nil)
+ 
+         This adds a via rotated at 45 degrees:
+

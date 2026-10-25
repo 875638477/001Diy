@@ -1,0 +1,280 @@
+{
+  "batchId": "root_south_private_via_spacing_4L_01",
+  "variant": "4L",
+  "status": "ACTUAL_B015_EXPLICIT_GEOMETRIC_CLEARANCE_FIX_REQUIRES_NATIVE",
+  "sourceCheckpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\source_4L_b015_DRC_PENDING",
+  "sourceExpectedSHA256": "51CA6A748B3FB376AE49A39E799B9777CB7223D4AA613665331AECA9418BACE4",
+  "operations": [
+    {
+      "type": "deleteVia",
+      "id": "PB13_VIA_SPACING_RIP",
+      "net": "GPIO_PB13",
+      "xy": [
+        37.5,
+        20.75
+      ],
+      "padstack": "HI_VIA026_C052_TENT"
+    },
+    {
+      "type": "deleteSegment",
+      "id": "PB13_VIA_SPACING_RIP_0",
+      "net": "GPIO_PB13",
+      "layer": "TOP",
+      "points": [
+        [
+          37.5,
+          21.85
+        ],
+        [
+          37.5,
+          20.75
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "deleteSegment",
+      "id": "PB13_VIA_SPACING_RIP_1",
+      "net": "GPIO_PB13",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          37.5,
+          20.75
+        ],
+        [
+          37.3,
+          20.55
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "deleteSegment",
+      "id": "PB13_VIA_SPACING_RIP_2",
+      "net": "GPIO_PB13",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          37.3,
+          20.55
+        ],
+        [
+          37.3,
+          19.7
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "via",
+      "id": "PB13_VIA_SPACING_NEW",
+      "net": "GPIO_PB13",
+      "xy": [
+        37.5,
+        20.725
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "PB13_VIA_SPACING_TOP",
+      "net": "GPIO_PB13",
+      "layer": "TOP",
+      "points": [
+        [
+          37.5,
+          21.85
+        ],
+        [
+          37.5,
+          20.725
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "PB13_VIA_SPACING_BOTTOM",
+      "net": "GPIO_PB13",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          37.5,
+          20.725
+        ],
+        [
+          37.3,
+          20.525
+        ],
+        [
+          37.3,
+          19.7
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "deleteVia",
+      "id": "PB15_VIA_SPACING_RIP",
+      "net": "GPIO_PB15",
+      "xy": [
+        38.5,
+        20.7
+      ],
+      "padstack": "HI_VIA026_C052_TENT"
+    },
+    {
+      "type": "deleteSegment",
+      "id": "PB15_VIA_SPACING_RIP_0",
+      "net": "GPIO_PB15",
+      "layer": "TOP",
+      "points": [
+        [
+          38.5,
+          21.85
+        ],
+        [
+          38.5,
+          20.7
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "deleteSegment",
+      "id": "PB15_VIA_SPACING_RIP_1",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          38.5,
+          20.7
+        ],
+        [
+          38.5,
+          22.3
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "via",
+      "id": "PB15_VIA_SPACING_NEW",
+      "net": "GPIO_PB15",
+      "xy": [
+        38.5,
+        20.675
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "PB15_VIA_SPACING_TOP",
+      "net": "GPIO_PB15",
+      "layer": "TOP",
+      "points": [
+        [
+          38.5,
+          21.85
+        ],
+        [
+          38.5,
+          20.675
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "PB15_VIA_SPACING_BOTTOM",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          38.5,
+          20.675
+        ],
+        [
+          38.5,
+          22.3
+        ]
+      ],
+      "width": 0.16
+    }
+  ],
+  "privateViaNewCenters": [
+    {
+      "net": "GPIO_PB13",
+      "oldXY": [
+        37.5,
+        20.75
+      ],
+      "newXY": [
+        37.5,
+        20.725
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "layers": [
+        "TOP",
+        "L2",
+        "L3",
+        "BOTTOM"
+      ],
+      "scope": "Recreate via-list-only .02x.02mm local physical approval around actual new center, copy each actual parent physical CSet unchanged. No inner via spacing reduction."
+    },
+    {
+      "net": "GPIO_PB15",
+      "oldXY": [
+        38.5,
+        20.7
+      ],
+      "newXY": [
+        38.5,
+        20.675
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "layers": [
+        "TOP",
+        "L2",
+        "L3",
+        "BOTTOM"
+      ],
+      "scope": "Recreate via-list-only .02x.02mm local physical approval around actual new center, copy each actual parent physical CSet unchanged. No inner via spacing reduction."
+    }
+  ],
+  "proofs": [
+    {
+      "net": "GPIO_PB13",
+      "source": "U1.26",
+      "toAlias": "PB13_VIA_SPACING_NEW"
+    },
+    {
+      "net": "GPIO_PB15",
+      "source": "U1.28",
+      "toAlias": "PB15_VIA_SPACING_NEW"
+    }
+  ],
+  "longRouteAnchorsUnchanged": {
+    "GPIO_PB13": [
+      37.3,
+      19.7
+    ],
+    "GPIO_PB15": [
+      38.5,
+      22.3
+    ]
+  },
+  "measurements": {
+    "adjacentViaCopperClearanceMM": 0.20499999999999996,
+    "PB13TopTotalNeckMM": 2.128553390593274,
+    "PB15TopTotalNeckMM": 2.1785533905932746,
+    "PB15BottomTotalNeckMM": 1.625,
+    "existingMaxSourceNeckMM": 2.4
+  },
+  "reason": "Actual4L cache found .1871mm via-via at innerL2/L3 and BOTTOM against .2mm. Move only2 sourcevias .025mm south; preserve .2mm all-layer via spacing and frozen long endpoints, do not hide physical inner pads or lower DEFAULT."
+}

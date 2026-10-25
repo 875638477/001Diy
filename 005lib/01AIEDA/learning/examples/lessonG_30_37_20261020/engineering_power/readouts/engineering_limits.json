@@ -1,0 +1,62 @@
+{
+  "supply_limits": {
+    "input_V": [
+      9,
+      16
+    ],
+    "V3V3_load_max_A": 0.15,
+    "ambient_C": [
+      0,
+      40
+    ],
+    "header_combined_load_max_A": 0.01,
+    "external_GPIO_plus_header_load_max_A": 0.01,
+    "USB_VBUS": "sense+ESD only; must never connect to V5 or V3V3",
+    "no_external_backfeed": "SWD and headers are reference outputs only; probe Vtarget must sense, not power; TLV755 has no reverse blocking",
+    "current_budget_revision": "Final normal150mA/Ta0-40C supersedes initial120mA/Ta0-50C after MCU50mA+CAN60mA+external10mA leaves no pullup margin. Fault180mA not normal guarantee.",
+    "native_historical_L1_requirement": "L1 saved REQUIREMENTS still says covers nominal120mA as original design context; not inductor current rating. Actual Isat5.8A/Irms4.5A unchanged and final150mA load/thermal review controls. No native rerun needed."
+  },
+  "normal_current_budget_mA": {
+    "MCU_72MHz_all_peripherals_DS5319_Table13_max_85C": 50.0,
+    "TCAN332_dominant_RL50_max": 60.0,
+    "external_GPIO_plus_header_combined_ceiling": 10.0,
+    "two_I2C_pullups_2k2_minR_conservative": 3.2,
+    "other_bias_resistors_reserve": 3.0,
+    "analog_current_conservative_reserve": 5.0,
+    "internal_switching_unmodelled_reserve": 5.0,
+    "allocated_subtotal": 136.2,
+    "remaining_margin_to150": 13.8,
+    "USB_profile_total_including2V4mA_attach_reserve": 82.1,
+    "note": "Reserve rows are design allocations, not quoted IC specifications; CAN term load already included in transceiver ICC, not double-added."
+  },
+  "calculations": {
+    "buck_V_nom": 5.0108148148148155,
+    "buck_V_min": 4.876104895104896,
+    "buck_V_max": 5.145986838690542,
+    "buck_deltaIL_at16V_15uH_500kHz_A": 0.4583333333333333,
+    "ldo_P_at5V_150mA_W": 0.255,
+    "ldo_rise_JEDEC_C_at5V_150mA": 58.9305,
+    "ldo_P_worst_150mA_W": 0.2843230258035812,
+    "ldo_Tj_first_order_at40C_worst_150mA_C": 105.70705126320762,
+    "i2c_tr_2k2_100pF_ns": 186.40600000000003,
+    "i2c_Rmax_300ns_100pF_ohm": 3540.658562492623,
+    "i2c_Rmin_3mA_3V465_0V4_ohm": 1021.6666666666666,
+    "vbus_gate_at4V75_V": 4.702970297029703,
+    "vbus_sense_low_current_A": 0.00033
+  },
+  "unpopulated_or_rejected": {
+    "input_TVS": "No populated TVS: ST SMBJ16A VRWM16V but Vcl26V at10/1000us and34.4V at8/20us; latter exceeds TPS54202 abs30V. Not a surge-certified input. Optional review pads only if root explicitly adds DNP.",
+    "CAN_TVS": "No arbitrary SM712/24V TVS: TCAN332 bus abs +/-14V. Short nonautomotive bench, internal device IEC12kV ESD rating does not prove system compliance.",
+    "ferrite": "No default series ferrite/LC on whole V3V3; MCU analog RC supply review delegated to MCU lesson; verify DC drop/damping and supply ramp if added.",
+    "BSS84": "Replaced by DMP2035U with Rds guarantee at-2.5V; BSS84 current catalog Not for Design In and no low-Vgs Rds guarantee used here."
+  },
+  "release_gates": [
+    "exact passive/connector/inductor MPN and DC-bias curves",
+    "buck loop response, load step, DCM ripple under minimum/maximum loads",
+    "fuse inrush/I2t and source limit coordination",
+    "LDO actual PCB temperature and input/output power-off slew/reverse-current test",
+    "USB attach/detach firmware behavior and compliance/ESD test",
+    "CAN bit timing, termination and bus-fault envelope",
+    "Capture ERC and native network output vs this spec; PCB import/ECO verified separately by root"
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "status": "GEOMETRIC_CANDIDATE_WITH_PENDING_NATIVE_AND_RETURN_REVIEW",
+  "batchId": "CAN_RXD_2L_bottom_long_03",
+  "variant": "2L",
+  "sourceExpectedSHA256": "3D84945A5CC18046C82883328D0A743A670D5961D831D87251B8A6A0CDFFACC9",
+  "sourceNativeLog": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only",
+  "requiredFutureSourcePlans": [
+    "engineering_mcu/plans/GPIO_north_joint_fanout_02.json",
+    "plans/GPIO_south_joint_root_v9.json",
+    "engineering_mcu/plans/GPIO_left_joint_fanout_07.json",
+    "engineering_mcu/plans/NSS_pullup_local_relayout_04_SOURCE_ONLY.json",
+    "engineering_power/RIGHT10_FULL_2L_v11.json",
+    "plans/ordinary_remote_2L_v9.json",
+    "plans/root_south_services_2L_v18.json",
+    "plans/root_remaining_2L_v19.json",
+    "plans/CAN_RXD_2L_source_03.json"
+  ],
+  "requiredPlacementChanges": [
+    {
+      "ref": "R16",
+      "xy": [
+        45.5,
+        19.9
+      ],
+      "rotation": 0,
+      "purpose": "Move source-series resistor to the same east routing side as UART/SWD/USB services; avoid actual18-28mm westward detour and release south-west GPIO window. pin1(45.6016,19.9),pin2(47.1764,19.9)."
+    },
+    {
+      "ref": "C13",
+      "xy": [
+        34.0,
+        22.4984
+      ],
+      "rotation": 90,
+      "purpose": "Move +.6X/-1.1Y to release leftGPIO bank while preserving direct TOP cap loops; VDD leg slightly longer, VSS leg shorter, total loop length modestly reduced."
+    },
+    {
+      "ref": "R21",
+      "xy": [
+        33.7016,
+        30.7
+      ],
+      "rotation": 180
+    },
+    {
+      "ref": "R23",
+      "xy": [
+        33.5,
+        32.1
+      ],
+      "rotation": 180
+    },
+    {
+      "ref": "R25",
+      "xy": [
+        31,
+        33.7
+      ],
+      "rotation": 0
+    },
+    {
+      "ref": "R32",
+      "xy": [
+        31,
+        35.5
+      ],
+      "rotation": 0
+    },
+    {
+      "ref": "C15",
+      "xy": [
+        47.3,
+        30.4016
+      ],
+      "rotation": 270,
+      "purpose": "Free PB8/PB9 source copper, maintain local direct VDD/VSS loop"
+    },
+    {
+      "ref": "R28",
+      "xy": [
+        53,
+        28
+      ],
+      "rotation": 180,
+      "purpose": "BOOT0 pulldown removes old ground pad/thermal obstruction from PB5 fanout"
+    }
+  ],
+  "operations": [
+    {
+      "type": "via",
+      "id": "HI_2L_CAN_RXD_1_V1",
+      "net": "CAN_RXD",
+      "xy": [
+        34.45,
+        1.95
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_CAN_RXD_1_R1",
+      "net": "CAN_RXD",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          61.45,
+          12.2
+        ],
+        [
+          55.8,
+          12.2
+        ],
+        [
+          45.0,
+          1.4
+        ],
+        [
+          35.0,
+          1.4
+        ],
+        [
+          34.45,
+          1.95
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_CAN_RXD_1_R2",
+      "net": "CAN_RXD",
+      "layer": "TOP",
+      "points": [
+        [
+          34.45,
+          1.95
+        ],
+        [
+          34.45,
+          9.2
+        ],
+        [
+          34.15,
+          9.5
+        ],
+        [
+          34.15,
+          14.65
+        ],
+        [
+          36.4,
+          16.9
+        ],
+        [
+          36.4,
+          17.4
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    }
+  ],
+  "proofs": [
+    {
+      "from": "U5.4",
+      "to": "R13.2",
+      "connected": true
+    }
+  ],
+  "candidateReviews": [
+    {
+      "net": "CAN_RXD",
+      "joins": 1,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 1,
+      "seconds": 12.48
+    }
+  ],
+  "failures": [],
+  "scope": "Only specified ordinary nets; explicit critical routes excluded. Paths obey supplied geometry/clearance/keepout policies but this is not native DRC approval, automatic product routing, reference certification or manufacturing release.",
+  "pending": [
+    "Native batch create/update/DRC/fresh reopen",
+    "Actual reference continuity along both layers",
+    "Signal transition nearby GND return connections",
+    "Whole-board plane island/neck review",
+    "Physical/electrical class exceptions at actual positions"
+  ],
+  "seconds": 12.48
+}

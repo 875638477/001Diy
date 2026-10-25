@@ -1,0 +1,131 @@
+
+  NAME 
+         axlPolyFromDB - generate a polygon fron database
+  FUNCTION 
+     axlPolyFromDB (
+         o_dbid/r_path
+         ?endCapType s_endCapType
+         ?layer      t_layer
+         ?padType    s_padType
+         ?holes      t/nil
+         ?line2poly  t/nil
+         ?xhatch     t/nil
+     )
+     => lo_polygon
+  SYNOPSIS 
+         Creates a list of o_polygon objects from the dbid or a r_path. Use the 
+         lo_polygon list to get the poly attributes or to perform logical 
+         operations on these polys.
+ 
+         In the case of r_path option, we expect a path that reflects
+         a closed shape with no intersections. It is important that
+         the first and last point be the same. The width option of
+         r_path is ignored as well as the '?' arguments to axlPolyFromDB.
+ 
+  POLYGON ATTRIBUTES: 
+         area - (float) Area of polygon in design units. If a hole this is 
+                 negative.  If a polygon is not a hole then the area is the 
+                 sum of the base poly area minus any of its holes.
+         bBox - (bBox)  bounding box of polygon
+         holes - (list of o_polys/nil) list of any holes in poly
+         isHole - (t/nil) is this a hole (void) or a shape
+         objType - (t_string)  "polygon"
+         vertices - (list of coords). This always describes a closed shape.
+                 Format for each coord is: (xy f_radius) Where
+                   xy - vertice point in design units
+                   f_radius - 0 if previous point and this point forms a segment 
+                         else points form a arc with radius. The sign of the 
+                         radius indicates for postive the arc is to the left
+                         of the y-axis and a negitve indicates arc is the right.
+                 If arcs are present a polygon typically may contain more segments
+                 then the underlying shape dbid. This is due to the polygon arcs
+                 cannot cross a quadant so are broken along quadant boundaries.
+  NOTES
+         - A polygon is NOT a dbid.
+         - Comparing two polys using Skill functions:
+           - equal function: geometrically compares that two polys
+             are the same thus slightly slower then the eq function.
+           - eq function compares that the poly ids are the same.
+         This is different from the dbid comparision where both the
+         equal and eq return the same results.
+         What this means from a programming standapoint, is if you have 
+         2 identical shapes in Allegro the 'equal' comparison on the shape
+         dbids returns they are NOT equal but converting these shapes
+         to polys via axlPolyFromDB and doing a 'equal' of
+         the resulting polys will return 't' while the 'eq' comparison
+         will return 'nil'.
+  NEEDS    
+      o_dbid       - axl DBID for one of the following:
+                     path (line and cline), shape, rect, frect, pin, via, void,
+                     arc and line from which to construct the poly.
+                     Notes:
+                       - arc and line are segments reported by show element
+      r_path       - Path construct from the axlPath API family. This
+                     is not an Allegro database object and is much more
+                     efficient method for creating an Allegro shape then 
+                     converting it to a Poly. Note axlDBCreateOpenShape
+                     also supports a r_path. See SYNOPSIS for more detail.
+                     See line2poly
+ 
+                     r_path must describe a closed non-intersecting shape
+                     unless the line2poly is t (see below).
+ 
+      s_endCapType - Keyword string specifying the end cap type to be used
+                     for the poly, one of 'SQUARE, 'OCTAGON, or 'ROUND. This
+                     is used in case of line or cline only, otherwise it's
+                     ignored. The default is 'SQUARE. Used in case of line 
+                     or cline only.
+      t_layer      - String representation of a layer. i.e. "ETCH/TOP"
+                     This is used in case of pin or via only, otherwise it's
+                     ignored. The default is "ETCH/TOP".
+      s_padType    - Keyword string specifying the type of the pad to be
+                     retrieved, one of 'REGULAR, 'ANTI, or 'THERMAL. This is
+                     used for pins, vias or if r_path is based with the line2poly 
+                     option; othwise it is ignored. The default is 'REGULAR.
+      holes        - For shapes with voids returns any voids as holes (this
+                     is the default). If nil don't return the holes.
+      line2poly    - Applicable only if 1st argument is an r_path. 
+                     By default, an r_path which describes a closed path when this
+                     option is t, the r_path itself is converted to a poly in a manner
+                     similar to to line dbids. It is strongly recommended that the
+                     r_path has width otherwise the artwork undefined line width is used.
+ 
+                     Typically one poly is returned for each segment in the r_path.
+ 
+     xhatch          If t and the dbid is a cross-hatch shape returns a poly of the 
+                     cross-hatching. By default, cross-hatch shapes are treated as solid
+                     shapes with respect to poly generation. For complex shapes (>500 
+                     edges this includes both outline and voids) generateing a poly
+                     of the cross-hatching can take a considerable amount of time and memory.
+                     If this option is t, the holes option for cross-hatch shapes is
+                     assumed to be t.
+  RETURNS
+      lo_polygon     Returns the lo_polygon object representing the resulting
+                     geometry. If axlPolyFromDB cannot get the polys it 
+                     returns nil.
+  SEE ALSO
+     Other APIs that support or generate polygons:
+        axlPolyOperation -   performs various logical operations on 2 lists of polygon 
+        axlPolyExpand -      expands or contracts polygon
+        axlIsPolyType - is object a polygon object
+        axlPolyErrorGet - return last error from axlPolyOperation
+        axlPolyFromDB - convert an allegro dbid to a polygon
+        axlPolyMemUse - debug function to return memory use of polygon sub-system
+        axlPolyOffset - move a polygon
+        axlPolyFromHole - converts a hole polygon to a postive polygon
+        axlDBCreateShape - create a shape
+ 
+     See documentation for individual use.
+   EXAMPLES
+     1) Create a poly from a via 
+         polyList = axlPolyFromDB(via_dbid ?layer "ETCH/BOTTOM" ?padType 'ANTI)
+ 
+     2) Create a rectangle poly (one corner at 0,0 with a width 1000 and
+        height of 500) using r_path method
+ 
+         ; note first and last points are the same
+         myPath = axlPathStart( list(0:0 1000:0 1000:500 0:500 0:0) 0)
+         pathPoly = axlPolyFromDB(myPath )
+         poly = car(pathPoly)
+         poly->??
+

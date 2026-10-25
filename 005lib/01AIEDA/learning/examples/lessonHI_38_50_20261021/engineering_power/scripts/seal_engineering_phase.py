@@ -1,0 +1,13 @@
+from pathlib import Path
+import json,hashlib
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');H=R.parent
+# Current canonical candidate has an independent subset manifest; no self hashing.
+selected=[]
+for v in ['2L','4L']:
+ selected += [R/f'RIGHT10_FULL_{v}_v10.json',R/f'readouts/RIGHT10_FULL_v10_{v}_precheck.json',R/f'readouts/RIGHT10_FULL_{v}_v10_explicit_graph.json',R/f'readouts/RIGHT10_FULL_{v}_v10_crossgroup.json',H/f'inventory/checkpoints/USB_aux_{v}_b014/normalized.json',H/f'inventory/checkpoints/USB_aux_{v}_b014/networks.json',H/f'inventory/checkpoints/USB_aux_{v}_b014/base_net_rules.json']
+selected += [R/'readouts/RIGHT10_v10_C15_loop_tradeoff.json',R/'scripts/precheck_RIGHT10_full_v10.py',R/'scripts/review_RIGHT10_full_graph_v10.py']
+def item(f):return dict(path=str(f),sha256=hashlib.sha256(f.read_bytes()).hexdigest(),size=f.stat().st_size)
+frozen=dict(status='FROZEN_COMPLETE_CANDIDATE_NOT_NATIVE_ACCEPTANCE',date='2026-10-22',files=[item(f) for f in selected],scope='Right10 fullpaths/returns/quietrework candidate based on immutableUSBauxb014. NativeDRC/newplane/negative/finalfresh pending. Other futuregroup revisions must be re-integrated by root.')
+(R/'RIGHT10_v10_manifest.json').write_text(json.dumps(frozen,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+note=R.parent.parent.parent/'notes/lessonHI_power_20261021.md';files=[item(f) for f in sorted(R.rglob('*')) if f.is_file() and f.name!='artifact_manifest.json'];files.append(item(note));out=dict(status='ENGINEERING_PHASE_MANIFEST_NOT_FINAL_ROUTE_ACCEPTANCE',date='2026-10-22',scope='02d03c/07c/CANactualhistory, SPI2Lv10/4Lv6 actualb012history and currentRIGHTFULLv10 engineeringcandidate. All native finalacceptance/integration remainsroot. No claimallHIcomplete.',files=files,excludes=['artifact_manifest.json'],currentCandidates=['RIGHT10_FULL_2L_v10.json','RIGHT10_FULL_4L_v10.json'],actualHistoricalOperations=['STAR_reroute_07c.json','V3_peripheral_distribution_06b.json','interface_CAN_routes_04.json','CAN_local_supply_05.json','ESD_ground_routes_04c.json','SPI_external_2L_engineered_v10.json','SPI_external_4L_engineered_v6.json'])
+(R/'artifact_manifest.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n',encoding='utf-8');print(json.dumps(dict(files=len(files),manifestSHA256=hashlib.sha256((R/'artifact_manifest.json').read_bytes()).hexdigest(),rightManifestSHA256=hashlib.sha256((R/'RIGHT10_v10_manifest.json').read_bytes()).hexdigest())))

@@ -1,0 +1,45 @@
+
+  NAME
+         axlNetEcsetValueGet - get an electrical constraint associated with a net
+  FUNCTION
+         axlNetEcsetValueGet(
+                 o_itemDbid/t_netName
+                 t_cnsName/s_name
+         )
+         ==> t_cnsValue/nil
+  SYNOPSIS
+         This routine returns the value of a specific electrical constraint that
+         as been assigned to a given net. Both fixed and user defined constraints
+         may be accessed.
+         
+         This will not return a "flattened" net view of constraints applied to
+         pinpairs. Use axlCnsNetFlattened to obtain this constraint view.
+  TIPS
+         If requesting multiple constraints from the same net is is faster to
+         obtain get the dbid of thet net and pass that as first argument instead
+         of using the net name.
+  NEEDS
+         o_itemDbid - the dbid of any item that that is assigned to a net or Xnet.
+         t_cnsName - the property name for the constraint to be fetched. This can
+                     be either a fixed constraint or a user defined constraint.
+         s_name - symbol name of DRC check (values returned by 
+                         axlCNSEcsetModeGet(nil). These names may not
+                         exactly match the property name. They do not exist
+                         for user defined properties in the ecset.
+  RETURNS
+         t_cnsValue - the value returned as a string
+         nil - no value defined for the net
+  SEE ALSO
+         axlCnsNetFlattened
+  EXAMPLES:
+         1) net is part of an ECSET (electrical constraint set) which has
+                 a MAX_EXPOSED_LENGTH constraint
+ 
+             net = car(axlSelectByName("NET" "NET2")
+             rule = axlNetEcsetValueGet(net "MAX_EXPOSED_LENGTH")
+ 
+         2) net has an override contraint for MAX_VIA_COUNT
+              rule = axlNetEcsetValueGet("NET2" "MAX_VIA_COUNT")
+         3) same as example 2 but use the DRC check name
+              rule = axlNetEcsetValueGet("NET2" 'Maximum_Via_Count)
+

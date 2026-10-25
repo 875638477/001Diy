@@ -1,0 +1,137 @@
+{
+  "status": "PASS_ACTUAL_UNSAVED_GEOMETRY_NATIVE_GRAPH_REFILL_PENDING",
+  "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\review\\PROVISIONAL_UNSAVED_b016_2L_try09.json",
+  "sourceSHA256": "abd76328655754b3e838af496973d4fdf3e142941f97e51c7387c50f5119555b",
+  "scope": "Actual unsaved try09 copper only; no derived erroneous V3 deletion analysis; new native fill and graph authoritative",
+  "operations": [
+    {
+      "type": "route",
+      "id": "B016_WEST_COMMON_TOP_BRIDGE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          35.8,
+          21.95
+        ],
+        [
+          35.8,
+          20.5
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Actual b016 new PB12 BOTTOM slot isolated old WEST return; bridge to common BOTTOM south side without globalTOP or quiet-domain reuse"
+    },
+    {
+      "type": "via",
+      "id": "B016_WEST_COMMON_BOTTOM_VIA",
+      "net": "GND",
+      "xy": [
+        35.8,
+        20.5
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Connect TOP bridge to actual common BOTTOM GND south of slot; native graph must restore old WEST to U1.23"
+    }
+  ],
+  "checks": [
+    {
+      "layer": "BOTTOM",
+      "object": "native_route",
+      "net": "GPIO_PB12",
+      "kind": "line",
+      "gapMM": 0.34999999999999787,
+      "needMM": 0.3,
+      "passBaseField": true
+    }
+  ],
+  "failed": [],
+  "actualExistingBottomComponentsAtNewVia": [
+    {
+      "planeIndex": 4,
+      "component": 0,
+      "areaMM2": 3746.4988998992394,
+      "fullCopperDiskUncoveredMM2": 0.0,
+      "signedCenterBoundaryDistanceMM": 0.3497999999999983,
+      "sameComponentVSS23ViaCopperOverlapMM2": 0.0,
+      "VSS23ViaCenterMayBeDrillVoid": true,
+      "oldWestCenterCovered": false
+    }
+  ],
+  "requiredNative": [
+    "Exact actual try09 rebuild/reapply after LIVE R27 power feed restoration",
+    "new stockvia copper through actual BOTTOM common component",
+    "old WEST via35.8,21.95 reaches U1.23; C13/C14/C15 loops and all prior GND proofs preserved",
+    "HSE singleanchor negative unchanged",
+    "PB12/PA10/class-class/ground-specific scoped DRC zero; full final whole-board DRC later"
+  ],
+  "variant": "2L_ONLY_NO_4L_CHANGE",
+  "actualNativeGraphRelevantObjects": [
+    {
+      "component": "1",
+      "type": "shape",
+      "xy": null,
+      "bbox": "((37.7 4.3) (41.5335 6.6))",
+      "layer": "ETCH/TOP"
+    },
+    {
+      "component": "1",
+      "type": "shape",
+      "xy": null,
+      "bbox": "((39.2 24.6002) (42.3998 28.4))",
+      "layer": "ETCH/TOP"
+    },
+    {
+      "component": "1",
+      "type": "shape",
+      "xy": null,
+      "bbox": "((36.4752 27.0) (42.3998 30.5482))",
+      "layer": "ETCH/TOP"
+    },
+    {
+      "component": "1",
+      "type": "shape",
+      "xy": null,
+      "bbox": "((35.2414 20.7002) (49.5999 31.6))",
+      "layer": "ETCH/BOTTOM"
+    },
+    {
+      "component": "1",
+      "type": "via",
+      "xy": [
+        38.0,
+        25.27
+      ],
+      "bbox": "((37.7 24.97) (38.3 25.57))",
+      "layer": "nil"
+    },
+    {
+      "component": "1",
+      "type": "shape",
+      "xy": null,
+      "bbox": "((37.2 29.3) (47.5 39.4))",
+      "layer": "ETCH/BOTTOM"
+    },
+    {
+      "component": "1",
+      "type": "shape",
+      "xy": null,
+      "bbox": "((42.8599 1.8002) (43.7566 3.1338))",
+      "layer": "ETCH/BOTTOM"
+    },
+    {
+      "component": "1",
+      "type": "shape",
+      "xy": null,
+      "bbox": "((0.5 0.5) (79.5 59.5))",
+      "layer": "ETCH/BOTTOM"
+    },
+    {
+      "component": "4",
+      "type": "shape",
+      "xy": null,
+      "bbox": "((42.5002 3.4502) (47.6297 8.7014))",
+      "layer": "ETCH/BOTTOM"
+    }
+  ]
+}

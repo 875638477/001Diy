@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-22T00:06:56.772676+08:00",
+  "status": "READ_ONLY_OFFICIAL_DOC_AND_EXECUTABLE_INVENTORY_NO_CADENCE_EXECUTION",
+  "officialFindings": [
+    {
+      "source": "cmref/analyze.html:678-735",
+      "finding": "Length or time based constraints; pin/Zaxis inclusion options. Z-axis derives between connected signal layers."
+    },
+    {
+      "source": "ccoms/cchap.html:3988",
+      "finding": "Zaxis excluded from totaletch length anddisabledbydefault."
+    },
+    {
+      "source": "cmref/analyze.html:844",
+      "finding": "All differential pair checks switches phase,uncoupled,minspacing together; do not disableit to evade solver."
+    }
+  ],
+  "notFound": "No official documented MM-only switch that guarantees no internal bem2d while retaining all differential checks was located in searched local172docs. No invented envvariable proposed.",
+  "processPathHypothesis": {
+    "currentReadOnlyShellWhichBem2d": null,
+    "launcher": "scripts/launchHI.py inheritsenvironment and doesnot explicitlyaddtools/bin toPATH; nativeSignoise usesbarecommandbem2d. Need inspectactualchildPATH/which and controllednative rerun; this reportdoesnot assertrootcause."
+  },
+  "executables": [
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\bem2d.exe",
+      "size": 24363008,
+      "sha256": "08f0a6580008943ed3e04c95a981fb8e69b8d61f187b461c2b477f012a6ff92c",
+      "PEMachine": "0x8664",
+      "PEOptionalMagic": "0x20b",
+      "imports": [
+        {
+          "dll": "MSVCR110.dll",
+          "existingCandidates": [
+            "C:\\Windows\\System32\\MSVCR110.dll",
+            "C:\\Windows\\SysWOW64\\MSVCR110.dll"
+          ]
+        },
+        {
+          "dll": "allegro_util64.dll",
+          "existingCandidates": [
+            "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro_util64.dll"
+          ]
+        },
+        {
+          "dll": "KERNEL32.dll",
+          "existingCandidates": [
+            "C:\\Windows\\System32\\KERNEL32.dll",
+            "C:\\Windows\\SysWOW64\\KERNEL32.dll"
+          ]
+        },
+        {
+          "dll": "MSVCP110.dll",
+          "existingCandidates": [
+            "C:\\Windows\\System32\\MSVCP110.dll",
+            "C:\\Windows\\SysWOW64\\MSVCP110.dll"
+          ]
+        }
+      ],
+      "executed": false
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\bem2d2.exe",
+      "size": 34504192,
+      "sha256": "c8e3b6de15215ead312dc46cffd1d02a81425d31bdf42a222580ab113a57d7cc",
+      "PEMachine": "0x8664",
+      "PEOptionalMagic": "0x20b",
+      "imports": [
+        {
+          "dll": "MSVCP110.dll",
+          "existingCandidates": [
+            "C:\\Windows\\System32\\MSVCP110.dll",
+            "C:\\Windows\\SysWOW64\\MSVCP110.dll"
+          ]
+        },
+        {
+          "dll": "MSVCR110.dll",
+          "existingCandidates": [
+            "C:\\Windows\\System32\\MSVCR110.dll",
+            "C:\\Windows\\SysWOW64\\MSVCR110.dll"
+          ]
+        },
+        {
+          "dll": "KERNEL32.dll",
+          "existingCandidates": [
+            "C:\\Windows\\System32\\KERNEL32.dll",
+            "C:\\Windows\\SysWOW64\\KERNEL32.dll"
+          ]
+        }
+      ],
+      "executed": false
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\bem2d3.exe",
+      "size": 70014976,
+      "sha256": "2f8bc4c853be5102d660c2408af63d61b06bd8ff1c25234aaee272e123fdaf9d",
+      "PEMachine": "0x8664",
+      "PEOptionalMagic": "0x20b",
+      "imports": [
+        {
+          "dll": "libiomp5md.dll",
+          "existingCandidates": [
+            "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\libiomp5md.dll"
+          ]
+        },
+        {
+          "dll": "KERNEL32.dll",
+          "existingCandidates": [
+            "C:\\Windows\\System32\\KERNEL32.dll",
+            "C:\\Windows\\SysWOW64\\KERNEL32.dll"
+          ]
+        },
+        {
+          "dll": "MSVCP110.dll",
+          "existingCandidates": [
+            "C:\\Windows\\System32\\MSVCP110.dll",
+            "C:\\Windows\\SysWOW64\\MSVCP110.dll"
+          ]
+        },
+        {
+          "dll": "MSVCR110.dll",
+          "existingCandidates": [
+            "C:\\Windows\\System32\\MSVCR110.dll",
+            "C:\\Windows\\SysWOW64\\MSVCR110.dll"
+          ]
+        }
+      ],
+      "executed": false
+    }
+  ],
+  "officialSources": [
+    {
+      "original": "C:\\Program0\\Cadence\\SPB172\\doc\\cmref\\analyze.html",
+      "archived": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\source\\Cadence172_cmref_analyze.html",
+      "sha256": "dac3524e0832d6b2b64eb57d3d738ce44338299a98480336c9a4e25fb064703d"
+    },
+    {
+      "original": "C:\\Program0\\Cadence\\SPB172\\doc\\ccoms\\cchap.html",
+      "archived": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\source\\Cadence172_ccoms_cchap.html",
+      "sha256": "1fc2c3bd289a65ccdeeccb45943843517049600e43222e99988bb8c6603c9370"
+    },
+    {
+      "original": "C:\\Program0\\Cadence\\SPB172\\doc\\algrodesrls\\chap3.html",
+      "archived": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\source\\Cadence172_algrodesrls_chap3.html",
+      "sha256": "2452964873b416a51a368a86764bb58163928b1ba9059ba1c5b90883c77abb10"
+    }
+  ]
+}

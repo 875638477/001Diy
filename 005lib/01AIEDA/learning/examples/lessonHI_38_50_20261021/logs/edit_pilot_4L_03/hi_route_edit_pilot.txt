@@ -1,0 +1,17 @@
+BASELINE_V3V3_UNCONNECTED=27
+EXISTING_PIN_ATTACHED_ROUTES=(dbid:0000017B4282E028)
+RIPUP_PATH_BEFORE=(prop nil bBox ((33.1 23.4) (35.875 24.375)) readOnly t net dbid:0000017B42797798 thermal nil segments (dbid:0000017B4282E0A8 dbid:0000017B4282E0F8 dbid:0000017B4282E148) isEtch t nSegs 3 hasArcs nil isSameWidth nil branch dbid:0000017B427DC178 layer "ETCH/TOP" symbolEtch nil parent dbid:0000017B427DC178 parentGroups nil objType "path")
+AFTER_RIPUP nativeUnconnected=28 targetReached=nil
+LOCAL_ROUTE	HI_REBUILD_C13_NEW_WIDE_CORNER	"V3V3"	"ETCH/TOP"	((35.75 24.25) (34.95 24.25) (34.55 23.85) (33.9 23.85) (33.4 23.7))	(0.25 0.25 0.6 0.6)	((dbid:0000017B4285B200) nil)
+NATIVE_CONNECTIVITY	"U1"	"24"	"C13"	"1"	targetReached=t	objects=3
+SINGLE_SEGMENT_BEFORE=(prop nil readOnly t bBox ((34.825 24.125) (35.875 24.375)) net dbid:0000017B42797798 objType "line" isEtch t font nil lineType horizontal layer "ETCH/TOP" width 0.25 startEnd ((35.75 24.25) (34.95 24.25)) parent dbid:0000017B4285B200) points=((35.75 24.25) (34.95 24.25)) width=0.25 count=12
+SINGLE_SEGMENT_AFTER count=11 targetConnected=nil
+LOCAL_ROUTE	HI_RECREATE_SINGLE_SEGMENT	"V3V3"	"ETCH/TOP"	((35.75 24.25) (34.95 24.25))	(0.25)	((dbid:0000017B4285DB50) nil)
+NATIVE_CONNECTIVITY	"U1"	"24"	"C13"	"1"	targetReached=t	objects=3
+LOCAL_ROUTE	HI_PILOT_TOP	"V3V3"	"ETCH/TOP"	((40 50) (42 50))	(0.6)	((dbid:0000017B42862308) nil)
+LOCAL_ROUTE	HI_PILOT_LAYER_CHANGE	"V3V3"	"ETCH/BOTTOM"	((42 50) (45 50))	(0.6)	((dbid:0000017B42863760) nil)
+NATIVE_LAYER_CHANGE_A_TO_C=t OBJECTS=5 RETURN_VIA=(relations nil prop nil bBox ((41.7 50.7) (42.3 51.3)) readOnly t net dbid:0000017B42797A08 objType "via" pads (pad:0000017B4B8A7548 pad:0000017B4B8A7520 pad:0000017B4B8A74F8 pad:0000017B4B8A74D0 pad:0000017B4B8A74A8 pad:0000017B4B8A7480 pad:0000017B4B8A7458 pad:0000017B4B8A7430 pad:0000017B4B8A7408 pad:0000017B4B8A73E0 pad:0000017B4B8A73B8 pad:0000017B4B8A7390 pad:0000017B4B8A7368 pad:0000017B4B8A7340 pad:0000017B4B8A7318 pad:0000017B4B8A72F0 pad:0000017B4B8A72C8 pad:0000017B4B8A72A0) branch dbid:0000017B4282ED88 pluralViaConnect nil pluralVia nil fixedByTestPoint nil isThrough t xy (42.0 51.0) testPoint nil name "L28_VIA030_C060" startEnd ("ETCH/TOP" "ETCH/BOTTOM") rotation 0.0 symbolEtch nil parent dbid:0000017B4282ED88 mirrorType "NO" isMirrored nil definition dbid:0000017B4279F4B8 parentGroups nil)
+VOID_READ shape=(prop nil priority nil autoObject nil autoKeepoutType nil dynamicGroup nil taper nil shapeAuto nil region nil bBox ((50.0 48.0) (55.0 52.0)) readOnly t voids (dbid:0000017B42864D88) net dbid:0000017B42797A08 objType "shape" segments (dbid:0000017B42864C48 dbid:0000017B42864C98 dbid:0000017B42864CE8 dbid:0000017B42864D38) nSegs 4 fillet nil fill t connect nil cavity nil branch dbid:0000017B42864B90 fillOOD nil isRect nil layer "ETCH/TOP" symbolEtch nil parent dbid:0000017B42864B90 isHole nil parentGroups nil) void=(prop nil bBox ((53.0 49.0) (54.0 51.0)) readOnly t net dbid:0000017B42797A08 objType "polygon" segments (dbid:0000017B42864DC8 dbid:0000017B42864E18 dbid:0000017B42864E68 dbid:0000017B42864EB8) nSegs 4 isRect nil layer "ETCH/TOP" parent dbid:0000017B42864BB8 parentGroups nil) pointInCopper=t pointInVoid=nil
+DRC_STATUS	HI_PILOT_WITH_LAYER_CHANGE_AND_VOID	0	t
+DRC_STATUS	HI_PILOT_ROLLBACK	0	t
+HI_ROUTE_EDIT_PILOT_COMPLETE_NO_SAVE

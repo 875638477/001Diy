@@ -1,0 +1,85 @@
+{
+  "status": "PASS_BACKUP_ZIP_REMOVED_ORIGINALS_RETAINED",
+  "started_utc": "2026-10-25T05:01:34.609496+00:00",
+  "source_manifest": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pad_psm_merge\\archive_manifest.csv",
+  "source_manifest_sha256": "ad5280f53fb2dbdc58efd77e74632e4baad27dd27fcde87e7fb838ff53864710",
+  "original_files_verified": 26476,
+  "original_bytes_verified": 1955833097,
+  "verification": "Every source file in the immutable historical manifest was reopened and compared by byte count and SHA256; all match.",
+  "source_roots": [
+    {
+      "path": "D:\\001DIY\\004computer\\lga1700\\cadence_library_cleanup_20261025",
+      "files": 5716,
+      "bytes": 82119209
+    },
+    {
+      "path": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025",
+      "files": 20395,
+      "bytes": 1858060504
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\_library_suffix_backup_20261025",
+      "files": 23,
+      "bytes": 642404
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\_library_merge_backup_20261025",
+      "files": 195,
+      "bytes": 10213156
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\_library_geometry_backup_20261025",
+      "files": 147,
+      "bytes": 4797824
+    }
+  ],
+  "archive": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pad_psm_merge\\cadence_library_maintenance_20261025_full.zip",
+  "archive_sha256_before_deletion": "d544cd9d1c1facffd630b03cc915487bf2c5912165e441271be19ef48272d5eb",
+  "archive_bytes_before_deletion": 375805598,
+  "classification": "Duplicate ZIP copy of two full maintenance evidence trees and three rollback backup trees, not a live Cadence library file.",
+  "archive_top_roots": [
+    "backups",
+    "cadence_geometry_merge_20261025",
+    "cadence_library_cleanup_20261025"
+  ],
+  "user_authorization": "User instructed: inspect large files and delete if they are backup files (2026-10-25).",
+  "scope": "Only the exact named ZIP is removed. All 26476 originals, all readable records and all three rollback directories are retained.",
+  "finished_utc": "2026-10-25T05:07:03.948460+00:00",
+  "archive_exists_after_deletion": false,
+  "deleted_file_count": 1,
+  "released_bytes": 375805598,
+  "documentation_updates": [
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pad_psm_merge\\README.txt",
+      "before_sha256": "524ed27b5d0ed791f80dd222a6ab2504e9fc00adba21d498924301120532d2d4",
+      "after_sha256": "ec2779bdba99760fb6f8ca8880c91c7f6dbbe32a6805174d83c7b8b9929b3878",
+      "encoding_preserved": "UTF-8; exact byte replacement or STATUS rewrite preserving original newline"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pad_psm_merge\\STATUS.txt",
+      "before_sha256": "686ca0df5375280e2b78d21ef80768abece716a0811cd96006aa14c82c884e64",
+      "after_sha256": "53d0240ffb2d1ba84a65b791f00c04d7065a3eb5c13a26d65759a1cd13cd9b31",
+      "encoding_preserved": "UTF-8; exact byte replacement or STATUS rewrite preserving original newline"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\INDEX.txt",
+      "before_sha256": "21bcf7d1d7678002b3e40d7350d92446f8b50d6a8fa9edb3b55f2414b6b51d0c",
+      "after_sha256": "2024e1edc8f7761fac15cbf3afbec669ea2d6150df9733b791a998444fdac3bf",
+      "encoding_preserved": "UTF-8; exact byte replacement or STATUS rewrite preserving original newline"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\EDA.md",
+      "before_sha256": "3072c0bba2b486ddeed6584d932fdac42f98d63c1206dfbcdcb81c3d9dce1d7e",
+      "after_sha256": "2be65ae624062737918ee7f0d29c23993c27f3a63948cbe0e560d355800858ae",
+      "encoding_preserved": "UTF-8; exact byte replacement or STATUS rewrite preserving original newline"
+    }
+  ],
+  "retained_original_root_presence": {
+    "D:\\001DIY\\004computer\\lga1700\\cadence_library_cleanup_20261025": true,
+    "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025": true,
+    "D:\\001DIY\\005lib\\_library_suffix_backup_20261025": true,
+    "D:\\001DIY\\005lib\\_library_merge_backup_20261025": true,
+    "D:\\001DIY\\005lib\\_library_geometry_backup_20261025": true
+  },
+  "historical_manifests_and_verifications": "Preserved unchanged as evidence of the pre-deletion archive. README, STATUS, INDEX and EDA explicitly state the ZIP has been deleted."
+}

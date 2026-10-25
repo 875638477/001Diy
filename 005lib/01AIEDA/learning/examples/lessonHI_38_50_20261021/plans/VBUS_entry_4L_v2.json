@@ -1,0 +1,158 @@
+{
+  "status": "CANDIDATE_ACTUAL_HOLE_CLEARANCE_AND_NATIVE_PENDING",
+  "variant": "4L",
+  "operations": [
+    {
+      "type": "route",
+      "id": "VBUS_LEFT_ESCAPE",
+      "net": "USB_VBUS",
+      "layer": "TOP",
+      "points": [
+        [
+          37.6,
+          7.355
+        ],
+        [
+          37.6,
+          8.2
+        ],
+        [
+          36.9,
+          8.9
+        ],
+        [
+          36.9,
+          9.2
+        ]
+      ],
+      "purpose": "Low-current USB VBUS clamp/bypass/sense connection, not a source of board V5; explicit source geometry and actual USB reference review required.",
+      "width": 0.4
+    },
+    {
+      "type": "via",
+      "id": "VBUS_LEFT_V",
+      "net": "USB_VBUS",
+      "xy": [
+        36.9,
+        9.2
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "VBUS_LEFT_LAYER3_REFERENCED_BRIDGE",
+      "net": "USB_VBUS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          36.9,
+          9.2
+        ],
+        [
+          40.15,
+          9.2
+        ],
+        [
+          40.25,
+          9.3
+        ]
+      ],
+      "purpose": "Low-current USB VBUS clamp/bypass/sense connection, not a source of board V5; explicit source geometry and actual USB reference review required.",
+      "width": 0.4
+    },
+    {
+      "type": "route",
+      "id": "VBUS_RIGHT_ESCAPE",
+      "net": "USB_VBUS",
+      "layer": "TOP",
+      "points": [
+        [
+          42.4,
+          7.355
+        ],
+        [
+          42.4,
+          8.2
+        ],
+        [
+          42.7,
+          8.5
+        ],
+        [
+          42.7,
+          9.2016
+        ]
+      ],
+      "purpose": "Low-current USB VBUS clamp/bypass/sense connection, not a source of board V5; explicit source geometry and actual USB reference review required.",
+      "width": 0.4
+    },
+    {
+      "type": "via",
+      "id": "VBUS_SENSE_V",
+      "net": "USB_VBUS",
+      "xy": [
+        47.8,
+        7
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "VBUS_SENSE_TOP",
+      "net": "USB_VBUS",
+      "layer": "TOP",
+      "points": [
+        [
+          47.8,
+          7
+        ],
+        [
+          49.1016,
+          7
+        ]
+      ],
+      "purpose": "Low-current USB VBUS clamp/bypass/sense connection, not a source of board V5; explicit source geometry and actual USB reference review required.",
+      "width": 0.4
+    },
+    {
+      "type": "route",
+      "id": "VBUS_SENSE_BOTTOM",
+      "net": "USB_VBUS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          43.8,
+          9.2016
+        ],
+        [
+          45.5984,
+          9.2016
+        ],
+        [
+          47.8,
+          7
+        ]
+      ],
+      "purpose": "Low-current USB VBUS clamp/bypass/sense connection, not a source of board V5; explicit source geometry and actual USB reference review required.",
+      "width": 0.4
+    }
+  ],
+  "proofs": [
+    {
+      "from": "J2.A4_B9",
+      "to": "C10.1",
+      "connected": true
+    },
+    {
+      "from": "J2.B4_A9",
+      "to": "C10.1",
+      "connected": true
+    },
+    {
+      "from": "R7.1",
+      "to": "C10.1",
+      "connected": true
+    }
+  ],
+  "scope": "2L consciously uses a longer low-current VBUS path below the connector to preserve DM entrance reference; 4L uses short bridges backed by actual L3 GND. Narrow .2mm necks are finite and must obey inherited1mm max; no net-tie/PIN_SHORT. All housing/tenting/drill/assembly manufacturing checks remain open."
+}

@@ -1,0 +1,40 @@
+{
+  "status": "PARTIAL_CANDIDATE_REQUIRES_ENGINEERING_CORRECTION",
+  "batchId": "PB15_east_4L_86_search",
+  "variant": "4L",
+  "sourceExpectedSHA256": "FD5D93BED7E64FEF14CEBB17FF103443FA29E0CEDF60EEA26B79D9F8D091B1B7",
+  "sourceNativeLog": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_clearance_4L_b016_DRC_PENDING_stored",
+  "operations": [],
+  "proofs": [],
+  "candidateReviews": [
+    {
+      "net": "GPIO_PB15",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 6.1
+    }
+  ],
+  "failures": [
+    {
+      "net": "GPIO_PB15",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB15_ENGINEERED_ANCHOR",
+          "to": "J13.3",
+          "reason": "No geometric candidate after 20721 expanded cells; reached=[{'layer': 'TOP', 'count': 2345, 'bbox': [43.650000000000006, 23.150000000000002, 53.45, 30.75], 'nearestTargetMM': 27.885670155117303}, {'layer': 'BOTTOM', 'count': 10503, 'bbox': [43.650000000000006, 23.150000000000002, 52.5, 31.450000000000003], 'nearestTargetMM': 26.919214327316457}]"
+        }
+      ]
+    }
+  ],
+  "scope": "Only specified ordinary nets; explicit critical routes excluded. Paths obey supplied geometry/clearance/keepout policies but this is not native DRC approval, automatic product routing, reference certification or manufacturing release.",
+  "pending": [
+    "Native batch create/update/DRC/fresh reopen",
+    "Actual reference continuity along both layers",
+    "Signal transition nearby GND return connections",
+    "Whole-board plane island/neck review",
+    "Physical/electrical class exceptions at actual positions"
+  ],
+  "seconds": 6.1
+}

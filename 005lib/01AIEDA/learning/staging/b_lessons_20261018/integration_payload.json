@@ -1,0 +1,108 @@
+{
+  "summaryPath": "learning/notes/lessonB_07_10_20261018.md",
+  "summary": "# B. 焊盘与物理封装：第7—10课完成记录\n\n日期：2026-10-18（Asia/Shanghai）。实机 Cadence 17.2 S045。**本阶段原生CAD实操和声明的课程验收已完成。** 本记录是后续复习入口；不能以阅读资料或只生成文件代替本次实际保存、编译、独立重开与几何验收。\n\n全部学习源码、下载、草稿、运行环境、日志、失败证据、原生练习、校验与备份都在 D:/001DIY/005lib/01AIEDA。本次未向公共库发布新的教学封装，既有QMI8610公共库哈希未变。用户真实PCB工程、全局HOME、01env和快捷方式未修改。\n\n## 四课完成内容\n\n| 课号 | 真实实操与证据 | 完成记录 |\n| --- | --- | --- |\n| 7 | 原基础PTH/带铜环NPTH/镀铜槽孔；补纯NULL机械孔、有效独立keepout、四辐条FSM、TOP-L2-L3-BOTTOM实际铜避让、12条GND热连接、受控2条DRC与回退后0DRC/state=t。补验157项PASS | [基础笔记](lesson07_padstacks_20261018.md)＋[完整补齐笔记](lesson07_completion_20261018.md) |\n| 8 | 指定Rev A QMI8610的机械图/推荐land/视角/公差/16脚；无中心焊盘。复核原生文件哈希、16pin/96pad行、三文字与1MM高度、48pin PSM变换证据 | [完整复习笔记](lesson08_real_package_20261018.md) |\n| 9 | STM32F103C8T6 LQFP48及TPS62130RGTR QFN16+EP17；厂家单窗与教学4窗；圆角/开窗/面积比；3封装、9实例246pin、5个唯一原生热via对象 | [完整笔记](lesson09_qfn_qfp_20261018.md) |\n| 10 | GCT USB4105-GF-A：16接点到12land、4壳体槽脚、2个纯NPTH、板边/装配边界/限高/插拔辅助空间；5PAD及DRA/PSM，三种实例重开，1765项PASS | [完整笔记](lesson10_connector_20261018.md) |\n\n每课保存资料版本/页码/来源SHA、输入规格、操作代码、创建/编译/重开日志、实际读回、外部验收、失败与修复、复现方法和应用边界。原始失败版本保留，当前版本在分课笔记中明确指定。\n\n## 实操中形成的规则\n\n1. 先确定视角、尺寸箭头基准、原点及编号，再推导坐标；把器件端子、本体、推荐PCB land、courtyard和插拔空间分开。连接器尺寸链曾被独立审核误读，放大核对后纠正，最终采用正确基准。\n2. DEFAULT_INTERNAL是Padstack模板，不是板的物理层名。实际层名严格保持TOP-BOTTOM或TOP-L2-L3-BOTTOM；更多层连续延伸。Film sequence不能代替Cross Section。\n3. 纯NPTH孔壁不镀铜与无铜land分别核验。不能用铜环消除警告；NULL pad上的keepout可能失效，应验证独立机械keepout和实际铜区。\n4. BEGIN/DEFAULT/END有ANTI而缺THERMAL的警告与用途性“无默认内部pad”警告不同。警告保留，不关闭检查。纯NULL导入阻塞时，仅停止有PID/时间证据的本次进程，后续用原生加载/保存/重开证明实际定义。\n5. 动态BOUNDARY创建函数的net参数可能被忽略；必须显式赋网并读回生成铜的net。正片默认热辐条0.127与负片FSM辐条0.3不是同一控制来源，均不能直接当产品电源/接地规则。\n6. 原生查询bbox可能已包含pin旋转；OBLONG_X名称不能代替真实长轴几何。提取器按层重复对象时，以原生dbid辨别重复输出，不能只按坐标去重。\n7. 真实高度覆盖初始化默认值：QMI8610/QFN为1MM，LQFP48为1.6MM，USB4105按侧视与公差取3.46MM；连接器板下stake侵入另算。\n8. 三项指定文字锚点继续(0,0)。QFN中心丝印会与EP阻焊开窗冲突：库默认仍保留，实际PCB应移动实例位号到可读且避开焊接区域的位置，并检查最终丝印输出。\n9. 厂家型号特定钢网推荐优先明确记录。TI单窗约85.11%；教学4窗约59.92%，两者前提不同。via无单独mask开窗也不代表在整体EP开窗内已经盖油。\n10. exitCode=0、文件存在、stored DRC=0都不能独立证明成功；还需COMPLETE、独立重开、实际几何、哈希和有效DRC状态。\n\n## 验收与可查看文件\n\n总验收与文件SHA索引：[b_lessons_07_10_20261018.json](../logs/b_lessons_07_10_20261018.json)。\n\n- [第7课最终验证](../examples/lesson07_completion_20261018/validation.json)；[最终四层BRD](../examples/lesson07_completion_20261018/library/eda_l07c_clearance_4layer_v2.brd)；[原生铜预览](../examples/lesson07_completion_20261018/preview.png)。\n- [第8课本次复核](../examples/lesson08_review_20261018/validation.json)；[QMI8610案例与公共文件](../examples/qmi8610/README.md)。\n- [第9课验证](../examples/lesson09_qfn_qfp_20261018/validation.json)；[3个封装预览](../examples/lesson09_qfn_qfp_20261018/preview/lesson09_footprints.png)。\n- [第10课验证](../examples/lesson10_connector_20261018/verification/validation.json)；[USB-C预览](../examples/lesson10_connector_20261018/preview.png)。\n\n预览均由原生读回几何绘制，已目视复核，非Cadence截图。根复核把第7课SVG渲染为PNG；渲染器忽略CSS导致黑字问题已在内存中展开颜色修正，源SVG与几何不改。PowerShell内联Python引号曾丢失，改为01AIEDA内源码文件运行；未因失败创建外部中转文件。\n\n## 完成范围与下一阶段\n\n完成的是本阶段焊盘/物理封装的原生软件制作与CAD验收。热via的第9课样例仍是无网几何示例；第9/10课验证板drcState=nil已如实保留，不能称完整板级DRC通过。未取得可靠连接器STEP，已完成2D机械边界，未宣称3D装配干涉通过。\n\n板厂/装配释放、镀槽工艺、钢网与填塞孔选择、实物焊接、完整插头线缆/机壳配合及产品SI/PI/EMI仍需真实项目条件。本阶段未制造实物，不影响软件课程完成；这些条件在以后实际设计中落实。\n\n桌面native pipe仍未恢复，本次使用官方PXML/CLI/SKILL。第6课GUI部分仍待续；Capture内部接口和符号建立进入第11—14课。换机继续时先读取[EDA总记录](../../EDA.md)、[课程索引](../../课程索引.md)、本记录与各课笔记，核对Cadence路径/版本、工具目录和来源PDF；不把历史成功视为新机已验证。\n",
+  "required": [
+    {
+      "path": "learning/examples/lesson07_completion_20261018/validation.json",
+      "status": "PASS_CAD_LESSON07_COMPLETION"
+    },
+    {
+      "path": "learning/examples/lesson08_review_20261018/validation.json",
+      "status": "PASS"
+    },
+    {
+      "path": "learning/examples/lesson09_qfn_qfp_20261018/validation.json",
+      "status": "PASS_CAD_LESSON09"
+    },
+    {
+      "path": "learning/examples/lesson10_connector_20261018/verification/validation.json",
+      "status": "PASS"
+    }
+  ],
+  "notes": [
+    "learning/notes/lesson07_completion_20261018.md",
+    "learning/notes/lesson08_real_package_20261018.md",
+    "learning/notes/lesson09_qfn_qfp_20261018.md",
+    "learning/notes/lesson10_connector_20261018.md"
+  ],
+  "manifests": [
+    "learning/examples/lesson07_completion_20261018/artifact_manifest.json",
+    "learning/examples/lesson09_qfn_qfp_20261018/manifest.json",
+    "learning/examples/lesson10_connector_20261018/manifest.json"
+  ],
+  "inventoryFolders": [
+    "learning/examples/lesson07_completion_20261018",
+    "learning/examples/lesson08_review_20261018",
+    "learning/examples/lesson09_qfn_qfp_20261018",
+    "learning/examples/lesson10_connector_20261018",
+    "learning/staging/b_lessons_20261018"
+  ],
+  "limits": [
+    "CAD software course block complete; fabricated assembly/manufacturing approval and product SI/PI/EMI not claimed",
+    "Lesson09 thermal vias unassigned; lesson09/10 board DRC state nil is not a fresh full DRC pass",
+    "Native desktop pipe remains unavailable; official Cadence CLI/SKILL/PXML used; Capture lessons pending",
+    "No verified connector STEP/complete 3D mating clearance",
+    "Lesson07 PNG added by root after agent artifact-manifest snapshot; covered by this consolidated inventory"
+  ],
+  "edits": [
+    {
+      "path": "EDA.md",
+      "replacements": [
+        [
+          "完整课程目录见根目录 [课程索引.md](课程索引.md)：60 课主线及 5 个按需进阶专题。第 1—5 课已完成各自声明范围；第7课基础孔/层叠和第8课QMI8610封装CAD实操完成；第6课原生精确操作/回退子项通过，界面部分待续。下一步进入第9课，保留第6/7课尚未验收项。目录不代表全部后续课程已经执行。",
+          "完整课程目录见根目录 [课程索引.md](课程索引.md)：60课主线及5个按需进阶专题。第1—5课与B阶段第7—10课已完成各自原生CAD声明范围，第6课原生精确操作/回退子项通过、界面部分待续。下一主线为第11课Capture基本操作与内部Tcl接口；本次完整记录见[B阶段总结](learning/notes/lessonB_07_10_20261018.md)及第24节。后续目录不代表已经执行。"
+        ],
+        [
+          "已完成QMI8610库及PSM实例pin/文字/高度传播验收，PTH/带铜环NPTH/slot及四层映射；Capture符号、纯无铜NPTH和制造输出专项待做",
+          "B阶段第7—10课PCB焊盘/封装原生CAD实操完成：PTH/NPTH/槽孔/实际避铜、QMI8610、QFP/QFN/EP/锡膏及连接器机械约束；Capture符号按第11—14课待做，制造输出按后续课程"
+        ],
+        [
+          "1. 第5课及第7课基础实操完成，第6课原生子项通过，见第20节。下一步第9课QFP/QFN与裸露焊盘；同时保留第6课界面操作、第7课纯无铜NPTH/实际除铜及负片flash验收项。",
+          "1. B阶段第7—10课已完成原生CAD实操和全部课程记录，见第24节及[B阶段总结](learning/notes/lessonB_07_10_20261018.md)。下一主线第11课Capture基本操作与内部Tcl接口；第6课界面部分保留待续。"
+        ]
+      ],
+      "marker": "## 24. B阶段第7—10课全部完成",
+      "append": "## 24. B阶段第7—10课全部完成与完整记录（2026-10-18）\n\n按用户“今天把B.焊盘与物理封装第7—10课学习完毕后做好所有记录”的要求，已完成本阶段原生CAD实操、独立重开验收和完整笔记。当前进度以本节及本文开头为准；第20节等历史快照中的第7课待验收项已由本轮补齐。\n\n| 课号 | 本次完成与验收 | 完整记录 |\n| --- | --- | --- |\n| 7 | 纯NULL NPTH、独立有效keepout、四层实际除铜、负片四辐条FSM及正片真实GND热连接；受控穿孔产生2条DRC，rollback后0DRC/state=t；补验157项PASS | [基础](learning/notes/lesson07_padstacks_20261018.md) / [补齐](learning/notes/lesson07_completion_20261018.md) |\n| 8 | QMI8610指定Rev A来源/尺寸/16脚/无中心焊盘，原生文件与公共库SHA复核，文字/高度及原PSM变换证据通过 | [完整复习](learning/notes/lesson08_real_package_20261018.md) |\n| 9 | LQFP48与QFN16+EP17、厂家单窗/教学4窗、5个原生热via；3封装9实例246pin，独立读回PASS | [完整笔记](learning/notes/lesson09_qfn_qfp_20261018.md) |\n| 10 | USB4105-GF-A的12land/16接点映射、4槽脚、2NPTH、板边/插拔辅助边界和真实高度；3实例保存重开，1765项PASS | [完整笔记](learning/notes/lesson10_connector_20261018.md) |\n\n统一复习入口：[B阶段完成记录](learning/notes/lessonB_07_10_20261018.md)；来源、输入、全部成功/失败脚本、PXML、原生文件、日志、读回、验收JSON、预览与SHA清单均在01AIEDA内。总索引：[验收及文件清单](learning/logs/b_lessons_07_10_20261018.json)。本次新建教学封装只放学习目录，未发布公共库；既有QMI8610公共库哈希不变。\n\n已记录重要修正：BOUNDARY创建net参数会被忽略，须显式赋网并核实际铜；正片0.127热辐条与负片FSM0.3来自不同定义；槽方向看真实polygon而非OBLONG_X名称；提取对象重复看dbid；连接器尺寸箭头基准、开口方向与插入运动分别核对。纯NULL孔用途性警告和受控终止状态完整保留，未靠假铜环或关闭校验消除。\n\n三文字锚点(0,0)与固定层名继续遵守。真实最大高度按手册覆盖初始化1mm：LQFP48=1.6MM，USB4105=3.46MM，板下stake另算。QFN原点丝印与EP开窗冲突已记录，实际PCB应移动实例位号并检查输出。\n\n完成范围是焊盘与物理封装CAD课程；第9热孔为无网几何样例，第9/10验证板DRC状态nil、连接器STEP缺失、制造/焊接和板级SI/PI/EMI未据此认证。桌面native pipe仍不可用；第6课GUI待续，下一主线第11课Capture基本操作与内部Tcl接口。"
+    },
+    {
+      "path": "课程索引.md",
+      "replacements": [
+        [
+          "本目录列出完整主线 **60 课**，以及按项目需要展开的进阶专题。第1—5课完成各自声明范围；第7课基础孔/层叠和第8课QMI8610封装CAD实操完成，第6课原生操作子项通过、界面部分待续。下一步第9课，同时保留第6/7课未验收专项。目录中的待学习内容尚未执行，课程会随资料、实际项目和验证结果细化，不将“列入目录”记作掌握或完成。",
+          "本目录列出完整主线 **60课**及按需进阶专题。第1—5课与B阶段第7—10课已完成各自原生CAD声明范围；第6课原生子项通过、界面部分待续。下一主线第11课，B阶段完整记录见[总结](learning/notes/lessonB_07_10_20261018.md)。待学习内容尚未执行，不将列入目录记作完成。"
+        ],
+        [
+          "| 7 | 通孔、非金属孔、槽孔与焊盘层叠 | PTH/NPTH、孔型、孔径、铜环、内部焊盘、热焊盘/反焊盘、阻焊。 | 建立练习 .pad，按尺寸和各层结构读回核对。 | 基础孔/层叠验收完成；纯无铜NPTH、实际除铜/负片flash另列待做 | [完整笔记](learning/notes/lesson07_padstacks_20261018.md) |",
+          "| 7 | 通孔、非金属孔、槽孔与焊盘层叠 | PTH/NPTH、孔型、孔径、铜环、内部焊盘、热焊盘/反焊盘、阻焊及有效避铜。 | PAD/封装/四层保存重开，纯NULL孔实际除铜、FSM及真实热连接，受控DRC与回退。 | 已完成原生CAD实操；用途性警告已记录 | [基础笔记](learning/notes/lesson07_padstacks_20261018.md) / [完整补齐](learning/notes/lesson07_completion_20261018.md) |"
+        ],
+        [
+          "| 8 | 真实器件机械图与简单封装验收 | 读封装机械图、公差、推荐焊盘、原点、引脚 1 和极性；落实文字和高度默认规范。 | 按指定料号完成尺寸表、编号映射与真实器件封装验收。 | 已完成QMI8610封装CAD实操；制造验证另列 | [笔记](learning/notes/qmi8610_package_20261018.md) |",
+          "| 8 | 真实器件机械图与简单封装验收 | 读机械图、公差、推荐land、原点/编号/中心限制；文字与真实高度。 | 指定Rev A QMI8610尺寸/16pin/无EP、原生重开和公共库SHA复核。 | 已完成并复核原生CAD范围 | [完整笔记](learning/notes/lesson08_real_package_20261018.md) |"
+        ],
+        [
+          "| 9 | QFP/QFN 与裸露焊盘封装 | 细间距引脚、中心散热焊盘、阻焊/锡膏分区、过孔与装配条件。 | 逐编号和逐尺寸核对；钢网、散热结构按器件与制造条件确定。 | 待学习 |  |",
+          "| 9 | QFP/QFN 与裸露焊盘封装 | LQFP48、QFN16+EP17、圆角/阻焊、厂家单窗/教学4窗、热via与装配前提。 | 3封装9实例246pin，5个唯一原生via对象；保存编译/重开、实际polygon核对。 | 已完成原生CAD实操；工艺释放条件单列 | [完整笔记](learning/notes/lesson09_qfn_qfp_20261018.md) |"
+        ],
+        [
+          "| 10 | 连接器与受机械约束的封装 | 安装孔、屏蔽脚、卡扣、板边、插拔空间、装配边界、高度及可用 3D 资料。 | 机械图与封装一致，明确顶/底视图和安装方向。 | 待学习 |  |",
+          "| 10 | 连接器与受机械约束的封装 | USB4105接点/land映射、槽脚/NPTH、尺寸基准、板边/插拔辅助边界、真实限高。 | 5PAD/DRA/PSM与3实例重开，1765项核验；未取得STEP明确记录。 | 已完成原生CAD实操；2D范围与制造条件单列 | [完整笔记](learning/notes/lesson10_connector_20261018.md) |"
+        ]
+      ]
+    },
+    {
+      "path": "learning/notes/lesson07_padstacks_20261018.md",
+      "marker": "## 本课补齐完成后的当前入口",
+      "append": "## 本课补齐完成后的当前入口\n\n2026-10-18后续已补齐纯无铜NPTH、有效机械keepout、实际四层除铜、四辐条FSM及真实GND热连接；157项补验通过。当前完整结果见[补齐笔记](lesson07_completion_20261018.md)和[B阶段总结](lessonB_07_10_20261018.md)。本文件保留基础实操及当时的待验收历史；不将有铜环NPTH当作纯NULL孔的替代。"
+    },
+    {
+      "path": "learning/notes/qmi8610_package_20261018.md",
+      "marker": "## 第8课完整复习入口",
+      "append": "## 第8课完整复习入口\n\n2026-10-18本次已复核来源和公共原生文件SHA、16pin/96pad行、三文字/高度及原有48pin实例证据，结果PASS；完整学习步骤与判断见[第8课复习笔记](lesson08_real_package_20261018.md)。本文件前文为首次QMI制作快照，第5课后续已单独完成，当前B阶段状态见[阶段总结](lessonB_07_10_20261018.md)。"
+    },
+    {
+      "path": "learning/notes/package_defaults.md",
+      "marker": "## 第7—10课实操补充",
+      "append": "## 第7—10课实操补充\n\n2026-10-18：1mm继续作为初始化默认。真实器件最大高度必须据图纸覆盖：QMI8610/QFN为1MM，LQFP48为1.6MM；USB4105侧视3.31及一般公差±0.15得到MAX3.46MM，板下stake侵入单列。不要用连接器开口高度替代板上高度。\n\n三项文字锚点仍为(0,0)。QFN中心REF DES丝印会与EP阻焊开窗重叠；库遵守锚点规范，实际PCB应将实例位号移动到可读且不覆盖焊接的位置，检查最终丝印输出。对应实操与其他规则见[B阶段总结](lessonB_07_10_20261018.md)。"
+    }
+  ]
+}

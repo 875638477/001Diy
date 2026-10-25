@@ -1,0 +1,92 @@
+{
+  "schema": "RC_VALUE_FORMAT_CANDIDATES_V1",
+  "rules_version": 2,
+  "status": "REVIEW_NEEDED",
+  "input_metadata": {
+    "metadata": {
+      "keep": true
+    }
+  },
+  "summary": {
+    "records": 2,
+    "ready": 1,
+    "review_needed": 1
+  },
+  "records": [
+    {
+      "index": 0,
+      "metadata": {
+        "ref": "C1",
+        "family": "C",
+        "raw_value": "100nF",
+        "package": "0402",
+        "rated_voltage": "25V",
+        "tolerance": "10%"
+      },
+      "normalized_fields": {
+        "family": "C",
+        "assembly_state": "UNSPECIFIED",
+        "display_prefix": "",
+        "electrical_value": "100nF",
+        "package": "0402",
+        "rated_voltage": "25V",
+        "tolerance": "10%"
+      },
+      "assembly_evidence": [],
+      "candidate_value": "100nF/0402/25V/10%",
+      "status": "READY",
+      "issues": [],
+      "missing_fields": [],
+      "ref": "C1"
+    },
+    {
+      "index": 1,
+      "metadata": {
+        "ref": "C4",
+        "family": "C",
+        "raw_value": "100nF",
+        "package": "0402",
+        "MPN": "KEEP",
+        "population": "NI",
+        "source": {
+          "evidence": "unchanged"
+        }
+      },
+      "normalized_fields": {
+        "family": "C",
+        "assembly_state": "DNP",
+        "display_prefix": "NC_",
+        "electrical_value": "100nF",
+        "package": "0402"
+      },
+      "assembly_evidence": [
+        {
+          "origin": "population",
+          "marker": "NI",
+          "state": "DNP"
+        }
+      ],
+      "candidate_value": null,
+      "status": "REVIEW_NEEDED",
+      "issues": [
+        {
+          "field": "rated_voltage",
+          "code": "missing_rated_voltage",
+          "detail": "No valid explicit value; no example/default is substituted"
+        },
+        {
+          "field": "tolerance",
+          "code": "missing_tolerance",
+          "detail": "No valid explicit value; no example/default is substituted"
+        }
+      ],
+      "missing_fields": [
+        "rated_voltage",
+        "tolerance"
+      ],
+      "ref": "C4"
+    }
+  ],
+  "scope": "Offline candidates only; no DSN/OLB or original user library is opened or modified.",
+  "input_sha256": "A60C5FE72D8E8FAB5DD70521D3C60EA4A3A669B33F12897B7514D13B86AB005C"
+}

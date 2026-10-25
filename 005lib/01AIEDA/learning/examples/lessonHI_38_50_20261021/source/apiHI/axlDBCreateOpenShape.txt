@@ -1,0 +1,120 @@
+
+  NAME
+         axlDBCreateOpenShape - add an "open" shape to the database
+  FUNCTION
+         axlDBCreateOpenShape(
+             o_polygon/r_path
+             [l_r_fill]
+             [t_layer]
+             [t_netname/o_netdbid]
+             [o_parent]
+         )
+         ==> o_shape/nil
+  SYNOPSIS
+         Creates a shape based on the characteristic of either
+         o_polygon or r_path.
+ 
+         With r_path, fills parameters, layer, netname, and parent
+         you specified. Returns the dbid of the shape in open state.
+         Open state means you can add and delete voids of the shape.
+ 
+         With o_polygon, creates a shape with the boundary defined by
+         the boundary of the polygon.  The holes in the polygon are
+         added as voids to the shape. See axlPolyFromDB.
+ 
+         The shape model uses the open/close model for performance
+         reasons. If adding a shape with no voids, you can use
+         axlDBCreateShape which hides the open and close. If adding
+         voids you should do the following:
+                 shape = axlDBCreateOpenShape(...)
+                 ... add voids ...
+                 axlDBCreateCloseShape(shape).
+         You can modify an existing shape by using axlDBOpenShape:
+                 axlDBOpenShape(shape <new boundary>)
+                 ... add or delete voids ...
+                 axlDBCreateCloseShape(shape).
+ 
+         Will not allow hole polygons as input. When holes are passed
+         as input, the following warning is displayed:
+             Invalid polygon id argument -<argument>
+ 
+         See axlDBCreateSymDefSkeleton on notes about restrictions on
+         shapes that are part of symbol definitions.
+ 
+         A static shape is created if you create shape on class ETCH,
+         dynamic shapes are created if class is BOUNDARY. For example,
+         to create a static shape on the TOP layer make
+         t_layer=ETCH/TOP. To make a dynamic shape make
+         t_layer=BOUNDARY/TOP. The same rule also applies to
+         axlDBCreateShape.
+ 
+         fill structure for xhatch shapes is
+             l_fill1     - is a fill_type.
+             [l_fill2]   - (optional) is a fill_type. Supplied when
+                           more then second xhatch pattern is desired.
+             [f_outlineWidth] - (optional) Width of outline must be
+                                 greater then or equal fill withd(s).
+                                 Specified in design units. Default is
+                                 current board xhatch width. Only
+                                 supported for o_polygon since outline
+                                 width for r_path should supplied
+                                 via the r_path defstruct.
+ 
+            where fill_type is a defstruct with members
+                 f_spacing -     spacing between xhatchs (design nunits
+                 f_width   -     width of xhatch (design units)
+                 l_orign   -     origin of xhatch (absolute to board)
+                 f_angle   -     angle of xhatches
+ 
+  NEEDS
+         o_polygon/r_path  - The outline as an r_path from axlPathXXX data
+                         structure or an o_polygon from axlPolyXXX interfaces.
+         l_r_fill          - List of fill structures (r_fill) for
+                             non solid fill shapes or
+                             t --> solid fill, nil --> unfilled.
+         t_layer           - Layer name. Nil uses the default active
+                             layer
+         t_netname         - Name of net. Only allowed
+                             for shapes being added to etch layers.
+         o_netdbid         - Can use DBID of net instead of the netname. Same
+                             restrictions apply as for t_netname.
+         o_parent          - axl DBID of object to add the shape to
+                              (symbol instance or nil for design)
+  RETURNS
+         o_shape/nil    - axl DBID of the shape, nil if not created
+                         AXL does not perform DRC on the shape until you
+                         close it using axlDBCreateCloseShape.
+ 
+  NOTE
+         - An "open" shape is one that can have voids added to it, etc.. It is
+           not DRC checked or filled, etc. until axlDBCreateCloseShape
+           is called.
+         - A path starts at startPoint and a segment is created for each
+           segment in the pathList. If the path does not end at the
+           the startPoint IT IS considered AN ERROR to this routine.
+         - A list of o_polygons is not considered as a valid input. Only a
+           single o_polygon is a correct input
+         - All path segment coordinates are absolute.
+         - One shape can be in open at one time.
+  SEE ALSO
+         axlDBActiveShape, axlDBOpenShape, axlDBCreateVoid,
+         axlShapeDeleteVoids, axlDBCreateCloseShape
+         axlDBCreateRectangle, axlDBCreateShape, axlDBCreateVoidCircle
+         axlShapeAutoVoid
+  EXAMPLE
+     1) Create a shape using rpath
+         path = axlPathStart( list( 0:0 400:000 600:400 400:600 0:0))
+         shp = axlDBCreateOpenShape(path);defaults to a solid filled shape
+                                         ; unless layer allows unfilled only
+         ; This is optional unless you are adding a shape to etch
+         ; If you do axlDBCreateShape it automatically closes it for you
+         axlDBCreateCloseShape(car(shp))
+ 
+     2) Create a shape using a poly
+         p1 = axlPolyFromDB(inElem)
+         ;; add it as a unfilled shape on BOARD GEOMETRY/OUTLINE
+         res = axlDBCreateShape( car(p1) nil "BOARD GEOMETRY/OUTLINE")
+ 
+     3) See examples axldbctshp.il
+ 
+

@@ -1,0 +1,210 @@
+{
+  "status": "ENGINEERED_SOURCE_GROUP_NOT_NATIVE_APPROVAL",
+  "batchId": "GPIO_north_joint_fanout_02",
+  "operations": [
+    {
+      "type": "deleteSegment",
+      "id": "GPIO_NORTH_RIP_PC15_VERTICAL",
+      "net": "GPIO_PC15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.3,
+          28.9
+        ],
+        [
+          40.3,
+          30.3
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "deleteSegment",
+      "id": "GPIO_NORTH_RIP_PC15_WEST",
+      "net": "GPIO_PC15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.3,
+          30.3
+        ],
+        [
+          35.4,
+          30.3
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "GPIO_NORTH_PC15_DIRECT_WEST",
+      "net": "GPIO_PC15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.3,
+          28.9
+        ],
+        [
+          35.4,
+          28.9
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "GPIO_PA1_INWARD_FANOUT",
+      "net": "GPIO_PA1",
+      "layer": "TOP",
+      "points": [
+        [
+          37.75,
+          31.25
+        ],
+        [
+          37.75,
+          30.0
+        ],
+        [
+          37.5,
+          29.75
+        ],
+        [
+          37.5,
+          29.6
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "GPIO_PA1_INWARD_VIA",
+      "net": "GPIO_PA1",
+      "xy": [
+        37.5,
+        29.6
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_PA2_INWARD_FANOUT",
+      "net": "GPIO_PA2",
+      "layer": "TOP",
+      "points": [
+        [
+          37.25,
+          31.25
+        ],
+        [
+          37.25,
+          31.05
+        ],
+        [
+          36.6,
+          30.4
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "GPIO_PA2_INWARD_VIA",
+      "net": "GPIO_PA2",
+      "xy": [
+        36.6,
+        30.4
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_PA3_INWARD_FANOUT",
+      "net": "GPIO_PA3",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          29.75
+        ],
+        [
+          35.75,
+          31.1
+        ],
+        [
+          35.2,
+          31.65
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "GPIO_PA3_INWARD_VIA",
+      "net": "GPIO_PA3",
+      "xy": [
+        35.2,
+        31.65
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_NORTH_COMMON_RETURN",
+      "net": "GND",
+      "xy": [
+        39.5,
+        28.0
+      ],
+      "padstack": "L28_VIA030_C060"
+    }
+  ],
+  "placementChanges": [],
+  "rationale": [
+    "Existing PC15 BOTTOM y30.3 traverses the entire inward-via fanout bank and blocks three north GPIOs. Shorten that already-partial GPIO track to y28.9, retaining its actual source via and removing obsolete 1.4mm rise.",
+    "Do not move HSE island, moat, oscillator/case routing, ADC RC path or native SPI source lines.",
+    "All three PA source escape paths are deliberately staged before any global ordinary routing so a single net cannot consume the others fanout.",
+    "New PC15 crosses TOP NSS source diagonally in projection on two-layer board; this is a finite reference transition requiring actual same-layer GND return and nearby app-GND via, not a continuous opposite reference claim."
+  ],
+  "partialEndpoints": {
+    "GPIO_PA1": {
+      "xy": [
+        37.5,
+        29.6
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.11"
+    },
+    "GPIO_PA2": {
+      "xy": [
+        36.6,
+        30.4
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.12"
+    },
+    "GPIO_PA3": {
+      "xy": [
+        35.2,
+        31.65
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.13"
+    },
+    "GPIO_PC15": {
+      "xy": [
+        35.4,
+        28.9
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.4"
+    }
+  },
+  "pending": [
+    "Native CSet/DRC create and new-process reopen.",
+    "All endpoint graph and HSE anchor deletion/rollback.",
+    "2L TOP generated GND patch after stitch37.4,27.4 must be app-common connected; inspect actual reference return around finite GPIO/SPI crossing."
+  ]
+}

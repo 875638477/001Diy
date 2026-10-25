@@ -1,0 +1,128 @@
+
+  NAME
+         axlTransformObject - modify location of a database object
+  SYNOPSIS
+         axlTransformObject(
+                 lo_dbid/o_dbid
+                 ?move           l_deltaPoint
+                 ?mirror         t/nil/'GEOMETRY
+                 ?angle          f_angle
+                 ?origin         l_rotatePoint
+                 ?allOrNone      t/nil
+         )
+         ==> lo_dbid/nil
+  FUNCTION
+         Moves, rotates, mirrors and/or spins one object or list of objects.
+         Each Allegro database object has a legal set of transforms that
+         can be applied to it (see table below). If the object does not 
+         accept a transform then that transform is silently ignored.
+ 
+         If multiple tranformations are applied the order used is:
+                 1) move
+                 2) mirror
+                 3) rotate
+ 
+         If allOrNone flag is set then the entire transformation fails
+         if one object's transformation fails. By default, one object's 
+         failure does not stop the tranformation on the other objects.
+         A failure is a database failure. For example, a move that
+         might put an object outside of the database extents. It is NOT
+         attempting an illegal transform. If is not considered a failure
+         if one or more objects is not allowed to be transformed (e.g nets).
+ 
+         OBJECT  MOVE    MIRROR  GEOMETRY ROTATE  SPIN  ORIGIN(5) NOTES
+         segments  x       x       x        x            box     
+         cline     x       x       x        x            box
+         line      x       x       x        x            box
+         symbol    x       x                x             xy
+         shape     x       x       x        x            box
+         text      x       x       x        x             xy
+         pin       x                        x             xy     3,4
+         via       x       x       x        x             xy
+         rat_t     x                        x             xy
+         group     x       x       x        x             xy     7
+ 
+         0) Objects not listed are not supported.
+         1) If an object has attached text it also has the 
+            transformation applied.
+         2) Mirror occurs within the same class. See .... for mirror rules.
+         3) Symbol is exploded and refresh_symbol will not maintain 
+                 transformation.
+         4) For Pins on a brd to be transformed the UNFIXED_PINS either
+                 must be present on the drawing on symbol owning the pin
+         5) ORIGIN column shows what rotate/mirror uses when operating on 
+                 a single object without the origin option. For box the dbid
+                 doesn't have an origin and it uses the center of its 
+                 bounding box (dbid->bBox). For objects with an origin, xy 
+                 (dbid->xy), it rotates the object's origin. For further 
+                 discussion see angle discussion below.
+         6) This API rejects objects whose owner is a symbol definition.
+         7) The only groups that support a transform are user and
+            module group types.
+         8) If mirror is t then we mirror in x-direction AND across subclases.
+            For example if object is on ETCH/TOP it will be mirrored both in x
+            and to layer ETCH/BOTTOM.
+            If mirror is `GEOMETRY only a x-direction is done and the object 
+            remains on its layer.
+ 
+         Rotation (angle option) works as follows:       
+             - positive angle results in a counter-clockwise rotation
+             - if just angle is provided then the object is rotated about
+                 its origin point. If the dbid has no origin (see above)
+                 then the center of its bounding box is used.
+                 If a list of dbids is provided then the rotation always
+                 occurs about the center of the object set
+             - optionally you may provide a rotation origin
+                 (?origin l_rotatePoint). This point is then used as the
+                 rotation point.
+ 
+  CAUTIONS
+         1) More objects (example voids) might be added in the future.
+         2) In the future the return list might be changed to show
+            the actual set of objects that were transformed.
+         3) Currently spin (rotate a list of objects about each of
+            their centers) is not supported. Until it is supported call
+            axlTransformObject for each object in the list.
+         4) If you pass a list containing a symbol and pins of the symbol
+            then you will have unexpected results.
+         5) If transforming multiple objects enclose this operation
+            in an axlDBCloak call.
+         6) If transforming a segment, it will have a new owning
+            path dbid.
+  NEEDS
+         lo_dbid/o_dbid - a single dbid or list of dbids
+         l_deltaPoint - optional move distance
+         mirror - optional mirror object (see above table)
+         f_angle - optional rotation angle
+         l_rotatePoint - optional rotation point
+         allOrNone - if t and a group of objects, transform must succeed 
+                 on all objects or fail
+ 
+  RETURNS
+         list of transformed objects or nil if failed.
+ 
+         FAILURES:
+             - an object can't be transformed (e.g. you give us a net)
+             - an object is fixed or a pin does not a an UNFIX_PINS property
+             - illegal option types
+             - transformed object is outside of database extents
+  PERFORMANCE
+         If operating you need to transform a group of objects the
+         performance is much better if you call this function with
+         the object group instead of passing each dbid individually.
+  SEE ALSO
+         axlCopyObject, axlDBCloak
+  EXAMPLES
+             dbid  = one database object
+             ldbid = list of database objects
+ 
+         1) Move a set of objects 100 database units vertically
+             axlTransformObject(ldbid ?move '(100.0 0.0))
+ 
+         2) Rotate an object about its origin 45 degrees
+             axlTransformObject(dbid ?angle 45)
+ 
+         3) Rotate an object about a rotate point
+             axlTransformObject(dbid ?angle 45 ?origin 100:100)
+ 
+

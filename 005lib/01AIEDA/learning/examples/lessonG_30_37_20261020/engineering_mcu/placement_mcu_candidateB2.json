@@ -1,0 +1,2510 @@
+{
+  "schema": "G_mcu_placement_proposal_v2_B2",
+  "status": "ENGINEERING_PROPOSAL_NEEDS_NATIVE_PLACEMENT_ROUTE_AND_DRC",
+  "inventorySHA256": "a354d42e4319dc0270e0e95b50f61b73aa6c526517662a5b2955ff904a1ae3e6",
+  "rotationConvention": "CCW cartesian mathematical transform; final native placement readback must match",
+  "boardAssumptions": {
+    "size": [
+      80,
+      60
+    ],
+    "usbJ2": [
+      40,
+      3.675
+    ],
+    "lowProfileZone": [
+      10,
+      42,
+      30,
+      52
+    ],
+    "lowProfileCondition": "z>=2mm forbidden, not all placement forbidden"
+  },
+  "placements": [
+    {
+      "ref": "U1",
+      "xy": [
+        40,
+        27
+      ],
+      "rotation": 270,
+      "purpose": "MCU USB32/33 toward bottom edge; clock/ADC toward upper quiet area",
+      "package": "L09_STM32F103C8_LQFP48",
+      "bodyBound": [
+        [
+          34.9,
+          21.9
+        ],
+        [
+          45.1,
+          32.1
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "47",
+          "net": "GND",
+          "xy": [
+            44.25,
+            29.25
+          ],
+          "regularCopperBBox": [
+            [
+              43.65,
+              29.1
+            ],
+            [
+              44.85,
+              29.4
+            ]
+          ]
+        },
+        {
+          "number": "35",
+          "net": "GND",
+          "xy": [
+            42.25,
+            22.75
+          ],
+          "regularCopperBBox": [
+            [
+              42.1,
+              22.15
+            ],
+            [
+              42.4,
+              23.35
+            ]
+          ]
+        },
+        {
+          "number": "23",
+          "net": "GND",
+          "xy": [
+            35.75,
+            24.75
+          ],
+          "regularCopperBBox": [
+            [
+              35.15,
+              24.6
+            ],
+            [
+              36.35,
+              24.9
+            ]
+          ]
+        },
+        {
+          "number": "8",
+          "net": "GND",
+          "xy": [
+            39.25,
+            31.25
+          ],
+          "regularCopperBBox": [
+            [
+              39.1,
+              30.65
+            ],
+            [
+              39.4,
+              31.85
+            ]
+          ]
+        },
+        {
+          "number": "48",
+          "net": "V3V3",
+          "xy": [
+            44.25,
+            29.75
+          ],
+          "regularCopperBBox": [
+            [
+              43.65,
+              29.6
+            ],
+            [
+              44.85,
+              29.9
+            ]
+          ]
+        },
+        {
+          "number": "36",
+          "net": "V3V3",
+          "xy": [
+            42.75,
+            22.75
+          ],
+          "regularCopperBBox": [
+            [
+              42.6,
+              22.15
+            ],
+            [
+              42.9,
+              23.35
+            ]
+          ]
+        },
+        {
+          "number": "24",
+          "net": "V3V3",
+          "xy": [
+            35.75,
+            24.25
+          ],
+          "regularCopperBBox": [
+            [
+              35.15,
+              24.1
+            ],
+            [
+              36.35,
+              24.4
+            ]
+          ]
+        },
+        {
+          "number": "9",
+          "net": "VDDA",
+          "xy": [
+            38.75,
+            31.25
+          ],
+          "regularCopperBBox": [
+            [
+              38.6,
+              30.65
+            ],
+            [
+              38.9,
+              31.85
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "V3V3",
+          "xy": [
+            42.75,
+            31.25
+          ],
+          "regularCopperBBox": [
+            [
+              42.6,
+              30.65
+            ],
+            [
+              42.9,
+              31.85
+            ]
+          ]
+        },
+        {
+          "number": "6",
+          "net": "OSC_OUT",
+          "xy": [
+            40.25,
+            31.25
+          ],
+          "regularCopperBBox": [
+            [
+              40.1,
+              30.65
+            ],
+            [
+              40.4,
+              31.85
+            ]
+          ]
+        },
+        {
+          "number": "5",
+          "net": "OSC_IN",
+          "xy": [
+            40.75,
+            31.25
+          ],
+          "regularCopperBBox": [
+            [
+              40.6,
+              30.65
+            ],
+            [
+              40.9,
+              31.85
+            ]
+          ]
+        },
+        {
+          "number": "4",
+          "net": "GPIO_PC15",
+          "xy": [
+            41.25,
+            31.25
+          ],
+          "regularCopperBBox": [
+            [
+              41.1,
+              30.65
+            ],
+            [
+              41.4,
+              31.85
+            ]
+          ]
+        },
+        {
+          "number": "3",
+          "net": "GPIO_PC14",
+          "xy": [
+            41.75,
+            31.25
+          ],
+          "regularCopperBBox": [
+            [
+              41.6,
+              30.65
+            ],
+            [
+              41.9,
+              31.85
+            ]
+          ]
+        },
+        {
+          "number": "2",
+          "net": "GPIO_PC13",
+          "xy": [
+            42.25,
+            31.25
+          ],
+          "regularCopperBBox": [
+            [
+              42.1,
+              30.65
+            ],
+            [
+              42.4,
+              31.85
+            ]
+          ]
+        },
+        {
+          "number": "46",
+          "net": "GPIO_PB9",
+          "xy": [
+            44.25,
+            28.75
+          ],
+          "regularCopperBBox": [
+            [
+              43.65,
+              28.6
+            ],
+            [
+              44.85,
+              28.9
+            ]
+          ]
+        },
+        {
+          "number": "45",
+          "net": "GPIO_PB8",
+          "xy": [
+            44.25,
+            28.25
+          ],
+          "regularCopperBBox": [
+            [
+              43.65,
+              28.1
+            ],
+            [
+              44.85,
+              28.4
+            ]
+          ]
+        },
+        {
+          "number": "43",
+          "net": "I2C_SDA",
+          "xy": [
+            44.25,
+            27.25
+          ],
+          "regularCopperBBox": [
+            [
+              43.65,
+              27.1
+            ],
+            [
+              44.85,
+              27.4
+            ]
+          ]
+        },
+        {
+          "number": "42",
+          "net": "I2C_SCL",
+          "xy": [
+            44.25,
+            26.75
+          ],
+          "regularCopperBBox": [
+            [
+              43.65,
+              26.6
+            ],
+            [
+              44.85,
+              26.9
+            ]
+          ]
+        },
+        {
+          "number": "41",
+          "net": "GPIO_PB5",
+          "xy": [
+            44.25,
+            26.25
+          ],
+          "regularCopperBBox": [
+            [
+              43.65,
+              26.1
+            ],
+            [
+              44.85,
+              26.4
+            ]
+          ]
+        },
+        {
+          "number": "40",
+          "net": "GPIO_PB4",
+          "xy": [
+            44.25,
+            25.75
+          ],
+          "regularCopperBBox": [
+            [
+              43.65,
+              25.6
+            ],
+            [
+              44.85,
+              25.9
+            ]
+          ]
+        },
+        {
+          "number": "39",
+          "net": "SWO",
+          "xy": [
+            44.25,
+            25.25
+          ],
+          "regularCopperBBox": [
+            [
+              43.65,
+              25.1
+            ],
+            [
+              44.85,
+              25.4
+            ]
+          ]
+        },
+        {
+          "number": "20",
+          "net": "BOOT1",
+          "xy": [
+            35.75,
+            26.25
+          ],
+          "regularCopperBBox": [
+            [
+              35.15,
+              26.1
+            ],
+            [
+              36.35,
+              26.4
+            ]
+          ]
+        },
+        {
+          "number": "28",
+          "net": "GPIO_PB15",
+          "xy": [
+            38.75,
+            22.75
+          ],
+          "regularCopperBBox": [
+            [
+              38.6,
+              22.15
+            ],
+            [
+              38.9,
+              23.35
+            ]
+          ]
+        },
+        {
+          "number": "27",
+          "net": "GPIO_PB14",
+          "xy": [
+            38.25,
+            22.75
+          ],
+          "regularCopperBBox": [
+            [
+              38.1,
+              22.15
+            ],
+            [
+              38.4,
+              23.35
+            ]
+          ]
+        },
+        {
+          "number": "26",
+          "net": "GPIO_PB13",
+          "xy": [
+            37.75,
+            22.75
+          ],
+          "regularCopperBBox": [
+            [
+              37.6,
+              22.15
+            ],
+            [
+              37.9,
+              23.35
+            ]
+          ]
+        },
+        {
+          "number": "25",
+          "net": "GPIO_PB12",
+          "xy": [
+            37.25,
+            22.75
+          ],
+          "regularCopperBBox": [
+            [
+              37.1,
+              22.15
+            ],
+            [
+              37.4,
+              23.35
+            ]
+          ]
+        },
+        {
+          "number": "22",
+          "net": "GPIO_PB11",
+          "xy": [
+            35.75,
+            25.25
+          ],
+          "regularCopperBBox": [
+            [
+              35.15,
+              25.1
+            ],
+            [
+              36.35,
+              25.4
+            ]
+          ]
+        },
+        {
+          "number": "21",
+          "net": "GPIO_PB10",
+          "xy": [
+            35.75,
+            25.75
+          ],
+          "regularCopperBBox": [
+            [
+              35.15,
+              25.6
+            ],
+            [
+              36.35,
+              25.9
+            ]
+          ]
+        },
+        {
+          "number": "19",
+          "net": "GPIO_PB1",
+          "xy": [
+            35.75,
+            26.75
+          ],
+          "regularCopperBBox": [
+            [
+              35.15,
+              26.6
+            ],
+            [
+              36.35,
+              26.9
+            ]
+          ]
+        },
+        {
+          "number": "18",
+          "net": "VBUS_PRESENT_N",
+          "xy": [
+            35.75,
+            27.25
+          ],
+          "regularCopperBBox": [
+            [
+              35.15,
+              27.1
+            ],
+            [
+              36.35,
+              27.4
+            ]
+          ]
+        },
+        {
+          "number": "30",
+          "net": "PA9_UART_TX",
+          "xy": [
+            39.75,
+            22.75
+          ],
+          "regularCopperBBox": [
+            [
+              39.6,
+              22.15
+            ],
+            [
+              39.9,
+              23.35
+            ]
+          ]
+        },
+        {
+          "number": "29",
+          "net": "USB_ATTACH_N",
+          "xy": [
+            39.25,
+            22.75
+          ],
+          "regularCopperBBox": [
+            [
+              39.1,
+              22.15
+            ],
+            [
+              39.4,
+              23.35
+            ]
+          ]
+        },
+        {
+          "number": "17",
+          "net": "PA7_SPI_MOSI",
+          "xy": [
+            35.75,
+            27.75
+          ],
+          "regularCopperBBox": [
+            [
+              35.15,
+              27.6
+            ],
+            [
+              36.35,
+              27.9
+            ]
+          ]
+        },
+        {
+          "number": "16",
+          "net": "PA6_SPI_MISO",
+          "xy": [
+            35.75,
+            28.25
+          ],
+          "regularCopperBBox": [
+            [
+              35.15,
+              28.1
+            ],
+            [
+              36.35,
+              28.4
+            ]
+          ]
+        },
+        {
+          "number": "15",
+          "net": "PA5_SPI_SCK",
+          "xy": [
+            35.75,
+            28.75
+          ],
+          "regularCopperBBox": [
+            [
+              35.15,
+              28.6
+            ],
+            [
+              36.35,
+              28.9
+            ]
+          ]
+        },
+        {
+          "number": "14",
+          "net": "PA4_SPI_NSS",
+          "xy": [
+            35.75,
+            29.25
+          ],
+          "regularCopperBBox": [
+            [
+              35.15,
+              29.1
+            ],
+            [
+              36.35,
+              29.4
+            ]
+          ]
+        },
+        {
+          "number": "13",
+          "net": "GPIO_PA3",
+          "xy": [
+            35.75,
+            29.75
+          ],
+          "regularCopperBBox": [
+            [
+              35.15,
+              29.6
+            ],
+            [
+              36.35,
+              29.9
+            ]
+          ]
+        },
+        {
+          "number": "12",
+          "net": "GPIO_PA2",
+          "xy": [
+            37.25,
+            31.25
+          ],
+          "regularCopperBBox": [
+            [
+              37.1,
+              30.65
+            ],
+            [
+              37.4,
+              31.85
+            ]
+          ]
+        },
+        {
+          "number": "38",
+          "net": "GPIO_PA15",
+          "xy": [
+            44.25,
+            24.75
+          ],
+          "regularCopperBBox": [
+            [
+              43.65,
+              24.6
+            ],
+            [
+              44.85,
+              24.9
+            ]
+          ]
+        },
+        {
+          "number": "37",
+          "net": "SWCLK",
+          "xy": [
+            44.25,
+            24.25
+          ],
+          "regularCopperBBox": [
+            [
+              43.65,
+              24.1
+            ],
+            [
+              44.85,
+              24.4
+            ]
+          ]
+        },
+        {
+          "number": "34",
+          "net": "SWDIO",
+          "xy": [
+            41.75,
+            22.75
+          ],
+          "regularCopperBBox": [
+            [
+              41.6,
+              22.15
+            ],
+            [
+              41.9,
+              23.35
+            ]
+          ]
+        },
+        {
+          "number": "33",
+          "net": "PA12_SHARED",
+          "xy": [
+            41.25,
+            22.75
+          ],
+          "regularCopperBBox": [
+            [
+              41.1,
+              22.15
+            ],
+            [
+              41.4,
+              23.35
+            ]
+          ]
+        },
+        {
+          "number": "32",
+          "net": "PA11_SHARED",
+          "xy": [
+            40.75,
+            22.75
+          ],
+          "regularCopperBBox": [
+            [
+              40.6,
+              22.15
+            ],
+            [
+              40.9,
+              23.35
+            ]
+          ]
+        },
+        {
+          "number": "31",
+          "net": "PA10_UART_RX",
+          "xy": [
+            40.25,
+            22.75
+          ],
+          "regularCopperBBox": [
+            [
+              40.1,
+              22.15
+            ],
+            [
+              40.4,
+              23.35
+            ]
+          ]
+        },
+        {
+          "number": "11",
+          "net": "GPIO_PA1",
+          "xy": [
+            37.75,
+            31.25
+          ],
+          "regularCopperBBox": [
+            [
+              37.6,
+              30.65
+            ],
+            [
+              37.9,
+              31.85
+            ]
+          ]
+        },
+        {
+          "number": "10",
+          "net": "ADC0",
+          "xy": [
+            38.25,
+            31.25
+          ],
+          "regularCopperBBox": [
+            [
+              38.1,
+              30.65
+            ],
+            [
+              38.4,
+              31.85
+            ]
+          ]
+        },
+        {
+          "number": "7",
+          "net": "NRST",
+          "xy": [
+            39.75,
+            31.25
+          ],
+          "regularCopperBBox": [
+            [
+              39.6,
+              30.65
+            ],
+            [
+              39.9,
+              31.85
+            ]
+          ]
+        },
+        {
+          "number": "44",
+          "net": "BOOT0",
+          "xy": [
+            44.25,
+            27.75
+          ],
+          "regularCopperBBox": [
+            [
+              43.65,
+              27.6
+            ],
+            [
+              44.85,
+              27.9
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C13",
+      "xy": [
+        33.4,
+        23.5984
+      ],
+      "rotation": 90,
+      "purpose": "100nF for U1.24/23; outside left side",
+      "package": "0603",
+      "bodyBound": [
+        [
+          32.7396,
+          22.9888
+        ],
+        [
+          34.0604,
+          25.986
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            33.4,
+            25.2748
+          ],
+          "regularCopperBBox": [
+            [
+              32.9935,
+              24.8048
+            ],
+            [
+              33.8065,
+              25.7448
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "V3V3",
+          "xy": [
+            33.4,
+            23.7
+          ],
+          "regularCopperBBox": [
+            [
+              32.9935,
+              23.23
+            ],
+            [
+              33.8065,
+              24.17
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C14",
+      "xy": [
+        44.0016,
+        20.3
+      ],
+      "rotation": 180,
+      "purpose": "100nF for U1.36/35; shifted right to preserve USB x40.75..41.25 corridor",
+      "package": "0603",
+      "bodyBound": [
+        [
+          41.614,
+          19.6396
+        ],
+        [
+          44.6112,
+          20.9604
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            42.3252,
+            20.3
+          ],
+          "regularCopperBBox": [
+            [
+              41.8552,
+              19.8935
+            ],
+            [
+              42.7952,
+              20.7065
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "V3V3",
+          "xy": [
+            43.9,
+            20.3
+          ],
+          "regularCopperBBox": [
+            [
+              43.43,
+              19.8935
+            ],
+            [
+              44.37,
+              20.7065
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C15",
+      "xy": [
+        46.5,
+        30.4016
+      ],
+      "rotation": 270,
+      "purpose": "100nF for U1.48/47; outside right side",
+      "package": "0603",
+      "bodyBound": [
+        [
+          45.8396,
+          28.014
+        ],
+        [
+          47.1604,
+          31.0112
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            46.5,
+            28.7252
+          ],
+          "regularCopperBBox": [
+            [
+              46.0935,
+              28.2552
+            ],
+            [
+              46.9065,
+              29.1952
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "V3V3",
+          "xy": [
+            46.5,
+            30.3
+          ],
+          "regularCopperBBox": [
+            [
+              46.0935,
+              29.83
+            ],
+            [
+              46.9065,
+              30.77
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C16",
+      "xy": [
+        49.5,
+        30.3
+      ],
+      "rotation": 270,
+      "purpose": "10uF VDD3 bulk; effective capacitance >=4.7uF remains procurement gate",
+      "package": "0805",
+      "bodyBound": [
+        [
+          48.611,
+          27.506
+        ],
+        [
+          50.389,
+          31.062
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            49.5,
+            28.268
+          ],
+          "regularCopperBBox": [
+            [
+              48.865,
+              27.76
+            ],
+            [
+              50.135,
+              28.776
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "V3V3",
+          "xy": [
+            49.5,
+            30.3
+          ],
+          "regularCopperBBox": [
+            [
+              48.865,
+              29.792
+            ],
+            [
+              50.135,
+              30.808
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C17",
+      "xy": [
+        46.1,
+        32.4
+      ],
+      "rotation": 0,
+      "purpose": "VBAT1 100nF; connected V3V3, no backup battery",
+      "package": "0603",
+      "bodyBound": [
+        [
+          45.4904,
+          31.7396
+        ],
+        [
+          48.4876,
+          33.0604
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            47.7764,
+            32.4
+          ],
+          "regularCopperBBox": [
+            [
+              47.3064,
+              31.9935
+            ],
+            [
+              48.2464,
+              32.8065
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "V3V3",
+          "xy": [
+            46.2016,
+            32.4
+          ],
+          "regularCopperBBox": [
+            [
+              45.7316,
+              31.9935
+            ],
+            [
+              46.6716,
+              32.8065
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C18",
+      "xy": [
+        37.0,
+        32.8984
+      ],
+      "rotation": 90,
+      "purpose": "VDDA9 10nF closest high-frequency bypass; VSSA8 return zone",
+      "package": "0603",
+      "bodyBound": [
+        [
+          36.3396,
+          32.2888
+        ],
+        [
+          37.6604,
+          35.286
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            37.0,
+            34.5748
+          ],
+          "regularCopperBBox": [
+            [
+              36.5935,
+              34.1048
+            ],
+            [
+              37.4065,
+              35.0448
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "VDDA",
+          "xy": [
+            37.0,
+            33.0
+          ],
+          "regularCopperBBox": [
+            [
+              36.5935,
+              32.53
+            ],
+            [
+              37.4065,
+              33.47
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C19",
+      "xy": [
+        34.8,
+        36.8984
+      ],
+      "rotation": 90,
+      "purpose": "VDDA9 additional 100nF, native schematic value retained",
+      "package": "0603",
+      "bodyBound": [
+        [
+          34.1396,
+          36.2888
+        ],
+        [
+          35.4604,
+          39.286
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            34.8,
+            38.5748
+          ],
+          "regularCopperBBox": [
+            [
+              34.3935,
+              38.1048
+            ],
+            [
+              35.2065,
+              39.0448
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "VDDA",
+          "xy": [
+            34.8,
+            37.0
+          ],
+          "regularCopperBBox": [
+            [
+              34.3935,
+              36.53
+            ],
+            [
+              35.2065,
+              37.47
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C20",
+      "xy": [
+        32.2,
+        37.0
+      ],
+      "rotation": 90,
+      "purpose": "VDDA9 2.2uF local reservoir; effective >=1uF gate",
+      "package": "0805",
+      "bodyBound": [
+        [
+          31.311,
+          36.238
+        ],
+        [
+          33.089,
+          39.794
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            32.2,
+            39.032
+          ],
+          "regularCopperBBox": [
+            [
+              31.565,
+              38.524
+            ],
+            [
+              32.835,
+              39.54
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "VDDA",
+          "xy": [
+            32.2,
+            37.0
+          ],
+          "regularCopperBBox": [
+            [
+              31.565,
+              36.492
+            ],
+            [
+              32.835,
+              37.508
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C21",
+      "xy": [
+        38.6,
+        32.8984
+      ],
+      "rotation": 90,
+      "purpose": "NRST7 100nF close to MCU; service header remains farther away",
+      "package": "0603",
+      "bodyBound": [
+        [
+          37.9396,
+          32.2888
+        ],
+        [
+          39.2604,
+          35.286
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            38.6,
+            34.5748
+          ],
+          "regularCopperBBox": [
+            [
+              38.1935,
+              34.1048
+            ],
+            [
+              39.0065,
+              35.0448
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "NRST",
+          "xy": [
+            38.6,
+            33.0
+          ],
+          "regularCopperBBox": [
+            [
+              38.1935,
+              32.53
+            ],
+            [
+              39.0065,
+              33.47
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C22",
+      "xy": [
+        46.2,
+        33.8984
+      ],
+      "rotation": 90,
+      "purpose": "OSC_IN load16pF; adjacent to Y1.1, actual routed parasitics pending",
+      "package": "0603",
+      "bodyBound": [
+        [
+          45.5396,
+          33.2888
+        ],
+        [
+          46.8604,
+          36.286
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            46.2,
+            35.5748
+          ],
+          "regularCopperBBox": [
+            [
+              45.7935,
+              35.1048
+            ],
+            [
+              46.6065,
+              36.0448
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "OSC_IN",
+          "xy": [
+            46.2,
+            34.0
+          ],
+          "regularCopperBBox": [
+            [
+              45.7935,
+              33.53
+            ],
+            [
+              46.6065,
+              34.47
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C23",
+      "xy": [
+        39.9016,
+        37.5
+      ],
+      "rotation": 180,
+      "purpose": "XTAL_OUT load16pF; adjacent to Y1.3, compactness to optimize",
+      "package": "0603",
+      "bodyBound": [
+        [
+          37.514,
+          36.8396
+        ],
+        [
+          40.5112,
+          38.1604
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            38.2252,
+            37.5
+          ],
+          "regularCopperBBox": [
+            [
+              37.7552,
+              37.0935
+            ],
+            [
+              38.6952,
+              37.9065
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "XTAL_OUT",
+          "xy": [
+            39.8,
+            37.5
+          ],
+          "regularCopperBBox": [
+            [
+              39.33,
+              37.0935
+            ],
+            [
+              40.27,
+              37.9065
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C24",
+      "xy": [
+        35.0,
+        32.8984
+      ],
+      "rotation": 90,
+      "purpose": "ADC0 PA0.10 100nF, on MCU side of R32",
+      "package": "0603",
+      "bodyBound": [
+        [
+          34.3396,
+          32.2888
+        ],
+        [
+          35.6604,
+          35.286
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            35.0,
+            34.5748
+          ],
+          "regularCopperBBox": [
+            [
+              34.5935,
+              34.1048
+            ],
+            [
+              35.4065,
+              35.0448
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "ADC0",
+          "xy": [
+            35.0,
+            33.0
+          ],
+          "regularCopperBBox": [
+            [
+              34.5935,
+              32.53
+            ],
+            [
+              35.4065,
+              33.47
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R26",
+      "xy": [
+        29.5,
+        36.8984
+      ],
+      "rotation": 90,
+      "purpose": "0R V3V3->VDDA measurement link; not qualified ferrite",
+      "package": "0603",
+      "bodyBound": [
+        [
+          28.8396,
+          36.2888
+        ],
+        [
+          30.1604,
+          39.286
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "VDDA",
+          "xy": [
+            29.5,
+            38.5748
+          ],
+          "regularCopperBBox": [
+            [
+              29.0935,
+              38.1048
+            ],
+            [
+              29.9065,
+              39.0448
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "V3V3",
+          "xy": [
+            29.5,
+            37.0
+          ],
+          "regularCopperBBox": [
+            [
+              29.0935,
+              36.53
+            ],
+            [
+              29.9065,
+              37.47
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R27",
+      "xy": [
+        38.0,
+        41.3
+      ],
+      "rotation": 0,
+      "purpose": "10k NRST pullup; C21 remains at pin7",
+      "package": "0603",
+      "bodyBound": [
+        [
+          37.3904,
+          40.6396
+        ],
+        [
+          40.3876,
+          41.9604
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "NRST",
+          "xy": [
+            39.6764,
+            41.3
+          ],
+          "regularCopperBBox": [
+            [
+              39.2064,
+              40.8935
+            ],
+            [
+              40.1464,
+              41.7065
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "V3V3",
+          "xy": [
+            38.1016,
+            41.3
+          ],
+          "regularCopperBBox": [
+            [
+              37.6316,
+              40.8935
+            ],
+            [
+              38.5716,
+              41.7065
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R28",
+      "xy": [
+        48.6,
+        26.1
+      ],
+      "rotation": 180,
+      "purpose": "BOOT0 10k pulldown; avoid USB direct route",
+      "package": "0603",
+      "bodyBound": [
+        [
+          46.2124,
+          25.4396
+        ],
+        [
+          49.2096,
+          26.7604
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            46.9236,
+            26.1
+          ],
+          "regularCopperBBox": [
+            [
+              46.4536,
+              25.6935
+            ],
+            [
+              47.3936,
+              26.5065
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "BOOT0",
+          "xy": [
+            48.4984,
+            26.1
+          ],
+          "regularCopperBBox": [
+            [
+              48.0284,
+              25.6935
+            ],
+            [
+              48.9684,
+              26.5065
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R29",
+      "xy": [
+        31.0,
+        27.5
+      ],
+      "rotation": 0,
+      "purpose": "BOOT1/PB2.20 10k pulldown",
+      "package": "0603",
+      "bodyBound": [
+        [
+          30.3904,
+          26.8396
+        ],
+        [
+          33.3876,
+          28.1604
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            32.6764,
+            27.5
+          ],
+          "regularCopperBBox": [
+            [
+              32.2064,
+              27.0935
+            ],
+            [
+              33.1464,
+              27.9065
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "BOOT1",
+          "xy": [
+            31.1016,
+            27.5
+          ],
+          "regularCopperBBox": [
+            [
+              30.6316,
+              27.0935
+            ],
+            [
+              31.5716,
+              27.9065
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R30",
+      "xy": [
+        56.7,
+        31.0
+      ],
+      "rotation": 90,
+      "purpose": "1k service feed to J8; header coordinate optional for root integration",
+      "package": "0603",
+      "bodyBound": [
+        [
+          56.0396,
+          30.3904
+        ],
+        [
+          57.3604,
+          33.3876
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "BOOT_SERVICE",
+          "xy": [
+            56.7,
+            32.6764
+          ],
+          "regularCopperBBox": [
+            [
+              56.2935,
+              32.2064
+            ],
+            [
+              57.1065,
+              33.1464
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "V3V3",
+          "xy": [
+            56.7,
+            31.1016
+          ],
+          "regularCopperBBox": [
+            [
+              56.2935,
+              30.6316
+            ],
+            [
+              57.1065,
+              31.5716
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R31",
+      "xy": [
+        40.2,
+        32.8984
+      ],
+      "rotation": 90,
+      "purpose": "0R OSC_OUT tuning position; pin1 faces MCU.6",
+      "package": "0603",
+      "bodyBound": [
+        [
+          39.5396,
+          32.2888
+        ],
+        [
+          40.8604,
+          35.286
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "XTAL_OUT",
+          "xy": [
+            40.2,
+            34.5748
+          ],
+          "regularCopperBBox": [
+            [
+              39.7935,
+              34.1048
+            ],
+            [
+              40.6065,
+              35.0448
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "OSC_OUT",
+          "xy": [
+            40.2,
+            33.0
+          ],
+          "regularCopperBBox": [
+            [
+              39.7935,
+              32.53
+            ],
+            [
+              40.6065,
+              33.47
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R32",
+      "xy": [
+        31.0,
+        33.0
+      ],
+      "rotation": 0,
+      "purpose": "ADC series1k; pin2 connects C24.1/MCU.10, pin1 connects J10",
+      "package": "0603",
+      "bodyBound": [
+        [
+          30.3904,
+          32.3396
+        ],
+        [
+          33.3876,
+          33.6604
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "ADC0",
+          "xy": [
+            32.6764,
+            33.0
+          ],
+          "regularCopperBBox": [
+            [
+              32.2064,
+              32.5935
+            ],
+            [
+              33.1464,
+              33.4065
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "ADC_IN",
+          "xy": [
+            31.1016,
+            33.0
+          ],
+          "regularCopperBBox": [
+            [
+              30.6316,
+              32.5935
+            ],
+            [
+              31.5716,
+              33.4065
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "Y1",
+      "xy": [
+        43.2,
+        35.5
+      ],
+      "rotation": 90,
+      "purpose": "ABM3B8MHz; pin1 lower-right and pin3 upper-left; B2 balanced arm candidate; explicit no full AN2867 ground implementation claim",
+      "package": "DE_ABM3B_5032",
+      "bodyBound": [
+        [
+          41.15,
+          32.3
+        ],
+        [
+          45.25,
+          38.7
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "3",
+          "net": "XTAL_OUT",
+          "xy": [
+            42.0,
+            37.5
+          ],
+          "regularCopperBBox": [
+            [
+              41.4,
+              36.6
+            ],
+            [
+              42.6,
+              38.4
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "OSC_IN",
+          "xy": [
+            44.4,
+            33.5
+          ],
+          "regularCopperBBox": [
+            [
+              43.8,
+              32.6
+            ],
+            [
+              45.0,
+              34.4
+            ]
+          ]
+        },
+        {
+          "number": "4",
+          "net": "GND",
+          "xy": [
+            42.0,
+            33.5
+          ],
+          "regularCopperBBox": [
+            [
+              41.4,
+              32.6
+            ],
+            [
+              42.6,
+              34.4
+            ]
+          ]
+        },
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            44.4,
+            37.5
+          ],
+          "regularCopperBBox": [
+            [
+              43.8,
+              36.6
+            ],
+            [
+              45.0,
+              38.4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "J7",
+      "xy": [
+        33.0,
+        43.0
+      ],
+      "rotation": 270,
+      "purpose": "RESET service shunt; body avoids x<=30 low-height zone, accessible top",
+      "package": "PIN02_2D54MM_1X2",
+      "bodyBound": [
+        [
+          30.36,
+          41.63
+        ],
+        [
+          35.64,
+          44.37
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            31.73,
+            43.0
+          ],
+          "regularCopperBBox": [
+            [
+              30.96,
+              42.23
+            ],
+            [
+              32.5,
+              43.77
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "NRST",
+          "xy": [
+            34.27,
+            43.0
+          ],
+          "regularCopperBBox": [
+            [
+              33.5,
+              42.23
+            ],
+            [
+              35.04,
+              43.77
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "J8",
+      "xy": [
+        54.0,
+        32.0
+      ],
+      "rotation": 0,
+      "purpose": "BOOT0 service jumper; optional coordinate subject global headers",
+      "package": "PIN02_2D54MM_1X2",
+      "bodyBound": [
+        [
+          52.63,
+          29.36
+        ],
+        [
+          55.37,
+          34.64
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "BOOT0",
+          "xy": [
+            54.0,
+            30.73
+          ],
+          "regularCopperBBox": [
+            [
+              53.23,
+              29.96
+            ],
+            [
+              54.77,
+              31.5
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "BOOT_SERVICE",
+          "xy": [
+            54.0,
+            33.27
+          ],
+          "regularCopperBBox": [
+            [
+              53.23,
+              32.5
+            ],
+            [
+              54.77,
+              34.04
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "J10",
+      "xy": [
+        25.0,
+        34.0
+      ],
+      "rotation": 270,
+      "purpose": "ADC input1 points toward R32, input2 GND beside source; outside low-height zone",
+      "package": "PIN02_2D54MM_1X2",
+      "bodyBound": [
+        [
+          22.36,
+          32.63
+        ],
+        [
+          27.64,
+          35.37
+        ]
+      ],
+      "source": "native inventory 4L package-local readback, not final placed board",
+      "pins": [
+        {
+          "number": "2",
+          "net": "GND",
+          "xy": [
+            23.73,
+            34.0
+          ],
+          "regularCopperBBox": [
+            [
+              22.96,
+              33.23
+            ],
+            [
+              24.5,
+              34.77
+            ]
+          ]
+        },
+        {
+          "number": "1",
+          "net": "ADC_IN",
+          "xy": [
+            26.27,
+            34.0
+          ],
+          "regularCopperBBox": [
+            [
+              25.5,
+              33.23
+            ],
+            [
+              27.04,
+              34.77
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "loops": [
+    {
+      "cap": "C13",
+      "powerPin": "U1.24",
+      "groundPin": "U1.23",
+      "powerPinXY": [
+        35.75,
+        24.25
+      ],
+      "groundPinXY": [
+        35.75,
+        24.75
+      ],
+      "capPowerPad": "C13.1",
+      "capPowerXY": [
+        33.4,
+        23.7
+      ],
+      "capGroundPad": "C13.2",
+      "capGroundXY": [
+        33.4,
+        25.2748
+      ],
+      "capGroundViaProposed": [
+        32.45,
+        25.2748
+      ],
+      "mcuGroundViaProposed": [
+        34.5,
+        25.0
+      ],
+      "viaDefinition": "L28VIA030C060, drill0.3 copper0.6; check DRC before retain",
+      "loopOrder": [
+        "cap.1",
+        "MCU.VDD",
+        "internal load(not PCB geometry)",
+        "MCU.VSS",
+        "MCU GND via",
+        "actual GND copper",
+        "cap GND via",
+        "cap.2"
+      ],
+      "verificationRequired": [
+        "native final pin and pad readback",
+        "cap power to matching supply pin connected",
+        "both GND vias connected to actual same GND copper",
+        "no plane void/thermal neck blocking return",
+        "netlist and dynamic DRC current",
+        "short neck rule/USB corridor preserved"
+      ],
+      "status": "PROPOSED_UNROUTED_CENTERLINES_NOT_CONNECTIVITY_PROOF"
+    },
+    {
+      "cap": "C14",
+      "powerPin": "U1.36",
+      "groundPin": "U1.35",
+      "powerPinXY": [
+        42.75,
+        22.75
+      ],
+      "groundPinXY": [
+        42.25,
+        22.75
+      ],
+      "capPowerPad": "C14.1",
+      "capPowerXY": [
+        43.9,
+        20.3
+      ],
+      "capGroundPad": "C14.2",
+      "capGroundXY": [
+        42.3252,
+        20.3
+      ],
+      "capGroundViaProposed": [
+        42.3252,
+        19.3
+      ],
+      "mcuGroundViaProposed": [
+        42.25,
+        21.5
+      ],
+      "viaDefinition": "L28VIA030C060, drill0.3 copper0.6; check DRC before retain",
+      "loopOrder": [
+        "cap.1",
+        "MCU.VDD",
+        "internal load(not PCB geometry)",
+        "MCU.VSS",
+        "MCU GND via",
+        "actual GND copper",
+        "cap GND via",
+        "cap.2"
+      ],
+      "verificationRequired": [
+        "native final pin and pad readback",
+        "cap power to matching supply pin connected",
+        "both GND vias connected to actual same GND copper",
+        "no plane void/thermal neck blocking return",
+        "netlist and dynamic DRC current",
+        "short neck rule/USB corridor preserved"
+      ],
+      "status": "PROPOSED_UNROUTED_CENTERLINES_NOT_CONNECTIVITY_PROOF"
+    },
+    {
+      "cap": "C15",
+      "powerPin": "U1.48",
+      "groundPin": "U1.47",
+      "powerPinXY": [
+        44.25,
+        29.75
+      ],
+      "groundPinXY": [
+        44.25,
+        29.25
+      ],
+      "capPowerPad": "C15.1",
+      "capPowerXY": [
+        46.5,
+        30.3
+      ],
+      "capGroundPad": "C15.2",
+      "capGroundXY": [
+        46.5,
+        28.7252
+      ],
+      "capGroundViaProposed": [
+        47.5,
+        28.7252
+      ],
+      "mcuGroundViaProposed": [
+        45.5,
+        29.0
+      ],
+      "viaDefinition": "L28VIA030C060, drill0.3 copper0.6; check DRC before retain",
+      "loopOrder": [
+        "cap.1",
+        "MCU.VDD",
+        "internal load(not PCB geometry)",
+        "MCU.VSS",
+        "MCU GND via",
+        "actual GND copper",
+        "cap GND via",
+        "cap.2"
+      ],
+      "verificationRequired": [
+        "native final pin and pad readback",
+        "cap power to matching supply pin connected",
+        "both GND vias connected to actual same GND copper",
+        "no plane void/thermal neck blocking return",
+        "netlist and dynamic DRC current",
+        "short neck rule/USB corridor preserved"
+      ],
+      "status": "PROPOSED_UNROUTED_CENTERLINES_NOT_CONNECTIVITY_PROOF"
+    }
+  ],
+  "adcPath": {
+    "order": [
+      "J10.1 ADC_IN",
+      "R32.1",
+      "R32.2 ADC0",
+      "C24.1",
+      "U1.10"
+    ],
+    "returnPath": [
+      "C24.2",
+      "local quiet GND copper",
+      "U1.8 VSSA"
+    ],
+    "status": "plan only; no claim actual routed"
+  },
+  "clockPaths": [
+    [
+      "U1.5",
+      "C22.1",
+      "Y1.1"
+    ],
+    [
+      "U1.6",
+      "R31.1",
+      "R31.2",
+      "C23.1",
+      "Y1.3"
+    ]
+  ],
+  "groundingScope": {
+    "sharedNet": "GND",
+    "AN2867LocalUnderneathGround": "not implemented by this proposal; preserve a local quiet return and guard reservation, exact copper/connection reviewed in routing",
+    "crystalCasePads": "Y1.2 and Y1.4 GND per Abracon; do not make their return carry sensitive load-cap currents"
+  },
+  "bodyBoxPrecheck": {
+    "scope": "only these proposed components, all other global parts absent",
+    "overlaps": [],
+    "passNoOverlap": true
+  },
+  "rejectedCandidates": [
+    {
+      "ref": "C14",
+      "xy": [
+        43.0016,
+        20.3
+      ],
+      "rotation": 180,
+      "reason": "GND pad and via impinge USB straight corridor; shifted +1mm X before native"
+    }
+  ]
+}

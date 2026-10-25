@@ -1,0 +1,284 @@
+{
+  "status": "CANDIDATE_PRECHECK",
+  "baseNative": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\USB_aux_4L_b014",
+  "baseSnapshotSHA256": "18c60faf7db93dedcdbd82c0753cb3e1fed3cbb00017a865f8344f3958460ca4",
+  "candidateSourcePlans": [
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\GPIO_south_joint_root_v6.json",
+      "sha256": "7e224f7c41c153815fba5838ffd9b950ad0f4dab02709eb1f9a59cf58e133015"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\GPIO_left_joint_fanout_07.json",
+      "sha256": "4ff03638897a82ad942aac586c57b2a18a917790bdc1a9d88f6e32fe3d95bbdc"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\GPIO_north_joint_fanout_02.json",
+      "sha256": "02c08daaa4ade31a98001e681012a0c879cabf719b88b914d023c95f320ae714"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\RIGHT10_FULL_4L_v10.json",
+      "sha256": "408341c75236d85b4d8551145f975fc61ce26eb5e0b6227aa142ebaea5d8466a"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\NSS_pullup_local_relayout_02.json",
+      "sha256": "55b5421bb3118d0156c10ad4d51fd07162b1bff94cf735ca9c6e345e048a681d"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\ordinary_remote_4L_v7.json",
+      "sha256": "0c0dbd85e02c400b5f392cfafba52b41370c07dcfdf9881976e2f129c1ed97ce"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\root_south_services_4L_v15.json",
+      "sha256": "b50809b22da36545da5ab4bc778d042771fff861687f7f6bb9eb2208eb57f132"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\GPIO_PB15_bottom_exit_delta_01.json",
+      "sha256": "2e9ad33e4c5cca74e41bcabb45bdf4e2f29d9f25493a7833cbf3dee6d60597f9"
+    }
+  ],
+  "uniqueDeletes": [
+    "SOUTH_RIP_C14_GND_0",
+    "SOUTH_RIP_C14_GND_1",
+    "SOUTH_RIP_C14_GND_2",
+    "SOUTH_RIP_C14_GND_3",
+    "LEFT_RIP_0",
+    "LEFT_RIP_1",
+    "LEFT_RIP_2",
+    "LEFT_RIP_3",
+    "LEFT_RIP_4",
+    "LEFT_RIP_5",
+    "LEFT_RIP_6",
+    "LEFT_RIP_7",
+    "LEFT_RIP_8",
+    "GPIO_NORTH_RIP_PC15_VERTICAL",
+    "GPIO_NORTH_RIP_PC15_WEST",
+    "OLD_PC14",
+    "OLD_PC14_GND",
+    "OLD_HSE_ANCHOR",
+    "OLD_C15_COMMON_GND",
+    "RIGHT_RIP_0",
+    "RIGHT_RIP_1",
+    "RIGHT_RIP_2",
+    "RIGHT_RIP_3",
+    "RIGHT_RIP_4",
+    "RIGHT_RIP_5",
+    "RIGHT_RIP_6",
+    "RIGHT_RIP_7",
+    "RIGHT_RIP_8",
+    "RIGHT_RIP_9",
+    "RIGHT_RIP_10",
+    "RIGHT_RIP_11",
+    "NSS01_DEL_0",
+    "NSS01_DEL_1",
+    "NSS01_DEL_2",
+    "NSS01_DEL_3",
+    "NSS01_DEL_4",
+    "NSS01_DEL_5",
+    "NSS01_DEL_6",
+    "NSS01_DEL_VIA_[39, 26.2]",
+    "NSS01_DEL_VIA_[32.2, 22]",
+    "NSS01_DEL_9",
+    "NSS01_DEL_10",
+    "NSS01_DEL_13",
+    "NSS01_DEL_15",
+    "NSS01_DEL_16",
+    "NSS01_DEL_17",
+    "NSS01_DEL_18",
+    "NSS01_DEL_19",
+    "NSS01_DEL_22",
+    "NSS01_DEL_23",
+    "NSS01_DEL_STAR_C9_VIA",
+    "NSS01_DEL_STAR_C9_SHORT_VERTICAL",
+    "NSS01_4L_DEL_0",
+    "NSS01_4L_DEL_1",
+    "NSS01_4L_DEL_3",
+    "NSS01_4L_DEL_4",
+    "NSS01_4L_DEL_5"
+  ],
+  "comparisons": 265682,
+  "mandatoryMinimumCopperFloorMM": 0.1524,
+  "issues": [
+    {
+      "new": "SOUTH_RETURN_SWDIO",
+      "net": "GND",
+      "other": "native_route",
+      "otherNet": "V3V3",
+      "layer": "TOP",
+      "distanceMM": 0.0,
+      "overlap": true,
+      "otherBBox": [
+        42.85,
+        20.5,
+        44.199999999999996,
+        21.85
+      ]
+    },
+    {
+      "new": "SOUTH_RETURN_SWDIO",
+      "net": "GND",
+      "other": "native_route",
+      "otherNet": "V3V3",
+      "layer": "TOP",
+      "distanceMM": 0.0,
+      "overlap": true,
+      "otherBBox": [
+        42.625,
+        21.425,
+        43.275,
+        22.075
+      ]
+    },
+    {
+      "new": "SOUTH_RETURN_SWDIO",
+      "net": "GND",
+      "other": "native_route",
+      "otherNet": "V3V3",
+      "layer": "TOP",
+      "distanceMM": 0.1299639659078027,
+      "overlap": false,
+      "otherBBox": [
+        42.625,
+        21.825,
+        42.875,
+        22.875
+      ]
+    },
+    {
+      "new": "SOUTH_GND_SWDIO_BRANCH",
+      "net": "GND",
+      "other": "native_route",
+      "otherNet": "V3V3",
+      "layer": "TOP",
+      "distanceMM": 0.0,
+      "overlap": true,
+      "otherBBox": [
+        42.85,
+        20.5,
+        44.199999999999996,
+        21.85
+      ]
+    },
+    {
+      "new": "SOUTH_GND_SWDIO_BRANCH",
+      "net": "GND",
+      "other": "native_route",
+      "otherNet": "V3V3",
+      "layer": "TOP",
+      "distanceMM": 0.0,
+      "overlap": true,
+      "otherBBox": [
+        42.625,
+        21.425,
+        43.275,
+        22.075
+      ]
+    },
+    {
+      "new": "SOUTH_GND_SWDIO_BRANCH",
+      "net": "GND",
+      "other": "native_route",
+      "otherNet": "V3V3",
+      "layer": "TOP",
+      "distanceMM": 0.024999999999998582,
+      "overlap": false,
+      "otherBBox": [
+        42.625,
+        21.825,
+        42.875,
+        22.875
+      ]
+    },
+    {
+      "new": "RIGHT_LONG_SWCLK_0_R0",
+      "net": "SWCLK",
+      "other": "native_route",
+      "otherNet": "SWDIO",
+      "layer": "TOP",
+      "distanceMM": 0.0,
+      "overlap": true,
+      "otherBBox": [
+        44.5,
+        21.65,
+        54.43,
+        21.85
+      ]
+    },
+    {
+      "new": "RIGHT_LONG_SWCLK_0_R0",
+      "net": "SWCLK",
+      "other": "native_route",
+      "otherNet": "SWDIO",
+      "layer": "TOP",
+      "distanceMM": 0.0,
+      "overlap": true,
+      "otherBBox": [
+        54.23,
+        19.9,
+        56.18,
+        21.85
+      ]
+    },
+    {
+      "new": "ROOT_SWDIO_TOP",
+      "net": "SWDIO",
+      "other": "native_via",
+      "otherNet": "PA10_UART_RX",
+      "layer": "TOP",
+      "distanceMM": 0.04999999999999716,
+      "overlap": false,
+      "otherBBox": [
+        49.800000000000004,
+        21.9,
+        50.4,
+        22.5
+      ]
+    },
+    {
+      "new": "ROOT_SWDIO_TOP",
+      "net": "SWDIO",
+      "other": "native_route",
+      "otherNet": "SWCLK",
+      "layer": "TOP",
+      "distanceMM": 0.0,
+      "overlap": true,
+      "otherBBox": [
+        46.1,
+        21.0,
+        49.35,
+        24.25
+      ]
+    },
+    {
+      "new": "ROOT_SWDIO_TOP",
+      "net": "SWDIO",
+      "other": "native_route",
+      "otherNet": "SWCLK",
+      "layer": "TOP",
+      "distanceMM": 0.0,
+      "overlap": true,
+      "otherBBox": [
+        49.15,
+        21.0,
+        57.620000000000005,
+        21.200000000000003
+      ]
+    },
+    {
+      "new": "ROOT_UART_RX_EAST_V",
+      "net": "PA10_UART_RX",
+      "other": "native_route",
+      "otherNet": "SWDIO",
+      "layer": "TOP",
+      "distanceMM": 0.04999999999999716,
+      "overlap": false,
+      "otherBBox": [
+        44.5,
+        21.65,
+        54.43,
+        21.85
+      ]
+    }
+  ],
+  "placeBoundOverlaps": [],
+  "scope": "Candidate source, R25 local relayout and right10 full copper combined. Native rules/graph/source-return/HSE single-anchor proof not yet executed. Generated GND/thermal recreated at native fill, not simulated here."
+}

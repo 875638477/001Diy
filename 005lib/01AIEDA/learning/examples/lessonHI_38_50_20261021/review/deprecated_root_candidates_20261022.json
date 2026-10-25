@@ -1,0 +1,49 @@
+{
+  "status": "DO_NOT_REPLAY_AS_ACCEPTED",
+  "records": [
+    {
+      "path": "plans/root_source_clearance_cleanup_2L_01.json",
+      "sha256": "B2D69E760D35AD822E39C7B5FE2DC4E70AA7F8FA3DDC978BA0344E39DC6D8D37",
+      "replacement": "plans/root_source_clearance_cleanup_2L_02.json",
+      "reason": "REJECTED_LIVE_NRST_FEED_DELETION_BOTH_VARIANTS",
+      "permittedUse": "Historical failure evidence only, never replay as accepted cleanup."
+    },
+    {
+      "path": "plans/J2_GND_entry_2L_01.json",
+      "sha256": "C3A688B2307488AE6FBCC86FD681CC60DD1401357A04304BC2C7D4235BAAC0C0",
+      "replacement": "plans/J2_GND_entry_2L_02.json",
+      "reason": "FAILED_NATIVE_PIN_CONNECTIVITY_OFFSET_ENDPOINT",
+      "permittedUse": "Historical geometry candidate only; not connectivity acceptance."
+    },
+    {
+      "path": "plans/remaining_services_2L_b015_01.json",
+      "sha256": "20F238EF987AFF64A525E886DD3AB9DE16EAB3E8D04C423C631197668407811F",
+      "replacement": "plans/remaining_services_2L_b015_02.json",
+      "reason": "SUPERSEDED_J2_PHYSICAL_PIN_ENDPOINT_CORRECTION",
+      "permittedUse": "Historical service aggregate; use02 for new execution."
+    },
+    {
+      "path": "plans/root_source_clearance_cleanup_4L_01.json",
+      "sha256": "EB850326B991C0FBA1B36B9A5ED1C92052DC4E68228D40C2F2B5BF67711D71B3",
+      "replacement": "plans/root_source_clearance_cleanup_4L_02.json",
+      "reason": "REJECTED_LIVE_NRST_FEED_DELETION_BOTH_VARIANTS",
+      "permittedUse": "Historical failure evidence only, never replay as accepted cleanup."
+    },
+    {
+      "path": "plans/J2_GND_entry_4L_01.json",
+      "sha256": "B8E23041035C8892E7C3E0F4B566D5C99E6DCB75D3D67F16306EFFBEC9589DAE",
+      "replacement": "plans/J2_GND_entry_4L_02.json",
+      "reason": "FAILED_NATIVE_PIN_CONNECTIVITY_OFFSET_ENDPOINT",
+      "permittedUse": "Historical geometry candidate only; not connectivity acceptance."
+    },
+    {
+      "path": "plans/remaining_services_4L_b015_01.json",
+      "sha256": "F661BB821348EFE1E1A9E21F19B0B2C6C99A22716255B12E76AC091F2AB5A995",
+      "replacement": "plans/remaining_services_4L_b015_02.json",
+      "reason": "SUPERSEDED_J2_PHYSICAL_PIN_ENDPOINT_CORRECTION",
+      "permittedUse": "Historical service aggregate; use02 for new execution."
+    }
+  ],
+  "retiredGenerator": "scripts/prepare_b015_root_deltas.py",
+  "retiredGeneratorReason": "Generates rejected01 cleanup; historical code retained unchanged. Corrected02 generator is prepare_b015_root_deltas_v2.py."
+}

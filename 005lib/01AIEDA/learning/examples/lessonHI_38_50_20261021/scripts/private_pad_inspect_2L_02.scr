@@ -1,0 +1,7 @@
+set NOCONFIRM
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/scripts/private_pad_inspectHI.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/scripts/mechanical_pin_readHI.il") t)
+skill errset(hiInspectPrivatePad("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/private_pad_inspect_2L_02" "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/library") t)
+skill errset(hiMechanicalPinRead("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/private_pad_inspect_2L_02") t)
+quit
+fillin "yes"

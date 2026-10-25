@@ -1,0 +1,29 @@
+{
+  "createdUTC": "2026-10-23T08:20:18.158499+00:00",
+  "userReported": "abnormal shutdown; continue lesson60",
+  "observedLesson60StateBeforeRecovery": "directory absent; no lesson60 products persisted",
+  "priorJKCriticalChecks": [
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\artifact_manifest.json",
+      "exists": true,
+      "expectedSHA256": "D20CFAA4DE732D53DC980270F941B8EB582776DD294140AD10748DD48AEFC794",
+      "actualSHA256": "D20CFAA4DE732D53DC980270F941B8EB582776DD294140AD10748DD48AEFC794",
+      "matched": true
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\4L\\JK_4L_L2_GND_L3_V3V3_STACK_TRAINING_NOT_RELEASED.brd",
+      "exists": true,
+      "expectedSHA256": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+      "actualSHA256": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+      "matched": true
+    }
+  ],
+  "cadenceProcessObservation": {
+    "pid": 3840,
+    "name": "allegro",
+    "ownership": "not created by this resumed task; treat as user-owned and leave untouched"
+  },
+  "processQueryLimits": "CIM denied in ordinary sandbox; Get-Process read ID/start/path succeeded. No UI automation or killing attempted.",
+  "secondComputerTest": "NOT_PERFORMED",
+  "recovery": "Resume from persisted JK and create new isolated lesson60, not claim pre-crash delegates executed."
+}

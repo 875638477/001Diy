@@ -1,0 +1,77 @@
+
+  NAME
+    axlCNSGetSpacing - obtain a spacing cset value
+  SYNOPSIS
+    axlCNSGetSpacing(
+         t_cset
+         t_layer
+         s_constraint
+         [g_string]
+         )
+         ==> g_value/nil
+ 
+    axlCNSGetSpacing(
+         t_cset
+         t_layer
+         nil
+         [g_string]
+         )
+         ==> ll_nameValue/nil
+ 
+    axlCNSGetSpacing(
+         nil
+         nil
+         nil
+         ) 
+         ==> ls_cnsTypes
+  FUNCTION
+    In its first operational mode, obtains the value of a spacing 
+    constraint given a cset and layer. All values are returned in design 
+    units.
+ 
+    In second mode of operation, it obtains all spacing constraint
+    as name/value pairs for a cset on a layer. This, in turn, may be
+    passed to axlCNSSetSpacing.
+ 
+    For final mode, a list of supported spacing constraints may be 
+    obtained by passing 3 nils to this interface: 
+         axlCNSGetSpacing(nil nil nil)
+  DATA TYPES
+       - Unless otherwise specified contraints are in current design units
+       - bbvia_gap is not layer dependent. You must use the "TOP" layer
+         name as the t_layer value to get or set this value.
+  NEEDS
+         t_cset: name of a spacing cset. Can use "" for "DEFAULT".
+         t_layer: ETCH layer name (e.g "ETCH/TOP" or "TOP"). If nil apply
+                 change to all layers.
+         s_constraint: name of constraint. If nil return a set of 
+                 symbol/value pairs of all constraints.
+         g_string: By default returns value in the native units of the
+                 contraint. If g_string is t will always return data
+                 as a string
+  RETURNS
+         g_value: value of constraint in design units 
+         ll_nameValue - name value pairs of spacing constraint symbol
+                 and constraint value for all spacing (s_constraint g_value).
+                 '((shape_shape 10.0) (line_line 5.0) ...)
+         ls_cnsTypes - list of supported spacing constraint anmes
+         nil - returns nil on error 
+ 
+  SEE ALSO
+    axlCNSSetSpacing, axlCnsList, axlSubclassRoute
+  EXAMPLES
+         1) Get shape to shape spacing in default cset, TOP layer
+                 axlCNSGetSpacing("" "TOP" 'shape_shape)
+         2) Get all spacing constraints for 25_MIL_SPACE, bottom layer
+                 axlCNSGetSpacing("25_MIL_SPACE" "BOTTOM" nil)
+         3) Get all spacing constraints for DEFAULT, bottom layer as strings
+                 axlCNSGetSpacing("" "BOTTOM" nil t)
+         3) Get supported spacing constraint symbols
+                 axlCNSGetSpacing(nil nil nil)
+         4) Fetch all layers and constraints of spacing cset DEFAULT
+                 cset = ""       ;; DEFAULT cset
+                 foreach(subclass axlSubclassRoute()
+                     layer = axlCNSGetSpacing(cset subclass nil)
+                     printf("\nLAYER=%s\n\tconstraints=%L\n" subclass, layer)
+                 )   
+

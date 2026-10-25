@@ -1,0 +1,136 @@
+
+  NAME 
+     axlXSectionGet - return a cross section entry
+  SYNOPSIS
+     axlXSectionGet(
+         g_stackup/nil
+         g_option
+     )
+     ==> g_data/nil
+ 
+  FUNCTION
+     Access data about the design's cross section.
+     
+     Supports multiple access options (see NEEDS).
+ 
+     Allegro design color and visibility query needs are satisfied by the API 
+     axlLayerGet.
+  NEEDS
+         g_stackup:
+                 nil - for cross sections with a single stackup this returns the standard 
+                     stackup. For Rigid-Flex designs this returns All Stackups.
+ 
+         g_option:
+             'stackups - return a list of stacks. g_xsection is ignored and should be nil
+             'count - return number of cross section entries.
+                 g_data is x_entries
+             'thickness - return stackup thickness in user units
+                 g_data is f_thickness design units, accuracy is not restricted to 
+                 current design accuarcy. This is the total thickness with masks.
+             'top - return cross entry for top layer of design
+             'bottom - return cross entry for bottom layer of design
+             x_position - return cross entry for given position (0 is the 1st layer -- air)
+             t_etchSubcalss - name of etch subclass
+                 g_data is a o_xsectionDBID
+             'all - return entire stackup
+                 g_data is a lo_xsectionDBID
+             'locked - lock status
+                 nil - not locked
+                 list of lock status. This is a user interface lock only. axl and techfile
+                    can make changes.
+                         'value - cannot edit values
+                         'layer  add or delete layers
+ 
+  Tips:
+         - If using a single stackup in a design pass nil as the first argument.
+         - Except for 'stackups and 'locked all other options take into account
+           the stackup argument.
+         - Thickness if g_xsection is we return the all stackup thickness which
+           can be overridden by the TEXT_BOARD_THICKNESS property assigned
+           at the design level. Otherwise if a stackup (g_xsection) name is
+           provided returns the calculated thickness of the indicated stackup.
+ 
+  XSection Attributes:
+     Attributes that have a Modify of Yes can be set with APIs axlXSectionCreate
+     and axlXSectionSet.
+ 
+     NAME              TYPE    Modify  DESCRIPTION
+     ----------------------------------------
+     objType          string     No   "xsection"
+     readOnly         t          No   Cannot directly modify entry
+     
+     constraint       string     No  (Optional) Techfile generic layer support (max
+                                         1023 chars). 
+     conductor        t/nil      No   Is layer of conductor or plane?
+     layerType        string     Yes  Type of xsection layer.
+     layerFunction    string     Yes  Layer function of a layer. This is a superset
+                                      of layer types for dielectric and mask layers.
+                                      Conductor, plane and surface layers cannot
+                                      have their layerFunction changed.
+                                      When creating a layer, Allegro automatically
+                                      assigns a default function based on the layer type.
+                                      Can be nil (surface layers).
+     layerId          string     Yes  Override of via label id (max 3 characters)
+     material         string     Yes  Layer material (max 250 chars)
+     maskLayer        string     Yes  Mask layer associated with this cross section entry.
+                                      This is nil unless the layerType is type MASK.
+                                      If a string is present it will have the same
+                                      name as the name field.
+     mfg              string     Yes  (Optional) Stackup layer grouping for IPC2581
+                                         (max 255 chars)
+     name             string/nil Yes  Name of xsection/etch layer (max 47 chars).
+     negativeArtwork  t/nil      Yes  Layout is a negative image.
+     position         number     No   Position of xsection layer in stack (starts at
+                                         0 for SURFACE).
+     prop             l_dbid     Yes  List of properties on object.
+     thickness        float      Yes  layer thickness in design units, stored with
+                                      more accuracy then design
+     tolMinus         float      Yes  thickness tolerance - in design units, stored with
+                                      more accuracy then design
+     tolPlus          float      Yes  thickness tolerance + in design units, stored with
+                                      more accuracy then design
+   Pad suppression:
+     unusedPin        t/nil      No   suppress unused pads of pins on this layer
+     unusedVia        t/nil      No   suppress unused pads of vias on this layer
+ 
+   Embedded support:
+     embedded         string     Yes  Type of embedded layer (default NOT_EMBEDDED)
+                                      Values: nil, NOT_EMBEDDED, BODY_UP, BODY_DOWN
+                                      PROTRUDING_ALLOWED
+     embeddedAttach   string     Yes  Type of attachment if embedded layer. Values:
+                                         nil, DIRECT_ATTACH, INDIRECT_ATTACH
+ 
+   Electrical paramters:
+     diffCouplingType string     Yes  Diffpair routing on layer (Values: nil or EDGE)
+     diffSpacing      float      Yes  Typical diffpair spacing on this layer in design 
+                                      units (only if coupling type is set)
+     conductivity     string     Yes  Layer conductivity (MKS in mho/cm)
+     dielectricConst  string     Yes  Dielectic constant
+     etchFactor       integer    Yes  Vertical geomety of etch (angle 45-135, 225 or 
+                                      315 degrees)
+     freqDepFile      string     Yes  (optional) Frequent dependant file for this layer
+                                         (max 255 chars)
+     lossTangent      string     Yes  Loss tangent value
+     shield           t/nil      Yes  Is this a shield layer
+     width            float      Yes  Typical layer width for Impedance what-ifs in 
+                                      design units
+     siIgnore         t/nil      Yes  SI should ignore this layer
+ 
+  RETURNS
+         nil - an error
+         g_data - depends on g_option, see NEEDS section
+  EXAMPLES
+         - get design thickness
+                 thick = axlXSectionGet(nil 'thickness)
+         - Fetch entire cross section
+                 stackup = axlXSectionGet(nil 'all)
+         - Fetch just the top layer
+                 xs = axlXSectionGet(nil 'top)
+         - Fetch dieltric below top
+                 xs = axlXSectionGet(nil 'top)
+                 dielectric = axlXSectionGet(nil xs->position +1)
+                 axlPrintDbid(dielectric)
+         - get all stackups (even with one stackup will return PRIMARY)
+                 stackups = axlXSectionGet(nil 'stackups)
+         - see <cdsroot>/share/pcb/examples/skill/dbcreate/xsection.il
+

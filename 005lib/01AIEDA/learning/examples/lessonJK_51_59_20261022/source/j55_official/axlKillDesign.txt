@@ -1,0 +1,21 @@
+
+  NAME
+         axlKillDesign - Kill the current design.
+  FUNCTION
+         axlKillDesign(
+         )
+         ==> t/nil
+  SYNOPSIS
+         This is the same as (axlOpenDesign <unnamed> "wf"), where <unnamed> 
+         is the standard Allegro name provided for an unnamed design.  If the 
+         specific name is important, in can be determined using the 
+         (axlCurrentDesign) command.
+  NEEDS
+         none
+  RETURNS
+         axlKillDesign         - t, or nil if error
+  NOTE
+         This will void all axl dbid handles and clear the selection set.
+  SEE ALSO
+         axlOpenDesign
+

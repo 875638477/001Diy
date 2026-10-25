@@ -1,0 +1,76 @@
+{
+  "status": "PARTIAL_CANDIDATE_REQUIRES_ENGINEERING_CORRECTION",
+  "batchId": "GPIO3_4L_probe016tiny38",
+  "variant": "4L",
+  "sourceExpectedSHA256": "51CA6A748B3FB376AE49A39E799B9777CB7223D4AA613665331AECA9418BACE4",
+  "sourceNativeLog": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_source_4L_b015_DRC_PENDING_stored",
+  "operations": [],
+  "proofs": [],
+  "candidateReviews": [
+    {
+      "net": "GPIO_PB1",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 6.1
+    },
+    {
+      "net": "GPIO_PB10",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 6.06
+    },
+    {
+      "net": "GPIO_PB15",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 7.77
+    }
+  ],
+  "failures": [
+    {
+      "net": "GPIO_PB1",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB1_ENGINEERED_ANCHOR",
+          "to": "J12.3",
+          "reason": "No geometric candidate after 25328 expanded cells; reached=[{'layer': 'TOP', 'count': 9056, 'bbox': [35.15, 20.6, 49.6, 30.35], 'nearestTargetMM': 27.433767513777617}, {'layer': 'BOTTOM', 'count': 13572, 'bbox': [35.35, 20.700000000000003, 49.6, 28.35], 'nearestTargetMM': 26.054905488218534}]"
+        }
+      ]
+    },
+    {
+      "net": "GPIO_PB10",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB10_ENGINEERED_ANCHOR",
+          "to": "J12.4",
+          "reason": "No geometric candidate after 25040 expanded cells; reached=[{'layer': 'TOP', 'count': 8843, 'bbox': [35.1, 20.6, 49.6, 30.35], 'nearestTargetMM': 24.826334808021908}, {'layer': 'BOTTOM', 'count': 13535, 'bbox': [35.35, 20.700000000000003, 49.6, 28.35], 'nearestTargetMM': 23.9584411012069}]"
+        }
+      ]
+    },
+    {
+      "net": "GPIO_PB15",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB15_ENGINEERED_ANCHOR",
+          "to": "J13.3",
+          "reason": "No geometric candidate after 150001 expanded cells; reached=[{'layer': 'TOP', 'count': 7738, 'bbox': [36.65, 20.900000000000002, 49.6, 30.35], 'nearestTargetMM': 30.694406656588097}, {'layer': 'BOTTOM', 'count': 12931, 'bbox': [35.35, 20.700000000000003, 49.6, 28.35], 'nearestTargetMM': 32.65914267092754}]"
+        }
+      ]
+    }
+  ],
+  "scope": "Only specified ordinary nets; explicit critical routes excluded. Paths obey supplied geometry/clearance/keepout policies but this is not native DRC approval, automatic product routing, reference certification or manufacturing release.",
+  "pending": [
+    "Native batch create/update/DRC/fresh reopen",
+    "Actual reference continuity along both layers",
+    "Signal transition nearby GND return connections",
+    "Whole-board plane island/neck review",
+    "Physical/electrical class exceptions at actual positions"
+  ],
+  "seconds": 19.93
+}

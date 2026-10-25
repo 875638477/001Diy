@@ -1,0 +1,6 @@
+from pathlib import Path
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');p=R/'scripts/plan_signal_paths.py';s=p.read_text(encoding='utf8')
+s=s.replace('from routing_geometry import CopperScene,load,LAYERS,ROOT','from routing_geometry import CopperScene,load,LAYERS,ROOT,Point')
+needle=" if not sourceLayers or not targetLayers:raise ValueError('Exact pad-to-grid fanout is obstructed on all permitted access layers')"
+s=s.replace(needle,needle+"\n # Prevent the grid from retracing a forced MCU fanout through its own source pad.\n # Prefix geometry is already clear; the search must continue outside that pad.\n for endpoint in (source,target):\n  p=scene.pins[endpoint]\n  if p['ref']!='U1':continue\n  g=p['geom'].buffer(width/2+.002);x0,y0,x1,y1=g.bounds\n  for iy in range(max(0,math.floor(y0/step)),min(ny,math.ceil(y1/step)+1)):\n   for ix in range(max(0,math.floor(x0/step)),min(nx,math.ceil(x1/step)+1)):\n    if g.covers(Point(ix*step,iy*step)):starts[0][iy,ix]=True")
+p.write_text(s,encoding='utf8');print('MCU candidate fanout retracing prevented')

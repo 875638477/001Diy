@@ -1,0 +1,175 @@
+{
+  "status": "NATIVE_TRAINING_ARTIFACTS_FRESH_READ_COMPLETE_NOT_RELEASED",
+  "updatedUTC": "2026-10-22T17:20:54.196647+00:00",
+  "boards": {
+    "J55_2L": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\2L\\JK_2L_J55_text_height_review_NOT_RELEASED.brd",
+      "sha256": "EAA65005B80694AB58617CBF3637815484C7510F2CC0693BF0FFC3D41BDC5FBD",
+      "freshReadonlyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\logs\\native_j55_2L_reopen_01",
+      "components": 80,
+      "logicalPins": 272,
+      "realNettedPins": 266,
+      "NC": 6,
+      "nets": 69,
+      "actualLayers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "filmCount": 15,
+      "requiredInstanceTexts": 240,
+      "allInstanceTextsIncludingPackageMarkings": 247,
+      "defaultHeightShapes": 72,
+      "preservedExplicitHeightShapes": 8,
+      "preservedPlaceBoundPaths": 4,
+      "wholeBoardDRC": null,
+      "USB4": "PENDING_UNRESOLVED_SOLVER",
+      "remainingUnconnectedGPIO": 7
+    },
+    "J55_4L_LEGACY_L3_GND": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\4L\\JK_4L_J55_text_height_review_NOT_RELEASED.brd",
+      "sha256": "9DEC773FE106E09C9844FEF5F160E1A1B3348BFC693926579F0CAF0A6A18DCF0",
+      "freshReadonlyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\logs\\native_j55_4L_reopen_01",
+      "components": 80,
+      "logicalPins": 272,
+      "realNettedPins": 266,
+      "NC": 6,
+      "nets": 69,
+      "actualLayers": [
+        "TOP",
+        "L2",
+        "L3",
+        "BOTTOM"
+      ],
+      "filmCount": 17,
+      "requiredInstanceTexts": 240,
+      "allInstanceTextsIncludingPackageMarkings": 247,
+      "defaultHeightShapes": 72,
+      "preservedExplicitHeightShapes": 8,
+      "preservedPlaceBoundPaths": 4,
+      "wholeBoardDRC": null,
+      "USB4": "PENDING_UNRESOLVED_SOLVER",
+      "remainingUnconnectedGPIO": 7
+    },
+    "NEWSTACK_4L": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\4L\\JK_4L_L2_GND_L3_V3V3_STACK_TRAINING_NOT_RELEASED.brd",
+      "sha256": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+      "freshReadonlyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\logs\\native_newstack_4L_reopen_01",
+      "components": 80,
+      "logicalPins": 272,
+      "realNettedPins": 266,
+      "NC": 6,
+      "nets": 69,
+      "actualLayers": [
+        "TOP",
+        "L2",
+        "L3",
+        "BOTTOM"
+      ],
+      "filmCount": 17,
+      "requiredInstanceTexts": 240,
+      "allInstanceTextsIncludingPackageMarkings": 247,
+      "defaultHeightShapes": 72,
+      "preservedExplicitHeightShapes": 8,
+      "preservedPlaceBoundPaths": 4,
+      "wholeBoardDRC": null,
+      "USB4": "PENDING_UNRESOLVED_SOLVER",
+      "remainingUnconnectedGPIO": 7
+    }
+  },
+  "baselineExports": [
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\native_2L_TRAINING_NOT_FOR_FAB",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\native_4L_TRAINING_NOT_FOR_FAB"
+  ],
+  "correctedExports": [
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\J55_corrected_2L_TRAINING_NOT_FOR_FAB",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\J55_corrected_4L_TRAINING_NOT_FOR_FAB"
+  ],
+  "companionExports": [
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\supplement_2L_THREE_TEXTS_TRAINING",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\supplement_4L_THREE_TEXTS_TRAINING"
+  ],
+  "newstackExports": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\newstack_4L_TRAINING_NOT_FOR_FAB",
+  "newstackArchitecture": {
+    "TOP": "components+signals",
+    "L2": "actual continuous common GND, no signal bridge",
+    "L3": "actual single V3V3 power plane",
+    "BOTTOM": "signals with real V3 power reference; HF transition returns remain engineering review",
+    "commonGroundPins": 56,
+    "commonGroundVias": 76,
+    "commonV3Pins": 32,
+    "commonV3Vias": 3,
+    "actualFilledShapes": {
+      "L2_GND": 1,
+      "L3_V3V3": 1
+    },
+    "permissionChange": "V3V3-only static copy of P_POWER_060, only L3 allow_etch=true; all original CSet fields retained",
+    "oldHSEExpectationRetired": true,
+    "newHSEAnchorDeletionStillCommon": true,
+    "scopedDRC": {
+      "GND": 0,
+      "V3V3": 0
+    },
+    "wholeBoardDRC": null,
+    "oldEmptySampling": "NOT_EVIDENCE",
+    "fixedManualGuardOriginalEmptySubset": "NOT_EVIDENCE_USE_INDEPENDENT_ACTUAL_ROUTE_MULTISET_DIFF",
+    "correctedNativeSegmentSupplement": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\logs\\native_newstack_reference_segments_01",
+    "actualSegments": {
+      "all": 932,
+      "manual": 750,
+      "generatedThermal": 182
+    },
+    "actualReferenceSamples": {
+      "nonGroundOuterManualSegments": 658,
+      "samples": 18854,
+      "maxCenterlineStepMM": 0.1,
+      "scope": "native actual common-reference centerline diagnostic; not full-width/HF certification",
+      "uncoveredSampleCounts": {
+        "TOP_to_L2_GND": 928,
+        "BOTTOM_to_L3_V3V3": 660
+      },
+      "diagnostic": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\reference_sample_diagnostic.json",
+      "interpretation": "Nonempty observation, not PASS of continuous whole-footprint or HF return; endpoint/antipad and genuine gaps need independent engineering interpretation."
+    },
+    "fixedManualValidation": "Actual native role/geometry multisets: J55_2L772 preserved, J55_4L750 preserved, newstack750 preserved, corrected reader750 matches; all nonempty with missing0/added0; independent newstack review also checks750.",
+    "engineeringPerformanceStatus": "OPEN_NOT_RELEASED"
+  },
+  "ECO": {
+    "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\DE_REPLAY_ONLY\\DE_ECO_REPLAY.brd",
+    "sha256": "C1F5DF07547330977BFCE2C7296219F07691EE3793122F7BF99E475DBAB4F984",
+    "scope": "DE_UNPLACED_REPLAY_ONLY_NOT_HI_NOT_FOR_FAB",
+    "changes": [
+      "R19 and R20 VALUE 2.2k to 3.3k",
+      "J13.7/8 GPIO_PB8/PB9 swap; MCU45/46 unchanged"
+    ],
+    "nativeResult": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\DE_REPLAY_ONLY\\native_replay_result.json",
+    "independentReview": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_K58\\review.json"
+  },
+  "nativeDeviceValueExports": [
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\devicevalues_J55_2L_TRAINING",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\devicevalues_J55_4L_TRAINING",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\devicevalues_newstack_4L_TRAINING"
+  ],
+  "CAMReturnCodes": {
+    "artwork": 1,
+    "interpretation": "actual warnings retained: DRC out of date and missing photoplot rectangle, output generated",
+    "nctape": 0,
+    "ncroute": 0
+  },
+  "unmodifiedOriginalGuard": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\source_guard.json",
+  "independentReviews": {
+    "J55": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_corrected_independent_summary.json",
+    "ECO": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_K58\\review.json",
+    "newstack": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_newstack\\review.json"
+  },
+  "limitations": [
+    "7 unfinished GPIO nets",
+    "4 USB data/shared nets and whole-board DRC unresolved/null",
+    "old Film mapping omits required text classes; separate companion Films are review supplements",
+    "default height1mm is not actual MPN height",
+    "real material/impedance/hardware/EMI qualification pending",
+    "BOTTOM V3 plane reference transitions require actual nearby decoupling evaluation, not GND-via distance alone"
+  ],
+  "independentNewstackStatus": "PASS_INDEPENDENT_NEWSTACK_PHYSICAL_LAYER_APPLICATION_WITH_OPEN_SI_PI",
+  "manualCopperPreservation": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\manual_copper_preservation_validation.json",
+  "finalOriginalGuard": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\final_original_guard.json"
+}

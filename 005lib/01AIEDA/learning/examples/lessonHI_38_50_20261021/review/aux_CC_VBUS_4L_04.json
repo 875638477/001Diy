@@ -1,0 +1,101 @@
+{
+  "status": "DEFINITE_COPPER_OVERLAPS",
+  "checkpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\SPI_external_4L_b012",
+  "plans": [
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\aux_remote_4L_v9.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\CC_entry_4L_v4.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\VBUS_entry_4L_v2.json"
+  ],
+  "placementChanges": [],
+  "deletedSegments": [],
+  "operations": 26,
+  "piecesChecked": 55,
+  "definiteOverlapPieces": 1,
+  "spacingWarningPieces": 3,
+  "issues": [
+    {
+      "operation": "VBUS_RIGHT_ESCAPE",
+      "net": "USB_VBUS",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "USB_CC2",
+          "otherSource": "CC2_ENTRY_V",
+          "otherKind": "via",
+          "otherBounds": [
+            41.45,
+            8.0,
+            42.05,
+            8.600000000000001
+          ],
+          "actualCopperGapMM": 0.157919,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "VBUS_RIGHT_ESCAPE",
+      "net": "USB_VBUS",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "USB_CC2",
+          "otherSource": "CC2_ENTRY_V",
+          "otherKind": "via",
+          "otherBounds": [
+            41.45,
+            8.0,
+            42.05,
+            8.600000000000001
+          ],
+          "actualCopperGapMM": 0.157919,
+          "baseRuleMM": 0.2,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "VBUS_SENSE_BOTTOM",
+      "net": "USB_VBUS",
+      "type": "line",
+      "segment": 0,
+      "layer": "BOTTOM",
+      "issues": [
+        {
+          "otherNet": "USB_CC2",
+          "otherSource": "CC2_BOTTOM_CROSSOVER",
+          "otherKind": "line",
+          "otherBounds": [
+            43.9,
+            8.4,
+            44.800000000000004,
+            9.299999999999999
+          ],
+          "actualCopperGapMM": 0.0,
+          "baseRuleMM": 0.2,
+          "actualOverlap": true
+        },
+        {
+          "otherNet": "USB_CC2",
+          "otherSource": "CC2_BOTTOM_CROSSOVER",
+          "otherKind": "line",
+          "otherBounds": [
+            44.6,
+            9.1,
+            44.800000000000004,
+            10.2016
+          ],
+          "actualCopperGapMM": 0.0,
+          "baseRuleMM": 0.2,
+          "actualOverlap": true
+        }
+      ]
+    }
+  ],
+  "scope": "Conservative native pad BBOX plus actual cline-width copper; bbox rounded/circle corners may overestimate. New candidate rules/regions not fully resolved, so spacing warnings are BASE-rule diagnostics, not native errors. No-overlap does not certify clearance, conductive graph, neck counts, dynamic/reference copper, thermal/EMI or manufacturing."
+}

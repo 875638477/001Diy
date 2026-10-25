@@ -1,0 +1,96 @@
+HI_PLACEMENT "C21" before=((38.6 32.8984) 90.0 nil) actual=((39.478 36.25) 180.0 nil)
+HI_PLACEMENT "C24" before=((35.0 32.8984) 90.0 nil) actual=((34.8 32.8984) 90.0 nil)
+HI_PLACEMENT "R23" before=((33.7016 33.0) 180.0 nil) actual=((32.9 33.02) 180.0 nil)
+HI_CSET_COPY domain=physical name="HI_MCU_NORTH_P_VDDA_2L" copyTemplate="HI2L_P_VDDA" changes=((necklength_max "1.4 MM"))
+HI_CSET_COPY domain=physical name="HI_MCU_NORTH_P_GROUND_2L" copyTemplate="HI2L_P_GROUND" changes=((necklength_max "1.4 MM"))
+HI_CSET_COPY domain=spacing name="HI_MCU_NORTH_S_ADC_2L" copyTemplate="HI2L_S_ADC" changes=((smdpin_line "0.2 MM") (line_line "0.2 MM"))
+HI_CSET_COPY domain=spacing name="HI_MCU_NORTH_S_OSCILLATOR_2L" copyTemplate="HI2L_S_OSCILLATOR" changes=((smdpin_line "0.2 MM") (line_line "0.2 MM"))
+HI_CSET_COPY domain=spacing name="HI_MCU_NORTH_S_POWER_2L" copyTemplate="HI2L_S_POWER_LV" changes=((smdpin_line "0.2 MM") (line_line "0.2 MM"))
+HI_CSET_COPY domain=spacing name="HI_MCU_NORTH_S_VDDA_2L" copyTemplate="HI2L_S_VDDA" changes=((smdpin_line "0.2 MM") (line_line "0.2 MM"))
+HI_CSET_COPY domain=spacing name="HI_MCU_NORTH_S_GROUND_2L" copyTemplate="HI2L_S_GROUND" changes=((smdpin_line "0.2 MM") (line_line "0.2 MM"))
+HI_REGION_CLASS region="HI_MCU_NORTH_ESCAPE" class="HI2L_VDDA_P" domain=physical cset="HI_MCU_NORTH_P_VDDA_2L" table=(objType "classTable" readOnly t prop propList:0000022D0E7C6020 assembly nil sameNet nil spacing nil physical "HI_MCU_NORTH_P_VDDA_2L" region dbid:0000022D1ADE4A50 netclass2 nil netclass1 dbid:0000022D1AD972F0)
+HI_REGION_CLASS region="HI_MCU_NORTH_ESCAPE" class="HI2L_GROUND_P" domain=physical cset="HI_MCU_NORTH_P_GROUND_2L" table=(objType "classTable" readOnly t prop propList:0000022D0E7C6038 assembly nil sameNet nil spacing nil physical "HI_MCU_NORTH_P_GROUND_2L" region dbid:0000022D1ADE4A50 netclass2 nil netclass1 dbid:0000022D1AD98178)
+HI_REGION_CLASS region="HI_MCU_NORTH_ESCAPE" class="HI2L_ADC_S" domain=spacing cset="HI_MCU_NORTH_S_ADC_2L" table=(objType "classTable" readOnly t prop propList:0000022D0E7C6050 assembly nil sameNet nil physical nil spacing "HI_MCU_NORTH_S_ADC_2L" region dbid:0000022D1ADE4A50 netclass2 nil netclass1 dbid:0000022D1AD9C8B0)
+HI_REGION_CLASS region="HI_MCU_NORTH_ESCAPE" class="HI2L_OSCILLATOR_S" domain=spacing cset="HI_MCU_NORTH_S_OSCILLATOR_2L" table=(objType "classTable" readOnly t prop propList:0000022D0E7C6068 assembly nil sameNet nil physical nil spacing "HI_MCU_NORTH_S_OSCILLATOR_2L" region dbid:0000022D1ADE4A50 netclass2 nil netclass1 dbid:0000022D1AD9B898)
+HI_REGION_CLASS region="HI_MCU_NORTH_ESCAPE" class="HI2L_POWER_LV_S" domain=spacing cset="HI_MCU_NORTH_S_POWER_2L" table=(objType "classTable" readOnly t prop propList:0000022D0E7C6080 assembly nil sameNet nil physical nil spacing "HI_MCU_NORTH_S_POWER_2L" region dbid:0000022D1ADE4A50 netclass2 nil netclass1 dbid:0000022D1AD96A48)
+HI_REGION_CLASS region="HI_MCU_NORTH_ESCAPE" class="HI2L_VDDA_S" domain=spacing cset="HI_MCU_NORTH_S_VDDA_2L" table=(objType "classTable" readOnly t prop propList:0000022D0E7C6098 assembly nil sameNet nil physical nil spacing "HI_MCU_NORTH_S_VDDA_2L" region dbid:0000022D1ADE4A50 netclass2 nil netclass1 dbid:0000022D1AD97700)
+HI_REGION_CLASS region="HI_MCU_NORTH_ESCAPE" class="HI2L_GROUND_S" domain=spacing cset="HI_MCU_NORTH_S_GROUND_2L" table=(objType "classTable" readOnly t prop propList:0000022D0E7C60B0 assembly nil sameNet nil physical nil spacing "HI_MCU_NORTH_S_GROUND_2L" region dbid:0000022D1ADE4A50 netclass2 nil netclass1 dbid:0000022D1AD98588)
+HI_REGION_GEOMETRY (prop nil bBox ((37.7 29.25) (43.9 32.9)) readOnly t net nil objType "polygon" segments (dbid:0000022D1ADE4E70 dbid:0000022D1ADE4EC0 dbid:0000022D1ADE4F10 dbid:0000022D1ADE4F60) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:0000022D1ADE4A50))
+HI_BIND_EXISTING_SHAPE id="HI_APP_GND_BOTTOM" net="GND" layer="BOTTOM" boundary=(prop nil priority 0 autoObject nil autoKeepoutType nil dynamicGroup dbid:0000022D1AD95290 taper nil shapeAuto (dbid:0000022D1ADAFD10) region nil bBox ((0.5 0.5) (79.5 59.5)) readOnly t voids nil net dbid:0000022D1AD04A08 objType "shape" segments (dbid:0000022D1AD95010 dbid:0000022D1AD95060 dbid:0000022D1AD950B0 dbid:0000022D1AD95100 dbid:0000022D1AD95150 dbid:0000022D1AD951A0 dbid:0000022D1AD951F0 dbid:0000022D1AD95240) nSegs 8 fillet nil fill t connect nil cavity nil branch nil fillOOD t shapeBoundary nil shapeIsBoundary t isRect nil layer "BOUNDARY/BOTTOM" symbolEtch nil parent nil isHole nil parentGroups nil)
+HI_PERMANENT_VOID shapeId="HI_APP_GND_BOTTOM" polygon=((44.75 28.15) (46.15 28.15) (46.15 31.4) (45.65 31.9) (45.65 32.85) (47.85 32.85) (47.85 39.75) (36.85 39.75) (36.85 36.45) (39.65 36.45) (39.65 32.45) (40.25 32.45) (40.25 31.6) (44.25 31.6) (44.75 31.1)) void=(prop nil bBox ((36.85 28.15) (47.85 39.75)) readOnly t net dbid:0000022D1AD04A08 objType "polygon" segments (dbid:0000022D1ADE7758 dbid:0000022D1ADE77A8 dbid:0000022D1ADE77F8 dbid:0000022D1ADE7848 dbid:0000022D1ADE7898 dbid:0000022D1ADE78E8 dbid:0000022D1ADE7938 dbid:0000022D1ADE7988 dbid:0000022D1ADE79D8 dbid:0000022D1ADE7A28 dbid:0000022D1ADE7A78 dbid:0000022D1ADE7AC8 dbid:0000022D1ADE7B18 dbid:0000022D1ADE7B68 dbid:0000022D1ADE7BB8) nSegs 15 isRect nil layer "BOUNDARY/BOTTOM" parent dbid:0000022D1AD94F80 parentGroups nil) actual=(prop nil priority 0 autoObject nil autoKeepoutType nil dynamicGroup dbid:0000022D1AD95290 taper nil shapeAuto (dbid:0000022D1ADE91A8) region nil bBox ((0.5 0.5) (79.5 59.5)) readOnly t voids (dbid:0000022D1ADE7718) net dbid:0000022D1AD04A08 objType "shape" segments (dbid:0000022D1AD95010 dbid:0000022D1AD95060 dbid:0000022D1AD950B0 dbid:0000022D1AD95100 dbid:0000022D1AD95150 dbid:0000022D1AD951A0 dbid:0000022D1AD951F0 dbid:0000022D1AD95240) nSegs 8 fillet nil fill t connect nil cavity nil branch nil fillOOD nil shapeBoundary nil shapeIsBoundary t isRect nil layer "BOUNDARY/BOTTOM" symbolEtch nil parent nil isHole nil parentGroups nil)
+HI_SHAPE id="HI_HSE_QUIET" net="GND" layer="BOTTOM" dynamic=nil requestedVoidCount=0 object=(prop nil priority nil autoObject nil autoKeepoutType nil dynamicGroup nil taper nil shapeAuto nil region nil bBox ((37.2 28.5) (47.5 39.4)) readOnly t voids nil net dbid:0000022D1AD04A08 objType "shape" segments (dbid:0000022D1EE87D18 dbid:0000022D1EE87D68 dbid:0000022D1EE87DB8 dbid:0000022D1EE87E08 dbid:0000022D1EE87E58 dbid:0000022D1EE87EA8 dbid:0000022D1EE87EF8 dbid:0000022D1EE87F48 dbid:0000022D1EE87F98 dbid:0000022D1EE87FE8 dbid:0000022D1EE88038 dbid:0000022D1EE88088 dbid:0000022D1EE880D8 dbid:0000022D1EE88128 dbid:0000022D1EE88178 dbid:0000022D1EE881C8) nSegs 16 fillet nil fill t connect nil cavity nil branch dbid:0000022D1EE87C60 fillOOD nil isRect nil layer "ETCH/BOTTOM" symbolEtch nil parent dbid:0000022D1EE87C60 isHole nil parentGroups nil)
+LOCAL_ROUTE	HSE_IN	"OSC_IN"	"ETCH/TOP"	((40.75 31.25) (40.75 32.3) (43.0 32.3) (44.4 33.7))	(0.2 0.2 0.2)	((dbid:0000022D1EE88240) nil)
+LOCAL_ROUTE	HSE_IN_LOAD	"OSC_IN"	"ETCH/TOP"	((44.4 33.7) (44.7 34.0) (46.2 34.0))	(0.2 0.2)	((dbid:0000022D1EE88518) nil)
+LOCAL_ROUTE	HSE_OUT	"OSC_OUT"	"ETCH/TOP"	((40.25 31.25) (40.25 32.15) (40.2 32.2) (40.2 33.2))	(0.2 0.2 0.2)	((dbid:0000022D1EE887A0) nil)
+LOCAL_ROUTE	HSE_XTAL_OUT	"XTAL_OUT"	"ETCH/TOP"	((40.2 34.7748) (40.3 34.8748) (40.3 37.7) (42.0 37.7))	(0.2 0.2 0.2)	((dbid:0000022D1EE889D8) nil)
+LOCAL_ROUTE	HSE_OUT_LOAD	"XTAL_OUT"	"ETCH/TOP"	((40.3 37.7) (39.8 37.7))	(0.2)	((dbid:0000022D1EE88CB0) nil)
+HI_VIA id="HSE_LOCAL_C22" net="GND" xy=(47.1 35.5748) padstack="L28_VIA030_C060" result=(dbid:0000022D1EE88FB8 nil)
+HI_VIA id="HSE_LOCAL_C23" net="GND" xy=(37.7 37.7) padstack="L28_VIA030_C060" result=(dbid:0000022D1EE8B330 nil)
+HI_VIA id="HSE_SINGLE_ANCHOR" net="GND" xy=(45.45 28.85) padstack="L28_VIA030_C060" result=(dbid:0000022D1EE8D6A8 nil)
+LOCAL_ROUTE	HSE_C22_RETURN	"GND"	"ETCH/TOP"	((46.2 35.5748) (47.1 35.5748))	(0.6)	((dbid:0000022D1EE91D00) nil)
+LOCAL_ROUTE	HSE_C23_RETURN	"GND"	"ETCH/TOP"	((38.2252 37.7) (37.7 37.7))	(0.6)	((dbid:0000022D1EE94058) nil)
+LOCAL_ROUTE	HSE_GUARD_LEFT_NORTH	"GND"	"ETCH/TOP"	((37.7 37.7) (37.0 37.7) (37.0 39.8) (42.2 39.8))	(0.6 0.6 0.6)	((dbid:0000022D1EE963B0) nil)
+LOCAL_ROUTE	HSE_GUARD_RIGHT_NORTH	"GND"	"ETCH/TOP"	((47.1 35.5748) (47.8 35.5748) (47.8 39.8) (44.2 39.8))	(0.6 0.6 0.6)	((dbid:0000022D1EE96548) nil)
+LOCAL_ROUTE	HSE_GUARD_RIGHT_LOWER	"GND"	"ETCH/TOP"	((47.8 35.5748) (47.8 33.5))	(0.6)	((dbid:0000022D1EE966E0) nil)
+HI_VIA id="HSE_CASE_APP" net="GND" xy=(43.2 40.8) padstack="L28_VIA030_C060" result=(dbid:0000022D1EE968D0 nil)
+LOCAL_ROUTE	HSE_CASE4_APP	"GND"	"ETCH/TOP"	((42.0 33.7) (42.0 34.8) (43.2 36.0) (43.2 40.8))	(0.6 0.6 0.6)	((dbid:0000022D1EE98C48) nil)
+LOCAL_ROUTE	HSE_CASE2_APP	"GND"	"ETCH/TOP"	((44.4 37.7) (43.2 38.9) (43.2 40.8))	(0.6 0.6)	((dbid:0000022D1EE9B280 dbid:0000022D1EE9B040 dbid:0000022D1EE98C48) nil)
+LOCAL_ROUTE	VDDA_PIN_CAP	"VDDA"	"ETCH/TOP"	((38.75 31.25) (38.75 32.55) (38.1 33.2) (37.0 33.2))	(0.25 0.6 0.6)	((dbid:0000022D1EE9D830) nil)
+LOCAL_ROUTE	VDDA_CAP_BULK	"VDDA"	"ETCH/TOP"	((37.0 33.2) (36.5 33.2) (35.9 33.8) (35.9 35.9) (34.8 37.0))	(0.6 0.6 0.6 0.6)	((dbid:0000022D1EE9DC48) nil)
+LOCAL_ROUTE	VDDA_BULKS	"VDDA"	"ETCH/TOP"	((34.8 37.0) (32.2 37.0))	(0.6)	((dbid:0000022D1EE9E0B0) nil)
+LOCAL_ROUTE	VDDA_FILTER	"VDDA"	"ETCH/TOP"	((32.2 37.0) (31.4 37.0) (30.9 37.5) (30.9 38.1748) (30.5 38.5748) (29.5 38.5748))	(0.6 0.6 0.6 0.6 0.6)	((dbid:0000022D1EE9E428) nil)
+HI_VIA id="VSSA8_APP" net="GND" xy=(38.7 29.5) padstack="L28_VIA030_C060" result=(dbid:0000022D1EE9E8E0 nil)
+LOCAL_ROUTE	VSSA8_INWARD	"GND"	"ETCH/TOP"	((39.25 31.25) (39.25 30.05) (38.7 29.5))	(0.25 0.6)	((dbid:0000022D1EEA0C58) nil)
+HI_VIA id="C18_APP_GND" net="GND" xy=(37.9 34.7748) padstack="L28_VIA030_C060" result=(dbid:0000022D1EEA5000 nil)
+LOCAL_ROUTE	C18_APP_GND_TRACE	"GND"	"ETCH/TOP"	((37.0 34.7748) (37.9 34.7748))	(0.6)	((dbid:0000022D1EEA7378) nil)
+HI_VIA id="C19_APP_GND" net="GND" xy=(34.8 39.7) padstack="L28_VIA030_C060" result=(dbid:0000022D1EEA96D0 nil)
+LOCAL_ROUTE	C19_APP_GND_TRACE	"GND"	"ETCH/TOP"	((34.8 38.5748) (34.8 39.7))	(0.6)	((dbid:0000022D1EEABA48) nil)
+HI_VIA id="C20_APP_GND" net="GND" xy=(32.2 40.1) padstack="L28_VIA030_C060" result=(dbid:0000022D1EEADDA0 nil)
+LOCAL_ROUTE	C20_APP_GND_TRACE	"GND"	"ETCH/TOP"	((32.2 39.032) (32.2 40.1))	(0.6)	((dbid:0000022D1EEB0118) nil)
+HI_VIA id="C24_APP_GND" net="GND" xy=(34.4 35.7) padstack="L28_VIA030_C060" result=(dbid:0000022D1EEB2470 nil)
+LOCAL_ROUTE	C24_APP_GND_TRACE	"GND"	"ETCH/TOP"	((34.8 34.5748) (34.4 34.9748) (34.4 35.7))	(0.6 0.6)	((dbid:0000022D1EEB47E8) nil)
+HI_VIA id="C21_APP_GND" net="GND" xy=(36.95 36.25) padstack="L28_VIA030_C060" result=(dbid:0000022D1EEB6B90 nil)
+LOCAL_ROUTE	C21_APP_GND_TRACE	"GND"	"ETCH/TOP"	((37.8016 36.25) (36.95 36.25))	(0.6)	((dbid:0000022D1EEB8F08) nil)
+LOCAL_ROUTE	ADC_PIN_CAP	"ADC0"	"ETCH/TOP"	((38.25 31.25) (38.25 32.2) (37.8 32.2) (37.7 32.3) (35.5 32.3) (34.8 33.0))	(0.2 0.2 0.2 0.2 0.2)	((dbid:0000022D1EEBB260) nil)
+LOCAL_ROUTE	ADC_CAP_SERIES	"ADC0"	"ETCH/TOP"	((34.8 33.0) (32.8 35.0) (32.6764 35.0))	(0.2 0.2)	((dbid:0000022D1EEBB5D8) nil)
+LOCAL_ROUTE	ADC_INPUT	"ADC_IN"	"ETCH/TOP"	((31.1016 35.0) (30.8 35.0) (29.8 34.0) (26.27 34.0))	(0.2 0.2 0.2)	((dbid:0000022D1EEBB860) nil)
+LOCAL_ROUTE	NRST_PIN_CAP	"NRST"	"ETCH/TOP"	((39.75 31.25) (39.75 32.05) (39.35 32.45) (39.35 35.3) (39.35 36.2236) (39.3764 36.25))	(0.2 0.2 0.2 0.2 0.2)	((dbid:0000022D1EEBBA98) nil)
+HI_VIA id="NRST_SERVICE" net="NRST" xy=(38.7 35.3) padstack="L28_VIA030_C060" result=(dbid:0000022D1EEBBF00 nil)
+LOCAL_ROUTE	NRST_SERVICE_TAP	"NRST"	"ETCH/TOP"	((39.35 35.3) (38.7 35.3))	(0.2)	((dbid:0000022D1EEBCDA8 dbid:0000022D1EEBBA98 dbid:0000022D1EEBCF18) nil)
+LOCAL_ROUTE	VBAT_PIN_CAP	"V3V3"	"ETCH/TOP"	((42.75 31.25) (43.55 31.25) (46.2016 31.25) (46.2016 32.4))	(0.25 0.6 0.6)	((dbid:0000022D1EEBD240) nil)
+HI_VIA id="VBAT_C17_APP" net="GND" xy=(48.9 32.4) padstack="L28_VIA030_C060" result=(dbid:0000022D1EEBE738 nil)
+LOCAL_ROUTE	VBAT_C17_RETURN	"GND"	"ETCH/TOP"	((47.7764 32.4) (48.9 32.4))	(0.6)	((dbid:0000022D1EEC0AB0) nil)
+DRC_STATUS	HI_BATCH_FINAL	0	t
+HI_ENDPOINT_PROOF from="U1.5" to="Y1.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="Y1.1" to="C22.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U1.6" to="R31.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="R31.2" to="Y1.3" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="R31.2" to="C23.1" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="C22.2" to="HSE_LOCAL_C22" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C23.2" to="HSE_LOCAL_C23" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="Y1.4" to="HSE_CASE_APP" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="Y1.2" to="HSE_CASE_APP" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="U1.9" to="C18.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C18.1" to="C19.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C19.1" to="C20.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C20.1" to="R26.2" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="U1.8" to="VSSA8_APP" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C18.2" to="C18_APP_GND" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C19.2" to="C19_APP_GND" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C20.2" to="C20_APP_GND" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C24.2" to="C24_APP_GND" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C21.2" to="C21_APP_GND" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="U1.10" to="C24.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="C24.1" to="R32.2" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R32.1" to="J10.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="U1.7" to="C21.1" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="C21.1" to="NRST_SERVICE" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.1" to="C17.1" expected=t actual=t objects=31
+HI_ENDPOINT_PROOF from="C17.2" to="VBAT_C17_APP" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C22.2" to="HI_HSE_QUIET" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C23.2" to="HI_HSE_QUIET" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="HI_GUARD_LEFT_END" to="C23.2" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="HI_GUARD_RIGHT_END" to="C22.2" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="HI_GUARD_RIGHT_LOWER_END" to="C22.2" expected=t actual=t objects=185
+HI_ENDPOINT_PROOF from="C22.2" to="U1.47" expected=t actual=t objects=185
+HI_BATCH_COMPLETED drcCount=0 status=CANDIDATE_DRC_ZERO_NOT_ENGINEERING_RELEASE board="D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native/HI_2L_mcu_2L_b006.brd"

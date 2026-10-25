@@ -1,0 +1,449 @@
+{
+  "status": "EXPLICIT_LOCAL_INTERFACE_CORRIDOR_CANDIDATE",
+  "operations": [
+    {
+      "type": "route",
+      "id": "RIGHT_SCL_EXPLICIT",
+      "net": "I2C_SCL",
+      "layer": "TOP",
+      "points": [
+        [
+          46.8,
+          26.65
+        ],
+        [
+          47,
+          26.45
+        ],
+        [
+          54,
+          26.45
+        ],
+        [
+          55.5,
+          27.95
+        ],
+        [
+          55.5,
+          34.18
+        ],
+        [
+          57.7,
+          34.18
+        ],
+        [
+          58.5,
+          34.98
+        ],
+        [
+          58.5,
+          35
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Manual interface corridor before long GPIO; actual return and full native review mandatory"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_SDA_EXPLICIT_BOTTOM",
+      "net": "I2C_SDA",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.8,
+          27.15
+        ],
+        [
+          60,
+          27.15
+        ],
+        [
+          60,
+          36.4
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit joint crossbar corridor. Actual full native/reference review mandatory."
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_SDA_FAR_VIA",
+      "net": "I2C_SDA",
+      "xy": [
+        60,
+        36.4
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3,
+      "purpose": "Real layer transition"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_SDA_FAR_TOP",
+      "net": "I2C_SDA",
+      "layer": "TOP",
+      "points": [
+        [
+          60,
+          36.4
+        ],
+        [
+          59.4,
+          37
+        ],
+        [
+          58.5,
+          37
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit joint crossbar corridor. Actual full native/reference review mandatory."
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_BOOT_DIRECT_TOP",
+      "net": "BOOT0",
+      "layer": "TOP",
+      "points": [
+        [
+          46.8,
+          27.65
+        ],
+        [
+          47.15,
+          27.3
+        ],
+        [
+          53.1,
+          27.3
+        ],
+        [
+          53.1,
+          27.7984
+        ],
+        [
+          52.8984,
+          28
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit joint crossbar corridor. Actual full native/reference review mandatory."
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_BOOT_R28_J8",
+      "net": "BOOT0",
+      "layer": "TOP",
+      "points": [
+        [
+          52.8984,
+          28
+        ],
+        [
+          53.3,
+          28
+        ],
+        [
+          54,
+          28.7
+        ],
+        [
+          54,
+          30.73
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit joint crossbar corridor. Actual full native/reference review mandatory."
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_PA15_DIRECT_EAST",
+      "net": "GPIO_PA15",
+      "layer": "TOP",
+      "points": [
+        [
+          46.8,
+          24.65
+        ],
+        [
+          47.2,
+          24.25
+        ],
+        [
+          61,
+          24.25
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit joint crossbar corridor. Actual full native/reference review mandatory."
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_PA15_FAR_VIA",
+      "net": "GPIO_PA15",
+      "xy": [
+        61,
+        24.25
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3,
+      "purpose": "Real layer transition"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_PB4_DIRECT_EAST",
+      "net": "GPIO_PB4",
+      "layer": "TOP",
+      "points": [
+        [
+          46.8,
+          25.65
+        ],
+        [
+          47,
+          25.85
+        ],
+        [
+          61.8,
+          25.85
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit joint crossbar corridor. Actual full native/reference review mandatory."
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_PB4_FAR_VIA",
+      "net": "GPIO_PB4",
+      "xy": [
+        61.8,
+        25.85
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3,
+      "purpose": "Real layer transition"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_PB5_BOTTOM_EAST",
+      "net": "GPIO_PB5",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.8,
+          26.15
+        ],
+        [
+          47.2,
+          26.55
+        ],
+        [
+          56.5,
+          26.55
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit joint crossbar corridor. Actual full native/reference review mandatory."
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_PB5_MID_VIA",
+      "net": "GPIO_PB5",
+      "xy": [
+        56.5,
+        26.55
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3,
+      "purpose": "Real layer transition"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_PB5_TOP_EAST",
+      "net": "GPIO_PB5",
+      "layer": "TOP",
+      "points": [
+        [
+          56.5,
+          26.55
+        ],
+        [
+          62.6,
+          26.55
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit joint crossbar corridor. Actual full native/reference review mandatory."
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_PB5_FAR_VIA",
+      "net": "GPIO_PB5",
+      "xy": [
+        62.6,
+        26.55
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3,
+      "purpose": "Real layer transition"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_PB8_BOTTOM_EAST",
+      "net": "GPIO_PB8",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.8,
+          28.15
+        ],
+        [
+          47.2,
+          27.95
+        ],
+        [
+          59,
+          27.95
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit joint crossbar corridor. Actual full native/reference review mandatory."
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_PB8_MID_VIA",
+      "net": "GPIO_PB8",
+      "xy": [
+        59,
+        27.95
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3,
+      "purpose": "Real layer transition"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_PB8_TOP_EAST",
+      "net": "GPIO_PB8",
+      "layer": "TOP",
+      "points": [
+        [
+          59,
+          27.95
+        ],
+        [
+          64,
+          27.95
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit joint crossbar corridor. Actual full native/reference review mandatory."
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_PB8_FAR_VIA",
+      "net": "GPIO_PB8",
+      "xy": [
+        64,
+        27.95
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3,
+      "purpose": "Real layer transition"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_PB9_BOTTOM_ESCAPE",
+      "net": "GPIO_PB9",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.8,
+          28.65
+        ],
+        [
+          47.3,
+          28.65
+        ],
+        [
+          47.5,
+          28.85
+        ],
+        [
+          47.5,
+          29.5
+        ],
+        [
+          49.8,
+          31.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit joint crossbar corridor. Actual full native/reference review mandatory."
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_PB9_FAR_VIA",
+      "net": "GPIO_PB9",
+      "xy": [
+        49.8,
+        31.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3,
+      "purpose": "Real layer transition"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_SWO_BOTTOM_ESCAPE",
+      "net": "SWO",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.8,
+          25.15
+        ],
+        [
+          47.5,
+          25.85
+        ],
+        [
+          50.7,
+          25.85
+        ],
+        [
+          53.05,
+          23.5
+        ],
+        [
+          54,
+          23.5
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit joint crossbar corridor. Actual full native/reference review mandatory."
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_SWO_FAR_VIA",
+      "net": "SWO",
+      "xy": [
+        54,
+        23.5
+      ],
+      "padstack": "L28_VIA030_C060",
+      "padDiameterMM": 0.6,
+      "drillDiameterMM": 0.3,
+      "purpose": "Real layer transition"
+    }
+  ],
+  "revision": "v7 joint orthogonal crossing: TOP east leads/BOTTOM north leads, explicit lowerROW avoiding source-pocket closure and no idle SWCLK/BOOT PTH"
+}

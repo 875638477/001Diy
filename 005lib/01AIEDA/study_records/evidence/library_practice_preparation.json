@@ -1,0 +1,5415 @@
+{
+  "record_date_asia_shanghai": "2026-10-17",
+  "generated_utc": "2026-10-17T03:08:27.025347+00:00",
+  "stage": "static_case_preparation",
+  "selected_first_case": "NCP303345 footprint inputs; Capture XML remains missing",
+  "scope": {
+    "source_read_only": true,
+    "generator_imported_or_executed": false,
+    "cadence_program_started": false,
+    "binary_pad_or_psm_content_validated": false,
+    "datasheet_dimensions_verified": false,
+    "public_library_modified": false
+  },
+  "ncp303345": {
+    "readme": {
+      "path": "D:\\001DIY\\005lib\\01captureLib\\NCP303345\\README_CN.md",
+      "exists": true,
+      "size_bytes": 1077,
+      "sha256": "f810bf119583bd9415f0582baac1bd3c6aaa3ed025648196ebc7efaae874b081"
+    },
+    "readme_input_references": [
+      {
+        "line": 3,
+        "text": "按 `ast2400lib` 的目录和生成方式制作，目标为 Cadence 17.2。"
+      },
+      {
+        "line": 6,
+        "text": "- 原理图符号：单页，28 个物理引脚"
+      },
+      {
+        "line": 7,
+        "text": "- PCB 封装：`PQFN24_4X5_P0D5_483BV`"
+      },
+      {
+        "line": 8,
+        "text": "- 封装：PQFN24 4.00×5.00×0.75 mm，0.50 mm pitch，CASE 483BV"
+      },
+      {
+        "line": 9,
+        "text": "- 数据来源：`NCP303345-D.PDF` 第 3 页和第 22 页（98AON13704G）"
+      },
+      {
+        "line": 13,
+        "text": "在 OrCAD Capture CIS 17.2 中选择 `File -> Import -> Library XML`，导入："
+      },
+      {
+        "line": 15,
+        "text": "`OrcadCaptureXML\\2026-09-07_16-28-33.xml`"
+      },
+      {
+        "line": 21,
+        "text": "双击 `AllegroV17_2\\PQFN24_4X5_P0D5_483BV.bat`。脚本生成 `.pad/.dra/.psm`，并复制到"
+      },
+      {
+        "line": 26,
+        "text": "- Pin 28 已使用独立 Allegro Shape Symbol 实现规格书中的台阶异形焊盘。"
+      }
+    ],
+    "datasheet": {
+      "path": "D:\\001DIY\\005lib\\AUTOlib\\NCP303345\\NCP303345-D.PDF",
+      "exists": true,
+      "size_bytes": 3193184,
+      "sha256": "bd7b717128b86e728576e085735db784b86be1720c2e88a316b38fb25f22b5e3"
+    },
+    "capture_xml_exact_name_hits": [],
+    "capture_xml_any_ncp303345_hits": [],
+    "capture_xml_directory_exists": true,
+    "capture_xml_directory_entry_count": 0,
+    "existing_olb": {
+      "path": "D:\\001DIY\\005lib\\01captureLib\\NCP303345\\2026-09-07_16-06-36.OLB",
+      "exists": true,
+      "size_bytes": 11264,
+      "sha256": "0778a6382734d6b19db5b9ba5aded0aaf0d1da264daa02a06ab2a6b1a034ed61"
+    },
+    "generator": {
+      "path": "D:\\001DIY\\005lib\\01AIcadence\\ncp303345_lib\\gen_ul_ncp303345.py",
+      "exists": true,
+      "size_bytes": 26064,
+      "sha256": "dc93a06b47d98983bb2ec39ec82295dc77450958aadaaf7344fe3ea593b0320f"
+    },
+    "generator_archived_copy": {
+      "path": "D:\\001DIY\\005lib\\AUTOlib\\NCP303345\\02_生成脚本_ncp303345_lib\\gen_ul_ncp303345.py",
+      "exists": true,
+      "size_bytes": 26064,
+      "sha256": "dc93a06b47d98983bb2ec39ec82295dc77450958aadaaf7344fe3ea593b0320f"
+    },
+    "generator_declared_pins": [
+      {
+        "PinNumber": "1",
+        "PinName": "TMON/FLT",
+        "Electrical": "Output",
+        "Description": "Temperature monitor and fault flag"
+      },
+      {
+        "PinNumber": "2",
+        "PinName": "EN",
+        "Electrical": "Input",
+        "Description": "Enable input"
+      },
+      {
+        "PinNumber": "3",
+        "PinName": "NC",
+        "Electrical": "NC",
+        "Description": "Leave floating or connect to GND"
+      },
+      {
+        "PinNumber": "4",
+        "PinName": "PVCC",
+        "Electrical": "Power",
+        "Description": "Low-side gate-driver supply"
+      },
+      {
+        "PinNumber": "5",
+        "PinName": "GL",
+        "Electrical": "Output",
+        "Description": "Low-side gate connection"
+      },
+      {
+        "PinNumber": "6",
+        "PinName": "PGND",
+        "Electrical": "Power",
+        "Description": "Power ground"
+      },
+      {
+        "PinNumber": "7",
+        "PinName": "PGND",
+        "Electrical": "Power",
+        "Description": "Power ground"
+      },
+      {
+        "PinNumber": "8",
+        "PinName": "SW",
+        "Electrical": "Passive",
+        "Description": "Switch node"
+      },
+      {
+        "PinNumber": "9",
+        "PinName": "SW",
+        "Electrical": "Passive",
+        "Description": "Switch node"
+      },
+      {
+        "PinNumber": "10",
+        "PinName": "SW",
+        "Electrical": "Passive",
+        "Description": "Switch node"
+      },
+      {
+        "PinNumber": "11",
+        "PinName": "SW",
+        "Electrical": "Passive",
+        "Description": "Switch node"
+      },
+      {
+        "PinNumber": "12",
+        "PinName": "SW",
+        "Electrical": "Passive",
+        "Description": "Switch node"
+      },
+      {
+        "PinNumber": "13",
+        "PinName": "PGND",
+        "Electrical": "Power",
+        "Description": "Power ground"
+      },
+      {
+        "PinNumber": "14",
+        "PinName": "PGND",
+        "Electrical": "Power",
+        "Description": "Power ground"
+      },
+      {
+        "PinNumber": "15",
+        "PinName": "VIN",
+        "Electrical": "Power",
+        "Description": "Power-stage input"
+      },
+      {
+        "PinNumber": "16",
+        "PinName": "VIN",
+        "Electrical": "Power",
+        "Description": "Power-stage input"
+      },
+      {
+        "PinNumber": "17",
+        "PinName": "VIN",
+        "Electrical": "Power",
+        "Description": "Power-stage input"
+      },
+      {
+        "PinNumber": "18",
+        "PinName": "PHASE",
+        "Electrical": "Passive",
+        "Description": "Bootstrap capacitor phase node"
+      },
+      {
+        "PinNumber": "19",
+        "PinName": "BOOT",
+        "Electrical": "Power",
+        "Description": "High-side gate-driver bootstrap supply"
+      },
+      {
+        "PinNumber": "20",
+        "PinName": "PWM",
+        "Electrical": "Input",
+        "Description": "Three-state PWM input"
+      },
+      {
+        "PinNumber": "21",
+        "PinName": "VCC",
+        "Electrical": "Power",
+        "Description": "Analog-control and boost supply"
+      },
+      {
+        "PinNumber": "22",
+        "PinName": "AGND",
+        "Electrical": "Power",
+        "Description": "Analog ground"
+      },
+      {
+        "PinNumber": "23",
+        "PinName": "NC",
+        "Electrical": "NC",
+        "Description": "Not connected"
+      },
+      {
+        "PinNumber": "24",
+        "PinName": "IMON",
+        "Electrical": "Output",
+        "Description": "Current-monitor output"
+      },
+      {
+        "PinNumber": "25",
+        "PinName": "PGND",
+        "Electrical": "Power",
+        "Description": "Exposed power-ground pad"
+      },
+      {
+        "PinNumber": "26",
+        "PinName": "VIN",
+        "Electrical": "Power",
+        "Description": "Exposed VIN pad"
+      },
+      {
+        "PinNumber": "27",
+        "PinName": "GL",
+        "Electrical": "Output",
+        "Description": "Exposed low-side gate pad"
+      },
+      {
+        "PinNumber": "28",
+        "PinName": "PGND",
+        "Electrical": "Power",
+        "Description": "Exposed power-ground pad"
+      }
+    ],
+    "generator_pin_count": 28,
+    "generator_unique_pin_count": 28,
+    "generator_pin_labels_equal_scr_labels": true,
+    "symbol_placement_left": [
+      "2",
+      "20",
+      "19",
+      "18",
+      "21",
+      "4",
+      "24",
+      "1",
+      "22"
+    ],
+    "symbol_placement_right": [
+      "15",
+      "16",
+      "17",
+      "26",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "5",
+      "27",
+      "6",
+      "7",
+      "13",
+      "14",
+      "25",
+      "28",
+      "3",
+      "23"
+    ],
+    "symbol_placement_labels_equal_generator_labels": true,
+    "footprint_script": {
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01script_file\\NCP303345\\PQFN24_4X5_P0D5_483BV.scr",
+        "exists": true,
+        "size_bytes": 10275,
+        "sha256": "bac33db3d0a8f08d33535074e89581846ef252e9967277be71ad0e7fb50ff18a"
+      },
+      "units": [
+        "Millimeter"
+      ],
+      "accuracy": [
+        "4"
+      ],
+      "new_drawing": [
+        "\"PQFN24_4X5_P0D5_483BV.dra\" \"Package Symbol\""
+      ],
+      "pin_count": 28,
+      "unique_pin_count": 28,
+      "duplicate_labels": [],
+      "pad_names": {
+        "ncp_r54_30": 7,
+        "ncp_r30_54": 5,
+        "ncp_r47_30": 5,
+        "ncp_r30_47": 7,
+        "ncp_ep25": 1,
+        "ncp_ep26": 1,
+        "ncp_ep27": 1,
+        "ncp_ep28": 1
+      },
+      "pins": [
+        {
+          "line": 20,
+          "pad_name": "ncp_r54_30",
+          "next_pin_number": "1",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            -2.33,
+            1.5
+          ]
+        },
+        {
+          "line": 34,
+          "pad_name": "ncp_r54_30",
+          "next_pin_number": "2",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            -2.33,
+            1.0
+          ]
+        },
+        {
+          "line": 48,
+          "pad_name": "ncp_r54_30",
+          "next_pin_number": "3",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            -2.33,
+            0.5
+          ]
+        },
+        {
+          "line": 62,
+          "pad_name": "ncp_r54_30",
+          "next_pin_number": "4",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            -2.33,
+            0.0
+          ]
+        },
+        {
+          "line": 76,
+          "pad_name": "ncp_r54_30",
+          "next_pin_number": "5",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            -2.33,
+            -0.5
+          ]
+        },
+        {
+          "line": 90,
+          "pad_name": "ncp_r54_30",
+          "next_pin_number": "6",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            -2.33,
+            -1.0
+          ]
+        },
+        {
+          "line": 104,
+          "pad_name": "ncp_r54_30",
+          "next_pin_number": "7",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            -2.33,
+            -1.5
+          ]
+        },
+        {
+          "line": 118,
+          "pad_name": "ncp_r30_54",
+          "next_pin_number": "8",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            -1.0,
+            -2.33
+          ]
+        },
+        {
+          "line": 132,
+          "pad_name": "ncp_r30_54",
+          "next_pin_number": "9",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            -0.5,
+            -2.33
+          ]
+        },
+        {
+          "line": 146,
+          "pad_name": "ncp_r30_54",
+          "next_pin_number": "10",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            0.0,
+            -2.33
+          ]
+        },
+        {
+          "line": 160,
+          "pad_name": "ncp_r30_54",
+          "next_pin_number": "11",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            0.5,
+            -2.33
+          ]
+        },
+        {
+          "line": 174,
+          "pad_name": "ncp_r30_54",
+          "next_pin_number": "12",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            1.0,
+            -2.33
+          ]
+        },
+        {
+          "line": 188,
+          "pad_name": "ncp_r47_30",
+          "next_pin_number": "13",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            2.365,
+            -1.0
+          ]
+        },
+        {
+          "line": 202,
+          "pad_name": "ncp_r47_30",
+          "next_pin_number": "14",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            2.365,
+            -0.5
+          ]
+        },
+        {
+          "line": 216,
+          "pad_name": "ncp_r47_30",
+          "next_pin_number": "15",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            2.365,
+            0.0
+          ]
+        },
+        {
+          "line": 230,
+          "pad_name": "ncp_r47_30",
+          "next_pin_number": "16",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            2.365,
+            0.5
+          ]
+        },
+        {
+          "line": 244,
+          "pad_name": "ncp_r47_30",
+          "next_pin_number": "17",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            2.365,
+            1.0
+          ]
+        },
+        {
+          "line": 258,
+          "pad_name": "ncp_r30_47",
+          "next_pin_number": "18",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            1.5,
+            2.365
+          ]
+        },
+        {
+          "line": 272,
+          "pad_name": "ncp_r30_47",
+          "next_pin_number": "19",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            1.0,
+            2.365
+          ]
+        },
+        {
+          "line": 286,
+          "pad_name": "ncp_r30_47",
+          "next_pin_number": "20",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            0.5,
+            2.365
+          ]
+        },
+        {
+          "line": 300,
+          "pad_name": "ncp_r30_47",
+          "next_pin_number": "21",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            0.0,
+            2.365
+          ]
+        },
+        {
+          "line": 314,
+          "pad_name": "ncp_r30_47",
+          "next_pin_number": "22",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            -0.5,
+            2.365
+          ]
+        },
+        {
+          "line": 328,
+          "pad_name": "ncp_r30_47",
+          "next_pin_number": "23",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            -1.0,
+            2.365
+          ]
+        },
+        {
+          "line": 342,
+          "pad_name": "ncp_r30_47",
+          "next_pin_number": "24",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            -1.5,
+            2.365
+          ]
+        },
+        {
+          "line": 356,
+          "pad_name": "ncp_ep25",
+          "next_pin_number": "25",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            -0.76,
+            0.93
+          ]
+        },
+        {
+          "line": 370,
+          "pad_name": "ncp_ep26",
+          "next_pin_number": "26",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            1.075,
+            1.005
+          ]
+        },
+        {
+          "line": 384,
+          "pad_name": "ncp_ep27",
+          "next_pin_number": "27",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            -1.5,
+            -0.15
+          ]
+        },
+        {
+          "line": 398,
+          "pad_name": "ncp_ep28",
+          "next_pin_number": "28",
+          "offsetx": "0",
+          "offsety": "0",
+          "pick_xy": [
+            0.01,
+            -1.06
+          ]
+        }
+      ]
+    },
+    "pxml_definitions": [
+      {
+        "source": {
+          "path": "D:\\001DIY\\005lib\\01script_file\\NCP303345\\ncp_r54_30.pxml",
+          "exists": true,
+          "size_bytes": 630,
+          "sha256": "313c6bcaaac0e79bea55736c44eccef423b3ea055f4efa35b4fae0ec15448b02"
+        },
+        "padstackname": "ncp_r54_30",
+        "usage": "SMD_PIN",
+        "units": "MILS",
+        "accuracy": "2",
+        "layers": [
+          {
+            "layer": "BEGIN_LAYER",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "21.26",
+            "height": "11.81"
+          },
+          {
+            "layer": "SOLDERMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "25.20",
+            "height": "15.75"
+          },
+          {
+            "layer": "PASTEMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "21.26",
+            "height": "11.81"
+          }
+        ]
+      },
+      {
+        "source": {
+          "path": "D:\\001DIY\\005lib\\01script_file\\NCP303345\\ncp_r30_54.pxml",
+          "exists": true,
+          "size_bytes": 630,
+          "sha256": "1c02eb12347229c0e5eef35a82fe49bf11c152caef5c5e4ef511cdab3d48fdbf"
+        },
+        "padstackname": "ncp_r30_54",
+        "usage": "SMD_PIN",
+        "units": "MILS",
+        "accuracy": "2",
+        "layers": [
+          {
+            "layer": "BEGIN_LAYER",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "11.81",
+            "height": "21.26"
+          },
+          {
+            "layer": "SOLDERMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "15.75",
+            "height": "25.20"
+          },
+          {
+            "layer": "PASTEMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "11.81",
+            "height": "21.26"
+          }
+        ]
+      },
+      {
+        "source": {
+          "path": "D:\\001DIY\\005lib\\01script_file\\NCP303345\\ncp_r47_30.pxml",
+          "exists": true,
+          "size_bytes": 630,
+          "sha256": "960ff178c7b5daee353ac247c880e8deabc2126ef45b1b42d9eaadaa7686e781"
+        },
+        "padstackname": "ncp_r47_30",
+        "usage": "SMD_PIN",
+        "units": "MILS",
+        "accuracy": "2",
+        "layers": [
+          {
+            "layer": "BEGIN_LAYER",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "18.50",
+            "height": "11.81"
+          },
+          {
+            "layer": "SOLDERMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "22.44",
+            "height": "15.75"
+          },
+          {
+            "layer": "PASTEMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "18.50",
+            "height": "11.81"
+          }
+        ]
+      },
+      {
+        "source": {
+          "path": "D:\\001DIY\\005lib\\01script_file\\NCP303345\\ncp_r30_47.pxml",
+          "exists": true,
+          "size_bytes": 630,
+          "sha256": "67f57e38464e597a5027535b3029e7a9ca5dc4eaa9e47df02ca8e545447db6da"
+        },
+        "padstackname": "ncp_r30_47",
+        "usage": "SMD_PIN",
+        "units": "MILS",
+        "accuracy": "2",
+        "layers": [
+          {
+            "layer": "BEGIN_LAYER",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "11.81",
+            "height": "18.50"
+          },
+          {
+            "layer": "SOLDERMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "15.75",
+            "height": "22.44"
+          },
+          {
+            "layer": "PASTEMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "11.81",
+            "height": "18.50"
+          }
+        ]
+      },
+      {
+        "source": {
+          "path": "D:\\001DIY\\005lib\\01script_file\\NCP303345\\ncp_ep25.pxml",
+          "exists": true,
+          "size_bytes": 628,
+          "sha256": "0d23cd6b4b854b1ccdf9afa9376f98d8ea131bf3ec85369f08467dd0bf1a6805"
+        },
+        "padstackname": "ncp_ep25",
+        "usage": "SMD_PIN",
+        "units": "MILS",
+        "accuracy": "2",
+        "layers": [
+          {
+            "layer": "BEGIN_LAYER",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "82.68",
+            "height": "73.23"
+          },
+          {
+            "layer": "SOLDERMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "86.61",
+            "height": "77.17"
+          },
+          {
+            "layer": "PASTEMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "66.14",
+            "height": "58.58"
+          }
+        ]
+      },
+      {
+        "source": {
+          "path": "D:\\001DIY\\005lib\\01script_file\\NCP303345\\ncp_ep26.pxml",
+          "exists": true,
+          "size_bytes": 628,
+          "sha256": "7c70b1888a67fb3ae9a5203f4a0883ce27a7fdc9112621ebe4998615e22a0324"
+        },
+        "padstackname": "ncp_ep26",
+        "usage": "SMD_PIN",
+        "units": "MILS",
+        "accuracy": "2",
+        "layers": [
+          {
+            "layer": "BEGIN_LAYER",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "53.15",
+            "height": "67.32"
+          },
+          {
+            "layer": "SOLDERMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "57.09",
+            "height": "71.26"
+          },
+          {
+            "layer": "PASTEMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "42.52",
+            "height": "53.86"
+          }
+        ]
+      },
+      {
+        "source": {
+          "path": "D:\\001DIY\\005lib\\01script_file\\NCP303345\\ncp_ep27.pxml",
+          "exists": true,
+          "size_bytes": 626,
+          "sha256": "509570390581505096de6cfae8a03315bf235c188df18e667002df950cfb3bca"
+        },
+        "padstackname": "ncp_ep27",
+        "usage": "SMD_PIN",
+        "units": "MILS",
+        "accuracy": "2",
+        "layers": [
+          {
+            "layer": "BEGIN_LAYER",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "19.69",
+            "height": "7.87"
+          },
+          {
+            "layer": "SOLDERMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "23.62",
+            "height": "11.81"
+          },
+          {
+            "layer": "PASTEMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "15.75",
+            "height": "6.30"
+          }
+        ]
+      },
+      {
+        "source": {
+          "path": "D:\\001DIY\\005lib\\01script_file\\NCP303345\\ncp_ep28.pxml",
+          "exists": true,
+          "size_bytes": 700,
+          "sha256": "39af88c7bc702d72ee099f90a604daa23a17147928e4d10d30fd2b04ccb3cd64"
+        },
+        "padstackname": "ncp_ep28",
+        "usage": "SMD_PIN",
+        "units": "MILS",
+        "accuracy": "2",
+        "layers": [
+          {
+            "layer": "BEGIN_LAYER",
+            "type": "REGULAR_PAD",
+            "figure": "SHAPE_SYMBOL",
+            "shapename": "ncp_ep28_shape",
+            "width": "138.58",
+            "height": "55.91",
+            "shape": "ncp_ep28_shape"
+          },
+          {
+            "layer": "SOLDERMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "142.52",
+            "height": "59.84"
+          },
+          {
+            "layer": "PASTEMASK_TOP",
+            "type": "REGULAR_PAD",
+            "figure": "RECTANGLE",
+            "width": "110.87",
+            "height": "44.72"
+          }
+        ]
+      }
+    ],
+    "public_pad_files": [
+      {
+        "path": "D:\\001DIY\\005lib\\01Pad_lib\\ncp_r54_30.pad",
+        "exists": true,
+        "size_bytes": 3608,
+        "sha256": "d596cdbd92ab9f4529c4dd0bf8b6113e1d586e87de75284554c3ad68e6858b6c"
+      },
+      {
+        "path": "D:\\001DIY\\005lib\\01Pad_lib\\ncp_r30_54.pad",
+        "exists": true,
+        "size_bytes": 3608,
+        "sha256": "532de4c5788b737d4dcfd686d02ac3e100adfc37aad5ab41343a6d311ad9de35"
+      },
+      {
+        "path": "D:\\001DIY\\005lib\\01Pad_lib\\ncp_r47_30.pad",
+        "exists": true,
+        "size_bytes": 3608,
+        "sha256": "4d7ddc3aac266b5881002f5d398cf4a7388cb24cf9cf12e3f9f7886c380f7574"
+      },
+      {
+        "path": "D:\\001DIY\\005lib\\01Pad_lib\\ncp_r30_47.pad",
+        "exists": true,
+        "size_bytes": 3608,
+        "sha256": "7f897f9a3d6e75f038e3bc304cc146f9a10d3c061b5921748f9e4f9b5632d793"
+      },
+      {
+        "path": "D:\\001DIY\\005lib\\01Pad_lib\\ncp_ep25.pad",
+        "exists": true,
+        "size_bytes": 3604,
+        "sha256": "c27b570f31d8ae086b1368e963f66d4423c049448fac0fe3bc7286fd585bd21a"
+      },
+      {
+        "path": "D:\\001DIY\\005lib\\01Pad_lib\\ncp_ep26.pad",
+        "exists": true,
+        "size_bytes": 3604,
+        "sha256": "e24c1a43bdc9a2b29498cea5affa5928faf5e4748a0dc9a48244530b9a9afce1"
+      },
+      {
+        "path": "D:\\001DIY\\005lib\\01Pad_lib\\ncp_ep27.pad",
+        "exists": true,
+        "size_bytes": 3604,
+        "sha256": "31a80e454fcea93e1869a77702f1b84c24aae843de588f379b3559ed83e5a2f4"
+      },
+      {
+        "path": "D:\\001DIY\\005lib\\01Pad_lib\\ncp_ep28.pad",
+        "exists": true,
+        "size_bytes": 3620,
+        "sha256": "2491da12486f57060b69ec2fd919fd06ea8abaf69dd1340b33a7fa57a1a96245"
+      }
+    ],
+    "public_shape_file": {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ncp_ep28_shape.ssm",
+      "exists": true,
+      "size_bytes": 5356,
+      "sha256": "b68d9676777db853b2bddedbcc5e4d836ccaf5a785a6c7265e566edd09e4ce8e"
+    },
+    "public_footprint_files": [
+      {
+        "path": "D:\\001DIY\\005lib\\01Psm_lib\\PQFN24_4X5_P0D5_483BV.dra",
+        "exists": true,
+        "size_bytes": 91368,
+        "sha256": "1dbda5091f571cbebd8418c44c8a2db017f1381e1f528e6f9ab7e98e2821d47b"
+      },
+      {
+        "path": "D:\\001DIY\\005lib\\01Psm_lib\\pqfn24_4x5_p0d5_483bv.psm",
+        "exists": true,
+        "size_bytes": 19136,
+        "sha256": "da9456e4f611a14354464ed9dd2409a7bf45287b396e193e1c5be66e6106ed72"
+      }
+    ],
+    "generation_path_interpretations": [
+      {
+        "script": "D:\\001DIY\\005lib\\01AIcadence\\ncp303345_lib\\gen_ul_ncp303345.py",
+        "ARCHIVE": "D:\\001DIY\\005lib\\01AIcadence",
+        "AUTOLIB": "D:\\001DIY\\005lib",
+        "LIB_ROOT": "D:\\001DIY",
+        "OUT": "D:\\001DIY\\005lib\\ul_NCP303345",
+        "CAPTURE_OUT": "D:\\001DIY\\01captureLib\\NCP303345",
+        "SCRIPT_OUT": "D:\\001DIY\\01script_file\\NCP303345",
+        "AI_OUT": "D:\\001DIY\\01AIcadence\\ncp303345_lib",
+        "PAD_LIB": "D:\\001DIY\\01Pad_lib",
+        "PSM_LIB": "D:\\001DIY\\01Psm_lib",
+        "derived_by": "Manual interpretation of Path(__file__).resolve().parents[1] and subsequent .parent expressions; generator not imported or run"
+      },
+      {
+        "script": "D:\\001DIY\\005lib\\AUTOlib\\NCP303345\\02_生成脚本_ncp303345_lib\\gen_ul_ncp303345.py",
+        "ARCHIVE": "D:\\001DIY\\005lib\\AUTOlib\\NCP303345",
+        "AUTOLIB": "D:\\001DIY\\005lib\\AUTOlib",
+        "LIB_ROOT": "D:\\001DIY\\005lib",
+        "OUT": "D:\\001DIY\\005lib\\AUTOlib\\ul_NCP303345",
+        "CAPTURE_OUT": "D:\\001DIY\\005lib\\01captureLib\\NCP303345",
+        "SCRIPT_OUT": "D:\\001DIY\\005lib\\01script_file\\NCP303345",
+        "AI_OUT": "D:\\001DIY\\005lib\\01AIcadence\\ncp303345_lib",
+        "PAD_LIB": "D:\\001DIY\\005lib\\01Pad_lib",
+        "PSM_LIB": "D:\\001DIY\\005lib\\01Psm_lib",
+        "derived_by": "Manual interpretation of Path(__file__).resolve().parents[1] and subsequent .parent expressions; generator not imported or run"
+      }
+    ],
+    "bat_mutation_references": [
+      {
+        "line": 5,
+        "text": "set \"ALLEGRO_BIN=C:\\Program0\\Cadence\\spb172\\tools\\bin\""
+      },
+      {
+        "line": 6,
+        "text": "set \"FP=PQFN24_4X5_P0D5_483BV\""
+      },
+      {
+        "line": 7,
+        "text": "set \"PAD_LIB=D:\\001DIY\\005lib\\01Pad_lib\""
+      },
+      {
+        "line": 8,
+        "text": "set \"PSM_LIB=D:\\001DIY\\005lib\\01Psm_lib\""
+      },
+      {
+        "line": 9,
+        "text": "set \"ARCHIVE_ALG=D:\\001DIY\\005lib\\AUTOlib\\NCP303345\\01_成品库_ul_NCP303345\\AllegroV17_2\""
+      },
+      {
+        "line": 10,
+        "text": "set \"CAPTURE_ALG=D:\\001DIY\\005lib\\AUTOlib\\NCP303345\\03_captureLib_NCP303345\\AllegroV17_2\""
+      },
+      {
+        "line": 12,
+        "text": "if not exist \"%ALLEGRO_BIN%\\padstack_editor.exe\" (echo ERROR: padstack_editor.exe not found& goto FAIL)"
+      },
+      {
+        "line": 17,
+        "text": "if exist \"ncp_ep28_shape.dra\" del /q \"ncp_ep28_shape.dra\""
+      },
+      {
+        "line": 18,
+        "text": "if exist \"ncp_ep28_shape.ssm\" del /q \"ncp_ep28_shape.ssm\""
+      },
+      {
+        "line": 19,
+        "text": "START /WAIT \"\" \"%ALLEGRO_BIN%\\allegro.exe\" -nograph -s \"ncp_ep28_shape.scr\""
+      },
+      {
+        "line": 21,
+        "text": "copy /Y \"ncp_ep28_shape.ssm\" \"%PSM_LIB%\\ncp_ep28_shape.ssm\" >nul"
+      },
+      {
+        "line": 22,
+        "text": "set \"PSMPATH=%PSM_LIB%;%CD%;%PSMPATH%\""
+      },
+      {
+        "line": 25,
+        "text": "  \"%ALLEGRO_BIN%\\padstack_editor.exe\" -x \"%%P.pxml\""
+      },
+      {
+        "line": 27,
+        "text": "  copy /Y \"%%P.pad\" \"%PAD_LIB%\\%%P.pad\" >nul"
+      },
+      {
+        "line": 28,
+        "text": "  copy /Y \"%%P.pad\" \"%ARCHIVE_ALG%\\%%P.pad\" >nul"
+      },
+      {
+        "line": 29,
+        "text": "  copy /Y \"%%P.pad\" \"%CAPTURE_ALG%\\%%P.pad\" >nul"
+      },
+      {
+        "line": 31,
+        "text": "set \"PADPATH=%PAD_LIB%;%CD%;%PADPATH%\""
+      },
+      {
+        "line": 32,
+        "text": "if exist \"%FP%.dra\" del /q \"%FP%.dra\""
+      },
+      {
+        "line": 33,
+        "text": "if exist \"%FP%.psm\" del /q \"%FP%.psm\""
+      },
+      {
+        "line": 34,
+        "text": "if exist \"%FP%.dra.lck\" del /q \"%FP%.dra.lck\""
+      },
+      {
+        "line": 35,
+        "text": "START /WAIT \"\" \"%ALLEGRO_BIN%\\allegro.exe\" -nograph -s \"%FP%.scr\""
+      },
+      {
+        "line": 39,
+        "text": "copy /Y \"%FP%.scr\" \"backup\\%FP%.scr\" >nul"
+      },
+      {
+        "line": 40,
+        "text": "copy /Y \"%FP%.bat\" \"backup\\%FP%.bat\" >nul"
+      },
+      {
+        "line": 41,
+        "text": "copy /Y \"ncp_ep28_shape.scr\" \"backup\\ncp_ep28_shape.scr\" >nul"
+      },
+      {
+        "line": 42,
+        "text": "copy /Y \"ncp_ep28_shape.dra\" \"backup\\ncp_ep28_shape.dra\" >nul"
+      },
+      {
+        "line": 43,
+        "text": "copy /Y \"ncp_ep28_shape.ssm\" \"backup\\ncp_ep28_shape.ssm\" >nul"
+      },
+      {
+        "line": 45,
+        "text": "  copy /Y \"%%P.pxml\" \"backup\\%%P.pxml\" >nul"
+      },
+      {
+        "line": 46,
+        "text": "  copy /Y \"%%P.pad\" \"backup\\%%P.pad\" >nul"
+      },
+      {
+        "line": 48,
+        "text": "copy /Y \"%FP%.dra\" \"%PSM_LIB%\\%FP%.dra\" >nul"
+      },
+      {
+        "line": 49,
+        "text": "if exist \"%FP%.psm\" copy /Y \"%FP%.psm\" \"%PSM_LIB%\\%FP%.psm\" >nul"
+      },
+      {
+        "line": 50,
+        "text": "copy /Y \"%FP%.dra\" \"%ARCHIVE_ALG%\\%FP%.dra\" >nul"
+      },
+      {
+        "line": 51,
+        "text": "copy /Y \"%FP%.dra\" \"%CAPTURE_ALG%\\%FP%.dra\" >nul"
+      },
+      {
+        "line": 52,
+        "text": "copy /Y \"ncp_ep28_shape.dra\" \"%ARCHIVE_ALG%\\ncp_ep28_shape.dra\" >nul"
+      },
+      {
+        "line": 53,
+        "text": "copy /Y \"ncp_ep28_shape.ssm\" \"%ARCHIVE_ALG%\\ncp_ep28_shape.ssm\" >nul"
+      },
+      {
+        "line": 54,
+        "text": "copy /Y \"ncp_ep28_shape.dra\" \"%CAPTURE_ALG%\\ncp_ep28_shape.dra\" >nul"
+      },
+      {
+        "line": 55,
+        "text": "copy /Y \"ncp_ep28_shape.ssm\" \"%CAPTURE_ALG%\\ncp_ep28_shape.ssm\" >nul"
+      },
+      {
+        "line": 56,
+        "text": "if exist \"%FP%.psm\" copy /Y \"%FP%.psm\" \"%ARCHIVE_ALG%\\%FP%.psm\" >nul"
+      },
+      {
+        "line": 57,
+        "text": "if exist \"%FP%.psm\" copy /Y \"%FP%.psm\" \"%CAPTURE_ALG%\\%FP%.psm\" >nul"
+      }
+    ],
+    "source_dimension_status": "README and generator claims recorded; original PDF dimension comparison not performed in this static preparation"
+  },
+  "hpm6200": {
+    "readme": {
+      "path": "D:\\001DIY\\005lib\\AUTOlib\\HPM6200_BGA116_allegro\\README.md",
+      "exists": true,
+      "size_bytes": 325,
+      "sha256": "2835a1b46199fca3f6b986c7539412c9b07b64f9a1dec8001adee59b47af33ab"
+    },
+    "generator": {
+      "path": "D:\\001DIY\\005lib\\AUTOlib\\HPM6200_BGA116_allegro\\gen_hpm6200_bga116.py",
+      "exists": true,
+      "size_bytes": 8351,
+      "sha256": "67f3029ad9f7455ef161eb907b916b52cb15cb023cc06040ece3e890b22809de"
+    },
+    "declared_kicad_input": {
+      "path": "D:\\001DIY\\005lib\\AUTOlib\\HPM_footprints.pretty\\BGA116 _13x13_7.0x7.0mm.kicad_mod",
+      "exists": false
+    },
+    "located_kicad_input": {
+      "path": "D:\\001DIY\\005lib\\AUTOlib\\HPM_LIB_20251229\\HPM_footprints.pretty\\BGA116 _13x13_7.0x7.0mm.kicad_mod",
+      "exists": true,
+      "size_bytes": 19245,
+      "sha256": "f7e371b26c02b21fa7d62b46ab5ba4a997b2720f3bac59f7de55529307112927"
+    },
+    "kicad_pad_count": 116,
+    "kicad_unique_label_count": 116,
+    "kicad_pad_data": [
+      {
+        "label": "A1",
+        "shape": "circle",
+        "xy": [
+          -3.0,
+          -3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "A2",
+        "shape": "circle",
+        "xy": [
+          -2.5,
+          -3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "A4",
+        "shape": "circle",
+        "xy": [
+          -1.5,
+          -3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "A6",
+        "shape": "circle",
+        "xy": [
+          -0.5,
+          -3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "A8",
+        "shape": "circle",
+        "xy": [
+          0.5,
+          -3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "A10",
+        "shape": "circle",
+        "xy": [
+          1.5,
+          -3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "A12",
+        "shape": "circle",
+        "xy": [
+          2.5,
+          -3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "A13",
+        "shape": "circle",
+        "xy": [
+          3.0,
+          -3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "B1",
+        "shape": "circle",
+        "xy": [
+          -3.0,
+          -2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "B2",
+        "shape": "circle",
+        "xy": [
+          -2.5,
+          -2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "B3",
+        "shape": "circle",
+        "xy": [
+          -2.0,
+          -2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "B4",
+        "shape": "circle",
+        "xy": [
+          -1.5,
+          -2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "B6",
+        "shape": "circle",
+        "xy": [
+          -0.5,
+          -2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "B7",
+        "shape": "circle",
+        "xy": [
+          0.0,
+          -2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "B8",
+        "shape": "circle",
+        "xy": [
+          0.5,
+          -2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "B10",
+        "shape": "circle",
+        "xy": [
+          1.5,
+          -2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "B11",
+        "shape": "circle",
+        "xy": [
+          2.0,
+          -2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "B12",
+        "shape": "circle",
+        "xy": [
+          2.5,
+          -2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "B13",
+        "shape": "circle",
+        "xy": [
+          3.0,
+          -2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "C2",
+        "shape": "circle",
+        "xy": [
+          -2.5,
+          -2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "C3",
+        "shape": "circle",
+        "xy": [
+          -2.0,
+          -2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "C4",
+        "shape": "circle",
+        "xy": [
+          -1.5,
+          -2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "C5",
+        "shape": "circle",
+        "xy": [
+          -1.0,
+          -2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "C6",
+        "shape": "circle",
+        "xy": [
+          -0.5,
+          -2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "C7",
+        "shape": "circle",
+        "xy": [
+          0.0,
+          -2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "C8",
+        "shape": "circle",
+        "xy": [
+          0.5,
+          -2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "C9",
+        "shape": "circle",
+        "xy": [
+          1.0,
+          -2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "C10",
+        "shape": "circle",
+        "xy": [
+          1.5,
+          -2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "C11",
+        "shape": "circle",
+        "xy": [
+          2.0,
+          -2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "C12",
+        "shape": "circle",
+        "xy": [
+          2.5,
+          -2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "D1",
+        "shape": "circle",
+        "xy": [
+          -3.0,
+          -1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "D2",
+        "shape": "circle",
+        "xy": [
+          -2.5,
+          -1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "D3",
+        "shape": "circle",
+        "xy": [
+          -2.0,
+          -1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "D4",
+        "shape": "circle",
+        "xy": [
+          -1.5,
+          -1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "D7",
+        "shape": "circle",
+        "xy": [
+          0.0,
+          -1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "D10",
+        "shape": "circle",
+        "xy": [
+          1.5,
+          -1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "D11",
+        "shape": "circle",
+        "xy": [
+          2.0,
+          -1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "D12",
+        "shape": "circle",
+        "xy": [
+          2.5,
+          -1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "D13",
+        "shape": "circle",
+        "xy": [
+          3.0,
+          -1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "E3",
+        "shape": "circle",
+        "xy": [
+          -2.0,
+          -1.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "E5",
+        "shape": "circle",
+        "xy": [
+          -1.0,
+          -1.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "E6",
+        "shape": "circle",
+        "xy": [
+          -0.5,
+          -1.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "E8",
+        "shape": "circle",
+        "xy": [
+          0.5,
+          -1.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "E9",
+        "shape": "circle",
+        "xy": [
+          1.0,
+          -1.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "E11",
+        "shape": "circle",
+        "xy": [
+          2.0,
+          -1.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "F1",
+        "shape": "circle",
+        "xy": [
+          -3.0,
+          -0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "F2",
+        "shape": "circle",
+        "xy": [
+          -2.5,
+          -0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "F3",
+        "shape": "circle",
+        "xy": [
+          -2.0,
+          -0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "F5",
+        "shape": "circle",
+        "xy": [
+          -1.0,
+          -0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "F7",
+        "shape": "circle",
+        "xy": [
+          0.0,
+          -0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "F9",
+        "shape": "circle",
+        "xy": [
+          1.0,
+          -0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "F11",
+        "shape": "circle",
+        "xy": [
+          2.0,
+          -0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "F12",
+        "shape": "circle",
+        "xy": [
+          2.5,
+          -0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "F13",
+        "shape": "circle",
+        "xy": [
+          3.0,
+          -0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "G2",
+        "shape": "circle",
+        "xy": [
+          -2.5,
+          0.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "G3",
+        "shape": "circle",
+        "xy": [
+          -2.0,
+          0.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "G4",
+        "shape": "circle",
+        "xy": [
+          -1.5,
+          0.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "G6",
+        "shape": "circle",
+        "xy": [
+          -0.5,
+          0.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "G8",
+        "shape": "circle",
+        "xy": [
+          0.5,
+          0.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "G10",
+        "shape": "circle",
+        "xy": [
+          1.5,
+          0.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "G11",
+        "shape": "circle",
+        "xy": [
+          2.0,
+          0.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "G12",
+        "shape": "circle",
+        "xy": [
+          2.5,
+          0.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "H1",
+        "shape": "circle",
+        "xy": [
+          -3.0,
+          0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "H2",
+        "shape": "circle",
+        "xy": [
+          -2.5,
+          0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "H3",
+        "shape": "circle",
+        "xy": [
+          -2.0,
+          0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "H5",
+        "shape": "circle",
+        "xy": [
+          -1.0,
+          0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "H7",
+        "shape": "circle",
+        "xy": [
+          0.0,
+          0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "H9",
+        "shape": "circle",
+        "xy": [
+          1.0,
+          0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "H11",
+        "shape": "circle",
+        "xy": [
+          2.0,
+          0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "H12",
+        "shape": "circle",
+        "xy": [
+          2.5,
+          0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "H13",
+        "shape": "circle",
+        "xy": [
+          3.0,
+          0.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "J3",
+        "shape": "circle",
+        "xy": [
+          -2.0,
+          1.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "J5",
+        "shape": "circle",
+        "xy": [
+          -1.0,
+          1.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "J6",
+        "shape": "circle",
+        "xy": [
+          -0.5,
+          1.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "J8",
+        "shape": "circle",
+        "xy": [
+          0.5,
+          1.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "J9",
+        "shape": "circle",
+        "xy": [
+          1.0,
+          1.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "J11",
+        "shape": "circle",
+        "xy": [
+          2.0,
+          1.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "K1",
+        "shape": "circle",
+        "xy": [
+          -3.0,
+          1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "K2",
+        "shape": "circle",
+        "xy": [
+          -2.5,
+          1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "K3",
+        "shape": "circle",
+        "xy": [
+          -2.0,
+          1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "K4",
+        "shape": "circle",
+        "xy": [
+          -1.5,
+          1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "K7",
+        "shape": "circle",
+        "xy": [
+          0.0,
+          1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "K10",
+        "shape": "circle",
+        "xy": [
+          1.5,
+          1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "K11",
+        "shape": "circle",
+        "xy": [
+          2.0,
+          1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "K12",
+        "shape": "circle",
+        "xy": [
+          2.5,
+          1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "K13",
+        "shape": "circle",
+        "xy": [
+          3.0,
+          1.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "L2",
+        "shape": "circle",
+        "xy": [
+          -2.5,
+          2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "L3",
+        "shape": "circle",
+        "xy": [
+          -2.0,
+          2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "L4",
+        "shape": "circle",
+        "xy": [
+          -1.5,
+          2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "L5",
+        "shape": "circle",
+        "xy": [
+          -1.0,
+          2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "L6",
+        "shape": "circle",
+        "xy": [
+          -0.5,
+          2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "L7",
+        "shape": "circle",
+        "xy": [
+          0.0,
+          2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "L8",
+        "shape": "circle",
+        "xy": [
+          0.5,
+          2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "L9",
+        "shape": "circle",
+        "xy": [
+          1.0,
+          2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "L10",
+        "shape": "circle",
+        "xy": [
+          1.5,
+          2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "L11",
+        "shape": "circle",
+        "xy": [
+          2.0,
+          2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "L12",
+        "shape": "circle",
+        "xy": [
+          2.5,
+          2.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "M1",
+        "shape": "circle",
+        "xy": [
+          -3.0,
+          2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "M2",
+        "shape": "circle",
+        "xy": [
+          -2.5,
+          2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "M3",
+        "shape": "circle",
+        "xy": [
+          -2.0,
+          2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "M4",
+        "shape": "circle",
+        "xy": [
+          -1.5,
+          2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "M6",
+        "shape": "circle",
+        "xy": [
+          -0.5,
+          2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "M7",
+        "shape": "circle",
+        "xy": [
+          0.0,
+          2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "M8",
+        "shape": "circle",
+        "xy": [
+          0.5,
+          2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "M10",
+        "shape": "circle",
+        "xy": [
+          1.5,
+          2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "M11",
+        "shape": "circle",
+        "xy": [
+          2.0,
+          2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "M12",
+        "shape": "circle",
+        "xy": [
+          2.5,
+          2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "M13",
+        "shape": "circle",
+        "xy": [
+          3.0,
+          2.5
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "N1",
+        "shape": "circle",
+        "xy": [
+          -3.0,
+          3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "N2",
+        "shape": "circle",
+        "xy": [
+          -2.5,
+          3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "N4",
+        "shape": "circle",
+        "xy": [
+          -1.5,
+          3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "N6",
+        "shape": "circle",
+        "xy": [
+          -0.5,
+          3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "N8",
+        "shape": "circle",
+        "xy": [
+          0.5,
+          3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "N10",
+        "shape": "circle",
+        "xy": [
+          1.5,
+          3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "N12",
+        "shape": "circle",
+        "xy": [
+          2.5,
+          3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "label": "N13",
+        "shape": "circle",
+        "xy": [
+          3.0,
+          3.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      }
+    ],
+    "kicad_size_values": [
+      [
+        0.25,
+        0.25
+      ]
+    ],
+    "kicad_xy_range": {
+      "x": [
+        -3.0,
+        3.0
+      ],
+      "y": [
+        -3.0,
+        3.0
+      ]
+    },
+    "kicad_attribute_line": [
+      {
+        "line": 3,
+        "text": "  (attr through_hole)"
+      }
+    ],
+    "main_script": {
+      "source": {
+        "path": "D:\\001DIY\\005lib\\AUTOlib\\HPM6200_BGA116_allegro\\BGA116_7x7_P0d5.scr",
+        "exists": true,
+        "size_bytes": 37175,
+        "sha256": "6f42c08ef617882de44d14605db38dcde5fd15e823a7ab35155613e5c3da1652"
+      },
+      "units": [
+        "Millimeter"
+      ],
+      "accuracy": [
+        "4"
+      ],
+      "new_drawing": [
+        "\"BGA116_7x7_P0d5.dra\" \"Package Symbol\""
+      ],
+      "pin_count": 116,
+      "unique_pin_count": 116,
+      "duplicate_labels": [],
+      "pad_names": {
+        "BGA025": 116
+      },
+      "pins": [
+        {
+          "line": 20,
+          "pad_name": "BGA025",
+          "next_pin_number": "A1",
+          "offsetx": "-3.0",
+          "offsety": "-3.0",
+          "pick_xy": [
+            -3.0,
+            -3.0
+          ]
+        },
+        {
+          "line": 34,
+          "pad_name": "BGA025",
+          "next_pin_number": "A2",
+          "offsetx": "-2.5",
+          "offsety": "-3.0",
+          "pick_xy": [
+            -2.5,
+            -3.0
+          ]
+        },
+        {
+          "line": 48,
+          "pad_name": "BGA025",
+          "next_pin_number": "A4",
+          "offsetx": "-1.5",
+          "offsety": "-3.0",
+          "pick_xy": [
+            -1.5,
+            -3.0
+          ]
+        },
+        {
+          "line": 62,
+          "pad_name": "BGA025",
+          "next_pin_number": "A6",
+          "offsetx": "-0.5",
+          "offsety": "-3.0",
+          "pick_xy": [
+            -0.5,
+            -3.0
+          ]
+        },
+        {
+          "line": 76,
+          "pad_name": "BGA025",
+          "next_pin_number": "A8",
+          "offsetx": "0.5",
+          "offsety": "-3.0",
+          "pick_xy": [
+            0.5,
+            -3.0
+          ]
+        },
+        {
+          "line": 90,
+          "pad_name": "BGA025",
+          "next_pin_number": "A10",
+          "offsetx": "1.5",
+          "offsety": "-3.0",
+          "pick_xy": [
+            1.5,
+            -3.0
+          ]
+        },
+        {
+          "line": 104,
+          "pad_name": "BGA025",
+          "next_pin_number": "A12",
+          "offsetx": "2.5",
+          "offsety": "-3.0",
+          "pick_xy": [
+            2.5,
+            -3.0
+          ]
+        },
+        {
+          "line": 118,
+          "pad_name": "BGA025",
+          "next_pin_number": "A13",
+          "offsetx": "3.0",
+          "offsety": "-3.0",
+          "pick_xy": [
+            3.0,
+            -3.0
+          ]
+        },
+        {
+          "line": 132,
+          "pad_name": "BGA025",
+          "next_pin_number": "B1",
+          "offsetx": "-3.0",
+          "offsety": "-2.5",
+          "pick_xy": [
+            -3.0,
+            -2.5
+          ]
+        },
+        {
+          "line": 146,
+          "pad_name": "BGA025",
+          "next_pin_number": "B2",
+          "offsetx": "-2.5",
+          "offsety": "-2.5",
+          "pick_xy": [
+            -2.5,
+            -2.5
+          ]
+        },
+        {
+          "line": 160,
+          "pad_name": "BGA025",
+          "next_pin_number": "B3",
+          "offsetx": "-2.0",
+          "offsety": "-2.5",
+          "pick_xy": [
+            -2.0,
+            -2.5
+          ]
+        },
+        {
+          "line": 174,
+          "pad_name": "BGA025",
+          "next_pin_number": "B4",
+          "offsetx": "-1.5",
+          "offsety": "-2.5",
+          "pick_xy": [
+            -1.5,
+            -2.5
+          ]
+        },
+        {
+          "line": 188,
+          "pad_name": "BGA025",
+          "next_pin_number": "B6",
+          "offsetx": "-0.5",
+          "offsety": "-2.5",
+          "pick_xy": [
+            -0.5,
+            -2.5
+          ]
+        },
+        {
+          "line": 202,
+          "pad_name": "BGA025",
+          "next_pin_number": "B7",
+          "offsetx": "0.0",
+          "offsety": "-2.5",
+          "pick_xy": [
+            0.0,
+            -2.5
+          ]
+        },
+        {
+          "line": 216,
+          "pad_name": "BGA025",
+          "next_pin_number": "B8",
+          "offsetx": "0.5",
+          "offsety": "-2.5",
+          "pick_xy": [
+            0.5,
+            -2.5
+          ]
+        },
+        {
+          "line": 230,
+          "pad_name": "BGA025",
+          "next_pin_number": "B10",
+          "offsetx": "1.5",
+          "offsety": "-2.5",
+          "pick_xy": [
+            1.5,
+            -2.5
+          ]
+        },
+        {
+          "line": 244,
+          "pad_name": "BGA025",
+          "next_pin_number": "B11",
+          "offsetx": "2.0",
+          "offsety": "-2.5",
+          "pick_xy": [
+            2.0,
+            -2.5
+          ]
+        },
+        {
+          "line": 258,
+          "pad_name": "BGA025",
+          "next_pin_number": "B12",
+          "offsetx": "2.5",
+          "offsety": "-2.5",
+          "pick_xy": [
+            2.5,
+            -2.5
+          ]
+        },
+        {
+          "line": 272,
+          "pad_name": "BGA025",
+          "next_pin_number": "B13",
+          "offsetx": "3.0",
+          "offsety": "-2.5",
+          "pick_xy": [
+            3.0,
+            -2.5
+          ]
+        },
+        {
+          "line": 286,
+          "pad_name": "BGA025",
+          "next_pin_number": "C2",
+          "offsetx": "-2.5",
+          "offsety": "-2.0",
+          "pick_xy": [
+            -2.5,
+            -2.0
+          ]
+        },
+        {
+          "line": 300,
+          "pad_name": "BGA025",
+          "next_pin_number": "C3",
+          "offsetx": "-2.0",
+          "offsety": "-2.0",
+          "pick_xy": [
+            -2.0,
+            -2.0
+          ]
+        },
+        {
+          "line": 314,
+          "pad_name": "BGA025",
+          "next_pin_number": "C4",
+          "offsetx": "-1.5",
+          "offsety": "-2.0",
+          "pick_xy": [
+            -1.5,
+            -2.0
+          ]
+        },
+        {
+          "line": 328,
+          "pad_name": "BGA025",
+          "next_pin_number": "C5",
+          "offsetx": "-1.0",
+          "offsety": "-2.0",
+          "pick_xy": [
+            -1.0,
+            -2.0
+          ]
+        },
+        {
+          "line": 342,
+          "pad_name": "BGA025",
+          "next_pin_number": "C6",
+          "offsetx": "-0.5",
+          "offsety": "-2.0",
+          "pick_xy": [
+            -0.5,
+            -2.0
+          ]
+        },
+        {
+          "line": 356,
+          "pad_name": "BGA025",
+          "next_pin_number": "C7",
+          "offsetx": "0.0",
+          "offsety": "-2.0",
+          "pick_xy": [
+            0.0,
+            -2.0
+          ]
+        },
+        {
+          "line": 370,
+          "pad_name": "BGA025",
+          "next_pin_number": "C8",
+          "offsetx": "0.5",
+          "offsety": "-2.0",
+          "pick_xy": [
+            0.5,
+            -2.0
+          ]
+        },
+        {
+          "line": 384,
+          "pad_name": "BGA025",
+          "next_pin_number": "C9",
+          "offsetx": "1.0",
+          "offsety": "-2.0",
+          "pick_xy": [
+            1.0,
+            -2.0
+          ]
+        },
+        {
+          "line": 398,
+          "pad_name": "BGA025",
+          "next_pin_number": "C10",
+          "offsetx": "1.5",
+          "offsety": "-2.0",
+          "pick_xy": [
+            1.5,
+            -2.0
+          ]
+        },
+        {
+          "line": 412,
+          "pad_name": "BGA025",
+          "next_pin_number": "C11",
+          "offsetx": "2.0",
+          "offsety": "-2.0",
+          "pick_xy": [
+            2.0,
+            -2.0
+          ]
+        },
+        {
+          "line": 426,
+          "pad_name": "BGA025",
+          "next_pin_number": "C12",
+          "offsetx": "2.5",
+          "offsety": "-2.0",
+          "pick_xy": [
+            2.5,
+            -2.0
+          ]
+        },
+        {
+          "line": 440,
+          "pad_name": "BGA025",
+          "next_pin_number": "D1",
+          "offsetx": "-3.0",
+          "offsety": "-1.5",
+          "pick_xy": [
+            -3.0,
+            -1.5
+          ]
+        },
+        {
+          "line": 454,
+          "pad_name": "BGA025",
+          "next_pin_number": "D2",
+          "offsetx": "-2.5",
+          "offsety": "-1.5",
+          "pick_xy": [
+            -2.5,
+            -1.5
+          ]
+        },
+        {
+          "line": 468,
+          "pad_name": "BGA025",
+          "next_pin_number": "D3",
+          "offsetx": "-2.0",
+          "offsety": "-1.5",
+          "pick_xy": [
+            -2.0,
+            -1.5
+          ]
+        },
+        {
+          "line": 482,
+          "pad_name": "BGA025",
+          "next_pin_number": "D4",
+          "offsetx": "-1.5",
+          "offsety": "-1.5",
+          "pick_xy": [
+            -1.5,
+            -1.5
+          ]
+        },
+        {
+          "line": 496,
+          "pad_name": "BGA025",
+          "next_pin_number": "D7",
+          "offsetx": "0.0",
+          "offsety": "-1.5",
+          "pick_xy": [
+            0.0,
+            -1.5
+          ]
+        },
+        {
+          "line": 510,
+          "pad_name": "BGA025",
+          "next_pin_number": "D10",
+          "offsetx": "1.5",
+          "offsety": "-1.5",
+          "pick_xy": [
+            1.5,
+            -1.5
+          ]
+        },
+        {
+          "line": 524,
+          "pad_name": "BGA025",
+          "next_pin_number": "D11",
+          "offsetx": "2.0",
+          "offsety": "-1.5",
+          "pick_xy": [
+            2.0,
+            -1.5
+          ]
+        },
+        {
+          "line": 538,
+          "pad_name": "BGA025",
+          "next_pin_number": "D12",
+          "offsetx": "2.5",
+          "offsety": "-1.5",
+          "pick_xy": [
+            2.5,
+            -1.5
+          ]
+        },
+        {
+          "line": 552,
+          "pad_name": "BGA025",
+          "next_pin_number": "D13",
+          "offsetx": "3.0",
+          "offsety": "-1.5",
+          "pick_xy": [
+            3.0,
+            -1.5
+          ]
+        },
+        {
+          "line": 566,
+          "pad_name": "BGA025",
+          "next_pin_number": "E3",
+          "offsetx": "-2.0",
+          "offsety": "-1.0",
+          "pick_xy": [
+            -2.0,
+            -1.0
+          ]
+        },
+        {
+          "line": 580,
+          "pad_name": "BGA025",
+          "next_pin_number": "E5",
+          "offsetx": "-1.0",
+          "offsety": "-1.0",
+          "pick_xy": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "line": 594,
+          "pad_name": "BGA025",
+          "next_pin_number": "E6",
+          "offsetx": "-0.5",
+          "offsety": "-1.0",
+          "pick_xy": [
+            -0.5,
+            -1.0
+          ]
+        },
+        {
+          "line": 608,
+          "pad_name": "BGA025",
+          "next_pin_number": "E8",
+          "offsetx": "0.5",
+          "offsety": "-1.0",
+          "pick_xy": [
+            0.5,
+            -1.0
+          ]
+        },
+        {
+          "line": 622,
+          "pad_name": "BGA025",
+          "next_pin_number": "E9",
+          "offsetx": "1.0",
+          "offsety": "-1.0",
+          "pick_xy": [
+            1.0,
+            -1.0
+          ]
+        },
+        {
+          "line": 636,
+          "pad_name": "BGA025",
+          "next_pin_number": "E11",
+          "offsetx": "2.0",
+          "offsety": "-1.0",
+          "pick_xy": [
+            2.0,
+            -1.0
+          ]
+        },
+        {
+          "line": 650,
+          "pad_name": "BGA025",
+          "next_pin_number": "F1",
+          "offsetx": "-3.0",
+          "offsety": "-0.5",
+          "pick_xy": [
+            -3.0,
+            -0.5
+          ]
+        },
+        {
+          "line": 664,
+          "pad_name": "BGA025",
+          "next_pin_number": "F2",
+          "offsetx": "-2.5",
+          "offsety": "-0.5",
+          "pick_xy": [
+            -2.5,
+            -0.5
+          ]
+        },
+        {
+          "line": 678,
+          "pad_name": "BGA025",
+          "next_pin_number": "F3",
+          "offsetx": "-2.0",
+          "offsety": "-0.5",
+          "pick_xy": [
+            -2.0,
+            -0.5
+          ]
+        },
+        {
+          "line": 692,
+          "pad_name": "BGA025",
+          "next_pin_number": "F5",
+          "offsetx": "-1.0",
+          "offsety": "-0.5",
+          "pick_xy": [
+            -1.0,
+            -0.5
+          ]
+        },
+        {
+          "line": 706,
+          "pad_name": "BGA025",
+          "next_pin_number": "F7",
+          "offsetx": "0.0",
+          "offsety": "-0.5",
+          "pick_xy": [
+            0.0,
+            -0.5
+          ]
+        },
+        {
+          "line": 720,
+          "pad_name": "BGA025",
+          "next_pin_number": "F9",
+          "offsetx": "1.0",
+          "offsety": "-0.5",
+          "pick_xy": [
+            1.0,
+            -0.5
+          ]
+        },
+        {
+          "line": 734,
+          "pad_name": "BGA025",
+          "next_pin_number": "F11",
+          "offsetx": "2.0",
+          "offsety": "-0.5",
+          "pick_xy": [
+            2.0,
+            -0.5
+          ]
+        },
+        {
+          "line": 748,
+          "pad_name": "BGA025",
+          "next_pin_number": "F12",
+          "offsetx": "2.5",
+          "offsety": "-0.5",
+          "pick_xy": [
+            2.5,
+            -0.5
+          ]
+        },
+        {
+          "line": 762,
+          "pad_name": "BGA025",
+          "next_pin_number": "F13",
+          "offsetx": "3.0",
+          "offsety": "-0.5",
+          "pick_xy": [
+            3.0,
+            -0.5
+          ]
+        },
+        {
+          "line": 776,
+          "pad_name": "BGA025",
+          "next_pin_number": "G2",
+          "offsetx": "-2.5",
+          "offsety": "0.0",
+          "pick_xy": [
+            -2.5,
+            0.0
+          ]
+        },
+        {
+          "line": 790,
+          "pad_name": "BGA025",
+          "next_pin_number": "G3",
+          "offsetx": "-2.0",
+          "offsety": "0.0",
+          "pick_xy": [
+            -2.0,
+            0.0
+          ]
+        },
+        {
+          "line": 804,
+          "pad_name": "BGA025",
+          "next_pin_number": "G4",
+          "offsetx": "-1.5",
+          "offsety": "0.0",
+          "pick_xy": [
+            -1.5,
+            0.0
+          ]
+        },
+        {
+          "line": 818,
+          "pad_name": "BGA025",
+          "next_pin_number": "G6",
+          "offsetx": "-0.5",
+          "offsety": "0.0",
+          "pick_xy": [
+            -0.5,
+            0.0
+          ]
+        },
+        {
+          "line": 832,
+          "pad_name": "BGA025",
+          "next_pin_number": "G8",
+          "offsetx": "0.5",
+          "offsety": "0.0",
+          "pick_xy": [
+            0.5,
+            0.0
+          ]
+        },
+        {
+          "line": 846,
+          "pad_name": "BGA025",
+          "next_pin_number": "G10",
+          "offsetx": "1.5",
+          "offsety": "0.0",
+          "pick_xy": [
+            1.5,
+            0.0
+          ]
+        },
+        {
+          "line": 860,
+          "pad_name": "BGA025",
+          "next_pin_number": "G11",
+          "offsetx": "2.0",
+          "offsety": "0.0",
+          "pick_xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "line": 874,
+          "pad_name": "BGA025",
+          "next_pin_number": "G12",
+          "offsetx": "2.5",
+          "offsety": "0.0",
+          "pick_xy": [
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "line": 888,
+          "pad_name": "BGA025",
+          "next_pin_number": "H1",
+          "offsetx": "-3.0",
+          "offsety": "0.5",
+          "pick_xy": [
+            -3.0,
+            0.5
+          ]
+        },
+        {
+          "line": 902,
+          "pad_name": "BGA025",
+          "next_pin_number": "H2",
+          "offsetx": "-2.5",
+          "offsety": "0.5",
+          "pick_xy": [
+            -2.5,
+            0.5
+          ]
+        },
+        {
+          "line": 916,
+          "pad_name": "BGA025",
+          "next_pin_number": "H3",
+          "offsetx": "-2.0",
+          "offsety": "0.5",
+          "pick_xy": [
+            -2.0,
+            0.5
+          ]
+        },
+        {
+          "line": 930,
+          "pad_name": "BGA025",
+          "next_pin_number": "H5",
+          "offsetx": "-1.0",
+          "offsety": "0.5",
+          "pick_xy": [
+            -1.0,
+            0.5
+          ]
+        },
+        {
+          "line": 944,
+          "pad_name": "BGA025",
+          "next_pin_number": "H7",
+          "offsetx": "0.0",
+          "offsety": "0.5",
+          "pick_xy": [
+            0.0,
+            0.5
+          ]
+        },
+        {
+          "line": 958,
+          "pad_name": "BGA025",
+          "next_pin_number": "H9",
+          "offsetx": "1.0",
+          "offsety": "0.5",
+          "pick_xy": [
+            1.0,
+            0.5
+          ]
+        },
+        {
+          "line": 972,
+          "pad_name": "BGA025",
+          "next_pin_number": "H11",
+          "offsetx": "2.0",
+          "offsety": "0.5",
+          "pick_xy": [
+            2.0,
+            0.5
+          ]
+        },
+        {
+          "line": 986,
+          "pad_name": "BGA025",
+          "next_pin_number": "H12",
+          "offsetx": "2.5",
+          "offsety": "0.5",
+          "pick_xy": [
+            2.5,
+            0.5
+          ]
+        },
+        {
+          "line": 1000,
+          "pad_name": "BGA025",
+          "next_pin_number": "H13",
+          "offsetx": "3.0",
+          "offsety": "0.5",
+          "pick_xy": [
+            3.0,
+            0.5
+          ]
+        },
+        {
+          "line": 1014,
+          "pad_name": "BGA025",
+          "next_pin_number": "J3",
+          "offsetx": "-2.0",
+          "offsety": "1.0",
+          "pick_xy": [
+            -2.0,
+            1.0
+          ]
+        },
+        {
+          "line": 1028,
+          "pad_name": "BGA025",
+          "next_pin_number": "J5",
+          "offsetx": "-1.0",
+          "offsety": "1.0",
+          "pick_xy": [
+            -1.0,
+            1.0
+          ]
+        },
+        {
+          "line": 1042,
+          "pad_name": "BGA025",
+          "next_pin_number": "J6",
+          "offsetx": "-0.5",
+          "offsety": "1.0",
+          "pick_xy": [
+            -0.5,
+            1.0
+          ]
+        },
+        {
+          "line": 1056,
+          "pad_name": "BGA025",
+          "next_pin_number": "J8",
+          "offsetx": "0.5",
+          "offsety": "1.0",
+          "pick_xy": [
+            0.5,
+            1.0
+          ]
+        },
+        {
+          "line": 1070,
+          "pad_name": "BGA025",
+          "next_pin_number": "J9",
+          "offsetx": "1.0",
+          "offsety": "1.0",
+          "pick_xy": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "line": 1084,
+          "pad_name": "BGA025",
+          "next_pin_number": "J11",
+          "offsetx": "2.0",
+          "offsety": "1.0",
+          "pick_xy": [
+            2.0,
+            1.0
+          ]
+        },
+        {
+          "line": 1098,
+          "pad_name": "BGA025",
+          "next_pin_number": "K1",
+          "offsetx": "-3.0",
+          "offsety": "1.5",
+          "pick_xy": [
+            -3.0,
+            1.5
+          ]
+        },
+        {
+          "line": 1112,
+          "pad_name": "BGA025",
+          "next_pin_number": "K2",
+          "offsetx": "-2.5",
+          "offsety": "1.5",
+          "pick_xy": [
+            -2.5,
+            1.5
+          ]
+        },
+        {
+          "line": 1126,
+          "pad_name": "BGA025",
+          "next_pin_number": "K3",
+          "offsetx": "-2.0",
+          "offsety": "1.5",
+          "pick_xy": [
+            -2.0,
+            1.5
+          ]
+        },
+        {
+          "line": 1140,
+          "pad_name": "BGA025",
+          "next_pin_number": "K4",
+          "offsetx": "-1.5",
+          "offsety": "1.5",
+          "pick_xy": [
+            -1.5,
+            1.5
+          ]
+        },
+        {
+          "line": 1154,
+          "pad_name": "BGA025",
+          "next_pin_number": "K7",
+          "offsetx": "0.0",
+          "offsety": "1.5",
+          "pick_xy": [
+            0.0,
+            1.5
+          ]
+        },
+        {
+          "line": 1168,
+          "pad_name": "BGA025",
+          "next_pin_number": "K10",
+          "offsetx": "1.5",
+          "offsety": "1.5",
+          "pick_xy": [
+            1.5,
+            1.5
+          ]
+        },
+        {
+          "line": 1182,
+          "pad_name": "BGA025",
+          "next_pin_number": "K11",
+          "offsetx": "2.0",
+          "offsety": "1.5",
+          "pick_xy": [
+            2.0,
+            1.5
+          ]
+        },
+        {
+          "line": 1196,
+          "pad_name": "BGA025",
+          "next_pin_number": "K12",
+          "offsetx": "2.5",
+          "offsety": "1.5",
+          "pick_xy": [
+            2.5,
+            1.5
+          ]
+        },
+        {
+          "line": 1210,
+          "pad_name": "BGA025",
+          "next_pin_number": "K13",
+          "offsetx": "3.0",
+          "offsety": "1.5",
+          "pick_xy": [
+            3.0,
+            1.5
+          ]
+        },
+        {
+          "line": 1224,
+          "pad_name": "BGA025",
+          "next_pin_number": "L2",
+          "offsetx": "-2.5",
+          "offsety": "2.0",
+          "pick_xy": [
+            -2.5,
+            2.0
+          ]
+        },
+        {
+          "line": 1238,
+          "pad_name": "BGA025",
+          "next_pin_number": "L3",
+          "offsetx": "-2.0",
+          "offsety": "2.0",
+          "pick_xy": [
+            -2.0,
+            2.0
+          ]
+        },
+        {
+          "line": 1252,
+          "pad_name": "BGA025",
+          "next_pin_number": "L4",
+          "offsetx": "-1.5",
+          "offsety": "2.0",
+          "pick_xy": [
+            -1.5,
+            2.0
+          ]
+        },
+        {
+          "line": 1266,
+          "pad_name": "BGA025",
+          "next_pin_number": "L5",
+          "offsetx": "-1.0",
+          "offsety": "2.0",
+          "pick_xy": [
+            -1.0,
+            2.0
+          ]
+        },
+        {
+          "line": 1280,
+          "pad_name": "BGA025",
+          "next_pin_number": "L6",
+          "offsetx": "-0.5",
+          "offsety": "2.0",
+          "pick_xy": [
+            -0.5,
+            2.0
+          ]
+        },
+        {
+          "line": 1294,
+          "pad_name": "BGA025",
+          "next_pin_number": "L7",
+          "offsetx": "0.0",
+          "offsety": "2.0",
+          "pick_xy": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "line": 1308,
+          "pad_name": "BGA025",
+          "next_pin_number": "L8",
+          "offsetx": "0.5",
+          "offsety": "2.0",
+          "pick_xy": [
+            0.5,
+            2.0
+          ]
+        },
+        {
+          "line": 1322,
+          "pad_name": "BGA025",
+          "next_pin_number": "L9",
+          "offsetx": "1.0",
+          "offsety": "2.0",
+          "pick_xy": [
+            1.0,
+            2.0
+          ]
+        },
+        {
+          "line": 1336,
+          "pad_name": "BGA025",
+          "next_pin_number": "L10",
+          "offsetx": "1.5",
+          "offsety": "2.0",
+          "pick_xy": [
+            1.5,
+            2.0
+          ]
+        },
+        {
+          "line": 1350,
+          "pad_name": "BGA025",
+          "next_pin_number": "L11",
+          "offsetx": "2.0",
+          "offsety": "2.0",
+          "pick_xy": [
+            2.0,
+            2.0
+          ]
+        },
+        {
+          "line": 1364,
+          "pad_name": "BGA025",
+          "next_pin_number": "L12",
+          "offsetx": "2.5",
+          "offsety": "2.0",
+          "pick_xy": [
+            2.5,
+            2.0
+          ]
+        },
+        {
+          "line": 1378,
+          "pad_name": "BGA025",
+          "next_pin_number": "M1",
+          "offsetx": "-3.0",
+          "offsety": "2.5",
+          "pick_xy": [
+            -3.0,
+            2.5
+          ]
+        },
+        {
+          "line": 1392,
+          "pad_name": "BGA025",
+          "next_pin_number": "M2",
+          "offsetx": "-2.5",
+          "offsety": "2.5",
+          "pick_xy": [
+            -2.5,
+            2.5
+          ]
+        },
+        {
+          "line": 1406,
+          "pad_name": "BGA025",
+          "next_pin_number": "M3",
+          "offsetx": "-2.0",
+          "offsety": "2.5",
+          "pick_xy": [
+            -2.0,
+            2.5
+          ]
+        },
+        {
+          "line": 1420,
+          "pad_name": "BGA025",
+          "next_pin_number": "M4",
+          "offsetx": "-1.5",
+          "offsety": "2.5",
+          "pick_xy": [
+            -1.5,
+            2.5
+          ]
+        },
+        {
+          "line": 1434,
+          "pad_name": "BGA025",
+          "next_pin_number": "M6",
+          "offsetx": "-0.5",
+          "offsety": "2.5",
+          "pick_xy": [
+            -0.5,
+            2.5
+          ]
+        },
+        {
+          "line": 1448,
+          "pad_name": "BGA025",
+          "next_pin_number": "M7",
+          "offsetx": "0.0",
+          "offsety": "2.5",
+          "pick_xy": [
+            0.0,
+            2.5
+          ]
+        },
+        {
+          "line": 1462,
+          "pad_name": "BGA025",
+          "next_pin_number": "M8",
+          "offsetx": "0.5",
+          "offsety": "2.5",
+          "pick_xy": [
+            0.5,
+            2.5
+          ]
+        },
+        {
+          "line": 1476,
+          "pad_name": "BGA025",
+          "next_pin_number": "M10",
+          "offsetx": "1.5",
+          "offsety": "2.5",
+          "pick_xy": [
+            1.5,
+            2.5
+          ]
+        },
+        {
+          "line": 1490,
+          "pad_name": "BGA025",
+          "next_pin_number": "M11",
+          "offsetx": "2.0",
+          "offsety": "2.5",
+          "pick_xy": [
+            2.0,
+            2.5
+          ]
+        },
+        {
+          "line": 1504,
+          "pad_name": "BGA025",
+          "next_pin_number": "M12",
+          "offsetx": "2.5",
+          "offsety": "2.5",
+          "pick_xy": [
+            2.5,
+            2.5
+          ]
+        },
+        {
+          "line": 1518,
+          "pad_name": "BGA025",
+          "next_pin_number": "M13",
+          "offsetx": "3.0",
+          "offsety": "2.5",
+          "pick_xy": [
+            3.0,
+            2.5
+          ]
+        },
+        {
+          "line": 1532,
+          "pad_name": "BGA025",
+          "next_pin_number": "N1",
+          "offsetx": "-3.0",
+          "offsety": "3.0",
+          "pick_xy": [
+            -3.0,
+            3.0
+          ]
+        },
+        {
+          "line": 1546,
+          "pad_name": "BGA025",
+          "next_pin_number": "N2",
+          "offsetx": "-2.5",
+          "offsety": "3.0",
+          "pick_xy": [
+            -2.5,
+            3.0
+          ]
+        },
+        {
+          "line": 1560,
+          "pad_name": "BGA025",
+          "next_pin_number": "N4",
+          "offsetx": "-1.5",
+          "offsety": "3.0",
+          "pick_xy": [
+            -1.5,
+            3.0
+          ]
+        },
+        {
+          "line": 1574,
+          "pad_name": "BGA025",
+          "next_pin_number": "N6",
+          "offsetx": "-0.5",
+          "offsety": "3.0",
+          "pick_xy": [
+            -0.5,
+            3.0
+          ]
+        },
+        {
+          "line": 1588,
+          "pad_name": "BGA025",
+          "next_pin_number": "N8",
+          "offsetx": "0.5",
+          "offsety": "3.0",
+          "pick_xy": [
+            0.5,
+            3.0
+          ]
+        },
+        {
+          "line": 1602,
+          "pad_name": "BGA025",
+          "next_pin_number": "N10",
+          "offsetx": "1.5",
+          "offsety": "3.0",
+          "pick_xy": [
+            1.5,
+            3.0
+          ]
+        },
+        {
+          "line": 1616,
+          "pad_name": "BGA025",
+          "next_pin_number": "N12",
+          "offsetx": "2.5",
+          "offsety": "3.0",
+          "pick_xy": [
+            2.5,
+            3.0
+          ]
+        },
+        {
+          "line": 1630,
+          "pad_name": "BGA025",
+          "next_pin_number": "N13",
+          "offsetx": "3.0",
+          "offsety": "3.0",
+          "pick_xy": [
+            3.0,
+            3.0
+          ]
+        }
+      ]
+    },
+    "alternate_script": {
+      "source": {
+        "path": "D:\\001DIY\\005lib\\AUTOlib\\HPM6200_BGA116_allegro\\HPM6200_BGA116_7x7_P0d5.scr",
+        "exists": true,
+        "size_bytes": 37647,
+        "sha256": "8742051a57fafe98a504d6422bd02748abc74a1983314a2d25c30bf837959507"
+      },
+      "units": [
+        "Millimeter"
+      ],
+      "accuracy": [
+        "4"
+      ],
+      "new_drawing": [
+        "\"HPM6200_BGA116_7x7_P0d5.dra\" \"Package Symbol\""
+      ],
+      "pin_count": 116,
+      "unique_pin_count": 116,
+      "duplicate_labels": [],
+      "pad_names": {
+        "HPM_BGA025": 116
+      },
+      "pins": [
+        {
+          "line": 20,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "A1",
+          "offsetx": "-3.0",
+          "offsety": "-3.0",
+          "pick_xy": [
+            -3.0,
+            -3.0
+          ]
+        },
+        {
+          "line": 34,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "A2",
+          "offsetx": "-2.5",
+          "offsety": "-3.0",
+          "pick_xy": [
+            -2.5,
+            -3.0
+          ]
+        },
+        {
+          "line": 48,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "A4",
+          "offsetx": "-1.5",
+          "offsety": "-3.0",
+          "pick_xy": [
+            -1.5,
+            -3.0
+          ]
+        },
+        {
+          "line": 62,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "A6",
+          "offsetx": "-0.5",
+          "offsety": "-3.0",
+          "pick_xy": [
+            -0.5,
+            -3.0
+          ]
+        },
+        {
+          "line": 76,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "A8",
+          "offsetx": "0.5",
+          "offsety": "-3.0",
+          "pick_xy": [
+            0.5,
+            -3.0
+          ]
+        },
+        {
+          "line": 90,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "A10",
+          "offsetx": "1.5",
+          "offsety": "-3.0",
+          "pick_xy": [
+            1.5,
+            -3.0
+          ]
+        },
+        {
+          "line": 104,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "A12",
+          "offsetx": "2.5",
+          "offsety": "-3.0",
+          "pick_xy": [
+            2.5,
+            -3.0
+          ]
+        },
+        {
+          "line": 118,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "A13",
+          "offsetx": "3.0",
+          "offsety": "-3.0",
+          "pick_xy": [
+            3.0,
+            -3.0
+          ]
+        },
+        {
+          "line": 132,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "B1",
+          "offsetx": "-3.0",
+          "offsety": "-2.5",
+          "pick_xy": [
+            -3.0,
+            -2.5
+          ]
+        },
+        {
+          "line": 146,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "B2",
+          "offsetx": "-2.5",
+          "offsety": "-2.5",
+          "pick_xy": [
+            -2.5,
+            -2.5
+          ]
+        },
+        {
+          "line": 160,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "B3",
+          "offsetx": "-2.0",
+          "offsety": "-2.5",
+          "pick_xy": [
+            -2.0,
+            -2.5
+          ]
+        },
+        {
+          "line": 174,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "B4",
+          "offsetx": "-1.5",
+          "offsety": "-2.5",
+          "pick_xy": [
+            -1.5,
+            -2.5
+          ]
+        },
+        {
+          "line": 188,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "B6",
+          "offsetx": "-0.5",
+          "offsety": "-2.5",
+          "pick_xy": [
+            -0.5,
+            -2.5
+          ]
+        },
+        {
+          "line": 202,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "B7",
+          "offsetx": "0.0",
+          "offsety": "-2.5",
+          "pick_xy": [
+            0.0,
+            -2.5
+          ]
+        },
+        {
+          "line": 216,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "B8",
+          "offsetx": "0.5",
+          "offsety": "-2.5",
+          "pick_xy": [
+            0.5,
+            -2.5
+          ]
+        },
+        {
+          "line": 230,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "B10",
+          "offsetx": "1.5",
+          "offsety": "-2.5",
+          "pick_xy": [
+            1.5,
+            -2.5
+          ]
+        },
+        {
+          "line": 244,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "B11",
+          "offsetx": "2.0",
+          "offsety": "-2.5",
+          "pick_xy": [
+            2.0,
+            -2.5
+          ]
+        },
+        {
+          "line": 258,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "B12",
+          "offsetx": "2.5",
+          "offsety": "-2.5",
+          "pick_xy": [
+            2.5,
+            -2.5
+          ]
+        },
+        {
+          "line": 272,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "B13",
+          "offsetx": "3.0",
+          "offsety": "-2.5",
+          "pick_xy": [
+            3.0,
+            -2.5
+          ]
+        },
+        {
+          "line": 286,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "C2",
+          "offsetx": "-2.5",
+          "offsety": "-2.0",
+          "pick_xy": [
+            -2.5,
+            -2.0
+          ]
+        },
+        {
+          "line": 300,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "C3",
+          "offsetx": "-2.0",
+          "offsety": "-2.0",
+          "pick_xy": [
+            -2.0,
+            -2.0
+          ]
+        },
+        {
+          "line": 314,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "C4",
+          "offsetx": "-1.5",
+          "offsety": "-2.0",
+          "pick_xy": [
+            -1.5,
+            -2.0
+          ]
+        },
+        {
+          "line": 328,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "C5",
+          "offsetx": "-1.0",
+          "offsety": "-2.0",
+          "pick_xy": [
+            -1.0,
+            -2.0
+          ]
+        },
+        {
+          "line": 342,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "C6",
+          "offsetx": "-0.5",
+          "offsety": "-2.0",
+          "pick_xy": [
+            -0.5,
+            -2.0
+          ]
+        },
+        {
+          "line": 356,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "C7",
+          "offsetx": "0.0",
+          "offsety": "-2.0",
+          "pick_xy": [
+            0.0,
+            -2.0
+          ]
+        },
+        {
+          "line": 370,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "C8",
+          "offsetx": "0.5",
+          "offsety": "-2.0",
+          "pick_xy": [
+            0.5,
+            -2.0
+          ]
+        },
+        {
+          "line": 384,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "C9",
+          "offsetx": "1.0",
+          "offsety": "-2.0",
+          "pick_xy": [
+            1.0,
+            -2.0
+          ]
+        },
+        {
+          "line": 398,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "C10",
+          "offsetx": "1.5",
+          "offsety": "-2.0",
+          "pick_xy": [
+            1.5,
+            -2.0
+          ]
+        },
+        {
+          "line": 412,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "C11",
+          "offsetx": "2.0",
+          "offsety": "-2.0",
+          "pick_xy": [
+            2.0,
+            -2.0
+          ]
+        },
+        {
+          "line": 426,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "C12",
+          "offsetx": "2.5",
+          "offsety": "-2.0",
+          "pick_xy": [
+            2.5,
+            -2.0
+          ]
+        },
+        {
+          "line": 440,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "D1",
+          "offsetx": "-3.0",
+          "offsety": "-1.5",
+          "pick_xy": [
+            -3.0,
+            -1.5
+          ]
+        },
+        {
+          "line": 454,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "D2",
+          "offsetx": "-2.5",
+          "offsety": "-1.5",
+          "pick_xy": [
+            -2.5,
+            -1.5
+          ]
+        },
+        {
+          "line": 468,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "D3",
+          "offsetx": "-2.0",
+          "offsety": "-1.5",
+          "pick_xy": [
+            -2.0,
+            -1.5
+          ]
+        },
+        {
+          "line": 482,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "D4",
+          "offsetx": "-1.5",
+          "offsety": "-1.5",
+          "pick_xy": [
+            -1.5,
+            -1.5
+          ]
+        },
+        {
+          "line": 496,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "D7",
+          "offsetx": "0.0",
+          "offsety": "-1.5",
+          "pick_xy": [
+            0.0,
+            -1.5
+          ]
+        },
+        {
+          "line": 510,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "D10",
+          "offsetx": "1.5",
+          "offsety": "-1.5",
+          "pick_xy": [
+            1.5,
+            -1.5
+          ]
+        },
+        {
+          "line": 524,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "D11",
+          "offsetx": "2.0",
+          "offsety": "-1.5",
+          "pick_xy": [
+            2.0,
+            -1.5
+          ]
+        },
+        {
+          "line": 538,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "D12",
+          "offsetx": "2.5",
+          "offsety": "-1.5",
+          "pick_xy": [
+            2.5,
+            -1.5
+          ]
+        },
+        {
+          "line": 552,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "D13",
+          "offsetx": "3.0",
+          "offsety": "-1.5",
+          "pick_xy": [
+            3.0,
+            -1.5
+          ]
+        },
+        {
+          "line": 566,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "E3",
+          "offsetx": "-2.0",
+          "offsety": "-1.0",
+          "pick_xy": [
+            -2.0,
+            -1.0
+          ]
+        },
+        {
+          "line": 580,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "E5",
+          "offsetx": "-1.0",
+          "offsety": "-1.0",
+          "pick_xy": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "line": 594,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "E6",
+          "offsetx": "-0.5",
+          "offsety": "-1.0",
+          "pick_xy": [
+            -0.5,
+            -1.0
+          ]
+        },
+        {
+          "line": 608,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "E8",
+          "offsetx": "0.5",
+          "offsety": "-1.0",
+          "pick_xy": [
+            0.5,
+            -1.0
+          ]
+        },
+        {
+          "line": 622,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "E9",
+          "offsetx": "1.0",
+          "offsety": "-1.0",
+          "pick_xy": [
+            1.0,
+            -1.0
+          ]
+        },
+        {
+          "line": 636,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "E11",
+          "offsetx": "2.0",
+          "offsety": "-1.0",
+          "pick_xy": [
+            2.0,
+            -1.0
+          ]
+        },
+        {
+          "line": 650,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "F1",
+          "offsetx": "-3.0",
+          "offsety": "-0.5",
+          "pick_xy": [
+            -3.0,
+            -0.5
+          ]
+        },
+        {
+          "line": 664,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "F2",
+          "offsetx": "-2.5",
+          "offsety": "-0.5",
+          "pick_xy": [
+            -2.5,
+            -0.5
+          ]
+        },
+        {
+          "line": 678,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "F3",
+          "offsetx": "-2.0",
+          "offsety": "-0.5",
+          "pick_xy": [
+            -2.0,
+            -0.5
+          ]
+        },
+        {
+          "line": 692,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "F5",
+          "offsetx": "-1.0",
+          "offsety": "-0.5",
+          "pick_xy": [
+            -1.0,
+            -0.5
+          ]
+        },
+        {
+          "line": 706,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "F7",
+          "offsetx": "0.0",
+          "offsety": "-0.5",
+          "pick_xy": [
+            0.0,
+            -0.5
+          ]
+        },
+        {
+          "line": 720,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "F9",
+          "offsetx": "1.0",
+          "offsety": "-0.5",
+          "pick_xy": [
+            1.0,
+            -0.5
+          ]
+        },
+        {
+          "line": 734,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "F11",
+          "offsetx": "2.0",
+          "offsety": "-0.5",
+          "pick_xy": [
+            2.0,
+            -0.5
+          ]
+        },
+        {
+          "line": 748,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "F12",
+          "offsetx": "2.5",
+          "offsety": "-0.5",
+          "pick_xy": [
+            2.5,
+            -0.5
+          ]
+        },
+        {
+          "line": 762,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "F13",
+          "offsetx": "3.0",
+          "offsety": "-0.5",
+          "pick_xy": [
+            3.0,
+            -0.5
+          ]
+        },
+        {
+          "line": 776,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "G2",
+          "offsetx": "-2.5",
+          "offsety": "0.0",
+          "pick_xy": [
+            -2.5,
+            0.0
+          ]
+        },
+        {
+          "line": 790,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "G3",
+          "offsetx": "-2.0",
+          "offsety": "0.0",
+          "pick_xy": [
+            -2.0,
+            0.0
+          ]
+        },
+        {
+          "line": 804,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "G4",
+          "offsetx": "-1.5",
+          "offsety": "0.0",
+          "pick_xy": [
+            -1.5,
+            0.0
+          ]
+        },
+        {
+          "line": 818,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "G6",
+          "offsetx": "-0.5",
+          "offsety": "0.0",
+          "pick_xy": [
+            -0.5,
+            0.0
+          ]
+        },
+        {
+          "line": 832,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "G8",
+          "offsetx": "0.5",
+          "offsety": "0.0",
+          "pick_xy": [
+            0.5,
+            0.0
+          ]
+        },
+        {
+          "line": 846,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "G10",
+          "offsetx": "1.5",
+          "offsety": "0.0",
+          "pick_xy": [
+            1.5,
+            0.0
+          ]
+        },
+        {
+          "line": 860,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "G11",
+          "offsetx": "2.0",
+          "offsety": "0.0",
+          "pick_xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "line": 874,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "G12",
+          "offsetx": "2.5",
+          "offsety": "0.0",
+          "pick_xy": [
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "line": 888,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "H1",
+          "offsetx": "-3.0",
+          "offsety": "0.5",
+          "pick_xy": [
+            -3.0,
+            0.5
+          ]
+        },
+        {
+          "line": 902,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "H2",
+          "offsetx": "-2.5",
+          "offsety": "0.5",
+          "pick_xy": [
+            -2.5,
+            0.5
+          ]
+        },
+        {
+          "line": 916,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "H3",
+          "offsetx": "-2.0",
+          "offsety": "0.5",
+          "pick_xy": [
+            -2.0,
+            0.5
+          ]
+        },
+        {
+          "line": 930,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "H5",
+          "offsetx": "-1.0",
+          "offsety": "0.5",
+          "pick_xy": [
+            -1.0,
+            0.5
+          ]
+        },
+        {
+          "line": 944,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "H7",
+          "offsetx": "0.0",
+          "offsety": "0.5",
+          "pick_xy": [
+            0.0,
+            0.5
+          ]
+        },
+        {
+          "line": 958,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "H9",
+          "offsetx": "1.0",
+          "offsety": "0.5",
+          "pick_xy": [
+            1.0,
+            0.5
+          ]
+        },
+        {
+          "line": 972,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "H11",
+          "offsetx": "2.0",
+          "offsety": "0.5",
+          "pick_xy": [
+            2.0,
+            0.5
+          ]
+        },
+        {
+          "line": 986,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "H12",
+          "offsetx": "2.5",
+          "offsety": "0.5",
+          "pick_xy": [
+            2.5,
+            0.5
+          ]
+        },
+        {
+          "line": 1000,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "H13",
+          "offsetx": "3.0",
+          "offsety": "0.5",
+          "pick_xy": [
+            3.0,
+            0.5
+          ]
+        },
+        {
+          "line": 1014,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "J3",
+          "offsetx": "-2.0",
+          "offsety": "1.0",
+          "pick_xy": [
+            -2.0,
+            1.0
+          ]
+        },
+        {
+          "line": 1028,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "J5",
+          "offsetx": "-1.0",
+          "offsety": "1.0",
+          "pick_xy": [
+            -1.0,
+            1.0
+          ]
+        },
+        {
+          "line": 1042,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "J6",
+          "offsetx": "-0.5",
+          "offsety": "1.0",
+          "pick_xy": [
+            -0.5,
+            1.0
+          ]
+        },
+        {
+          "line": 1056,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "J8",
+          "offsetx": "0.5",
+          "offsety": "1.0",
+          "pick_xy": [
+            0.5,
+            1.0
+          ]
+        },
+        {
+          "line": 1070,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "J9",
+          "offsetx": "1.0",
+          "offsety": "1.0",
+          "pick_xy": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "line": 1084,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "J11",
+          "offsetx": "2.0",
+          "offsety": "1.0",
+          "pick_xy": [
+            2.0,
+            1.0
+          ]
+        },
+        {
+          "line": 1098,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "K1",
+          "offsetx": "-3.0",
+          "offsety": "1.5",
+          "pick_xy": [
+            -3.0,
+            1.5
+          ]
+        },
+        {
+          "line": 1112,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "K2",
+          "offsetx": "-2.5",
+          "offsety": "1.5",
+          "pick_xy": [
+            -2.5,
+            1.5
+          ]
+        },
+        {
+          "line": 1126,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "K3",
+          "offsetx": "-2.0",
+          "offsety": "1.5",
+          "pick_xy": [
+            -2.0,
+            1.5
+          ]
+        },
+        {
+          "line": 1140,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "K4",
+          "offsetx": "-1.5",
+          "offsety": "1.5",
+          "pick_xy": [
+            -1.5,
+            1.5
+          ]
+        },
+        {
+          "line": 1154,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "K7",
+          "offsetx": "0.0",
+          "offsety": "1.5",
+          "pick_xy": [
+            0.0,
+            1.5
+          ]
+        },
+        {
+          "line": 1168,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "K10",
+          "offsetx": "1.5",
+          "offsety": "1.5",
+          "pick_xy": [
+            1.5,
+            1.5
+          ]
+        },
+        {
+          "line": 1182,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "K11",
+          "offsetx": "2.0",
+          "offsety": "1.5",
+          "pick_xy": [
+            2.0,
+            1.5
+          ]
+        },
+        {
+          "line": 1196,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "K12",
+          "offsetx": "2.5",
+          "offsety": "1.5",
+          "pick_xy": [
+            2.5,
+            1.5
+          ]
+        },
+        {
+          "line": 1210,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "K13",
+          "offsetx": "3.0",
+          "offsety": "1.5",
+          "pick_xy": [
+            3.0,
+            1.5
+          ]
+        },
+        {
+          "line": 1224,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "L2",
+          "offsetx": "-2.5",
+          "offsety": "2.0",
+          "pick_xy": [
+            -2.5,
+            2.0
+          ]
+        },
+        {
+          "line": 1238,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "L3",
+          "offsetx": "-2.0",
+          "offsety": "2.0",
+          "pick_xy": [
+            -2.0,
+            2.0
+          ]
+        },
+        {
+          "line": 1252,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "L4",
+          "offsetx": "-1.5",
+          "offsety": "2.0",
+          "pick_xy": [
+            -1.5,
+            2.0
+          ]
+        },
+        {
+          "line": 1266,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "L5",
+          "offsetx": "-1.0",
+          "offsety": "2.0",
+          "pick_xy": [
+            -1.0,
+            2.0
+          ]
+        },
+        {
+          "line": 1280,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "L6",
+          "offsetx": "-0.5",
+          "offsety": "2.0",
+          "pick_xy": [
+            -0.5,
+            2.0
+          ]
+        },
+        {
+          "line": 1294,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "L7",
+          "offsetx": "0.0",
+          "offsety": "2.0",
+          "pick_xy": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "line": 1308,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "L8",
+          "offsetx": "0.5",
+          "offsety": "2.0",
+          "pick_xy": [
+            0.5,
+            2.0
+          ]
+        },
+        {
+          "line": 1322,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "L9",
+          "offsetx": "1.0",
+          "offsety": "2.0",
+          "pick_xy": [
+            1.0,
+            2.0
+          ]
+        },
+        {
+          "line": 1336,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "L10",
+          "offsetx": "1.5",
+          "offsety": "2.0",
+          "pick_xy": [
+            1.5,
+            2.0
+          ]
+        },
+        {
+          "line": 1350,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "L11",
+          "offsetx": "2.0",
+          "offsety": "2.0",
+          "pick_xy": [
+            2.0,
+            2.0
+          ]
+        },
+        {
+          "line": 1364,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "L12",
+          "offsetx": "2.5",
+          "offsety": "2.0",
+          "pick_xy": [
+            2.5,
+            2.0
+          ]
+        },
+        {
+          "line": 1378,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "M1",
+          "offsetx": "-3.0",
+          "offsety": "2.5",
+          "pick_xy": [
+            -3.0,
+            2.5
+          ]
+        },
+        {
+          "line": 1392,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "M2",
+          "offsetx": "-2.5",
+          "offsety": "2.5",
+          "pick_xy": [
+            -2.5,
+            2.5
+          ]
+        },
+        {
+          "line": 1406,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "M3",
+          "offsetx": "-2.0",
+          "offsety": "2.5",
+          "pick_xy": [
+            -2.0,
+            2.5
+          ]
+        },
+        {
+          "line": 1420,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "M4",
+          "offsetx": "-1.5",
+          "offsety": "2.5",
+          "pick_xy": [
+            -1.5,
+            2.5
+          ]
+        },
+        {
+          "line": 1434,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "M6",
+          "offsetx": "-0.5",
+          "offsety": "2.5",
+          "pick_xy": [
+            -0.5,
+            2.5
+          ]
+        },
+        {
+          "line": 1448,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "M7",
+          "offsetx": "0.0",
+          "offsety": "2.5",
+          "pick_xy": [
+            0.0,
+            2.5
+          ]
+        },
+        {
+          "line": 1462,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "M8",
+          "offsetx": "0.5",
+          "offsety": "2.5",
+          "pick_xy": [
+            0.5,
+            2.5
+          ]
+        },
+        {
+          "line": 1476,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "M10",
+          "offsetx": "1.5",
+          "offsety": "2.5",
+          "pick_xy": [
+            1.5,
+            2.5
+          ]
+        },
+        {
+          "line": 1490,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "M11",
+          "offsetx": "2.0",
+          "offsety": "2.5",
+          "pick_xy": [
+            2.0,
+            2.5
+          ]
+        },
+        {
+          "line": 1504,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "M12",
+          "offsetx": "2.5",
+          "offsety": "2.5",
+          "pick_xy": [
+            2.5,
+            2.5
+          ]
+        },
+        {
+          "line": 1518,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "M13",
+          "offsetx": "3.0",
+          "offsety": "2.5",
+          "pick_xy": [
+            3.0,
+            2.5
+          ]
+        },
+        {
+          "line": 1532,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "N1",
+          "offsetx": "-3.0",
+          "offsety": "3.0",
+          "pick_xy": [
+            -3.0,
+            3.0
+          ]
+        },
+        {
+          "line": 1546,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "N2",
+          "offsetx": "-2.5",
+          "offsety": "3.0",
+          "pick_xy": [
+            -2.5,
+            3.0
+          ]
+        },
+        {
+          "line": 1560,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "N4",
+          "offsetx": "-1.5",
+          "offsety": "3.0",
+          "pick_xy": [
+            -1.5,
+            3.0
+          ]
+        },
+        {
+          "line": 1574,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "N6",
+          "offsetx": "-0.5",
+          "offsety": "3.0",
+          "pick_xy": [
+            -0.5,
+            3.0
+          ]
+        },
+        {
+          "line": 1588,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "N8",
+          "offsetx": "0.5",
+          "offsety": "3.0",
+          "pick_xy": [
+            0.5,
+            3.0
+          ]
+        },
+        {
+          "line": 1602,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "N10",
+          "offsetx": "1.5",
+          "offsety": "3.0",
+          "pick_xy": [
+            1.5,
+            3.0
+          ]
+        },
+        {
+          "line": 1616,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "N12",
+          "offsetx": "2.5",
+          "offsety": "3.0",
+          "pick_xy": [
+            2.5,
+            3.0
+          ]
+        },
+        {
+          "line": 1630,
+          "pad_name": "HPM_BGA025",
+          "next_pin_number": "N13",
+          "offsetx": "3.0",
+          "offsety": "3.0",
+          "pick_xy": [
+            3.0,
+            3.0
+          ]
+        }
+      ]
+    },
+    "main_script_labels_equal_kicad_labels": true,
+    "main_script_pick_xy_mismatch_labels": [],
+    "local_pxml": {
+      "source": {
+        "path": "D:\\001DIY\\005lib\\AUTOlib\\HPM6200_BGA116_allegro\\BGA025.pxml",
+        "exists": true,
+        "size_bytes": 891,
+        "sha256": "925eaebfe9ff1870f8b3c59194f9e766d7ac392b297d5406713788dc8801c21e"
+      },
+      "padstackname": "HPM_BGA025",
+      "usage": "SMD_PIN",
+      "units": "MILS",
+      "accuracy": "2",
+      "layers": [
+        {
+          "layer": "BEGIN_LAYER",
+          "type": "REGULAR_PAD",
+          "figure": "CIRCLE",
+          "width": "9.84",
+          "height": "9.84"
+        },
+        {
+          "layer": "END_LAYER",
+          "type": "REGULAR_PAD",
+          "figure": "CIRCLE",
+          "width": "9.84",
+          "height": "9.84"
+        },
+        {
+          "layer": "SOLDERMASK_TOP",
+          "type": "REGULAR_PAD",
+          "figure": "CIRCLE",
+          "width": "11.32",
+          "height": "11.32"
+        },
+        {
+          "layer": "PASTEMASK_TOP",
+          "type": "REGULAR_PAD",
+          "figure": "CIRCLE",
+          "width": "9.84",
+          "height": "9.84"
+        }
+      ]
+    },
+    "public_main_pad_file": {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\bga025.pad",
+      "exists": true,
+      "size_bytes": 4784,
+      "sha256": "16bf7f7eabff6813c3988971960c62d918fd9aa13e7e40c0117772acd91ac2f1"
+    },
+    "public_alternate_pad_file": {
+      "path": "D:\\001DIY\\005lib\\01Pad_lib\\HPM_BGA025.pad",
+      "exists": false
+    },
+    "datasheet_exact_name_hits": [],
+    "public_footprint_files": [
+      {
+        "path": "D:\\001DIY\\005lib\\01Psm_lib\\BGA116_7x7_P0d5.dra",
+        "exists": true,
+        "size_bytes": 99844,
+        "sha256": "feb289f6a20e94279015cc3547aa522efcaa44cd80d51f817486dc0ea8d784c9"
+      },
+      {
+        "path": "D:\\001DIY\\005lib\\01Psm_lib\\bga116_7x7_p0d5.psm",
+        "exists": true,
+        "size_bytes": 45444,
+        "sha256": "89b57ff59c7963d30bc03ef4c734cf844d6fdd5cc59cafe6696f9ca7e2355d46"
+      }
+    ],
+    "local_footprint_files": [
+      {
+        "path": "D:\\001DIY\\005lib\\AUTOlib\\HPM6200_BGA116_allegro\\BGA116_7x7_P0d5.dra",
+        "exists": true,
+        "size_bytes": 99204,
+        "sha256": "8aa36f020f9de5ead8cd8746a7868b98bd21377db076229d96921dcf3c06f8dd"
+      },
+      {
+        "path": "D:\\001DIY\\005lib\\AUTOlib\\HPM6200_BGA116_allegro\\bga116_7x7_p0d5.psm",
+        "exists": true,
+        "size_bytes": 44712,
+        "sha256": "b550e511690231ef92bf75d1e0bf19aabd2525eb17c2102fa0020ae4cdec42b2"
+      }
+    ],
+    "bat_mutation_references": [
+      {
+        "line": 6,
+        "text": "if \"%PAD_LIB%\"==\"\" set PAD_LIB=D:\\001DIY\\005lib\\01Pad_lib"
+      },
+      {
+        "line": 7,
+        "text": "if \"%PSM_LIB%\"==\"\" set PSM_LIB=D:\\001DIY\\005lib\\01Psm_lib"
+      },
+      {
+        "line": 13,
+        "text": "if not exist \"%PAD_LIB%\" mkdir \"%PAD_LIB%\""
+      },
+      {
+        "line": 14,
+        "text": "if not exist \"%PSM_LIB%\" mkdir \"%PSM_LIB%\""
+      },
+      {
+        "line": 15,
+        "text": "if not exist \"%PAD_LIB%\\BGA025.pad\" ("
+      },
+      {
+        "line": 16,
+        "text": "  echo [ERROR] 在 PAD_LIB 中未找到 BGA025.pad: %PAD_LIB%\\BGA025.pad"
+      },
+      {
+        "line": 19,
+        "text": "set PADPATH=%PAD_LIB%;%PADPATH%"
+      },
+      {
+        "line": 22,
+        "text": "powershell -NoProfile -Command \"$exe=Join-Path $env:ALLEGRO_BIN 'allegro.exe'; $args='-nograph -s BGA116_7x7_P0d5.scr'; $p=Start-Process -FilePath $exe -ArgumentList $args -PassThru -WorkingDirectory (Get-Location); while(-not $p.HasExited){ Write-Host '[INFO] Allegro running...'; Start-Sleep -Seconds 5; $p.Refresh() }; exit $p.ExitCode\""
+      },
+      {
+        "line": 29,
+        "text": "if exist BGA116_7x7_P0d5.dra copy /Y BGA116_7x7_P0d5.dra \"%PSM_LIB%\\\" >nul"
+      },
+      {
+        "line": 30,
+        "text": "if exist BGA116_7x7_P0d5.psm copy /Y BGA116_7x7_P0d5.psm \"%PSM_LIB%\\\" >nul"
+      }
+    ],
+    "generator_mutation_references": [
+      {
+        "line": 7,
+        "text": "SRC_MOD = BASE.parent / \"HPM_footprints.pretty\" / \"BGA116 _13x13_7.0x7.0mm.kicad_mod\""
+      },
+      {
+        "line": 33,
+        "text": "def write_scr(pads):"
+      },
+      {
+        "line": 170,
+        "text": "    (BASE / f\"{PKG_NAME}.scr\").write_text(\"\\n\".join(lines), encoding=\"utf-8\")"
+      },
+      {
+        "line": 173,
+        "text": "def write_bat():"
+      },
+      {
+        "line": 212,
+        "text": "    (BASE / \"generate_hpm6200_bga116.bat\").write_text(\"\\n\".join(lines), encoding=\"utf-8\")"
+      },
+      {
+        "line": 215,
+        "text": "def write_readme(pads_count: int):"
+      },
+      {
+        "line": 228,
+        "text": "    (BASE / \"README.md\").write_text(\"\\n\".join(lines), encoding=\"utf-8\")"
+      },
+      {
+        "line": 232,
+        "text": "    text = SRC_MOD.read_text(encoding=\"utf-8\", errors=\"ignore\")"
+      },
+      {
+        "line": 238,
+        "text": "    write_scr(pads)"
+      },
+      {
+        "line": 239,
+        "text": "    write_bat()"
+      },
+      {
+        "line": 240,
+        "text": "    write_readme(len(pads))"
+      }
+    ],
+    "coordinate_semantics_status": "Textual pick coordinates match KiCad source; software placement, coordinate offsets, orientation and A1 correctness not verified"
+  },
+  "local_cadence": {
+    "installation_root": {
+      "path": "C:\\Program0\\Cadence\\spb172",
+      "exists": true
+    },
+    "allegro_executable": {
+      "path": "C:\\Program0\\Cadence\\spb172\\tools\\bin\\allegro.exe",
+      "exists": true,
+      "size_bytes": 88024064,
+      "sha256": "00ea27ac56d271a78f2ab1edecb1693a52f748c776cdb19de27daf168b4a773c"
+    },
+    "padstack_executable": {
+      "path": "C:\\Program0\\Cadence\\spb172\\tools\\bin\\padstack_editor.exe",
+      "exists": true,
+      "size_bytes": 6192640,
+      "sha256": "8e455c3aafc8637127095e68aa53bd416c3a518edd85419e385b7c894cf3915c"
+    },
+    "library_development_doc": {
+      "path": "C:\\Program0\\Cadence\\spb172\\doc\\algrolibdev\\chap1.html",
+      "exists": true,
+      "size_bytes": 34394,
+      "sha256": "3a0b8b79cf9ca90afd0ca8ddb8a2863323a8fcadb9f359c0bd20deebff19002d"
+    },
+    "library_development_doc_title": [
+      "Defining and Developing Libraries -- 1"
+    ],
+    "program_execution_performed": false
+  }
+}

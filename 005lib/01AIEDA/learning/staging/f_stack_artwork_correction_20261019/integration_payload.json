@@ -1,0 +1,176 @@
+{
+  "notePath": "learning/notes/lessonF_stack_artwork_correction_20261019.md",
+  "reportPath": "learning/logs/f_stack_artwork_correction_20261019.json",
+  "noteDraft": "# F阶段纠错：PCB层叠与完整Artwork模板\n\n日期：2026-10-19（Asia/Shanghai），用户以Cadence层表及Artwork截图指出错误。本轮是对第28课及其派生第29课的实际纠正，不能将原402/99/543/937项检查当作已经符合用户完整规范的证明。\n\n## 用户要求与本次失误\n\n固定导电层顺序必须为两层TOP-BOTTOM、四层TOP-L2-L3-BOTTOM、六层TOP-L2-L3-L4-L5-BOTTOM，依此延伸。层功能另记，不以GND/POWER替代层名。Cross Section不额外加入物理Soldermask_Top/Bottom；阻焊制造资料及pad开窗仍保留。Through All是默认通孔跨度，不能当成一层铜或误删。\n\nArtwork的内容由01env对应层数的drill*.txt完整定义；不是只取其中铜Film，也不能自行添加替代Film。这里的Film数量不是物理铜层数。\n\n此前犯了三处错误：\n1. 自行加入上下物理MASK层，让层表出现用户不要求的两行。\n2. 脚本只提取铜Film，漏掉模板其余13项。\n3. 为真实DESIGN_OUTLINE另建F28_DESIGN_OUTLINE，未按用户既有OUTlie/OUTLINE映射衔接。\n\n原验收只核铜Film及自设MASK模型，独立审查也沿用了这个范围，漏了用户标准。因此撤回此前“01env Film精确对照”“已满足完整规范”的笼统结论，保留原数据作为有明确局限的历史证据。检查数量不能替代对用户要求逐条验收。\n\n## 当前纠正版与文件身份\n\n全部新增副本、脚本、运行环境、日志、中转、备份和笔记仍在01AIEDA。原F28/F29文件和01env模板均未改；新板是本轮修正后的当前入口，旧文件可用于追溯，不能继续当当前规范版本。\n\n| 用途 | 当前入口 |\n| --- | --- |\n| 两层对比板 | [F28_2L_USERFIX.brd](../examples/lessonF_stack_artwork_correction_20261019/current/F28_2L_USERFIX.brd) |\n| 四层建板基线 | [F28_4L_USERFIX.brd](../examples/lessonF_stack_artwork_correction_20261019/current/F28_4L_USERFIX.brd) |\n| 后续四层布局起点 | [F29_CONSTRAINTS_v4.brd](../examples/lessonF_stack_artwork_correction_20261019/current/F29_CONSTRAINTS_v4.brd) |\n\n{{EVIDENCE_LINKS}}\n\n## 实际修改与核验\n\n{{NATIVE_RESULT}}\n\n移除的是Cross Section物理MASK对象，不是PIN/PACKAGE GEOMETRY/BOARD GEOMETRY的SOLDERMASK_TOP/BOTTOM子类，也不是阻焊开窗。原始元件、孔、槽、pad、网络、位置、限高、keepin/out以及第29课约束须经修改前后比较，不能仅凭Film名称正确便接受。\n\n板厂工艺中的阻焊厚度、材料、电参及总厚口径继续作为制造资料记录，不再为展示这些数据而向用户板的层表增加MASK行。软件铜+介质厚度与板厂名义成品厚度分开记录：两层1.5952mm、四层1.5862mm；不强改成精确1.600mm。\n\n## 完整Artwork验收方法\n\n两层15项，四层17项；四层铜Film为TOP/L2/L3/BOTTOM，两层为TOP/BOTTOM。共同13项为：\nPASTTOP、PASTBOTTOM、SKILTOP、SKILBOTTOM、SOLDTOP、SOLDBOTTOM、DRILL、OUTlie、PDFTOP、PDFBOTTOM、DisTOP、DisBOTTOM、DisAll。\n\n1. 读取匹配模板原文和SHA；清除错误/多余Film，完整执行模板，不筛铜、不猜Film名称。\n2. 核全部Film集合及每张Film的层成员、sequence、plot mode、mirror、rotation、offset、full contact、vector pad和其他抑制/孔选项。\n3. 先读取真实Cross Section导体顺序，再检查模板引用；不得为两层模板的历史L2/L3引用而实际增加内铜。\n4. 模板中BOARD GEMETRY拼写、重复引用及不存在层，按原文实际执行结果单独登记，不静默改01env或虚构有效输出。不能把“原文加载”扩大成“所有文字引用都有效”。\n5. 实际板框和模板OUTLINE必须都有可读的真实几何。不增自定义Film来代替模板，仍保留真正designOutline root用于机械/DRC。\n6. 保存后另进程重开，从实际数据库核层、Film、规则和几何；确认当前有效DRC状态及输入SHA。输出生产包时仍须实际CAM验内容。\n\n{{TEMPLATE_AND_PRECISION}}\n\n## 历史证据与今后防错\n\n原28/29课的BRD、validation、源码及manifest不覆盖；它们仍可复核当时连接、几何和规则，但包含本次已撤销的物理MASK/不完整Artwork做法。父级笔记的更正前字节另有备份，本次记录清单保存修订前后SHA；旧manifest中的笔记SHA指向当时快照，不能误报为当前笔记哈希。\n\n长期规则已补入[pcb_layer_naming.md](pcb_layer_naming.md)；[EDA.md](../../EDA.md)开头、[课程索引](../../课程索引.md)和[F阶段总结](lessonF_27_29_20261019.md)统一指向新v4。以后验收必须包含“物理MASK=0、全部Film集合、全部成员和Options、真实板框进入模板”，不能重复只验铜层的盲点。\n\n本轮仍是学习板；79个器件待布局，L2/L3正式参考铜尚未铺，USB90Ω几何、连接器板厚装配、阻焊桥与实际工艺等开放条件不因本次纠错消失。GUI操作和完整生产包审核仍按原状态单列。\n",
+  "banners": {
+    "lesson28_stackup_20261019.md": "## 2026-10-19用户反馈后的纠正（当前优先）\n\n[层叠与完整Artwork纠错](lessonF_stack_artwork_correction_20261019.md)已更正物理MASK和不完整Artwork。当前布局入口是[F29_CONSTRAINTS_v4.brd](../examples/lessonF_stack_artwork_correction_20261019/current/F29_CONSTRAINTS_v4.brd)，两层/四层建板副本与补验见该纠错记录。本文原402/99/543/937项数字分别是当时的测试范围，未覆盖“不得加入物理MASK、按drill*.txt完整建立全部15/17个Film”，不能代表满足用户全部规范。\n\n下文原BRD、SHA、TCF、预览及日志保留为当时版本证据；涉及增加物理MASK、仅导入铜Film、F28_DESIGN_OUTLINE的做法已经撤销，旧脚本不得直接重放为当前流程。更正前笔记已备份，旧manifest是历史快照；当前身份以纠错清单为准。",
+    "lesson28_independent_review_20261019.md": "## 2026-10-19用户反馈后的纠正（当前优先）\n\n[层叠与完整Artwork纠错](lessonF_stack_artwork_correction_20261019.md)已更正物理MASK和不完整Artwork。当前布局入口是[F29_CONSTRAINTS_v4.brd](../examples/lessonF_stack_artwork_correction_20261019/current/F29_CONSTRAINTS_v4.brd)，两层/四层建板副本与补验见该纠错记录。本文原402/99/543/937项数字分别是当时的测试范围，未覆盖“不得加入物理MASK、按drill*.txt完整建立全部15/17个Film”，不能代表满足用户全部规范。\n\n下文原BRD、SHA、TCF、预览及日志保留为当时版本证据；涉及增加物理MASK、仅导入铜Film、F28_DESIGN_OUTLINE的做法已经撤销，旧脚本不得直接重放为当前流程。更正前笔记已备份，旧manifest是历史快照；当前身份以纠错清单为准。",
+    "lesson29_constraints_20261019.md": "## 2026-10-19用户反馈后的纠正（当前优先）\n\n[层叠与完整Artwork纠错](lessonF_stack_artwork_correction_20261019.md)已更正物理MASK和不完整Artwork。当前布局入口是[F29_CONSTRAINTS_v4.brd](../examples/lessonF_stack_artwork_correction_20261019/current/F29_CONSTRAINTS_v4.brd)，两层/四层建板副本与补验见该纠错记录。本文原402/99/543/937项数字分别是当时的测试范围，未覆盖“不得加入物理MASK、按drill*.txt完整建立全部15/17个Film”，不能代表满足用户全部规范。\n\n下文原BRD、SHA、TCF、预览及日志保留为当时版本证据；涉及增加物理MASK、仅导入铜Film、F28_DESIGN_OUTLINE的做法已经撤销，旧脚本不得直接重放为当前流程。更正前笔记已备份，旧manifest是历史快照；当前身份以纠错清单为准。",
+    "lesson29_independent_review_20261019.md": "## 2026-10-19用户反馈后的纠正（当前优先）\n\n[层叠与完整Artwork纠错](lessonF_stack_artwork_correction_20261019.md)已更正物理MASK和不完整Artwork。当前布局入口是[F29_CONSTRAINTS_v4.brd](../examples/lessonF_stack_artwork_correction_20261019/current/F29_CONSTRAINTS_v4.brd)，两层/四层建板副本与补验见该纠错记录。本文原402/99/543/937项数字分别是当时的测试范围，未覆盖“不得加入物理MASK、按drill*.txt完整建立全部15/17个Film”，不能代表满足用户全部规范。\n\n下文原BRD、SHA、TCF、预览及日志保留为当时版本证据；涉及增加物理MASK、仅导入铜Film、F28_DESIGN_OUTLINE的做法已经撤销，旧脚本不得直接重放为当前流程。更正前笔记已备份，旧manifest是历史快照；当前身份以纠错清单为准。"
+  },
+  "normAppend": "## 2026-10-19补充：物理层表与完整Artwork（用户截图纠错）\n\n1. 两/四/六层固定铜名与顺序按上表，逐项读取原生名称；TOP/BOTTOM不得凭界面显示的Top/Bottom样式擅自改名。\n2. 用户板的Cross Section不另加Soldermask_Top/Bottom物理MASK行。阻焊厚度/材料放制造说明；保留PIN、VIA CLASS、PACKAGE/BOARD GEOMETRY的阻焊开窗与输出子类。Through All是默认通孔跨度，不是额外铜层。\n3. Artwork完整执行匹配的01env/drill*.txt，包含铜、锡膏、丝印、阻焊、钻孔、外形、PDF和显示Film；drill2有15项，drill4有17项。严禁只挑铜Film，严禁自行加F28_DESIGN_OUTLINE等替代项目。\n4. 验收全部Film集合、每项class/subclass及所有Options，不以铜Film通过替代完整模板通过。sequence仍不是物理层号。\n5. 模板的OUTLINE必须具有与真实DESIGN_OUTLINE一致的有效板框；不改原模板，不靠新建Film绕过。模板历史无效引用和软件数值量化差异逐项记录，不能静默修文件或凭空增铜层。\n6. 修改后另进程重开，核MASK=0、原生铜序/大小写、15/17全部Film及Options、真实板框、网络/焊盘/机械/约束保持；最后确认DRC及来源SHA。旧“只验铜”报告不能作为当前合规证据。\n\n本次失误、纠正版文件及证据见[完整纠错记录](lessonF_stack_artwork_correction_20261019.md)。",
+  "oldMain": "learning/examples/lesson29_constraints_20261019/native/F29_CONSTRAINTS_v3.brd",
+  "current": "learning/examples/lessonF_stack_artwork_correction_20261019/current/",
+  "edits": [
+    {
+      "path": "EDA.md",
+      "replacements": [
+        [
+          "后续四层布局入口为[F29_CONSTRAINTS_v3.brd](learning/examples/lesson29_constraints_20261019/native/F29_CONSTRAINTS_v3.brd)",
+          "已按用户截图补做层叠/Artwork纠错，后续四层布局入口为[F29_CONSTRAINTS_v4.brd](learning/examples/lessonF_stack_artwork_correction_20261019/current/F29_CONSTRAINTS_v4.brd)"
+        ],
+        [
+          "使用正式F29_v3",
+          "使用纠正版F29_v4"
+        ],
+        [
+          "| 28 | 两套有来源的2/4层目标、铜/绝缘/mask/材料/公差口径、孔/过孔层映射、01env Film精确对照；402项通过，独立审查99项 |",
+          "| 28 | 两套有来源的2/4层铜与绝缘结构、孔/过孔层映射；原402/99项遗漏用户标准，已撤销物理MASK并按完整drill2/4建立15/17Film，见第28节纠错 |"
+        ],
+        [
+          "后续四层布局入口：[F29_CONSTRAINTS_v3.brd](learning/examples/lesson29_constraints_20261019/native/F29_CONSTRAINTS_v3.brd)，两层对比：[F28_2L.brd](learning/examples/lesson28_stackup_20261019/native/F28_2L.brd)。",
+          "后续四层布局入口：[F29_CONSTRAINTS_v4.brd](learning/examples/lessonF_stack_artwork_correction_20261019/current/F29_CONSTRAINTS_v4.brd)，两层对比：[F28_2L_USERFIX.brd](learning/examples/lessonF_stack_artwork_correction_20261019/current/F28_2L_USERFIX.brd)。旧v3/F28原文件保留为历史版本，纠错见第28节。"
+        ],
+        [
+          "完整GUI DCF尚未实操。",
+          "完整GUI DCF尚未实操；原TCF含已撤销MASK，当前规则档见第28节新v4导出。"
+        ]
+      ],
+      "append": "## 28. 用户纠正PCB层叠与Artwork模板（2026-10-19）\n\n用户截图指出物理Soldermask_Top/Bottom及Artwork列表不符合既定规范。核查确认：原脚本自行加入MASK，只提取铜Film并加F28_DESIGN_OUTLINE，漏了模板其余13项；402/99等验收也漏检。这是执行与验收范围错误，已记入[完整纠错笔记](learning/notes/lessonF_stack_artwork_correction_20261019.md)。\n\n纠正版按TOP-BOTTOM／TOP-L2-L3-BOTTOM实际导电层序，移除物理MASK行、保留阻焊开窗，Artwork完整采用drill2的15项或drill4的17项，不再加自定义Film。实际板框与原模板OUTLINE衔接，模板历史无效引用及数值精度情况逐项记录，未改01env。原板及旧验收留历史，新板保存重开并核网络/焊盘/机械/约束与DRC。\n\n当前入口：[F29_CONSTRAINTS_v4.brd](learning/examples/lessonF_stack_artwork_correction_20261019/current/F29_CONSTRAINTS_v4.brd)；[两层副本](learning/examples/lessonF_stack_artwork_correction_20261019/current/F28_2L_USERFIX.brd)、[四层建板副本](learning/examples/lessonF_stack_artwork_correction_20261019/current/F28_4L_USERFIX.brd)。新文件身份、原始备份、原生/独立审查及笔记修订SHA见[本轮清单](learning/logs/f_stack_artwork_correction_20261019.json)。第27节的旧通过次数不能代替本轮完整规范验收。长期防错已补至[层名与光绘规范](learning/notes/pcb_layer_naming.md)，79件布局、正式参考铜、USB阻抗和制造装配条件仍待后续落实。"
+    },
+    {
+      "path": "课程索引.md",
+      "replacements": [
+        [
+          "当前入口为[F阶段总结](learning/notes/lessonF_27_29_20261019.md)，下一主线第30课；",
+          "当前入口为[F阶段总结](learning/notes/lessonF_27_29_20261019.md)，层叠与Artwork已按[用户纠错](learning/notes/lessonF_stack_artwork_correction_20261019.md)补验，当前布局板为F29_v4，下一主线第30课；"
+        ],
+        [
+          "| 28 | 两层/四层实际层叠与制造参数 | 有来源的2/4层结构、铜/绝缘/mask/材料/公差口径、参考意图、孔结构与01env映射。 | 实际层序TOP-BOTTOM／TOP-L2-L3-BOTTOM保存重开，402项及独立99项通过。 | 已完成原生CAD范围；具体制造释放条件单列 | [完整笔记](learning/notes/lesson28_stackup_20261019.md) / [独立审查](learning/notes/lesson28_independent_review_20261019.md) |",
+          "| 28 | 两层/四层实际层叠与制造参数 | 固定铜名/顺序、铜与介质制造参数；不加物理MASK，完整drill2/4的15/17Film。 | 用户指出旧检查漏项后已修正并保存重开；全Film、板框、pad与源数据补验。 | 已纠正原生CAD范围；制造条件单列 | [原课次](learning/notes/lesson28_stackup_20261019.md) / [纠错与新验收](learning/notes/lessonF_stack_artwork_correction_20261019.md) |"
+        ],
+        [
+          "| 已完成原生CAD范围；GUI DCF及阻抗/产品条件单列 | [完整笔记](learning/notes/lesson29_constraints_20261019.md) / [独立审查](learning/notes/lesson29_independent_review_20261019.md) |",
+          "| 已完成原生CAD范围；叠层/Artwork纠正后入口v4；GUI DCF及阻抗/产品条件单列 | [完整笔记](learning/notes/lesson29_constraints_20261019.md) / [纠错](learning/notes/lessonF_stack_artwork_correction_20261019.md) |"
+        ]
+      ]
+    },
+    {
+      "path": "learning/notes/lessonF_27_29_20261019.md",
+      "prepend": "## 2026-10-19用户纠错后的当前入口\n\n[层叠与完整Artwork纠错](lessonF_stack_artwork_correction_20261019.md)已补做：物理MASK移除、全部15/17Film按drill2/4建立、不另加F28_DESIGN_OUTLINE。原验收及独立审核漏了这些要求，原通过次数不能代表符合用户完整规范。旧文件与哈希保留历史，当前布局使用下方v4；本页旧操作叙述按纠错记录优先。\n",
+      "replacements": [
+        [
+          "继续布局的四层入口是 **[F29_CONSTRAINTS_v3.brd](../examples/lesson29_constraints_20261019/native/F29_CONSTRAINTS_v3.brd)**。v1/v2、DOMAIN_PROBE及CHALLENGE文件属于历史或受控测试，不能按文件名随意选作当前工程。",
+          "继续布局的四层入口是 **[F29_CONSTRAINTS_v4.brd](../examples/lessonF_stack_artwork_correction_20261019/current/F29_CONSTRAINTS_v4.brd)**。旧v1/v2/v3、DOMAIN_PROBE及CHALLENGE文件属于历史或受控测试，不能按文件名随意选作当前工程。"
+        ],
+        [
+          "两层对比入口为[F28_2L.brd](../examples/lesson28_stackup_20261019/native/F28_2L.brd)；四层叠层基线为[F28_4L.brd](../examples/lesson28_stackup_20261019/native/F28_4L.brd)",
+          "两层对比入口为[F28_2L_USERFIX.brd](../examples/lessonF_stack_artwork_correction_20261019/current/F28_2L_USERFIX.brd)；四层叠层基线为[F28_4L_USERFIX.brd](../examples/lessonF_stack_artwork_correction_20261019/current/F28_4L_USERFIX.brd)"
+        ],
+        [
+          "铜/介质/mask/Dk来源口径、实际孔/过孔层映射、Film对照、厚度错误检出与恢复；402项PASS",
+          "铜/介质及制造资料来源、孔/过孔映射；原402项漏检用户标准，已按纠错去除物理MASK并完整建立15/17Film"
+        ],
+        [
+          "标称1.6mm、铜绝缘求和、含均匀mask模型求和分别记录",
+          "标称1.6mm与铜绝缘求和分别记录；原额外MASK模型已撤销，阻焊厚度/电参改留制造说明"
+        ],
+        [
+          "Film省略布尔参数实测继承true，已按模板逐项显式写回；DESIGN_OUTLINE另设真实板框Film，未把空的旧OUTLINE层当已出图。",
+          "原Film只导入铜并另加板框，用户指出后撤销此做法；当前完整15/17Film及OUTLINE衔接见纠错，不再把旧检查称完整模板通过。"
+        ],
+        [
+          "总验收和当前文件身份见[F阶段JSON清单](../logs/f_lessons_27_29_20261019.json)。",
+          "原验收快照见[F阶段旧JSON](../logs/f_lessons_27_29_20261019.json)，当前文件身份及补验见[纠错清单](../logs/f_stack_artwork_correction_20261019.json)。"
+        ],
+        [
+          "[两套层叠预览](../examples/lesson28_stackup_20261019/preview.png)",
+          "[原含MASK的旧层叠预览（仅历史）](../examples/lesson28_stackup_20261019/preview.png)"
+        ]
+      ]
+    },
+    {
+      "path": "learning/notes/lesson28_stackup_20261019.md",
+      "prepend": "## 2026-10-19用户反馈后的纠正（当前优先）\n\n[层叠与完整Artwork纠错](lessonF_stack_artwork_correction_20261019.md)已更正物理MASK和不完整Artwork。当前布局入口是[F29_CONSTRAINTS_v4.brd](../examples/lessonF_stack_artwork_correction_20261019/current/F29_CONSTRAINTS_v4.brd)，两层/四层建板副本与补验见该纠错记录。本文原402/99/543/937项数字分别是当时的测试范围，未覆盖“不得加入物理MASK、按drill*.txt完整建立全部15/17个Film”，不能代表满足用户全部规范。\n\n下文原BRD、SHA、TCF、预览及日志保留为当时版本证据；涉及增加物理MASK、仅导入铜Film、F28_DESIGN_OUTLINE的做法已经撤销，旧脚本不得直接重放为当前流程。更正前笔记已备份，旧manifest是历史快照；当前身份以纠错清单为准。",
+      "replacements": [
+        [
+          "5. 写入独立mask层及真实厚度口径；原生读取材料、层类型、正负片、位置、导体标志和电参。材料名并不保证默认电参有来源。",
+          "5. 【已撤销的旧步骤】自行写入物理mask层违反用户规范。当前不添加MASK；阻焊工艺参数在制造说明保留，开窗子类不删。"
+        ],
+        [
+          "8. 完整复制对应01env模板的铜Film参数到练习板；另建实际DESIGN_OUTLINE的独立Film，不修改模板。",
+          "8. 【已撤销的旧步骤】仅复制铜Film并另建F28_DESIGN_OUTLINE不符合要求。当前完整加载drill2/4全部15/17项，真实板框衔接模板OUTLINE，不另加Film。"
+        ],
+        [
+          "本课新增独立F28_DESIGN_OUTLINE Film实际引用后者；保留原铜Film映射。",
+          "旧版曾新增F28_DESIGN_OUTLINE，只保留铜Film映射；此做法已按用户要求撤销，当前版本完整模板和板框衔接见页首纠错。"
+        ],
+        [
+          "- [两层原生板](../examples/lesson28_stackup_20261019/native/F28_2L.brd)／[四层原生板](../examples/lesson28_stackup_20261019/native/F28_4L.brd)",
+          "- [原两层板（历史）](../examples/lesson28_stackup_20261019/native/F28_2L.brd)／[原四层板（历史）](../examples/lesson28_stackup_20261019/native/F28_4L.brd)；当前USERFIX入口见页首纠错"
+        ],
+        [
+          "## 五、原生操作顺序与复现方法",
+          "## 五、原操作顺序（含已撤销步骤；当前复现见页首纠错）"
+        ]
+      ]
+    },
+    {
+      "path": "learning/notes/lesson29_constraints_20261019.md",
+      "prepend": "## 2026-10-19用户反馈后的纠正（当前优先）\n\n[层叠与完整Artwork纠错](lessonF_stack_artwork_correction_20261019.md)已更正物理MASK和不完整Artwork。当前布局入口是[F29_CONSTRAINTS_v4.brd](../examples/lessonF_stack_artwork_correction_20261019/current/F29_CONSTRAINTS_v4.brd)，两层/四层建板副本与补验见该纠错记录。本文原402/99/543/937项数字分别是当时的测试范围，未覆盖“不得加入物理MASK、按drill*.txt完整建立全部15/17个Film”，不能代表满足用户全部规范。\n\n下文原BRD、SHA、TCF、预览及日志保留为当时版本证据；涉及增加物理MASK、仅导入铜Film、F28_DESIGN_OUTLINE的做法已经撤销，旧脚本不得直接重放为当前流程。更正前笔记已备份，旧manifest是历史快照；当前身份以纠错清单为准。",
+      "replacements": [
+        [
+          "| 后续四层布局起点 | [F29_CONSTRAINTS_v3.brd](../examples/lesson29_constraints_20261019/native/F29_CONSTRAINTS_v3.brd) |",
+          "| 原第29课v3（历史） | [F29_CONSTRAINTS_v3.brd](../examples/lesson29_constraints_20261019/native/F29_CONSTRAINTS_v3.brd)；当前使用页首v4 |"
+        ],
+        [
+          "最终主板SHA256：6276201",
+          "原第29课v3主板SHA256：6276201"
+        ]
+      ]
+    },
+    {
+      "path": "learning/notes/lesson28_independent_review_20261019.md",
+      "prepend": "## 2026-10-19用户反馈后的纠正（当前优先）\n\n[层叠与完整Artwork纠错](lessonF_stack_artwork_correction_20261019.md)已更正物理MASK和不完整Artwork。当前布局入口是[F29_CONSTRAINTS_v4.brd](../examples/lessonF_stack_artwork_correction_20261019/current/F29_CONSTRAINTS_v4.brd)，两层/四层建板副本与补验见该纠错记录。本文原402/99/543/937项数字分别是当时的测试范围，未覆盖“不得加入物理MASK、按drill*.txt完整建立全部15/17个Film”，不能代表满足用户全部规范。\n\n下文原BRD、SHA、TCF、预览及日志保留为当时版本证据；涉及增加物理MASK、仅导入铜Film、F28_DESIGN_OUTLINE的做法已经撤销，旧脚本不得直接重放为当前流程。更正前笔记已备份，旧manifest是历史快照；当前身份以纠错清单为准。",
+      "replacements": [
+        [
+          "均与原模板一致；不是只核film名字。",
+          "当时仅核铜Film对应部分，漏掉模板另外13项；旧检查不代表完整Artwork一致。"
+        ]
+      ]
+    },
+    {
+      "path": "learning/notes/lesson29_independent_review_20261019.md",
+      "prepend": "## 2026-10-19用户反馈后的纠正（当前优先）\n\n[层叠与完整Artwork纠错](lessonF_stack_artwork_correction_20261019.md)已更正物理MASK和不完整Artwork。当前布局入口是[F29_CONSTRAINTS_v4.brd](../examples/lessonF_stack_artwork_correction_20261019/current/F29_CONSTRAINTS_v4.brd)，两层/四层建板副本与补验见该纠错记录。本文原402/99/543/937项数字分别是当时的测试范围，未覆盖“不得加入物理MASK、按drill*.txt完整建立全部15/17个Film”，不能代表满足用户全部规范。\n\n下文原BRD、SHA、TCF、预览及日志保留为当时版本证据；涉及增加物理MASK、仅导入铜Film、F28_DESIGN_OUTLINE的做法已经撤销，旧脚本不得直接重放为当前流程。更正前笔记已备份，旧manifest是历史快照；当前身份以纠错清单为准。"
+    },
+    {
+      "path": "learning/notes/pcb_layer_naming.md",
+      "append": "## 2026-10-19补充：物理层表与完整Artwork（用户截图纠错）\n\n1. 两/四/六层固定铜名与顺序按上表，逐项读取原生名称；TOP/BOTTOM不得凭界面显示的Top/Bottom样式擅自改名。\n2. 用户板的Cross Section不另加Soldermask_Top/Bottom物理MASK行。阻焊厚度/材料放制造说明；保留PIN、VIA CLASS、PACKAGE/BOARD GEOMETRY的阻焊开窗与输出子类。Through All是默认通孔跨度，不是额外铜层。\n3. Artwork完整执行匹配的01env/drill*.txt，包含铜、锡膏、丝印、阻焊、钻孔、外形、PDF和显示Film；drill2有15项，drill4有17项。严禁只挑铜Film，严禁自行加F28_DESIGN_OUTLINE等替代项目。\n4. 验收全部Film集合、每项class/subclass及所有Options，不以铜Film通过替代完整模板通过。sequence仍不是物理层号。\n5. 模板的OUTLINE必须具有与真实DESIGN_OUTLINE一致的有效板框；不改原模板，不靠新建Film绕过。模板历史无效引用和软件数值量化差异逐项记录，不能静默修文件或凭空增铜层。\n6. 修改后另进程重开，核MASK=0、原生铜序/大小写、15/17全部Film及Options、真实板框、网络/焊盘/机械/约束保持；最后确认DRC及来源SHA。旧“只验铜”报告不能作为当前合规证据。\n\n本次失误、纠正版文件及证据见[完整纠错记录](lessonF_stack_artwork_correction_20261019.md)。"
+    },
+    {
+      "path": "learning/notes/lessonF_source_corrections_20261019.md",
+      "append": "## 用户层叠与Artwork规范勘误（2026-10-19）\n\n后续发现原建板自行增加物理MASK、只加载铜Film并加自定义板框Film，不符合用户规范。已撤销这些做法并补验完整15/17Film及板框映射；当前文件与证据见[纠错记录](lessonF_stack_artwork_correction_20261019.md)。阻焊制造资料与开窗仍保留，先前材料讨论不能解释为允许在用户板物理层表新增MASK。"
+    }
+  ],
+  "unchangedSources": {
+    "D:\\001DIY\\005lib\\01env\\drill2.txt": "CAF62F092C045234C3C1E6E3000E8525EE69B3A60D9E82D429395E93BA73365E",
+    "D:\\001DIY\\005lib\\01env\\drill4.txt": "65ED4A1F8682015A5E6D2B19E0ED8CAC0996AABC2DADAA1EC5D13D9E011A2C46",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\native\\F28_2L.brd": "C8624574A5EE8F7001169BFA83EDFFACE5920B2A6BF881F6DD99416687F821CF",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\native\\F28_4L.brd": "F004184D46B86A7CF56FFA05C33418A6BEEFA508A3043A3442540B69AFA558D6",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\native\\F29_CONSTRAINTS_v3.brd": "6276201EF1750D3A318D901CCF1ADFBB1CA41A4301329CD21E32A0E22B3FA607"
+  },
+  "currentBoards": [
+    "learning/examples/lessonF_stack_artwork_correction_20261019/current/F28_2L_USERFIX.brd",
+    "learning/examples/lessonF_stack_artwork_correction_20261019/current/F28_4L_USERFIX.brd",
+    "learning/examples/lessonF_stack_artwork_correction_20261019/current/F29_CONSTRAINTS_v4.brd"
+  ],
+  "inventoryFolders": [
+    "learning/examples/lessonF_stack_artwork_correction_20261019",
+    "learning/staging/f_stack_artwork_correction_20261019"
+  ],
+  "limitations": [
+    "Original templates unchanged, with native invalid-reference handling explicitly recorded; Film-definition verification does not certify CAM output content.",
+    "Old validations/manifests are dated historical snapshots with requirement gaps, not current compliance results.",
+    "79 electronic components remain unplaced; planes, routing, USB impedance, assembly and manufacturing conditions remain unresolved; GUI not newly certified."
+  ]
+}

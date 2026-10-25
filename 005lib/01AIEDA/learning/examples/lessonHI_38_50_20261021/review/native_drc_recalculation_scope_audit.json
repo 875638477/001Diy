@@ -1,0 +1,55 @@
+{
+  "status": "BUILD_FULL_DRC_RETURN_VERIFIED_READONLY_RUNTIME_CAUSE_UNRESOLVED",
+  "facts": [
+    "Native build and the slow fresh readonly use the same explicit axlDRCUpdate(t), documented to check entire design with on and batch modes and obey current DRC modes.",
+    "SPI2L actual all-mode request returned numeric0 after6seconds with drcEnable=t; precise request/return time and modes in logs/SPI_external_2L_b012/hi_batch_execution.txt. Four-layer equivalent also returns numeric0.",
+    "Native saved mode tables show differential pair primary-gap group and max-via/line-width on; impedance, propagation-delay, relative-delay, crosstalk and parallelism off. No mode was switched off to reduce runtime.",
+    "Prior hiFinalize discarded the numeric return but explicitly called axlDRCUpdate(t) and then exported native DRCs. New override requires a numeric return and logs it separately from stored DRC count.",
+    "Repeated2L b011 fresh readonly all-check stayed inside bem2d more than20minutes; child PID/input changed, source SHA remained unchanged. It was deliberately stopped after root coordination, not declared successful.",
+    "A separate fresh stored-state geometry/branch/endpoint/mode read completed in6.5seconds. Its stored0 is explicitly not a fresh DRC recomputation.",
+    "Final whole-board fresh full check, strict differential challenges, all endpoints/branches and final HSE negative remain required."
+  ],
+  "hypothesesNotProven": [
+    "Cross-process cache state, read-only cache behavior, or transient HSE challenge/rollback dirty state could explain different internal workloads. No root cause has been established."
+  ],
+  "officialLocalSources": [
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlDRCUpdate.txt",
+      "sha256": "7133B67F21D6ED1BADFEBD22DFE05878FCC54B5F56B1E4BFDCAE79E4D00FCA25"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlCNSEcsetModeGet.txt",
+      "sha256": "6474C184BB4A4251E293D91FA35737CD546421934C2C48379DA6ACEB3351A964"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlCNSGetPhysical.txt",
+      "sha256": "D12BD9D73EF1B2A1A18E06055033237B2900AEE926DA8F9FC353588FBB89BD19"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlCNSSetPhysical.txt",
+      "sha256": "6B52F481275C3F4BC9CC21147C8FF38CA014FE227D83B1B9685FE6CB815141F6"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlCnsAddVia.txt",
+      "sha256": "EE31E736776201A722CF374BA5CF6E7A664A973244F7E6E1EA0F440C9A843337"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlLoadPadstack.txt",
+      "sha256": "8F7333F3E8EB548E611A8DFEB029811CBF08A0FD9D7E3EC1785B7B851B4447FD"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlDBGetPad.txt",
+      "sha256": "AC86C53AE326B14613D686513DC7382472405C95CAA716B5214EFC11DF9D78FE"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\doc\\sklangref\\environment.html",
+      "sha256": "3FAE5922D33671B4E2D6965DAC6283E547EB7DBB359F2B9D0BF4317D1D1919E3"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\doc\\sklangref\\inputoutput.html",
+      "sha256": "A9F5E63CA4C85B5EDBC0E1188F509C43950205218D92421E5FAEA3CFFD980867"
+    }
+  ],
+  "stoppedReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_island_stitch_2L_b011\\safe_termination.json",
+  "actualHandleExit": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_island_stitch_2L_b011\\adopted_exit_observation.json"
+}

@@ -1,0 +1,124 @@
+{
+  "status": "UNROUTED_GEOMETRIC_PREVIEW_NOT_NATIVE_DRC",
+  "candidate": "B3",
+  "candidateA": {
+    "input_endpoint_manhattan": 11.700000000000003,
+    "out_to_R31_manhattan": 3.1000000000000014,
+    "R31_to_crystal_manhattan": 2.3251999999999953
+  },
+  "candidateB3": {
+    "input_endpoint_manhattan": 6.100000000000001,
+    "out_to_R31_manhattan": 2.0,
+    "R31_to_crystal_manhattan": 4.725200000000001
+  },
+  "totalA": 17.1252,
+  "totalB3": 12.825200000000002,
+  "relativeReduction": 0.2510919580501248,
+  "metric": "Manhattan between actual pad centers; excludes resistor interior, is not a completed route length",
+  "previewPaths": [
+    {
+      "net": "OSC_IN",
+      "points": [
+        [
+          40.75,
+          31.25
+        ],
+        [
+          40.75,
+          32.3
+        ],
+        [
+          43.0,
+          32.3
+        ],
+        [
+          44.4,
+          33.7
+        ]
+      ],
+      "role": "main input path preview",
+      "geometric_preview_length_mm": 5.279898987322333
+    },
+    {
+      "net": "OSC_OUT",
+      "points": [
+        [
+          40.25,
+          31.25
+        ],
+        [
+          40.25,
+          32.15
+        ],
+        [
+          40.2,
+          33.2
+        ]
+      ],
+      "role": "MCU to series position",
+      "geometric_preview_length_mm": 1.9511898020814347
+    },
+    {
+      "net": "XTAL_OUT",
+      "points": [
+        [
+          40.2,
+          34.7748
+        ],
+        [
+          40.2,
+          37.7
+        ],
+        [
+          42.0,
+          37.7
+        ]
+      ],
+      "role": "main output after series position",
+      "geometric_preview_length_mm": 4.725200000000001
+    },
+    {
+      "net": "OSC_IN",
+      "points": [
+        [
+          44.4,
+          33.7
+        ],
+        [
+          46.2,
+          34.0
+        ]
+      ],
+      "role": "load capacitor branch",
+      "geometric_preview_length_mm": 1.8248287590894696
+    },
+    {
+      "net": "XTAL_OUT",
+      "points": [
+        [
+          40.2,
+          37.7
+        ],
+        [
+          39.8,
+          37.7
+        ]
+      ],
+      "role": "load capacitor branch",
+      "geometric_preview_length_mm": 0.4000000000000057
+    }
+  ],
+  "clearanceNotes": [
+    "proposed .20mm line horizontal y32.30",
+    "MCU upper pad edge31.85: centerline clearance.45 minus halfwidth.10 = .35mm",
+    "Y1.4 GND lower copper edge32.80: centerline clearance.50 minus halfwidth.10 = .40mm",
+    "all other pin/trace/region rules including near pin neck require native DRC; no full clearance PASS"
+  ],
+  "minimumOwnBodyGap": {
+    "mm": 0.18880000000000052,
+    "refs": [
+      "U1",
+      "C18"
+    ]
+  }
+}

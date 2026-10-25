@@ -1,0 +1,41 @@
+{
+  "status": "REVIEW_REQUIRED",
+  "tests": 31359,
+  "issues": [
+    {
+      "kind": "segment-segment",
+      "a": "BASE_G",
+      "b": "STAR_DIAG_GROUND_RETURN:2",
+      "geometryLowerBoundGap_mm": 0.1,
+      "requiredAssumed_mm": 0.3
+    },
+    {
+      "kind": "segment-segment",
+      "a": "BASE_G",
+      "b": "STAR_DIAG_GROUND_RETURN:2",
+      "geometryLowerBoundGap_mm": 0.275,
+      "requiredAssumed_mm": 0.3
+    },
+    {
+      "kind": "segment-pad-AABB",
+      "a": "STAR_DIAG_GROUND_RETURN:1",
+      "b": "U1.22",
+      "geometryLowerBoundGap_mm": 0.193198,
+      "requiredAssumed_mm": 0.2
+    },
+    {
+      "kind": "segment-pad-AABB",
+      "a": "STAR_DIAG_GROUND_RETURN:2",
+      "b": "U1.22",
+      "geometryLowerBoundGap_mm": 0.03541,
+      "requiredAssumed_mm": 0.3
+    }
+  ],
+  "files": [
+    "STAR_reroute_07.json",
+    "interface_CAN_routes_04.json",
+    "CAN_local_supply_05.json",
+    "V3_peripheral_distribution_06b.json"
+  ],
+  "scope": "Independent sufficient conservative AABB clearance precheck only, not native rules or planes. FrozenMCU6 actual snapshot with2oldSTARsegments explicitlyremoved in memory; eachmatchunique. Groundescape .982843 localexistingLEFT spacing.2 considered, notglobalrelax. All candidates crosschecked together and against actual G routes/vias; SMT pads only TOP, THT bottom apertures and mechanical keepout not yet included."
+}

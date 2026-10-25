@@ -1,0 +1,107 @@
+{
+  "status": "NO_DEFINITE_OVERLAP_SPACING_AND_NATIVE_REVIEW_PENDING",
+  "checkpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\power_4L_b001",
+  "plans": [
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\power_star_03.json"
+  ],
+  "placementChanges": [],
+  "operations": 12,
+  "piecesChecked": 23,
+  "definiteOverlapPieces": 0,
+  "spacingWarningPieces": 4,
+  "issues": [
+    {
+      "operation": "STAR_U1_24",
+      "net": "V3V3",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "U1.23",
+          "otherKind": "smdpin",
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "STAR_U1_36",
+      "net": "V3V3",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "U1.35",
+          "otherKind": "smdpin",
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "STAR_U1_48",
+      "net": "V3V3",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "U1.47",
+          "otherKind": "smdpin",
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "STAR_U1_VBAT",
+      "net": "V3V3",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PC13",
+          "otherSource": "U1.2",
+          "otherKind": "smdpin",
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    }
+  ],
+  "scope": "Conservative native pad BBOX plus actual cline-width copper; bbox rounded/circle corners may overestimate. New candidate rules/regions not fully resolved, so spacing warnings are BASE-rule diagnostics, not native errors. No-overlap does not certify clearance, conductive graph, neck counts, dynamic/reference copper, thermal/EMI or manufacturing."
+}

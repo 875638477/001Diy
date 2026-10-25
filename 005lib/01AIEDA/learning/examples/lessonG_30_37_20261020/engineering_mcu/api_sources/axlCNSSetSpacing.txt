@@ -1,0 +1,88 @@
+
+  NAME
+    axlCNSSetSpacing - update spacing cset values
+  SYNOPSIS
+    axlCNSSetSpacing(
+         t_cset/nil
+         t_layer/nil
+         s_constraint
+         g_value
+         )
+         ==> t/nil
+ 
+    axlCNSSetSpacing(
+         t_cset/nil
+         t_layer/nil
+         ll_constraintValues
+         nil
+         )
+         ==> t/nil
+  FUNCTION
+         Allows updating spacing constraint values. By passing nil at 
+         the appropriate argument values for all csets and all layers may be 
+         changed.
+  DATA TYPES
+         See axlCNSGetSpacing for the data type of each constraint
+ 
+         << units and allowed data values >>
+         Design Units:
+            - A number (integer or floating point) where units
+                 is current design units. Must not exceed accuracy
+                 of the design.
+            - Unitless string where accuracy cannot exceed db accuracy.
+            - String with units, data converted to current design units.
+         Boolean
+            - Use t/nil or "true"/"false".
+  TIPS
+         1) For best performance, when calling multiple axlCNS
+            interfaces to update contraint values wrap them
+            in the axlCnsMap interfaces as shown below
+                 axlCNSMapClear()
+                 axlCNSSetSpacing(nil nil 'line_shape 10.0)
+                 axlCNSSetSpacing("" nil 'line_line 5)
+                 ...
+                 axlCNSMapUpdate()
+            Single change calls do not require this.
+         2) For list of current spacing see axlCNSGetSpacing
+  CAUTION
+         1) same_net constraint has been move to the same net spacing domain.
+            domain 
+         2) An idiosyncrasy when values sent as strings requires the
+            number of decimal points to be no more then the current
+            database accuracy or the change will be rejected
+         3) This does NOT change override values. For example, you
+            can change the line to line value in all csets but if the
+            user has applied a net or constraint area override, it
+            will still be used for those items.
+  NEEDS
+         t_cset: cset name, can use "" for DEFAULT cset. Use nil to apply
+                 change to all cset.
+         t_layer: ETCH layer name (e.g "ETCH/TOP" or "TOP"). If nil apply
+                 change to all layers.
+         s_contraint: Constraint symbol to change. Use
+                 axlCNSGetPhysical(nil nil nil) for list of permissible
+                 values.
+         g_value: Value to update. For data type see above for "DATA TYPES".
+         ll_constraintValues: Multiple values may be updated by passing
+                 a list of lists for the third argument.
+                         '((s_contraint g_value) ... )
+  RETURNS
+         t if succeeds
+         nil an error
+                 - ecset name does not exit
+                 - layer does not exist
+                 - contraint does not exist
+                 - illegal value for constraint
+                 - cset is locked
+  SEE ALSO
+         axlCNSGetSpacing, axlCNSMapClear, axlCNSMapUpdate
+  EXAMPLES
+         - Set line to shape spacing in all csets, all layers
+             axlCNSSetSpacing(nil nil 'line_shape 5)
+ 
+         - Set line to line spacing to 5 on DEFAULT cset, all layers
+             axlCNSSetSpacing("" nil 'line_line 5)
+ 
+         - Value of DEFAULT cset
+             axlCNSSetSpacing("25_MIL_SPACE" "top" 'line_line 5)
+

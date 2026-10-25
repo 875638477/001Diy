@@ -1,0 +1,69 @@
+{
+  "packageRoot": "package",
+  "entry": "replay.py",
+  "commands": [
+    "python -I replay.py probe",
+    "python -I replay.py plan --tag migration01",
+    "python -I replay.py run --tag migration01",
+    "python -I replay.py verify --tag migration01"
+  ],
+  "configuration": "config.local.json copied/adapted from config.example.json; excluded from portable manifest",
+  "acceptedRunPaths": [
+    "package/runs/final03",
+    "native/R Space/runs/move01"
+  ],
+  "expectedSuccessfulRun": {
+    "status": "PASS",
+    "totalCount": 42,
+    "components": 80,
+    "logicalPins": 272,
+    "nets": 69,
+    "layers": [
+      "TOP",
+      "L2",
+      "L3",
+      "BOTTOM"
+    ],
+    "nativeSegments": {
+      "total": 932,
+      "manual": 750,
+      "thermal": 182
+    },
+    "marker": {
+      "text": "L60_REPLAY",
+      "layer": "BOARD GEOMETRY/ASSEMBLY_NOTES",
+      "xyMM": [
+        4,
+        4
+      ],
+      "rotation": 0,
+      "count": 1
+    }
+  },
+  "independentReviewInputs": [
+    "native/native_replay_summary.json",
+    "package/package_manifest.json",
+    "package/runs/final03/probe.json",
+    "package/runs/final03/build/before_geometry.txt",
+    "package/runs/final03/build/memory_geometry.txt",
+    "package/runs/final03/fresh/fresh_geometry.txt",
+    "package/runs/final03/fresh/fresh_summary.tsv",
+    "package/runs/final03/verification.json",
+    "package/runs/final03/build/process.json",
+    "package/runs/final03/fresh/process.json",
+    "native/R Space/runs/move01/probe.json",
+    "native/R Space/runs/move01/build/before_geometry.txt",
+    "native/R Space/runs/move01/build/memory_geometry.txt",
+    "native/R Space/runs/move01/fresh/fresh_geometry.txt",
+    "native/R Space/runs/move01/fresh/fresh_summary.tsv",
+    "native/R Space/runs/move01/verification.json",
+    "native/R Space/runs/move01/build/process.json",
+    "native/R Space/runs/move01/fresh/process.json"
+  ],
+  "doNotEquate": [
+    "two saved binary SHA equality is not expected; native metadata differs",
+    "a reported PASS without nonempty path subsegment readback is not sufficient",
+    "a written script is not a real executed operation",
+    "source text records are not a working license or GUI connection"
+  ]
+}

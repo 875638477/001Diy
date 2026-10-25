@@ -1,0 +1,164 @@
+{
+  "status": "CONDITIONAL_HEADER_MOVE_POWER_STUDY_NOT_NATIVE_RELEASE",
+  "batchId": "J12_south_supply_4L_01",
+  "variant": "4L",
+  "sourceCheckpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\source_4L_b015_DRC_PENDING",
+  "placementChanges": [
+    {
+      "ref": "J12",
+      "xy": [
+        18,
+        9
+      ],
+      "rotation": 90,
+      "purpose": "Parentauthorizedfinalplacementtradeoffstudy; retainactualpinout, adoptonlywithall6PBrouteandmechanicalreview"
+    }
+  ],
+  "operations": [
+    {
+      "type": "deleteSegment",
+      "id": "J12_REMOVE_OLD_VERTICAL_FEED",
+      "net": "V3V3",
+      "layer": "TOP",
+      "width": 0.6,
+      "points": [
+        [
+          31.11,
+          58.2
+        ],
+        [
+          31.11,
+          55
+        ]
+      ],
+      "purpose": "Onlydeadheaderbranch aftermove; originaltopedgeV3trunkisnotdeleted"
+    },
+    {
+      "type": "route",
+      "id": "J12_V3_NEW_NORMAL_FEED",
+      "net": "V3V3",
+      "layer": "TOP",
+      "width": 0.6,
+      "points": [
+        [
+          33.3,
+          1
+        ],
+        [
+          9.11,
+          1
+        ],
+        [
+          9.11,
+          9
+        ]
+      ],
+      "purpose": "Directbranchfromexistinglowimpedanceperipheralfeed beforeboardperimeterdetour; noMCUneckcurrent"
+    }
+  ],
+  "sourcePinProof": {
+    "originalRotation": 90.0,
+    "originalPin1": {
+      "number": "1",
+      "xy": [
+        31.11,
+        55.0
+      ],
+      "net": "V3V3",
+      "padstack": "VIA_1D0_1D54S",
+      "rotation": 90.0,
+      "mechanical": null,
+      "figure": "SQUARE",
+      "padLocalBBox": [
+        [
+          -0.77,
+          -0.77
+        ],
+        [
+          0.77,
+          0.77
+        ]
+      ],
+      "padBBox": [
+        [
+          30.34,
+          54.23
+        ],
+        [
+          31.88,
+          55.77
+        ]
+      ]
+    },
+    "originalPin2": {
+      "number": "2",
+      "xy": [
+        33.65,
+        55.0
+      ],
+      "net": "GND",
+      "padstack": "VIA_1D0_1D54",
+      "rotation": 90.0,
+      "mechanical": null,
+      "figure": "CIRCLE",
+      "padLocalBBox": [
+        [
+          -0.77,
+          -0.77
+        ],
+        [
+          0.77,
+          0.77
+        ]
+      ],
+      "padBBox": [
+        [
+          32.88,
+          54.23
+        ],
+        [
+          34.42,
+          55.77
+        ]
+      ]
+    },
+    "newPin1V3": [
+      9.11,
+      9
+    ],
+    "newPin2GND": [
+      11.65,
+      9
+    ],
+    "correction": "Priororalr0/GNDpin1 descriptionwaswrong; actualnative90andV3pin1authoritative."
+  },
+  "oldBranchCleanupDependency": "root_source_clearance_cleanup_4L_01 alreadyremovesoldR25V3twolegs31.11,55\u219231.11,47\u219238.1016,47; donotdeleteagain. Keep y58.2peripheralmainbothsidescontinuous.",
+  "proofs": [
+    {
+      "net": "V3V3",
+      "source": "C9.1",
+      "target": "J12.1"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "target": "J12.2"
+    }
+  ],
+  "engineering": {
+    "newBranchLengthMM": 32.19,
+    "widthMM": 0.6,
+    "addedSignalVias": 0,
+    "groundReturn": "J12.2throughGNDpinmustconnectactualBOTTOM/4LL2L3commonwithfreshthermalspokesandnoisolatedcopper; not quietorcenterlabelassumption",
+    "copperResistanceExample": {
+      "resistivityOhmMM2PerM": 0.01724,
+      "assumedFinishedThicknessMM": 0.035,
+      "temperatureC": 20,
+      "resistanceOhm": 0.02642645714285714,
+      "dropAtTotalHeader20mA_V": 0.0005285291428571428,
+      "limit": "NominalCuDCexampleonly, nottemperature/ampacity/sourcecurrentcertification. Existingallheaders20mAaggregatebudgetunchanged."
+    },
+    "mechanical": "NativePlaceBoundnew[7.74,7.63]..[28.29,10.37]; parentMCUagentmustcheckactualheight/insertionand6PBfullpaths. VINmainy10.6toheaderpadtop9.762nominalgap.538; exactnativeprecheckpending.",
+    "preserve": "80components/69nets/272logicalpins/netlabels. Allnewpower.6normal, pin1V3pin2GNDnot swapped; inputprotect/buck/USB/HSEunchanged."
+  }
+}

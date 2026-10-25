@@ -1,0 +1,186 @@
+{
+  "status": "ENGINEERING_CANDIDATE_ONLY",
+  "variant": "2L",
+  "operations": [
+    {
+      "type": "route",
+      "id": "CC1_ENTRY",
+      "net": "USB_CC1",
+      "layer": "TOP",
+      "points": [
+        [
+          38.75,
+          7.355
+        ],
+        [
+          38.75,
+          8.3
+        ],
+        [
+          36.9484,
+          10.1016
+        ],
+        [
+          35.0,
+          10.1016
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit connector auxiliary topology candidate; combined actual-copper/native spacing/return review pending."
+    },
+    {
+      "type": "route",
+      "id": "CC2_ENTRY",
+      "net": "USB_CC2",
+      "layer": "TOP",
+      "points": [
+        [
+          41.75,
+          7.355
+        ],
+        [
+          41.75,
+          8.01
+        ],
+        [
+          42.1,
+          8.36
+        ],
+        [
+          44.4,
+          8.36
+        ],
+        [
+          45.5,
+          9.46
+        ],
+        [
+          45.5,
+          10.1016
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit connector auxiliary topology candidate; combined actual-copper/native spacing/return review pending."
+    },
+    {
+      "type": "route",
+      "id": "CC_R3_GND",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          35,
+          11.6764
+        ],
+        [
+          36.1,
+          11.6764
+        ]
+      ],
+      "width": 0.4,
+      "purpose": "Explicit connector auxiliary topology candidate; combined actual-copper/native spacing/return review pending."
+    },
+    {
+      "type": "via",
+      "id": "CC_R3_GND_V",
+      "net": "GND",
+      "xy": [
+        36.1,
+        11.6764
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "CC_R4_GND",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          45.5,
+          11.6764
+        ],
+        [
+          43.9,
+          11.6764
+        ],
+        [
+          43.8,
+          11.5764
+        ]
+      ],
+      "width": 0.4,
+      "purpose": "Explicit connector auxiliary topology candidate; combined actual-copper/native spacing/return review pending."
+    }
+  ],
+  "proofs": [
+    {
+      "from": "R3.2",
+      "to": "U1.23",
+      "connected": true
+    },
+    {
+      "from": "R4.2",
+      "to": "U1.23",
+      "connected": true
+    },
+    {
+      "from": "J2.A5",
+      "to": "R3.1",
+      "connected": true
+    },
+    {
+      "from": "J2.B5",
+      "to": "R4.1",
+      "connected": true
+    }
+  ],
+  "scope": "No widening global USB spacing; finite connector .2mm Class-Class line_line region may be required and must be explicitly proven.",
+  "constraintOperations": [
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_USB_CC1_J2_S_2L",
+      "copyFrom": "HI2L_S_CLASSCLASS_10",
+      "values": {
+        "smdpin_line": "0.2 MM",
+        "line_line": "0.2 MM"
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_USB_CC1_J2_ESCAPE",
+      "layer": "TOP",
+      "polygon": [
+        [
+          38.35,
+          7.25
+        ],
+        [
+          39.6,
+          7.25
+        ],
+        [
+          39.6,
+          8.95
+        ],
+        [
+          38.35,
+          8.95
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_USB_FS_S",
+          "otherNetClass": "HI2L_USB_AUX_S",
+          "cset": "HI_USB_CC1_J2_S_2L"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "v1 rejected actual C10 and Q2 overlap; v2 rejected .196985<.20 connector edge gap and GND via touching V3 perimeter, corrected geometry instead of loosening rules.",
+    "2L sole new finite J2 CC escape copies full existing Class-Class CSet and lowers line_line/smdpin_line to.20mm here only; outside.50 and DP internal gaps unchanged. Native negative challenge plus actual return/reference review required."
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "status": "FORWARD_REVIEW_COMPLETE_FINDING_FIXED_BY_ROOT_SEPARATE_VERIFICATION",
+  "reviewer": "l60_env_inventory",
+  "reviewedAtClientDate": "2026-10-23",
+  "scope": "Independent application of the supplied skill to three hypothetical requests. Read-only source inspection only; no Cadence/GUI/process/configuration action and no scenario actually executed.",
+  "testPrompts": {
+    "A": "学习目录换到E:/EDA Study，新机器准备继续，判断历史启动器是否能直接运行并写下次动作。",
+    "B": "只有preflight退出0，判断课程索引能记录哪些能力。",
+    "C": "教程建议Top/GND/PWR/Bottom命名，给本项目应采取的层设置和证据要求。"
+  },
+  "actualReading": [
+    {
+      "path": "learning/skills/cadence17-learning/SKILL.md",
+      "extent": "FULL"
+    },
+    {
+      "path": "learning/skills/cadence17-learning/references/operating-boundaries.md",
+      "extent": "FULL"
+    },
+    {
+      "path": "learning/skills/cadence17-learning/scripts/preflight.py",
+      "extent": "FULL"
+    },
+    {
+      "path": "learning/examples/lesson60_20261023/review/skill_and_preflight_validation.json",
+      "extent": "FULL"
+    },
+    {
+      "path": "learning/examples/lesson60_20261023/package/README.md",
+      "extent": "FULL"
+    },
+    {
+      "path": "learning/notes/pcb_layer_naming.md",
+      "extent": "FULL"
+    },
+    {
+      "path": "learning/notes/package_defaults.md",
+      "extent": "FULL"
+    },
+    {
+      "path": "EDA.md",
+      "extent": "OPENING_23_LINES_CURRENT_PLAN"
+    },
+    {
+      "path": "课程索引.md",
+      "extent": "LAST_60_LINES_INCLUDING_LESSON60"
+    },
+    {
+      "path": "learning/examples/lesson60_20261023/inventory/historical_script_portability.json",
+      "extent": "FULL_SELF_AUTHORED_SELECTED_SOURCE_FINDINGS"
+    },
+    {
+      "path": "learning/examples/lesson60_20261023/backups/preflight_before_forward_fix.py",
+      "extent": "FULL",
+      "sha256": "8EFEA4E2B3255E25077290D2ED23B82F25552F43F1484A00BDD6360FCCCDC4E1"
+    },
+    {
+      "path": "learning/examples/lesson60_20261023/review/preflight_forward_fix_validation.json",
+      "extent": "FULL"
+    },
+    {
+      "path": "learning/skills/cadence17-learning/scripts/preflight.py",
+      "extent": "POST_FIX_OUTPUT_SECTION_TAIL",
+      "sourceSHA256": "6C5FC954C2A4A4A9BF130E55C643AA5B319981FA955473D23B20C879D343A34C"
+    }
+  ],
+  "cases": [
+    {
+      "id": "A",
+      "decision": "不能把旧启动器直接运行当迁移步骤。先以E:/EDA Study为新的记录根，在目标机重新配置、核静态输入，再按portable package做隔离小操作并保存/独立重开。",
+      "basis": [
+        "SKILL首段明确不假定旧盘符/安装路径。",
+        "SKILL禁止批量执行旧课脚本，要求先副本/SHA/成功判据。",
+        "operating-boundaries明确旧queue/ready和DBID不证明新会话。",
+        "package README要求显式配置、Python -I、唯一tag，native路径仅ASCII含空格已限定，长命令先plan检查。"
+      ],
+      "nextActions": [
+        "确认用户迁移后的E:/EDA Study实际包含EDA.md、课程索引.md、规范、源工程、必要依赖和本地技能；不能只移动skill或路径字符串。",
+        "只读核目标机明确Python和Cadence17.2安装根、位数/补丁、依赖/库/官方手册。合法许可/原生执行/GUI仍需各自现场验证，不复制许可文件。",
+        "对旧启动器仅作历史源码参考；安装/工程根和旧queue路径须在新的配置/副本中重建，不编辑封存记录伪装为新机结果。",
+        "用目标机明确解释器执行preflight，--root参数单独引用为'E:/EDA Study'，--cadence-root填实际安装根。本评审不假定目标路径/安装已经存在，不实际运行。",
+        "复制portable package到新路径，按README创建config.local.json，用Python -I和新的短tag依次probe/plan；plan核两次native argv长度。含空格的完整路径按PowerShell参数正确引用。",
+        "只有前提满足后才run/verify并核源SHA、真实marker、对象/几何、保存和新进程重开；失败保留日志、修配置后换新tag。",
+        "把此次目标机实际结果独立记录，不借用旧PASS/PID/ready/DBID，不操作用户已开的CAD进程。"
+      ],
+      "missingConditions": [
+        "E:/EDA Study真实目录和文件未观测。",
+        "目标电脑实际软件版本、运行许可、库依赖、进程和GUI连接未测。",
+        "该目标路径下plan/run/verify尚未执行。"
+      ],
+      "claimsAllowedNow": [
+        "已制定迁移检查步骤，已识别旧启动器的路径/会话依赖。"
+      ],
+      "claimsNotAllowedNow": [
+        "E盘迁移成功",
+        "另一台物理电脑已复现",
+        "旧启动器可直接运行",
+        "GUI/全部Cadence操作已掌握"
+      ],
+      "scenarioExecuted": false
+    },
+    {
+      "id": "B",
+      "decision": "只可写静态学习输入/固定fixture身份检查通过；不能写原生小操作、许可、GUI、第二台电脑或完整课程执行已通过。",
+      "basis": [
+        "preflight源码ok只要求四个学习文件存在及固定BRD SHA匹配。",
+        "cadenceInventory只是配置/文件存在的报告字段，不进入ok表达式。",
+        "报告明确nativeExecution/license/GUI为NOT_TESTED_BY_PREFLIGHT，secondPhysicalComputer为NOT_TESTED。",
+        "skill_and_preflight_validation.json证明验证器与两个静态分支，不包含Cadence原生run证据。"
+      ],
+      "proposedIndexStatus": "资料/技能静态预检通过；原生重定位小操作、GUI与真正异机执行待验。若另有本轮实际run/verify结果，再据该证据增加对应限定状态。",
+      "claimsAllowedNow": [
+        "给定--root中必要入口存在。",
+        "固定训练BRD与预期SHA一致。",
+        "该次明确解释器能运行preflight。",
+        "实际JSON若显示exe存在，可仅记录两个程序文件存在；退出0本身不保证它们存在。"
+      ],
+      "claimsNotAllowedNow": [
+        "Cadence可运行或许可可用",
+        "保存/重开和实际小操作通过",
+        "GUI可控",
+        "扫描OCR或视频已经学习",
+        "两板/DRC/SI/PI/EMI/制造验收通过",
+        "另一台物理电脑通过"
+      ],
+      "missingConditions": [
+        "原生plan/run/verify的新日志及实际对象读回。",
+        "GUI/许可/真实第二台机分别现场证据。"
+      ],
+      "scenarioExecuted": false
+    },
+    {
+      "id": "C",
+      "decision": "本项目物理铜层保持TOP-L2-L3-BOTTOM，不按教程改成Top/GND/PWR/Bottom；层功能另记录为TOP器件/信号、L2完整公共GND、L3电源、BOTTOM信号。",
+      "basis": [
+        "用户固定规范和operating-boundaries优先于教程示例层名。",
+        "pcb_layer_naming将物理序与Film ?sequence区分，要求完整模板核验。",
+        "新四层训练板已选L3单V3V3，其他项目仍按真实供电需求选择电源铜域，不能只改功能标签。"
+      ],
+      "requiredEvidence": [
+        "在授权副本中读回Cross Section实际导电层名称/大小写/物理顺序；本项目不添加额外物理MASK行。阻焊开窗和对应CAM仍保留。",
+        "L2实际更新后的公共GND铜网、填充、端点、孤岛/孔/正常反焊盘及机械避让；不能用普通信号桥或旧HSE隔离岛替代完整公共地。",
+        "L3实际电源网络/铜域及供电端点；不能仅给旧GND层换标签或沿用旧b019合格结论。",
+        "关键TOP路径的L2参考，BOTTOM实际L3电源参考的连续性、分割/孔洞与换层。GND与电源参考变化处核真实去耦/返回，不以最近GND via或平面共通直接判通过。",
+        "只读核匹配的01env/drill4.txt及完整17 Film映射/Options，保持既有命名和o/O快捷键，不自行改模板；光绘sequence不替代物理层序。",
+        "保存后新进程重开读回实际铜网/层/端点，结合实际CAM独立复核；保留来源SHA、日志、目标外不变及未接网/USB/全板DRC/生产开放项。"
+      ],
+      "missingConditions": [
+        "请求未提供教程对应版本/页码、当前板最新身份和本次实际Cross Section/铜读回。",
+        "本次不执行改层或光绘，所以不能宣称新修改完成。"
+      ],
+      "claimsAllowedNow": [
+        "本项目层规范已明确，可据此安排操作与验收。"
+      ],
+      "claimsNotAllowedNow": [
+        "教程层名可覆盖用户规范",
+        "只改文字即可完整地/电源通过",
+        "参考或SI/PI/EMI/整板已通过"
+      ],
+      "scenarioExecuted": false
+    }
+  ],
+  "findings": [
+    {
+      "id": "L60-FWD-01",
+      "severity": "MEDIUM",
+      "component": "learning/skills/cadence17-learning/scripts/preflight.py --out",
+      "observed": "--out仅检查is_relative_to(root)，随后write_text覆盖已有文件。若out为<root>/EDA.md或现有封存日志，会覆盖输入或历史文件。",
+      "impact": "暴露的可选输出参数可违反技能新输出/保留历史规则；默认不传--out无此写入。",
+      "recommendation": "拒绝任何已存在输出，拒绝required输入/fixture，最好限制在本课全新review/log目标；增加覆盖输入/已有报告的负例检查。",
+      "state": "FIXED_BY_ROOT_NOT_BY_REVIEWER",
+      "closure": {
+        "originalSnapshot": "learning/examples/lesson60_20261023/backups/preflight_before_forward_fix.py",
+        "originalSHA256": "8EFEA4E2B3255E25077290D2ED23B82F25552F43F1484A00BDD6360FCCCDC4E1",
+        "correctedSHA256": "6C5FC954C2A4A4A9BF130E55C643AA5B319981FA955473D23B20C879D343A34C",
+        "validation": "learning/examples/lesson60_20261023/review/preflight_forward_fix_validation.json",
+        "validationActuallyRead": true,
+        "rootChecks": "4 actual behavior checks PASS: current root, missing root, existing sentinel refuses overwrite and unchanged bytes, new JSON report.",
+        "reviewerRechecked": "Read old byte snapshot and verified original SHA/unguarded write; read corrected source using suffix .json, exists refusal and exclusive open('x'); read separate root validation. No scripts executed by this reviewer.",
+        "skillClarificationRead": "SKILL末段已补只新建JSON/拒覆盖、预检退出0范围。"
+      }
+    },
+    {
+      "id": "L60-FWD-02",
+      "severity": "CLARIFICATION",
+      "component": "preflight exit status",
+      "observed": "Cadence exe存在条件不参与ok。这与报告明确静态输入检查的范围一致，但使用者可能把0当环境可运行。",
+      "recommendation": "课程索引只记录静态输入/fixture身份；需要时显式区分安装清单与运行前提，不升级当前预检PASS范围。",
+      "state": "NO_AUTOMATIC_CAPABILITY_UPGRADE"
+    },
+    {
+      "id": "L60-FWD-03",
+      "severity": "NONE",
+      "component": "skill main procedure",
+      "observed": "主体文字明确记录根、固定规范、隔离副本、历史与本轮、接口分栏和现场验证；未发现要求操作未知用户进程、许可绕过或盲目重放旧脚本的指令。",
+      "state": "REVIEWED_THREE_REQUESTS_ONLY_NOT_EXHAUSTIVE"
+    }
+  ],
+  "conclusion": "三项请求均可依skill作出具体且范围准确的后续动作。独立发现的preflight覆盖风险已由root另修并验证，本报告保留旧源码身份/风险及独立修复证据链接。没有由本评审推断GUI、原生或真正异机通过。",
+  "referenceHashPolicy": "Do not freeze mutable root notes/EDA/skill as dependencies of this independent subtask. Only original and corrected preflight identities identify the reviewed finding; final root manifest owns latest skill hashes."
+}

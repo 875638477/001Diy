@@ -1,0 +1,175 @@
+{
+  "status": "PB15_ENGINEERED_BRIDGE_CANDIDATE_NOT_NATIVE",
+  "operations": [
+    {
+      "type": "deleteVia",
+      "id": "PB15_MID_RETURN_RIP",
+      "net": "GND",
+      "xy": [
+        38,
+        20
+      ]
+    },
+    {
+      "type": "via",
+      "id": "PB15_MID_RETURN_NEW",
+      "net": "GND",
+      "xy": [
+        34.28,
+        20.45
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "PB15_LOCAL_BRIDGE_VIA",
+      "net": "GPIO_PB15",
+      "xy": [
+        37.7,
+        19.5
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "PB15_WEST_BRIDGE_VIA",
+      "net": "GPIO_PB15",
+      "xy": [
+        34.2,
+        19.6
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "PB15_ESCAPE_NORMAL_BOTTOM",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "width": 0.2,
+      "points": [
+        [
+          38.5,
+          20.7
+        ],
+        [
+          38.1,
+          20.3
+        ],
+        [
+          37.7,
+          19.9
+        ],
+        [
+          37.7,
+          19.5
+        ]
+      ]
+    },
+    {
+      "type": "route",
+      "id": "PB15_SHORT_WEST_TOP_BRIDGE",
+      "net": "GPIO_PB15",
+      "layer": "TOP",
+      "width": 0.2,
+      "points": [
+        [
+          37.7,
+          19.5
+        ],
+        [
+          34.3,
+          19.5
+        ],
+        [
+          34.2,
+          19.6
+        ]
+      ]
+    },
+    {
+      "type": "deleteSegment",
+      "id": "PB15_2L_VBUS_CLEAR_RIP_0",
+      "net": "VBUS_PRESENT_N",
+      "layer": "BOTTOM",
+      "width": 0.2,
+      "points": [
+        [
+          34.55,
+          22.95
+        ],
+        [
+          34.4,
+          22.8
+        ]
+      ]
+    },
+    {
+      "type": "deleteSegment",
+      "id": "PB15_2L_VBUS_CLEAR_RIP_1",
+      "net": "VBUS_PRESENT_N",
+      "layer": "BOTTOM",
+      "width": 0.2,
+      "points": [
+        [
+          34.4,
+          22.8
+        ],
+        [
+          34.4,
+          18.15
+        ]
+      ]
+    },
+    {
+      "type": "route",
+      "id": "PB15_2L_VBUS_FINITE_BYPASS",
+      "net": "VBUS_PRESENT_N",
+      "layer": "BOTTOM",
+      "width": 0.2,
+      "points": [
+        [
+          34.55,
+          22.95
+        ],
+        [
+          34.95,
+          22.55
+        ],
+        [
+          34.95,
+          19.45
+        ],
+        [
+          34.4,
+          18.9
+        ],
+        [
+          34.4,
+          18.15
+        ]
+      ],
+      "purpose": "Low-current DC VBUS sense shifts .55mm over finite y19.45..22.55 to permit a normal-clearance TOP/BOTTOM GPIO bridge between the existing TOP3V3 and BOTTOMsense corridors; source and receiver pins unchanged."
+    }
+  ],
+  "issues": [],
+  "ruleIntent": "All GPIO copper .2mm normal width. MID ground move uses local all-layer actual approved-via-only; no spacing or neck relaxation. Need final actual common-ground proof and per-source finite return review. Old source TOP+original via preserved.",
+  "expectedEndpoints": {
+    "GPIO_PB15": {
+      "connectedTo": "U1.28",
+      "xy": [
+        34.2,
+        19.6
+      ],
+      "layers": [
+        "TOP",
+        "BOTTOM"
+      ]
+    }
+  }
+}

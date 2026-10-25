@@ -1,0 +1,718 @@
+{
+  "status": "NO_DEFINITE_OVERLAP_SPACING_AND_NATIVE_REVIEW_PENDING",
+  "checkpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\power_2L_b003c",
+  "plans": [
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\mcu_critical_routes_v6.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\gpio_north_escape_v3.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\usb_critical_routes_v6.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\ESD04c_proposed_for_power_review.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\interface_CAN_routes_04.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\CAN_local_supply_05.json"
+  ],
+  "placementChanges": [
+    {
+      "ref": "C21",
+      "xy": [
+        39.478,
+        36.25
+      ],
+      "rotation": 180,
+      "purpose": "Same PlaceBound as37.7,36.25 r0 but swap pad ends: NRST39.3764,right / GND37.8016,left. Removes VDDA/ground route crossings. PlaceBound spacing is not actual body/assembly qualification."
+    },
+    {
+      "ref": "C24",
+      "xy": [
+        34.8,
+        32.8984
+      ],
+      "rotation": 90,
+      "purpose": "Shift left .2 so .60 VDDA branch atx35.9 has actual .3935mm to each GND/ADC pad edge"
+    },
+    {
+      "ref": "R23",
+      "xy": [
+        32.9,
+        33.02
+      ],
+      "rotation": 180,
+      "purpose": "Move SPI NSS series resistor left.8016mm; frees ADC0 diagonal to shiftedC24 without less-than.3 coppergap. Preserve electrical role/value.; +.02mm y avoids native POWER .3 clearance against retained STAR_C9_FEED"
+    },
+    {
+      "ref": "U4",
+      "xy": [
+        40.25,
+        11.4
+      ],
+      "rotation": 180,
+      "purpose": "Create1.62mm raw y gap J2 tips\u2192U4 input copper; preserve short ESD entry"
+    },
+    {
+      "ref": "R5",
+      "xy": [
+        41.1,
+        18.5
+      ],
+      "rotation": 270,
+      "purpose": "Symmetric toR6 aroundx40.25 and clearC14"
+    },
+    {
+      "ref": "R12",
+      "xy": [
+        42.8,
+        18.3
+      ],
+      "rotation": 0,
+      "purpose": "Reduce DNP CAN shared stub"
+    },
+    {
+      "ref": "R13",
+      "xy": [
+        38,
+        18.3
+      ],
+      "rotation": 180,
+      "purpose": "Reduce DNP CAN shared stub"
+    },
+    {
+      "ref": "R11",
+      "xy": [
+        42.9764,
+        14.6
+      ],
+      "rotation": 180,
+      "purpose": "DPpad2=(41.3,14.6), sourcepad1=(42.8748,14.6). Directly adjacent maintrunk: .845mm4L or.4mm2L; cannot put.94mm pad onto.41mm-centered4Lpair without short toDM."
+    }
+  ],
+  "operations": 97,
+  "piecesChecked": 206,
+  "definiteOverlapPieces": 0,
+  "spacingWarningPieces": 15,
+  "issues": [
+    {
+      "operation": "HSE_IN",
+      "net": "OSC_IN",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "OSC_OUT",
+          "otherSource": "U1.6",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            40.1,
+            30.65,
+            40.4,
+            31.85
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PC15",
+          "otherSource": "U1.4",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            41.1,
+            30.65,
+            41.4,
+            31.85
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "HSE_OUT",
+      "net": "OSC_OUT",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "NRST",
+          "otherSource": "U1.7",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            39.6,
+            30.65,
+            39.9,
+            31.85
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "OSC_IN",
+          "otherSource": "U1.5",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            40.6,
+            30.65,
+            40.9,
+            31.85
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "VDDA_PIN_CAP",
+      "net": "VDDA",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "ADC0",
+          "otherSource": "U1.10",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            38.1,
+            30.65,
+            38.4,
+            31.85
+          ],
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "U1.8",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            39.1,
+            30.65,
+            39.4,
+            31.85
+          ],
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "VSSA8_INWARD",
+      "net": "GND",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "VDDA",
+          "otherSource": "U1.9",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            38.6,
+            30.65,
+            38.9,
+            31.85
+          ],
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "NRST",
+          "otherSource": "U1.7",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            39.6,
+            30.65,
+            39.9,
+            31.85
+          ],
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "VDDA",
+          "otherSource": "VDDA_PIN_CAP",
+          "otherKind": "line",
+          "otherBounds": [
+            38.625,
+            31.125,
+            38.875,
+            32.675
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "ADC_PIN_CAP",
+      "net": "ADC0",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "VDDA",
+          "otherSource": "VDDA_PIN_CAP",
+          "otherKind": "line",
+          "otherBounds": [
+            37.800000000000004,
+            32.25,
+            39.05,
+            33.5
+          ],
+          "actualCopperGapMM": 0.201041,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PA1",
+          "otherSource": "U1.11",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            37.6,
+            30.65,
+            37.9,
+            31.85
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "VDDA",
+          "otherSource": "U1.9",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            38.6,
+            30.65,
+            38.9,
+            31.85
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "VDDA",
+          "otherSource": "VDDA_PIN_CAP",
+          "otherKind": "line",
+          "otherBounds": [
+            38.625,
+            31.125,
+            38.875,
+            32.675
+          ],
+          "actualCopperGapMM": 0.275,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "ADC_PIN_CAP",
+      "net": "ADC0",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "VDDA",
+          "otherSource": "VDDA_PIN_CAP",
+          "otherKind": "line",
+          "otherBounds": [
+            37.800000000000004,
+            32.25,
+            39.05,
+            33.5
+          ],
+          "actualCopperGapMM": 0.201041,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GPIO_PA1",
+          "otherSource": "U1.11",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            37.6,
+            30.65,
+            37.9,
+            31.85
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "VDDA",
+          "otherSource": "VDDA_PIN_CAP",
+          "otherKind": "line",
+          "otherBounds": [
+            38.625,
+            31.125,
+            38.875,
+            32.675
+          ],
+          "actualCopperGapMM": 0.275,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "ADC_PIN_CAP",
+      "net": "ADC0",
+      "type": "line",
+      "segment": 2,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PA1",
+          "otherSource": "U1.11",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            37.6,
+            30.65,
+            37.9,
+            31.85
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "NRST_PIN_CAP",
+      "net": "NRST",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "U1.8",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            39.1,
+            30.65,
+            39.4,
+            31.85
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "OSC_OUT",
+          "otherSource": "U1.6",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            40.1,
+            30.65,
+            40.4,
+            31.85
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "OSC_OUT",
+          "otherSource": "HSE_OUT",
+          "otherKind": "line",
+          "otherBounds": [
+            40.1,
+            32.05,
+            40.35,
+            32.300000000000004
+          ],
+          "actualCopperGapMM": 0.274404,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "OSC_OUT",
+          "otherSource": "HSE_OUT",
+          "otherKind": "line",
+          "otherBounds": [
+            40.1,
+            32.1,
+            40.300000000000004,
+            33.300000000000004
+          ],
+          "actualCopperGapMM": 0.274404,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "VSSA8_INWARD",
+          "otherKind": "line",
+          "otherBounds": [
+            39.125,
+            29.925,
+            39.375,
+            31.375
+          ],
+          "actualCopperGapMM": 0.275,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "NRST_PIN_CAP",
+      "net": "NRST",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "VDDA",
+          "otherSource": "VDDA_PIN_CAP",
+          "otherKind": "line",
+          "otherBounds": [
+            37.800000000000004,
+            32.25,
+            39.05,
+            33.5
+          ],
+          "actualCopperGapMM": 0.208336,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "OSC_OUT",
+          "otherSource": "HSE_OUT",
+          "otherKind": "line",
+          "otherBounds": [
+            40.1,
+            32.05,
+            40.35,
+            32.300000000000004
+          ],
+          "actualCopperGapMM": 0.274404,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "OSC_OUT",
+          "otherSource": "HSE_OUT",
+          "otherKind": "line",
+          "otherBounds": [
+            40.1,
+            32.1,
+            40.300000000000004,
+            33.300000000000004
+          ],
+          "actualCopperGapMM": 0.274404,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "GND",
+          "otherSource": "U1.8",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            39.1,
+            30.65,
+            39.4,
+            31.85
+          ],
+          "actualCopperGapMM": 0.288909,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "NRST_PIN_CAP",
+      "net": "NRST",
+      "type": "line",
+      "segment": 2,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "VDDA",
+          "otherSource": "VDDA_PIN_CAP",
+          "otherKind": "line",
+          "otherBounds": [
+            37.800000000000004,
+            32.25,
+            39.05,
+            33.5
+          ],
+          "actualCopperGapMM": 0.2,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "VBAT_PIN_CAP",
+      "net": "V3V3",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GPIO_PC13",
+          "otherSource": "U1.2",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            42.1,
+            30.65,
+            42.4,
+            31.85
+          ],
+          "actualCopperGapMM": 0.225,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "GPIO_GPIO_PC13_TOP",
+      "net": "GPIO_PC13",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "V3V3",
+          "otherSource": "U1.1",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            42.6,
+            30.65,
+            42.9,
+            31.85
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "V3V3",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            42.625,
+            29.775,
+            43.125,
+            30.275
+          ],
+          "actualCopperGapMM": 0.275,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "V3V3",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            42.625,
+            30.025,
+            42.875,
+            31.375
+          ],
+          "actualCopperGapMM": 0.275,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "V3V3",
+          "otherSource": "VBAT_PIN_CAP",
+          "otherKind": "line",
+          "otherBounds": [
+            42.625,
+            31.125,
+            43.675,
+            31.375
+          ],
+          "actualCopperGapMM": 0.275,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "GPIO_GPIO_PC15_TOP",
+      "net": "GPIO_PC15",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "OSC_IN",
+          "otherSource": "U1.5",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            40.6,
+            30.65,
+            40.9,
+            31.85
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "USB_SHARED_DP",
+      "net": "PA12_SHARED",
+      "type": "line",
+      "segment": 3,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            41.550000000000004,
+            20.7748,
+            42.6252,
+            21.85
+          ],
+          "actualCopperGapMM": 0.29546,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "USB_SHARED_DP",
+      "net": "PA12_SHARED",
+      "type": "line",
+      "segment": 4,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "GND",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            41.550000000000004,
+            20.7748,
+            42.6252,
+            21.85
+          ],
+          "actualCopperGapMM": 0.29546,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    }
+  ],
+  "scope": "Conservative native pad BBOX plus actual cline-width copper; bbox rounded/circle corners may overestimate. New candidate rules/regions not fully resolved, so spacing warnings are BASE-rule diagnostics, not native errors. No-overlap does not certify clearance, conductive graph, neck counts, dynamic/reference copper, thermal/EMI or manufacturing."
+}

@@ -1,0 +1,259 @@
+{
+  "status": "PARTIAL_CANDIDATE_REQUIRES_ENGINEERING_CORRECTION",
+  "batchId": "GPIO7_2L_J12south36",
+  "variant": "2L",
+  "sourceExpectedSHA256": "D022917C5F893A104A6C5A98D71326D17FDCA7791750077F54B0B3B6A002BD29",
+  "sourceNativeLog": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_source_2L_b015_DRC_PENDING_stored",
+  "operations": [
+    {
+      "type": "via",
+      "id": "HI_2L_GPIO_PB11_1_V1",
+      "net": "GPIO_PB11",
+      "xy": [
+        31.7,
+        22.1
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_GPIO_PB11_1_R1",
+      "net": "GPIO_PB11",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          33.7,
+          25.3
+        ],
+        [
+          33.5,
+          25.1
+        ],
+        [
+          33.5,
+          24.95
+        ],
+        [
+          33.05,
+          24.5
+        ],
+        [
+          32.1,
+          24.5
+        ],
+        [
+          31.7,
+          24.1
+        ],
+        [
+          31.7,
+          22.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_GPIO_PB11_1_R2",
+      "net": "GPIO_PB11",
+      "layer": "TOP",
+      "points": [
+        [
+          31.7,
+          22.1
+        ],
+        [
+          31.7,
+          21.7
+        ],
+        [
+          32.55,
+          20.85
+        ],
+        [
+          32.55,
+          17.2
+        ],
+        [
+          31.15,
+          15.8
+        ],
+        [
+          31.15,
+          13.95
+        ],
+        [
+          27.25,
+          10.05
+        ],
+        [
+          25.95,
+          10.05
+        ],
+        [
+          25.4,
+          9.5
+        ],
+        [
+          25.4,
+          8.05
+        ],
+        [
+          25.3,
+          7.95
+        ],
+        [
+          20.3,
+          7.95
+        ],
+        [
+          19.25,
+          9.0
+        ],
+        [
+          19.27,
+          9.0
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    }
+  ],
+  "proofs": [
+    {
+      "from": "U1.22",
+      "to": "J12.5",
+      "connected": true
+    }
+  ],
+  "candidateReviews": [
+    {
+      "net": "GPIO_PB1",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 6.19
+    },
+    {
+      "net": "GPIO_PB10",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 6.16
+    },
+    {
+      "net": "GPIO_PB11",
+      "joins": 1,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 1,
+      "seconds": 7.33
+    },
+    {
+      "net": "GPIO_PB12",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 6.25
+    },
+    {
+      "net": "GPIO_PB13",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 5.33
+    },
+    {
+      "net": "GPIO_PB14",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 6.42
+    },
+    {
+      "net": "GPIO_PB15",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 8.28
+    }
+  ],
+  "failures": [
+    {
+      "net": "GPIO_PB1",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB1_ENGINEERED_ANCHOR",
+          "to": "J12.3",
+          "reason": "No geometric candidate after 21660 expanded cells; reached=[{'layer': 'TOP', 'count': 7993, 'bbox': [35.2, 20.650000000000002, 49.550000000000004, 30.0], 'nearestTargetMM': 27.50422876577346}, {'layer': 'BOTTOM', 'count': 12227, 'bbox': [35.4, 20.75, 49.550000000000004, 28.3], 'nearestTargetMM': 26.166058167022413}]"
+        }
+      ]
+    },
+    {
+      "net": "GPIO_PB10",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB10_ENGINEERED_ANCHOR",
+          "to": "J12.4",
+          "reason": "No geometric candidate after 21805 expanded cells; reached=[{'layer': 'TOP', 'count': 7821, 'bbox': [35.15, 20.650000000000002, 49.550000000000004, 30.0], 'nearestTargetMM': 24.89696567857216}, {'layer': 'BOTTOM', 'count': 12253, 'bbox': [35.4, 20.75, 49.550000000000004, 28.3], 'nearestTargetMM': 24.068722442207026}]"
+        }
+      ]
+    },
+    {
+      "net": "GPIO_PB12",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB12_ENGINEERED_ANCHOR",
+          "to": "J12.6",
+          "reason": "No geometric candidate after 23528 expanded cells; reached=[{'layer': 'TOP', 'count': 12241, 'bbox': [34.050000000000004, 7.15, 37.85, 23.25], 'nearestTargetMM': 12.690000000000001}, {'layer': 'BOTTOM', 'count': 10407, 'bbox': [34.85, 8.05, 38.800000000000004, 22.3], 'nearestTargetMM': 13.20363964973295}]"
+        }
+      ]
+    },
+    {
+      "net": "GPIO_PB13",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB13_ENGINEERED_ANCHOR",
+          "to": "J12.7",
+          "reason": "No geometric candidate after 61475 expanded cells; reached=[{'layer': 'TOP', 'count': 11861, 'bbox': [34.050000000000004, 7.15, 37.95, 23.150000000000002], 'nearestTargetMM': 10.149999999999999}, {'layer': 'BOTTOM', 'count': 9628, 'bbox': [34.85, 8.05, 38.800000000000004, 21.1], 'nearestTargetMM': 10.666888018536614}]"
+        }
+      ]
+    },
+    {
+      "net": "GPIO_PB14",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB14_ENGINEERED_ANCHOR",
+          "to": "J12.8",
+          "reason": "No geometric candidate after 56783 expanded cells; reached=[{'layer': 'TOP', 'count': 19185, 'bbox': [34.050000000000004, 7.15, 49.550000000000004, 30.0], 'nearestTargetMM': 7.609999999999999}, {'layer': 'BOTTOM', 'count': 22795, 'bbox': [34.85, 8.05, 49.550000000000004, 28.3], 'nearestTargetMM': 8.13216453350521}]"
+        }
+      ]
+    },
+    {
+      "net": "GPIO_PB15",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB15_ENGINEERED_ANCHOR",
+          "to": "J13.3",
+          "reason": "No geometric candidate after 131920 expanded cells; reached=[{'layer': 'TOP', 'count': 7350, 'bbox': [36.65, 20.650000000000002, 49.550000000000004, 30.0], 'nearestTargetMM': 31.00573495339209}, {'layer': 'BOTTOM', 'count': 12195, 'bbox': [35.4, 20.75, 49.550000000000004, 28.3], 'nearestTargetMM': 32.70171402235668}]"
+        }
+      ]
+    }
+  ],
+  "scope": "Only specified ordinary nets; explicit critical routes excluded. Paths obey supplied geometry/clearance/keepout policies but this is not native DRC approval, automatic product routing, reference certification or manufacturing release.",
+  "pending": [
+    "Native batch create/update/DRC/fresh reopen",
+    "Actual reference continuity along both layers",
+    "Signal transition nearby GND return connections",
+    "Whole-board plane island/neck review",
+    "Physical/electrical class exceptions at actual positions"
+  ],
+  "seconds": 45.97
+}

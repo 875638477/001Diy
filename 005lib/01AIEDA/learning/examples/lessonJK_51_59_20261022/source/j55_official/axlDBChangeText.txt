@@ -1,0 +1,67 @@
+
+  NAME
+         axlDBChangeText - modify text charactisitics in the database
+  FUNCTION
+         axlDBChangeText(
+             o_dbid
+             t_text
+             [r_textOrientation/x_textBlock]
+         )
+         ==> l_result/nil
+ 
+  SYNOPSIS
+         Modifies a text string in the layout with the arguments as described 
+         below. Arguments, t_text and r_textOrientation may be nil if you
+         want to keep current settings on the text.
+ 
+         To move text use axlTransformObject.
+ 
+         For renaming refdes this works the same as edit text in that it
+         checks for the HARD_LOCATION property and will not rename refdes
+         if this property is present. If you want to ignore this property
+         use axlRenameRefdes.
+  NEEDS
+         o_dbid                  - text dbid
+         t_text                  - The text string.
+         r_textOrientation       - axlTextOrientation structure:
+                                 defstruct axlTextOrientation
+                                    r_textOrientation ;the orientation of text
+                                    textBlock     ;string - text block name
+                                    rotation      ;rotation in floatnum degrees
+                                    mirrored      ;t-->mirrored, nil --> not mirrored
+                                                  ;'GEOMETRY --> only geometry is mirrored.
+                                    justify       ;"left", "center", "right"
+                                    If you are modifing any of these arguments
+                                    you must provide all of them, copy the
+                                    values that are the same from the existing
+                                    text dbid
+ 
+                                 Note: As with all SKILL defstructs, use 
+                                  constructor function: make_axlTextOrientation
+                                  to create instances of axlTextOrientation. 
+                                  Use copy function: copy_axlTextOrientation
+                                  to copy instances of axlTextOrientation.
+         x_textBlock             - if just changing the text block
+  RETURNS
+         l_result/nil:         - nil if not created, or a list containing
+                                         (car) list of DBID of the text
+                                         (cadr) t if DRCs created or nil.
+  NOTE
+         Do NOT pass a text string with newlines.
+  SEE ALSO
+         axlTransformObject, axlChangeLayer, axlRenameRefdes, axlTextOrientationCopy
+  EXAMPLE
+         Example is text added in axlDBCreateText
+            text = car(ret)
+ 
+         1) change text 
+              cret = axlDBChangeText( text "Chamfer neither sides")
+ 
+         2) change text block
+              cret = axlDBChangeText( text nil 4)
+ 
+         3) change rotation and text
+              axlTextOrientationCopy(text myorient)
+              myorient->rotation = 0.0
+              cret = axlDBChangeText(text "New text" myorient)
+

@@ -1,0 +1,9 @@
+from pathlib import Path
+import json
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');s=(R/'scripts/precheck_RIGHT10_full_v8.py').read_text().replace('_v8.json','_v9.json').replace('RIGHT10_FULL_v8_','RIGHT10_FULL_v9_');(R/'scripts/precheck_RIGHT10_full_v9.py').write_text(s,encoding='utf-8')
+for v in ['2L','4L']:
+ f=R/f'RIGHT10_FULL_{v}_v9.json';p=json.loads(f.read_text());p['returnReview']=[dict(a,engineeringCondition=a['engineeringCondition'].replace('reviewed in native','must be verified in native')) for a in p['returnReview']];f.write_text(json.dumps(p,indent=2),encoding='utf-8')
+ pol=json.loads((R/f'RIGHT10_full_policy_{v}_v8.json').read_text());pol['pendingOperations'] += [o for o in p['operations'] if o['id'].startswith('RIGHT_RETURN_')];(R/f'RIGHT10_full_policy_{v}_v9.json').write_text(json.dumps(pol,indent=2),encoding='utf-8')
+old="variant=sys.argv[1] if len(sys.argv)>1 else '2L';p=json.loads((R/f'RIGHT10_FULL_{variant}_v9.json').read_text());"
+new="""variant=sys.argv[1] if len(sys.argv)>1 else '2L';p=json.loads((R/f'RIGHT10_FULL_{variant}_v9.json').read_text());pol=json.loads((R/f'RIGHT10_full_policy_{variant}_v9.json').read_text());ids={o['id'] for o in p['operations']};p['operations'] += [o for o in pol['pendingOperations'] if o['id'] not in ids];p['operations'] += [o for o in pol['pendingDeleteSegments'] if o['id'] not in ids];p['placementChanges']=pol['pendingPlacementChanges'];"""
+assert old in s;s=s.replace(old,new).replace('RIGHT10_FULL_v9_','RIGHT10_FULL_future_v9_');(R/'scripts/precheck_RIGHT10_full_future_v9.py').write_text(s,encoding='utf-8')

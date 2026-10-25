@@ -1,0 +1,185 @@
+{
+  "status": "PARTIAL_CANDIDATE_REQUIRES_ENGINEERING_CORRECTION",
+  "batchId": "GPIO3_2L_probe016tiny38",
+  "variant": "2L",
+  "sourceExpectedSHA256": "D022917C5F893A104A6C5A98D71326D17FDCA7791750077F54B0B3B6A002BD29",
+  "sourceNativeLog": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_source_2L_b015_DRC_PENDING_stored",
+  "operations": [
+    {
+      "type": "via",
+      "id": "HI_2L_GPIO_PB1_1_V1",
+      "net": "GPIO_PB1",
+      "xy": [
+        36.8,
+        29.35
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26,
+      "purpose": "Geometric candidate signal transition; local reference and GND return-via review required"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_GPIO_PB1_1_R1",
+      "net": "GPIO_PB1",
+      "layer": "TOP",
+      "points": [
+        [
+          38.3,
+          27.35
+        ],
+        [
+          37.9,
+          27.75
+        ],
+        [
+          37.9,
+          28.25
+        ],
+        [
+          36.8,
+          29.35
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_GPIO_PB1_1_R2",
+      "net": "GPIO_PB1",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          36.8,
+          29.35
+        ],
+        [
+          36.4,
+          29.35
+        ],
+        [
+          31.35,
+          34.4
+        ],
+        [
+          28.6,
+          34.4
+        ],
+        [
+          27.15,
+          32.95
+        ],
+        [
+          20.55,
+          32.95
+        ],
+        [
+          20.5,
+          33.0
+        ],
+        [
+          17.45,
+          33.0
+        ],
+        [
+          14.35,
+          29.9
+        ],
+        [
+          13.7,
+          29.9
+        ],
+        [
+          9.9,
+          26.1
+        ],
+        [
+          9.9,
+          20.2
+        ],
+        [
+          8.9,
+          19.2
+        ],
+        [
+          8.9,
+          14.3
+        ],
+        [
+          14.2,
+          9.0
+        ],
+        [
+          14.19,
+          9.0
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    }
+  ],
+  "proofs": [
+    {
+      "from": "U1.19",
+      "to": "J12.3",
+      "connected": true
+    }
+  ],
+  "candidateReviews": [
+    {
+      "net": "GPIO_PB1",
+      "joins": 1,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 1,
+      "seconds": 8.48
+    },
+    {
+      "net": "GPIO_PB10",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 7.32
+    },
+    {
+      "net": "GPIO_PB15",
+      "joins": 0,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 2,
+      "seconds": 8.0
+    }
+  ],
+  "failures": [
+    {
+      "net": "GPIO_PB10",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB10_ENGINEERED_ANCHOR",
+          "to": "J12.4",
+          "reason": "No geometric candidate after 150001 expanded cells; reached=[{'layer': 'TOP', 'count': 25909, 'bbox': [12.55, 20.6, 49.150000000000006, 38.650000000000006], 'nearestTargetMM': 18.00080275987713}, {'layer': 'BOTTOM', 'count': 70415, 'bbox': [12.350000000000001, 20.700000000000003, 49.400000000000006, 38.7], 'nearestTargetMM': 16.6000120481884}]"
+        }
+      ]
+    },
+    {
+      "net": "GPIO_PB15",
+      "remainingComponents": 2,
+      "attempts": [
+        {
+          "from": "GPIO_PB15_ENGINEERED_ANCHOR",
+          "to": "J13.3",
+          "reason": "No geometric candidate after 150001 expanded cells; reached=[{'layer': 'TOP', 'count': 6534, 'bbox': [36.65, 22.150000000000002, 46.6, 34.550000000000004], 'nearestTargetMM': 28.21552941200997}, {'layer': 'BOTTOM', 'count': 14858, 'bbox': [34.35, 21.3, 48.300000000000004, 36.35], 'nearestTargetMM': 26.36801281856484}]"
+        }
+      ]
+    }
+  ],
+  "scope": "Only specified ordinary nets; explicit critical routes excluded. Paths obey supplied geometry/clearance/keepout policies but this is not native DRC approval, automatic product routing, reference certification or manufacturing release.",
+  "pending": [
+    "Native batch create/update/DRC/fresh reopen",
+    "Actual reference continuity along both layers",
+    "Signal transition nearby GND return connections",
+    "Whole-board plane island/neck review",
+    "Physical/electrical class exceptions at actual positions"
+  ],
+  "seconds": 23.79
+}

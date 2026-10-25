@@ -1,0 +1,10 @@
+import pathlib,json
+R=pathlib.Path(__file__).resolve().parents[1]
+manual=['GND','VIN_RAW','VIN_FUSED','VIN_PROT','V5','V3V3','VDDA','BUCK_SW','BUCK_BOOT','BUCK_FB','OSC_IN','OSC_OUT','XTAL_OUT','NRST','ADC0','ADC_IN','USB_DP','USB_DM','PA11_SHARED','PA12_SHARED','USB_VBUS','USB_CC1','USB_CC2','CAN_H','CAN_L']
+power=['GND','V3V3','V5','VDDA']
+boxes=[((34.2,23.5),(36.5,25.5)),((41.5,21.2),(43.5,23.5)),((43.5,28.5),(45.8,30.5))]
+regions=[]
+for a,b in boxes:regions.append({'id':'G31_U1_ESCAPE','layer':'TOP','polygon':[[a[0],a[1]],[b[0],a[1]],[b[0],b[1]],[a[0],b[1]]],'nets':power,'kinds':['smdpin','line'],'gap':.2,'basis':'Existing native region, NC_POWER_LV_S-to-any; only smdpin_line and line_line'})
+d={'status':'INITIAL_ENGINEERING_RESERVATIONS_FOR_UNEXECUTED_CANDIDATES','manualOnlyNets':manual,'regionOverrides':regions,'reservedAreas':[{'id':'HSE_PLANNING_ENVELOPE','polygon':[[37.5,31.95],[47.85,31.95],[47.85,39.1],[37.5,39.1]],'layers':['TOP','BOTTOM'],'allowedNets':['GND','OSC_IN','OSC_OUT','XTAL_OUT','V3V3'],'basis':'Conservative prototype envelope. Replace by exact executed HSE island/moat/guard reservations before native ordinary routes.'},{'id':'SWITCHING_BLOCK','polygon':[[10,14],[31,14],[31,25.5],[10,25.5]],'layers':['TOP','BOTTOM'],'allowedNets':['GND','VIN_RAW','VIN_FUSED','VIN_PROT','V5','BUCK_SW','BUCK_BOOT','BUCK_FB'],'basis':'Reserve hot-loop and feedback block from unrelated digital traversal.'}],'noGlobalGroundViaAreas':[[[37.15,31.6],[48.2,31.6],[48.2,39.45],[37.15,39.45]]],'viaCostMM':5.,'bottomCost':1.15,'scope':'Planning only. Must reconcile to actual critical checkpoint and class/region definitions; no current path is native approved.'}
+(R/'plans/ordinary_routing_policy_v0.json').write_text(json.dumps(d,indent=2),encoding='utf8')
+print('Prototype policy written; no Cadence execution')

@@ -1,0 +1,1154 @@
+[
+  {
+    "ref": "U1",
+    "id": "U_MCU",
+    "page": "MCU_SUPPLY",
+    "value": "STM32F103C8T6",
+    "mpn": "STM32F103C8T6",
+    "pins": {
+      "1": "V3V3",
+      "2": "GPIO_PC13",
+      "3": "GPIO_PC14",
+      "4": "GPIO_PC15",
+      "5": "OSC_IN",
+      "6": "OSC_OUT",
+      "7": "NRST",
+      "8": "GND",
+      "9": "VDDA",
+      "10": "ADC0",
+      "11": "GPIO_PA1",
+      "12": "GPIO_PA2",
+      "13": "GPIO_PA3",
+      "14": "PA4_SPI_NSS",
+      "15": "PA5_SPI_SCK",
+      "16": "PA6_SPI_MISO",
+      "17": "PA7_SPI_MOSI",
+      "18": "VBUS_PRESENT_N",
+      "19": "GPIO_PB1",
+      "20": "BOOT1",
+      "21": "GPIO_PB10",
+      "22": "GPIO_PB11",
+      "23": "GND",
+      "24": "V3V3",
+      "25": "GPIO_PB12",
+      "26": "GPIO_PB13",
+      "27": "GPIO_PB14",
+      "28": "GPIO_PB15",
+      "29": "USB_ATTACH_N",
+      "30": "PA9_UART_TX",
+      "31": "PA10_UART_RX",
+      "32": "PA11_SHARED",
+      "33": "PA12_SHARED",
+      "34": "SWDIO",
+      "35": "GND",
+      "36": "V3V3",
+      "37": "SWCLK",
+      "38": "GPIO_PA15",
+      "39": "SWO",
+      "40": "GPIO_PB4",
+      "41": "GPIO_PB5",
+      "42": "I2C_SCL",
+      "43": "I2C_SDA",
+      "44": "BOOT0",
+      "45": "GPIO_PB8",
+      "46": "GPIO_PB9",
+      "47": "GND",
+      "48": "V3V3"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "J1",
+    "id": "J_PWR",
+    "page": "POWER",
+    "value": "9-16V",
+    "mpn": "",
+    "pins": {
+      "1": "VIN_RAW",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": ">=24V >=0.5A connector, exact MPN before mechanical release"
+  },
+  {
+    "ref": "F1",
+    "id": "F_IN",
+    "page": "POWER",
+    "value": "500mA",
+    "mpn": "0467.500NR",
+    "pins": {
+      "1": "VIN_RAW",
+      "2": "VIN_FUSED"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "D1",
+    "id": "D_REV",
+    "page": "POWER",
+    "value": "SS14",
+    "mpn": "SS14-E3/61T",
+    "pins": {
+      "1": "VIN_PROT",
+      "2": "VIN_FUSED"
+    },
+    "populate": "yes",
+    "requirements": "40V VRRM 1A; local pin1=K pin2=A"
+  },
+  {
+    "ref": "C1",
+    "id": "C_IN_BULK",
+    "page": "POWER",
+    "value": "47uF",
+    "mpn": "",
+    "pins": {
+      "1": "VIN_PROT",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "electrolytic ESR provides source-cable resonance damping; polarity pin1+"
+  },
+  {
+    "ref": "C2",
+    "id": "C_IN",
+    "page": "POWER",
+    "value": "22uF",
+    "mpn": "",
+    "pins": {
+      "1": "VIN_PROT",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "effective >=10uF at16V including tolerance/temp/DC bias"
+  },
+  {
+    "ref": "C3",
+    "id": "C_IN_HF",
+    "page": "POWER",
+    "value": "100nF",
+    "mpn": "",
+    "pins": {
+      "1": "VIN_PROT",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "U2",
+    "id": "U_BUCK",
+    "page": "POWER",
+    "value": "TPS54202",
+    "mpn": "TPS54202DDCR",
+    "pins": {
+      "1": "GND",
+      "2": "BUCK_SW",
+      "3": "VIN_PROT",
+      "4": "BUCK_FB",
+      "5": null,
+      "6": "BUCK_BOOT"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "C4",
+    "id": "C_BOOT",
+    "page": "POWER",
+    "value": "100nF",
+    "mpn": "",
+    "pins": {
+      "1": "BUCK_BOOT",
+      "2": "BUCK_SW"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "L1",
+    "id": "L_BUCK",
+    "page": "POWER",
+    "value": "15uH +/-20%",
+    "mpn": "XAL6060-153MEC",
+    "pins": {
+      "1": "BUCK_SW",
+      "2": "V5"
+    },
+    "populate": "yes",
+    "requirements": "DCRmax43.75mohm@25C, Isat5.8A typ (30% L drop), Irms4.5A at20C rise; covers nominal120mA and is above TPS54202 current-limit maximum3.9/4.3A at25C; temperature/current curves and actual PCB heat remain validation"
+  },
+  {
+    "ref": "C5",
+    "id": "C5_A",
+    "page": "POWER",
+    "value": "22uF",
+    "mpn": "",
+    "pins": {
+      "1": "V5",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "pair effective >=30uF total at5V; verify selected MPN bias data; Cff75pF starting value requires stability test"
+  },
+  {
+    "ref": "C6",
+    "id": "C5_B",
+    "page": "POWER",
+    "value": "22uF",
+    "mpn": "",
+    "pins": {
+      "1": "V5",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "same as C5_A"
+  },
+  {
+    "ref": "R1",
+    "id": "R_FB_HI",
+    "page": "POWER",
+    "value": "100k",
+    "mpn": "",
+    "pins": {
+      "1": "V5",
+      "2": "BUCK_FB"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R2",
+    "id": "R_FB_LO",
+    "page": "POWER",
+    "value": "13.5k",
+    "mpn": "",
+    "pins": {
+      "1": "BUCK_FB",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "C7",
+    "id": "C_FF",
+    "page": "POWER",
+    "value": "75pF",
+    "mpn": "",
+    "pins": {
+      "1": "V5",
+      "2": "BUCK_FB"
+    },
+    "populate": "yes",
+    "requirements": "feedforward across upper FB resistor; official 5V low-ESR starting point, verify loop after actual C/L selected"
+  },
+  {
+    "ref": "U3",
+    "id": "U_LDO",
+    "page": "POWER",
+    "value": "TLV75533P",
+    "mpn": "TLV75533PDBVR",
+    "pins": {
+      "1": "V5",
+      "2": "GND",
+      "3": "V5",
+      "4": null,
+      "5": "V3V3"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "C8",
+    "id": "C_LDO_IN",
+    "page": "POWER",
+    "value": "2.2uF",
+    "mpn": "",
+    "pins": {
+      "1": "V5",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "effective >=0.47uF worst case; pin-local"
+  },
+  {
+    "ref": "C9",
+    "id": "C_LDO_OUT",
+    "page": "POWER",
+    "value": "4.7uF",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "effective >=0.47uF worst case; pin-local"
+  },
+  {
+    "ref": "J2",
+    "id": "J_USB",
+    "page": "USB_CAN",
+    "value": "USB-C USB2 DEVICE",
+    "mpn": "USB4105-GF-A",
+    "pins": {
+      "A1_B12": "GND",
+      "A4_B9": "USB_VBUS",
+      "B8": null,
+      "A5": "USB_CC1",
+      "B7": "USB_DM",
+      "A6": "USB_DP",
+      "A7": "USB_DM",
+      "B6": "USB_DP",
+      "A8": null,
+      "B5": "USB_CC2",
+      "B4_A9": "USB_VBUS",
+      "B1_A12": "GND",
+      "SH1": "GND",
+      "SH2": "GND",
+      "SH3": "GND",
+      "SH4": "GND"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R3",
+    "id": "R_CC1",
+    "page": "USB_CAN",
+    "value": "5.1k",
+    "mpn": "",
+    "pins": {
+      "1": "USB_CC1",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R4",
+    "id": "R_CC2",
+    "page": "USB_CAN",
+    "value": "5.1k",
+    "mpn": "",
+    "pins": {
+      "1": "USB_CC2",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "U4",
+    "id": "U_USB_ESD",
+    "page": "USB_CAN",
+    "value": "USBLC6-2SC6",
+    "mpn": "USBLC6-2SC6",
+    "pins": {
+      "1": "USB_DP",
+      "2": "GND",
+      "3": "USB_DM",
+      "4": "USB_DM",
+      "5": "USB_VBUS",
+      "6": "USB_DP"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "C10",
+    "id": "C_USB_VBUS",
+    "page": "USB_CAN",
+    "value": "100nF",
+    "mpn": "",
+    "pins": {
+      "1": "USB_VBUS",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "no board power from USB VBUS; cap supplies ESD rail HF return"
+  },
+  {
+    "ref": "R5",
+    "id": "R_USB_DP",
+    "page": "USB_CAN",
+    "value": "22R",
+    "mpn": "",
+    "pins": {
+      "1": "PA12_SHARED",
+      "2": "USB_DP"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R6",
+    "id": "R_USB_DM",
+    "page": "USB_CAN",
+    "value": "22R",
+    "mpn": "",
+    "pins": {
+      "1": "PA11_SHARED",
+      "2": "USB_DM"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R7",
+    "id": "R_VBUS_GATE",
+    "page": "USB_CAN",
+    "value": "10k",
+    "mpn": "",
+    "pins": {
+      "1": "USB_VBUS",
+      "2": "VBUS_GATE"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R8",
+    "id": "R_VBUS_GPD",
+    "page": "USB_CAN",
+    "value": "1M",
+    "mpn": "",
+    "pins": {
+      "1": "VBUS_GATE",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "Q1",
+    "id": "Q_VBUS",
+    "page": "USB_CAN",
+    "value": "2N7002",
+    "mpn": "2N7002",
+    "pins": {
+      "1": "VBUS_GATE",
+      "2": "GND",
+      "3": "VBUS_PRESENT_N"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R9",
+    "id": "R_VBUS_READ",
+    "page": "USB_CAN",
+    "value": "10k",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "VBUS_PRESENT_N"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "Q2",
+    "id": "Q_ATTACH",
+    "page": "USB_CAN",
+    "value": "DMP2035U",
+    "mpn": "DMP2035U-7",
+    "pins": {
+      "1": "USB_ATTACH_N",
+      "2": "V3V3",
+      "3": "USB_PULLUP_SRC"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R10",
+    "id": "R_ATTACH_OFF",
+    "page": "USB_CAN",
+    "value": "100k",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "USB_ATTACH_N"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R11",
+    "id": "R_DP_PULLUP",
+    "page": "USB_CAN",
+    "value": "1.5k",
+    "mpn": "",
+    "pins": {
+      "1": "USB_PULLUP_SRC",
+      "2": "USB_DP"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "U5",
+    "id": "U_CAN",
+    "page": "USB_CAN",
+    "value": "TCAN332",
+    "mpn": "TCAN332DR",
+    "pins": {
+      "1": "CAN_TXD",
+      "2": "GND",
+      "3": "V3V3",
+      "4": "CAN_RXD",
+      "5": null,
+      "6": "CAN_L",
+      "7": "CAN_H",
+      "8": null
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "C11",
+    "id": "C_CAN",
+    "page": "USB_CAN",
+    "value": "100nF",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "C12",
+    "id": "C_CAN_BULK",
+    "page": "USB_CAN",
+    "value": "1uF",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R12",
+    "id": "R_CAN_TX",
+    "page": "USB_CAN",
+    "value": "0R",
+    "mpn": "",
+    "pins": {
+      "1": "PA12_SHARED",
+      "2": "CAN_TXD"
+    },
+    "populate": "DNP default USB mode",
+    "requirements": ""
+  },
+  {
+    "ref": "R13",
+    "id": "R_CAN_RX",
+    "page": "USB_CAN",
+    "value": "0R",
+    "mpn": "",
+    "pins": {
+      "1": "PA11_SHARED",
+      "2": "CAN_RXD"
+    },
+    "populate": "DNP default USB mode",
+    "requirements": ""
+  },
+  {
+    "ref": "R14",
+    "id": "R_CAN_TX_IDLE",
+    "page": "USB_CAN",
+    "value": "10k",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "CAN_TXD"
+    },
+    "populate": "yes",
+    "requirements": "explicit recessive default complements internal pull-up; no output contention at3.3V"
+  },
+  {
+    "ref": "R15",
+    "id": "R_CAN_TERM",
+    "page": "USB_CAN",
+    "value": "120R",
+    "mpn": "",
+    "pins": {
+      "1": "CAN_H",
+      "2": "CAN_L"
+    },
+    "populate": "yes",
+    "requirements": "fit at physical two bus ends only; DNP for intermediate node"
+  },
+  {
+    "ref": "J3",
+    "id": "J_CAN",
+    "page": "USB_CAN",
+    "value": "CAN",
+    "mpn": "",
+    "pins": {
+      "1": "CAN_H",
+      "2": "CAN_L",
+      "3": "GND"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "J4",
+    "id": "J_UART",
+    "page": "INTERFACES",
+    "value": "3V3",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "UART_TX",
+      "3": "UART_RX",
+      "4": "GND"
+    },
+    "populate": "yes",
+    "requirements": "V3V3 is OUT/reference <=10mA combined connector load; no external power injection"
+  },
+  {
+    "ref": "R16",
+    "id": "R_UART_TX",
+    "page": "INTERFACES",
+    "value": "33R",
+    "mpn": "",
+    "pins": {
+      "1": "PA9_UART_TX",
+      "2": "UART_TX"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R17",
+    "id": "R_UART_RX",
+    "page": "INTERFACES",
+    "value": "0R",
+    "mpn": "",
+    "pins": {
+      "1": "PA10_UART_RX",
+      "2": "UART_RX"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R18",
+    "id": "R_UART_IDLE",
+    "page": "INTERFACES",
+    "value": "10k",
+    "mpn": "",
+    "pins": {
+      "1": "UART_RX",
+      "2": "V3V3"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "J5",
+    "id": "J_I2C",
+    "page": "INTERFACES",
+    "value": "3V3",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "I2C_SCL",
+      "3": "I2C_SDA",
+      "4": "GND"
+    },
+    "populate": "yes",
+    "requirements": "short bench interconnect; no hot plug; <=10mA total header load"
+  },
+  {
+    "ref": "R19",
+    "id": "R_I2C_SCL",
+    "page": "INTERFACES",
+    "value": "2.2k",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "I2C_SCL"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R20",
+    "id": "R_I2C_SDA",
+    "page": "INTERFACES",
+    "value": "2.2k",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "I2C_SDA"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "J6",
+    "id": "J_SPI",
+    "page": "INTERFACES",
+    "value": "3V3",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "SPI_SCK",
+      "3": "SPI_MOSI",
+      "4": "SPI_MISO",
+      "5": "SPI_NSS",
+      "6": "GND"
+    },
+    "populate": "yes",
+    "requirements": "exact receiver setup/hold and edge spec needed before faster/longer interface"
+  },
+  {
+    "ref": "R21",
+    "id": "R_SPI_SCK",
+    "page": "INTERFACES",
+    "value": "33R",
+    "mpn": "",
+    "pins": {
+      "1": "PA5_SPI_SCK",
+      "2": "SPI_SCK"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R22",
+    "id": "R_SPI_MOSI",
+    "page": "INTERFACES",
+    "value": "33R",
+    "mpn": "",
+    "pins": {
+      "1": "PA7_SPI_MOSI",
+      "2": "SPI_MOSI"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R23",
+    "id": "R_SPI_NSS",
+    "page": "INTERFACES",
+    "value": "33R",
+    "mpn": "",
+    "pins": {
+      "1": "PA4_SPI_NSS",
+      "2": "SPI_NSS"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R24",
+    "id": "R_SPI_MISO",
+    "page": "INTERFACES",
+    "value": "0R",
+    "mpn": "",
+    "pins": {
+      "1": "PA6_SPI_MISO",
+      "2": "SPI_MISO"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R25",
+    "id": "R_SPI_NSS_PU",
+    "page": "INTERFACES",
+    "value": "10k",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "PA4_SPI_NSS"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "C13",
+    "id": "C_VDD24",
+    "page": "MCU_SUPPLY",
+    "value": "100nF",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "X7R >=10V; own pin-local return loop at VDD24"
+  },
+  {
+    "ref": "C14",
+    "id": "C_VDD36",
+    "page": "MCU_SUPPLY",
+    "value": "100nF",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "X7R >=10V; own pin-local return loop at VDD36"
+  },
+  {
+    "ref": "C15",
+    "id": "C_VDD48",
+    "page": "MCU_SUPPLY",
+    "value": "100nF",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "X7R >=10V; own pin-local return loop at VDD48"
+  },
+  {
+    "ref": "C16",
+    "id": "C_MCU_BULK",
+    "page": "MCU_SUPPLY",
+    "value": "10uF",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "Effective >=4.7uF; at VDD3 pin48 per DS5319 Figure14"
+  },
+  {
+    "ref": "C17",
+    "id": "C_VBAT",
+    "page": "MCU_SUPPLY",
+    "value": "100nF",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "No battery; VBAT1 tied to V3V3, local capacitor"
+  },
+  {
+    "ref": "R26",
+    "id": "R_VDDA_LINK",
+    "page": "MCU_SUPPLY",
+    "value": "0R",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "VDDA"
+    },
+    "populate": "yes",
+    "requirements": "Default zero-ohm link; no automatic ferrite substitution; continuous GND"
+  },
+  {
+    "ref": "C18",
+    "id": "C_VDDA_HF",
+    "page": "MCU_SUPPLY",
+    "value": "10nF",
+    "mpn": "",
+    "pins": {
+      "1": "VDDA",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "Local VDDA9/VSSA8 loop; bulk effective>=1uF"
+  },
+  {
+    "ref": "C19",
+    "id": "C_VDDA_MID",
+    "page": "MCU_SUPPLY",
+    "value": "100nF",
+    "mpn": "",
+    "pins": {
+      "1": "VDDA",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "Local VDDA9/VSSA8 loop; bulk effective>=1uF"
+  },
+  {
+    "ref": "C20",
+    "id": "C_VDDA_BULK",
+    "page": "MCU_SUPPLY",
+    "value": "2.2uF",
+    "mpn": "",
+    "pins": {
+      "1": "VDDA",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "Local VDDA9/VSSA8 loop; bulk effective>=1uF"
+  },
+  {
+    "ref": "R27",
+    "id": "R_NRST",
+    "page": "CLOCK_RESET",
+    "value": "10k",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "NRST"
+    },
+    "populate": "yes",
+    "requirements": "External optional pull-up; internal pull-up remains"
+  },
+  {
+    "ref": "C21",
+    "id": "C_NRST",
+    "page": "CLOCK_RESET",
+    "value": "100nF",
+    "mpn": "",
+    "pins": {
+      "1": "NRST",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "Does not guarantee reset release delay; debugger must sink reset"
+  },
+  {
+    "ref": "J7",
+    "id": "J_RESET",
+    "page": "CLOCK_RESET",
+    "value": "RESET_SHUNT",
+    "mpn": "",
+    "pins": {
+      "1": "NRST",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "Normally open service shunt; >=20us low; not pushbutton footprint"
+  },
+  {
+    "ref": "R28",
+    "id": "R_BOOT0_PD",
+    "page": "CLOCK_RESET",
+    "value": "10k",
+    "mpn": "",
+    "pins": {
+      "1": "BOOT0",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R29",
+    "id": "R_BOOT1_PD",
+    "page": "CLOCK_RESET",
+    "value": "10k",
+    "mpn": "",
+    "pins": {
+      "1": "BOOT1",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R30",
+    "id": "R_BOOT_SERVICE",
+    "page": "CLOCK_RESET",
+    "value": "1k",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "BOOT_SERVICE"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "J8",
+    "id": "J_BOOT",
+    "page": "CLOCK_RESET",
+    "value": "BOOT0_SERVICE",
+    "mpn": "",
+    "pins": {
+      "1": "BOOT_SERVICE",
+      "2": "BOOT0"
+    },
+    "populate": "yes",
+    "requirements": "Open=flash default; short with BOOT1 low=USART1 ROM loader; no USB ROM DFU"
+  },
+  {
+    "ref": "J9",
+    "id": "J_SWD",
+    "page": "CLOCK_RESET",
+    "value": "SWD_LOCAL_1X6",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "GND",
+      "3": "SWDIO",
+      "4": "SWCLK",
+      "5": "NRST",
+      "6": "SWO"
+    },
+    "populate": "yes",
+    "requirements": "Local labelled 2.54mm header, not standard keyed ARM10; pin1 VTREF output/sense only; no back-power"
+  },
+  {
+    "ref": "Y1",
+    "id": "Y_HSE",
+    "page": "CLOCK_RESET",
+    "value": "8MHz",
+    "mpn": "ABM3B-8.000MHZ-D2Y-T",
+    "pins": {
+      "1": "OSC_IN",
+      "2": "GND",
+      "3": "XTAL_OUT",
+      "4": "GND"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "R31",
+    "id": "R_HSE_SER",
+    "page": "CLOCK_RESET",
+    "value": "0R",
+    "mpn": "",
+    "pins": {
+      "1": "OSC_OUT",
+      "2": "XTAL_OUT"
+    },
+    "populate": "yes",
+    "requirements": "Drive-level tuning position; do not raise without startup/drive measurement"
+  },
+  {
+    "ref": "C22",
+    "id": "C_HSE_IN",
+    "page": "CLOCK_RESET",
+    "value": "16pF",
+    "mpn": "",
+    "pins": {
+      "1": "OSC_IN",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "C0G +/-5%; stray10pF assumption, prototype tuning required"
+  },
+  {
+    "ref": "C23",
+    "id": "C_HSE_OUT",
+    "page": "CLOCK_RESET",
+    "value": "16pF",
+    "mpn": "",
+    "pins": {
+      "1": "XTAL_OUT",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "Same as C_HSE_IN"
+  },
+  {
+    "ref": "J10",
+    "id": "J_ADC",
+    "page": "ADC_GPIO",
+    "value": "ADC_0_TO_3V0",
+    "mpn": "",
+    "pins": {
+      "1": "ADC_IN",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "Only controlled <=1Hz 0..3.0V source, Rout<=1k, board powered, no hotplug/negative input"
+  },
+  {
+    "ref": "R32",
+    "id": "R_ADC",
+    "page": "ADC_GPIO",
+    "value": "1k",
+    "mpn": "",
+    "pins": {
+      "1": "ADC_IN",
+      "2": "ADC0"
+    },
+    "populate": "yes",
+    "requirements": ""
+  },
+  {
+    "ref": "C24",
+    "id": "C_ADC",
+    "page": "ADC_GPIO",
+    "value": "100nF",
+    "mpn": "",
+    "pins": {
+      "1": "ADC0",
+      "2": "GND"
+    },
+    "populate": "yes",
+    "requirements": "X7R >=10V, low-frequency source only; not 100Sps anti-alias filter"
+  },
+  {
+    "ref": "J11",
+    "id": "J_GPIO1",
+    "page": "ADC_GPIO",
+    "value": "GPIO_3V3",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "GND",
+      "3": "GPIO_PC13",
+      "4": "GPIO_PC14",
+      "5": "GPIO_PC15",
+      "6": "GPIO_PA1",
+      "7": "GPIO_PA2",
+      "8": "GPIO_PA3"
+    },
+    "populate": "yes",
+    "requirements": "3.3V logic only, combined header load<=10mA; PA15/PB4 require JTAG disabled with SWD kept; PC13-15 limited drive"
+  },
+  {
+    "ref": "J12",
+    "id": "J_GPIO2",
+    "page": "ADC_GPIO",
+    "value": "GPIO_3V3",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "GND",
+      "3": "GPIO_PB1",
+      "4": "GPIO_PB10",
+      "5": "GPIO_PB11",
+      "6": "GPIO_PB12",
+      "7": "GPIO_PB13",
+      "8": "GPIO_PB14"
+    },
+    "populate": "yes",
+    "requirements": "3.3V logic only, combined header load<=10mA; PA15/PB4 require JTAG disabled with SWD kept; PC13-15 limited drive"
+  },
+  {
+    "ref": "J13",
+    "id": "J_GPIO3",
+    "page": "ADC_GPIO",
+    "value": "GPIO_3V3",
+    "mpn": "",
+    "pins": {
+      "1": "V3V3",
+      "2": "GND",
+      "3": "GPIO_PB15",
+      "4": "GPIO_PA15",
+      "5": "GPIO_PB4",
+      "6": "GPIO_PB5",
+      "7": "GPIO_PB8",
+      "8": "GPIO_PB9"
+    },
+    "populate": "yes",
+    "requirements": "3.3V logic only, combined header load<=10mA; PA15/PB4 require JTAG disabled with SWD kept; PC13-15 limited drive"
+  }
+]

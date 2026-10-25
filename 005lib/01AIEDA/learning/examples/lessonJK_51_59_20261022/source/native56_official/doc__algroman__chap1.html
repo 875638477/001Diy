@@ -1,0 +1,1015 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html xmlns="http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Preparing Manufacturing Data -- 1</title>
+<META NAME="Approver" CONTENT="Technical Publications">
+<META NAME="Author" CONTENT="Technical Publications">
+<META NAME="CreateDate" CONTENT="2017-07-31">
+<META NAME="CreateTime" CONTENT="1501473056">
+<META NAME="DataType" CONTENT="Manuals">
+<META NAME="Description" CONTENT="Describes how to prepare manufacturing data using Allegro PCB Editor, Allegro Package Designer, and System-in-Package tools.">
+<META NAME="DocTitle" CONTENT="Preparing Manufacturing Data">
+<META NAME="DocType" CONTENT="User Guide">
+<META NAME="EdmsRelease" CONTENT="FM-Wiki-1.0_P005">
+<META NAME="FileTitle" CONTENT="1">
+<META NAME="FileType" CONTENT="Chapter">
+<META NAME="Group" CONTENT="Allegro User Guide">
+<META NAME="Keyword" CONTENT="algroman">
+<META NAME="Language" CONTENT="English">
+<META NAME="ModifiedDate" CONTENT="2017-07-31">
+<META NAME="ModifiedTime" CONTENT="1501473056">
+<META NAME="NextFile" CONTENT="chap2.html">
+<META NAME="Order" CONTENT="10">
+<META NAME="PageCount" CONTENT="18">
+<META NAME="Platform" CONTENT="ALL">
+<META NAME="PrevFile" CONTENT="preface.html">
+<META NAME="Product" CONTENT="Allegro PCB Editor, Cadence SiP Digital, Cadence SiP RF">
+<META NAME="ProductFamily" CONTENT="Silicon-Package-Board Co-Design, IC Packaging, IC Packaging">
+<META NAME="ProductVersion" CONTENT="17.2-2016">
+<META NAME="RightsManagement" CONTENT="Copyright 19912017 Cadence Design Systems Inc.">
+<META NAME="Title" CONTENT="Preparing Manufacturing Data -- 1">
+<META NAME="TopicTags" CONTENT="FALSE">
+<META NAME="Version" CONTENT="17.2-2016">
+  </head>
+  <body style="margin-left: 5%;">
+    <a name="pagetop"></a>
+    <a name="firstpage"></a>
+    <!-- Begin Buttons -->
+    <table width="650" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td height="36" width="650" colspan="10">
+          <img src="images/header_doc.gif" width="650" height="34">
+        </td>
+      </tr>
+      <tr>
+        <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+                </td>
+<td height="20" width="73">
+<a href="algromanTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+        <td>
+          <a href="preface.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+        </td>
+        <td>
+          <a href="chap2.html"><img src="images/nav_next.gif" alt="Next" border="0"></a>
+        </td>
+        <td height="20">
+          <a>
+<a href="algroman.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+          </a>
+        </td>
+        <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+        </td>
+        <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+        </td>
+        <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+        </td>
+        <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+        </td>
+      </tr>
+    </table>
+    <!-- End Buttons -->
+    <p>
+    <hr>
+    <p>
+      <h3>
+        <center>
+          <font >
+            <div>Allegro&#174; User Guide:  Preparing Manufacturing Data</div>
+            <font >
+              <div>Product Version 17.2&#45;2016 April 2016</div>
+            </font>
+          </font>
+        </center>
+      </h3>
+      <br>
+    </p>
+    <div>
+      <h1>1<a name="1032955">&nbsp;</a></h1>
+      <h1><a name="1034986">PCB Editor and APD:Test Preparation</a></h1>
+      <p><a name="1035780">Testprep creates test probe sites for any type of test fixture using parameters that enable you to control making test locations on a design. You can create testpoints automatically or interactively, as well as edit all testpoint locations. You can automatically choose and label appropriate component pin, via, or pad locations as testpoints. Once you finish generating testpoints, you can create artwork and NC data files for drilling design test beds.</a></p>
+      <h2><a name="1055110">Testprep Design Rule Check (DRC)</a></h2>
+      <p><a name="1040544">The testprep process scans the database to create testpoints for each net, according to the criteria that you establish in the Testprep Parameters dialog box, and runs appropriate DRCs. These include testpoint&#45;to&#45;component spacing DRCs, such as testpoint&#45;location and testpoint&#45;pad&#45;to&#45;component outline. When you set the </a><font color="#000000"><em>Allow Under Component</em></font> field to <font color="#000000"><em>Never,</em></font> these DRCs detect a testpoint that may lie beneath a component as a result of placing or moving a component over an existing testpoint via. The current setting for <font color="#000000"><em>Component Representation (</em></font>either ASSEMBLY or PLACE_BOUND) is used. Changing either of these fields causes the layout editor to mark DRCs out of date.</p>
+      <p><a name="1040549">For testpoint pins and vias too close to a component (package), TC bowtie characters flag testpoint pins and vias that fail either of the testpoint&#45;to&#45;component spacing checks. For testpoint pins and vias under a component, TC bowties also flag DRCs. The DRC subclass layer is top or bottom, corresponding to the side on which the component is placed.</a></p>
+      <h2><a name="1043955">Testprep Process Flow</a></h2>
+      <p><a name="1044148">Due to the high density of design elements on PCBs and MCMs, Cadence recommends that you run testprep to optimize testing.</a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 1&#45;1&nbsp; </strong></font></strong>
+        <strong><a name="1056039">The Testprep Process Flow</a></strong>
+      </p>
+      <p align="left"><a name="1056081"><img src="images/chap1.04.1.1.png" alt=""><br></a></p>
+      <p><a name="1034160">It is ideally suited to the requirements of testing on a "bed&#45;of&#45;nails" test fixture as illustrated in Figure </a><a href="#1040858" title="1"><font color="#0000ff"><u>1&#45;2</u></font></a>, but it offers the flexibility to accommodate any type of testing requirement, such as bareboard or in&#45;circuit testing. </p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 1&#45;2&nbsp; </strong></font></strong>
+        <strong><a name="1040858">Parts Associated with a Bed&#45;of&#45;Nails Fixture</a></strong>
+      </p>
+      <p align="left"><a name="1041046"><img src="images/chap1.04.1.2.png" alt=""><br></a></p>
+      <h2><a name="1041048">Bareboard Testing</a></h2>
+      <p><a name="1034964">A bareboard test consists of an electrical continuity check performed after fabrication of the physical board. Connections between all component pins ensure that no shorts or opens exist. Once the physical board is checked, it is ready for assembly. During a bareboard test, all component pins on each side of the PCB are probed. Doing so requires a fixture containing probe pins that contact the PCB at specific locations. Bareboard testers use a bed of nails, which are spring&#45;loaded pins positioned every 100 mils. Flexible and double&#45;density testers have pins that are closer. These nails are hard&#45;wired to a test box that can recognize any connectivity that may exist between them. </a></p>
+      <p><a name="1034966">A test fixture is sandwiched between the bed of nails and the PCB. The fixture contains probe pins that adapt the bed of nails to specific contact points on the PCB surface. Most PCB designs are double&#45;sided, while most bareboard test machines are single&#45;sided, which means they have only one bed of nails. Newer two&#45;sided testers can probe both sides of the PCB simultaneously (a bed of nails and separate test fixtures for each side). Instead of using double&#45;sided testers, clamshell test fixtures may be used, which permit both sides of the board to be tested using a single&#45;sided tester. To avoid the cost of clamshell testing, the board may be tested twice, once per side.</a></p>
+      <h2><a name="1035178">In&#45;Circuit Testing</a></h2>
+      <p><a name="1034965">In&#45;circuit testing verifies that the board and components function together as intended, and occurs after board assembly. During in&#45;circuit testing, test engineers require access to each signal by probing a pin or routing via from the bottom side of the board. As in bare&#45;board testing, in&#45;circuit testing requires a test fixture that serves as a receptacle for the probe pins. Yet unlike bareboard testing, the fixture does not adapt a bed of nails to the PCB surface. The pins in the fixture correspond directly to the test locations on the PCB and are custom wired through cable connectors to the test box as no bed of nails exists. The PCB sits on the test fixture bottom side down in a vacuum&#45;sealed enclosure.</a></p>
+      <h2><a name="1041398">Evaluating Testability</a></h2>
+      <p><a name="1035183">Early in the design process, evaluate the testability factors involved in the type of test under consideration, working with the board manufacturer to assess their test environment and data you can supply. Your test engineering group can provide additional in&#45;circuit test information. </a></p>
+      <p><a name="1035235">For bareboard tests, using two test fixtures (one for each side), place through&#45;hole and most SMT parts so that all pins are on a reasonable test grid that maximizes part&#45;to&#45;part clearances and reduces the density of probe points per square inch. Top&#45;side surface&#45;mount&#45;technology PCBs should be probed from the top, bottom&#45;side and all through&#45;hole parts, from the bottom. </a></p>
+      <p><a name="1035184">For in&#45;circuit tests using one fixture for the bottom&#45;side only, consider mechanical obstructions or restrictions. Mechanical obstructions in a design may prevent you from adding testpoints. To accommodate these restrictions, define probe keepouts on the top or bottom of the board in layout mode. To control the proximity of test vias to surrounding tall parts, build a probe keepout area into the library package definitions in symbol mode, using the MANUFACTURING&#47;NO_PROBE_TOP or NO_PROBE_BOTTOM layers of the symbol drawing. Control the clearance from test vias to surrounding conductive areas (wiring, vias, pads, and so on) from the </a><font color="#000000"><em>Spacing Rule</em></font> dialog box.</p>
+      <h2><a name="1035182">Assigning Test Preparation Properties</a></h2>
+      <p><a name="1036380">During the testprep process, you can assign the NO_TEST, TESTPOINT_QUANTITY, and TESTPOINT_ALLOW_UNDER testprep&#45;related properties on nets or symbols from within the manual testprep environment using </a><font color="#000000"><em>Manufacture - Test Prep - Manual </em></font>(<font size="2" face="'Courier New'" color="#000000">testprep manual</font> command) and clicking the <font color="#000000"><em>Properties</em></font> button in the <font color="#000000"><em>Options</em></font> tab or by choosing <font color="#000000"><em>Manufacture - Testprep - Properties</em></font> (<font size="2" face="'Courier New'" color="#000000">testprep properties</font> command). You can also use <font color="#000000"><em>Edit - Properties </em></font>(<a href="../pcoms/pchap.html#property_edit" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>property edit</u></font></a> command) to assign testprep&#45;related properties. </p>
+      <p><a name="1039599">To exclude a net from being processed, attach the NO_TEST property to it. Specify the desired number of testpoints on the net using the TESTPOINT_QUANTITY</a> property.</p>
+      <p><a name="1039602">The TESTPOINT_ALLOW_UNDER property can be specified on a symbol to allow testpoints underneath all its component instances even when the </a><font color="#000000"><em>Allow Under Componen</em></font>t field may be set to <font color="#000000"><em>Never</em></font>. For example, you may attach this property to a large mechanical component, such as a heat sink on the bottom side, that occupies considerable real estate yet is not inserted until after testing finishes. </p>
+      <p><a name="1045498">The TESTPOINT_MAX_DENSITY property can be specified on a symbol to verify the maximum testpoint allocation beneath a component instance of a symbol but on the opposite side to that on which the component&#47;symbol is placed. This property works in conjunction with the </a><font color="#000000"><em>Component Area Check</em></font> on the Testprep Density Check dialog box, available by choosing <font color="#000000"><em>Manufacture - Testprep - Density Check</em></font> (<a href="../tcoms/tchap.html#testprep_density" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>testprep density</u></font></a> command). For example, if a 2000&#45;pin BGA occurs on layer TOP, the layout editor checks for a maximum testpoint allocation on layer BOTTOM, but within that component's place&#45;bound region.</p>
+      <p><a name="1045504">The </a><font color="#000000"><em>Component Area Check </em></font>considers components with multiple place&#45;bound areas on a side. While addressing multiple areas, the <font color="#000000"><em>Component Area Check</em></font> optionally uses ASSEMBLY data depending on the <font color="#000000"><em>Component Representation</em></font> setting on the General Parameters tab. ASSEMBLY data is used if it is a SHAPE or RECTANGLE entity, or a single multi&#45;segment LINE entity that forms a closed shape. ASSEMBLY data resembling a rectangle, but actually comprised of four different LINE entities, is not used. Arcs are  recognized in a SHAPE or LINE entity. </p>
+      <p><a name="1045478">A testpoint within multiple areas of the component counts once toward the density check. In the log file, the testpoint appears multiple times, once for each area that it is within.</a></p>
+      <p><a name="1039633">See </a><font color="#000000"><em>Manufacture - Testprep - Properties</em></font> (<a href="../tcoms/tchap.html#testprep_properties" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>testprep properties</u></font></a> command) in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font> for procedural information.</p>
+      <h2><a name="1034998">Defining Probe Keepout Areas</a></h2>
+      <p><a name="1034365">Testprep</a> lets you define probe keepouts, which are areas in which testpoints cannot be generated. You can create a probe keepout in the layout, or in a library symbol. For procedural information, refer to <font color="#000000"><em>Setup - Areas - Probe Keepout</em></font> (<a href="../kcoms/kchap.html#keepout_probe" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>keepout probe</u></font></a> command) in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>.</p>
+      <h2><a name="1034384">Setting Test Preparation Parameters</a></h2>
+      <p><a name="1039743">You use the </a><font color="#000000"><em>Testprep</em></font> Parameters dialog box to determine the output of the automatic or manual testprep process by setting parameters, available by choosing <font color="#000000"><em>Manufacture - Testprep - Automatic</em></font> (<font size="2" face="'Courier New'" color="#000000">testprep automatic</font> command), or <font color="#000000"><em>Manufacture - Testprep - Resequence </em></font>(<a href="../tcoms/tchap.html#testprep_resequence" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>testprep resequence</u></font></a> command) or <font color="#000000"><em>Manufacture - Testprep - Manual </em></font>(<font size="2" face="'Courier New'" color="#000000">testprep manual</font> command) and clicking the <font color="#000000"><em>Parameters</em></font> button.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <font size="3"><img src="images/tip.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1053358">You can also access the Testprep Parameters dialog box by choosing </a><font color="#000000"><em>Setup - Design Parameters</em></font> (<font size="2" face="'Courier New'" color="#000000">prmed</font> command), then clicking <font color="#000000"><em>Edit testprep parameters</em></font> under the <font color="#000000"><em>Mfg Applications</em></font> tab, or use <font color="#000000"><em>Manufacture - Testprep - Parameters </em></font>(<a href="../tcoms/tchap.html#testprep_prmed" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>testprep prmed</u></font></a> command).</font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h3><a name="1041919">Specifying Multiple Via Pad Replacements</a></h3>
+      <p><a name="1053416">You can enter multiple replacement padstacks, including top&#45; and bottom&#45;side blind vias, for a via using the </a><font color="#000000"><em>Padstack Selections</em></font> tab of the Testprep Parameters Dialog Box, available by choosing <font color="#000000"><em>Manufacture - Testprep - Parameters </em></font>(<a href="../tcoms/tchap.html#testprep_prmed" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>testprep prmed</u></font></a> command). Doing so eliminates incremental execution and thereby supports double&#45;sided&#47;clamshell fixturing to accommodate PCB density factors and High Density Interconnect (HDI) technology.</p>
+      <p><a name="1045627">To populate the </a><font color="#000000"><em>Padstack Selections</em></font> tab with predefined parameters, you can also load a Comma Separated Value (<font size="2" face="'Courier New'" color="#000000">.csv</font>) file containing your preferred settings; conversely, you can save <font color="#000000"><em>Padstack Selections</em></font> tab values to a <font size="2" face="'Courier New'" color="#000000">.csv</font> file. </p>
+      <p><a name="1042183">The etch&#47;conductor layer stackup of a padstack you choose as a replacement must be identical to that of the existing via in the </a><font color="#000000"><em>Existing Via</em></font> field, or match that of the specified <font color="#000000"><em>TOP</em></font> or<font color="#000000"><em> BOTTOM Side Testpoint</em></font>. The padstack's TOP or BOTTOM pad size must satisfy the <font color="#000000"><em>Min pad size</em></font> specified on the <font color="#000000"><em>General Parameters </em></font>tab. </p>
+      <p><a name="1041991">After initially entering values in the </a><font color="#000000"><em>Padstack Selections</em></font> tab, you may add via padstacks to a design. Click <font color="#000000"><em>Load New Existing Vias</em></font> to<font color="#000000"><em> </em></font>scan the design for via padstacks missing from the <font color="#000000"><em>Padstack Selections</em></font> tab <font color="#000000"><em>TOP&#47;BOTTOM Side Replacement</em></font> fields. These padstacks append to the table as new rows, and their names automatically appear in the <font color="#000000"><em>Existing Via</em></font> field in blue to highlight that they were automatically, as opposed to manually, added. If you do not enter values in these rows, closing the Testprep Parameters dialog box discards them. It reappears as a new <font color="#000000"><em>Existing Via</em></font> when you run <font color="#000000"><em>Manufacture - Testprep - Manual </em></font>(<font size="2" face="'Courier New'" color="#000000">testprep manual</font> command) or <font color="#000000"><em>Manufacture - Testprep - Parameters </em></font>(<a href="../tcoms/tchap.html#testprep_prmed" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>testprep prmed</u></font></a> command) again.</p>
+      <p><a name="1041932">When you specify a TOP&#47;BOTTOM side replacement for a mirrored existing via, the replacement padstack `s bottom pad must meet the </a><font color="#000000"><em>Min pad size</em></font> on the <font color="#000000"><em>General Parameters</em></font> tab because it subsequently mirrors to the TOP&#47;BOTTOM side for testing. </p>
+      <h3><a name="1041925">Controlling Probe Types And Spacing</a></h3>
+      <p><a name="1053421">To avoid recursively running testprep to achieve optimal test coverage, you can define probe sizes and spacing combinations on the </a><font color="#000000"><em>Probe Types</em></font> tab of the Testprep Parameters Dialog Box, available by choosing <font color="#000000"><em>Manufacture - Testprep - Automatic </em></font>(<font size="2" face="'Courier New'" color="#0000ff"><u>testprep prmed</u></font> command). The <font color="#000000"><em>Probe Types</em></font> tab defines largest to smallest spacings, for example:100, 75, 50, etc., correlated to probe types, or names, used in the fixture. The greater the spacing, the more rigid the probe. Conversely, with tighter spacing (50 mils or less), the probes are thinner and more flexible, which can create fault or structural issues in the fixture bed. Closing the Testprep Parameters dialog box and invoking <font color="#000000"><em>Manufacture - Testprep - Manual </em></font>(<font size="2" face="'Courier New'" color="#000000">testprep manual</font> command) or <font color="#000000"><em>Manufacture - Testprep - Parameters </em></font>(<a href="../tcoms/tchap.html#testprep_prmed" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>testprep prmed</u></font></a> command<font color="#000000"><em>) </em></font>automatically sorts the tab by descending probe type, or by descending probe spacing for identical probe types.</p>
+      <p><a name="1042807">Use the </a><font color="#000000"><em>Enable</em></font> field to choose the probe types that guide automatic testprep. If you enable two or more probe types and spacings, testprep runs sequentially from highest to lowest probe type. After you manually add or change test probes, you choose <font color="#000000"><em>Manufacture - Testprep - Resequence </em></font>with the relevant probe type settings enabled, and testprep rescans the board and assigns probe types based on current spacing. </p>
+      <p><a name="1043204">When testprep creates a testpoint using a probe type&#47;spacing combination, an internal TESTPOINT_PROBE_TYPE property (not user modifiable) attaches to the pin or via associated with it, whose value equals the probe type. If a specified testpoint cannot be added based on the first probe type&#47;spacing combination, the layout editor attempts the other combinations in sequence until all nets get the required number of testpoints, or all probe type&#47;spacing combinations are exhausted.</a></p>
+      <p><a name="1043304">When switching to a new type&#47;spacing combination, testpoints created with a new type (for example, 75) may alter testpoints created under a previous type (for example, 100). A type 75 testpoint with spacing of 75 may be placed 75 mils away from a type 100 testpoint that itself has a spacing of 90. The layout editor resolves the spacing violation by internally changing the TESTPOINT_PROBE_TYPE property on the existing probe&#45;type 100 testpoint from 100 to 75. Probe types are updated whenever you generate a new testpoint automatically or manually.</a></p>
+      <p><a name="1042164">Figures assigned to probe types are graphically unique to let you evaluate the results and optimize the probe distribution. For example, if you only allocate ten 50&#45;mil probes, you can examine their locations visually and possibly convert them to 75 mil by increasing the probe&#45;to&#45;probe spacing. Circles are reserved for the test fixture layer nor can you use the cross (+) because the layout editor uses it to indicate probe types that are too close. </a></p>
+      <p><a name="1039751">For procedural information, refer to </a><font color="#000000"><em>Manufacture - Testprep - Automatic</em></font> (<font size="2" face="'Courier New'" color="#0000ff"><u>testprep automatic</u></font> command) in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>.</p>
+      <h3><a name="1042552">Verifying Testpoint Density</a></h3>
+      <p><a name="1042553">In&#45;circuit test engineering limits the maximum number of testprobes that can be placed within a defined area or under a specific component. Dense testprobe placement can damage PCBs. </a></p>
+      <p><a name="1042554">To verify the testpoint density within user&#45;definable unit areas, choose </a><font color="#000000"><em>Manufacture - Testprep - Density Check</em></font> (<a href="../tcoms/tchap.html#testprep_density" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>testprep density</u></font></a> command). You specify the maximum number of testpoints allowed per unit area in the <font color="#000000"><em>Max testpoints per Unit Area</em></font> field. Exceeding this value creates rectangular figures that correspond to the user&#45;defined unit areas and overlay the PROBE_DEN_TOP and PROBE_DEN_BOTTOM subclasses of the MANUFACTURING class. The layout editor automatically creates or clears these subclasses as required to verify the testpoint density within the areas of violation. </p>
+      <p><a name="1045641">The </a><font size="2" face="'Courier New'" color="#000000">testprep_density.log</font> file flags all unit or component areas that exceed the allowable maximum as violations. Click on any hyperlinked x&#47;y coordinates in the report to center that location in the display.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 1&#45;3&nbsp; </strong></font></strong>
+        <strong><a name="1045195"><font size="2" face="'Courier New'" color="#000000"><strong>Sample Testprep_density.log</strong></font></a> File</strong>
+      </p>
+      <p align="left"><a name="1045712">&nbsp;</a></p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045716">(&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045718">(        Testprep Density Check Log File                     )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045719">(                                                            )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045720">(        Drawing          : exported.brd                     )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045721">(        Software Version : 15.5B1                           )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045722">(        Date&#47;Time        : Thu Apr 14 14:17:22 2005         )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045723">(                                                            )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045724">(&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045727">Clearing existing PROBE_DEN_TOP subclass ...</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045728">Clearing existing PROBE_DEN_BOTTOM subclass ...</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045730">Unit area density check settings ...</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045732">  Unit area square size:                     1000 MIL</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045733">  Unit area square displacement:              500 MIL</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045735">  Max testpoints per unit area:                    30</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045738">Performing testpoint unit area density check on TOP side ...</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045741">Performing testpoint unit area density check on BOTTOM side ...</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045743">  Unit area ((3264.50 665.30) (4264.50 1665.30)) centered at (3764.50 1165.30) ... 47 ... VIOLATION.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045744">    Testpoint TP341 at (4099.71 977.52).</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1045745">    Testpoint TP339 at (4099.71 938.15).</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1046770">NOTE: Component density checking using component assembly data ...</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1046772">Performing testpoint component area density check on TOP side ...</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1046775">Performing testpoint component area density check on BOTTOM side ...</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1046777">Component U22 located at (7519.00 4285.00) ... 76 (Maximum 1) ... VIOLATION.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1046778">    ... area located at (7239.47 4580.28)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1046779">    ... area located at (7184.35 3950.35)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1046780">    Testpoint TP593 at (7282.78 4048.78).</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1046781">    Testpoint TP547 at (7204.04 4048.78).</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1046782">Testpoint TP179 at (7833.96 4442.48).</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1046856">  Component U77 located at (5719.00 6710.00) ... 46 (Maximum 1) ... VIOLATION.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1046857">    ... area located at (5439.47 7005.28)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1046858">    ... area located at (5384.35 6375.35)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1046859">    Testpoint TP391 at (5482.78 6473.78).</a></font>
+      </p>
+      <h2><a name="1046860">Automatically Generating Testpoints</a></h2>
+      <p><a name="1039732">Automatic testprep scans each net in the design, compares the pins or vias within each net against the specified parameters, and selects test sites. If no suitable pins or via is found, no testpoint is generated although a new via may be generated (surface&#45;mount pad only). To exclude a net from processing, attach the NO_TEST property to it.</a></p>
+      <p><a name="1039771">The layout editor determines legal probe sites using the following hierarchical path, beginning with I&#47;O pins.</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039733">If no suitable I&#47;O pin satisfies the parameters you set, then the layout editor selects an IC output pin.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039734">If no output pin is available, then the layout editor considers any suitable pin as inputs or discrete pins. The layout editor flags these types of pin selection with asterisks in the log file. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039735">If the layout editor finds no legal pins, all pre&#45;existing vias are examined. </a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1039736">If all these criteria fail, then the layout editor issues a message if testability cannot be achieved. All chosen points are marked with a testpoint symbol (as defined on the </a><font color="#000000"><em>Probe Types</em></font> tab of the Testprep Parameters dialog box) on the MANUFACTURING&#47;PROBE_TOP or PROBE_BOTTOM layers of the layout drawing. The net name or probe number may also be included with each testpoint choice. </p>
+      <p><a name="1035060">Testprep generates a data file of X&#47;Y coordinates used to drill holes into the test fixture. These coordinates correspond to the test marker locations on the board. Probe pins are inserted that extend through the fixture and contact the surface of the board at a specific location (component pin or via).</a></p>
+      <h3><a name="1041973">Resequencing Testpoints</a></h3>
+      <p><a name="1042870">Even though testpoints may have sequential refdes text assigned (such as </a><font color="#000000"><em>TP1, TP2, &#8230; TP</em></font><font size="2" face="'Courier New'" color="#000000"><em>&#60;n&#62;</em></font> when you enable <font color="#000000"><em>stringNumeric </em></font>in the<font color="#000000"><em> Display</em></font> field in the Testprep Parameters dialog box), <font color="#000000"><em>TP1</em></font> may be on one side of the board, <font color="#000000"><em>TP2</em></font> on the other side etc., such that visually the testpoints do not appear sequentially. </p>
+      <p><a name="1042868">You can use</a><font color="#000000"><em> Manufacture - Testprep - Resequence </em></font>(<a href="../tcoms/tchap.html#testprep_resequence" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>testprep resequence</u></font></a> command) to rename the refdes text of testpoints to ensure a visually sequential appearance, sorted by X&#47;Y location from left to right and bottom to top on each side, starting with the TOP side first and then the BOTTOM side.</p>
+      <p><a name="1042244">Initially you may create testpoints with certain </a><font color="#000000"><em>Probe Types</em></font> enabled on the <font color="#000000"><em>Probe Types</em></font> tab of the Testprep Parameters Dialog Box, which is available by choosing <font color="#000000"><em>Manufacture - Testprep - Parameters </em></font>(<a href="../tcoms/tchap.html#testprep_prmed" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>testprep prmed</u></font></a> command). Then you may subsequently change vias that may be testpoints, and need to resequence probe types due to violations. Testpoints may be too close for the probe type. Or a probe type of 100 may be more appropriate for a testpoint initially assigned a probe type of 75 given its proximity to another testpoint, which has since been deleted or moved. </p>
+      <p><a name="1052957">You can use resequencing to detect invalid probe types and resequence them to valid probe types. If a valid probe type does not exist, such a testpoint can remain as is, but appears as TOO CLOSE in the Testprep report, Testprep Manual Query, or in the query available by choosing </a><font color="#000000"><em>Display - Element</em></font> (<a href="../scoms/schap.html#show_element" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>show element</u></font></a> command). The layout editor flags it as an invalid probe type and it appears on the PROBE_TOP&#47;BOTTOM subclasses with the cross (+) figure reserved for such testpoints.</p>
+      <h2><a name="1035040">Evaluating Results</a></h2>
+      <p><a name="1035063">You can evaluate the results of running testprep using the Testprep Report or the</a><font color="#000000"><em> </em></font><font size="2" face="'Courier New'" color="#000000">testprep.log</font> file.|</p>
+      <h3><a name="1035169">Testprep Report</a></h3>
+      <p><a name="1035170">This report organizes data regarding the testpoint coverage of a design, highlighting untestable nets, as well as the percentage coverage, number of nets covered, number of testpoints, and number&#47;percentage of testpoints on top&#47;bottom sides. It outlines:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1043673">Nets currently being tested, subdivided into sections for the top and bottom sides</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1043674">Untestable nets</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1043675">Nets currently flagged with the NO_TEST property</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1043669">If the testpoint is on a pin, the </a><font color="#000000"><em>Type</em></font> column indicates this as well as the refdes and pin number associated with the pin. An example is Pin (U1.1). Pad Size for a testpoint is the minimum dimension of the pad's bounding box.</p>
+      <h4><a name="1043700">Testprep General Analysis</a></h4>
+      <p><a name="1043670">In addition, the Testprep Report contains a section on testprep general analysis that appears after the report header, which compares coverage between an existing committed test fixture and current coverage, as the following example illustrates. </a></p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1053785">|===============================================================================|</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1053811">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Testprep Report</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1054043">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thu Apr 14 14:37:29 2005</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1053812">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#47;hm&#47;pwright&#47;boards&#47;exported.brd</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052807">&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052808">NOTE: An `*' in column 1 of the QUANTITY field for the TESTPOINT_QUANTITY net property value indicates that the net does not have the required number of testpoints.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1054193">A blank QUANTITY field indicates that the net does not have TESTPOINT_QUANTITY property set on it.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1054336">|===============================================================================|</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1054194">Testprep General Analysis ...</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052812">  Total number of nets                                ...   1244</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052813">  Total number of nets tested                         ...    649</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052814">  Total number of nets not tested                     ...    595</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052815">  Total number of nets flagged with NO_TEST property  ...      0</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052816">  Total number of nets testable (tested + not tested) ...   1244</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052817">  Percentage of all nets tested                       ...  52.17 percent</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052818">  Percentage of testable nets tested                  ...  52.17 percent</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052819">  Nets requiring more than one testprobe:</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052820">    (None)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052821">  Total number of testprobes on TOP    side           ...      0 (  0.00 percent)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052822">  Total number of testprobes on BOTTOM side           ...    649 (100.00 percent)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052823">  Total number of testprobes on pins                  ...    198</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052824">  Total number of testprobes on vias                  ...    451</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052825">  WARNING: There are    649 testprobes with no assigned probe type.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1052826">  Minimum pad size for probing                        ... 0 MIL</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1047669">&nbsp;</a></font>
+      </p>
+      <p><a name="1042390">The </a><font size="2" face="'Courier New'" color="#000000">Nets Requiring More Than One Testprobe</font> section details nets with a TESTPOINT_QUANTITY property greater than 1, which is the first number shown, followed by the actual number of testpoints currently on the net.</p>
+      <p><a name="1042428">Other messages include:</a></p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1042430">&nbsp;</a></font>
+      </p>
+      <table summary="" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF" width="640">
+        <caption>
+        <tr>
+          <td cellpadding="4" border="0" valign="top" >
+            <p><a name="1043803"><font color="#000000">WARNING: There are &#60;n&#62; testprobes with no assigned probe type</font></a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top" >
+            <p><a name="1043805">indicates testpoints created without active probe types in the Probe Types tab of the Testprep Parameters dialog box or created prior to release 15.5, where the design was upreved to release 15.5.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1043807"><font color="#000000">WARNING: There are &#60;n&#62; testprobes with the TOO&#45;CLOSE probe type.</font></a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1043809">After initially creating testpoints with particular </a><font color="#000000"><em>Probe Types</em></font> enabled, if you resequence without enabling the <font color="#000000"><em>Delete probes too close</em></font> field, <font size="2" face="'Courier New'" color="#000000"><em>&#60;n&#62;</em></font> testpoints may be too close for the probe type based on the required spacing and could not be resequenced to a valid type. For instance, a probe type of 100 may be more appropriate for a testpoint initially assigned a probe type of 75 given its proximity to another testpoint, which has since been deleted or moved. </p>
+          </td>
+        </tr>
+      </table>
+      <p><a name="1042342">The Testprep Report generated by </a><font color="#000000"><em>Tools - Reports</em></font> (<a href="../rcoms/rchap.html#reports" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>reports</u></font></a> command) provides additional information, which reflects the value of any TESTPOINT_PROBE_TYPE property attached to each reported testpoint. A <font color="#000000"><em>Probe Type</em></font> column in the report shows any assigned probe type for that testpoint. </p>
+      <h3><a name="1035269">The testprep.log File</a></h3>
+      <p><a name="1035273">When you run testprep,</a><strong> </strong>the layout editor generates an ASCII file called <font size="2" face="'Courier New'" color="#000000">testprep.log</font> (Figure <a href="#1035283" title="1"><font color="#0000ff"><u>1&#45;4</u></font></a>) that summarizes the most recent execution of the testprep program. It lists all parameters, net names, and pin numbers for all testpoints. Other statistics are warnings, fails, completions, location (top or bottom), ignores (no test nets), and failure reasons. To access this file, click <font color="#000000"><em>View Log</em></font> on the Testprep Automatic dialog box or choose <font color="#000000"><em>File - Viewlog</em></font>.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 1&#45;4&nbsp; </strong></font></strong>
+        <strong><a name="1035283">Sample Testprep Log File</a></strong>
+      </p>
+      <p align="left"><a name="1044919">&nbsp;</a></p>
+      <p align="left"><a name="1044920"><font color="#000000">(&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;)</font></a></p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044208">(        Testprep Automatic Log File                         )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044209">(                                                            )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044210">(        Drawing          : replace_existing_via.brd         )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044211">(        Software Version : 15.5A2                           )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044212">(        Date&#47;Time        : Wed Mar 30 13:30:53 2005         )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044213">(                                                            )</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044214">(&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044217">Probes accessing both sides of the board.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044218"> No restrictions on pad type.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044219"> Pin type restricted to &#39;VIA&#39;.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044220"> Minimum pad dimension is : 0</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044221"> Test pad grid: X: 0 Y: 0</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044222"> Minimum test point spacing is : 0</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044223"> Test points allowed under components due to bare board testing.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044224"> Component representation is ASSEMBLY data.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044225"> Bare board switch on, test points allowed on component pins on tested side.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044227"> Tested every satisfactory pin.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044228"> No unused pins tested.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044229"> Testing allowed directly on pin.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044230"> No direct trace testing allowed.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044231"> Automatic test point insertion disabled.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044232"> Test pad displacement: Min: 0, Max: 100</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044233"> Via replacement allowed.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044234"> Cline bubbling  allowed.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044236"> &#39;Padstack Selections&#39; settings are:</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044238">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOP Side&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOTTOM Side</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1054502">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1054531">SMT Testpad&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SMD25_50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SMD25_50B                       </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1054532">Thru Via&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PAD35CIR25D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PAD35CIR25D </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1054533"> &#39;Padstack Selections&#39; replacements are:</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044245">Existing Via&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOP Side&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOTTOM Side</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044246">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044247">VIA1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VIA1_A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VIA1_A                          </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044248">VIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VIA_A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VIA_A                           </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044249">DISABLED BLVIA5_BOT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BLVIA5_BOT_A                    </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044250">DISABLED BLVIA1_2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BLVIA1_2_A </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044252"> Executed in INCREMENTAL mode.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044253"> *** WARNING *** Pre&#45;existing test points may not fit parameters.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044254"> No text displayed on targets.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044255"> Probe text angle: 0 degrees.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044256"> Probe text offset: X: 0 Y: 0</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044259">  NET        PIN                              PROBE TEXT</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044260">==================================================================</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044262">Processing net VCC (1 out of 73),(c=0, f=0, i=0).</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044263"> Net VCC NOT ACCESSIBLE from either side.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044264">    (non&#45;via=10)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044266">Processing net TN&#45;9 (2 out of 73),(c=0, f=1, i=0).</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044267"> Net TN&#45;9 NOT ACCESSIBLE from either side.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044268">    (non&#45;via=2)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044270">Processing net TN&#45;8 (3 out of 73),(c=0, f=2, i=0).</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044271">  TN&#45;8       VIA             @(  4650,  6600)              (bottom)(pre&#45;existing)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044272">  TN&#45;8       VIA             @(  4650,  6500)              (bottom)(pre&#45;existing)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044273">  TN&#45;8       VIA             @(  4275,  6500)              (bottom)(pre&#45;existing)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044274">  TN&#45;8       VIA             @(  3625,  7500)              (bottom)(pre&#45;existing)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1044501">(non&#45;via=2)</a></font>
+      </p>
+      <h4><a name="1036529">Failure Reasons</a></h4>
+      <p><a name="1036536">The</a><font size="2" face="'Courier New'" color="#000000"> testprep.log</font> file may list the following failure reasons.</p>
+      <p><a name="1036627">&nbsp;</a></p>
+      <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="644">
+        <caption>
+        <tr>
+          <td cellpadding="4" valign="top" width="315">
+            <p><a name="1039127">Net </a><font size="2" face="'Courier New'" color="#000000"><em>&#60;name&#62;</em></font> NOT ACCESSIBLE from bottom side.	</p>
+            <p><a name="1039128">(pad undef=N, no pin&#45;escape=N, non&#45;routable=N</a></p>
+          </td>
+          <td cellpadding="4" valign="top" width="329">
+            <p><a name="1039130">N indicates the number of times a potential pin or via on the net could not be made into a testpoint for the specified reason. </a></p>
+            <p><a name="1039131">pad undef = N: N pins failed as no pad exists on the bottom side</a></p>
+            <p><a name="1039132">no pin&#45;escape = N: N pins failed an existing pin escape could not be found</a></p>
+            <p><a name="1039133">non&#45;routable = N: N pins failed as pin escape could not be inserted</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039139">too small</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039141">Pin&#47;via pad doesn&#39;t meet </a><font color="#000000"><em>Minimum Pad Size</em></font>.</p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039143">under comp</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039145">Pin&#47;via pad is under a component where disallowed.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039147">under pin</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039149">Testpoint on the pin on the same side of the board that the component is placed.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039151">off grid</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039153">Pin&#47;via is not on an enabled test grid.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039155">pad undef</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039157">Padstack has no pad defined on the layer to be tested.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039230">non&#45;smd</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039232">Pin&#47;via is not a surface&#45;mount device (SMD); pad stack type is set to SMT.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039226">non&#45;thru</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039228">Pin&#47;via is SMD; pad stack type is set to Thru.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039222">via</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039224">Via encountered for consideration, but specified Pin type doesn&#39;t allow vias.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039218">non&#45;via</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039220">Pin encountered for consideration, but&#39;Pin type&#39; doesn&#39;t allow pins.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039214">non&#45;output</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039216">Pin is not an output pin, Pin type set to Output</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039210">non&#45;i&#47;o</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039212">Pin is not an IO pin, Pin type set to Input</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039206">no pin&#45;escape</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039208">No existing() pin escape found on a pin</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039202">non&#45;routable</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039204">Pin escape could not be routed for a pin</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039198">too&#45;close</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039372">Testpoint would create a DRC error, OR is too close to another testpoint as per Min spacing</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039194">not&#45;placed</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039196">Unplaced pin encountered</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039190">not&#45;node</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039192">Pin&#47;via is NOT a node, Test method set to Node</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039186">out&#45;of&#45;bounds</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039188">Pin&#47;via is within a NO_PROBE area</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039182">pad&#45;mismatch</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039451">Via replacement padstack for Replace vias does not match the padstack of the via under consideration, such that connectivity would be affected</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039178">rep&#45;cause&#45;drc</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1039514">Replace vias is enabled, and replacement of the via pad is detecting the existence of a DRC error(s), either with or without cline bubbling</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1053137">pad&#45;cause&#45;drc</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1053139">Making a pin pad or a via pad (without replacement), a testpoint as is, detects the existence of DRC errors.</a></p>
+          </td>
+        </tr>
+      </table>
+      <h2><a name="1035331">Modifying Testpoints Interactively</a></h2>
+      <p><a name="1039878">After you generate testpoints automatically, you can modify them interactively using </a><font color="#000000"><em>Manufacture - Testprep - Manual</em></font> (<a href="../tcoms/tchap.html#testprep_manual" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>testprep manual</u></font></a> command). Prior to using the options outlined below, you may use the <font color="#000000"><em>Route - Connect </em></font>(<a href="../acoms/achap.html#add_connect" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>add connect</u></font></a> command) or <font color="#000000"><em>Route - Slide</em></font> (<a href="../scoms/schap.html#slide" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>slide</u></font></a> command) interactive etch editing tools with the appropriate bubble options to permit additional testpoints. </p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039880"><font color="#000000"><em>Add</em></font></a> allows a testpoint to be added to an existing via, pin, or cline</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039881"><font color="#000000"><em>Add (Scan and Highlight)</em></font></a> lets you review all untested nets, and each net is highlighted and fits into the window screen</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1041088"><font color="#000000"><em>Delete</em></font></a> removes the testpoint symbol from an existing testpoint via or pin and also reverts the test via to the original via padstack name if the <font color="#000000"><em>Replace Via</em></font> option was used. It also removes the physical via itself if it resulted from adding a testpoint to a trace, or from testprep automatic pin escape insertion. Removing a pin escape via removes the associated routing as well.&#39;</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039883"><font color="#000000"><em>Swap</em></font></a> exchanges the testpoint location to another location on the same net</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039873"><font color="#000000"><em>Query </em></font></a>provides net, location and symbol property information associated with the testpoint pin and permits limited querying of PROBE_DEN_TOP&#47;BOTTOM subclass density violation areas.</td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1039874">Fixing&#47;Unfixing Testpoints</a></h2>
+      <p><a name="1040354">You can globally fix all testpoints to prevent further editing or automatic removal of existing testpoints using </a><font color="#000000"><em>Manufacture - Testprep - Fix</em></font> (<a href="../tcoms/tchap.html#testprep_fix" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>testprep fix</u></font></a> command).</p>
+      <h2><a name="1039570">Generating the FIXTURE Subclasses</a></h2>
+      <p><a name="1036137">When the layout editor creates testpoints, the MANUFACTURING class PROBE_TOP and PROBE_BOTTOM subclasses capture testpoint locations; however, they change accordingly as you modify testpoints. A symbol figure (as defined on the </a><font color="#000000"><em>Probe Types</em></font> tab of the Testprep Parameters dialog box) appears at the testpoint location, along with testpoint identification text. These locations are subsequently used to generate NC drill files for test fixture fabrication for each side of the board, as required. </p>
+      <p><a name="1036138">As test fixtures are expensive, reusing them is desirable. Prior to revisions, you can choose </a><font color="#000000"><em>Manufacture - Testprep - Create FIXTURE</em></font> (<a href="../tcoms/tchap.html#testprep_createfixture" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>testprep create fixture</u></font></a> command) <font color="#000000"><em>to create</em></font> the static FIXTURE_TOP and FIXTURE_BOTTOM subclasses to copy PROBE_TOP and PROBE_BOTTOM subclass information to them. The FIXTURE_TOP and FIXTURE_BOTTOM subclasses maintain the information regardless of what testpoints are added, deleted, or moved during design revisions.</p>
+      <p><a name="1036139">By comparing the current PROBE subclass to the static FIXTURE subclass, you can tailor the revisions to synchronize current testpoint locations with the original FIXTURE locations. NC drill file generation only uses the PROBE subclass information.</a></p>
+      <h4><a name="1040100">Information on Testpoint Markers</a></h4>
+      <p><a name="1036141">Although markers (as defined in the </a><font color="#000000"><em>Figures</em></font> column on the <font color="#000000"><em>Probe Types</em></font> tab of the Testprep Parameters dialog box) appear with enabled PROBE_ subclasses to indicate that the pin or via is a testpoint, these markers do not actually exist on the PROBE subclass. (The circle symbol does exist on the FIXTURE subclass. However, as no association exists in the database between the circle symbol and the text on the FIXTURE subclass, you must be cautious when editing the FIXTURE subclass information.) </p>
+      <p><a name="1040178">Consequently, with only the PROBE_ subclasses displayed, you cannot choose testpoint markers and use </a><font color="#000000"><em>Display - Element</em></font> (<a href="../scoms/schap.html#show_element" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>show element</u></font></a> command) to obtain information about them. Visibility for vias or pins must be enabled as the information given is for the testpoint pin or via itself. </p>
+      <p><a name="1045037">When you initially create a FIXTURE subclass or update an existing one, the color visibility for the subclass is enabled to highlight the results immediately. Set colors and color priorities for the PROBE and FIXTURE subclasses to subsequently superimpose the symbol figures (as defined on the </a><font color="#000000"><em>Probe Types</em></font> tab of the Testprep Parameters dialog box) on the circles.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1045038">Symbol figure superimposed on circle means current and old testpoint location match. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1036145">Circle only means no testpoint currently exists at an old testpoint location. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039950">Symbol figure only means a testpoint currently exists at a location that had none.</a></td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1035774">Create NC Drill File or IPC356</a></h2>
+      <p><a name="1039844">You can use </a><font color="#000000"><em>Manufacture - Testprep - Create NC Drill Data</em></font><a href="../tcoms/tchap.html#testprep_ncdrill" target="external_window"> (</a><font size="2" face="'Courier New'" color="#0000ff"><u>testprep ncdrill</u></font> command) to output testpoint locations to NC drill files, used to drill testpoints in a fixture, or <font color="#000000"><em>File - Export - IPC356</em></font> (<a href="../icoms/ichap.html#ipc356_out" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>ipc356 out</u></font></a> command).</p>
+      <p><a name="1040436">&nbsp;</a></p>
+      <p><a name="1040275">&nbsp;</a></p>
+    </div>
+    <br>
+    <a href="#pagetop">Return to top of page</a>
+    <hr>
+    <hr align="left">
+    <div style="text-align: left;">
+      <!-- Begin Buttons -->
+      <table width="650" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+                    </td>
+<td height="20" width="73">
+<a href="algromanTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+          <td>
+            <a href="preface.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+          </td>
+          <td>
+            <a href="chap2.html"><img src="images/nav_next.gif" alt="Next" border="0"></a>
+          </td>
+          <td>
+            <a>
+<a href="algroman.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+            </a>
+          </td>
+          <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+          </td>
+          <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+          </td>
+          <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+          </td>
+          <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+          </td>
+        </tr>
+      </table>
+      <!-- End Buttons -->
+    </div>
+    <br>
+    <font size="-1" >
+For support, see <a href="http://support.cadence.com" target="_blank">Cadence Online Support</a> service.</font>
+    <br>
+    <br>
+    <font size="-1" >
+<font size="-1"><i>Copyright &#169; 2016, <a href ="http://www.cadence.com">Cadence Design Systems, Inc.</a></i></font>
+    </font>
+    <br>
+    <font size="-1" >
+All rights reserved.</font>
+    <br>
+    <br>
+  </body>
+</html>

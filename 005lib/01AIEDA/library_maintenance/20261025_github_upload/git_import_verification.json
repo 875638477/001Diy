@@ -1,0 +1,104 @@
+{
+  "status": "PASS_ENTIRE_IMPORTED_TREE_MATCHES_VERIFIED_SOURCE_SNAPSHOT",
+  "verified_at_utc": "2026-10-25T05:39:59.659008+00:00",
+  "commit": "e6c4470941a5cabc3c21fcf66d3f5d77dfab929f",
+  "tree": "df0fd2eed05ed3e44ecc3534a258bbfe333e3f8b",
+  "base_commit": "6e478a7603b6adbe790ea0ad0409fba48ca27e43",
+  "manifest_rows": 39122,
+  "expected_files_in_complete_tree": 39127,
+  "verification_scope": "Entire imported commit tree, not a sample or changed-file subset.",
+  "added_expected_records": [
+    "01AIEDA/library_maintenance/20261025_github_upload/upload_manifest.csv",
+    "01AIEDA/library_maintenance/20261025_github_upload/snapshot_verification.json",
+    "01AIEDA/library_maintenance/20261025_github_upload/commit_and_push.py",
+    "01AIEDA/library_maintenance/20261025_github_upload/fast_import_verified_snapshot.py",
+    "01AIEDA/library_maintenance/20261025_github_upload/git_import_method.json"
+  ],
+  "postcommit_record_note": "This proof, commit_preparation.json, all import/object-check/tree stdout/stderr logs and optional marks are generated after or during the commit preparation and retained under source 01AIEDA and workspace; these postcommit records are intentionally outside the committed tree.",
+  "postcommit_logs": [
+    {
+      "name": "fast_import.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retained_in_source_01AIEDA": true,
+      "included_in_commit_tree": false
+    },
+    {
+      "name": "fast_import.stderr.log",
+      "bytes": 1320,
+      "sha256": "621791856409a384af87f490fa319da10059f36d065026b5df1abbc495720670",
+      "retained_in_source_01AIEDA": true,
+      "included_in_commit_tree": false
+    },
+    {
+      "name": "fast_import_object_check.stdout.log",
+      "bytes": 1348484,
+      "sha256": "17cbb831b29b9a5c8b048ffb483895b8eb0d83506ba0c1cff0393c8082962056",
+      "retained_in_source_01AIEDA": true,
+      "included_in_commit_tree": false
+    },
+    {
+      "name": "fast_import_object_check.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retained_in_source_01AIEDA": true,
+      "included_in_commit_tree": false
+    },
+    {
+      "name": "fast_import_tree.stdout.log",
+      "bytes": 4953922,
+      "sha256": "620d4b5ba51e979f96595e68c06471f5a1da87e792d82a65a1fb8d6a345cd1de",
+      "retained_in_source_01AIEDA": true,
+      "included_in_commit_tree": false
+    },
+    {
+      "name": "fast_import_tree.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retained_in_source_01AIEDA": true,
+      "included_in_commit_tree": false
+    },
+    {
+      "name": "fast_import.marks",
+      "bytes": 913662,
+      "sha256": "88c73ef93de9e993dccbd609ed6800539823207d04c3f9df22c197d8a29e74d3",
+      "retained_in_source_01AIEDA": true,
+      "included_in_commit_tree": false
+    }
+  ],
+  "original_manifest_modified": false,
+  "source_originals_rehashed": false,
+  "main_compare_and_swap_promoted": true,
+  "index_refreshed_from_HEAD": true,
+  "network_operations": false,
+  "import": {
+    "started_utc": "2026-10-25T05:27:35.572226+00:00",
+    "finished_utc": "2026-10-25T05:39:56.828723+00:00",
+    "unique_expected_blobs": 27146,
+    "reused_existing_blobs": 7881,
+    "missing_unique_blobs_sha1_sha256_verified": 19265,
+    "stdout_log": "fast_import.stdout.log",
+    "stderr_log": "fast_import.stderr.log"
+  },
+  "tree_verification": {
+    "all_expected_paths_modes_types_and_blob_oids_match": true,
+    "entire_tree_entries_checked": 39127,
+    "unexpected_tree_entries": 0,
+    "missing_expected_entries": 0,
+    "root_directories": [
+      "01AIEDA",
+      "01Pad_lib",
+      "01Psm_lib",
+      "01_3d_step_lib",
+      "01aeLib",
+      "01brdlib",
+      "01captureLib",
+      "01env",
+      "01script_file"
+    ],
+    "single_parent": "6e478a7603b6adbe790ea0ad0409fba48ca27e43",
+    "authorized_root_readme_absent": true
+  },
+  "manifest_sha256": "73c220fcc01a8d0877ac7378d531476be172c42701cd63c7c5926d9f763492cd",
+  "snapshot_proof_sha256": "bca7fd8815155fe9bac148cce8bb1eaccef58ef199e433934d529a3afe23b6ee"
+}

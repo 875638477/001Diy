@@ -1,0 +1,78 @@
+{
+  "status": "NO_DEFINITE_OVERLAP_SPACING_AND_NATIVE_REVIEW_PENDING",
+  "checkpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\padentry_2L_b019_DRC_PENDING",
+  "plans": [
+    "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power/USB_COMMON_RETURN_LOCAL_VSS_STITCH_2L_01.json"
+  ],
+  "placementChanges": [],
+  "deletedSegments": [],
+  "operations": 1,
+  "piecesChecked": 2,
+  "movedPadPairsChecked": 0,
+  "placeBoundOverlapPairs": [],
+  "definiteOverlapPieces": 0,
+  "spacingWarningPieces": 2,
+  "issues": [
+    {
+      "operation": "USB_LOCAL_VSS35_STITCH",
+      "net": "GND",
+      "type": "via",
+      "segment": null,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "SWDIO",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            41.440000000000005,
+            21.39,
+            41.83,
+            21.779999999999998
+          ],
+          "actualCopperGapMM": 0.219713,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "SWDIO",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            41.67,
+            21.62,
+            41.83,
+            22.83
+          ],
+          "actualCopperGapMM": 0.219713,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "USB_LOCAL_VSS35_STITCH",
+      "net": "GND",
+      "type": "via",
+      "segment": null,
+      "layer": "BOTTOM",
+      "issues": [
+        {
+          "otherNet": "PA9_UART_TX",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            41.85,
+            20.7,
+            46.1,
+            20.900000000000002
+          ],
+          "actualCopperGapMM": 0.27,
+          "baseRuleMM": 0.3,
+          "actualOverlap": false
+        }
+      ]
+    }
+  ],
+  "scope": "Conservative native pad BBOX plus actual cline-width copper; bbox rounded/circle corners may overestimate. New candidate rules/regions not fully resolved, so spacing warnings are BASE-rule diagnostics, not native errors. No-overlap does not certify clearance, conductive graph, neck counts, dynamic/reference copper, thermal/EMI or manufacturing."
+}

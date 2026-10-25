@@ -1,0 +1,250 @@
+{
+  "date": "2026-10-20",
+  "status": "PASS_INDEPENDENT_POWER_INTERFACE_LAYOUT_REVIEW",
+  "requirements": [
+    {
+      "id": "P01",
+      "topic": "逐pin映射",
+      "status": "SOURCE_CONFIRMED",
+      "requirement": "80件272逻辑pin逐脚一致，127项通过；NC为null，DNP保存实际字段值。",
+      "evidence": "readouts/pin_and_geometric_review.json"
+    },
+    {
+      "id": "P02",
+      "topic": "输入保护",
+      "status": "ROUTE_HOLD",
+      "requirement": "J1→F1→D1(A2/K1)→VIN_PROT。C1/C2/C3在二极管后；9–16V限流隔离台架，无已验证TVS/浪涌保护。",
+      "evidence": "Vishay SS14 p1; DE spec"
+    },
+    {
+      "id": "P03",
+      "topic": "输入热回路",
+      "status": "ROUTE_HOLD",
+      "requirement": "C2/C3+→U2.3VIN→内部高侧/SW/低侧→U2.1GND→C2/C3−，最小换相回路，不把整个L/Cout能量回路混称热回路。C3地到U2地需近旁地过孔/平面，未实走线。",
+      "evidence": "TPS54202 RevC p20–21"
+    },
+    {
+      "id": "P04",
+      "topic": "SW与BOOT",
+      "status": "ROUTE_HOLD",
+      "requirement": "U2.2→L1.1短宽；SW不作无用大铜/长测试支路；C4.1BOOT接6、C4.2SW接2，不接地。四层不照搬原厂图inner SW实现。",
+      "evidence": "TPS54202 RevC p20–21"
+    },
+    {
+      "id": "P05",
+      "topic": "电感方向",
+      "status": "SOURCE_CONFIRMED",
+      "requirement": "short lead标记侧为库pin1 BUCK_SW朝U2，pin2V5；4.04mm为land中心距。真实max高度6.1。",
+      "evidence": "Coilcraft Doc887 p4"
+    },
+    {
+      "id": "P06",
+      "topic": "反馈",
+      "status": "ROUTE_HOLD",
+      "requirement": "R1/R2/C7在安静侧，V5从C5正端滤波点单独取样，FB节点小远离SW，R2地Kelvin回U2.1，避免CIN/COUT大电流共颈。",
+      "evidence": "TPS54202 RevC p20"
+    },
+    {
+      "id": "P07",
+      "topic": "有效电容",
+      "status": "RELEASE_HOLD",
+      "requirement": "C2>=10uF@16V，C5+C6>=30uF@5V，LDO输出>0.47uF，准确MPN/DC-bias/温度/容差待核。",
+      "evidence": "DE release gates"
+    },
+    {
+      "id": "P08",
+      "topic": "LDO封装",
+      "status": "SOURCE_CONFIRMED",
+      "requirement": "DBV5脚1IN2GND3EN4NC5OUT，无exposed pad；p44真实高度max1.45，原生默认1mm不是物料证明。",
+      "evidence": "TLV755P RevD p3/p21/p44"
+    },
+    {
+      "id": "P09",
+      "topic": "LDO去耦",
+      "status": "ROUTE_HOLD",
+      "requirement": "C8近IN、C9近OUT，短宽返回U3.2共同地；输出地近旁过孔通连续地。270°翻C9可改善地返回，最终以root/native为准。",
+      "evidence": "TLV755P RevD p21"
+    },
+    {
+      "id": "P10",
+      "topic": "LDO热与反灌",
+      "status": "RELEASE_HOLD",
+      "requirement": "150mA/Ta<=40C最坏耗散约0.284W，JEDEC热阻非本板温升证明；headers/SWD不得反供电，LDO无反向阻断。",
+      "evidence": "DE power budget"
+    },
+    {
+      "id": "U01",
+      "topic": "J2基准",
+      "status": "LAYOUT_NATIVE_CONFIRMED",
+      "requirement": "(40,3.675)开口−Y，四shellGND；实际contacts交错DP/DM，需要短合并及必要换层，不能仅器件一列就称无枝节。",
+      "evidence": "GCT USB4105 RevB4/native"
+    },
+    {
+      "id": "U02",
+      "topic": "ESD映射",
+      "status": "SOURCE_CONFIRMED",
+      "requirement": "USBLC6-2SC6脚1/6DP、3/4DM、2GND、5VBUS；180°连接器侧6/4朝下，protected侧1/3朝上。",
+      "evidence": "DS4260 Rev7 p1"
+    },
+    {
+      "id": "U03",
+      "topic": "ESD回流",
+      "status": "ROUTE_HOLD",
+      "requirement": "数据流经ESD焊盘，I/O/VBUS/GND短，C10就近；放电电流不绕MCU地细颈，shell入口落地；无独立机壳地，不虚称机壳隔离。",
+      "evidence": "DS4260 Rev7 p6/p11"
+    },
+    {
+      "id": "U04",
+      "topic": "TypeC边界",
+      "status": "ROUTE_HOLD",
+      "requirement": "CC1/CC2各自5.1k不能合并。USB_VBUS仅检测/钳位；两路ESD件不代表CC/SBU全部保护。",
+      "evidence": "actual netlist"
+    },
+    {
+      "id": "U05",
+      "topic": "USB选件",
+      "status": "RELEASE_HOLD",
+      "requirement": "USB装R5/R6且R12/13DNP，CAN反选，不能全装；DNP仍有真实枝节。历史22Ω未认证F103必需，改变需ECO。",
+      "evidence": "integrated circuit; F correction"
+    },
+    {
+      "id": "U06",
+      "topic": "USB参考",
+      "status": "ROUTE_HOLD",
+      "requirement": "90Ω为板厂待确认目标，长度DRC不等于阻抗认证；PA11/12到选件和两侧配对/支路/换层回流待实走线审。",
+      "evidence": "F29 v4 constraints"
+    },
+    {
+      "id": "C01",
+      "topic": "CAN方向",
+      "status": "LAYOUT_NATIVE_CONFIRMED",
+      "requirement": "SO8 pin1原点不在body中心，digital左、CANH7/CANL6右朝J3。",
+      "evidence": "native inventory"
+    },
+    {
+      "id": "C02",
+      "topic": "CAN去耦",
+      "status": "ROUTE_HOLD",
+      "requirement": "C11 100nF先近VCC3，C12 1uF邻近；使用参考平面时按TI建议多过孔降低连接电感，实际过孔后续验。",
+      "evidence": "TCAN332 RevF p29–30"
+    },
+    {
+      "id": "C03",
+      "topic": "端接与保护",
+      "status": "RELEASE_HOLD",
+      "requirement": "R15 120Ω仅总线物理两端装，靠J3不做长T；未增加family示例split电容/CMC/模式脚。无已验证外部TVS，不任套24V/SM712。",
+      "evidence": "TCAN332 RevF; DE spec"
+    },
+    {
+      "id": "C04",
+      "topic": "UART源端",
+      "status": "LAYOUT_NATIVE_CONFIRMED",
+      "requirement": "R16应靠PA9驱动。初版pad下界6.3545>本课4mm目标，root已将pin1改(37.5,21)，最终plan通过；目标不是原厂硬性mm阈值。",
+      "evidence": "final_plan_geometric_review.json"
+    },
+    {
+      "id": "M01",
+      "topic": "孔与限高",
+      "status": "ASSEMBLY_HOLD",
+      "requirement": "保留4×Ø2NPTH及2.5mm禁布；低型区x10..30/y42..52禁止z>=2。螺钉工具/外壳未选，默认1mm不证明实际高度。",
+      "evidence": "F27/user rules"
+    },
+    {
+      "id": "M02",
+      "topic": "USB板厚脚长",
+      "status": "ASSEMBLY_HOLD",
+      "requirement": "S=.95±.15从seating面量到脚尖，不是PCB底面突出。.95脚与1.6板焊接工艺未匹配。",
+      "evidence": "GCT USB4105 RevB4 side view"
+    },
+    {
+      "id": "M03",
+      "topic": "插拔",
+      "status": "ASSEMBLY_HOLD",
+      "requirement": "J2前方访问区保留；plug max6.5/1.85min图示不代替准确插头包胶/外壳；headers准确MPN未知，不能虚构统一5mm够用。",
+      "evidence": "GCT RevB4 mating view"
+    },
+    {
+      "id": "M04",
+      "topic": "高度来源",
+      "status": "ASSEMBLY_HOLD",
+      "requirement": "L1max6.1、U3max1.45、U4SC6max1.45有原厂依据；C1仍11mm教学包络，generic R/C/header准确MPN未定。",
+      "evidence": "official drawings/native"
+    },
+    {
+      "id": "T01",
+      "topic": "调试访问",
+      "status": "TEST_ACCESS_PLANNING",
+      "requirement": "J9为自定义1x6，非标准ARM键位；Vref仅检测。标pin1/GND/NRST/BOOT和shunt方向，保留插拔/弯线空间。",
+      "evidence": "DE circuit"
+    },
+    {
+      "id": "T02",
+      "topic": "量测",
+      "status": "TEST_ACCESS_PLANNING",
+      "requirement": "现有电源电容/J1可规划量测但不是专用制造测试点；无新增TP。USB/晶体/FB/SW不加长测试枝节，电源波形用短地弹簧。",
+      "evidence": "engineering proposal"
+    },
+    {
+      "id": "F01",
+      "topic": "2L返回",
+      "status": "ROUTE_HOLD",
+      "requirement": "TOP-BOTTOM，BOTTOM尽量连续地；少量信号造成地绕行需逐条查，信号换层近旁GND缝合。",
+      "evidence": "user naming; engineering intent"
+    },
+    {
+      "id": "F02",
+      "topic": "4L返回",
+      "status": "ROUTE_HOLD",
+      "requirement": "TOP-L2-L3-BOTTOM；L2/L3功能意图连续GND，尚未全铺铜。现allow_etch仅GND内层例外；TOP/BOTTOM换层保参考。",
+      "evidence": "F29 v4"
+    },
+    {
+      "id": "F03",
+      "topic": "制造开放",
+      "status": "RELEASE_HOLD",
+      "requirement": "2L OSH mask web .1016mm vs继承.100mm；4L板厚/铜厚/有色阻焊条件另核，90Ω与USB脚长问题保留。",
+      "evidence": "F28 manufacturing limits"
+    },
+    {
+      "id": "F04",
+      "topic": "验收边界",
+      "status": "LAYOUT_NATIVE_CONFIRMED_ROUTING_REQUIRED",
+      "requirement": "32/34完成布局和具体返回意图，未实走线；0DRC/全部已放置不能证明SI/PI/EMI、温升或可生产。",
+      "evidence": "scope"
+    }
+  ],
+  "loopDefinitions": {
+    "inputCommutation": [
+      "C3.1/C2.1",
+      "U2.3 VIN",
+      "internal highside/SW/lowside",
+      "U2.1 GND",
+      "C3.2/C2.2"
+    ],
+    "outputEnergy": [
+      "U2.2",
+      "L1.1 SW short lead",
+      "L1.2 V5",
+      "C5/C6 positive",
+      "C5/C6 GND",
+      "U2.1"
+    ],
+    "feedback": [
+      "C5.1 filtered V5",
+      "R1.1/C7.1",
+      "R1.2/C7.2/R2.1/U2.4 FB",
+      "R2.2 Kelvin return",
+      "U2.1"
+    ],
+    "usb": [
+      "J2 merged pair",
+      "U4.6/.4 connector side",
+      "U4.1/.3 protected side",
+      "R5.2/R6.2",
+      "R5.1/R6.1",
+      "U1.33/U1.32"
+    ]
+  },
+  "finalNativeEvidence": "readouts/final_native_power_review.json",
+  "layoutCheckpointOnly": true
+}

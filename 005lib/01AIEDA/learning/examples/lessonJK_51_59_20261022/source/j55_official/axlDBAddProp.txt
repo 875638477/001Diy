@@ -1,0 +1,53 @@
+
+  NAME
+         axlDBAddProp - add or more properties to an object
+  FUNCTION
+         axlDBAddProp(
+                 lo_attach
+                 ll_name_value
+                 )
+         ==> l_result/nil
+  SYNOPSIS
+         Adds all the property/value pairs listed in ll_name_value to all 
+         the object dbids listed in lod_attach. If a particular object 
+         does not accept a particular property name in ll_name_value, 
+         axlDBAddProp silently ignores that combination, and continues. If 
+         an object already has the specific property attached, axlDBAddProp 
+         silently replaces its original value with the one specified in 
+         ll_name_value.
+ 
+         If any errors occur or if axlDBAddProp has not added nor changed 
+         any properties, it returns nil.
+  NEEDS
+         lo_attach:      List of Allegro object dbids to which to add the        
+                         property/value combinations listed in ll_name_value.
+                         A list of nil denotes attachment to the design 
+                         (list nil). However, if lo_attach if nil, means no 
+                         objects for attachment, and axlDBAddProp does 
+                         nothing and returns nil.
+         ll_name_value:  List of property-name/property-value pairs as   
+                         lists.  If the car of this list is not a list, 
+                         then axlDBAddProp treats ll_name_value as a single
+                         name-value list. The car of each name-value pair is
+                         the property name as a string. The cadr of the 
+                         name-value list is the property value. It is either
+                         a string with or without units included, or a 
+                         simple value (fixed or floating). In either case, 
+                         if the value does not include units explicitly, 
+                         then axlDBAddProp uses the units specified in the 
+                         system units.dat file.
+         axlDBAddProp ignores the value if the property data type is BOOLEAN.
+  RETURNS
+         l_result/nil:   nil if no properties were added. Otherwise it   
+                         returns a list:
+                         * (car) list of dbids of objects that had at least
+                           one property successfully added
+ 
+                         * (cadr) always nil.
+  SEE ALSO
+         axlDBDeleteProp axlDBCreatePropDictEntry axlDBGetPropDictEntry
+         axlDBGetProperties, axlDBDeletePropAll, axlDBDeletePropDictEntry
+         axlDBGetPropDict
+  EXAMPLES
+         see axlDBDeleteProp
+

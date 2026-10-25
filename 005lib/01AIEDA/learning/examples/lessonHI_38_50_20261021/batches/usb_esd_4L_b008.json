@@ -1,0 +1,918 @@
+{
+  "status": "ENGINEERING_CANDIDATE_REQUIRE_NATIVE_DRC_AND_DIFFERENTIAL_RULE_FEEDBACK",
+  "units": "mm",
+  "nativeVariant": "4L",
+  "placementChanges": [
+    {
+      "ref": "U4",
+      "xy": [
+        40.25,
+        11.4
+      ],
+      "rotation": 180,
+      "purpose": "Create1.62mm raw y gap J2 tips\u2192U4 input copper; preserve short ESD entry"
+    },
+    {
+      "ref": "R5",
+      "xy": [
+        41.1,
+        18.5
+      ],
+      "rotation": 270,
+      "purpose": "Symmetric toR6 aroundx40.25 and clearC14"
+    },
+    {
+      "ref": "R12",
+      "xy": [
+        42.8,
+        18.3
+      ],
+      "rotation": 0,
+      "purpose": "Reduce DNP CAN shared stub"
+    },
+    {
+      "ref": "R13",
+      "xy": [
+        38,
+        18.3
+      ],
+      "rotation": 180,
+      "purpose": "Reduce DNP CAN shared stub"
+    },
+    {
+      "ref": "R11",
+      "xy": [
+        42.9764,
+        14.6
+      ],
+      "rotation": 180,
+      "purpose": "DPpad2=(41.3,14.6), sourcepad1=(42.8748,14.6). Directly adjacent maintrunk: .845mm4L or.4mm2L; cannot put.94mm pad onto.41mm-centered4Lpair without short toDM."
+    }
+  ],
+  "constraintOperations": [
+    {
+      "type": "netClass",
+      "name": "HI_USB_DP_P_4L",
+      "domain": "physical",
+      "cset": "P_USB_PROVISIONAL",
+      "nets": [
+        "USB_DP"
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_USB_MIRROR_P_4L",
+      "copyFrom": "P_USB_PROVISIONAL",
+      "values": {},
+      "layerValues": {
+        "BOTTOM": {
+          "allow_etch": true
+        }
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_J2_MIRROR_BOTTOM",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          39.35,
+          5.3
+        ],
+        [
+          41.15,
+          5.3
+        ],
+        [
+          41.15,
+          6.7
+        ],
+        [
+          39.35,
+          6.7
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI_USB_DP_P_4L",
+          "cset": "HI_USB_MIRROR_P_4L"
+        }
+      ]
+    },
+    {
+      "type": "ecsetCopy",
+      "name": "HI_E_USB_CONNECTOR_4L",
+      "copyFrom": "E_USB_FS_BUDGET",
+      "pair": "DP_USB_CONNECTOR",
+      "values": {
+        "Differential_Pair_Phase_Tolerance": "4 MM",
+        "Differential_Pair_Max_Uncoupled_Length": "13.5 MM"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_USB_MCU_S_1_4L",
+      "copyFrom": "S_USB_OTHER_050",
+      "values": {
+        "smdpin_line": "0.2 MM",
+        "line_line": "0.2 MM"
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_USB_MCU_ESCAPE",
+      "layer": "TOP",
+      "polygon": [
+        [
+          39.8,
+          21.2
+        ],
+        [
+          41.6,
+          21.2
+        ],
+        [
+          41.6,
+          23.4
+        ],
+        [
+          39.8,
+          23.4
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "NC_USB_FS_S",
+          "otherNetClass": "NC_DIGITAL_GENERAL_S",
+          "cset": "HI_USB_MCU_S_1_4L"
+        }
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "type": "via",
+      "id": "USB_DP_MIRROR_A",
+      "net": "USB_DP",
+      "xy": [
+        39.75,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Underhousing tented",
+      "mustBeTented": true
+    },
+    {
+      "type": "via",
+      "id": "USB_DP_MIRROR_B",
+      "net": "USB_DP",
+      "xy": [
+        40.75,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Underhousing tented",
+      "mustBeTented": true
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_A6_TO_MIRROR",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          39.75,
+          7.355
+        ],
+        [
+          39.75,
+          5.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "",
+      "from": "J2.A6",
+      "to": "USB_DP_MIRROR_A"
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_B6_TO_MIRROR",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          40.75,
+          7.355
+        ],
+        [
+          40.75,
+          5.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "",
+      "from": "J2.B6",
+      "to": "USB_DP_MIRROR_B"
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_MIRROR_BOTTOM",
+      "net": "USB_DP",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39.75,
+          5.8
+        ],
+        [
+          40.75,
+          5.8
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Shortest1mm BOTTOM mirrorcrossing; avoid matching doglegs that damage reference.",
+      "from": "USB_DP_MIRROR_A",
+      "to": "USB_DP_MIRROR_B"
+    },
+    {
+      "type": "route",
+      "id": "USB_DM_A7_MERGE",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          7.355
+        ],
+        [
+          40.25,
+          8.6
+        ],
+        [
+          39.25,
+          8.6
+        ],
+        [
+          39.25,
+          7.355
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "ShortestTOPmirrorjoin behindconnector tips; underhousing reference patch avoids extra data U slot.",
+      "from": "J2.A7",
+      "to": "J2.B7"
+    },
+    {
+      "type": "route",
+      "id": "USB_DP_ENTRY",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          40.75,
+          7.355
+        ],
+        [
+          40.75,
+          8.6
+        ],
+        [
+          41.2,
+          9.05
+        ],
+        [
+          41.2,
+          10.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Directflowthroughprotection input",
+      "from": "J2.B6",
+      "to": "U4.6"
+    },
+    {
+      "type": "route",
+      "id": "USB_DM_ENTRY",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          39.25,
+          7.355
+        ],
+        [
+          39.25,
+          8.6
+        ],
+        [
+          39.3,
+          8.65
+        ],
+        [
+          39.3,
+          10.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Directflowthroughprotection input",
+      "from": "J2.B7",
+      "to": "U4.4"
+    },
+    {
+      "type": "route",
+      "id": "USB_SHARED_DP",
+      "net": "PA12_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          41.1,
+          18.3984
+        ],
+        [
+          41.1,
+          19.85
+        ],
+        [
+          40.95,
+          20.0
+        ],
+        [
+          40.95,
+          21.6
+        ],
+        [
+          41.25,
+          21.9
+        ],
+        [
+          41.25,
+          22.75
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "PassleftofC14groundloop, .2finepitchport; preservelocalclasspairexception",
+      "from": "R5.1",
+      "to": "U1.33"
+    },
+    {
+      "type": "route",
+      "id": "USB_DNP_STUB_DP",
+      "net": "PA12_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          41.1,
+          18.3984
+        ],
+        [
+          42.8032,
+          18.3984
+        ],
+        [
+          42.9016,
+          18.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "ExplicitDNPoffmainstub~1.8424mm",
+      "from": "R5.1",
+      "to": "R12.1"
+    },
+    {
+      "type": "route",
+      "id": "USB_DNP_STUB_DM",
+      "net": "PA11_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          39.4,
+          18.3984
+        ],
+        [
+          37.9968,
+          18.3984
+        ],
+        [
+          37.8984,
+          18.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "ExplicitDNPoffmainstub~1.5424mm",
+      "from": "R6.1",
+      "to": "R13.1"
+    },
+    {
+      "type": "via",
+      "id": "USB_RETURN_LEFT",
+      "net": "GND",
+      "xy": [
+        38.15,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "ActualTOP/BOTTOM/L2/L3 applicationreturn; outside signalvia antipads",
+      "mustBeTented": true
+    },
+    {
+      "type": "via",
+      "id": "USB_RETURN_RIGHT",
+      "net": "GND",
+      "xy": [
+        41.7,
+        5.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "ActualTOP/BOTTOM/L2/L3 applicationreturn; outside signalvia antipads",
+      "mustBeTented": true
+    },
+    {
+      "type": "route",
+      "id": "USB_U4_DP_FLOW",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          41.2,
+          10.1
+        ],
+        [
+          41.2,
+          12.7
+        ]
+      ],
+      "width": 0.2,
+      "from": "U4.6",
+      "to": "U4.1",
+      "purpose": "ActualshortPCB copperflowthroughmatchingpads, noPIN_SHORT softwarewaiver. Packageinternalparallelconductorunknown; symmetric portwidth."
+    },
+    {
+      "type": "route",
+      "id": "USB_U4_DM_FLOW",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          39.3,
+          10.1
+        ],
+        [
+          39.3,
+          12.7
+        ]
+      ],
+      "width": 0.2,
+      "from": "U4.4",
+      "to": "U4.3",
+      "purpose": "ActualmatchingPCBflow, currentDRC/neck/ESDreturngeometrycheck."
+    },
+    {
+      "type": "route",
+      "id": "USB4L_PROTECTED_DP",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          41.2,
+          12.7
+        ],
+        [
+          41.2,
+          13.3
+        ],
+        [
+          40.455,
+          14.045
+        ],
+        [
+          40.455,
+          15.7
+        ],
+        [
+          41.1,
+          16.345
+        ],
+        [
+          41.1,
+          16.8236
+        ]
+      ],
+      "width": 0.26,
+      "purpose": "TIformula~90ohm straightbulk.26/.15, portsuncoupled andnearbycoppernotmodeled",
+      "from": "U4.1",
+      "to": "R5.2"
+    },
+    {
+      "type": "route",
+      "id": "USB4L_PROTECTED_DM",
+      "net": "USB_DM",
+      "layer": "TOP",
+      "points": [
+        [
+          39.3,
+          12.7
+        ],
+        [
+          39.3,
+          13.3
+        ],
+        [
+          40.045,
+          14.045
+        ],
+        [
+          40.045,
+          15.7
+        ],
+        [
+          39.4,
+          16.345
+        ],
+        [
+          39.4,
+          16.8236
+        ]
+      ],
+      "width": 0.26,
+      "purpose": "SymmetrictonativeDPcandidate",
+      "from": "U4.3",
+      "to": "R6.2"
+    },
+    {
+      "type": "route",
+      "id": "USB_PULLUP_BRANCH",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "points": [
+        [
+          40.455,
+          14.6
+        ],
+        [
+          41.3,
+          14.6
+        ]
+      ],
+      "width": 0.2,
+      "from": "USB_DP_TRUNK_NODE",
+      "to": "R11.2",
+      "purpose": "RequiredFS pullup shorttee; sourceotherendtoQ2 may be longer"
+    },
+    {
+      "type": "route",
+      "id": "USB_SHARED_DM",
+      "net": "PA11_SHARED",
+      "layer": "TOP",
+      "points": [
+        [
+          39.4,
+          18.3984
+        ],
+        [
+          39.4,
+          18.95
+        ],
+        [
+          40.6,
+          20.15
+        ],
+        [
+          40.6,
+          21.745
+        ],
+        [
+          40.75,
+          21.895
+        ],
+        [
+          40.75,
+          22.75
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Make actual straighttrunk edgegap.15(4L)/.16(2L) with correctly staggered45degreebend; preserve sharedpair originaluncoupled6/phase1. Allgeometryscreen andnativeactualrequired.",
+      "from": "R6.1",
+      "to": "U1.32"
+    },
+    {
+      "type": "route",
+      "id": "ESD_U4_RETURN",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          12.7
+        ],
+        [
+          40.25,
+          11.8
+        ],
+        [
+          40,
+          11.4
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "U4.2",
+      "to": "V_HI_ESD_A",
+      "purpose": "Shortest bodyward return avoids protected pair at y>13.6; GND supply track not through thin digitaltrace."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_ESD_A",
+      "net": "GND",
+      "xy": [
+        40,
+        11.4
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad body ground via, clear DMx39.3 and VBUSpin5."
+    },
+    {
+      "type": "route",
+      "id": "ESD_U4_SECOND_VIA",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          11.8
+        ],
+        [
+          40.5,
+          11.6
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "ESD_U4_RETURN",
+      "to": "V_HI_ESD_B",
+      "purpose": "Parallel body via retained without old40.9 data collision."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_ESD_B",
+      "net": "GND",
+      "xy": [
+        40.5,
+        11.6
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad .3drill/.6copper, pairdrill gap .2385mm; native hole rules must verify."
+    },
+    {
+      "type": "route",
+      "id": "ESD_C10_RETURN",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          42.7,
+          10.7764
+        ],
+        [
+          43.8,
+          10.7764
+        ],
+        [
+          43.8,
+          11.5764
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "C10.2",
+      "to": "V_HI_C10_B",
+      "purpose": "ESD VBUS decoupling capacitor local HFground, physical return joins actual commonplane."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_C10_A",
+      "net": "GND",
+      "xy": [
+        43.8,
+        10.7764
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad C10ground directly next to pad."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_C10_B",
+      "net": "GND",
+      "xy": [
+        43.8,
+        11.5764
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Secondcapgroundvia .8pitch, not a via in solder aperture."
+    },
+    {
+      "type": "route",
+      "id": "ESD_VBUS_U4_ESCAPE",
+      "net": "USB_VBUS",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          10.1
+        ],
+        [
+          40.25,
+          9.3
+        ]
+      ],
+      "widths": [
+        0.4
+      ],
+      "from": "U4.5",
+      "to": "V_HI_ESD_VBUS_LEFT",
+      "purpose": "Normal.4width avoids .3neck length1.2536 exceeding1.0. Do not use.6diagonal nearDMpad4."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_ESD_VBUS_LEFT",
+      "net": "USB_VBUS",
+      "xy": [
+        40.25,
+        9.3
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad ESDrail crosses belowDPonBOTTOM; keepTOP data continuous."
+    },
+    {
+      "type": "route",
+      "id": "ESD_VBUS_BOTTOM_BRIDGE",
+      "net": "USB_VBUS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.25,
+          9.3
+        ],
+        [
+          43.8,
+          9.2016
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V_HI_ESD_VBUS_LEFT",
+      "to": "V_HI_C10_VBUS",
+      "purpose": "Short bridge crossespairedTOPdata only once;2LBOTTOMreference void must be measured and localgroundreturn checked."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_C10_VBUS",
+      "net": "USB_VBUS",
+      "xy": [
+        43.8,
+        9.2016
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad C10VBUS via separated1.5748fromC10GND via at43.8,10.7764."
+    },
+    {
+      "type": "route",
+      "id": "ESD_VBUS_C10",
+      "net": "USB_VBUS",
+      "layer": "TOP",
+      "points": [
+        [
+          43.8,
+          9.2016
+        ],
+        [
+          42.7,
+          9.2016
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V_HI_C10_VBUS",
+      "to": "C10.1",
+      "purpose": "Short local rail capacitorfeed, no USBVBUSpoweringV5/V3."
+    }
+  ],
+  "aliases": [
+    {
+      "id": "USB_DP_TRUNK_NODE",
+      "net": "USB_DP",
+      "layer": "TOP",
+      "xy": [
+        40.455,
+        14.6
+      ]
+    }
+  ],
+  "proofs": [
+    {
+      "from": "J2.A6",
+      "to": "U4.6",
+      "connected": true
+    },
+    {
+      "from": "J2.B6",
+      "to": "U4.6",
+      "connected": true
+    },
+    {
+      "from": "J2.A7",
+      "to": "U4.4",
+      "connected": true
+    },
+    {
+      "from": "J2.B7",
+      "to": "U4.4",
+      "connected": true
+    },
+    {
+      "from": "U4.1",
+      "to": "R5.2",
+      "connected": true
+    },
+    {
+      "from": "U4.3",
+      "to": "R6.2",
+      "connected": true
+    },
+    {
+      "from": "R11.2",
+      "to": "R5.2",
+      "connected": true
+    },
+    {
+      "from": "R5.1",
+      "to": "U1.33",
+      "connected": true
+    },
+    {
+      "from": "R6.1",
+      "to": "U1.32",
+      "connected": true
+    },
+    {
+      "from": "U4.2",
+      "to": "U1.47",
+      "connected": true
+    },
+    {
+      "from": "C10.2",
+      "to": "U1.47",
+      "connected": true
+    }
+  ],
+  "postChecks": [
+    {
+      "type": "hseIsolation",
+      "anchorXY": [
+        45.45,
+        28.85
+      ],
+      "localLayer": "L2",
+      "guardPoints": [
+        [
+          42.2,
+          39.8
+        ],
+        [
+          44.2,
+          39.8
+        ],
+        [
+          47.8,
+          33.5
+        ]
+      ]
+    }
+  ],
+  "engineeringSources": [
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\usb_critical_routes_v8.json",
+      "sha256": "0ADF2CCD54B0B05732EDBFCF8981B77EC60C11BCA80E1782B207872546D8E513"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\ESD_ground_routes_04c.json",
+      "sha256": "8508F6DB06F170ADCEB053C148E6B28B428F39099610007242705AEDFAE63F76"
+    }
+  ],
+  "notes": [
+    "Original phase1/uncoupled6 failed natively in b006a. USB8 uses reviewed connector-pair-only static ECSet copy phase4mm/uncoupled13.5mm/maxvia2; shared pair original phase1/uncoupled6 unchanged, new DM geometry intended to improve actual coupling. These are explicit planar teaching budgets, not USB specification or SI acceptance.",
+    "USB_DP alone split into physical class to allow BOTTOM only in connector mirror region. All other domains and outside layer permissions preserved.",
+    "Actual explicit protected bulk widths: 4L.26 or2L1.15. Minimum native width remains.20 at connector/ESD/MCU ports; path is nonuniform, not certified90ohm.",
+    "Original source via mask figures NULL and ArtworkdrawMissingPadApertures false; manufacturing underside insulation/clearance still open."
+  ]
+}

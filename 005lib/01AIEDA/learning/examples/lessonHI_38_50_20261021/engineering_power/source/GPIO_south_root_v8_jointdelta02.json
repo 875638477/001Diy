@@ -1,0 +1,1294 @@
+{
+  "status": "PENDING_SWDIO_GROUND_AND_JOINT_LONG_GEOMETRY_CORRECTION_NOT_NATIVE",
+  "batchId": "GPIO_south_joint_root_v8",
+  "placementChanges": [
+    {
+      "ref": "R16",
+      "xy": [
+        45.5,
+        19.9
+      ],
+      "rotation": 0,
+      "purpose": "Move source-series resistor to the same east routing side as UART/SWD/USB services; avoid actual18-28mm westward detour and release south-west GPIO window. pin1(45.6016,19.9),pin2(47.1764,19.9)."
+    }
+  ],
+  "operations": [
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_25_NECK",
+      "net": "GPIO_PB12",
+      "layer": "TOP",
+      "points": [
+        [
+          37.25,
+          22.75
+        ],
+        [
+          37.25,
+          22.1
+        ],
+        [
+          37.0,
+          21.85
+        ],
+        [
+          37,
+          21.25
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Finite dense-source neck before private staggered PTH via; outside source window normal .20mm remains."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_25_VIA",
+      "net": "GPIO_PB12",
+      "xy": [
+        37,
+        21.25
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Private PTH .26drill/.52Cu, .13annulus, no mask aperture; only source region approved variant, native definition verification pending.",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_26_NECK",
+      "net": "GPIO_PB13",
+      "layer": "TOP",
+      "points": [
+        [
+          37.75,
+          22.75
+        ],
+        [
+          37.75,
+          22.1
+        ],
+        [
+          37.5,
+          21.85
+        ],
+        [
+          37.5,
+          20.75
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Finite dense-source neck before private staggered PTH via; outside source window normal .20mm remains."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_26_VIA",
+      "net": "GPIO_PB13",
+      "xy": [
+        37.5,
+        20.75
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Private PTH .26drill/.52Cu, .13annulus, no mask aperture; only source region approved variant, native definition verification pending.",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_27_NECK",
+      "net": "GPIO_PB14",
+      "layer": "TOP",
+      "points": [
+        [
+          38.25,
+          22.75
+        ],
+        [
+          38.25,
+          22.1
+        ],
+        [
+          38.0,
+          21.85
+        ],
+        [
+          38,
+          21.25
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Finite dense-source neck before private staggered PTH via; outside source window normal .20mm remains."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_27_VIA",
+      "net": "GPIO_PB14",
+      "xy": [
+        38,
+        21.25
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Private PTH .26drill/.52Cu, .13annulus, no mask aperture; only source region approved variant, native definition verification pending.",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_28_NECK",
+      "net": "GPIO_PB15",
+      "layer": "TOP",
+      "points": [
+        [
+          38.75,
+          22.75
+        ],
+        [
+          38.75,
+          22.1
+        ],
+        [
+          38.5,
+          21.85
+        ],
+        [
+          38.5,
+          20.7
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Finite dense-source neck before private staggered PTH via; outside source window normal .20mm remains."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_28_VIA",
+      "net": "GPIO_PB15",
+      "xy": [
+        38.5,
+        20.7
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Private PTH .26drill/.52Cu, .13annulus, no mask aperture; only source region approved variant, native definition verification pending.",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_29_NECK",
+      "net": "USB_ATTACH_N",
+      "layer": "TOP",
+      "points": [
+        [
+          39.25,
+          22.75
+        ],
+        [
+          39.25,
+          22.1
+        ],
+        [
+          39.0,
+          21.85
+        ],
+        [
+          39,
+          21.2
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Finite dense-source neck before private staggered PTH via; outside source window normal .20mm remains."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_29_VIA",
+      "net": "USB_ATTACH_N",
+      "xy": [
+        39,
+        21.2
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Private PTH .26drill/.52Cu, .13annulus, no mask aperture; only source region approved variant, native definition verification pending.",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_30_NECK",
+      "net": "PA9_UART_TX",
+      "layer": "TOP",
+      "points": [
+        [
+          39.75,
+          22.75
+        ],
+        [
+          39.75,
+          21.75
+        ],
+        [
+          39.7,
+          21.7
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Finite dense-source neck before private staggered PTH via; outside source window normal .20mm remains."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_30_VIA",
+      "net": "PA9_UART_TX",
+      "xy": [
+        39.7,
+        21.7
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Private PTH .26drill/.52Cu, .13annulus, no mask aperture; only source region approved variant, native definition verification pending.",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_31_NECK",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          22.75
+        ],
+        [
+          40.25,
+          22.05
+        ],
+        [
+          40.22,
+          22.02
+        ],
+        [
+          40.22,
+          21.3
+        ],
+        [
+          40,
+          21.08
+        ],
+        [
+          40,
+          20.5
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Finite dense-source neck before private staggered PTH via; outside source window normal .20mm remains."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_31_VIA",
+      "net": "PA10_UART_RX",
+      "xy": [
+        40,
+        20.5
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Private PTH .26drill/.52Cu, .13annulus, no mask aperture; only source region approved variant, native definition verification pending.",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_RETURN_WEST",
+      "net": "GND",
+      "xy": [
+        35.8,
+        21.95
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Dense-source common-plane return stitch, requires actual application GND attachment/branch proof; not quiet HSE.",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_RETURN_MID",
+      "net": "GND",
+      "xy": [
+        38.0,
+        20.0
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Dense-source common-plane return stitch, requires actual application GND attachment/branch proof; not quiet HSE.",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_RETURN_EAST",
+      "net": "GND",
+      "xy": [
+        38.8,
+        19.7
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Dense-source common-plane return stitch, requires actual application GND attachment/branch proof; not quiet HSE.",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_34_NECK",
+      "net": "SWDIO",
+      "layer": "TOP",
+      "points": [
+        [
+          41.75,
+          22.75
+        ],
+        [
+          41.75,
+          21.7
+        ],
+        [
+          41.5,
+          21.45
+        ],
+        [
+          41.5,
+          21.25
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Right-of-pair SWDIO finite source escape; actual USB/via reference clearance must pass."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_34_VIA",
+      "net": "SWDIO",
+      "xy": [
+        41.5,
+        21.25
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "deleteSegment",
+      "id": "SOUTH_RIP_C14_GND_0",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          42.25,
+          22.75
+        ],
+        [
+          42.25,
+          21.95
+        ]
+      ],
+      "width": 0.25,
+      "purpose": "Shorten existing direct VSS35-C14 TOP return to release SWDIO; retained cap-ground globalvia unchanged."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "SOUTH_RIP_C14_GND_1",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          42.25,
+          21.95
+        ],
+        [
+          41.85,
+          21.55
+        ]
+      ],
+      "width": 0.25,
+      "purpose": "Shorten existing direct VSS35-C14 TOP return to release SWDIO; retained cap-ground globalvia unchanged."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "SOUTH_RIP_C14_GND_2",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          41.85,
+          21.55
+        ],
+        [
+          42.3252,
+          21.0748
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Shorten existing direct VSS35-C14 TOP return to release SWDIO; retained cap-ground globalvia unchanged."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "SOUTH_RIP_C14_GND_3",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          42.3252,
+          21.0748
+        ],
+        [
+          42.3252,
+          20.3
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Shorten existing direct VSS35-C14 TOP return to release SWDIO; retained cap-ground globalvia unchanged."
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_C14_GND_NECK",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          42.25,
+          22.75
+        ],
+        [
+          42.25,
+          21.36
+        ]
+      ],
+      "width": 0.25
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_C14_GND_WIDE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          42.25,
+          21.36
+        ],
+        [
+          42.3252,
+          21.2848
+        ],
+        [
+          42.3252,
+          20.3
+        ]
+      ],
+      "width": 0.6
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_GPIO12_BOTTOM_NECK",
+      "net": "GPIO_PB12",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          37,
+          21.25
+        ],
+        [
+          36.5,
+          21.25
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_GPIO12_BOTTOM_EXIT",
+      "net": "GPIO_PB12",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          36.5,
+          21.25
+        ],
+        [
+          35,
+          21.25
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_GPIO13_BOTTOM_NECK",
+      "net": "GPIO_PB13",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          37.5,
+          20.75
+        ],
+        [
+          37.3,
+          20.55
+        ],
+        [
+          37.3,
+          19.7
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_GPIO14_BOTTOM_NECK",
+      "net": "GPIO_PB14",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          38,
+          21.25
+        ],
+        [
+          38,
+          21.9
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_GPIO14_BOTTOM_EXIT",
+      "net": "GPIO_PB14",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          38,
+          21.9
+        ],
+        [
+          38,
+          22.7
+        ],
+        [
+          35,
+          22.7
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_GPIO15_BOTTOM_NECK",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          38.5,
+          20.7
+        ],
+        [
+          38.5,
+          22.3
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Upward narrow exit between PB14/Attach source vias; removes conflicting old downward copper near relocated common-GND38.8,19.7. Existing1.6mm source escape then normal.2 continuation."
+    }
+  ],
+  "partialEndpoints": {
+    "GPIO_PB12": {
+      "xy": [
+        37,
+        21.25
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.25"
+    },
+    "GPIO_PB13": {
+      "xy": [
+        37.5,
+        20.75
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.26"
+    },
+    "GPIO_PB14": {
+      "xy": [
+        38,
+        21.25
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.27"
+    },
+    "GPIO_PB15": {
+      "xy": [
+        38.5,
+        20.7
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.28"
+    },
+    "USB_ATTACH_N": {
+      "xy": [
+        39,
+        21.2
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.29"
+    },
+    "PA9_UART_TX": {
+      "xy": [
+        39.7,
+        21.7
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.30"
+    },
+    "PA10_UART_RX": {
+      "xy": [
+        40,
+        20.5
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.31"
+    },
+    "SWDIO": {
+      "xy": [
+        41.5,
+        21.25
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.34"
+    }
+  },
+  "physicalExceptions": [
+    {
+      "id": "HI_SOUTH_DENSE_SOURCE_P",
+      "layer": "TOP",
+      "polygon": [
+        [
+          36.6,
+          20
+        ],
+        [
+          42.2,
+          20
+        ],
+        [
+          42.2,
+          23.4
+        ],
+        [
+          36.6,
+          23.4
+        ]
+      ],
+      "nets": [
+        "GPIO_PB12",
+        "GPIO_PB13",
+        "GPIO_PB14",
+        "GPIO_PB15",
+        "USB_ATTACH_N",
+        "PA9_UART_TX",
+        "PA10_UART_RX",
+        "SWDIO"
+      ],
+      "neckWidthMinMM": 0.16,
+      "maxNeckMM": 2.4,
+      "approvedVias": [
+        "L28_VIA030_C060",
+        "HI_VIA026_C052_TENT"
+      ],
+      "basis": "Longest explicit proposed neck2.353553mm (U1.31 to via40,20.5). Local max2.4 only, parent unchanged; native may include connect graph endpoint differently and must report actual."
+    },
+    {
+      "id": "HI_SOUTH_GPIO_BOTTOM_BREAKOUT_P",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          36.4,
+          19.6
+        ],
+        [
+          39,
+          19.6
+        ],
+        [
+          39,
+          23
+        ],
+        [
+          36.4,
+          23
+        ]
+      ],
+      "nets": [
+        "GPIO_PB12",
+        "GPIO_PB13",
+        "GPIO_PB14",
+        "GPIO_PB15"
+      ],
+      "neckWidthMinMM": 0.16,
+      "maxNeckMM": 2.4,
+      "approvedVias": [
+        "L28_VIA030_C060",
+        "HI_VIA026_C052_TENT"
+      ],
+      "basis": "Only short explicit bottom exits before normal.2. Longest new bottomneck1.13284mm, physical parent retains global width/spacing outside region."
+    },
+    {
+      "id": "HI_GPIO15_UPWARD_BOTTOM_P",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          38.15,
+          20.5
+        ],
+        [
+          38.85,
+          20.5
+        ],
+        [
+          38.85,
+          22.5
+        ],
+        [
+          38.15,
+          22.5
+        ]
+      ],
+      "nets": [
+        "GPIO_PB15"
+      ],
+      "neckWidthMinMM": 0.16,
+      "maxNeckMM": 2.4,
+      "basis": "Actual newly proposed bottomneck1.6mm; no additional via or boardwide width change."
+    }
+  ],
+  "spacingExceptions": [
+    {
+      "id": "HI_SOUTH_DIGITAL_VIA_ESCAPE_S",
+      "layer": "TOP",
+      "polygon": [
+        [
+          36.6,
+          20.0
+        ],
+        [
+          40.55,
+          20.0
+        ],
+        [
+          40.55,
+          23.4
+        ],
+        [
+          36.6,
+          23.4
+        ]
+      ],
+      "nets": [
+        "GPIO_PB12",
+        "GPIO_PB13",
+        "GPIO_PB14",
+        "GPIO_PB15",
+        "USB_ATTACH_N",
+        "PA9_UART_TX",
+        "PA10_UART_RX",
+        "SWDIO"
+      ],
+      "onlyFields": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "basis": "0.5pitch adjacent .52via and .16line yields .16 copper gap; staggered via centers .7071 give .1871 edge gap. All other spacing preserved unless actual source screen proves necessary.",
+      "layers": [
+        "TOP",
+        "BOTTOM"
+      ]
+    },
+    {
+      "id": "HI_UART_RX_USB_ESCAPE_S",
+      "layer": "TOP",
+      "polygon": [
+        [
+          39.65,
+          20.0
+        ],
+        [
+          40.55,
+          20.0
+        ],
+        [
+          40.55,
+          22.15
+        ],
+        [
+          39.65,
+          22.15
+        ]
+      ],
+      "netsA": [
+        "PA10_UART_RX"
+      ],
+      "netsB": [
+        "PA11_SHARED",
+        "PA12_SHARED"
+      ],
+      "onlyFields": {
+        "via_line": 0.2,
+        "line_line": 0.2
+      },
+      "basis": "UART_RX source via40,20.5 to DM trunk40.6 exact edge gap.24; outside USB-other .5 unchanged. Actual reference antipad and return transition must be inspected."
+    },
+    {
+      "id": "HI_SOUTH_GND_RX_VIA_ONLY_S",
+      "layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "polygon": [
+        [
+          39,
+          20
+        ],
+        [
+          40.4,
+          20
+        ],
+        [
+          40.4,
+          21.1
+        ],
+        [
+          39,
+          21.1
+        ]
+      ],
+      "netsA": [
+        "GND"
+      ],
+      "netsB": [
+        "PA10_UART_RX"
+      ],
+      "onlyFields": {
+        "via_via": 0.2
+      },
+      "basis": "Proposed tiny common-GNDvia39.25,20.3 to RXvia40,20.5 actual gap .2562; original GND global .3 unchanged outside finite source transition."
+    },
+    {
+      "id": "HI_SWDIO_USB_VIA_ESCAPE_S",
+      "layer": "TOP",
+      "polygon": [
+        [
+          41.3,
+          21.0
+        ],
+        [
+          42.1,
+          21.0
+        ],
+        [
+          42.1,
+          23.4
+        ],
+        [
+          41.3,
+          23.4
+        ]
+      ],
+      "netsA": [
+        "SWDIO"
+      ],
+      "netsB": [
+        "PA12_SHARED"
+      ],
+      "onlyFields": {
+        "smdpin_line": 0.2,
+        "line_line": 0.2,
+        "via_line": 0.2
+      },
+      "basis": "Source via41.85,21.6 copper clears actual sharedDP bend by .3108; original .5 outside source retained."
+    },
+    {
+      "id": "HI_SWDIO_GND_VIA_ESCAPE_S",
+      "layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "polygon": [
+        [
+          41.2,
+          21
+        ],
+        [
+          42.6,
+          21
+        ],
+        [
+          42.6,
+          21.8
+        ],
+        [
+          41.2,
+          21.8
+        ]
+      ],
+      "netsA": [
+        "SWDIO"
+      ],
+      "netsB": [
+        "GND"
+      ],
+      "onlyFields": {
+        "via_line": 0.2,
+        "via_via": 0.2
+      },
+      "basis": "Tiny signalvia41.5,21.25 to relocated direct TOP GND wide trace and commonGNDvia42.3,21.35: finite .2 transition spacing, GND global.3 elsewhere retained."
+    },
+    {
+      "id": "HI_GPIO15_UPWARD_DIGITAL_S",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          37.8,
+          20.5
+        ],
+        [
+          39.2,
+          20.5
+        ],
+        [
+          39.2,
+          21.7
+        ],
+        [
+          37.8,
+          21.7
+        ]
+      ],
+      "netsA": [
+        "GPIO_PB15"
+      ],
+      "netsB": [
+        "GPIO_PB14",
+        "USB_ATTACH_N"
+      ],
+      "onlyFields": {
+        "via_line": 0.16
+      },
+      "basis": "Nominal .5mm from sourcevia centers minus .26via radius and .08trace halfwidth=.16 copper gap; only7.6um above selected OSH.1524 min, tolerance/tool/mask confirmation remain open. No GNDspacing reduction; all other fields parent preserved."
+    }
+  ],
+  "remainingSourceTasks": [
+    "Root-integrated source UART_TX via39.7,21.7\u922b\u62a6ovedR16.1; UART_RX R17.1\u922b\u62b3ia40,20.5; PA8Attach partial\u922b\u62712; SWDIO partial\u922b\u62aferviceheader. These are explicit unresolved joins, not claimed connected."
+  ],
+  "manufacturingBasis": {
+    "2L": "OSH Park published min finished hole .254mm / annular .127mm; .26/.52=.13 annular leaves only .006mm hole and .003mm annulus over published minima, tool availability/tolerance/tenting not certified.",
+    "4L": "JLC PCB capabilities archived lesson28 source: multilayer min hole .15/preferred .2, pad minus hole .10/preferred .15. .26/.52 satisfies published geometry, drill pos +/- .075 separate manufacturing tolerance, actual quote/tool confirmation open."
+  },
+  "sourceBranchTradeoff": "Only NSS pullup branch BOTTOM y21.3 is moved to y23.2. Main TOP SPI source/corner/series resistor path unchanged. On2L this moves a finite reference slot under inner end of MCU bottom-row SMD pads and C13 power-node vicinity; inspect direct-TOP local cap/VSS loops and same-layer application-GND returns. Not continuous opposite-plane claim.",
+  "privateViaSource": {
+    "name": "HI_VIA026_C052_TENT",
+    "spec": "native/private_padstacks/spec.json",
+    "status": "Prepared definition only; native import/readback pending.",
+    "correction": "Initial21char TENTED name exceeded Cadence17.2 PADLIB20 limit. Use native19char TENT; original prepared source preserved and adapter mapping logged."
+  },
+  "directDecouplingLoopChange": "C14/VSS35 remains direct TOP cap return. New source neck1.39mm .25, below inherited1.4mm local allowance; wide return1.091149mm versus old1.446834mm, cap and original globalvia unchanged. Added near-source GNDvia42.3,21.35 supplies SWDIO transition return. Verify actual endpoint graph/native pad/DRC and trace-length ownership.",
+  "longRouteAnchors": {
+    "GPIO_PB12": {
+      "xy": [
+        35,
+        21.25
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.25"
+    },
+    "GPIO_PB13": {
+      "xy": [
+        37.3,
+        19.7
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.26"
+    },
+    "GPIO_PB14": {
+      "xy": [
+        35,
+        22.7
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.27"
+    },
+    "GPIO_PB15": {
+      "xy": [
+        38.5,
+        22.3
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.28"
+    }
+  },
+  "groundPrivateViaApproval": {
+    "physicalOnlyDelta": {
+      "approvedViasAdd": [
+        "HI_VIA026_C052_TENT"
+      ]
+    },
+    "allOtherFields": "Copy actual parent GND physical CSet unchanged; no widening/neck rule waiver.",
+    "areas": [
+      {
+        "xy": [
+          35.8,
+          21.95
+        ],
+        "polygon": [
+          [
+            35.489999999999995,
+            21.64
+          ],
+          [
+            36.11,
+            21.64
+          ],
+          [
+            36.11,
+            22.259999999999998
+          ],
+          [
+            35.489999999999995,
+            22.259999999999998
+          ]
+        ],
+        "layers": "All actual conductive layers used by via; verify native scoped binding."
+      },
+      {
+        "xy": [
+          38.0,
+          20.0
+        ],
+        "polygon": [
+          [
+            37.69,
+            19.69
+          ],
+          [
+            38.31,
+            19.69
+          ],
+          [
+            38.31,
+            20.31
+          ],
+          [
+            37.69,
+            20.31
+          ]
+        ],
+        "layers": "All actual conductive layers used by via; verify native scoped binding."
+      },
+      {
+        "xy": [
+          39.25,
+          20.3
+        ],
+        "polygon": [
+          [
+            38.94,
+            19.990000000000002
+          ],
+          [
+            39.56,
+            19.990000000000002
+          ],
+          [
+            39.56,
+            20.61
+          ],
+          [
+            38.94,
+            20.61
+          ]
+        ],
+        "layers": "All actual conductive layers used by via; verify native scoped binding."
+      },
+      {
+        "xy": [
+          42.3,
+          21.35
+        ],
+        "polygon": [
+          [
+            41.989999999999995,
+            21.040000000000003
+          ],
+          [
+            42.61,
+            21.040000000000003
+          ],
+          [
+            42.61,
+            21.66
+          ],
+          [
+            41.989999999999995,
+            21.66
+          ]
+        ],
+        "layers": "All actual conductive layers used by via; verify native scoped binding."
+      }
+    ]
+  },
+  "expectedProofs": [
+    {
+      "net": "GPIO_PB12",
+      "source": "U1.25",
+      "targetViaId": "SOUTH_SOURCE_25_VIA",
+      "targetXY": [
+        37,
+        21.25
+      ],
+      "expectedConnected": true
+    },
+    {
+      "net": "GPIO_PB13",
+      "source": "U1.26",
+      "targetViaId": "SOUTH_SOURCE_26_VIA",
+      "targetXY": [
+        37.5,
+        20.75
+      ],
+      "expectedConnected": true
+    },
+    {
+      "net": "GPIO_PB14",
+      "source": "U1.27",
+      "targetViaId": "SOUTH_SOURCE_27_VIA",
+      "targetXY": [
+        38,
+        21.25
+      ],
+      "expectedConnected": true
+    },
+    {
+      "net": "GPIO_PB15",
+      "source": "U1.28",
+      "targetViaId": "SOUTH_SOURCE_28_VIA",
+      "targetXY": [
+        38.5,
+        20.7
+      ],
+      "expectedConnected": true
+    },
+    {
+      "net": "USB_ATTACH_N",
+      "source": "U1.29",
+      "targetViaId": "SOUTH_SOURCE_29_VIA",
+      "targetXY": [
+        39,
+        21.2
+      ],
+      "expectedConnected": true
+    },
+    {
+      "net": "PA9_UART_TX",
+      "source": "U1.30",
+      "targetViaId": "SOUTH_SOURCE_30_VIA",
+      "targetXY": [
+        39.7,
+        21.7
+      ],
+      "expectedConnected": true
+    },
+    {
+      "net": "PA10_UART_RX",
+      "source": "U1.31",
+      "targetViaId": "SOUTH_SOURCE_31_VIA",
+      "targetXY": [
+        40,
+        20.5
+      ],
+      "expectedConnected": true
+    },
+    {
+      "net": "SWDIO",
+      "source": "U1.34",
+      "targetViaId": "SOUTH_SOURCE_34_VIA",
+      "targetXY": [
+        41.5,
+        21.25
+      ],
+      "expectedConnected": true
+    },
+    {
+      "net": "PA4_SPI_NSS",
+      "source": "U1.14",
+      "target": "R25.2",
+      "expectedConnected": true
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "target": "C14.2",
+      "expectedConnected": true
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "target": "U1.23",
+      "expectedConnected": true
+    },
+    {
+      "net": "GPIO_PB12",
+      "source": "U1.25",
+      "targetXY": [
+        35,
+        21.25
+      ],
+      "expectedConnected": true
+    },
+    {
+      "net": "GPIO_PB13",
+      "source": "U1.26",
+      "targetXY": [
+        37.3,
+        19.7
+      ],
+      "expectedConnected": true
+    },
+    {
+      "net": "GPIO_PB14",
+      "source": "U1.27",
+      "targetXY": [
+        35,
+        22.7
+      ],
+      "expectedConnected": true
+    },
+    {
+      "net": "GPIO_PB15",
+      "source": "U1.28",
+      "targetXY": [
+        38.5,
+        19.7
+      ],
+      "expectedConnected": true
+    }
+  ],
+  "rootRework": {
+    "supersedes": "GPIO_south_joint_fanout_05",
+    "R16PlaceBoundClearanceMM": {
+      "C14": 0.2792,
+      "R12": 0.2792
+    },
+    "reason": "Close GND drills at39.25,20.3 and42.3,21.35 blocked opposite-layer exits. Relocate after jointly planning all4 service nets, preserving original local cap loops. No arbitrary new vias left unused.",
+    "nearestSourceReturnMM": {
+      "PA10_UART_RX": 1.4422205101855985,
+      "USB_ATTACH_N": 1.513274595042156,
+      "SWDIO": 1.5206906325745548
+    },
+    "targetDeviations": "USB_ATTACH1.5133 andSWDIO1.5207 are explicitly slightly above the1.5mm engineering target, not claimed <=1.5. Actual native common-GND/ref and USB coupling check remain; not a universal DRC bound."
+  },
+  "supersededByNSSPlan": [
+    "SOUTH_RIP_NSS_PULLUP_0",
+    "SOUTH_RIP_NSS_PULLUP_1",
+    "SOUTH_RIP_NSS_PULLUP_2",
+    "SOUTH_NSS_PULLUP_RELOCATED"
+  ],
+  "sourceDelta": "engineering_mcu/plans/GPIO_PB15_bottom_exit_delta_01.json"
+}

@@ -1,0 +1,363 @@
+{
+  "status": "B016_BOTH_BOARDS_SAVED_FRESH_IDENTITY_CONNECTIVITY_AND_SCOPED_VALIDATED_WHOLE_BOARD_DRC_PENDING",
+  "wholeBoardDRC": null,
+  "qualifiedAliasesRemain": "b014",
+  "variants": {
+    "2L": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native_candidates\\HI_2L_clearance_remaining_b016_DRC_PENDING.brd",
+      "sha256": "4AC553CF77DA21A3BA7E2B4E9142DDE1707571B7E4A80B17FCA975C46876D6A5",
+      "snapshot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\clearance_2L_b016_DRC_PENDING",
+      "summary": {
+        "netCount": 69,
+        "nettedTerminalCount": 266.0,
+        "nativeRemainingConnections": 16.0,
+        "graphMinTerminalJoins": 16.0,
+        "netsNeedingConnection": 14,
+        "nativeDRC": null,
+        "drcEvidenceScope": "UNRECOMPUTED_PENDING_WHOLE_BOARD_DRC; RAW_STORED_NOT_A_CURRENT_DRC_RESULT",
+        "nativeTerminalFreeBranches": 1,
+        "rawStoredDRCsForensicOnly": 0
+      },
+      "physicalPins": 272,
+      "namedNetPins": 266,
+      "ncPseudoPins": 6,
+      "allNativeEndpointProofs": 304,
+      "b015ConnectedPhysicalEdgesPreserved": 172,
+      "actualEtchLayers": [
+        "ETCH/TOP",
+        "ETCH/BOTTOM"
+      ],
+      "filmCount": 15,
+      "fullFilmOptionsLayerMappingsPreserved": true,
+      "actualCrossSectionAndLogicalClassMembersPreserved": true,
+      "actualDesignOutlinePreserved": true,
+      "routeSegmentsTotal": 788,
+      "manualRouteSegments": 731,
+      "generatedThermalSegments": 57,
+      "uniqueVias": 153,
+      "actualCopperPolygons": 8,
+      "normalScopedChangedNetworksFile": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\clearance_remaining_2L_b016_DRC_PENDING_try12\\changed_nets_scoped_drc.txt",
+      "additionalFreshScopedPB1PB10": null,
+      "strictSpacingFieldChallenges": [
+        {
+          "file": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\clearance_remaining_2L_b016_DRC_PENDING_try12\\strict_HI_B016_S001_2L_smdpin_line.txt",
+          "sha256": "024C2785A96668ED851349DBF8B993C11E7E106C8B841754AE7954D49DACE255",
+          "expectedStrict": 0.4,
+          "normal": 0.2,
+          "evidence": "actual Line to SMD Pin Spacing expected/actual + fullphysicalobject attributes; normal before/after0 and allfieldsexactlyrestored"
+        },
+        {
+          "file": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\clearance_remaining_2L_b016_DRC_PENDING_try12\\strict_HI_JS_S027_2L_smdpin_line.txt",
+          "sha256": "A2D0D8CAA0E9064C3A40593F349164189CDB949403F8EAFE4C6F865C8A92F747",
+          "expectedStrict": 0.4,
+          "normal": 0.2,
+          "evidence": "actual Line to SMD Pin Spacing expected/actual + fullphysicalobject attributes; normal before/after0 and allfieldsexactlyrestored"
+        }
+      ],
+      "hseSingleAnchorNegativePass": true,
+      "anchor": [
+        46.35,
+        29.4
+      ],
+      "explicitLiveR27FeedPreserved": true,
+      "J2DataGroundToShellToC10_2NativePassed": true,
+      "oldPhysicalSourcePinsPreservedDespiteVirtualTailsRetired": true,
+      "retiredVirtualAliases": [
+        {
+          "before": {
+            "id": "NODE_JS_1",
+            "net": "GPIO_PB12",
+            "layer": "BOTTOM",
+            "xy": [
+              35,
+              21.25
+            ],
+            "type": "point",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "after": {
+            "id": "NODE_JS_1",
+            "net": "GPIO_PB12",
+            "layer": "TOP",
+            "xy": [
+              37.0,
+              21.25
+            ],
+            "type": "via",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "reason": "Retire nonhardware partial endpoint after exactunusedtaildeletion; preserve U1->actualoriginalsourcevia and allphysicalpins; fullheaderconnection remains pending."
+        },
+        {
+          "before": {
+            "id": "NODE_JS_2",
+            "net": "GPIO_PB13",
+            "layer": "BOTTOM",
+            "xy": [
+              37.3,
+              19.7
+            ],
+            "type": "point",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "after": {
+            "id": "NODE_JS_2",
+            "net": "GPIO_PB13",
+            "layer": "TOP",
+            "xy": [
+              37.5,
+              20.75
+            ],
+            "type": "via",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "reason": "Retire nonhardware partial endpoint after exactunusedtaildeletion; preserve U1->actualoriginalsourcevia and allphysicalpins; fullheaderconnection remains pending."
+        },
+        {
+          "before": {
+            "id": "NODE_JS_3",
+            "net": "GPIO_PB14",
+            "layer": "BOTTOM",
+            "xy": [
+              35,
+              22.7
+            ],
+            "type": "point",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "after": {
+            "id": "NODE_JS_3",
+            "net": "GPIO_PB14",
+            "layer": "TOP",
+            "xy": [
+              38.0,
+              21.25
+            ],
+            "type": "via",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "reason": "Retire nonhardware partial endpoint after exactunusedtaildeletion; preserve U1->actualoriginalsourcevia and allphysicalpins; fullheaderconnection remains pending."
+        },
+        {
+          "before": {
+            "id": "NODE_JS_4",
+            "net": "GPIO_PB15",
+            "layer": "BOTTOM",
+            "xy": [
+              38.5,
+              22.3
+            ],
+            "type": "point",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "after": {
+            "id": "NODE_JS_4",
+            "net": "GPIO_PB15",
+            "layer": "TOP",
+            "xy": [
+              38.5,
+              20.7
+            ],
+            "type": "via",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "reason": "Retire nonhardware partial endpoint after exactunusedtaildeletion; preserve U1->actualoriginalsourcevia and allphysicalpins; fullheaderconnection remains pending."
+        }
+      ],
+      "VDD24GeometryFlareFixNoRuleRelaxation": true,
+      "allProtectedOriginalsWorkcopySHAsAndQualifiedAliasesUnchanged": true,
+      "atomicRipupTargetCounts": [
+        "23",
+        "2",
+        "8"
+      ],
+      "buildLog": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\clearance_remaining_2L_b016_DRC_PENDING_try12",
+      "freshLog": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_clearance_2L_b016_DRC_PENDING_stored",
+      "frozenCompiledLoadOrder": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\source\\batch_snapshots\\clearance_remaining_2L_b016_DRC_PENDING_try12\\inputs_manifest.json",
+      "wholeBoardDRC": null
+    },
+    "4L": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native_candidates\\HI_4L_clearance_remaining_b016_DRC_PENDING.brd",
+      "sha256": "FD5D93BED7E64FEF14CEBB17FF103443FA29E0CEDF60EEA26B79D9F8D091B1B7",
+      "snapshot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\clearance_4L_b016_DRC_PENDING",
+      "summary": {
+        "netCount": 69,
+        "nettedTerminalCount": 266.0,
+        "nativeRemainingConnections": 16.0,
+        "graphMinTerminalJoins": 16.0,
+        "netsNeedingConnection": 14,
+        "nativeDRC": null,
+        "drcEvidenceScope": "UNRECOMPUTED_PENDING_WHOLE_BOARD_DRC; RAW_STORED_NOT_A_CURRENT_DRC_RESULT",
+        "nativeTerminalFreeBranches": 0,
+        "rawStoredDRCsForensicOnly": 0
+      },
+      "physicalPins": 272,
+      "namedNetPins": 266,
+      "ncPseudoPins": 6,
+      "allNativeEndpointProofs": 299,
+      "b015ConnectedPhysicalEdgesPreserved": 172,
+      "actualEtchLayers": [
+        "ETCH/TOP",
+        "ETCH/L2",
+        "ETCH/L3",
+        "ETCH/BOTTOM"
+      ],
+      "filmCount": 17,
+      "fullFilmOptionsLayerMappingsPreserved": true,
+      "actualCrossSectionAndLogicalClassMembersPreserved": true,
+      "actualDesignOutlinePreserved": true,
+      "routeSegmentsTotal": 837,
+      "manualRouteSegments": 709,
+      "generatedThermalSegments": 128,
+      "uniqueVias": 143,
+      "actualCopperPolygons": 3,
+      "normalScopedChangedNetworksFile": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\clearance_remaining_4L_b016_DRC_PENDING_try05\\changed_nets_scoped_drc.txt",
+      "additionalFreshScopedPB1PB10": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_clearance_4L_b016_DRC_PENDING_stored\\changed_nets_scoped_drc.txt",
+      "strictSpacingFieldChallenges": [
+        {
+          "file": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\clearance_remaining_4L_b016_DRC_PENDING_try05\\strict_HI_B016_S001_4L_smdpin_line.txt",
+          "sha256": "ED4E6F7E3AC3E4EEB796D9688292D76A14F15DD8C0A8199D76DF5CD6CC248755",
+          "expectedStrict": 0.4,
+          "normal": 0.2,
+          "evidence": "actual Line to SMD Pin Spacing expected/actual + fullphysicalobject attributes; normal before/after0 and allfieldsexactlyrestored"
+        },
+        {
+          "file": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\clearance_remaining_4L_b016_DRC_PENDING_try05\\strict_HI_JS_S006_4L_smdpin_line.txt",
+          "sha256": "60A4B59929096973EFADCCE7EC558D7F693AB5CF3025A31325D8FADC150D0EF6",
+          "expectedStrict": 0.4,
+          "normal": 0.2,
+          "evidence": "actual Line to SMD Pin Spacing expected/actual + fullphysicalobject attributes; normal before/after0 and allfieldsexactlyrestored"
+        }
+      ],
+      "hseSingleAnchorNegativePass": true,
+      "anchor": [
+        46.35,
+        29.4
+      ],
+      "explicitLiveR27FeedPreserved": true,
+      "J2DataGroundToShellToC10_2NativePassed": true,
+      "oldPhysicalSourcePinsPreservedDespiteVirtualTailsRetired": true,
+      "retiredVirtualAliases": [
+        {
+          "before": {
+            "id": "NODE_JS_1",
+            "net": "GPIO_PB12",
+            "layer": "BOTTOM",
+            "xy": [
+              35,
+              21.25
+            ],
+            "type": "point",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "after": {
+            "id": "NODE_JS_1",
+            "net": "GPIO_PB12",
+            "layer": "TOP",
+            "xy": [
+              37.0,
+              21.25
+            ],
+            "type": "via",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "reason": "Retire nonhardware partial endpoint after exactunusedtaildeletion; preserve U1->actualoriginalsourcevia and allphysicalpins; fullheaderconnection remains pending."
+        },
+        {
+          "before": {
+            "id": "NODE_JS_2",
+            "net": "GPIO_PB13",
+            "layer": "BOTTOM",
+            "xy": [
+              37.3,
+              19.7
+            ],
+            "type": "point",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "after": {
+            "id": "NODE_JS_2",
+            "net": "GPIO_PB13",
+            "layer": "TOP",
+            "xy": [
+              37.5,
+              20.725
+            ],
+            "type": "via",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "reason": "Retire nonhardware partial endpoint after exactunusedtaildeletion; preserve U1->actualoriginalsourcevia and allphysicalpins; fullheaderconnection remains pending."
+        },
+        {
+          "before": {
+            "id": "NODE_JS_3",
+            "net": "GPIO_PB14",
+            "layer": "BOTTOM",
+            "xy": [
+              35,
+              22.7
+            ],
+            "type": "point",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "after": {
+            "id": "NODE_JS_3",
+            "net": "GPIO_PB14",
+            "layer": "TOP",
+            "xy": [
+              38.0,
+              21.25
+            ],
+            "type": "via",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "reason": "Retire nonhardware partial endpoint after exactunusedtaildeletion; preserve U1->actualoriginalsourcevia and allphysicalpins; fullheaderconnection remains pending."
+        },
+        {
+          "before": {
+            "id": "NODE_JS_4",
+            "net": "GPIO_PB15",
+            "layer": "BOTTOM",
+            "xy": [
+              38.5,
+              22.3
+            ],
+            "type": "point",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "after": {
+            "id": "NODE_JS_4",
+            "net": "GPIO_PB15",
+            "layer": "TOP",
+            "xy": [
+              38.5,
+              20.675
+            ],
+            "type": "via",
+            "origin": "Preserved source proof alias, with explicit coordinate relocation map where required"
+          },
+          "reason": "Retire nonhardware partial endpoint after exactunusedtaildeletion; preserve U1->actualoriginalsourcevia and allphysicalpins; fullheaderconnection remains pending."
+        }
+      ],
+      "VDD24GeometryFlareFixNoRuleRelaxation": true,
+      "allProtectedOriginalsWorkcopySHAsAndQualifiedAliasesUnchanged": true,
+      "atomicRipupTargetCounts": [
+        "30",
+        "2",
+        "8"
+      ],
+      "buildLog": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\clearance_remaining_4L_b016_DRC_PENDING_try05",
+      "freshLog": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_clearance_4L_b016_DRC_PENDING_stored",
+      "frozenCompiledLoadOrder": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\source\\batch_snapshots\\clearance_remaining_4L_b016_DRC_PENDING_try05\\inputs_manifest.json",
+      "wholeBoardDRC": null
+    }
+  },
+  "apiSourcesManifest": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\source\\api_b016\\manifest.json",
+  "constructionNotes": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native\\b016_construction_notes.md",
+  "limitations": [
+    "All69nets are not yet fully routed. Fullfresh wholeboardDRC pending; localnormal0 is not wholeboard0.",
+    "2L try11 correctlyblocked on lostJ2.SH2common afternewfill; actual TOP.6 bridgeSH2->SH4 restoredcommon intry12 andfreshreadback. WESTcommon naturallyrestored after8unusedtaildeletions; noWESTbridge added.",
+    "Source b015 orphan1 is generatedTOPGND, notV3manualdeadstub; bothvariants preserveR27livefeed.",
+    "90ohm/fabrication/tenting/EMIqualification remain separate from routing training."
+  ]
+}

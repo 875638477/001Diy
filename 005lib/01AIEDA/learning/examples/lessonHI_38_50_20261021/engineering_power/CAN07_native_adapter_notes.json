@@ -1,0 +1,42 @@
+{
+  "status": "DOCUMENTED_SCHEMA_ADAPTER_CANONICAL_FROZEN_UNCHANGED",
+  "canonical": {
+    "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\CAN_RXD_2L_engineered_07.json",
+    "sha256": "D331E853C55FCB367530EE560DFA56D1DC12CEC90FAB33759812FAB970E040C5",
+    "size": 10585
+  },
+  "proofsForNativeAdapter": [
+    {
+      "net": "CAN_RXD",
+      "source": "U5.4",
+      "target": "R13.2"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "target": "J2.SH3"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "toAlias": "CAN2L_PHY_RETURN"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "toAlias": "CAN2L_REFERENCE_CROSS_LEFT"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "toAlias": "CAN2L_REFERENCE_CROSS_RIGHT"
+    }
+  ],
+  "operationAdaptations": [
+    "Exclude originalpendingHI_2L_VBUS_PRESENT_N_1_R1 and insert includedreplacementonce; beforeappliednative compare exactoriginal/uniqueness",
+    "If originalVBUSoperation alreadyexistsinnative, requireactualuniquesegmentripupdelta before applyingCAN07",
+    "Forremaining_returns02 automaticallyaddU1.35-GNDviaalias graphproofs; do notomit becausecandidateonlylistsengineeringreturnreview",
+    "RIGHT11 BOOToperation geometryadapt documented separatelyinBOOT_endpoint_simplification_02; originalfrozenfileunchanged"
+  ],
+  "scope": "Onlyschema/integrationinstructions, noCadenceexecution or claimfinalDRC."
+}

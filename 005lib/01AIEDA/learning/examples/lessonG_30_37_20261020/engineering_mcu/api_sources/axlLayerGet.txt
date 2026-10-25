@@ -1,0 +1,35 @@
+
+  NAME
+         axlLayerGet - Return layer param
+  FUNCTION
+         axlLayerGet(
+                 t_layer             
+         )
+         ==>o_dbid/nil
+  SYNOPSIS
+         Returns layer param given shortcut notation of <class>/<subclass>
+ 
+         This is an ease of use function that does:
+                 axlGetParam("paramLayerGroup:<class>/paramLayer:<subclass>)
+ 
+         This does NOT allow access to the cross section data (example
+         material or thickness). It allows easier access to color and
+         visiblity of a layer.
+  TIP
+         You can use the groupMembers attribute of result
+                  result = axlGetParam("paramLayerGroup:<class>")
+         to iterate over all subclass of a class.
+  NEEDS
+         t_layer         - Name of layer in format "<class>/<subclass>"
+  RETURNS
+         o_dbid          - Layer param dbid
+         nil             - if the layer is not present, 
+  SEE ALSO
+         axlGetParam
+  EXAMPLES
+         1) Change color of top etch layer
+                 q = axlLayerGet("ETCH/TOP")
+                 q->color = 7
+                 axlLayerSet(q)
+                 axlVisibleUpdate(t)
+

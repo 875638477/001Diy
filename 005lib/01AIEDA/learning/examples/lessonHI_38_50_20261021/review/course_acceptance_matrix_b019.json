@@ -1,0 +1,103 @@
+{
+  "status": "IN_PROGRESS_NOT_ALL_COURSES_COMPLETED",
+  "asOfLocal": "2026-10-22T06:41:10.078713+08:00",
+  "nativeQualifiedCheckpoint": "USB_aux_b014",
+  "latestSavedWorkingCheckpoint": "padentry_normalized_b019_DRC_PENDING",
+  "wholeBoardDRC": null,
+  "GUI": "native pipe连接不可用，GUI操作保留待验",
+  "courses": [
+    {
+      "lesson": 38,
+      "status": "原生几何实操已验证，GUI待验",
+      "learnedScope": "明确端点、拐角、逐段线宽、via、精确批删、事务回退及保存重开",
+      "evidence": "edit_pilot_*_02; exact_batch_ripup_pilot_2L_05; b016_native_report.json",
+      "remaining": "GUI捕捉/鼠标交互"
+    },
+    {
+      "lesson": 39,
+      "status": "进行中",
+      "learnedScope": "MCU源扇出、按引脚功能优先、实际细颈及全层via间距、拥塞与尾线清理",
+      "evidence": "source_b015_fine_neck_contracts.json; b016_constraint_field_diff.json",
+      "remaining": "South7个GPIO两板全组长路径及原生验收"
+    },
+    {
+      "lesson": 40,
+      "status": "已实操，终板复查待完成",
+      "learnedScope": "CIN、SW/BOOT、反馈、去耦、主供电及源引脚连续细颈；保留真实R27供电",
+      "evidence": "power_b001/b002d/b003c; source_b015; b016",
+      "remaining": "终板供电铜最窄处、返回、压降/热前提复查"
+    },
+    {
+      "lesson": 41,
+      "status": "进行中",
+      "learnedScope": "动态母边界、永久void建立顺序、实际polygon/hole/thermal、连接角色; b018两板真TOP和无端孤铜永久void清理，全56GNDpin/全部GNDvia共地",
+      "evidence": "batchHI_shapes_v3.il; b016_native_report.json; arc_source_b015_area_audit.json",
+      "remaining": "South后按阶段polygon撤派生孤铜void重填，终板铜宽/颈缩/参考复查"
+    },
+    {
+      "lesson": 42,
+      "status": "已实操，终板复查待完成",
+      "learnedScope": "HSE quiet岛/guard/单anchor真实反测、ADC/VDDA及NRST路径",
+      "evidence": "b016原生HSE反测与NRST端点证明",
+      "remaining": "最终所有route/shape完成后再次隔离和耦合审查"
+    },
+    {
+      "lesson": 43,
+      "status": "已实操，终板参考待验",
+      "learnedScope": "USB逐段线对、ESD真实通铜、DNP共享分支、J2实际GND/shell铜桥、严格挑战",
+      "evidence": "USB8; USB_aux_b014; b016的J2DataGroundToShellToC10_2NativePassed",
+      "remaining": "最终2L真实参考、返回和实际整对几何复测"
+    },
+    {
+      "lesson": 44,
+      "status": "进行中",
+      "learnedScope": "SPI源端处理、UART/CAN/NRST等真实路径和使用条件",
+      "evidence": "SPIb012; remaining_services_02; b016_native_report.json",
+      "remaining": "GPIO全组与最终并行耦合/返回复核"
+    },
+    {
+      "lesson": 45,
+      "status": "尚未完成整板验收",
+      "learnedScope": "持续分批重布、连接/规则/回路分离检查及新文件重开",
+      "evidence": "2L b019工作板，7South网未接；全板DRC未完成",
+      "remaining": "69网全连通、全板DRC、最终实铜/回路及工程比较"
+    },
+    {
+      "lesson": 46,
+      "status": "已实操，终板复查待完成",
+      "learnedScope": "固定TOP-L2-L3-BOTTOM，TOP参考L2、BOTTOM参考L3，实际plane投影与孔区",
+      "evidence": "真实4L cross section和filled copper快照",
+      "remaining": "全部关键终路径与实际参考连续性"
+    },
+    {
+      "lesson": 47,
+      "status": "进行中",
+      "learnedScope": "真实PTH/信号via、返回via的共地端点证明、逐铜层via间距",
+      "evidence": "USB8/SPIb012返回；b016的全层微区规则及via几何",
+      "remaining": "GPIO所有新via的参考/返回和制造条件"
+    },
+    {
+      "lesson": 48,
+      "status": "进行中",
+      "learnedScope": "实际plane孔/void、quiet岛单anchor、参考中断风险",
+      "evidence": "arc_source_b015_area_audit.json; b016_HSE负向测试",
+      "remaining": "终板全关键路径投影、开口/颈缩/跨缝检查"
+    },
+    {
+      "lesson": 49,
+      "status": "已实操，最终复测待完成",
+      "learnedScope": "按接口明确pair gap/phase/uncoupled预算及端接，不用多余蛇形替代返回",
+      "evidence": "USB8的3mm/1mm严格挑战；DNP分支和实际ESD导通",
+      "remaining": "最终层叠/铜图对应的差分路径与适度匹配"
+    },
+    {
+      "lesson": 50,
+      "status": "尚未完成整板验收",
+      "learnedScope": "两板逐批实际路径、参考、via及布局取舍对照",
+      "evidence": "4L b019工作板，7South网未接；全板DRC未完成",
+      "remaining": "完整4L工程、全板DRC、最终回路/参考及2L具体比较"
+    }
+  ],
+  "latestWorkingReport": "progress_record_b019.json",
+  "independentScopedAudit": "b019_scoped_full_log_independent_audit.json"
+}

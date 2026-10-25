@@ -1,0 +1,118 @@
+{
+  "status": "PENDING_SOURCE_REPLACEMENT_NOT_NATIVE_RIPUP",
+  "batchId": "GPIO_PB15_bottom_exit_delta_01",
+  "replacePendingOperationIds": [
+    "SOUTH_GPIO15_BOTTOM_NECK"
+  ],
+  "removePendingSpacingExceptionIds": [
+    "HI_GPIO15_GND_STITCH_NECK_S"
+  ],
+  "operations": [
+    {
+      "type": "route",
+      "id": "SOUTH_GPIO15_BOTTOM_NECK",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          38.5,
+          20.7
+        ],
+        [
+          38.5,
+          22.3
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Upward narrow exit between PB14/Attach source vias; removes conflicting old downward copper near relocated common-GND38.8,19.7. Existing1.6mm source escape then normal.2 continuation."
+    }
+  ],
+  "longRouteAnchors": {
+    "GPIO_PB15": {
+      "xy": [
+        38.5,
+        22.3
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.28"
+    }
+  },
+  "physicalExceptions": [
+    {
+      "id": "HI_GPIO15_UPWARD_BOTTOM_P",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          38.15,
+          20.5
+        ],
+        [
+          38.85,
+          20.5
+        ],
+        [
+          38.85,
+          22.5
+        ],
+        [
+          38.15,
+          22.5
+        ]
+      ],
+      "nets": [
+        "GPIO_PB15"
+      ],
+      "neckWidthMinMM": 0.16,
+      "maxNeckMM": 2.4,
+      "basis": "Actual newly proposed bottomneck1.6mm; no additional via or boardwide width change."
+    }
+  ],
+  "spacingExceptions": [
+    {
+      "id": "HI_GPIO15_UPWARD_DIGITAL_S",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          37.8,
+          20.5
+        ],
+        [
+          39.2,
+          20.5
+        ],
+        [
+          39.2,
+          21.7
+        ],
+        [
+          37.8,
+          21.7
+        ]
+      ],
+      "netsA": [
+        "GPIO_PB15"
+      ],
+      "netsB": [
+        "GPIO_PB14",
+        "USB_ATTACH_N"
+      ],
+      "onlyFields": {
+        "via_line": 0.16
+      },
+      "basis": "Nominal .5mm from sourcevia centers minus .26via radius and .08trace halfwidth=.16 copper gap; only7.6um above selected OSH.1524 min, tolerance/tool/mask confirmation remain open. No GNDspacing reduction; all other fields parent preserved."
+    }
+  ],
+  "replacesOriginalGeometry": {
+    "points": [
+      [
+        38.5,
+        20.7
+      ],
+      [
+        38.5,
+        19.7
+      ]
+    ],
+    "reason": "Relocated root commonGND38.8,19.7 would overlap olddownward path at endpoint; not executed. Parent authorized2026-10-22 up-exit after removing obsolete longNSS wall."
+  }
+}

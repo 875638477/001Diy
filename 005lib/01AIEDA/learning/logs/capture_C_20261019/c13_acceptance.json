@@ -1,0 +1,478 @@
+{
+  "lesson": 13,
+  "date": "2026-10-19",
+  "scope": "Capture 17.2 native database SDK; GUI not claimed",
+  "counts": {
+    "checks": 17,
+    "passed": 17,
+    "occurrences": 26,
+    "wire_memberships": 24,
+    "pin_memberships": 21
+  },
+  "checks": [
+    {
+      "name": "TI_14pin_four_unit_mapping",
+      "passed": true,
+      "evidence": {
+        "A": {
+          "A": "1",
+          "B": "2",
+          "Y": "3",
+          "GND": "7",
+          "VCC": "14"
+        },
+        "B": {
+          "A": "4",
+          "B": "5",
+          "Y": "6",
+          "GND": "7",
+          "VCC": "14"
+        },
+        "C": {
+          "A": "9",
+          "B": "10",
+          "Y": "8",
+          "GND": "7",
+          "VCC": "14"
+        },
+        "D": {
+          "A": "12",
+          "B": "13",
+          "Y": "11",
+          "GND": "7",
+          "VCC": "14"
+        }
+      }
+    },
+    {
+      "name": "four_units_cover_14_unique_physical_terminals",
+      "passed": true,
+      "evidence": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ]
+    },
+    {
+      "name": "four_units_share_base_U1_and_have_exact_full_designators",
+      "passed": true,
+      "evidence": [
+        {
+          "page": "TOP1",
+          "raw_reference": "U1",
+          "full_reference": "U1A",
+          "device": "A"
+        },
+        {
+          "page": "TOP1",
+          "raw_reference": "U1",
+          "full_reference": "U1B",
+          "device": "B"
+        },
+        {
+          "page": "TOP1",
+          "raw_reference": "U1",
+          "full_reference": "U1C",
+          "device": "C"
+        },
+        {
+          "page": "TOP1",
+          "raw_reference": "U1",
+          "full_reference": "U1D",
+          "device": "D"
+        }
+      ]
+    },
+    {
+      "name": "installed_library_has_no_authorized_pin_swap_groups",
+      "passed": true,
+      "evidence": [
+        "-1"
+      ]
+    },
+    {
+      "name": "same_page_aliases_join",
+      "passed": true,
+      "evidence": [
+        {
+          "flat_id": "14",
+          "name": "SAME_PAGE",
+          "occ_path": "SAME_PAGE",
+          "page": "TOP1",
+          "wire_id": "69",
+          "aliases": "SAME_PAGE"
+        },
+        {
+          "flat_id": "14",
+          "name": "SAME_PAGE",
+          "occ_path": "SAME_PAGE",
+          "page": "TOP1",
+          "wire_id": "65",
+          "aliases": "SAME_PAGE"
+        }
+      ]
+    },
+    {
+      "name": "same_alias_text_across_pages_stays_separate",
+      "passed": true,
+      "evidence": [
+        {
+          "flat_id": "4",
+          "name": "SAME_PAGE_73",
+          "occ_path": "SAME_PAGE_73",
+          "page": "TOP2",
+          "wire_id": "73",
+          "aliases": "SAME_PAGE"
+        }
+      ]
+    },
+    {
+      "name": "off_page_connectors_join_TOP1_and_TOP2",
+      "passed": true,
+      "evidence": [
+        {
+          "flat_id": "3",
+          "name": "CROSS_PAGE",
+          "occ_path": "CROSS_PAGE",
+          "page": "TOP2",
+          "wire_id": "81",
+          "aliases": ""
+        },
+        {
+          "flat_id": "3",
+          "name": "CROSS_PAGE",
+          "occ_path": "CROSS_PAGE",
+          "page": "TOP1",
+          "wire_id": "77",
+          "aliases": ""
+        }
+      ]
+    },
+    {
+      "name": "hierarchy_local_aliases_remain_separate",
+      "passed": true,
+      "evidence": [
+        {
+          "flat_id": "42",
+          "name": "LOCAL_HA",
+          "global": "0",
+          "occ_path": "HA/LOCAL",
+          "sch_net": "LOCAL"
+        },
+        {
+          "flat_id": "72",
+          "name": "LOCAL_HB",
+          "global": "0",
+          "occ_path": "HB/LOCAL",
+          "sch_net": "LOCAL"
+        }
+      ]
+    },
+    {
+      "name": "hierarchical_port_binds_HA",
+      "passed": true,
+      "evidence": [
+        {
+          "flat_id": "7",
+          "name": "PARENT_SIG_HA",
+          "global": "0",
+          "occ_path": "PARENT_SIG_HA",
+          "sch_net": "PARENT_SIG_HA"
+        },
+        {
+          "flat_id": "7",
+          "name": "PARENT_SIG_HA",
+          "global": "0",
+          "occ_path": "HA/H_SIG",
+          "sch_net": "H_SIG"
+        }
+      ]
+    },
+    {
+      "name": "hierarchical_port_binds_HB",
+      "passed": true,
+      "evidence": [
+        {
+          "flat_id": "6",
+          "name": "PARENT_SIG_HB",
+          "global": "0",
+          "occ_path": "PARENT_SIG_HB",
+          "sch_net": "PARENT_SIG_HB"
+        },
+        {
+          "flat_id": "6",
+          "name": "PARENT_SIG_HB",
+          "global": "0",
+          "occ_path": "HB/H_SIG",
+          "sch_net": "H_SIG"
+        }
+      ]
+    },
+    {
+      "name": "global_VCC_crosses_root_and_children",
+      "passed": true,
+      "evidence": [
+        {
+          "flat_id": "15",
+          "name": "VCC",
+          "global": "1",
+          "occ_path": "VCC",
+          "sch_net": "VCC"
+        },
+        {
+          "flat_id": "15",
+          "name": "VCC",
+          "global": "1",
+          "occ_path": "HA/VCC",
+          "sch_net": "VCC"
+        },
+        {
+          "flat_id": "15",
+          "name": "VCC",
+          "global": "1",
+          "occ_path": "HB/VCC",
+          "sch_net": "VCC"
+        }
+      ]
+    },
+    {
+      "name": "hidden_HC00_VCC14_is_global",
+      "passed": true,
+      "evidence": [
+        {
+          "flat_id": "15",
+          "name": "VCC",
+          "occ_path": "VCC",
+          "page": "TOP1",
+          "reference": "U1C",
+          "pin_name": "VCC",
+          "pin_number": "14",
+          "type": "7",
+          "visible": "0",
+          "raw_global": "1"
+        },
+        {
+          "flat_id": "15",
+          "name": "VCC",
+          "occ_path": "VCC",
+          "page": "TOP1",
+          "reference": "U1D",
+          "pin_name": "VCC",
+          "pin_number": "14",
+          "type": "7",
+          "visible": "0",
+          "raw_global": "1"
+        },
+        {
+          "flat_id": "15",
+          "name": "VCC",
+          "occ_path": "VCC",
+          "page": "TOP1",
+          "reference": "U1A",
+          "pin_name": "VCC",
+          "pin_number": "14",
+          "type": "7",
+          "visible": "0",
+          "raw_global": "1"
+        },
+        {
+          "flat_id": "15",
+          "name": "VCC",
+          "occ_path": "VCC",
+          "page": "TOP1",
+          "reference": "U1B",
+          "pin_name": "VCC",
+          "pin_number": "14",
+          "type": "7",
+          "visible": "0",
+          "raw_global": "1"
+        }
+      ]
+    },
+    {
+      "name": "hidden_HC00_GND7_shared_by_four_units",
+      "passed": true,
+      "evidence": [
+        {
+          "flat_id": "5",
+          "name": "GND",
+          "occ_path": "GND",
+          "page": "TOP1",
+          "reference": "U1D",
+          "pin_name": "GND",
+          "pin_number": "7",
+          "type": "7",
+          "visible": "0",
+          "raw_global": "1"
+        },
+        {
+          "flat_id": "5",
+          "name": "GND",
+          "occ_path": "GND",
+          "page": "TOP1",
+          "reference": "U1B",
+          "pin_name": "GND",
+          "pin_number": "7",
+          "type": "7",
+          "visible": "0",
+          "raw_global": "1"
+        },
+        {
+          "flat_id": "5",
+          "name": "GND",
+          "occ_path": "GND",
+          "page": "TOP1",
+          "reference": "U1A",
+          "pin_name": "GND",
+          "pin_number": "7",
+          "type": "7",
+          "visible": "0",
+          "raw_global": "1"
+        },
+        {
+          "flat_id": "5",
+          "name": "GND",
+          "occ_path": "GND",
+          "page": "TOP1",
+          "reference": "U1C",
+          "pin_name": "GND",
+          "pin_number": "7",
+          "type": "7",
+          "visible": "0",
+          "raw_global": "1"
+        }
+      ]
+    },
+    {
+      "name": "visible_wired_POWER_is_local_despite_raw_global_bit",
+      "passed": true,
+      "evidence": [
+        {
+          "flat_id": "43",
+          "name": "LOCAL_PWR_A",
+          "occ_path": "HA/LOCAL_PWR_A",
+          "page": "A1",
+          "reference": "U2",
+          "pin_name": "VDDa",
+          "pin_number": "2",
+          "type": "7",
+          "visible": "1",
+          "raw_global": "1"
+        },
+        {
+          "flat_id": "68",
+          "name": "LOCAL_PWR_B",
+          "occ_path": "HB/LOCAL_PWR_B",
+          "page": "B1",
+          "reference": "U3",
+          "pin_name": "VDDa",
+          "pin_number": "2",
+          "type": "7",
+          "visible": "1",
+          "raw_global": "1"
+        }
+      ]
+    },
+    {
+      "name": "bus_members_are_two_distinct_nets",
+      "passed": true,
+      "evidence": {
+        "data0": [
+          {
+            "flat_id": "13",
+            "name": "DATA0",
+            "global": "0",
+            "occ_path": "DATA0",
+            "sch_net": "DATA0"
+          }
+        ],
+        "data1": [
+          {
+            "flat_id": "8",
+            "name": "DATA1",
+            "global": "0",
+            "occ_path": "DATA1",
+            "sch_net": "DATA1"
+          }
+        ],
+        "bus": [
+          {
+            "flat_id": "8",
+            "name": "DATA1",
+            "occ_path": "DATA1",
+            "page": "TOP1",
+            "wire_id": "97",
+            "aliases": "{DATA[0..1]}"
+          },
+          {
+            "flat_id": "13",
+            "name": "DATA0",
+            "occ_path": "DATA0",
+            "page": "TOP1",
+            "wire_id": "97",
+            "aliases": "{DATA[0..1]}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "connected_gate_uses_physical_pins_1_2_3",
+      "passed": true,
+      "evidence": [
+        {
+          "flat_id": "9",
+          "name": "NAND_IN_B",
+          "occ_path": "NAND_IN_B",
+          "page": "TOP1",
+          "reference": "U1A",
+          "pin_name": "B",
+          "pin_number": "2",
+          "type": "0",
+          "visible": "1",
+          "raw_global": "0"
+        },
+        {
+          "flat_id": "10",
+          "name": "NAND_IN_A",
+          "occ_path": "NAND_IN_A",
+          "page": "TOP1",
+          "reference": "U1A",
+          "pin_name": "A",
+          "pin_number": "1",
+          "type": "0",
+          "visible": "1",
+          "raw_global": "0"
+        },
+        {
+          "flat_id": "12",
+          "name": "NAND_OUT_A",
+          "occ_path": "NAND_OUT_A",
+          "page": "TOP1",
+          "reference": "U1A",
+          "pin_name": "Y",
+          "pin_number": "3",
+          "type": "2",
+          "visible": "1",
+          "raw_global": "0"
+        }
+      ]
+    },
+    {
+      "name": "native_DSN_compound_file_header",
+      "passed": true,
+      "evidence": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson13_capture\\c13_scope_v8.dsn"
+    }
+  ],
+  "dsn_sha256": "7f7dd7e732fd65265476f6e52b2e9a2eb646b0857f42cfdf4e57f1b092056ce3"
+}

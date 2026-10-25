@@ -1,0 +1,141 @@
+namespace eval ::C13 {
+ variable root {D:/001DIY/005lib/01AIEDA/learning}
+ variable session $::DboSession_s_pDboSession
+ variable s [DboState]
+}
+proc ::C13::cs {x} {DboTclHelper_sMakeCString $x}
+proc ::C13::pt {x y} {DboTclHelper_sMakeCPoint $x $y}
+proc ::C13::get {obj method args} {set c [cs ""]; $obj $method {*}$args $c; DboTclHelper_sGetConstCharPtr $c}
+proc ::C13::fullref {inst} {set placed [DboPartInstToDboPlacedInst $inst]; if {$placed eq "NULL"} {return [get $inst GetReference]}; return [get $placed GetReferenceDesignator]}
+proc ::C13::ok {object context} {variable s; if {$object eq "NULL" || [$s Failed]} {error "Failed $context: object=$object"}; return $object}
+proc ::C13::write {path value} {set f [open $path w]; fconfigure $f -encoding utf-8; puts $f $value; close $f}
+proc ::C13::trace {x} {variable root; set f [open "$root/logs/capture_C_20261019/c13_progress.log" a]; puts $f "[clock format [clock seconds] -format {%Y-%m-%d %H:%M:%S}] $x"; close $f}
+proc ::C13::openLib {path} {variable session; variable s; ok [$session GetLib [cs $path] $s] "GetLib $path"}
+proc ::C13::pinReport {package part} {
+ variable s
+ set rows [list "device\tposition\tname\tphysical_number\ttype\tvisible\tglobal\tswap_id\thotspot_x\thotspot_y"]
+ for {set d 0} {$d < [$package GetSize $s]} {incr d} {
+   set device [$package GetDevice $d $s]
+   set des [get $device GetDesignator]
+   set it [$part NewPinsIter $s]
+   for {set pin [$it NextPin $s]} {$pin ne "NULL"} {set pin [$it NextPin $s]} {
+     set pos [$pin GetPinPosition $s]; set hot [$pin GetHotSpot $s]
+     lappend rows [join [list $des $pos [get $pin GetPinName] [get $device GetPinNumber $pos] [$pin GetPinType $s] [$pin GetIsVisible $s] [$pin GetIsGlobal $s] [$device GetPinSwapId $pos $s] [DboTclHelper_sGetCPointX $hot] [DboTclHelper_sGetCPointY $hot]] \t]
+   }
+   delete_DboSymbolPinsIter $it
+ }
+ return [join $rows \n]
+}
+proc ::C13::place {page part package device reference x y} {
+ variable s
+ set p [ok [$page NewPlacedInst $s [cs [get $package GetName]] [cs [get $package GetName]] $part $device [pt $x $y]] "place $reference"]
+ $p SetReference [cs $reference]
+ return $p
+}
+proc ::C13::wire {page x y name {endX ""}} {
+ variable s
+ if {$endX eq ""} {set endX [expr {$x+100}]}
+ set w [ok [$page NewWireScalar $s [pt $x $y] [pt $endX $y]] "wire $name"]
+ if {$name ne ""} {ok [$w NewAlias $s [cs $name] [pt $x $y] [DboTclHelper_sMakeLOGFONT] 0 0] "alias $name"}
+ return $w
+}
+proc ::C13::saveClose {design} {
+ variable session; variable s
+ ok $design saveClose
+ trace saveClose_begin
+ set si [$design NewViewsIter $s $::IterDefs_SCHEMATICS]
+ for {set sch [$si NextView $s]} {$sch ne "NULL"} {set sch [$si NextView $s]} {
+   set sch [DboViewToDboSchematic $sch]
+   trace "save_schematic [get $sch GetName]"
+   set pi [$sch NewPagesIter $s]
+   for {set page [$pi NextPage $s]} {$page ne "NULL"} {set page [$pi NextPage $s]} {trace "save_page [get $page GetName]"; $page MarkModified; $sch MarkModified $page; $sch SavePage $page}
+   delete_DboSchematicPagesIter $pi
+   $sch MarkModified
+   $design SaveSchematic $sch
+ }
+ delete_DboLibViewsIter $si
+ trace SaveDesign
+ $session SaveDesign $design
+ trace RemoveDesign
+ $session RemoveDesign $design
+ trace saveClose_done
+}
+proc ::C13::report {filename suffix} {error "Retired unsafe reader. Use c13_verify_v5.tcl with c13_run17.tcl."}
+proc ::C13::probeLibrary {} {
+ variable root; variable session; variable s
+ set target "$root/examples/lesson13_capture"
+ file mkdir $target
+ foreach {src dst} {C:/Program0/Cadence/spb172/tools/capture/library/pspice/74hc.olb hc_source.olb C:/Program0/Cadence/spb172/tools/capture/library/capsym.olb capsym_source.olb} {if {![file exists "$target/$dst"]} {file copy $src "$target/$dst"}}
+ set lib [openLib "$target/hc_source.olb"]
+ set package [$lib GetPackage [cs 74HC00] $s]
+ set part [$lib GetPart [cs 74HC00.Normal] $s]
+ write "$root/logs/capture_C_20261019/c13_hc00_pins.tsv" [pinReport $package $part]
+ return [list size [$package GetSize $s] homogeneous [$package IsHomogeneous $s]]
+}
+proc ::C13::create {filename} {
+ variable root; variable session; variable s
+ set dir "$root/examples/lesson13_capture"
+ set path "$dir/$filename.dsn"
+ trace "create $path"
+ if {[file exists $path]} {error "Refuse overwrite $path"}
+ set design [ok [$session CreateDesign $s [cs $path] [cs TOP]] CreateDesign]
+ set top [ok [$design GetRootSchematic $s] GetRootSchematic]
+ set p1 [ok [$top NewPage $s [cs TOP1]] TOP1]
+ set p2 [ok [$top NewPage $s [cs TOP2]] TOP2]
+ set a [ok [$design NewSchematic [cs CHILD_A] $s] CHILD_A]
+ set b [ok [$design NewSchematic [cs CHILD_B] $s] CHILD_B]
+ set ap [ok [$a NewPage $s [cs A1]] A1]
+ set bp [ok [$b NewPage $s [cs B1]] B1]
+ set lib [openLib "$dir/hc_source.olb"]
+ set package [$lib GetPackage [cs 74HC00] $s]
+ set part [$lib GetPart [cs 74HC00.Normal] $s]
+ for {set d 0} {$d < 4} {incr d} {place $p1 $part $package [$package GetDevice $d $s] U1 [expr {200+250*$d}] 800}
+ # Same text across pages is a scope control to be measured, not assumed.
+ wire $p1 200 200 SAME_PAGE
+ wire $p1 600 200 SAME_PAGE
+ wire $p2 200 200 SAME_PAGE
+ set cap [openLib "$dir/capsym_source.olb"]
+ set off [$cap GetOffPageSymbol [cs OFFPAGELEFT-L] $s]
+ foreach page [list $p1 $p2] {wire $page 200 300 ""; ok [$page NewOffPageConnector $s [cs CROSS_PAGE] $off [pt 200 290]] OffPage}
+ foreach page [list $ap $bp] {wire $page 200 200 LOCAL; wire $page 200 300 ""; ok [$page NewGlobal $s [cs VCC] [$cap GetGlobalSymbol [cs VCC] $s] [pt 190 290]] Global}
+ # Two hierarchical block instances reference distinct folders. The local alias
+ # in each child is intentionally identical to test separation in flat nets.
+ foreach {name folder x} {HA CHILD_A 200 HB CHILD_B 600} {
+   set block [ok [$p1 NewDrawnInst $s [cs $name] [DboTclHelper_sMakeCRect 0 0 140 120] [pt $x 500] 0 0 0] DrawnInst]
+   $block SetReference [cs $name]
+   $block SetIsPrimitiveProp $::DboValue_NOT_PRIMITIVE
+   $block SetContentsLibName [cs ""]
+   $block SetContentsViewName [cs $folder]
+   $block SetContentsViewType $::DboValue_SCHEMATIC_VIEW_TYPE
+   ok [$block NewPortInstScalar $s [cs H_SIG] $::DBO_IN [pt 0 60] [pt -20 60] 1] HierarchicalBlockPin
+   wire $p1 [expr {$x-20}] 560 "PARENT_SIG_$name" [expr {$x-100}]
+ }
+ foreach page [list $ap $bp] {
+   wire $page 200 400 ""
+   ok [$page NewPort $s [cs H_SIG] [$cap GetPortSymbol [cs PORTLEFT-L] $s] [pt 200 390]] HierarchicalPort
+ }
+ # Bus and two distinct scalar members, joined by bus entries.
+ set bus [ok [$p1 NewWireBus $s [pt 900 200] [pt 900 400]] Bus]
+ ok [$bus NewAlias $s [cs {DATA[0..1]}] [pt 900 200] [DboTclHelper_sMakeLOGFONT] 0 0] BusAlias
+ foreach {member y} {DATA0 220 DATA1 320} {
+   ok [$p1 NewBusEntry $s [pt 900 [expr {$y-20}]] [pt 920 $y]] BusEntry
+   wire $p1 920 $y $member 1100
+ }
+ # Connect three real NAND terminals, materializing electrical nets in the graph.
+ wire $p1 190 810 NAND_IN_A 100
+ wire $p1 190 830 NAND_IN_B 100
+ wire $p1 260 820 NAND_OUT_A 360
+ # Visible POWER pins retain raw IsGlobal=1 in 17.2, but actual explicit
+ # wire connectivity must be measured independently in two hierarchy domains.
+ set qlib [openLib "$root/examples/lesson12_capture/c12_qmi8610_single.olb"]
+ set qpkg [ok [$qlib GetPackage [cs QMI8610_C12_SINGLE] $s] QMIpackage]
+ set qdev [ok [$qpkg GetDevice 0 $s] QMIdevice]
+ set qcell [ok [$qdev GetCell $s] QMIcell]
+ set qpart [ok [$qcell FindPart 0 $s] QMIpart]
+ foreach {page ref alias} [list $ap U2 LOCAL_PWR_A $bp U3 LOCAL_PWR_B] {
+   place $page $qpart $qpkg $qdev $ref 500 500
+   wire $page 480 540 $alias 380
+ }
+ saveClose $design
+ return $path
+}

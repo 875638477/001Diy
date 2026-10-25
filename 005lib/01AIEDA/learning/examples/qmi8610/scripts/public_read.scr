@@ -1,0 +1,7 @@
+set NOCONFIRM
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/qmi8610/scripts/qmi8610_verify.il") t)
+skill errset(qmiVerify("D:/001DIY/005lib/01AIEDA/learning/examples/qmi8610/logs/public_reopen") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/qmi8610/scripts/qmi8610_placement.il") t)
+skill errset(qmiTextBoxes("D:/001DIY/005lib/01AIEDA/learning/examples/qmi8610/logs/public_reopen") t)
+quit
+fillin "yes"

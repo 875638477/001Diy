@@ -1,0 +1,405 @@
+{
+  "lesson": 7,
+  "date": "2026-10-18",
+  "preparedBy": "pad_geometry_review",
+  "status": "prepared_not_imported_not_executed",
+  "purpose": "Isolated training padstacks only; dimensions are educational, not manufacturing recommendations.",
+  "targetRoot": "D:/001DIY/005lib/01AIEDA/learning/examples/lesson07_padstacks",
+  "units": "millimeters",
+  "accuracy": 3,
+  "files": [
+    {
+      "name": "eda_l07_pth_080_c160.pxml",
+      "content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE padstack>\n<padstack version=\"1.0\">\n  <padstackname>eda_l07_pth_080_c160</padstackname>\n  <padstackusage>THRU_PIN</padstackusage>\n  <units>Mm</units><accuracy>3</accuracy>\n  <drillinfo>\n    <slothole><holetype>CIRCLE</holetype><plating>Y</plating><width>0.800</width><height>0.800</height><offset>(0;0)</offset><drillmethod>STANDARD</drillmethod></slothole>\n    <drillsymbol><figure>CIRCLE</figure><characters>P</characters><width>0.800</width><height>0.800</height></drillsymbol>\n  </drillinfo>\n  <pad><type>REGULAR_PAD</type><layer>BEGIN_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.600</width><height>1.600</height></pad>\n  <pad><type>THERMAL_PAD</type><layer>BEGIN_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.800</width><height>1.800</height></pad>\n  <pad><type>ANTIPAD_PAD</type><layer>BEGIN_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>2.000</width><height>2.000</height></pad>\n  <pad><type>REGULAR_PAD</type><layer>DEFAULT_INTERNAL</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.600</width><height>1.600</height></pad>\n  <pad><type>THERMAL_PAD</type><layer>DEFAULT_INTERNAL</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.800</width><height>1.800</height></pad>\n  <pad><type>ANTIPAD_PAD</type><layer>DEFAULT_INTERNAL</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>2.000</width><height>2.000</height></pad>\n  <pad><type>REGULAR_PAD</type><layer>END_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.600</width><height>1.600</height></pad>\n  <pad><type>THERMAL_PAD</type><layer>END_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.800</width><height>1.800</height></pad>\n  <pad><type>ANTIPAD_PAD</type><layer>END_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>2.000</width><height>2.000</height></pad>\n  <pad><type>REGULAR_PAD</type><layer>TOP_SOLDER_MASK_PAD</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.800</width><height>1.800</height></pad>\n  <pad><type>REGULAR_PAD</type><layer>BOTTOM_SOLDER_MASK_PAD</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.800</width><height>1.800</height></pad>\n</padstack>\n"
+    },
+    {
+      "name": "eda_l07_npth_200.pxml",
+      "content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE padstack>\n<padstack version=\"1.0\">\n  <padstackname>eda_l07_npth_200</padstackname>\n  <padstackusage>MECH_HOLE</padstackusage>\n  <units>Mm</units><accuracy>3</accuracy>\n  <drillinfo>\n    <slothole><holetype>CIRCLE</holetype><plating>N</plating><width>2.000</width><height>2.000</height><offset>(0;0)</offset><drillmethod>STANDARD</drillmethod></slothole>\n    <drillsymbol><figure>CIRCLE</figure><characters>N</characters><width>2.000</width><height>2.000</height></drillsymbol>\n  </drillinfo>\n  <pad><type>REGULAR_PAD</type><layer>BEGIN_LAYER</layer><figure>NONE</figure><offset>(0;0)</offset><width>0.000</width><height>0.000</height></pad>\n  <pad><type>ANTIPAD_PAD</type><layer>BEGIN_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>2.500</width><height>2.500</height></pad>\n  <pad><type>KEEPOUT</type><layer>BEGIN_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>2.500</width><height>2.500</height></pad>\n  <pad><type>REGULAR_PAD</type><layer>DEFAULT_INTERNAL</layer><figure>NONE</figure><offset>(0;0)</offset><width>0.000</width><height>0.000</height></pad>\n  <pad><type>ANTIPAD_PAD</type><layer>DEFAULT_INTERNAL</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>2.500</width><height>2.500</height></pad>\n  <pad><type>KEEPOUT</type><layer>DEFAULT_INTERNAL</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>2.500</width><height>2.500</height></pad>\n  <pad><type>REGULAR_PAD</type><layer>END_LAYER</layer><figure>NONE</figure><offset>(0;0)</offset><width>0.000</width><height>0.000</height></pad>\n  <pad><type>ANTIPAD_PAD</type><layer>END_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>2.500</width><height>2.500</height></pad>\n  <pad><type>KEEPOUT</type><layer>END_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>2.500</width><height>2.500</height></pad>\n  <pad><type>REGULAR_PAD</type><layer>TOP_SOLDER_MASK_PAD</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>2.200</width><height>2.200</height></pad>\n  <pad><type>REGULAR_PAD</type><layer>BOTTOM_SOLDER_MASK_PAD</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>2.200</width><height>2.200</height></pad>\n</padstack>\n"
+    },
+    {
+      "name": "eda_l07_plated_slot_200x100.pxml",
+      "content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE padstack>\n<padstack version=\"1.0\">\n  <padstackname>eda_l07_plated_slot_200x100</padstackname>\n  <padstackusage>SLOT</padstackusage>\n  <units>Mm</units><accuracy>3</accuracy>\n  <drillinfo>\n    <slothole><holetype>OVAL_SLOT</holetype><plating>Y</plating><width>2.000</width><height>1.000</height><offset>(0;0)</offset><drillmethod>STANDARD</drillmethod></slothole>\n    <drillsymbol><figure>OBLONGX</figure><characters>S</characters><width>2.000</width><height>1.000</height></drillsymbol>\n  </drillinfo>\n  <pad><type>REGULAR_PAD</type><layer>BEGIN_LAYER</layer><figure>OBLONG</figure><offset>(0;0)</offset><width>2.800</width><height>1.800</height></pad>\n  <pad><type>ANTIPAD_PAD</type><layer>BEGIN_LAYER</layer><figure>OBLONG</figure><offset>(0;0)</offset><width>3.200</width><height>2.200</height></pad>\n  <pad><type>KEEPOUT</type><layer>BEGIN_LAYER</layer><figure>OBLONG</figure><offset>(0;0)</offset><width>3.200</width><height>2.200</height></pad>\n  <pad><type>REGULAR_PAD</type><layer>DEFAULT_INTERNAL</layer><figure>OBLONG</figure><offset>(0;0)</offset><width>2.800</width><height>1.800</height></pad>\n  <pad><type>ANTIPAD_PAD</type><layer>DEFAULT_INTERNAL</layer><figure>OBLONG</figure><offset>(0;0)</offset><width>3.200</width><height>2.200</height></pad>\n  <pad><type>KEEPOUT</type><layer>DEFAULT_INTERNAL</layer><figure>OBLONG</figure><offset>(0;0)</offset><width>3.200</width><height>2.200</height></pad>\n  <pad><type>REGULAR_PAD</type><layer>END_LAYER</layer><figure>OBLONG</figure><offset>(0;0)</offset><width>2.800</width><height>1.800</height></pad>\n  <pad><type>ANTIPAD_PAD</type><layer>END_LAYER</layer><figure>OBLONG</figure><offset>(0;0)</offset><width>3.200</width><height>2.200</height></pad>\n  <pad><type>KEEPOUT</type><layer>END_LAYER</layer><figure>OBLONG</figure><offset>(0;0)</offset><width>3.200</width><height>2.200</height></pad>\n  <pad><type>REGULAR_PAD</type><layer>TOP_SOLDER_MASK_PAD</layer><figure>OBLONG</figure><offset>(0;0)</offset><width>3.000</width><height>2.000</height></pad>\n  <pad><type>REGULAR_PAD</type><layer>BOTTOM_SOLDER_MASK_PAD</layer><figure>OBLONG</figure><offset>(0;0)</offset><width>3.000</width><height>2.000</height></pad>\n</padstack>\n"
+    }
+  ],
+  "expected": [
+    {
+      "name": "eda_l07_pth_080_c160",
+      "xmlUsage": "THRU_PIN",
+      "holeType": "CIRCLE_DRILL (compare case-insensitively)",
+      "plating": "Plated",
+      "drillDiameter": 0.8,
+      "drillSizeWidth": 0.8,
+      "drillSizeHeight": 0.8,
+      "drillOffset": [
+        0,
+        0
+      ],
+      "outerAndDefaultInternal": {
+        "regular": {
+          "figure": "CIRCLE",
+          "xy": [
+            1.6,
+            1.6
+          ]
+        },
+        "thermal": {
+          "figure": "CIRCLE",
+          "xy": [
+            1.8,
+            1.8
+          ],
+          "qualification": "Circular THERMAL_PAD data based on official example, not a verified spoked negative-plane flash"
+        },
+        "anti": {
+          "figure": "CIRCLE",
+          "xy": [
+            2,
+            2
+          ]
+        }
+      },
+      "topBottomSolderMask": {
+        "figure": "CIRCLE",
+        "xy": [
+          1.8,
+          1.8
+        ]
+      },
+      "paste": "Absent or NULL, no polygons",
+      "expectedSpan": "Top to bottom with default internal pads; verify startEnd after import"
+    },
+    {
+      "name": "eda_l07_npth_200",
+      "xmlUsage": "MECH_HOLE",
+      "holeType": "CIRCLE_DRILL (case-insensitive)",
+      "plating": "Non-Plated",
+      "drillDiameter": 2,
+      "drillSizeWidth": 2,
+      "drillSizeHeight": 2,
+      "drillOffset": [
+        0,
+        0
+      ],
+      "outerAndDefaultInternal": {
+        "regular": {
+          "figure": "NULL",
+          "xy": [
+            0,
+            0
+          ]
+        },
+        "anti": {
+          "figure": "CIRCLE",
+          "xy": [
+            2.5,
+            2.5
+          ]
+        },
+        "keepout": {
+          "figure": "CIRCLE",
+          "xy": [
+            2.5,
+            2.5
+          ]
+        }
+      },
+      "topBottomSolderMask": {
+        "figure": "CIRCLE",
+        "xy": [
+          2.2,
+          2.2
+        ]
+      },
+      "paste": "Absent or NULL, no polygons",
+      "expectedSpan": "Mechanical through hole; verify startEnd after import",
+      "copperExpectation": "No positive regular copper geometry on top, internal or bottom; anti and keepout are clearance data, not copper"
+    },
+    {
+      "name": "eda_l07_plated_slot_200x100",
+      "xmlUsage": "SLOT",
+      "holeType": "OVAL_SLOT (case-insensitive)",
+      "plating": "Plated",
+      "drillSizeWidth": 2,
+      "drillSizeHeight": 1,
+      "drillOffset": [
+        0,
+        0
+      ],
+      "drillDiameter": "Do not use this field to verify an oval slot",
+      "slotDirectionAtZeroRotation": "X length 2.000 mm, Y length 1.000 mm",
+      "outerAndDefaultInternal": {
+        "regular": {
+          "figure": "OBLONG_X or corresponding oval geometry; read actual figureName",
+          "xy": [
+            2.8,
+            1.8
+          ]
+        },
+        "anti": {
+          "figure": "OBLONG_X or corresponding oval geometry",
+          "xy": [
+            3.2,
+            2.2
+          ]
+        },
+        "keepout": {
+          "figure": "OBLONG_X or corresponding oval geometry",
+          "xy": [
+            3.2,
+            2.2
+          ]
+        }
+      },
+      "topBottomSolderMask": {
+        "figure": "OBLONG_X or corresponding oval geometry",
+        "xy": [
+          3,
+          2
+        ]
+      },
+      "paste": "Absent or NULL, no polygons",
+      "expectedSpan": "Top to bottom with default internal pads; verify startEnd after import"
+    }
+  ],
+  "route": {
+    "importCommand": "C:/Program0/Cadence/SPB172/tools/bin/padstack_editor.exe -x <input.pxml>",
+    "importMode": "Official non-graphical XML import; do not infer success from process exit alone.",
+    "preconditions": [
+      "Dedicated learning directory only; no public library writes",
+      "Fresh unique filenames; import can overwrite an existing same-named pad and log",
+      "Do not edit installation DTD or global configuration",
+      "Capture initial listing and hashes; inspect .log and new .pad size/hash",
+      "Importer log can contain warnings without creating a pad on errors; validate actual output"
+    ],
+    "readback": "Load each resulting .pad in an isolated disposable Allegro drawing or package; read fields, export back to .pxml with padstack_editor -xo and compare semantics; neither pad existence nor file size alone proves dimensions."
+  },
+  "sources": [
+    {
+      "path": "C:/Program0/Cadence/SPB172/share/pcb/examples/padstack_xml/padstack_xml.docx",
+      "section": "Usage table and type enumerations; batch mode, Units, Offset",
+      "facts": [
+        "-x creates .pad and .log; pad name from padstackname",
+        "Usage THRU_PIN, MECH_HOLE, SLOT",
+        "OVAL_SLOT and RECT_SLOT only for SLOT usage",
+        "Plating Y/N evidenced by official pxml examples",
+        "Pad figure NONE, CIRCLE, OBLONG; drill figures CIRCLE and OBLONGX",
+        "Units Mm or Millimeter; offsets (x;y)"
+      ]
+    },
+    {
+      "path": "C:/Program0/Cadence/SPB172/share/pcb/examples/padstack_xml/thru_pin.pxml",
+      "lines": [
+        10,
+        11,
+        34,
+        43,
+        50,
+        56,
+        63,
+        64,
+        70,
+        71,
+        85,
+        92,
+        114,
+        120
+      ],
+      "facts": [
+        "CIRCLE + plating Y",
+        "BEGIN_LAYER, DEFAULT_INTERNAL, END_LAYER",
+        "CIRCLE THERMAL_PAD accepted example",
+        "Both mask layer names"
+      ]
+    },
+    {
+      "path": "C:/Program0/Cadence/SPB172/share/pcb/examples/padstack_xml/via1.pxml",
+      "lines": [
+        10,
+        11,
+        12,
+        17,
+        18,
+        52,
+        59,
+        66
+      ],
+      "facts": [
+        "plating N",
+        "modern tolerance tags, offset and drillmethod syntax",
+        "REGULAR_PAD, THERMAL_PAD and ANTIPAD_PAD data"
+      ]
+    },
+    {
+      "path": "C:/Program0/Cadence/SPB172/share/pcb/xml-formats/cdn_padstack.dtd",
+      "lines": [
+        10,
+        12,
+        13,
+        17,
+        18,
+        19
+      ],
+      "facts": [
+        "drillinfo/slothole/pad element structure",
+        "Installed file labels itself prototype Version 2.0; use as a reference, do not modify it",
+        "Do not require generic DTD validation against this prototype as a substitute for official importer checks; official sample files differ in ordering and optional fields"
+      ]
+    },
+    {
+      "path": "C:/Program0/Cadence/SPB172/doc/pcoms/pchap.html",
+      "lines": [
+        4629,
+        5038,
+        5046,
+        5054,
+        5305,
+        5326,
+        5354,
+        5387,
+        5590,
+        5593,
+        5595,
+        5611,
+        6737,
+        6774
+      ],
+      "facts": [
+        "Begin maps to TOP, End to BOTTOM; default internal used for added layers",
+        "Slot X Size / Y Size",
+        "Electrical through-hole inner layers need pad definitions to support DRC and connectivity",
+        "NPTH may use NULL regular pads; adequate route keepouts and DRC-rule voiding recommended",
+        "Negative artwork expects a thermal flash; circular thermal data is not validated spoked artwork",
+        "Official non-graphical padstack_editor -x import"
+      ]
+    },
+    {
+      "path": "C:/Program0/Cadence/SPB172/share/pcb/examples/skill/DOC/FUNCS/axlPadstackEdit.txt",
+      "section": "drillSizeWidth / drillSizeHeight",
+      "facts": [
+        "drillSizeWidth = X direction; drillSizeHeight = Y direction",
+        "Changing circle to slot must set holeType then width then height",
+        "Old axlDBCreatePadStack slotSize text contains Y/X wording; do not use it to guess PXML axis mapping"
+      ]
+    },
+    {
+      "path": "C:/Program0/Cadence/SPB172/doc/algroskill/02dbdesc.html",
+      "lines": [
+        2505,
+        2508,
+        2762,
+        2768,
+        2795,
+        2806,
+        2817,
+        2839,
+        2998,
+        3033,
+        3100,
+        3136,
+        3215,
+        3709,
+        3777
+      ],
+      "facts": [
+        "Pad bBox coordinates relative",
+        "Padstack hole/slot/plating/span/usage fields",
+        "Pin definition and isThrough fields"
+      ]
+    },
+    {
+      "path": "C:/Program0/Cadence/SPB172/share/pcb/examples/skill/DOC/FUNCS/axlDBGetPad.txt",
+      "section": "Arguments and returns",
+      "facts": [
+        "pin, via or padstack definition accepted",
+        "Layer 'internal for default internal definition",
+        "REGULAR, ANTI, THERMAL or KEEPOUT",
+        "Mask queries require PIN or VIA class"
+      ]
+    },
+    {
+      "path": "C:/Program0/Cadence/SPB172/share/pcb/examples/skill/DOC/FUNCS/axlDBGetDrillPlating.txt",
+      "section": "Return values",
+      "facts": [
+        "Returns PLATED / NON PLATED / nil; spelling differs from ps->plating"
+      ]
+    },
+    {
+      "path": "C:/Program0/Cadence/SPB172/share/pcb/examples/skill/DOC/FUNCS/axlPadOnLayer.txt",
+      "section": "Function",
+      "facts": [
+        "Reports presence of REGULAR, ANTI or THERMAL and suppression; does not by itself prove regular copper exists"
+      ]
+    },
+    {
+      "path": "C:/Program0/Cadence/SPB172/share/pcb/examples/skill/DOC/FUNCS/axlPolyFromDB.txt",
+      "section": "Arguments and polygon attributes",
+      "facts": [
+        "pin/via ?layer and ?padType 'REGULAR/'ANTI/'THERMAL",
+        "Returns polygon list, not dbids",
+        "Use drill attributes separately; polygon area alone is not a qualified manufactured annulus"
+      ]
+    }
+  ],
+  "apiReadback": {
+    "padstackLookup": "ps = axlDBFindByName('padstack name)",
+    "fields": [
+      "ps->name",
+      "ps->usage",
+      "ps->holeType",
+      "ps->plating",
+      "ps->drillDiameter",
+      "ps->drillSizeWidth",
+      "ps->drillSizeHeight",
+      "ps->drillOffset",
+      "ps->drillFigureName",
+      "ps->drillFigureWidth",
+      "ps->drillFigureHeight",
+      "ps->isThrough",
+      "ps->startEnd",
+      "ps->isPadRef",
+      "ps->definition"
+    ],
+    "definitionQueries": [
+      "axlDBGetPad(ps \"TOP\" \"REGULAR\")",
+      "axlDBGetPad(ps 'internal \"REGULAR\")",
+      "axlDBGetPad(ps \"BOTTOM\" \"REGULAR\")",
+      "axlDBGetPad(ps 'internal \"THERMAL\")",
+      "axlDBGetPad(ps 'internal \"ANTI\")",
+      "axlDBGetPad(ps 'internal \"KEEPOUT\")"
+    ],
+    "instanceQueries": [
+      "axlDBGetPad(pin \"ETCH/TOP\" \"REGULAR\")",
+      "axlDBGetPad(pin \"ETCH/<actual_internal_layer>\" \"REGULAR\")",
+      "axlDBGetPad(pin \"ETCH/BOTTOM\" \"REGULAR\")",
+      "axlDBGetPad(pin \"PIN/SOLDERMASK_TOP\" \"REGULAR\")",
+      "axlDBGetPad(pin \"PIN/SOLDERMASK_BOTTOM\" \"REGULAR\")",
+      "axlDBGetPad(pin \"PIN/PASTEMASK_TOP\" \"REGULAR\")",
+      "axlDBGetPad(pin \"PIN/PASTEMASK_BOTTOM\" \"REGULAR\")",
+      "axlPolyFromDB(pin ?layer \"ETCH/TOP\" ?padType 'REGULAR)"
+    ],
+    "padFields": [
+      "pad->figureName",
+      "pad->bBox",
+      "pad->offset",
+      "pad->figure",
+      "pad->type",
+      "pad->layer",
+      "pad->readOnly"
+    ],
+    "platingCrossCheck": "axlDBGetDrillPlating(ps->name)",
+    "spanCheck": "Read pin->startEnd and ps->startEnd, check every actual internal copper layer; query default internal alone does not establish actual board mapping.",
+    "transformCheck": "At pin rotation 0 and 90 degrees query pad and polygon bounds. Instance axlDBGetPad()->bBox is pin-relative but observed already rotated; do not rotate the bbox a second time."
+  },
+  "caveats": [
+    "All dimensions are teaching values; no claim of manufacturer or board-fabricator approval.",
+    "The three PXML texts are prepared but have not been imported or run by this agent.",
+    "PXML width/height expected to map X/Y for the slot; the XML table did not explicitly document axis mapping. Root must confirm drillSizeWidth=2.000 and drillSizeHeight=1.000 after import/export; adjust from evidence if they differ.",
+    "PTH circular THERMAL_PAD values reproduce the official self-contained example style; they do not define a four-spoke flash. Negative-plane manufacturing artwork is out of scope and may report missing thermal flash.",
+    "Slot thermal entries are intentionally absent; a production negative-plane slot thermal requires a verified matching flash or another validated connection strategy.",
+    "NPTH NULL regular is intentional and only for the mechanical non-plated hole; do not copy it into the PTH inner-layer regular copper definition.",
+    "NPTH anti/keepout data can make axlPadOnLayer return true despite no positive regular copper; inspect REGULAR figure and polygon count separately.",
+    "No paste-mask definitions are emitted. Readback may expose missing layers as NULL pad objects; accept no non-NULL paste geometry and zero paste polygons.",
+    "Mask dimensions are engineering teaching choices, not inferred from drill geometry or claimed datasheet specifications.",
+    "Check importer log and reopened geometry and plating independently; on failure a pre-existing .pad could remain unchanged."
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "status": "READ_ONLY_REPRODUCTION_REFERENCE_NOT_EXECUTED_BY_THIS_AGENT",
+  "scope": "Replay imported-unplaced DE learning design in JK isolation only; do not netrev routed b019. Existing evidence is historical until new native replay/readback.",
+  "exactLogicalDelta": {
+    "resistors": [
+      "R19 2.2k -> 3.3k",
+      "R20 2.2k -> 3.3k"
+    ],
+    "connectorPins": [
+      "J13.7 GPIO_PB8 -> GPIO_PB9",
+      "J13.8 GPIO_PB9 -> GPIO_PB8"
+    ]
+  },
+  "expected": {
+    "components": 80,
+    "physicalPins": 272,
+    "nets": 69,
+    "NC": 6,
+    "placedSymbols": 0,
+    "noOtherValueOrNetChanges": true
+  },
+  "historicalNativeArgs": [
+    {
+      "stage": "baseline_readback",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\allegro.exe",
+        "-product",
+        "Allegro_performance",
+        "-safe",
+        "-nographic",
+        "-readonly",
+        "-s",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\baseline_readback.scr",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_BASELINE.brd"
+      ],
+      "historicalExitCode": 0
+    },
+    {
+      "stage": "eco_readback",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\allegro.exe",
+        "-product",
+        "Allegro_performance",
+        "-safe",
+        "-nographic",
+        "-readonly",
+        "-s",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\eco_readback.scr",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_ECO.brd"
+      ],
+      "historicalExitCode": 0
+    },
+    {
+      "stage": "feedback_swp",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\pstswp.exe",
+        "-swp",
+        "-d",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\eco\\DE_CONTROL.dsn",
+        "-n",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\feedback",
+        "-s",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\feedback\\DE_ECO.swp",
+        "-c",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\allegro.cfg",
+        "-hpath",
+        "HPathForCollision",
+        "-backwd"
+      ],
+      "historicalExitCode": 0
+    },
+    {
+      "stage": "feedback_view",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\genfeedformat.exe",
+        "-x",
+        "-b",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_ECO.brd",
+        "-o",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\feedback"
+      ],
+      "historicalExitCode": 0
+    },
+    {
+      "stage": "import_baseline",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\netrev.exe",
+        "-n",
+        "-e",
+        "-i",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\baseline\\netlist",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_BASELINE.brd"
+      ],
+      "historicalExitCode": 0
+    },
+    {
+      "stage": "import_eco",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\netrev.exe",
+        "-e",
+        "-i",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\eco\\netlist",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_BASELINE.brd",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_ECO.brd"
+      ],
+      "historicalExitCode": 0
+    },
+    {
+      "stage": "pst_baseline",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\pstswp.exe",
+        "-pst",
+        "-d",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\baseline\\DE_CONTROL.dsn",
+        "-n",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\baseline\\netlist",
+        "-c",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\allegro.cfg",
+        "-v",
+        "3",
+        "-l",
+        "255",
+        "-j",
+        "PCB Footprint"
+      ],
+      "historicalExitCode": 0
+    },
+    {
+      "stage": "pst_eco",
+      "args": [
+        "C:\\Program0\\Cadence\\spb172\\tools\\bin\\pstswp.exe",
+        "-pst",
+        "-d",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\eco\\DE_CONTROL.dsn",
+        "-n",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\eco\\netlist",
+        "-c",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\allegro.cfg",
+        "-v",
+        "3",
+        "-l",
+        "255",
+        "-j",
+        "PCB Footprint"
+      ],
+      "historicalExitCode": 0
+    }
+  ],
+  "environment": {
+    "allWorkAndTemp": "JK/eco isolated subdirectory inside01AIEDA",
+    "sameDsnBasename": "DE_CONTROL.dsn in separate baseline and eco directories",
+    "pcbenv": "source $TELENV then set task padpath/psmpath; do not replace global environment with two path lines",
+    "missingFootprint": "netrev -e required"
+  },
+  "safeSequence": [
+    "Hash source DSNs/OLB/PAD/PSM dependencies and copy only into JK/eco new working dirs. Check source identities against current files, not only historical flow hashes.",
+    "If reproducing the source edit, copy/rewrite Tcl outputs to JK paths, initialize GetRootOccurrence before page iterator, require exactly R19/R20 and J13.7/8 changes; update source_description to3.3k1%.",
+    "Export actual baseline and ECO DSNs to PST using native pstswp. Require full netlist log success and parse all three actual DAT files.",
+    "netrev -n -e -i baseline/netlist NEW_BASELINE.brd; then netrev -e -i eco/netlist NEW_BASELINE.brd NEW_ECO.brd.",
+    "Fresh readonly native compare every ref/physical pin/net/package/value. Only four intended logical deltas; MCU45/46 unchanged.",
+    "genfeedformat -x -b NEW_ECO.brd -o feedback; pstswp -swp with exact generated PST and fourVIEW; inspect SWP Flags/DesignName-only.",
+    "Retain nonfatal absent feedbackview.cdsz diagnostic separately. GUI SWP apply/GUI ERC remain unverified. Hash original inputs unchanged; log PID/args/completion and preserve failures."
+  ],
+  "referenceFiles": [
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\de_apply_eco.tcl",
+      "sha256": "C675F4F2E7B123DC8BC02FE74C3C3B672B03DA5CB4B7B43AD7CC37D2558CD3D2"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\de_eco_spec_attributes.tcl",
+      "sha256": "48A4F5EA3BF578C852AF8FAC3B76E450BA7D239C3F853BC068DD7329F6AF8A82"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\de_verify_eco.tcl",
+      "sha256": "79AC004A517F9BFAB3B85E8650E8899239065358649B9DCDECCDE7727AA27FED"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\de_prepare_eco.py",
+      "sha256": "35BF77D05A6F61B67C3B7B18BE0BC6AD842BCFD5DDCB6FF80E9181121529306C"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\flow_result.json",
+      "sha256": "076ADB6A38130BD5BE1BA9C741483387DBDD45195DA80E598BCD7591B8DDBFE2"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\independent_compare.json",
+      "sha256": "39FE7F373C1C32018033C154E98857D9C4701E9BD699F5749F328E1F4E62E8AC"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\feedback\\DE_ECO.swp",
+      "sha256": "215EE527E7EF959C5FB662E0BD064772CF194E37A713BC353C66AD4B55320274"
+    }
+  ]
+}

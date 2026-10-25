@@ -1,0 +1,35 @@
+
+  NAME
+         axlCnsClassTableFind - Search for class table entries matching the criteria
+  SYNOPSIS
+         axlCnsClassTableFind(
+                 s_type
+                 [o_dbid]
+         ) -> lo_dbidClassTable/nil
+  FUNCTION
+         This searchs the class table for class table entries matching the search
+         criteria. The following options are available (s_type):
+           'netclass - return all class entries (all entries except for wire and component)
+           `classClass - return all class to class entries
+           `classRegion - return all class to region entries
+           `classClassRegion - return all class to class to region entries
+           `wireProf - return all wire profile entries (APD/SIP only)
+           `component - return all component entries (APD/SIP only)
+           `match - return all entries that contain provided region or class dbid (o_dbid)
+  NEEDS
+         s_type - type of search to perform (see above)
+         o_dbid - only applicable for the match option will return all class table
+                 entries containing the dbid.
+  RETURNS
+         list of class table dbids matching search criteria or nil no match
+  SEE ALSO
+         axlCnsClassTableCreate, axlCnsClassTableSeek, axlSelectByName
+  EXAMPLES
+ 
+         1) Return all class entries that effect physical, spacing or same net DRC
+                 tbl = axlCnsClassTableFind('netclass)
+         2) Return all entries that contain Region "ANALOG" entry (assumes design
+            has a region called "ANALOG")
+                 region = car (axlSelectByName("REGION" "ANALOG"))
+                 tbl = axlCnsClassTableFind('match region)
+

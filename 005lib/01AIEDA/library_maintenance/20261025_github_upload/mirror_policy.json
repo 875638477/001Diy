@@ -1,0 +1,50 @@
+{
+  "status": "PASS_USER_AUTHORIZED_REMOTE_MIRROR_POLICY_RECORDED",
+  "recorded_at_utc": "2026-10-25T05:15:07.538683+00:00",
+  "user_instruction": "GitHub以本机今天9个01目录为准更新，远端旧文件也删。",
+  "local_source_root": "D:\\001DIY\\005lib",
+  "repository": "https://github.com/875638477/005lib",
+  "final_repository_root_directories": [
+    "01AIEDA",
+    "01Pad_lib",
+    "01Psm_lib",
+    "01_3d_step_lib",
+    "01aeLib",
+    "01brdlib",
+    "01captureLib",
+    "01env",
+    "01script_file"
+  ],
+  "relative_paths": "Nine 01 directories are direct children of the repository root; internal source paths stay unchanged, with the already verified .git test-fixture ZIP compatibility exception.",
+  "original_base_commit": "6e478a7603b6adbe790ea0ad0409fba48ca27e43",
+  "original_base_tree": [
+    {
+      "relative": "README.md",
+      "bytes": 9,
+      "git_blob_sha1": "497548eeb3d973939ca8f5ba7a0ca2d8dfa4e069"
+    }
+  ],
+  "remote_deletions": [
+    {
+      "path": "README.md",
+      "bytes": 9,
+      "git_blob_sha1": "497548eeb3d973939ca8f5ba7a0ca2d8dfa4e069"
+    }
+  ],
+  "authorized_worktree_deletion": {
+    "absolute": "D:\\001DIY\\004computer\\lga1700\\git_upload_005lib_20261025\\repository\\README.md",
+    "relative": "README.md",
+    "bytes": 9,
+    "git_blob_sha1": "497548eeb3d973939ca8f5ba7a0ca2d8dfa4e069"
+  },
+  "deletion_scope": "Only the exact verified worktree-root README.md is deleted; no source file or library is deleted. Original remote history remains in BASE; later publication uses a normal descendant commit.",
+  "previous_snapshot_proof_sha256": "40bd78efbd217267eff4b48a49639d5b5159dd714bff83a2ed88851eee713e82",
+  "previous_upload_manifest_sha256": "2f13cceaad98e282f2344776cf8f47dd4daa0964adb2e215f283b4110d70151c",
+  "changed_source_record_paths": [
+    "01AIEDA/library_maintenance/20261025_github_upload/README.txt",
+    "01AIEDA/library_maintenance/20261025_github_upload/apply_remote_mirror_policy.py",
+    "01AIEDA/library_maintenance/20261025_github_upload/mirror_policy.json",
+    "01AIEDA/library_maintenance/20261025_github_upload/prepare_repository_snapshot.py"
+  ],
+  "validation_boundary": "The original completed full snapshot remains the proof for every untouched manifest row. Only these four maintenance records are incrementally hashed and copied. No full-library scan or rehash is repeated."
+}

@@ -1,0 +1,87 @@
+
+  NAME
+         axlXSectionCreate - create a cross section entry
+  SYNOPSIS
+         axlXSectionCreate(
+                 nil
+                 g_option
+                 [g_xsectionDefStruct]
+         ) -> o_xsectionDBID/nil
+  FUNCTION
+         Creates a new cross section entry.
+ 
+         The 3 critical create items in g_xsectionDefStruct are:
+            - name - a string which is a name of the layer
+            - layerType - a string (see axlXSectionLayerTypes() for supportted
+                 of types) that describes the type of layer. Popular types 
+                 are CONDUCTOR, PLANE, DIELECTRIC or MASK. If none is provided,
+                 we default to DIELECTRIC.
+            - material - a string that describes substance making up the xsection entry
+                 Default is FR-4 for dielectrics and COPPER for conductor/plane.
+            - If you provide none of the attributes, we create a xsection entry
+              that is unnamed of type DIELECTRIC with material FR-4.
+  
+         You can set other xsecton entries, see axlXSectionGet for a description
+         of the other available attributes. If material is provided it
+         will auto-fill additional based upon the materials file.
+ 
+         For named xsection layers it creates a class/subclass on the etch 
+         layers, it does not set the color and visiblity for those
+         layers. You need to use axlLayerSet for those attributes.
+ 
+         Allegro PCB does not allow name layers above top or below bottom.
+  RESTRICTION
+         Currently not possible to create manage multiple stackups via Skill.
+         This restriction will be removed in a future release
+  PROGRAMMING TIPS
+         - If populating multiple internal layers, use the 'bottom option and
+           build the stackup from bottom to top.
+         - You should insure at least 1 dielectric layer between each 
+           CONDUCTOR or PLANE layer type. This interface allows adjacent 
+           routing layers but this results in incorrect signal analysis.
+         - Do not name dielectric layers unless you want to physically add and
+           edit objects to those layers. Every named layers creates a entry
+           in Allegro's class/subclass table on ETCH related classes.
+         - We allow material names to be specified that are not contained in 
+           the materials.dat file. Setting env variable "xsection_material_warning"
+           prints a warning. When unknown materials are specified the thickness
+           and other associated data are not populated.
+         - Changing the material also updates its associated data. This is only
+           an issue with the axlXSectionSet API.
+         - layerId defaults to the layer number.
+         - When creating MASK layers, you must provide the ?name option. If you provide
+           both a ?name and ?maskLayer option, then ?maskLayer name wins.
+         - MASK layers added between TOP and BOTTOM do not effect connectivity.
+         - Constraint manager removes the '_' in pretty printing layerFunction. This
+           interface requires them (see types returned by axlXSectionLayerFunctions API).
+           Mask and dielectric have different allowed function types.
+         - Use axlXSectionModify or axlXSectionCopy to create the axlXSection defstruct.
+           Do not directly call make_axlXSection.
+         - DRC is marked out of date with cross section changes.
+  NEEDS
+         nil - 1st argument must always be nil
+         g_option
+                 'top - insert layer above top. For PCB designs this can only
+                         be a unnamed dielectric or MASK layers.
+                 'bottom - insert layer above bottom
+                 'afterBottom - insert layer after bottom. For PCB Designs this
+                         can only be unnamed dielectrics or MASK layers.
+                 t_etchSubclass - sublass name, insert layer above this name
+                 x_position - insert above xsection position. This is the position
+                         attribute and an xsection dbid.
+                         You cannot insert above 0 (Surface).
+         g_xsectionDefStruct or nil
+                 A Skill defsruct with all possible attributes for xsection entry
+                     make_axlXSection - creates a new entry
+                     copy_axlXSection - copies an existing entry
+                     axlXSectionCopy - copies contents of an existing xsection
+                                 dbid to a new deftruct.
+  RETURNS
+         o_xsectionDBID - if successful
+         nil - failed.
+  SEE ALSO
+         axlXSectionGet axlXSectionSet axlXSectionDelete axlXSectionLayerTypes
+         axlXSectionCopy axlXSectionModify, axlXSectionLayerFunctions
+  EXAMPLES
+         see <cdsroot>/share/pcb/examples/skill/dbcreate/xsection.il
+

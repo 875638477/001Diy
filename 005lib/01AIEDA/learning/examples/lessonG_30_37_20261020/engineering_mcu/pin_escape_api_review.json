@@ -1,0 +1,79 @@
+{
+  "status": "READ_ONLY_OFFICIAL_API_RESEARCH_UNEXECUTED_DRAFT",
+  "copiedPrimaryReferences": [
+    {
+      "source": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlRegionCreate.txt",
+      "copied": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\engineering_mcu\\api_sources\\axlRegionCreate.txt",
+      "SHA256": "140da2fc14f1819f7125ad68ed1de59fc885582a0b85fc83b9ba239bb5624d8f"
+    },
+    {
+      "source": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlRegionAdd.txt",
+      "copied": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\engineering_mcu\\api_sources\\axlRegionAdd.txt",
+      "SHA256": "1484c95f7f918b149f0add6ee0833513a9636ee30463917357f114c99dfeac56"
+    },
+    {
+      "source": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlCNSCreate.txt",
+      "copied": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\engineering_mcu\\api_sources\\axlCNSCreate.txt",
+      "SHA256": "dd112ae89a4ab89d8bfae5d3fbd050e0a36ae75ed1a6efcd28205d5db5a05567"
+    },
+    {
+      "source": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlCNSSetSpacing.txt",
+      "copied": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\engineering_mcu\\api_sources\\axlCNSSetSpacing.txt",
+      "SHA256": "9fccb43a869a1918b446b47f06a8e7b15bc58796cb9986bc835fa08b9b46bbe0"
+    },
+    {
+      "source": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlCnsClassTableCreate.txt",
+      "copied": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\engineering_mcu\\api_sources\\axlCnsClassTableCreate.txt",
+      "SHA256": "887a840ed678fc5409117a17ab06792f34e49c518cddee00ce8186b8dd6cdaab"
+    },
+    {
+      "source": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlCnsClassTableSeek.txt",
+      "copied": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\engineering_mcu\\api_sources\\axlCnsClassTableSeek.txt",
+      "SHA256": "fd28dc8612546b736275556b3ae9fa2107ed8555ff0b8a552b1876db4af2002c"
+    },
+    {
+      "source": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlCnsClassTableFind.txt",
+      "copied": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\engineering_mcu\\api_sources\\axlCnsClassTableFind.txt",
+      "SHA256": "398c5e40f2a18dd828e58a4986fe0df3b222569cb16a699939462617f71e0f69"
+    },
+    {
+      "source": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlLayerGet.txt",
+      "copied": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\engineering_mcu\\api_sources\\axlLayerGet.txt",
+      "SHA256": "b7b18bf76fdbf2d2b94691496cc8ad130b62238a647face887a59e5a87303a20"
+    },
+    {
+      "source": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlLayerCreateNonConductor.txt",
+      "copied": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\engineering_mcu\\api_sources\\axlLayerCreateNonConductor.txt",
+      "SHA256": "079bdd1b44588f82e37ab89c4edda53df987644bcdb0045cb63da951ed4d8326"
+    }
+  ],
+  "localManualSections": [
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\doc\\constraintcore\\chap1.html",
+      "anchor": "#1071088",
+      "SHA256": "a6028506931e23bc7b9095ca5310b182eb0ea61169c0fa8c1051fe72c7d3e19d",
+      "finding": "Region-Class-Class > Region-Class > Region; nested innermost, overlap most conservative; arbitrary per-pin spacing overrides not supported"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\doc\\cmref\\objects.html",
+      "anchor": "#region",
+      "SHA256": "cff4f82f3ad6bb4a776b4f279e246b90e9644c8de7367ea9bde1ec164d85441e",
+      "finding": "Region can have multiple shapes, layer can be by-layer; actual native subclass identity must be inspected"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\doc\\propref\\properties.html",
+      "anchor": "#852968",
+      "SHA256": "94cfab130c69bc1d2d9bd009e51fa2e3e99aee151d06b144411a798c61c90600",
+      "finding": "PIN_ESCAPE controls automatic router escape placement, does not waive spacing"
+    },
+    {
+      "path": "C:\\Program0\\Cadence\\SPB172\\doc\\cmug\\02objects.html",
+      "anchor": "#region",
+      "SHA256": "e6679f7983301945cf6ce707f2c83f765672ec209e62fac9d11be41564c3f55d",
+      "finding": "Region shapes and Region-Class constraint scope"
+    }
+  ],
+  "recommendedScope": "Copy S_POWER_030 into new CSet; change only smdpin_line and line_line to .20mm on actual TOP applicability; bind region-class NC_POWER_LV_S to three small disconnected shapes covering only three VDD/VSS pin necks/transition; preserve normal .60/neck.25/max1mm and all via/hole constraints. Native must verify inside/outside region and reopen. Do not change global default/power class.",
+  "licenseCondition": "Regions unavailable PCB L or below; API success/current native DRC and inside/outside challenge mandatory.",
+  "notAWorkingResult": "No region created by this review; pin_escape_region_draft.il unexecuted and requires caller-supplied real layer/subclass and reviewed boxes."
+}

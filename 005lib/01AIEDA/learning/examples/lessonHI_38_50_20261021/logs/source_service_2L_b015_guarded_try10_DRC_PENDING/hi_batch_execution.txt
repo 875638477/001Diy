@@ -1,0 +1,1102 @@
+HI_BATCH_DRC_BEFORE=t
+HI_ASSEMBLY_ONLINE_DRC_TEMPORARILY_DISABLED=nil
+HI_CSET_COPY domain=physical name="HI_JS_P001_2L" copyTemplate="HI2L_P_GPIO" changes=((neckwidth_min 0.16) (necklength_max 2.4) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_CSET_COPY domain=physical name="HI_JS_P002_2L" copyTemplate="HI2L_P_USB_AUX" changes=((neckwidth_min 0.16) (necklength_max 2.4) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_CSET_COPY domain=physical name="HI_JS_P003_2L" copyTemplate="HI2L_P_UART_CAN_DIGITAL" changes=((neckwidth_min 0.16) (necklength_max 2.4) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_CSET_COPY domain=physical name="HI_JS_P004_2L" copyTemplate="HI2L_P_RESET_BOOT_SWD" changes=((neckwidth_min 0.16) (necklength_max 2.4) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R001_2L" class1="HI2L_GPIO_P" class2=nil domain=physical cset="HI_JS_P001_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57020 assembly nil sameNet nil spacing nil physical "HI_JS_P001_2L" region dbid:00000224563A0A40 netclass2 nil netclass1 dbid:0000022456330CB0)
+HI_REGION_CLASS region="HI_JS_R001_2L" class1="HI2L_USB_AUX_P" class2=nil domain=physical cset="HI_JS_P002_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57038 assembly nil sameNet nil spacing nil physical "HI_JS_P002_2L" region dbid:00000224563A0A40 netclass2 nil netclass1 dbid:000002245632BA48)
+HI_REGION_CLASS region="HI_JS_R001_2L" class1="HI2L_UART_CAN_DIGITAL_P" class2=nil domain=physical cset="HI_JS_P003_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57050 assembly nil sameNet nil spacing nil physical "HI_JS_P003_2L" region dbid:00000224563A0A40 netclass2 nil netclass1 dbid:000002245632FBF8)
+HI_REGION_CLASS region="HI_JS_R001_2L" class1="HI2L_RESET_BOOT_SWD_P" class2=nil domain=physical cset="HI_JS_P004_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57068 assembly nil sameNet nil spacing nil physical "HI_JS_P004_2L" region dbid:00000224563A0A40 netclass2 nil netclass1 dbid:000002245632C920)
+HI_REGION_GEOMETRY (prop nil bBox ((36.6 20.0) (42.2 23.4)) readOnly t net nil objType "polygon" segments (dbid:00000224563A0E60 dbid:00000224563A0EB0 dbid:00000224563A0F00 dbid:00000224563A0F50) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:00000224563A0A40))
+HI_CSET_COPY domain=physical name="HI_JS_P005_2L" copyTemplate="HI2L_P_GPIO" changes=((neckwidth_min 0.16) (necklength_max 2.4) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R002_2L" class1="HI2L_GPIO_P" class2=nil domain=physical cset="HI_JS_P005_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57080 assembly nil sameNet nil spacing nil physical "HI_JS_P005_2L" region dbid:00000224563A1868 netclass2 nil netclass1 dbid:0000022456330CB0)
+HI_REGION_GEOMETRY (prop nil bBox ((36.4 19.6) (39.0 23.0)) readOnly t net nil objType "polygon" segments (dbid:00000224563A1C88 dbid:00000224563A1CD8 dbid:00000224563A1D28 dbid:00000224563A1D78) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:00000224563A1868))
+HI_CSET_COPY domain=physical name="HI_JS_P006_2L" copyTemplate="HI2L_P_GPIO" changes=((neckwidth_min 0.16) (necklength_max 2.4))
+HI_REGION_CLASS region="HI_JS_R003_2L" class1="HI2L_GPIO_P" class2=nil domain=physical cset="HI_JS_P006_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57098 assembly nil sameNet nil spacing nil physical "HI_JS_P006_2L" region dbid:00000224563A4A50 netclass2 nil netclass1 dbid:0000022456330CB0)
+HI_REGION_GEOMETRY (prop nil bBox ((38.15 20.5) (38.85 22.5)) readOnly t net nil objType "polygon" segments (dbid:00000224563A4E70 dbid:00000224563A4EC0 dbid:00000224563A4F10 dbid:00000224563A4F60) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:00000224563A4A50))
+HI_CSET_COPY domain=spacing name="HI_JS_S007_2L" copyTemplate="HI2L_S_GPIO" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S008_2L" copyTemplate="HI2L_S_GPIO" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S009_2L" copyTemplate="HI2L_S_GPIO" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S010_2L" copyTemplate="HI2L_S_GPIO" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S011_2L" copyTemplate="HI2L_S_RESET_BOOT_SWD" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S012_2L" copyTemplate="HI2L_S_RESET_BOOT_SWD" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S013_2L" copyTemplate="HI2L_S_RESET_BOOT_SWD" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S014_2L" copyTemplate="HI2L_S_UART_CAN_DIGITAL" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S015_2L" copyTemplate="HI2L_S_UART_CAN_DIGITAL" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S016_2L" copyTemplate="HI2L_S_USB_AUX" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_REGION_CLASS region="HI_JS_R004_2L" class1="HI2L_GPIO_S" class2="HI2L_GPIO_S" domain=spacing cset="HI_JS_S007_2L" table=(objType "classTable" readOnly t prop propList:0000022455C570B0 assembly nil sameNet nil physical nil spacing "HI_JS_S007_2L" region dbid:00000224563AA768 netclass2 dbid:00000224563313F0 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R004_2L" class1="HI2L_GPIO_S" class2="HI2L_RESET_BOOT_SWD_S" domain=spacing cset="HI_JS_S008_2L" table=(objType "classTable" readOnly t prop propList:0000022455C570C8 assembly nil sameNet nil physical nil spacing "HI_JS_S008_2L" region dbid:00000224563AA768 netclass2 dbid:000002245632CE50 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R004_2L" class1="HI2L_GPIO_S" class2="HI2L_UART_CAN_DIGITAL_S" domain=spacing cset="HI_JS_S009_2L" table=(objType "classTable" readOnly t prop propList:0000022455C570E0 assembly nil sameNet nil physical nil spacing "HI_JS_S009_2L" region dbid:00000224563AA768 netclass2 dbid:00000224563300F8 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R004_2L" class1="HI2L_GPIO_S" class2="HI2L_USB_AUX_S" domain=spacing cset="HI_JS_S010_2L" table=(objType "classTable" readOnly t prop propList:0000022455C570F8 assembly nil sameNet nil physical nil spacing "HI_JS_S010_2L" region dbid:00000224563AA768 netclass2 dbid:000002245632BF48 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R004_2L" class1="HI2L_RESET_BOOT_SWD_S" class2="HI2L_RESET_BOOT_SWD_S" domain=spacing cset="HI_JS_S011_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57110 assembly nil sameNet nil physical nil spacing "HI_JS_S011_2L" region dbid:00000224563AA768 netclass2 dbid:000002245632CE50 netclass1 dbid:000002245632CE50)
+HI_REGION_CLASS region="HI_JS_R004_2L" class1="HI2L_RESET_BOOT_SWD_S" class2="HI2L_UART_CAN_DIGITAL_S" domain=spacing cset="HI_JS_S012_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57128 assembly nil sameNet nil physical nil spacing "HI_JS_S012_2L" region dbid:00000224563AA768 netclass2 dbid:00000224563300F8 netclass1 dbid:000002245632CE50)
+HI_REGION_CLASS region="HI_JS_R004_2L" class1="HI2L_RESET_BOOT_SWD_S" class2="HI2L_USB_AUX_S" domain=spacing cset="HI_JS_S013_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57140 assembly nil sameNet nil physical nil spacing "HI_JS_S013_2L" region dbid:00000224563AA768 netclass2 dbid:000002245632BF48 netclass1 dbid:000002245632CE50)
+HI_REGION_CLASS region="HI_JS_R004_2L" class1="HI2L_UART_CAN_DIGITAL_S" class2="HI2L_UART_CAN_DIGITAL_S" domain=spacing cset="HI_JS_S014_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57158 assembly nil sameNet nil physical nil spacing "HI_JS_S014_2L" region dbid:00000224563AA768 netclass2 dbid:00000224563300F8 netclass1 dbid:00000224563300F8)
+HI_REGION_CLASS region="HI_JS_R004_2L" class1="HI2L_UART_CAN_DIGITAL_S" class2="HI2L_USB_AUX_S" domain=spacing cset="HI_JS_S015_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57170 assembly nil sameNet nil physical nil spacing "HI_JS_S015_2L" region dbid:00000224563AA768 netclass2 dbid:000002245632BF48 netclass1 dbid:00000224563300F8)
+HI_REGION_CLASS region="HI_JS_R004_2L" class1="HI2L_USB_AUX_S" class2="HI2L_USB_AUX_S" domain=spacing cset="HI_JS_S016_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57188 assembly nil sameNet nil physical nil spacing "HI_JS_S016_2L" region dbid:00000224563AA768 netclass2 dbid:000002245632BF48 netclass1 dbid:000002245632BF48)
+HI_REGION_GEOMETRY (prop nil bBox ((36.6 20.0) (40.55 23.4)) readOnly t net nil objType "polygon" segments (dbid:00000224563AAB88 dbid:00000224563AABD8 dbid:00000224563AAC28 dbid:00000224563AAC78) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:00000224563AA768))
+HI_CSET_COPY domain=spacing name="HI_JS_S017_2L" copyTemplate="HI2L_S_GPIO" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S018_2L" copyTemplate="HI2L_S_GPIO" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S019_2L" copyTemplate="HI2L_S_GPIO" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S020_2L" copyTemplate="HI2L_S_GPIO" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S021_2L" copyTemplate="HI2L_S_RESET_BOOT_SWD" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S022_2L" copyTemplate="HI2L_S_RESET_BOOT_SWD" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S023_2L" copyTemplate="HI2L_S_RESET_BOOT_SWD" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S024_2L" copyTemplate="HI2L_S_UART_CAN_DIGITAL" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S025_2L" copyTemplate="HI2L_S_UART_CAN_DIGITAL" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S026_2L" copyTemplate="HI2L_S_USB_AUX" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_REGION_CLASS region="HI_JS_R005_2L" class1="HI2L_GPIO_S" class2="HI2L_GPIO_S" domain=spacing cset="HI_JS_S017_2L" table=(objType "classTable" readOnly t prop propList:0000022455C571A0 assembly nil sameNet nil physical nil spacing "HI_JS_S017_2L" region dbid:00000224563AEFB0 netclass2 dbid:00000224563313F0 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R005_2L" class1="HI2L_GPIO_S" class2="HI2L_RESET_BOOT_SWD_S" domain=spacing cset="HI_JS_S018_2L" table=(objType "classTable" readOnly t prop propList:0000022455C571B8 assembly nil sameNet nil physical nil spacing "HI_JS_S018_2L" region dbid:00000224563AEFB0 netclass2 dbid:000002245632CE50 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R005_2L" class1="HI2L_GPIO_S" class2="HI2L_UART_CAN_DIGITAL_S" domain=spacing cset="HI_JS_S019_2L" table=(objType "classTable" readOnly t prop propList:0000022455C571D0 assembly nil sameNet nil physical nil spacing "HI_JS_S019_2L" region dbid:00000224563AEFB0 netclass2 dbid:00000224563300F8 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R005_2L" class1="HI2L_GPIO_S" class2="HI2L_USB_AUX_S" domain=spacing cset="HI_JS_S020_2L" table=(objType "classTable" readOnly t prop propList:0000022455C571E8 assembly nil sameNet nil physical nil spacing "HI_JS_S020_2L" region dbid:00000224563AEFB0 netclass2 dbid:000002245632BF48 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R005_2L" class1="HI2L_RESET_BOOT_SWD_S" class2="HI2L_RESET_BOOT_SWD_S" domain=spacing cset="HI_JS_S021_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57200 assembly nil sameNet nil physical nil spacing "HI_JS_S021_2L" region dbid:00000224563AEFB0 netclass2 dbid:000002245632CE50 netclass1 dbid:000002245632CE50)
+HI_REGION_CLASS region="HI_JS_R005_2L" class1="HI2L_RESET_BOOT_SWD_S" class2="HI2L_UART_CAN_DIGITAL_S" domain=spacing cset="HI_JS_S022_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57218 assembly nil sameNet nil physical nil spacing "HI_JS_S022_2L" region dbid:00000224563AEFB0 netclass2 dbid:00000224563300F8 netclass1 dbid:000002245632CE50)
+HI_REGION_CLASS region="HI_JS_R005_2L" class1="HI2L_RESET_BOOT_SWD_S" class2="HI2L_USB_AUX_S" domain=spacing cset="HI_JS_S023_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57230 assembly nil sameNet nil physical nil spacing "HI_JS_S023_2L" region dbid:00000224563AEFB0 netclass2 dbid:000002245632BF48 netclass1 dbid:000002245632CE50)
+HI_REGION_CLASS region="HI_JS_R005_2L" class1="HI2L_UART_CAN_DIGITAL_S" class2="HI2L_UART_CAN_DIGITAL_S" domain=spacing cset="HI_JS_S024_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57248 assembly nil sameNet nil physical nil spacing "HI_JS_S024_2L" region dbid:00000224563AEFB0 netclass2 dbid:00000224563300F8 netclass1 dbid:00000224563300F8)
+HI_REGION_CLASS region="HI_JS_R005_2L" class1="HI2L_UART_CAN_DIGITAL_S" class2="HI2L_USB_AUX_S" domain=spacing cset="HI_JS_S025_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57260 assembly nil sameNet nil physical nil spacing "HI_JS_S025_2L" region dbid:00000224563AEFB0 netclass2 dbid:000002245632BF48 netclass1 dbid:00000224563300F8)
+HI_REGION_CLASS region="HI_JS_R005_2L" class1="HI2L_USB_AUX_S" class2="HI2L_USB_AUX_S" domain=spacing cset="HI_JS_S026_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57278 assembly nil sameNet nil physical nil spacing "HI_JS_S026_2L" region dbid:00000224563AEFB0 netclass2 dbid:000002245632BF48 netclass1 dbid:000002245632BF48)
+HI_REGION_GEOMETRY (prop nil bBox ((36.6 20.0) (40.55 23.4)) readOnly t net nil objType "polygon" segments (dbid:00000224563AF3D0 dbid:00000224563AF420 dbid:00000224563AF470 dbid:00000224563AF4C0) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:00000224563AEFB0))
+HI_CSET_COPY domain=spacing name="HI_JS_S027_2L" copyTemplate="HI2L_S_CLASSCLASS_8" changes=((via_line 0.2) (line_line 0.2))
+HI_REGION_CLASS region="HI_JS_R006_2L" class1="HI2L_UART_CAN_DIGITAL_S" class2="HI2L_USB_FS_S" domain=spacing cset="HI_JS_S027_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57290 assembly nil sameNet nil physical nil spacing "HI_JS_S027_2L" region dbid:00000224563CD750 netclass2 dbid:0000022456327ED0 netclass1 dbid:00000224563300F8)
+HI_REGION_GEOMETRY (prop nil bBox ((39.65 20.0) (40.55 22.15)) readOnly t net nil objType "polygon" segments (dbid:00000224563CDB70 dbid:00000224563CDBC0 dbid:00000224563CDC10 dbid:00000224563CDC60) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:00000224563CD750))
+HI_CSET_COPY domain=spacing name="HI_JS_S028_2L" copyTemplate="HI2L_S_CLASSCLASS_6" changes=((smdpin_line 0.2) (line_line 0.2) (via_line 0.2))
+HI_REGION_CLASS region="HI_JS_R007_2L" class1="HI2L_RESET_BOOT_SWD_S" class2="HI2L_USB_FS_S" domain=spacing cset="HI_JS_S028_2L" table=(objType "classTable" readOnly t prop propList:0000022455C572A8 assembly nil sameNet nil physical nil spacing "HI_JS_S028_2L" region dbid:00000224563CE1A8 netclass2 dbid:0000022456327ED0 netclass1 dbid:000002245632CE50)
+HI_REGION_GEOMETRY (prop nil bBox ((41.3 21.0) (42.1 23.4)) readOnly t net nil objType "polygon" segments (dbid:00000224563CE5C8 dbid:00000224563CE618 dbid:00000224563CE668 dbid:00000224563CE6B8) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:00000224563CE1A8))
+HI_CSET_COPY domain=spacing name="HI_JS_S029_2L" copyTemplate="HI2L_S_GROUND" changes=((via_line 0.2) (via_via 0.2) (line_line 0.2))
+HI_REGION_CLASS region="HI_JS_R008_2L" class1="HI2L_GROUND_S" class2="HI2L_RESET_BOOT_SWD_S" domain=spacing cset="HI_JS_S029_2L" table=(objType "classTable" readOnly t prop propList:0000022455C572C0 assembly nil sameNet nil physical nil spacing "HI_JS_S029_2L" region dbid:00000224563CEC00 netclass2 dbid:000002245632CE50 netclass1 dbid:0000022456325978)
+HI_REGION_GEOMETRY (prop nil bBox ((41.2 21.0) (42.6 21.8)) readOnly t net nil objType "polygon" segments (dbid:00000224563CF020 dbid:00000224563CF070 dbid:00000224563CF0C0 dbid:00000224563CF110) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:00000224563CEC00))
+HI_CSET_COPY domain=spacing name="HI_JS_S030_2L" copyTemplate="HI2L_S_GROUND" changes=((via_line 0.2) (via_via 0.2) (line_line 0.2))
+HI_REGION_CLASS region="HI_JS_R009_2L" class1="HI2L_GROUND_S" class2="HI2L_RESET_BOOT_SWD_S" domain=spacing cset="HI_JS_S030_2L" table=(objType "classTable" readOnly t prop propList:0000022455C572D8 assembly nil sameNet nil physical nil spacing "HI_JS_S030_2L" region dbid:00000224563CF658 netclass2 dbid:000002245632CE50 netclass1 dbid:0000022456325978)
+HI_REGION_GEOMETRY (prop nil bBox ((41.2 21.0) (42.6 21.8)) readOnly t net nil objType "polygon" segments (dbid:00000224563CFA78 dbid:00000224563CFAC8 dbid:00000224563CFB18 dbid:00000224563CFB68) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:00000224563CF658))
+HI_CSET_COPY domain=spacing name="HI_JS_S031_2L" copyTemplate="HI2L_S_GPIO" changes=((via_line 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S032_2L" copyTemplate="HI2L_S_GPIO" changes=((via_line 0.16))
+HI_REGION_CLASS region="HI_JS_R010_2L" class1="HI2L_GPIO_S" class2="HI2L_GPIO_S" domain=spacing cset="HI_JS_S031_2L" table=(objType "classTable" readOnly t prop propList:0000022455C572F0 assembly nil sameNet nil physical nil spacing "HI_JS_S031_2L" region dbid:00000224563EE130 netclass2 dbid:00000224563313F0 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R010_2L" class1="HI2L_GPIO_S" class2="HI2L_USB_AUX_S" domain=spacing cset="HI_JS_S032_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57308 assembly nil sameNet nil physical nil spacing "HI_JS_S032_2L" region dbid:00000224563EE130 netclass2 dbid:000002245632BF48 netclass1 dbid:00000224563313F0)
+HI_REGION_GEOMETRY (prop nil bBox ((37.8 20.5) (39.2 21.7)) readOnly t net nil objType "polygon" segments (dbid:00000224563EE550 dbid:00000224563EE5A0 dbid:00000224563EE5F0 dbid:00000224563EE640) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:00000224563EE130))
+HI_CSET_COPY domain=physical name="HI_JS_P033_2L" copyTemplate="HI2L_P_GPIO" changes=((neckwidth_min 0.16) (necklength_max 2.8) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_CSET_COPY domain=physical name="HI_JS_P034_2L" copyTemplate="HI2L_P_RESET_BOOT_SWD" changes=((neckwidth_min 0.16) (necklength_max 2.8) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R011_2L" class1="HI2L_GPIO_P" class2=nil domain=physical cset="HI_JS_P033_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57320 assembly nil sameNet nil spacing nil physical "HI_JS_P033_2L" region dbid:000002245640D330 netclass2 nil netclass1 dbid:0000022456330CB0)
+HI_REGION_CLASS region="HI_JS_R011_2L" class1="HI2L_RESET_BOOT_SWD_P" class2=nil domain=physical cset="HI_JS_P034_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57338 assembly nil sameNet nil spacing nil physical "HI_JS_P034_2L" region dbid:000002245640D330 netclass2 nil netclass1 dbid:000002245632C920)
+HI_REGION_GEOMETRY (prop nil bBox ((33.1 24.9) (38.4 27.4)) readOnly t net nil objType "polygon" segments (dbid:000002245640D750 dbid:000002245640D7A0 dbid:000002245640D7F0 dbid:000002245640D840 dbid:000002245640D890 dbid:000002245640D8E0) nSegs 6 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:000002245640D330))
+HI_CSET_COPY domain=physical name="HI_JS_P035_2L" copyTemplate="HI2L_P_GPIO" changes=((neckwidth_min 0.16) (necklength_max 2.8) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R012_2L" class1="HI2L_GPIO_P" class2=nil domain=physical cset="HI_JS_P035_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57350 assembly nil sameNet nil spacing nil physical "HI_JS_P035_2L" region dbid:0000022456416090 netclass2 nil netclass1 dbid:0000022456330CB0)
+HI_REGION_GEOMETRY (prop nil bBox ((35.4 26.4) (38.7 27.7)) readOnly t net nil objType "polygon" segments (dbid:00000224564164B0 dbid:0000022456416500 dbid:0000022456416550 dbid:00000224564165A0) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:0000022456416090))
+HI_CSET_COPY domain=physical name="HI_JS_P036_2L" copyTemplate="HI2L_P_USB_AUX" changes=((neckwidth_min 0.16) (necklength_max 1.4) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R013_2L" class1="HI2L_USB_AUX_P" class2=nil domain=physical cset="HI_JS_P036_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57368 assembly nil sameNet nil spacing nil physical "HI_JS_P036_2L" region dbid:000002245641ED28 netclass2 nil netclass1 dbid:000002245632BA48)
+HI_REGION_GEOMETRY (prop nil bBox ((34.25 26.5) (36.5 27.7)) readOnly t net nil objType "polygon" segments (dbid:000002245641F148 dbid:000002245641F198 dbid:000002245641F1E8 dbid:000002245641F238) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:000002245641ED28))
+HI_CSET_COPY domain=spacing name="HI_JS_S037_2L" copyTemplate="HI2L_S_GPIO" changes=((shape_shape 0.3) (via_shape 0.3) (via_line 0.3) (smdpin_line 0.2) (line_shape 0.3) (line_line 0.2))
+HI_REGION_CLASS region="HI_JS_R014_2L" class1="HI2L_GPIO_S" class2="HI2L_GROUND_S" domain=spacing cset="HI_JS_S037_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57380 assembly nil sameNet nil physical nil spacing "HI_JS_S037_2L" region dbid:0000022456424848 netclass2 dbid:0000022456325978 netclass1 dbid:00000224563313F0)
+HI_REGION_GEOMETRY (prop nil bBox ((36.4 25.4) (37.0 26.9)) readOnly t net nil objType "polygon" segments (dbid:0000022456424C68 dbid:0000022456424CB8 dbid:0000022456424D08 dbid:0000022456424D58) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:0000022456424848))
+HI_CSET_COPY domain=spacing name="HI_JS_S038_2L" copyTemplate="HI2L_S_GPIO" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S039_2L" copyTemplate="HI2L_S_GPIO" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S040_2L" copyTemplate="HI2L_S_RESET_BOOT_SWD" changes=((line_line 0.16) (via_line 0.16) (via_via 0.16))
+HI_REGION_CLASS region="HI_JS_R015_2L" class1="HI2L_GPIO_S" class2="HI2L_GPIO_S" domain=spacing cset="HI_JS_S038_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57398 assembly nil sameNet nil physical nil spacing "HI_JS_S038_2L" region dbid:000002245642ACA8 netclass2 dbid:00000224563313F0 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R015_2L" class1="HI2L_GPIO_S" class2="HI2L_RESET_BOOT_SWD_S" domain=spacing cset="HI_JS_S039_2L" table=(objType "classTable" readOnly t prop propList:0000022455C573B0 assembly nil sameNet nil physical nil spacing "HI_JS_S039_2L" region dbid:000002245642ACA8 netclass2 dbid:000002245632CE50 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R015_2L" class1="HI2L_RESET_BOOT_SWD_S" class2="HI2L_RESET_BOOT_SWD_S" domain=spacing cset="HI_JS_S040_2L" table=(objType "classTable" readOnly t prop propList:0000022455C573C8 assembly nil sameNet nil physical nil spacing "HI_JS_S040_2L" region dbid:000002245642ACA8 netclass2 dbid:000002245632CE50 netclass1 dbid:000002245632CE50)
+HI_REGION_GEOMETRY (prop nil bBox ((33.2 25.0) (35.2 27.0)) readOnly t net nil objType "polygon" segments (dbid:000002245642B0C8 dbid:000002245642B118 dbid:000002245642B168 dbid:000002245642B1B8) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:000002245642ACA8))
+HI_CSET_COPY domain=spacing name="HI_JS_S041_2L" copyTemplate="HI2L_S_GPIO" changes=((shape_shape 0.3) (via_shape 0.3) (via_line 0.2) (smdpin_line 0.3) (line_shape 0.3) (line_line 0.3))
+HI_REGION_CLASS region="HI_JS_R016_2L" class1="HI2L_GPIO_S" class2="HI2L_GROUND_S" domain=spacing cset="HI_JS_S041_2L" table=(objType "classTable" readOnly t prop propList:0000022455C573E0 assembly nil sameNet nil physical nil spacing "HI_JS_S041_2L" region dbid:0000022456430818 netclass2 dbid:0000022456325978 netclass1 dbid:00000224563313F0)
+HI_REGION_GEOMETRY (prop nil bBox ((35.4 26.4) (38.7 27.7)) readOnly t net nil objType "polygon" segments (dbid:0000022456430C38 dbid:0000022456430C88 dbid:0000022456430CD8 dbid:0000022456430D28) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:0000022456430818))
+HI_CSET_COPY domain=physical name="HI_JS_P042_2L" copyTemplate="HI2L_P_RESET_BOOT_SWD" changes=((neckwidth_min 0.16) (necklength_max 2.0) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_CSET_COPY domain=physical name="HI_JS_P043_2L" copyTemplate="HI2L_P_GPIO" changes=((neckwidth_min 0.16) (necklength_max 2.0) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_CSET_COPY domain=physical name="HI_JS_P044_2L" copyTemplate="HI2L_P_I2C" changes=((neckwidth_min 0.16) (necklength_max 2.0) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R017_2L" class1="HI2L_RESET_BOOT_SWD_P" class2=nil domain=physical cset="HI_JS_P042_2L" table=(objType "classTable" readOnly t prop propList:0000022455C573F8 assembly nil sameNet nil spacing nil physical "HI_JS_P042_2L" region dbid:000002245643A4F0 netclass2 nil netclass1 dbid:000002245632C920)
+HI_REGION_CLASS region="HI_JS_R017_2L" class1="HI2L_GPIO_P" class2=nil domain=physical cset="HI_JS_P043_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57410 assembly nil sameNet nil spacing nil physical "HI_JS_P043_2L" region dbid:000002245643A4F0 netclass2 nil netclass1 dbid:0000022456330CB0)
+HI_REGION_CLASS region="HI_JS_R017_2L" class1="HI2L_I2C_P" class2=nil domain=physical cset="HI_JS_P044_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57428 assembly nil sameNet nil spacing nil physical "HI_JS_P044_2L" region dbid:000002245643A4F0 netclass2 nil netclass1 dbid:000002245632DCE8)
+HI_REGION_GEOMETRY (prop nil bBox ((43.5 23.7) (47.5 29.0)) readOnly t net nil objType "polygon" segments (dbid:000002245643A910 dbid:000002245643A960 dbid:000002245643A9B0 dbid:000002245643AA00) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:000002245643A4F0))
+HI_CSET_COPY domain=spacing name="HI_JS_S045_2L" copyTemplate="HI2L_S_GPIO" changes=((smdpin_line 0.16) (line_line 0.16) (smdpin_via 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S046_2L" copyTemplate="HI2L_S_GPIO" changes=((smdpin_line 0.16) (line_line 0.16) (smdpin_via 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S047_2L" copyTemplate="HI2L_S_GPIO" changes=((smdpin_line 0.16) (line_line 0.16) (smdpin_via 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S048_2L" copyTemplate="HI2L_S_I2C" changes=((smdpin_line 0.16) (line_line 0.16) (smdpin_via 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S049_2L" copyTemplate="HI2L_S_I2C" changes=((smdpin_line 0.16) (line_line 0.16) (smdpin_via 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S050_2L" copyTemplate="HI2L_S_RESET_BOOT_SWD" changes=((smdpin_line 0.16) (line_line 0.16) (smdpin_via 0.16) (via_line 0.16) (via_via 0.16))
+HI_REGION_CLASS region="HI_JS_R018_2L" class1="HI2L_GPIO_S" class2="HI2L_GPIO_S" domain=spacing cset="HI_JS_S045_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57440 assembly nil sameNet nil physical nil spacing "HI_JS_S045_2L" region dbid:0000022456444578 netclass2 dbid:00000224563313F0 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R018_2L" class1="HI2L_GPIO_S" class2="HI2L_I2C_S" domain=spacing cset="HI_JS_S046_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57458 assembly nil sameNet nil physical nil spacing "HI_JS_S046_2L" region dbid:0000022456444578 netclass2 dbid:000002245632E128 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R018_2L" class1="HI2L_GPIO_S" class2="HI2L_RESET_BOOT_SWD_S" domain=spacing cset="HI_JS_S047_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57470 assembly nil sameNet nil physical nil spacing "HI_JS_S047_2L" region dbid:0000022456444578 netclass2 dbid:000002245632CE50 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R018_2L" class1="HI2L_I2C_S" class2="HI2L_I2C_S" domain=spacing cset="HI_JS_S048_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57488 assembly nil sameNet nil physical nil spacing "HI_JS_S048_2L" region dbid:0000022456444578 netclass2 dbid:000002245632E128 netclass1 dbid:000002245632E128)
+HI_REGION_CLASS region="HI_JS_R018_2L" class1="HI2L_I2C_S" class2="HI2L_RESET_BOOT_SWD_S" domain=spacing cset="HI_JS_S049_2L" table=(objType "classTable" readOnly t prop propList:0000022455C574A0 assembly nil sameNet nil physical nil spacing "HI_JS_S049_2L" region dbid:0000022456444578 netclass2 dbid:000002245632CE50 netclass1 dbid:000002245632E128)
+HI_REGION_CLASS region="HI_JS_R018_2L" class1="HI2L_RESET_BOOT_SWD_S" class2="HI2L_RESET_BOOT_SWD_S" domain=spacing cset="HI_JS_S050_2L" table=(objType "classTable" readOnly t prop propList:0000022455C574B8 assembly nil sameNet nil physical nil spacing "HI_JS_S050_2L" region dbid:0000022456444578 netclass2 dbid:000002245632CE50 netclass1 dbid:000002245632CE50)
+HI_REGION_GEOMETRY (prop nil bBox ((43.5 23.7) (47.5 29.0)) readOnly t net nil objType "polygon" segments (dbid:0000022456444998 dbid:00000224564449E8 dbid:0000022456444A38 dbid:0000022456444A88) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:0000022456444578))
+HI_CSET_COPY domain=physical name="HI_JS_P051_2L" copyTemplate="HI2L_P_RESET_BOOT_SWD" changes=((neckwidth_min 0.16) (necklength_max 2.0) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_CSET_COPY domain=physical name="HI_JS_P052_2L" copyTemplate="HI2L_P_GPIO" changes=((neckwidth_min 0.16) (necklength_max 2.0) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_CSET_COPY domain=physical name="HI_JS_P053_2L" copyTemplate="HI2L_P_I2C" changes=((neckwidth_min 0.16) (necklength_max 2.0) (vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R019_2L" class1="HI2L_RESET_BOOT_SWD_P" class2=nil domain=physical cset="HI_JS_P051_2L" table=(objType "classTable" readOnly t prop propList:0000022455C574D0 assembly nil sameNet nil spacing nil physical "HI_JS_P051_2L" region dbid:000002245644E318 netclass2 nil netclass1 dbid:000002245632C920)
+HI_REGION_CLASS region="HI_JS_R019_2L" class1="HI2L_GPIO_P" class2=nil domain=physical cset="HI_JS_P052_2L" table=(objType "classTable" readOnly t prop propList:0000022455C574E8 assembly nil sameNet nil spacing nil physical "HI_JS_P052_2L" region dbid:000002245644E318 netclass2 nil netclass1 dbid:0000022456330CB0)
+HI_REGION_CLASS region="HI_JS_R019_2L" class1="HI2L_I2C_P" class2=nil domain=physical cset="HI_JS_P053_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57500 assembly nil sameNet nil spacing nil physical "HI_JS_P053_2L" region dbid:000002245644E318 netclass2 nil netclass1 dbid:000002245632DCE8)
+HI_REGION_GEOMETRY (prop nil bBox ((43.5 23.7) (47.5 29.0)) readOnly t net nil objType "polygon" segments (dbid:000002245644E738 dbid:000002245644E788 dbid:000002245644E7D8 dbid:000002245644E828) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:000002245644E318))
+HI_CSET_COPY domain=spacing name="HI_JS_S054_2L" copyTemplate="HI2L_S_GPIO" changes=((smdpin_line 0.16) (line_line 0.16) (smdpin_via 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S055_2L" copyTemplate="HI2L_S_GPIO" changes=((smdpin_line 0.16) (line_line 0.16) (smdpin_via 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S056_2L" copyTemplate="HI2L_S_GPIO" changes=((smdpin_line 0.16) (line_line 0.16) (smdpin_via 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S057_2L" copyTemplate="HI2L_S_I2C" changes=((smdpin_line 0.16) (line_line 0.16) (smdpin_via 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S058_2L" copyTemplate="HI2L_S_I2C" changes=((smdpin_line 0.16) (line_line 0.16) (smdpin_via 0.16) (via_line 0.16) (via_via 0.16))
+HI_CSET_COPY domain=spacing name="HI_JS_S059_2L" copyTemplate="HI2L_S_RESET_BOOT_SWD" changes=((smdpin_line 0.16) (line_line 0.16) (smdpin_via 0.16) (via_line 0.16) (via_via 0.16))
+HI_REGION_CLASS region="HI_JS_R020_2L" class1="HI2L_GPIO_S" class2="HI2L_GPIO_S" domain=spacing cset="HI_JS_S054_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57518 assembly nil sameNet nil physical nil spacing "HI_JS_S054_2L" region dbid:000002245646E0C0 netclass2 dbid:00000224563313F0 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R020_2L" class1="HI2L_GPIO_S" class2="HI2L_I2C_S" domain=spacing cset="HI_JS_S055_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57530 assembly nil sameNet nil physical nil spacing "HI_JS_S055_2L" region dbid:000002245646E0C0 netclass2 dbid:000002245632E128 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R020_2L" class1="HI2L_GPIO_S" class2="HI2L_RESET_BOOT_SWD_S" domain=spacing cset="HI_JS_S056_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57548 assembly nil sameNet nil physical nil spacing "HI_JS_S056_2L" region dbid:000002245646E0C0 netclass2 dbid:000002245632CE50 netclass1 dbid:00000224563313F0)
+HI_REGION_CLASS region="HI_JS_R020_2L" class1="HI2L_I2C_S" class2="HI2L_I2C_S" domain=spacing cset="HI_JS_S057_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57560 assembly nil sameNet nil physical nil spacing "HI_JS_S057_2L" region dbid:000002245646E0C0 netclass2 dbid:000002245632E128 netclass1 dbid:000002245632E128)
+HI_REGION_CLASS region="HI_JS_R020_2L" class1="HI2L_I2C_S" class2="HI2L_RESET_BOOT_SWD_S" domain=spacing cset="HI_JS_S058_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57578 assembly nil sameNet nil physical nil spacing "HI_JS_S058_2L" region dbid:000002245646E0C0 netclass2 dbid:000002245632CE50 netclass1 dbid:000002245632E128)
+HI_REGION_CLASS region="HI_JS_R020_2L" class1="HI2L_RESET_BOOT_SWD_S" class2="HI2L_RESET_BOOT_SWD_S" domain=spacing cset="HI_JS_S059_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57590 assembly nil sameNet nil physical nil spacing "HI_JS_S059_2L" region dbid:000002245646E0C0 netclass2 dbid:000002245632CE50 netclass1 dbid:000002245632CE50)
+HI_REGION_GEOMETRY (prop nil bBox ((43.5 23.7) (47.5 29.0)) readOnly t net nil objType "polygon" segments (dbid:000002245646E4E0 dbid:000002245646E530 dbid:000002245646E580 dbid:000002245646E5D0) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:000002245646E0C0))
+HI_CSET_COPY domain=physical name="HI_JS_P060_2L" copyTemplate="HI2L_P_USB_AUX" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R021_2L" class1="HI2L_USB_AUX_P" class2=nil domain=physical cset="HI_JS_P060_2L" table=(objType "classTable" readOnly t prop propList:0000022455C575A8 assembly nil sameNet nil spacing nil physical "HI_JS_P060_2L" region dbid:0000022456471168 netclass2 nil netclass1 dbid:000002245632BA48)
+HI_REGION_GEOMETRY (prop nil bBox ((38.99 21.19) (39.01 21.21)) readOnly t net nil objType "polygon" segments (dbid:0000022456471588 dbid:00000224564715D8 dbid:0000022456471628 dbid:0000022456471678) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:0000022456471168))
+HI_CSET_COPY domain=physical name="HI_JS_P061_2L" copyTemplate="HI2L_P_UART_CAN_DIGITAL" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R022_2L" class1="HI2L_UART_CAN_DIGITAL_P" class2=nil domain=physical cset="HI_JS_P061_2L" table=(objType "classTable" readOnly t prop propList:0000022455C575C0 assembly nil sameNet nil spacing nil physical "HI_JS_P061_2L" region dbid:000002245648FB20 netclass2 nil netclass1 dbid:000002245632FBF8)
+HI_REGION_GEOMETRY (prop nil bBox ((39.69 21.69) (39.71 21.71)) readOnly t net nil objType "polygon" segments (dbid:000002245648FF40 dbid:000002245648FF90 dbid:000002245648FFE0 dbid:0000022456490030) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:000002245648FB20))
+HI_CSET_COPY domain=physical name="HI_JS_P062_2L" copyTemplate="HI2L_P_UART_CAN_DIGITAL" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R023_2L" class1="HI2L_UART_CAN_DIGITAL_P" class2=nil domain=physical cset="HI_JS_P062_2L" table=(objType "classTable" readOnly t prop propList:0000022455C575D8 assembly nil sameNet nil spacing nil physical "HI_JS_P062_2L" region dbid:0000022456491468 netclass2 nil netclass1 dbid:000002245632FBF8)
+HI_REGION_GEOMETRY (prop nil bBox ((39.99 20.49) (40.01 20.51)) readOnly t net nil objType "polygon" segments (dbid:0000022456491888 dbid:00000224564918D8 dbid:0000022456491928 dbid:0000022456491978) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:0000022456491468))
+HI_CSET_COPY domain=physical name="HI_JS_P063_2L" copyTemplate="HI2L_P_GROUND" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R024_2L" class1="HI2L_GROUND_P" class2=nil domain=physical cset="HI_JS_P063_2L" table=(objType "classTable" readOnly t prop propList:0000022455C575F0 assembly nil sameNet nil spacing nil physical "HI_JS_P063_2L" region dbid:0000022456492DB0 netclass2 nil netclass1 dbid:0000022456325568)
+HI_REGION_GEOMETRY (prop nil bBox ((35.79 21.94) (35.81 21.96)) readOnly t net nil objType "polygon" segments (dbid:00000224564931D0 dbid:0000022456493220 dbid:0000022456493270 dbid:00000224564932C0) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:0000022456492DB0))
+HI_CSET_COPY domain=physical name="HI_JS_P064_2L" copyTemplate="HI2L_P_GROUND" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R025_2L" class1="HI2L_GROUND_P" class2=nil domain=physical cset="HI_JS_P064_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57608 assembly nil sameNet nil spacing nil physical "HI_JS_P064_2L" region dbid:0000022456493B88 netclass2 nil netclass1 dbid:0000022456325568)
+HI_REGION_GEOMETRY (prop nil bBox ((35.79 21.94) (35.81 21.96)) readOnly t net nil objType "polygon" segments (dbid:0000022456493FA8 dbid:0000022456493FF8 dbid:0000022456494048 dbid:0000022456494098) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:0000022456493B88))
+HI_CSET_COPY domain=physical name="HI_JS_P065_2L" copyTemplate="HI2L_P_GROUND" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R026_2L" class1="HI2L_GROUND_P" class2=nil domain=physical cset="HI_JS_P065_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57620 assembly nil sameNet nil spacing nil physical "HI_JS_P065_2L" region dbid:0000022456497A78 netclass2 nil netclass1 dbid:0000022456325568)
+HI_REGION_GEOMETRY (prop nil bBox ((37.99 19.99) (38.01 20.01)) readOnly t net nil objType "polygon" segments (dbid:0000022456497E98 dbid:0000022456497EE8 dbid:0000022456497F38 dbid:0000022456497F88) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:0000022456497A78))
+HI_CSET_COPY domain=physical name="HI_JS_P066_2L" copyTemplate="HI2L_P_GROUND" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R027_2L" class1="HI2L_GROUND_P" class2=nil domain=physical cset="HI_JS_P066_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57638 assembly nil sameNet nil spacing nil physical "HI_JS_P066_2L" region dbid:000002245952B860 netclass2 nil netclass1 dbid:0000022456325568)
+HI_REGION_GEOMETRY (prop nil bBox ((37.99 19.99) (38.01 20.01)) readOnly t net nil objType "polygon" segments (dbid:000002245952BC80 dbid:000002245952BCD0 dbid:000002245952BD20 dbid:000002245952BD70) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:000002245952B860))
+HI_CSET_COPY domain=physical name="HI_JS_P067_2L" copyTemplate="HI2L_P_GROUND" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R028_2L" class1="HI2L_GROUND_P" class2=nil domain=physical cset="HI_JS_P067_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57650 assembly nil sameNet nil spacing nil physical "HI_JS_P067_2L" region dbid:000002245952D1A8 netclass2 nil netclass1 dbid:0000022456325568)
+HI_REGION_GEOMETRY (prop nil bBox ((38.79 19.69) (38.81 19.71)) readOnly t net nil objType "polygon" segments (dbid:000002245952D5C8 dbid:000002245952D618 dbid:000002245952D668 dbid:000002245952D6B8) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:000002245952D1A8))
+HI_CSET_COPY domain=physical name="HI_JS_P068_2L" copyTemplate="HI2L_P_GROUND" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R029_2L" class1="HI2L_GROUND_P" class2=nil domain=physical cset="HI_JS_P068_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57668 assembly nil sameNet nil spacing nil physical "HI_JS_P068_2L" region dbid:000002245952DF80 netclass2 nil netclass1 dbid:0000022456325568)
+HI_REGION_GEOMETRY (prop nil bBox ((38.79 19.69) (38.81 19.71)) readOnly t net nil objType "polygon" segments (dbid:000002245952E3A0 dbid:000002245952E3F0 dbid:000002245952E440 dbid:000002245952E490) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:000002245952DF80))
+HI_CSET_COPY domain=physical name="HI_JS_P069_2L" copyTemplate="HI2L_P_RESET_BOOT_SWD" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R030_2L" class1="HI2L_RESET_BOOT_SWD_P" class2=nil domain=physical cset="HI_JS_P069_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57680 assembly nil sameNet nil spacing nil physical "HI_JS_P069_2L" region dbid:000002245952ED58 netclass2 nil netclass1 dbid:000002245632C920)
+HI_REGION_GEOMETRY (prop nil bBox ((41.51 21.24) (41.53 21.26)) readOnly t net nil objType "polygon" segments (dbid:000002245952F178 dbid:000002245952F1C8 dbid:000002245952F218 dbid:000002245952F268) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:000002245952ED58))
+HI_CSET_COPY domain=physical name="HI_JS_P070_2L" copyTemplate="HI2L_P_GPIO" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R031_2L" class1="HI2L_GPIO_P" class2=nil domain=physical cset="HI_JS_P070_2L" table=(objType "classTable" readOnly t prop propList:0000022455C57698 assembly nil sameNet nil spacing nil physical "HI_JS_P070_2L" region dbid:000002245952FB30 netclass2 nil netclass1 dbid:0000022456330CB0)
+HI_REGION_GEOMETRY (prop nil bBox ((38.29 27.34) (38.31 27.36)) readOnly t net nil objType "polygon" segments (dbid:000002245952FF50 dbid:000002245952FFA0 dbid:000002245952FFF0 dbid:0000022459530040) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:000002245952FB30))
+HI_CSET_COPY domain=physical name="HI_JS_P071_2L" copyTemplate="HI2L_P_GPIO" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R032_2L" class1="HI2L_GPIO_P" class2=nil domain=physical cset="HI_JS_P071_2L" table=(objType "classTable" readOnly t prop propList:0000022455C576B0 assembly nil sameNet nil spacing nil physical "HI_JS_P071_2L" region dbid:0000022459533228 netclass2 nil netclass1 dbid:0000022456330CB0)
+HI_REGION_GEOMETRY (prop nil bBox ((37.99 26.39) (38.01 26.41)) readOnly t net nil objType "polygon" segments (dbid:0000022459533648 dbid:0000022459533698 dbid:00000224595336E8 dbid:0000022459533738) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:0000022459533228))
+HI_CSET_COPY domain=physical name="HI_JS_P072_2L" copyTemplate="HI2L_P_GPIO" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R033_2L" class1="HI2L_GPIO_P" class2=nil domain=physical cset="HI_JS_P072_2L" table=(objType "classTable" readOnly t prop propList:0000022455C576C8 assembly nil sameNet nil spacing nil physical "HI_JS_P072_2L" region dbid:0000022459536920 netclass2 nil netclass1 dbid:0000022456330CB0)
+HI_REGION_GEOMETRY (prop nil bBox ((33.69 25.29) (33.71 25.31)) readOnly t net nil objType "polygon" segments (dbid:0000022459536D40 dbid:0000022459536D90 dbid:0000022459536DE0 dbid:0000022459536E30) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:0000022459536920))
+HI_CSET_COPY domain=physical name="HI_JS_P073_2L" copyTemplate="HI2L_P_RESET_BOOT_SWD" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R034_2L" class1="HI2L_RESET_BOOT_SWD_P" class2=nil domain=physical cset="HI_JS_P073_2L" table=(objType "classTable" readOnly t prop propList:0000022455C576E0 assembly nil sameNet nil spacing nil physical "HI_JS_P073_2L" region dbid:00000224595376F8 netclass2 nil netclass1 dbid:000002245632C920)
+HI_REGION_GEOMETRY (prop nil bBox ((34.39 25.99) (34.41 26.01)) readOnly t net nil objType "polygon" segments (dbid:0000022459537B18 dbid:0000022459537B68 dbid:0000022459537BB8 dbid:0000022459537C08) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:00000224595376F8))
+HI_CSET_COPY domain=physical name="HI_JS_P074_2L" copyTemplate="HI2L_P_USB_AUX" changes=((vias "L28_VIA030_C060:HI_VIA026_C052_TENT"))
+HI_REGION_CLASS region="HI_JS_R035_2L" class1="HI2L_USB_AUX_P" class2=nil domain=physical cset="HI_JS_P074_2L" table=(objType "classTable" readOnly t prop propList:0000022455C576F8 assembly nil sameNet nil spacing nil physical "HI_JS_P074_2L" region dbid:000002245953A500 netclass2 nil netclass1 dbid:000002245632BA48)
+HI_REGION_GEOMETRY (prop nil bBox ((34.59 26.84) (34.61 26.86)) readOnly t net nil objType "polygon" segments (dbid:000002245953A920 dbid:000002245953A970 dbid:000002245953A9C0 dbid:000002245953AA10) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:000002245953A500))
+HI_EXISTING_SPACING_LAYER_FIELDS_BEFORE name="HI_USB_MCU_S_2_2L" allowedTriples=(("TOP" via_line "0.2 MM") ("BOTTOM" via_line "0.2 MM")) snapshots=(("BOTTOM" ((shape_shape 0.5) (bondpad_bondpad 0.16) (bondpad_shape 0.16) (bondpad_line 0.16) (hole_via 0.203) (hole_thrupin 0.203) (hole_hole 0.203) (hole_shape 0.203) (hole_line 0.203) (uvia_bondpad 0.16) (uvia_testvia 0.16) (uvia_uvia 0.16) (uvia_bbvia 0.16) (uvia_via 0.16) (uvia_testpin 0.16) (uvia_smdpin 0.16) (uvia_thrupin 0.16) (uvia_shape 0.16) (uvia_line 0.16) (bbvia_bondpad 0.16) (bbvia_testvia 0.16) (bbvia_bbvia 0.16) (bbvia_via 0.16) (bbvia_testpin 0.16) (bbvia_smdpin 0.16) (bbvia_thrupin 0.16) (bbvia_shape 0.16) (bbvia_line 0.16) (via_bondpad 0.16) (via_via 0.16) (via_shape 0.5) (via_line 0.5) (testvia_bondpad 0.16) (testvia_testvia 0.16) (testvia_via 0.16) (testvia_smdpin 0.16) (testvia_thrupin 0.16) (testvia_shape 0.16) (testvia_line 0.16) (testpin_bondpad 0.16) (testpin_testvia 0.16) (testpin_via 0.16) (testpin_testpin 0.16) (testpin_smdpin 0.16) (testpin_thrupin 0.16) (testpin_shape 0.16) (testpin_line 0.16) (smdpin_bondpad 0.16) (smdpin_via 0.16) (smdpin_smdpin 0.16) (smdpin_shape 0.16) (smdpin_line 0.2) (thrupin_bondpad 0.16) (thrupin_via 0.16) (thrupin_smdpin 0.16) (thrupin_thrupin 0.16) (thrupin_shape 0.16) (thrupin_line 0.16) (line_shape 0.5) (line_line 0.2))) ("TOP" ((bbvia_gap 0.127) (shape_shape 0.5) (bondpad_bondpad 0.16) (bondpad_shape 0.16) (bondpad_line 0.16) (hole_via 0.203) (hole_thrupin 0.203) (hole_hole 0.203) (hole_shape 0.203) (hole_line 0.203) (uvia_bondpad 0.16) (uvia_testvia 0.16) (uvia_uvia 0.16) (uvia_bbvia 0.16) (uvia_via 0.16) (uvia_testpin 0.16) (uvia_smdpin 0.16) (uvia_thrupin 0.16) (uvia_shape 0.16) (uvia_line 0.16) (bbvia_bondpad 0.16) (bbvia_testvia 0.16) (bbvia_bbvia 0.16) (bbvia_via 0.16) (bbvia_testpin 0.16) (bbvia_smdpin 0.16) (bbvia_thrupin 0.16) (bbvia_shape 0.16) (bbvia_line 0.16) (via_bondpad 0.16) (via_via 0.16) (via_shape 0.5) (via_line 0.5) (testvia_bondpad 0.16) (testvia_testvia 0.16) (testvia_via 0.16) (testvia_smdpin 0.16) (testvia_thrupin 0.16) (testvia_shape 0.16) (testvia_line 0.16) (testpin_bondpad 0.16) (testpin_testvia 0.16) (testpin_via 0.16) (testpin_testpin 0.16) (testpin_smdpin 0.16) (testpin_thrupin 0.16) (testpin_shape 0.16) (testpin_line 0.16) (smdpin_bondpad 0.16) (smdpin_via 0.16) (smdpin_smdpin 0.16) (smdpin_shape 0.16) (smdpin_line 0.2) (thrupin_bondpad 0.16) (thrupin_via 0.16) (thrupin_smdpin 0.16) (thrupin_thrupin 0.16) (thrupin_shape 0.16) (thrupin_line 0.16) (line_shape 0.5) (line_line 0.2))))
+HI_EXISTING_SPACING_LAYER_FIELDS_AFTER name="HI_USB_MCU_S_2_2L" layer="BOTTOM" allValues=((shape_shape 0.5) (bondpad_bondpad 0.16) (bondpad_shape 0.16) (bondpad_line 0.16) (hole_via 0.203) (hole_thrupin 0.203) (hole_hole 0.203) (hole_shape 0.203) (hole_line 0.203) (uvia_bondpad 0.16) (uvia_testvia 0.16) (uvia_uvia 0.16) (uvia_bbvia 0.16) (uvia_via 0.16) (uvia_testpin 0.16) (uvia_smdpin 0.16) (uvia_thrupin 0.16) (uvia_shape 0.16) (uvia_line 0.16) (bbvia_bondpad 0.16) (bbvia_testvia 0.16) (bbvia_bbvia 0.16) (bbvia_via 0.16) (bbvia_testpin 0.16) (bbvia_smdpin 0.16) (bbvia_thrupin 0.16) (bbvia_shape 0.16) (bbvia_line 0.16) (via_bondpad 0.16) (via_via 0.16) (via_shape 0.5) (via_line 0.2) (testvia_bondpad 0.16) (testvia_testvia 0.16) (testvia_via 0.16) (testvia_smdpin 0.16) (testvia_thrupin 0.16) (testvia_shape 0.16) (testvia_line 0.16) (testpin_bondpad 0.16) (testpin_testvia 0.16) (testpin_via 0.16) (testpin_testpin 0.16) (testpin_smdpin 0.16) (testpin_thrupin 0.16) (testpin_shape 0.16) (testpin_line 0.16) (smdpin_bondpad 0.16) (smdpin_via 0.16) (smdpin_smdpin 0.16) (smdpin_shape 0.16) (smdpin_line 0.2) (thrupin_bondpad 0.16) (thrupin_via 0.16) (thrupin_smdpin 0.16) (thrupin_thrupin 0.16) (thrupin_shape 0.16) (thrupin_line 0.16) (line_shape 0.5) (line_line 0.2))
+HI_EXISTING_SPACING_LAYER_FIELDS_AFTER name="HI_USB_MCU_S_2_2L" layer="TOP" allValues=((bbvia_gap 0.127) (shape_shape 0.5) (bondpad_bondpad 0.16) (bondpad_shape 0.16) (bondpad_line 0.16) (hole_via 0.203) (hole_thrupin 0.203) (hole_hole 0.203) (hole_shape 0.203) (hole_line 0.203) (uvia_bondpad 0.16) (uvia_testvia 0.16) (uvia_uvia 0.16) (uvia_bbvia 0.16) (uvia_via 0.16) (uvia_testpin 0.16) (uvia_smdpin 0.16) (uvia_thrupin 0.16) (uvia_shape 0.16) (uvia_line 0.16) (bbvia_bondpad 0.16) (bbvia_testvia 0.16) (bbvia_bbvia 0.16) (bbvia_via 0.16) (bbvia_testpin 0.16) (bbvia_smdpin 0.16) (bbvia_thrupin 0.16) (bbvia_shape 0.16) (bbvia_line 0.16) (via_bondpad 0.16) (via_via 0.16) (via_shape 0.5) (via_line 0.2) (testvia_bondpad 0.16) (testvia_testvia 0.16) (testvia_via 0.16) (testvia_smdpin 0.16) (testvia_thrupin 0.16) (testvia_shape 0.16) (testvia_line 0.16) (testpin_bondpad 0.16) (testpin_testvia 0.16) (testpin_via 0.16) (testpin_testpin 0.16) (testpin_smdpin 0.16) (testpin_thrupin 0.16) (testpin_shape 0.16) (testpin_line 0.16) (smdpin_bondpad 0.16) (smdpin_via 0.16) (smdpin_smdpin 0.16) (smdpin_shape 0.16) (smdpin_line 0.2) (thrupin_bondpad 0.16) (thrupin_via 0.16) (thrupin_smdpin 0.16) (thrupin_thrupin 0.16) (thrupin_shape 0.16) (thrupin_line 0.16) (line_shape 0.5) (line_line 0.2))
+HI_EXISTING_SPACING_LAYER_UPDATE_ONLY_DECLARED_TRIPLES_CHANGED name="HI_USB_MCU_S_2_2L" updates=(("TOP" via_line "0.2 MM") ("BOTTOM" via_line "0.2 MM"))
+HI_EXACT_RIPUP_ENTER
+HI_EXACT_RIPUP_EXTRACTED_COUNT=3484
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_VIA_[39, 26.2]"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_VIA_[39, 26.2]" type="deleteVia" originalNet="PA4_SPI_NSS" object=dbid:0000022456347DE0 originalDescriptor=("deleteVia" "NSS01_DEL_VIA_[39, 26.2]" "PA4_SPI_NSS" "" (39.0 26.2) "L28_VIA030_C060")
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_VIA_[32.2, 22]"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_VIA_[32.2, 22]" type="deleteVia" originalNet="PA4_SPI_NSS" object=dbid:0000022456347E70 originalDescriptor=("deleteVia" "NSS01_DEL_VIA_[32.2, 22]" "PA4_SPI_NSS" "" (32.2 22.0) "L28_VIA030_C060")
+HI_EXACT_RIPUP_MATCHING_ID="OLD_PC14"
+HI_EXACT_RIPUP_PREBOUND id="OLD_PC14" type="deleteVia" originalNet="GPIO_PC14" object=dbid:0000022456346440 originalDescriptor=("deleteVia" "OLD_PC14" "GPIO_PC14" "" (45.6 25.2) "L28_VIA030_C060")
+HI_EXACT_RIPUP_MATCHING_ID="OLD_PC14_GND"
+HI_EXACT_RIPUP_PREBOUND id="OLD_PC14_GND" type="deleteVia" originalNet="GND" object=dbid:0000022456346570 originalDescriptor=("deleteVia" "OLD_PC14_GND" "GND" "" (46.95 24.9) "L28_VIA030_C060")
+HI_EXACT_RIPUP_MATCHING_ID="OLD_HSE_ANCHOR"
+HI_EXACT_RIPUP_PREBOUND id="OLD_HSE_ANCHOR" type="deleteVia" originalNet="GND" object=dbid:000002245633B2E8 originalDescriptor=("deleteVia" "OLD_HSE_ANCHOR" "GND" "" (45.45 28.85) "L28_VIA030_C060")
+HI_EXACT_RIPUP_MATCHING_ID="OLD_C15_COMMON_GND"
+HI_EXACT_RIPUP_PREBOUND id="OLD_C15_COMMON_GND" type="deleteVia" originalNet="GND" object=dbid:0000022456322560 originalDescriptor=("deleteVia" "OLD_C15_COMMON_GND" "GND" "" (47.45 28.7252) "L28_VIA030_C060")
+HI_EXACT_RIPUP_MATCHING_ID="GPIO_NORTH_RIP_PC15_VERTICAL"
+HI_EXACT_RIPUP_PREBOUND id="GPIO_NORTH_RIP_PC15_VERTICAL" type="deleteSegment" originalNet="GPIO_PC15" object=dbid:0000022456346280 originalDescriptor=("deleteSegment" "GPIO_NORTH_RIP_PC15_VERTICAL" "GPIO_PC15" "BOTTOM" ((40.3 28.9) (40.3 30.3)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="GPIO_NORTH_RIP_PC15_WEST"
+HI_EXACT_RIPUP_PREBOUND id="GPIO_NORTH_RIP_PC15_WEST" type="deleteSegment" originalNet="GPIO_PC15" object=dbid:00000224563462D0 originalDescriptor=("deleteSegment" "GPIO_NORTH_RIP_PC15_WEST" "GPIO_PC15" "BOTTOM" ((40.3 30.3) (35.4 30.3)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="SOUTH_RIP_C14_GND_0"
+HI_EXACT_RIPUP_PREBOUND id="SOUTH_RIP_C14_GND_0" type="deleteSegment" originalNet="GND" object=dbid:0000022456321E80 originalDescriptor=("deleteSegment" "SOUTH_RIP_C14_GND_0" "GND" "TOP" ((42.25 22.75) (42.25 21.95)) 0.25)
+HI_EXACT_RIPUP_MATCHING_ID="SOUTH_RIP_C14_GND_1"
+HI_EXACT_RIPUP_PREBOUND id="SOUTH_RIP_C14_GND_1" type="deleteSegment" originalNet="GND" object=dbid:0000022456321ED0 originalDescriptor=("deleteSegment" "SOUTH_RIP_C14_GND_1" "GND" "TOP" ((42.25 21.95) (41.85 21.55)) 0.25)
+HI_EXACT_RIPUP_MATCHING_ID="SOUTH_RIP_C14_GND_2"
+HI_EXACT_RIPUP_PREBOUND id="SOUTH_RIP_C14_GND_2" type="deleteSegment" originalNet="GND" object=dbid:0000022456321F20 originalDescriptor=("deleteSegment" "SOUTH_RIP_C14_GND_2" "GND" "TOP" ((41.85 21.55) (42.3252 21.0748)) 0.6)
+HI_EXACT_RIPUP_MATCHING_ID="SOUTH_RIP_C14_GND_3"
+HI_EXACT_RIPUP_PREBOUND id="SOUTH_RIP_C14_GND_3" type="deleteSegment" originalNet="GND" object=dbid:0000022456321F70 originalDescriptor=("deleteSegment" "SOUTH_RIP_C14_GND_3" "GND" "TOP" ((42.3252 21.0748) (42.3252 20.3)) 0.6)
+HI_EXACT_RIPUP_MATCHING_ID="LEFT_RIP_0"
+HI_EXACT_RIPUP_PREBOUND id="LEFT_RIP_0" type="deleteSegment" originalNet="GND" object=dbid:0000022456321A80 originalDescriptor=("deleteSegment" "LEFT_RIP_0" "GND" "TOP" ((35.75 24.75) (34.95 24.75)) 0.25)
+HI_EXACT_RIPUP_MATCHING_ID="LEFT_RIP_1"
+HI_EXACT_RIPUP_PREBOUND id="LEFT_RIP_1" type="deleteSegment" originalNet="GND" object=dbid:0000022456321AD0 originalDescriptor=("deleteSegment" "LEFT_RIP_1" "GND" "TOP" ((34.95 24.75) (34.55 25.15)) 0.25)
+HI_EXACT_RIPUP_MATCHING_ID="LEFT_RIP_2"
+HI_EXACT_RIPUP_PREBOUND id="LEFT_RIP_2" type="deleteSegment" originalNet="GND" object=dbid:0000022456321B20 originalDescriptor=("deleteSegment" "LEFT_RIP_2" "GND" "TOP" ((34.55 25.15) (33.4 25.2748)) 0.6)
+HI_EXACT_RIPUP_MATCHING_ID="LEFT_RIP_3"
+HI_EXACT_RIPUP_PREBOUND id="LEFT_RIP_3" type="deleteSegment" originalNet="GND" object=dbid:0000022456321B70 originalDescriptor=("deleteSegment" "LEFT_RIP_3" "GND" "TOP" ((33.4 25.2748) (32.45 25.2748)) 0.6)
+HI_EXACT_RIPUP_MATCHING_ID="LEFT_RIP_4"
+HI_EXACT_RIPUP_PREBOUND id="LEFT_RIP_4" type="deleteSegment" originalNet="V3V3" object=dbid:0000022456321910 originalDescriptor=("deleteSegment" "LEFT_RIP_4" "V3V3" "TOP" ((35.75 24.25) (34.95 24.25)) 0.25)
+HI_EXACT_RIPUP_MATCHING_ID="LEFT_RIP_5"
+HI_EXACT_RIPUP_PREBOUND id="LEFT_RIP_5" type="deleteSegment" originalNet="V3V3" object=dbid:0000022456321960 originalDescriptor=("deleteSegment" "LEFT_RIP_5" "V3V3" "TOP" ((34.95 24.25) (34.55 23.85)) 0.25)
+HI_EXACT_RIPUP_MATCHING_ID="LEFT_RIP_6"
+HI_EXACT_RIPUP_PREBOUND id="LEFT_RIP_6" type="deleteSegment" originalNet="V3V3" object=dbid:00000224563219B0 originalDescriptor=("deleteSegment" "LEFT_RIP_6" "V3V3" "TOP" ((34.55 23.85) (33.4 23.7)) 0.6)
+HI_EXACT_RIPUP_MATCHING_ID="LEFT_RIP_7"
+HI_EXACT_RIPUP_PREBOUND id="LEFT_RIP_7" type="deleteSegment" originalNet="V3V3" object=dbid:0000022456344920 originalDescriptor=("deleteSegment" "LEFT_RIP_7" "V3V3" "TOP" ((33.3 22.5) (33.3 24.0)) 0.6)
+HI_EXACT_RIPUP_MATCHING_ID="LEFT_RIP_8"
+HI_EXACT_RIPUP_PREBOUND id="LEFT_RIP_8" type="deleteSegment" originalNet="V3V3" object=dbid:00000224563436C0 originalDescriptor=("deleteSegment" "LEFT_RIP_8" "V3V3" "TOP" ((33.3 24.0) (37.0 24.0)) 0.6)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_0"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_0" type="deleteSegment" originalNet="PA4_SPI_NSS" object=dbid:0000022456347CF0 originalDescriptor=("deleteSegment" "NSS01_DEL_0" "PA4_SPI_NSS" "TOP" ((35.75 29.25) (36.8 29.25)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_1"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_1" type="deleteSegment" originalNet="PA4_SPI_NSS" object=dbid:0000022456347D40 originalDescriptor=("deleteSegment" "NSS01_DEL_1" "PA4_SPI_NSS" "TOP" ((36.8 29.25) (39.0 27.05)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_2"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_2" type="deleteSegment" originalNet="PA4_SPI_NSS" object=dbid:0000022456347D90 originalDescriptor=("deleteSegment" "NSS01_DEL_2" "PA4_SPI_NSS" "TOP" ((39.0 27.05) (39.0 26.2)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_3"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_3" type="deleteSegment" originalNet="PA4_SPI_NSS" object=dbid:0000022456347F80 originalDescriptor=("deleteSegment" "NSS01_DEL_3" "PA4_SPI_NSS" "BOTTOM" ((39.0 26.2) (39.0 21.3)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_4"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_4" type="deleteSegment" originalNet="PA4_SPI_NSS" object=dbid:0000022456347FD0 originalDescriptor=("deleteSegment" "NSS01_DEL_4" "PA4_SPI_NSS" "BOTTOM" ((39.0 21.3) (32.2 21.3)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_5"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_5" type="deleteSegment" originalNet="PA4_SPI_NSS" object=dbid:0000022456348020 originalDescriptor=("deleteSegment" "NSS01_DEL_5" "PA4_SPI_NSS" "BOTTOM" ((32.2 21.3) (32.2 22.0)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_6"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_6" type="deleteSegment" originalNet="PA4_SPI_NSS" object=dbid:00000224563480F0 originalDescriptor=("deleteSegment" "NSS01_DEL_6" "PA4_SPI_NSS" "TOP" ((32.2 22.0) (32.0 21.0)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_9"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_9" type="deleteSegment" originalNet="PA4_SPI_NSS" object=dbid:0000022456347C20 originalDescriptor=("deleteSegment" "NSS01_DEL_9" "PA4_SPI_NSS" "TOP" ((32.93 33.02) (32.7984 33.02)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_10"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_10" type="deleteSegment" originalNet="PA4_SPI_NSS" object=dbid:0000022456347BD0 originalDescriptor=("deleteSegment" "NSS01_DEL_10" "PA4_SPI_NSS" "TOP" ((34.8 31.15) (32.93 33.02)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_13"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_13" type="deleteSegment" originalNet="PA5_SPI_SCK" object=dbid:0000022456348430 originalDescriptor=("deleteSegment" "NSS01_DEL_13" "PA5_SPI_SCK" "TOP" ((34.385 30.215) (33.6 31.0)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_15"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_15" type="deleteSegment" originalNet="ADC0" object=dbid:000002245633D238 originalDescriptor=("deleteSegment" "NSS01_DEL_15" "ADC0" "TOP" ((32.8 35.0) (32.6764 35.0)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_16"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_16" type="deleteSegment" originalNet="ADC0" object=dbid:000002245633D1E8 originalDescriptor=("deleteSegment" "NSS01_DEL_16" "ADC0" "TOP" ((34.8 33.0) (32.8 35.0)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_17"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_17" type="deleteSegment" originalNet="ADC_IN" object=dbid:000002245633D4E8 originalDescriptor=("deleteSegment" "NSS01_DEL_17" "ADC_IN" "TOP" ((29.8 34.0) (26.27 34.0)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_18"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_18" type="deleteSegment" originalNet="ADC_IN" object=dbid:000002245633D498 originalDescriptor=("deleteSegment" "NSS01_DEL_18" "ADC_IN" "TOP" ((30.8 35.0) (29.8 34.0)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_DEL_19"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_DEL_19" type="deleteSegment" originalNet="ADC_IN" object=dbid:000002245633D448 originalDescriptor=("deleteSegment" "NSS01_DEL_19" "ADC_IN" "TOP" ((31.1016 35.0) (30.8 35.0)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_2L_DEL_0"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_2L_DEL_0" type="deleteSegment" originalNet="SPI_SCK" object=dbid:000002245634AD68 originalDescriptor=("deleteSegment" "NSS01_2L_DEL_0" "SPI_SCK" "TOP" ((31.85 31.0) (30.8 29.95)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_2L_DEL_1"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_2L_DEL_1" type="deleteSegment" originalNet="SPI_SCK" object=dbid:000002245634AD18 originalDescriptor=("deleteSegment" "NSS01_2L_DEL_1" "SPI_SCK" "TOP" ((32.0252 31.0) (31.85 31.0)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_2L_DEL_3"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_2L_DEL_3" type="deleteSegment" originalNet="SPI_NSS" object=dbid:000002245634BF20 originalDescriptor=("deleteSegment" "NSS01_2L_DEL_3" "SPI_NSS" "TOP" ((30.16 33.02) (29.6 32.46)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="NSS01_2L_DEL_4"
+HI_EXACT_RIPUP_PREBOUND id="NSS01_2L_DEL_4" type="deleteSegment" originalNet="SPI_NSS" object=dbid:000002245634BED0 originalDescriptor=("deleteSegment" "NSS01_2L_DEL_4" "SPI_NSS" "TOP" ((31.2236 33.02) (30.16 33.02)) 0.2)
+HI_EXACT_RIPUP_MATCHING_ID="RIGHT_RIP_0"
+HI_EXACT_RIPUP_PREBOUND id="RIGHT_RIP_0" type="deleteSegment" originalNet="GND" object=dbid:00000224563222D0 originalDescriptor=("deleteSegment" "RIGHT_RIP_0" "GND" "TOP" ((45.05 29.25) (45.45 28.85)) 0.25)
+HI_EXACT_RIPUP_MATCHING_ID="RIGHT_RIP_1"
+HI_EXACT_RIPUP_PREBOUND id="RIGHT_RIP_1" type="deleteSegment" originalNet="GND" object=dbid:0000022456322280 originalDescriptor=("deleteSegment" "RIGHT_RIP_1" "GND" "TOP" ((44.25 29.25) (45.05 29.25)) 0.25)
+HI_EXACT_RIPUP_MATCHING_ID="RIGHT_RIP_2"
+HI_EXACT_RIPUP_PREBOUND id="RIGHT_RIP_2" type="deleteSegment" originalNet="GND" object=dbid:0000022456322320 originalDescriptor=("deleteSegment" "RIGHT_RIP_2" "GND" "TOP" ((45.45 28.85) (46.5 28.7252)) 0.6)
+HI_EXACT_RIPUP_MATCHING_ID="RIGHT_RIP_3"
+HI_EXACT_RIPUP_PREBOUND id="RIGHT_RIP_3" type="deleteSegment" originalNet="GND" object=dbid:0000022456322370 originalDescriptor=("deleteSegment" "RIGHT_RIP_3" "GND" "TOP" ((46.5 28.7252) (47.45 28.7252)) 0.6)
+HI_EXACT_RIPUP_MATCHING_ID="RIGHT_RIP_4"
+HI_EXACT_RIPUP_PREBOUND id="RIGHT_RIP_4" type="deleteSegment" originalNet="GND" object=dbid:0000022456322ED8 originalDescriptor=("deleteSegment" "RIGHT_RIP_4" "GND" "TOP" ((47.9428 28.7252) (47.45 28.7252)) 0.6)
+HI_EXACT_RIPUP_MATCHING_ID="RIGHT_RIP_5"
+HI_EXACT_RIPUP_PREBOUND id="RIGHT_RIP_5" type="deleteSegment" originalNet="GND" object=dbid:0000022456322E88 originalDescriptor=("deleteSegment" "RIGHT_RIP_5" "GND" "TOP" ((48.4 28.268) (47.9428 28.7252)) 0.6)
+HI_EXACT_RIPUP_MATCHING_ID="RIGHT_RIP_6"
+HI_EXACT_RIPUP_PREBOUND id="RIGHT_RIP_6" type="deleteSegment" originalNet="GND" object=dbid:0000022456322E38 originalDescriptor=("deleteSegment" "RIGHT_RIP_6" "GND" "TOP" ((49.5 28.268) (48.4 28.268)) 0.6)
+HI_EXACT_RIPUP_MATCHING_ID="RIGHT_RIP_7"
+HI_EXACT_RIPUP_PREBOUND id="RIGHT_RIP_7" type="deleteSegment" originalNet="V3V3" object=dbid:00000224563221B0 originalDescriptor=("deleteSegment" "RIGHT_RIP_7" "V3V3" "TOP" ((45.45 30.15) (46.5 30.3)) 0.6)
+HI_EXACT_RIPUP_MATCHING_ID="RIGHT_RIP_8"
+HI_EXACT_RIPUP_PREBOUND id="RIGHT_RIP_8" type="deleteSegment" originalNet="V3V3" object=dbid:0000022456322160 originalDescriptor=("deleteSegment" "RIGHT_RIP_8" "V3V3" "TOP" ((45.05 29.75) (45.45 30.15)) 0.25)
+HI_EXACT_RIPUP_MATCHING_ID="RIGHT_RIP_9"
+HI_EXACT_RIPUP_PREBOUND id="RIGHT_RIP_9" type="deleteSegment" originalNet="V3V3" object=dbid:0000022456322110 originalDescriptor=("deleteSegment" "RIGHT_RIP_9" "V3V3" "TOP" ((44.25 29.75) (45.05 29.75)) 0.25)
+HI_EXACT_RIPUP_MATCHING_ID="RIGHT_RIP_10"
+HI_EXACT_RIPUP_PREBOUND id="RIGHT_RIP_10" type="deleteSegment" originalNet="V3V3" object=dbid:0000022456322D68 originalDescriptor=("deleteSegment" "RIGHT_RIP_10" "V3V3" "TOP" ((49.5 30.3) (46.5 30.3)) 0.6)
+HI_EXACT_RIPUP_MATCHING_ID="RIGHT_RIP_11"
+HI_EXACT_RIPUP_PREBOUND id="RIGHT_RIP_11" type="deleteSegment" originalNet="GPIO_PC14" object=dbid:00000224563461B0 originalDescriptor=("deleteSegment" "RIGHT_RIP_11" "GPIO_PC14" "BOTTOM" ((43.6 25.2) (45.6 25.2)) 0.2)
+HI_EXACT_RIPUP_BATCH_START targets=52 manualLinesBefore=426 viasBefore=86 expectedOtherManualLines=380 expectedOtherVias=80
+HI_EXACT_NATIVE_LIST_DELETE_RETURNED
+HI_EXACT_NATIVE_LIST_DELETE_RETURNED
+HI_EXACT_NATIVE_LIST_DELETE_RETURNED
+HI_EXACT_RIPUP_BATCH_ACTUAL remainingManualLines=380 remainingVias=80 nonTargetManualLineGeometryNetWidthPreserved=t nonTargetViaIdentityPreserved=t
+HI_EXACT_RIPUP_BATCH_COMPLETE_NO_NON_TARGET_CHANGE targetCount=52
+HI_PLACEMENT "R16" before=((37.6016 21.0) 180.0 nil) actual=((45.5 19.9) 0.0 nil)
+HI_PLACEMENT "C13" before=((33.4 23.5984) 90.0 nil) actual=((34.0 22.4984) 90.0 nil)
+HI_PLACEMENT "R21" before=((33.7016 31.0) 180.0 nil) actual=((33.7016 30.7) 180.0 nil)
+HI_PLACEMENT "R23" before=((32.9 33.02) 180.0 nil) actual=((33.5 32.1) 180.0 nil)
+HI_PLACEMENT "R25" before=((33.6764 21.0) 180.0 nil) actual=((31.0 33.7) 0.0 nil)
+HI_PLACEMENT "R32" before=((31.0 35.0) 0.0 nil) actual=((31.0 35.5) 0.0 nil)
+HI_PLACEMENT "C15" before=((46.5 30.4016) 270.0 nil) actual=((47.3 30.4016) 270.0 nil)
+HI_PLACEMENT "R28" before=((48.6 26.1) 180.0 nil) actual=((53.0 28.0) 180.0 nil)
+HI_REPLACE_EXACT_SHAPE_OLD id="HI_HSE_QUIET_REPLACE" attrs=(prop nil priority nil autoObject nil autoKeepoutType nil dynamicGroup nil taper nil shapeAuto nil region nil bBox ((37.2 28.5) (47.5 39.4)) readOnly t voids nil objType "shape" segments (dbid:000002245633A1D8 dbid:000002245633A228 dbid:000002245633A278 dbid:000002245633A2C8 dbid:000002245633A318 dbid:000002245633A368 dbid:000002245633A3B8 dbid:000002245633A408 dbid:000002245633A458 dbid:000002245633A4A8 dbid:000002245633A4F8 dbid:000002245633A548 dbid:000002245633A598 dbid:000002245633A5E8 dbid:000002245633A638 dbid:000002245633A688) nSegs 16 fillet nil fill t connect (dbid:000002245633B108 dbid:000002245633B1F8) cavity nil branch dbid:000002245953DB88 parentGroups nil fillOOD nil isRect nil layer "ETCH/BOTTOM" symbolEtch nil parent dbid:000002245953DB88 isHole nil net dbid:000002245628FA08) polygon=((45.1 28.5) (45.8 28.5) (45.8 31.25) (45.1 31.95) (45.3 31.95) (45.3 33.2) (47.5 33.2) (47.5 39.4) (37.2 39.4) (37.2 36.8) (40.0 36.8) (40.0 32.8) (40.6 32.8) (40.6 31.95) (44.4 31.95) (45.1 31.25))
+HI_SHAPE id="HI_HSE_QUIET_REPLACE" net="GND" layer="BOTTOM" dynamic=nil requestedVoidCount=0 object=(prop nil priority nil autoObject nil autoKeepoutType nil dynamicGroup nil taper nil shapeAuto nil region nil bBox ((37.2 29.3) (47.5 39.4)) readOnly t voids nil net dbid:000002245628FA08 objType "shape" segments (dbid:000002245955DBC8 dbid:000002245955DC18 dbid:000002245955DC68 dbid:000002245955DCB8 dbid:000002245955DD08 dbid:000002245955DD58 dbid:000002245955DDA8 dbid:000002245955DDF8 dbid:000002245955DE48 dbid:000002245955DE98 dbid:000002245955DEE8 dbid:000002245955DF38 dbid:000002245955DF88 dbid:000002245955DFD8 dbid:000002245955E028) nSegs 15 fillet nil fill t connect (dbid:0000022456471770 dbid:000002245633B108 dbid:000002245633B1F8) cavity nil branch dbid:000002245633A120 fillOOD nil isRect nil layer "ETCH/BOTTOM" symbolEtch nil parent dbid:000002245633A120 isHole nil parentGroups nil)
+HI_REPLACE_EXACT_SHAPE_NEW id="HI_HSE_QUIET_REPLACE" attrs=(prop nil priority nil autoObject nil autoKeepoutType nil dynamicGroup nil taper nil shapeAuto nil region nil bBox ((37.2 29.3) (47.5 39.4)) readOnly t voids nil net dbid:000002245628FA08 objType "shape" segments (dbid:000002245955DBC8 dbid:000002245955DC18 dbid:000002245955DC68 dbid:000002245955DCB8 dbid:000002245955DD08 dbid:000002245955DD58 dbid:000002245955DDA8 dbid:000002245955DDF8 dbid:000002245955DE48 dbid:000002245955DE98 dbid:000002245955DEE8 dbid:000002245955DF38 dbid:000002245955DF88 dbid:000002245955DFD8 dbid:000002245955E028) nSegs 15 fillet nil fill t connect (dbid:0000022456471770 dbid:000002245633B108 dbid:000002245633B1F8) cavity nil branch dbid:000002245633A120 fillOOD nil isRect nil layer "ETCH/BOTTOM" symbolEtch nil parent dbid:000002245633A120 isHole nil parentGroups nil) polygon=((46.0 29.3) (46.7 29.3) (46.7 31.25) (46.2 31.75) (46.2 33.2) (47.5 33.2) (47.5 39.4) (37.2 39.4) (37.2 36.8) (40.0 36.8) (40.0 32.8) (40.6 32.8) (40.6 31.95) (45.3 31.95) (46.0 31.25))
+HI_REPLACE_PERMANENT_VOID_OLD id="HI_HSE_MOAT_REPLACE_BOTTOM" boundary=dbid:00000224563225F0 target=dbid:0000022456339C30 attrs=(prop nil bBox ((36.85 28.15) (47.85 39.75)) readOnly t net dbid:000002245628FA08 objType "polygon" segments (dbid:0000022456339C70 dbid:0000022456339CC0 dbid:0000022456339D10 dbid:0000022456339D60 dbid:0000022456339DB0 dbid:0000022456339E00 dbid:0000022456339E50 dbid:0000022456339EA0 dbid:0000022456339EF0 dbid:0000022456339F40 dbid:0000022456339F90 dbid:0000022456339FE0 dbid:000002245633A030 dbid:000002245633A080 dbid:000002245633A0D0) nSegs 15 isRect nil layer "BOUNDARY/BOTTOM" parent dbid:00000224563225F0 parentGroups nil) oldPolygon=((44.75 28.15) (46.15 28.15) (46.15 31.4) (45.65 31.9) (45.65 32.85) (47.85 32.85) (47.85 39.75) (36.85 39.75) (36.85 36.45) (39.65 36.45) (39.65 32.45) (40.25 32.45) (40.25 31.6) (44.25 31.6) (44.75 31.1))
+HI_PERMANENT_VOID shapeId="HI_HSE_MOAT_REPLACE_BOTTOM" polygon=((45.65 28.95) (45.65 31.10503) (45.15503 31.6) (40.25 31.6) (40.25 32.45) (39.65 32.45) (39.65 36.45) (36.85 36.45) (36.85 39.75) (47.85 39.75) (47.85 32.85) (46.55 32.85) (46.55 31.89497) (47.05 31.39497) (47.05 28.95)) void=(prop nil bBox ((36.85 28.95) (47.85 39.75)) readOnly t net dbid:000002245628FA08 objType "polygon" segments (dbid:0000022459580BF8 dbid:0000022459580C48 dbid:0000022459580C98 dbid:0000022459580CE8 dbid:0000022459580D38 dbid:0000022459580D88 dbid:0000022459580DD8 dbid:0000022459580E28 dbid:0000022459580E78 dbid:0000022459580EC8 dbid:0000022459580F18 dbid:0000022459580F68 dbid:0000022459580FB8 dbid:0000022459581008 dbid:0000022459581058) nSegs 15 isRect nil layer "BOUNDARY/BOTTOM" parent dbid:00000224563225F0 parentGroups nil) actual=(prop nil priority -3 autoObject nil autoKeepoutType nil dynamicGroup dbid:0000022456322900 taper nil shapeAuto (dbid:00000224595833E8) region nil bBox ((0.5 0.5) (79.5 59.5)) readOnly t voids (dbid:0000022459580BB8) net dbid:000002245628FA08 objType "shape" segments (dbid:0000022456322680 dbid:00000224563226D0 dbid:0000022456322720 dbid:0000022456322770 dbid:00000224563227C0 dbid:0000022456322810 dbid:0000022456322860 dbid:00000224563228B0) nSegs 8 fillet nil fill t connect nil cavity nil branch nil fillOOD nil shapeBoundary nil shapeIsBoundary t isRect nil layer "BOUNDARY/BOTTOM" symbolEtch nil parent nil isHole nil parentGroups nil)
+HI_REPLACE_PERMANENT_VOID_NEW id="HI_HSE_MOAT_REPLACE_BOTTOM" oldRemoved=t newUnique=t voidCount=1 newPolygon=((45.65 28.95) (45.65 31.10503) (45.15503 31.6) (40.25 31.6) (40.25 32.45) (39.65 32.45) (39.65 36.45) (36.85 36.45) (36.85 39.75) (47.85 39.75) (47.85 32.85) (46.55 32.85) (46.55 31.89497) (47.05 31.39497) (47.05 28.95))
+HI_DEFER_REFERENCE_FILL_REMOVE_EXACT_OLD_BOUNDARY id="HI_GPIO_TOP_PATCH_RECLIP_DEFER_NEW_FILL" original=(prop nil priority 0 autoObject nil autoKeepoutType nil dynamicGroup dbid:0000022456349208 taper nil shapeAuto (dbid:0000022459558C28 dbid:0000022459557AB0) region nil bBox ((39.2 24.6) (47.5 28.4)) readOnly t voids nil objType "shape" segments (dbid:0000022456348F88 dbid:0000022456348FD8 dbid:0000022456349028 dbid:0000022456349078 dbid:00000224563490C8 dbid:0000022456349118 dbid:0000022456349168 dbid:00000224563491B8) nSegs 8 fillet nil fill t connect nil cavity nil branch nil parentGroups nil fillOOD nil shapeBoundary nil shapeIsBoundary t isRect nil layer "BOUNDARY/TOP" symbolEtch nil parent nil isHole nil net dbid:000002245628FA08) polygon=((46.15 28.15) (44.75 28.15) (44.75 28.4) (39.2 28.4) (39.2 24.6) (47.5 24.6) (47.5 28.4) (46.15 28.4))
+HI_CONSTRUCTION_REFERENCE_DEFERRED_FINAL_RESTORE_REQUIRED id="HI_GPIO_TOP_PATCH_RECLIP_DEFER_NEW_FILL"
+LOCAL_ROUTE	GPIO_NORTH_PC15_DIRECT_WEST	"GPIO_PC15"	"ETCH/BOTTOM"	((40.3 28.9) (35.4 28.9))	(0.2)	((dbid:000002245959FE70) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="GPIO_NORTH_PC15_DIRECT_WEST" expected="GPIO_PC15" object=dbid:000002245959FE70 actualNet="GPIO_PC15" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	GPIO_PA1_INWARD_FANOUT	"GPIO_PA1"	"ETCH/TOP"	((37.75 31.25) (37.75 30.0) (37.5 29.75) (37.5 29.6))	(0.2 0.2 0.2)	((dbid:00000224595A06D8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="GPIO_PA1_INWARD_FANOUT" expected="GPIO_PA1" object=dbid:00000224595A06D8 actualNet="GPIO_PA1" layer="ETCH/TOP"
+HI_VIA id="GPIO_PA1_INWARD_VIA" net="GPIO_PA1" xy=(37.5 29.6) padstack="L28_VIA030_C060" result=(dbid:00000224595A3C38 nil)
+LOCAL_ROUTE	GPIO_PA2_INWARD_FANOUT	"GPIO_PA2"	"ETCH/TOP"	((37.25 31.25) (37.25 31.05) (36.6 30.4))	(0.2 0.2)	((dbid:00000224595A8FE0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="GPIO_PA2_INWARD_FANOUT" expected="GPIO_PA2" object=dbid:00000224595A8FE0 actualNet="GPIO_PA2" layer="ETCH/TOP"
+HI_VIA id="GPIO_PA2_INWARD_VIA" net="GPIO_PA2" xy=(36.6 30.4) padstack="L28_VIA030_C060" result=(dbid:00000224595ACE00 nil)
+LOCAL_ROUTE	GPIO_PA3_INWARD_FANOUT	"GPIO_PA3"	"ETCH/TOP"	((35.75 29.75) (35.75 31.1) (35.2 31.65))	(0.2 0.2)	((dbid:00000224595B3408) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="GPIO_PA3_INWARD_FANOUT" expected="GPIO_PA3" object=dbid:00000224595B3408 actualNet="GPIO_PA3" layer="ETCH/TOP"
+HI_VIA id="GPIO_PA3_INWARD_VIA" net="GPIO_PA3" xy=(35.2 31.65) padstack="L28_VIA030_C060" result=(dbid:00000224595B3E90 nil)
+HI_VIA id="GPIO_NORTH_COMMON_RETURN" net="GND" xy=(39.5 28.0) padstack="L28_VIA030_C060" result=(dbid:00000224595B7DB8 nil)
+LOCAL_ROUTE	SOUTH_SOURCE_25_NECK	"GPIO_PB12"	"ETCH/TOP"	((37.25 22.75) (37.25 22.1) (37.0 21.85) (37.0 21.25))	(0.16 0.16 0.16)	((dbid:00000224595BA190) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_SOURCE_25_NECK" expected="GPIO_PB12" object=dbid:00000224595BA190 actualNet="GPIO_PB12" layer="ETCH/TOP"
+HI_VIA id="SOUTH_SOURCE_25_VIA" net="GPIO_PB12" xy=(37.0 21.25) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595BA328 nil)
+LOCAL_ROUTE	SOUTH_SOURCE_26_NECK	"GPIO_PB13"	"ETCH/TOP"	((37.75 22.75) (37.75 22.1) (37.5 21.85) (37.5 20.75))	(0.16 0.16 0.16)	((dbid:00000224595BA890) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_SOURCE_26_NECK" expected="GPIO_PB13" object=dbid:00000224595BA890 actualNet="GPIO_PB13" layer="ETCH/TOP"
+HI_VIA id="SOUTH_SOURCE_26_VIA" net="GPIO_PB13" xy=(37.5 20.75) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595BAA28 nil)
+LOCAL_ROUTE	SOUTH_SOURCE_27_NECK	"GPIO_PB14"	"ETCH/TOP"	((38.25 22.75) (38.25 22.1) (38.0 21.85) (38.0 21.25))	(0.16 0.16 0.16)	((dbid:00000224595BB238) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_SOURCE_27_NECK" expected="GPIO_PB14" object=dbid:00000224595BB238 actualNet="GPIO_PB14" layer="ETCH/TOP"
+HI_VIA id="SOUTH_SOURCE_27_VIA" net="GPIO_PB14" xy=(38.0 21.25) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595BB3D0 nil)
+LOCAL_ROUTE	SOUTH_SOURCE_28_NECK	"GPIO_PB15"	"ETCH/TOP"	((38.75 22.75) (38.75 22.1) (38.5 21.85) (38.5 20.7))	(0.16 0.16 0.16)	((dbid:00000224595BBF98) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_SOURCE_28_NECK" expected="GPIO_PB15" object=dbid:00000224595BBF98 actualNet="GPIO_PB15" layer="ETCH/TOP"
+HI_VIA id="SOUTH_SOURCE_28_VIA" net="GPIO_PB15" xy=(38.5 20.7) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595BC130 nil)
+LOCAL_ROUTE	SOUTH_SOURCE_29_NECK	"USB_ATTACH_N"	"ETCH/TOP"	((39.25 22.75) (39.25 22.1) (39.0 21.85) (39.0 21.2))	(0.16 0.16 0.16)	((dbid:00000224595BD028) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_SOURCE_29_NECK" expected="USB_ATTACH_N" object=dbid:00000224595BD028 actualNet="USB_ATTACH_N" layer="ETCH/TOP"
+HI_VIA id="SOUTH_SOURCE_29_VIA" net="USB_ATTACH_N" xy=(39.0 21.2) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595BD1C0 nil)
+LOCAL_ROUTE	SOUTH_SOURCE_30_NECK	"PA9_UART_TX"	"ETCH/TOP"	((39.75 22.75) (39.75 21.75) (39.7 21.7))	(0.16 0.16)	((dbid:00000224595BE488) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_SOURCE_30_NECK" expected="PA9_UART_TX" object=dbid:00000224595BE488 actualNet="PA9_UART_TX" layer="ETCH/TOP"
+HI_VIA id="SOUTH_SOURCE_30_VIA" net="PA9_UART_TX" xy=(39.7 21.7) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595BE5D0 nil)
+LOCAL_ROUTE	SOUTH_SOURCE_31_NECK	"PA10_UART_RX"	"ETCH/TOP"	((40.25 22.75) (40.25 22.05) (40.22 22.02) (40.22 21.3) (40.0 21.08) (40.0 20.5))	(0.16 0.16 0.16 0.16 0.16)	((dbid:00000224595BFD48) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_SOURCE_31_NECK" expected="PA10_UART_RX" object=dbid:00000224595BFD48 actualNet="PA10_UART_RX" layer="ETCH/TOP"
+HI_VIA id="SOUTH_SOURCE_31_VIA" net="PA10_UART_RX" xy=(40.0 20.5) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595BFF80 nil)
+HI_VIA id="SOUTH_RETURN_WEST" net="GND" xy=(35.8 21.95) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595C1E98 nil)
+HI_VIA id="SOUTH_RETURN_MID" net="GND" xy=(38.0 20.0) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595C4210 nil)
+HI_VIA id="SOUTH_RETURN_EAST" net="GND" xy=(38.8 19.7) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595C6588 nil)
+LOCAL_ROUTE	SOUTH_SOURCE_34_NECK	"SWDIO"	"ETCH/TOP"	((41.75 22.75) (41.75 21.7) (41.52 21.47) (41.52 21.25))	(0.16 0.16 0.16)	((dbid:00000224595C8900) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_SOURCE_34_NECK" expected="SWDIO" object=dbid:00000224595C8900 actualNet="SWDIO" layer="ETCH/TOP"
+HI_VIA id="SOUTH_SOURCE_34_VIA" net="SWDIO" xy=(41.52 21.25) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595C8A98 nil)
+LOCAL_ROUTE	SOUTH_C14_GND_NECK	"GND"	"ETCH/TOP"	((42.25 22.75) (42.25 21.4) (42.28 21.37))	(0.25 0.25)	((dbid:00000224595CACF0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_C14_GND_NECK" expected="GND" object=dbid:00000224595CACF0 actualNet="GND" layer="ETCH/TOP"
+LOCAL_ROUTE	SOUTH_C14_GND_WIDE	"GND"	"ETCH/TOP"	((42.28 21.37) (42.3252 21.3248) (42.3252 20.3))	(0.6 0.6)	((dbid:00000224595CAE38) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_C14_GND_WIDE" expected="GND" object=dbid:00000224595CAE38 actualNet="GND" layer="ETCH/TOP"
+LOCAL_ROUTE	SOUTH_GPIO12_BOTTOM_NECK	"GPIO_PB12"	"ETCH/BOTTOM"	((37.0 21.25) (36.5 21.25))	(0.16)	((dbid:00000224595CD1E0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_GPIO12_BOTTOM_NECK" expected="GPIO_PB12" object=dbid:00000224595CD1E0 actualNet="GPIO_PB12" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	SOUTH_GPIO12_BOTTOM_EXIT	"GPIO_PB12"	"ETCH/BOTTOM"	((36.5 21.25) (35.0 21.25))	(0.2)	((dbid:00000224595CF5D8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_GPIO12_BOTTOM_EXIT" expected="GPIO_PB12" object=dbid:00000224595CF5D8 actualNet="GPIO_PB12" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	SOUTH_GPIO13_BOTTOM_NECK	"GPIO_PB13"	"ETCH/BOTTOM"	((37.5 20.75) (37.3 20.55) (37.3 19.7))	(0.16 0.16)	((dbid:00000224595D1D30) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_GPIO13_BOTTOM_NECK" expected="GPIO_PB13" object=dbid:00000224595D1D30 actualNet="GPIO_PB13" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	SOUTH_GPIO14_BOTTOM_NECK	"GPIO_PB14"	"ETCH/BOTTOM"	((38.0 21.25) (38.0 21.9))	(0.16)	((dbid:00000224595D47C8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_GPIO14_BOTTOM_NECK" expected="GPIO_PB14" object=dbid:00000224595D47C8 actualNet="GPIO_PB14" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	SOUTH_GPIO14_BOTTOM_EXIT	"GPIO_PB14"	"ETCH/BOTTOM"	((38.0 21.9) (38.0 22.7) (35.0 22.7))	(0.2 0.2)	((dbid:00000224595D7460) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_GPIO14_BOTTOM_EXIT" expected="GPIO_PB14" object=dbid:00000224595D7460 actualNet="GPIO_PB14" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	SOUTH_GPIO15_BOTTOM_NECK	"GPIO_PB15"	"ETCH/BOTTOM"	((38.5 20.7) (38.5 22.3))	(0.16)	((dbid:00000224595DA908) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="SOUTH_GPIO15_BOTTOM_NECK" expected="GPIO_PB15" object=dbid:00000224595DA908 actualNet="GPIO_PB15" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	LEFT_C13_VDD24_NECK	"V3V3"	"ETCH/TOP"	((35.75 24.25) (35.1 23.6) (35.1 23.2))	(0.25 0.25)	((dbid:00000224595DDB80) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="LEFT_C13_VDD24_NECK" expected="V3V3" object=dbid:00000224595DDB80 actualNet="V3V3" layer="ETCH/TOP"
+LOCAL_ROUTE	LEFT_C13_VDD24_WIDE	"V3V3"	"ETCH/TOP"	((35.1 23.2) (34.5 22.6) (34.0 22.6))	(0.6 0.6)	((dbid:00000224595DDCC8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="LEFT_C13_VDD24_WIDE" expected="V3V3" object=dbid:00000224595DDCC8 actualNet="V3V3" layer="ETCH/TOP"
+LOCAL_ROUTE	LEFT_C13_VSS23_NECK	"GND"	"ETCH/TOP"	((35.75 24.75) (34.7 24.75))	(0.25)	((dbid:00000224595DF170) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="LEFT_C13_VSS23_NECK" expected="GND" object=dbid:00000224595DF170 actualNet="GND" layer="ETCH/TOP"
+LOCAL_ROUTE	LEFT_C13_VSS23_WIDE	"GND"	"ETCH/TOP"	((34.7 24.75) (34.0 24.05) (34.0 24.1748))	(0.6 0.6)	((dbid:00000224595DF268) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="LEFT_C13_VSS23_WIDE" expected="GND" object=dbid:00000224595DF268 actualNet="GND" layer="ETCH/TOP"
+LOCAL_ROUTE	LEFT_C13_COMMON_RETURN	"GND"	"ETCH/TOP"	((34.0 24.1748) (33.55 24.1748) (32.45 25.2748))	(0.6 0.6)	((dbid:00000224595E1610) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="LEFT_C13_COMMON_RETURN" expected="GND" object=dbid:00000224595E1610 actualNet="GND" layer="ETCH/TOP"
+LOCAL_ROUTE	LEFT_V3_PERIPHERAL_REROUTE	"V3V3"	"ETCH/TOP"	((33.3 22.5) (34.8 22.5) (36.0 23.7) (37.0 24.0))	(0.6 0.6 0.6)	((dbid:00000224595E1758) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="LEFT_V3_PERIPHERAL_REROUTE" expected="V3V3" object=dbid:00000224595E1758 actualNet="V3V3" layer="ETCH/TOP"
+LOCAL_ROUTE	LEFT_SOURCE_19_NECK	"GPIO_PB1"	"ETCH/TOP"	((35.75 26.75) (37.4 26.75) (37.9 26.95) (38.3 27.35))	(0.16 0.16 0.16)	((dbid:00000224595E2D48) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="LEFT_SOURCE_19_NECK" expected="GPIO_PB1" object=dbid:00000224595E2D48 actualNet="GPIO_PB1" layer="ETCH/TOP"
+HI_VIA id="LEFT_SOURCE_19_VIA" net="GPIO_PB1" xy=(38.3 27.35) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595E6310 nil)
+LOCAL_ROUTE	LEFT_SOURCE_21_NECK	"GPIO_PB10"	"ETCH/TOP"	((35.75 25.75) (36.65 25.75) (37.3 26.4) (38.0 26.4))	(0.16 0.16 0.16)	((dbid:00000224595EF360) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="LEFT_SOURCE_21_NECK" expected="GPIO_PB10" object=dbid:00000224595EF360 actualNet="GPIO_PB10" layer="ETCH/TOP"
+HI_VIA id="LEFT_SOURCE_21_VIA" net="GPIO_PB10" xy=(38.0 26.4) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595EF4F8 nil)
+LOCAL_ROUTE	LEFT_SOURCE_22_NECK	"GPIO_PB11"	"ETCH/TOP"	((35.75 25.25) (35.0 25.25) (34.75 25.5) (33.7 25.5) (33.7 25.3))	(0.16 0.16 0.16 0.16)	((dbid:00000224595F45E8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="LEFT_SOURCE_22_NECK" expected="GPIO_PB11" object=dbid:00000224595F45E8 actualNet="GPIO_PB11" layer="ETCH/TOP"
+HI_VIA id="LEFT_SOURCE_22_VIA" net="GPIO_PB11" xy=(33.7 25.3) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595F47D0 nil)
+LOCAL_ROUTE	LEFT_BOOT1_SOURCE_NECK	"BOOT1"	"ETCH/TOP"	((35.75 26.25) (35.1 26.25) (34.85 26.0) (34.4 26.0))	(0.16 0.16 0.16)	((dbid:00000224595F4D38) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="LEFT_BOOT1_SOURCE_NECK" expected="BOOT1" object=dbid:00000224595F4D38 actualNet="BOOT1" layer="ETCH/TOP"
+HI_VIA id="LEFT_BOOT1_SOURCE_VIA" net="BOOT1" xy=(34.4 26.0) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595F4ED0 nil)
+LOCAL_ROUTE	LEFT07_VBUS18_SOURCE	"VBUS_PRESENT_N"	"ETCH/TOP"	((35.75 27.25) (35.0 27.25) (34.6 26.85))	(0.16 0.16)	((dbid:00000224595F89E8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="LEFT07_VBUS18_SOURCE" expected="VBUS_PRESENT_N" object=dbid:00000224595F89E8 actualNet="VBUS_PRESENT_N" layer="ETCH/TOP"
+HI_VIA id="LEFT07_VBUS18_VIA" net="VBUS_PRESENT_N" xy=(34.6 26.85) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224595F8B30 nil)
+LOCAL_ROUTE	NSS01_MAIN_SOURCE	"PA4_SPI_NSS"	"ETCH/TOP"	((34.8 31.15) (33.85 32.1) (33.3984 32.1))	(0.2 0.2)	((dbid:00000224595FD1A8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="NSS01_MAIN_SOURCE" expected="PA4_SPI_NSS" object=dbid:00000224595FD1A8 actualNet="PA4_SPI_NSS" layer="ETCH/TOP"
+LOCAL_ROUTE	NSS01_LOCAL_PULLUP_STUB	"PA4_SPI_NSS"	"ETCH/TOP"	((33.3984 32.1) (33.3984 32.9) (32.6764 33.622) (32.6764 33.7))	(0.2 0.2 0.2)	((dbid:00000224595FD430) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="NSS01_LOCAL_PULLUP_STUB" expected="PA4_SPI_NSS" object=dbid:00000224595FD430 actualNet="PA4_SPI_NSS" layer="ETCH/TOP"
+LOCAL_ROUTE	NSS01_SCK_SOURCE	"PA5_SPI_SCK"	"ETCH/TOP"	((34.385 30.215) (33.9 30.7) (33.6 30.7))	(0.2 0.2)	((dbid:00000224595FD708) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="NSS01_SCK_SOURCE" expected="PA5_SPI_SCK" object=dbid:00000224595FD708 actualNet="PA5_SPI_SCK" layer="ETCH/TOP"
+LOCAL_ROUTE	NSS01_ADC_SERIES_TO_LOCAL_CAP	"ADC0"	"ETCH/TOP"	((34.8 33.0) (34.5 33.0) (33.65 33.85) (33.65 35.5) (32.6764 35.5))	(0.2 0.2 0.2 0.2)	((dbid:00000224595FD8F0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="NSS01_ADC_SERIES_TO_LOCAL_CAP" expected="ADC0" object=dbid:00000224595FD8F0 actualNet="ADC0" layer="ETCH/TOP"
+LOCAL_ROUTE	NSS01_ADC_INPUT	"ADC_IN"	"ETCH/TOP"	((31.1016 35.5) (30.8 35.5) (29.3 34.0) (26.27 34.0))	(0.2 0.2 0.2)	((dbid:00000224595FDC18) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="NSS01_ADC_INPUT" expected="ADC_IN" object=dbid:00000224595FDC18 actualNet="ADC_IN" layer="ETCH/TOP"
+HI_VIA id="NSS01_R25_SUPPLY_VIA" net="V3V3" xy=(30.4 33.7) padstack="L28_VIA030_C060" result=(dbid:00000224595FDE50 nil)
+LOCAL_ROUTE	NSS01_R25_SUPPLY_BOTTOM	"V3V3"	"ETCH/BOTTOM"	((30.7 32.0) (31.0 32.3) (31.0 33.7) (30.4 33.7))	(0.6 0.6 0.6)	((dbid:0000022459602628) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="NSS01_R25_SUPPLY_BOTTOM" expected="V3V3" object=dbid:0000022459602628 actualNet="V3V3" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	NSS01_R25_SUPPLY_TOP	"V3V3"	"ETCH/TOP"	((30.4 33.7) (31.1016 33.7))	(0.6)	((dbid:0000022459608568) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="NSS01_R25_SUPPLY_TOP" expected="V3V3" object=dbid:0000022459608568 actualNet="V3V3" layer="ETCH/TOP"
+LOCAL_ROUTE	NSS01_2L_ADD_2	"SPI_SCK"	"ETCH/TOP"	((32.0252 30.7) (31.55 30.7) (30.8 29.95))	(0.2 0.2)	((dbid:00000224596099C0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="NSS01_2L_ADD_2" expected="SPI_SCK" object=dbid:00000224596099C0 actualNet="SPI_SCK" layer="ETCH/TOP"
+LOCAL_ROUTE	NSS01_2L_ADD_5	"SPI_NSS"	"ETCH/TOP"	((31.8236 32.1) (31.8236 32.2) (31.2236 32.8) (29.94 32.8) (29.6 32.46))	(0.2 0.2 0.2 0.2)	((dbid:0000022459609BA8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="NSS01_2L_ADD_5" expected="SPI_NSS" object=dbid:0000022459609BA8 actualNet="SPI_NSS" layer="ETCH/TOP"
+LOCAL_ROUTE	RIGHT_PC14_SOUTH_BYPASS	"GPIO_PC14"	"ETCH/BOTTOM"	((43.6 25.2) (44.2 24.6) (44.2 23.7) (49.2 23.7) (49.2 25.2))	(0.2 0.2 0.2 0.2)	((dbid:0000022459609E30) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_PC14_SOUTH_BYPASS" expected="GPIO_PC14" object=dbid:0000022459609E30 actualNet="GPIO_PC14" layer="ETCH/BOTTOM"
+HI_VIA id="RIGHT_PC14_FINAL" net="GPIO_PC14" xy=(49.2 25.2) padstack="L28_VIA030_C060" result=(dbid:000002245960B2D8 nil)
+HI_VIA id="RIGHT_PC14_RETURN" net="GND" xy=(48.2 25.0) padstack="L28_VIA030_C060" result=(dbid:000002245960C8A0 nil)
+LOCAL_ROUTE	RIGHT_VSS47_NECK	"GND"	"ETCH/TOP"	((44.25 29.25) (45.05 29.25) (45.3 29.5) (45.4 29.5))	(0.25 0.25 0.25)	((dbid:000002245960EC18) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_VSS47_NECK" expected="GND" object=dbid:000002245960EC18 actualNet="GND" layer="ETCH/TOP"
+LOCAL_ROUTE	RIGHT_VSS47_CAP_GROUND	"GND"	"ETCH/TOP"	((45.4 29.5) (45.7 29.5) (46.35 29.4) (47.0248 28.7252) (47.3 28.7252) (48.25 28.7252) (48.7072 28.268) (49.5 28.268))	(0.6 0.6 0.6 0.6 0.6 0.6 0.6)	((dbid:000002245960F060 dbid:000002245960EDB0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_VSS47_CAP_GROUND" expected="GND" object=dbid:000002245960F060 actualNet="GND" layer="ETCH/TOP"
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_VSS47_CAP_GROUND" expected="GND" object=dbid:000002245960EDB0 actualNet="GND" layer="ETCH/TOP"
+HI_VIA id="HSE_SINGLE_ANCHOR_REWORK" net="GND" xy=(46.35 29.4) padstack="L28_VIA030_C060" result=(dbid:0000022459611390 nil)
+HI_VIA id="RIGHT_C15_COMMON_GND" net="GND" xy=(48.25 28.7252) padstack="L28_VIA030_C060" result=(dbid:0000022459618F18 nil)
+LOCAL_ROUTE	RIGHT_VDD48_NECK	"V3V3"	"ETCH/TOP"	((44.25 29.75) (44.7 29.75) (45.3 30.35))	(0.25 0.25)	((dbid:000002245961D570) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_VDD48_NECK" expected="V3V3" object=dbid:000002245961D570 actualNet="V3V3" layer="ETCH/TOP"
+LOCAL_ROUTE	RIGHT_VDD48_CAP	"V3V3"	"ETCH/TOP"	((45.3 30.35) (47.3 30.3) (49.5 30.3))	(0.6 0.6)	((dbid:000002245961D7D8 dbid:000002245961D6B8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_VDD48_CAP" expected="V3V3" object=dbid:000002245961D7D8 actualNet="V3V3" layer="ETCH/TOP"
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_VDD48_CAP" expected="V3V3" object=dbid:000002245961D6B8 actualNet="V3V3" layer="ETCH/TOP"
+LOCAL_ROUTE	RIGHT_SWCLK_TOP	"SWCLK"	"ETCH/TOP"	((44.25 24.25) (45.0 24.25) (45.1 24.15) (46.2 24.15))	(0.16 0.16 0.16)	((dbid:000002245961EC08) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_SWCLK_TOP" expected="SWCLK" object=dbid:000002245961EC08 actualNet="SWCLK" layer="ETCH/TOP"
+LOCAL_ROUTE	RIGHT_GPIO_PA15_TOP	"GPIO_PA15"	"ETCH/TOP"	((44.25 24.75) (45.0 24.75) (45.1 24.65) (46.35 24.65) (46.8 24.65))	(0.16 0.16 0.16 0.2)	((dbid:000002245961EDA0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_GPIO_PA15_TOP" expected="GPIO_PA15" object=dbid:000002245961EDA0 actualNet="GPIO_PA15" layer="ETCH/TOP"
+HI_VIA id="RIGHT_SWO_VIA" net="SWO" xy=(46.2 25.15) padstack="HI_VIA026_C052_TENT" result=(dbid:000002245961EF88 nil)
+LOCAL_ROUTE	RIGHT_SWO_TOP	"SWO"	"ETCH/TOP"	((44.25 25.25) (45.0 25.25) (45.1 25.15) (46.2 25.15))	(0.16 0.16 0.16)	((dbid:0000022459620750) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_SWO_TOP" expected="SWO" object=dbid:0000022459620750 actualNet="SWO" layer="ETCH/TOP"
+LOCAL_ROUTE	RIGHT_SWO_BOTTOM_ANCHOR	"SWO"	"ETCH/BOTTOM"	((46.2 25.15) (46.8 25.15))	(0.2)	((dbid:0000022459620988) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_SWO_BOTTOM_ANCHOR" expected="SWO" object=dbid:0000022459620988 actualNet="SWO" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	RIGHT_GPIO_PB4_TOP	"GPIO_PB4"	"ETCH/TOP"	((44.25 25.75) (45.0 25.75) (45.1 25.65) (46.35 25.65) (46.8 25.65))	(0.16 0.16 0.16 0.2)	((dbid:00000224596210E0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_GPIO_PB4_TOP" expected="GPIO_PB4" object=dbid:00000224596210E0 actualNet="GPIO_PB4" layer="ETCH/TOP"
+HI_VIA id="RIGHT_GPIO_PB5_VIA" net="GPIO_PB5" xy=(46.2 26.15) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224596212C8 nil)
+LOCAL_ROUTE	RIGHT_GPIO_PB5_TOP	"GPIO_PB5"	"ETCH/TOP"	((44.25 26.25) (45.0 26.25) (45.1 26.15) (46.2 26.15))	(0.16 0.16 0.16)	((dbid:0000022459621FB8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_GPIO_PB5_TOP" expected="GPIO_PB5" object=dbid:0000022459621FB8 actualNet="GPIO_PB5" layer="ETCH/TOP"
+LOCAL_ROUTE	RIGHT_GPIO_PB5_BOTTOM_ANCHOR	"GPIO_PB5"	"ETCH/BOTTOM"	((46.2 26.15) (46.8 26.15))	(0.2)	((dbid:00000224596221F0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_GPIO_PB5_BOTTOM_ANCHOR" expected="GPIO_PB5" object=dbid:00000224596221F0 actualNet="GPIO_PB5" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	RIGHT_I2C_SCL_TOP	"I2C_SCL"	"ETCH/TOP"	((44.25 26.75) (45.0 26.75) (45.1 26.65) (46.35 26.65) (46.8 26.65))	(0.16 0.16 0.16 0.2)	((dbid:0000022459623308) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_I2C_SCL_TOP" expected="I2C_SCL" object=dbid:0000022459623308 actualNet="I2C_SCL" layer="ETCH/TOP"
+HI_VIA id="RIGHT_I2C_SDA_VIA" net="I2C_SDA" xy=(46.2 27.15) padstack="HI_VIA026_C052_TENT" result=(dbid:00000224596234F0 nil)
+LOCAL_ROUTE	RIGHT_I2C_SDA_TOP	"I2C_SDA"	"ETCH/TOP"	((44.25 27.25) (45.0 27.25) (45.1 27.15) (46.2 27.15))	(0.16 0.16 0.16)	((dbid:0000022459624B18) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_I2C_SDA_TOP" expected="I2C_SDA" object=dbid:0000022459624B18 actualNet="I2C_SDA" layer="ETCH/TOP"
+LOCAL_ROUTE	RIGHT_I2C_SDA_BOTTOM_ANCHOR	"I2C_SDA"	"ETCH/BOTTOM"	((46.2 27.15) (46.8 27.15))	(0.2)	((dbid:0000022459624DF0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_I2C_SDA_BOTTOM_ANCHOR" expected="I2C_SDA" object=dbid:0000022459624DF0 actualNet="I2C_SDA" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	RIGHT_BOOT0_TOP	"BOOT0"	"ETCH/TOP"	((44.25 27.75) (45.0 27.75) (45.1 27.65) (46.35 27.65) (46.8 27.65))	(0.16 0.16 0.16 0.2)	((dbid:00000224596266A8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_BOOT0_TOP" expected="BOOT0" object=dbid:00000224596266A8 actualNet="BOOT0" layer="ETCH/TOP"
+HI_VIA id="RIGHT_GPIO_PB8_VIA" net="GPIO_PB8" xy=(46.2 28.15) padstack="HI_VIA026_C052_TENT" result=(dbid:0000022459626890 nil)
+LOCAL_ROUTE	RIGHT_GPIO_PB8_TOP	"GPIO_PB8"	"ETCH/TOP"	((44.25 28.25) (45.0 28.25) (45.1 28.15) (46.2 28.15))	(0.16 0.16 0.16)	((dbid:000002245A60A878) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_GPIO_PB8_TOP" expected="GPIO_PB8" object=dbid:000002245A60A878 actualNet="GPIO_PB8" layer="ETCH/TOP"
+LOCAL_ROUTE	RIGHT_GPIO_PB8_BOTTOM_ANCHOR	"GPIO_PB8"	"ETCH/BOTTOM"	((46.2 28.15) (46.8 28.15))	(0.2)	((dbid:000002245A60AAB0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_GPIO_PB8_BOTTOM_ANCHOR" expected="GPIO_PB8" object=dbid:000002245A60AAB0 actualNet="GPIO_PB8" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	RIGHT_GPIO_PB9_TOP	"GPIO_PB9"	"ETCH/TOP"	((44.25 28.75) (45.0 28.75) (45.1 28.65) (45.7 28.65))	(0.16 0.16 0.16)	((dbid:000002245A60CB08) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_GPIO_PB9_TOP" expected="GPIO_PB9" object=dbid:000002245A60CB08 actualNet="GPIO_PB9" layer="ETCH/TOP"
+HI_VIA id="RIGHT_R28_GND_RETURN" net="GND" xy=(51.3 29.2) padstack="L28_VIA030_C060" result=(dbid:000002245A60CCA0 nil)
+LOCAL_ROUTE	RIGHT_R28_GND_TOP	"GND"	"ETCH/TOP"	((51.3236 28.0) (51.3 28.0236) (51.3 29.2))	(0.6 0.6)	((dbid:000002245A60F018) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_R28_GND_TOP" expected="GND" object=dbid:000002245A60F018 actualNet="GND" layer="ETCH/TOP"
+HI_VIA id="RIGHT_GPIO_PB9_VIA" net="GPIO_PB9" xy=(45.7 28.65) padstack="HI_VIA026_C052_TENT" result=(dbid:000002245A6113C0 nil)
+LOCAL_ROUTE	RIGHT_GPIO_PB9_BOTTOM_ANCHOR	"GPIO_PB9"	"ETCH/BOTTOM"	((45.7 28.65) (46.35 28.65) (46.8 28.65))	(0.16 0.2)	((dbid:000002245A616B00) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_GPIO_PB9_BOTTOM_ANCHOR" expected="GPIO_PB9" object=dbid:000002245A616B00 actualNet="GPIO_PB9" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	RIGHT_SCL_EXPLICIT	"I2C_SCL"	"ETCH/TOP"	((46.8 26.65) (47.0 26.45) (54.0 26.45) (55.5 27.95) (55.5 34.18) (57.7 34.18) (58.5 34.98) (58.5 35.0))	(0.2 0.2 0.2 0.2 0.2 0.2 0.2)	((dbid:000002245A61C068) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_SCL_EXPLICIT" expected="I2C_SCL" object=dbid:000002245A61C068 actualNet="I2C_SCL" layer="ETCH/TOP"
+LOCAL_ROUTE	RIGHT_SDA_EXPLICIT_BOTTOM	"I2C_SDA"	"ETCH/BOTTOM"	((46.8 27.15) (60.0 27.15) (60.0 36.0) (59.2 36.8))	(0.2 0.2 0.2)	((dbid:000002245A61C480) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_SDA_EXPLICIT_BOTTOM" expected="I2C_SDA" object=dbid:000002245A61C480 actualNet="I2C_SDA" layer="ETCH/BOTTOM"
+HI_VIA id="RIGHT_SDA_FAR_VIA" net="I2C_SDA" xy=(59.2 36.8) padstack="L28_VIA030_C060" result=(dbid:000002245A622018 nil)
+LOCAL_ROUTE	RIGHT_SDA_FAR_TOP	"I2C_SDA"	"ETCH/TOP"	((59.2 36.8) (59.0 37.0) (58.5 37.0))	(0.2 0.2)	((dbid:000002245A627C10) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_SDA_FAR_TOP" expected="I2C_SDA" object=dbid:000002245A627C10 actualNet="I2C_SDA" layer="ETCH/TOP"
+HI_BOOT_CONSTRUCTION_PHYSICAL_ANCHORS U1_44=(use "IN" objType "pin" bBox ((43.6 27.55) (44.9 27.95)) net dbid:0000022456290228 branch dbid:00000224562CEE30 isExploded nil isMech nil component dbid:000002245628A240 functionPins (dbid:00000224562CF940) prop nil readOnly t pads (pad:000002245A1671D8 pad:000002245A1671B0 pad:000002245A167188 pad:000002245A167160 pad:000002245A167138 pad:000002245A167110 pad:000002245A1670E8 pad:000002245A1670C0 pad:000002245A167098 pad:000002245A167070 pad:000002245A167048 pad:000002245A167020) parentGroups nil fixedByTestPoint t isThrough nil name "L09_QFP120X030_M05" testPoint nil xy (44.25 27.75) startEnd ("ETCH/TOP" "ETCH/TOP") rotation 0.0 relxy (-0.75 4.25) relRotation 90.0 parent dbid:000002245628CD20 number "44" mirrorType "NO" isMirrored nil definition dbid:000002245629A6F8) R28_1=(use "UNSPEC" objType "pin" bBox ((52.3524 27.5175) (53.4444 28.4825)) net dbid:0000022456290228 branch dbid:00000224562D2468 isExploded nil isMech nil component dbid:0000022456289C50 functionPins (dbid:00000224562D2568) prop nil readOnly t pads (pad:000002245A1673B8 pad:000002245A167390 pad:000002245A167368 pad:000002245A167340 pad:000002245A167318 pad:000002245A1672F0 pad:000002245A1672C8 pad:000002245A1672A0 pad:000002245A167278 pad:000002245A167250 pad:000002245A167228 pad:000002245A167200) parentGroups nil fixedByTestPoint t isThrough nil name "SMD_37X32RET" testPoint nil xy (52.8984 28.0) startEnd ("ETCH/TOP" "ETCH/TOP") rotation 180.0 relxy (0.1016 0.0) relRotation 0.0 parent dbid:000002245628DAB8 number "1" mirrorType "NO" isMirrored nil definition dbid:00000224562A1738) R28_2=(use "UNSPEC" objType "pin" bBox ((50.7776 27.5175) (51.8696 28.4825)) net dbid:000002245628FA08 branch dbid:000002245953DC50 isExploded nil isMech nil component dbid:0000022456289C50 functionPins (dbid:00000224562D2530) prop nil readOnly t pads (pad:000002245A167598 pad:000002245A167570 pad:000002245A167548 pad:000002245A167520 pad:000002245A1674F8 pad:000002245A1674D0 pad:000002245A1674A8 pad:000002245A167480 pad:000002245A167458 pad:000002245A167430 pad:000002245A167408 pad:000002245A1673E0) parentGroups nil fixedByTestPoint t isThrough nil name "SMD_37X32RET" testPoint nil xy (51.3236 28.0) startEnd ("ETCH/TOP" "ETCH/TOP") rotation 180.0 relxy (1.6764 0.0) relRotation 0.0 parent dbid:000002245628DAB8 number "2" mirrorType "NO" isMirrored nil definition dbid:00000224562A1738)
+HI_BOOT_REVERSE_CONSTRUCTION_SAME_GEOMETRY requestedPoints=((46.8 27.65) (47.27 27.18) (52.8984 27.18) (52.8984 28.0)) actualConstructionPoints=((52.8984 28.0) (52.8984 27.18) (47.27 27.18) (46.8 27.65)) fromPhysicalR28Pin=t
+HI_BOOT_PHYSICAL_NATIVE_NET_NAMES MCU="BOOT0" R28="BOOT0" targetLogicalNet=dbid:0000022456290228
+HI_BOOT_SINGLE_SEGMENT index=0 start=(52.8984 28.0) end=(52.8984 27.18) width=0.2
+LOCAL_ROUTE	RIGHT_BOOT_DIRECT_TOP_SEGMENT_0	"BOOT0"	"ETCH/TOP"	((52.8984 28.0) (52.8984 27.18))	(0.2)	((dbid:000002245A627E98) nil)
+HI_BOOT_SINGLE_SEGMENT index=1 start=(52.8984 27.18) end=(47.27 27.18) width=0.2
+HI_BOOT_FAILED_STAGE_PROVISIONAL_GEOMETRY_DUMP_COMPLETE_NOT_CHECKPOINT
+LOCAL_ROUTE	RIGHT_BOOT_DIRECT_TOP_SEGMENT_1	"BOOT0"	"ETCH/TOP"	((52.8984 27.18) (47.27 27.18))	(0.2)	((dbid:000002245A627F90) nil)
+HI_BOOT_SINGLE_SEGMENT index=2 start=(47.27 27.18) end=(46.8 27.65) width=0.2
+LOCAL_ROUTE	RIGHT_BOOT_DIRECT_TOP_SEGMENT_2	"BOOT0"	"ETCH/TOP"	((47.27 27.18) (46.8 27.65))	(0.2)	((dbid:000002245A6281C8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_BOOT_DIRECT_TOP" expected="BOOT0" object=dbid:removed actualNet=nil layer=nil
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_BOOT_DIRECT_TOP" expected="BOOT0" object=dbid:removed actualNet=nil layer=nil
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_BOOT_DIRECT_TOP" expected="BOOT0" object=dbid:000002245A6281C8 actualNet="BOOT0" layer="ETCH/TOP"
+LOCAL_ROUTE	RIGHT_BOOT_R28_J8	"BOOT0"	"ETCH/TOP"	((52.8984 28.0) (53.3 28.0) (54.0 28.7) (54.0 30.73))	(0.2 0.2 0.2)	((dbid:000002245A628400) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_BOOT_R28_J8" expected="BOOT0" object=dbid:000002245A628400 actualNet="BOOT0" layer="ETCH/TOP"
+LOCAL_ROUTE	RIGHT_PA15_DIRECT_EAST	"GPIO_PA15"	"ETCH/TOP"	((46.8 24.65) (47.2 24.25) (61.0 24.25))	(0.2 0.2)	((dbid:000002245A6286D8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_PA15_DIRECT_EAST" expected="GPIO_PA15" object=dbid:000002245A6286D8 actualNet="GPIO_PA15" layer="ETCH/TOP"
+HI_VIA id="RIGHT_PA15_FAR_VIA" net="GPIO_PA15" xy=(61.0 24.25) padstack="L28_VIA030_C060" result=(dbid:000002245A6288C0 nil)
+LOCAL_ROUTE	RIGHT_PB4_DIRECT_EAST	"GPIO_PB4"	"ETCH/TOP"	((46.8 25.65) (47.0 25.85) (61.8 25.85))	(0.2 0.2)	((dbid:000002245A628E28) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_PB4_DIRECT_EAST" expected="GPIO_PB4" object=dbid:000002245A628E28 actualNet="GPIO_PB4" layer="ETCH/TOP"
+HI_VIA id="RIGHT_PB4_FAR_VIA" net="GPIO_PB4" xy=(61.8 25.85) padstack="L28_VIA030_C060" result=(dbid:000002245A629010 nil)
+LOCAL_ROUTE	RIGHT_PB5_BOTTOM_EAST	"GPIO_PB5"	"ETCH/BOTTOM"	((46.8 26.15) (47.2 26.55) (56.5 26.55))	(0.2 0.2)	((dbid:000002245A62EF98) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_PB5_BOTTOM_EAST" expected="GPIO_PB5" object=dbid:000002245A62EF98 actualNet="GPIO_PB5" layer="ETCH/BOTTOM"
+HI_VIA id="RIGHT_PB5_MID_VIA" net="GPIO_PB5" xy=(56.5 26.55) padstack="L28_VIA030_C060" result=(dbid:000002245A634CA8 nil)
+LOCAL_ROUTE	RIGHT_PB5_TOP_EAST	"GPIO_PB5"	"ETCH/TOP"	((56.5 26.55) (62.6 26.55))	(0.2)	((dbid:000002245A63A9B0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_PB5_TOP_EAST" expected="GPIO_PB5" object=dbid:000002245A63A9B0 actualNet="GPIO_PB5" layer="ETCH/TOP"
+HI_VIA id="RIGHT_PB5_FAR_VIA" net="GPIO_PB5" xy=(62.6 26.55) padstack="L28_VIA030_C060" result=(dbid:000002245A63AAA8 nil)
+LOCAL_ROUTE	RIGHT_PB8_BOTTOM_EAST	"GPIO_PB8"	"ETCH/BOTTOM"	((46.8 28.15) (47.2 27.95) (59.0 27.95))	(0.2 0.2)	((dbid:000002245A63B4F0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_PB8_BOTTOM_EAST" expected="GPIO_PB8" object=dbid:000002245A63B4F0 actualNet="GPIO_PB8" layer="ETCH/BOTTOM"
+HI_VIA id="RIGHT_PB8_MID_VIA" net="GPIO_PB8" xy=(59.0 27.95) padstack="L28_VIA030_C060" result=(dbid:000002245A6412D0 nil)
+LOCAL_ROUTE	RIGHT_PB8_TOP_EAST	"GPIO_PB8"	"ETCH/TOP"	((59.0 27.95) (64.0 27.95))	(0.2)	((dbid:000002245A646F80) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_PB8_TOP_EAST" expected="GPIO_PB8" object=dbid:000002245A646F80 actualNet="GPIO_PB8" layer="ETCH/TOP"
+HI_VIA id="RIGHT_PB8_FAR_VIA" net="GPIO_PB8" xy=(64.0 27.95) padstack="L28_VIA030_C060" result=(dbid:000002245A647078 nil)
+LOCAL_ROUTE	RIGHT_PB9_BOTTOM_ESCAPE	"GPIO_PB9"	"ETCH/BOTTOM"	((46.8 28.65) (47.3 28.65) (47.5 28.85) (47.5 29.5) (49.8 31.8))	(0.2 0.2 0.2 0.2)	((dbid:000002245A647F40) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_PB9_BOTTOM_ESCAPE" expected="GPIO_PB9" object=dbid:000002245A647F40 actualNet="GPIO_PB9" layer="ETCH/BOTTOM"
+HI_VIA id="RIGHT_PB9_FAR_VIA" net="GPIO_PB9" xy=(49.8 31.8) padstack="L28_VIA030_C060" result=(dbid:000002245A64E108 nil)
+LOCAL_ROUTE	RIGHT_SWO_BOTTOM_ESCAPE	"SWO"	"ETCH/BOTTOM"	((46.8 25.15) (47.5 25.85) (50.7 25.85) (53.05 23.5) (54.0 23.5))	(0.2 0.2 0.2 0.2)	((dbid:000002245A6542E0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_SWO_BOTTOM_ESCAPE" expected="SWO" object=dbid:000002245A6542E0 actualNet="SWO" layer="ETCH/BOTTOM"
+HI_VIA id="RIGHT_SWO_FAR_VIA" net="SWO" xy=(54.0 23.5) padstack="L28_VIA030_C060" result=(dbid:000002245A65DBC8 nil)
+LOCAL_ROUTE	RIGHT_LONG_GPIO_PA15_0_R0	"GPIO_PA15"	"ETCH/BOTTOM"	((61.0 24.25) (61.0 54.73) (60.73 55.0))	(0.2 0.2)	((dbid:000002245A6655D0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_LONG_GPIO_PA15_0_R0" expected="GPIO_PA15" object=dbid:000002245A6655D0 actualNet="GPIO_PA15" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	RIGHT_LONG_GPIO_PB4_0_R0	"GPIO_PB4"	"ETCH/BOTTOM"	((61.8 25.85) (61.8 53.53) (63.27 55.0))	(0.2 0.2)	((dbid:000002245A666E10) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_LONG_GPIO_PB4_0_R0" expected="GPIO_PB4" object=dbid:000002245A666E10 actualNet="GPIO_PB4" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	RIGHT_LONG_GPIO_PB5_0_R0	"GPIO_PB5"	"ETCH/BOTTOM"	((62.6 26.55) (62.6 51.79) (65.81 55.0))	(0.2 0.2)	((dbid:000002245A668B60) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_LONG_GPIO_PB5_0_R0" expected="GPIO_PB5" object=dbid:000002245A668B60 actualNet="GPIO_PB5" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	RIGHT_LONG_GPIO_PB8_0_R0	"GPIO_PB8"	"ETCH/BOTTOM"	((64.0 27.95) (64.0 50.65) (68.35 55.0))	(0.2 0.2)	((dbid:000002245A66AFA0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_LONG_GPIO_PB8_0_R0" expected="GPIO_PB8" object=dbid:000002245A66AFA0 actualNet="GPIO_PB8" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	RIGHT_LONG_GPIO_PB9_0_R0	"GPIO_PB9"	"ETCH/TOP"	((49.8 31.8) (51.25 33.25) (51.25 42.45) (62.7 53.9) (69.79 53.9) (70.89 55.0))	(0.2 0.2 0.2 0.2 0.2)	((dbid:000002245A66BC88) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_LONG_GPIO_PB9_0_R0" expected="GPIO_PB9" object=dbid:000002245A66BC88 actualNet="GPIO_PB9" layer="ETCH/TOP"
+LOCAL_ROUTE	RIGHT_LONG_SWO_0_R0	"SWO"	"ETCH/TOP"	((54.0 23.5) (55.95 21.55) (62.15 21.55) (63.7 20.0))	(0.2 0.2 0.2)	((dbid:000002245A66BF60) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_LONG_SWO_0_R0" expected="SWO" object=dbid:000002245A66BF60 actualNet="SWO" layer="ETCH/TOP"
+HI_VIA id="RIGHT_RETURN_RIGHT_SDA_FAR_VIA" net="GND" xy=(59.374 37.785) padstack="L28_VIA030_C060" result=(dbid:000002245A66C198 nil)
+HI_VIA id="RIGHT_RETURN_RIGHT_PA15_FAR_VIA" net="GND" xy=(61.0 23.35) padstack="L28_VIA030_C060" result=(dbid:000002245A66E510 nil)
+HI_VIA id="RIGHT_RETURN_RIGHT_PB4_FAR_VIA" net="GND" xy=(61.8 24.95) padstack="L28_VIA030_C060" result=(dbid:000002245A670888 nil)
+HI_VIA id="RIGHT_RETURN_RIGHT_PB5_MID_VIA" net="GND" xy=(56.757 25.092) padstack="L28_VIA030_C060" result=(dbid:000002245A672C00 nil)
+HI_VIA id="RIGHT_RETURN_RIGHT_PB5_FAR_VIA" net="GND" xy=(62.6 25.65) padstack="L28_VIA030_C060" result=(dbid:000002245A674F78 nil)
+HI_VIA id="RIGHT_RETURN_RIGHT_PB8_MID_VIA" net="GND" xy=(58.55 28.729) padstack="L28_VIA030_C060" result=(dbid:000002245A6772F0 nil)
+HI_VIA id="RIGHT_RETURN_RIGHT_PB8_FAR_VIA" net="GND" xy=(63.55 27.171) padstack="L28_VIA030_C060" result=(dbid:000002245A679668 nil)
+HI_VIA id="RIGHT_RETURN_RIGHT_SWO_FAR_VIA" net="GND" xy=(53.844 22.614) padstack="L28_VIA030_C060" result=(dbid:000002245A67B9E0 nil)
+LOCAL_ROUTE	HI_2L_I2C_SCL_1_R1	"I2C_SCL"	"ETCH/TOP"	((58.5 35.0) (63.75 40.25) (74.0 40.25) (74.0 40.27))	(0.2 0.2 0.2)	((dbid:000002245A67DD58) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="HI_2L_I2C_SCL_1_R1" expected="I2C_SCL" object=dbid:000002245A67DD58 actualNet="I2C_SCL" layer="ETCH/TOP"
+LOCAL_ROUTE	HI_2L_I2C_SDA_1_R1	"I2C_SDA"	"ETCH/TOP"	((58.5 37.0) (59.8 37.0) (64.15 41.35) (74.95 41.35) (75.1 41.2) (75.1 38.85) (74.0 37.75) (74.0 37.73))	(0.2 0.2 0.2 0.2 0.2 0.2 0.2)	((dbid:000002245A67E400 dbid:000002245A67E030) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="HI_2L_I2C_SDA_1_R1" expected="I2C_SDA" object=dbid:000002245A67E400 actualNet="I2C_SDA" layer="ETCH/TOP"
+HI_CREATED_ROUTE_NATIVE_NET id="HI_2L_I2C_SDA_1_R1" expected="I2C_SDA" object=dbid:000002245A67E030 actualNet="I2C_SDA" layer="ETCH/TOP"
+LOCAL_ROUTE	RIGHT_SWCLK_TOP_WEST_BRIDGE	"SWCLK"	"ETCH/TOP"	((46.2 24.15) (47.95 22.4))	(0.2)	((dbid:000002245A67E610) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_SWCLK_TOP_WEST_BRIDGE" expected="SWCLK" object=dbid:000002245A67E610 actualNet="SWCLK" layer="ETCH/TOP"
+HI_VIA id="RIGHT_SWCLK_WEST_BRIDGE_V" net="SWCLK" xy=(47.95 22.4) padstack="L28_VIA030_C060" result=(dbid:000002245A67E7A8 nil)
+LOCAL_ROUTE	RIGHT_SWCLK_BOTTOM_BRIDGE	"SWCLK"	"ETCH/BOTTOM"	((47.95 22.4) (48.65 23.1) (51.0 23.1) (51.8 22.3) (51.8 21.2) (57.0 21.2) (57.4 20.8))	(0.2 0.2 0.2 0.2 0.2 0.2)	((dbid:000002245A686450) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_SWCLK_BOTTOM_BRIDGE" expected="SWCLK" object=dbid:000002245A686450 actualNet="SWCLK" layer="ETCH/BOTTOM"
+HI_VIA id="RIGHT_SWCLK_EAST_BRIDGE_V" net="SWCLK" xy=(57.4 20.8) padstack="L28_VIA030_C060" result=(dbid:000002245A68FE48 nil)
+LOCAL_ROUTE	RIGHT_SWCLK_TOP_EAST_BRIDGE	"SWCLK"	"ETCH/TOP"	((57.4 20.8) (57.82 20.8) (58.62 20.0))	(0.2 0.2)	((dbid:000002245A699EC0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="RIGHT_SWCLK_TOP_EAST_BRIDGE" expected="SWCLK" object=dbid:000002245A699EC0 actualNet="SWCLK" layer="ETCH/TOP"
+HI_VIA id="RIGHT_SWCLK_WEST_RETURN" net="GND" xy=(46.8 22.5) padstack="L28_VIA030_C060" result=(dbid:000002245A69A0A8 nil)
+HI_VIA id="RIGHT_SWCLK_EAST_RETURN" net="GND" xy=(57.35 19.31) padstack="L28_VIA030_C060" result=(dbid:000002245A69C420 nil)
+HI_VIA id="RIGHT_SWCLK_MID_RETURN" net="GND" xy=(52.8 22.8) padstack="L28_VIA030_C060" result=(dbid:000002245A69E798 nil)
+HI_VIA id="HI_2L_BOOT_SERVICE_1_V1" net="BOOT_SERVICE" xy=(57.4 33.4) padstack="L28_VIA030_C060" result=(dbid:000002245A6A0B10 nil)
+LOCAL_ROUTE	HI_2L_BOOT_SERVICE_1_R1	"BOOT_SERVICE"	"ETCH/TOP"	((56.7 32.6764) (56.7 32.7) (57.4 33.4))	(0.2 0.2)	((dbid:000002245A6A0FD8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="HI_2L_BOOT_SERVICE_1_R1" expected="BOOT_SERVICE" object=dbid:000002245A6A0FD8 actualNet="BOOT_SERVICE" layer="ETCH/TOP"
+LOCAL_ROUTE	HI_2L_BOOT_SERVICE_1_R2	"BOOT_SERVICE"	"ETCH/BOTTOM"	((57.4 33.4) (54.15 33.4) (54.0 33.25) (54.0 33.27))	(0.2 0.2 0.2)	((dbid:000002245A6A11C0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="HI_2L_BOOT_SERVICE_1_R2" expected="BOOT_SERVICE" object=dbid:000002245A6A11C0 actualNet="BOOT_SERVICE" layer="ETCH/BOTTOM"
+HI_VIA id="HI_2L_BOOT1_1_V2" net="BOOT1" xy=(32.35 23.85) padstack="L28_VIA030_C060" result=(dbid:000002245A6A21B8 nil)
+LOCAL_ROUTE	HI_2L_BOOT1_1_R3	"BOOT1"	"ETCH/TOP"	((32.35 23.85) (32.25 23.85) (31.4 23.0))	(0.2 0.2)	((dbid:000002245A6A6ED0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="HI_2L_BOOT1_1_R3" expected="BOOT1" object=dbid:000002245A6A6ED0 actualNet="BOOT1" layer="ETCH/TOP"
+HI_VIA id="HI_2L_CAN_TXD_1_V1" net="CAN_TXD" xy=(47.7 18.3) padstack="L28_VIA030_C060" result=(dbid:000002245A6A70B8 nil)
+HI_VIA id="HI_2L_CAN_TXD_1_V2" net="CAN_TXD" xy=(50.25 18.3) padstack="L28_VIA030_C060" result=(dbid:000002245A6A7580 nil)
+LOCAL_ROUTE	HI_2L_CAN_TXD_1_R1	"CAN_TXD"	"ETCH/TOP"	((44.4764 18.3) (47.7 18.3))	(0.2)	((dbid:000002245A6B23A8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="HI_2L_CAN_TXD_1_R1" expected="CAN_TXD" object=dbid:000002245A6B23A8 actualNet="CAN_TXD" layer="ETCH/TOP"
+LOCAL_ROUTE	HI_2L_CAN_TXD_1_R2	"CAN_TXD"	"ETCH/BOTTOM"	((47.7 18.3) (50.25 18.3))	(0.2)	((dbid:000002245A6B25E0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="HI_2L_CAN_TXD_1_R2" expected="CAN_TXD" object=dbid:000002245A6B25E0 actualNet="CAN_TXD" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	HI_2L_CAN_TXD_1_R3	"CAN_TXD"	"ETCH/TOP"	((50.25 18.3) (57.5 18.3) (57.95 18.75) (61.15 18.75) (62.0 17.9) (61.9764 17.9))	(0.2 0.2 0.2 0.2 0.2)	((dbid:000002245A6B3010) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="HI_2L_CAN_TXD_1_R3" expected="CAN_TXD" object=dbid:000002245A6B3010 actualNet="CAN_TXD" layer="ETCH/TOP"
+LOCAL_ROUTE	LEFT_BOOT1_BOTTOM_RESHAPE	"BOOT1"	"ETCH/BOTTOM"	((34.4 26.0) (35.6 24.8) (35.6 23.85) (32.35 23.85))	(0.2 0.2 0.2)	((dbid:000002245A6B3388) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="LEFT_BOOT1_BOTTOM_RESHAPE" expected="BOOT1" object=dbid:000002245A6B3388 actualNet="BOOT1" layer="ETCH/BOTTOM"
+LOCAL_ROUTE	ROOT_SWDIO_BOTTOM	"SWDIO"	"ETCH/BOTTOM"	((41.52 21.25) (41.52 21.72) (42.0 22.2) (44.15 22.2) (44.4 21.95))	(0.2 0.2 0.2 0.2)	((dbid:000002245A6B86A0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="ROOT_SWDIO_BOTTOM" expected="SWDIO" object=dbid:000002245A6B86A0 actualNet="SWDIO" layer="ETCH/BOTTOM"
+HI_VIA id="ROOT_SWDIO_EAST_V" net="SWDIO" xy=(44.4 21.95) padstack="L28_VIA030_C060" result=(dbid:000002245A6B9440 nil)
+LOCAL_ROUTE	ROOT_SWDIO_TOP	"SWDIO"	"ETCH/TOP"	((44.4 21.95) (44.6 21.75) (54.33 21.75) (56.08 20.0))	(0.2 0.2 0.2)	((dbid:000002245A6C4138) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="ROOT_SWDIO_TOP" expected="SWDIO" object=dbid:000002245A6C4138 actualNet="SWDIO" layer="ETCH/TOP"
+LOCAL_ROUTE	ROOT_UART_RX_BOTTOM	"PA10_UART_RX"	"ETCH/BOTTOM"	((40.0 20.5) (40.0 20.3) (48.4 20.3) (50.1 22.0) (50.1 22.4))	(0.2 0.2 0.2 0.2)	((dbid:000002245A6C4370) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="ROOT_UART_RX_BOTTOM" expected="PA10_UART_RX" object=dbid:000002245A6C4370 actualNet="PA10_UART_RX" layer="ETCH/BOTTOM"
+HI_VIA id="ROOT_UART_RX_EAST_V" net="PA10_UART_RX" xy=(50.1 22.4) padstack="L28_VIA030_C060" result=(dbid:000002245A6D4FC0 nil)
+LOCAL_ROUTE	ROOT_UART_RX_TOP	"PA10_UART_RX"	"ETCH/TOP"	((50.1 22.4) (50.1 23.4984) (50.1016 23.5))	(0.2 0.2)	((dbid:000002245A6E3DB8) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="ROOT_UART_RX_TOP" expected="PA10_UART_RX" object=dbid:000002245A6E3DB8 actualNet="PA10_UART_RX" layer="ETCH/TOP"
+LOCAL_ROUTE	ROOT_UART_TX_BOTTOM	"PA9_UART_TX"	"ETCH/BOTTOM"	((39.7 21.7) (40.4 21.7) (40.8 21.3) (40.8 20.85) (40.95 20.7) (41.85 20.7) (41.95 20.8) (46.0 20.8) (46.3 21.1))	(0.2 0.2 0.2 0.2 0.16 0.2 0.2 0.2)	((dbid:000002245A6E3FA0) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="ROOT_UART_TX_BOTTOM" expected="PA9_UART_TX" object=dbid:000002245A6E3FA0 actualNet="PA9_UART_TX" layer="ETCH/BOTTOM"
+HI_VIA id="ROOT_UART_TX_EAST_V" net="PA9_UART_TX" xy=(46.3 21.1) padstack="L28_VIA030_C060" result=(dbid:000002245A6F2B88 nil)
+LOCAL_ROUTE	ROOT_UART_TX_TOP	"PA9_UART_TX"	"ETCH/TOP"	((46.3 21.1) (45.6016 20.4016) (45.6016 19.9))	(0.2 0.2)	((dbid:000002245A701640) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="ROOT_UART_TX_TOP" expected="PA9_UART_TX" object=dbid:000002245A701640 actualNet="PA9_UART_TX" layer="ETCH/TOP"
+LOCAL_ROUTE	ROOT_ATTACH_BOTTOM	"USB_ATTACH_N"	"ETCH/BOTTOM"	((39.0 21.2) (39.1 21.1) (39.1 20.4) (39.7 19.8) (39.7 18.6) (43.6 18.6) (45.9 16.3) (50.8 16.3))	(0.2 0.2 0.2 0.2 0.2 0.2 0.2)	((dbid:000002245A701828) nil)
+HI_CREATED_ROUTE_NATIVE_NET id="ROOT_ATTACH_BOTTOM" expected="USB_ATTACH_N" object=dbid:000002245A701828 actualNet="USB_ATTACH_N" layer="ETCH/BOTTOM"
+HI_VIA id="ROOT_SWDIO_RETURN_COMMON" net="GND" xy=(45.3 22.55) padstack="L28_VIA030_C060" result=(dbid:000002245B6F20E8 nil)
+HI_SHAPE id="HI_GPIO_TOP_PATCH_RECLIP_RESTORE_AFTER_NEW_SIGNAL_COPPER" net="GND" layer="TOP" dynamic=t requestedVoidCount=0 object=(prop nil priority 1 autoObject nil autoKeepoutType nil dynamicGroup dbid:000002245B6F6C08 taper nil shapeAuto (dbid:000002245B6FA808) region nil bBox ((39.2 24.6) (47.5 28.4)) readOnly t voids nil net dbid:000002245628FA08 objType "shape" segments (dbid:000002245B6F6AC8 dbid:000002245B6F6B18 dbid:000002245B6F6B68 dbid:000002245B6F6BB8) nSegs 4 fillet nil fill t connect nil cavity nil branch nil fillOOD nil shapeBoundary nil shapeIsBoundary t isRect nil layer "BOUNDARY/TOP" symbolEtch nil parent nil isHole nil parentGroups nil)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="SH4" net="GND" padstack="L10_USB4105_SLOT060X140" actualXY=(44.32 2.6)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="SH3" net="GND" padstack="L10_USB4105_SLOT060X140" actualXY=(35.68 2.6)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="SH2" net="GND" padstack="L10_USB4105_SLOT060X170" actualXY=(44.32 6.78)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="SH1" net="GND" padstack="L10_USB4105_SLOT060X170" actualXY=(35.68 6.78)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="B1_A12" net="GND" padstack="L10_USB4105_SMD060X115" actualXY=(43.2 7.355)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="B4_A9" net="USB_VBUS" padstack="L10_USB4105_SMD060X115" actualXY=(42.4 7.355)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="B5" net="USB_CC2" padstack="L10_USB4105_SMD030X115" actualXY=(41.75 7.355)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="A8" net=nil padstack="L10_USB4105_SMD030X115" actualXY=(41.25 7.355)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="B6" net="USB_DP" padstack="L10_USB4105_SMD030X115" actualXY=(40.75 7.355)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="A7" net="USB_DM" padstack="L10_USB4105_SMD030X115" actualXY=(40.25 7.355)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="A6" net="USB_DP" padstack="L10_USB4105_SMD030X115" actualXY=(39.75 7.355)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="B7" net="USB_DM" padstack="L10_USB4105_SMD030X115" actualXY=(39.25 7.355)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="A5" net="USB_CC1" padstack="L10_USB4105_SMD030X115" actualXY=(38.75 7.355)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="B8" net=nil padstack="L10_USB4105_SMD030X115" actualXY=(38.25 7.355)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="A4_B9" net="USB_VBUS" padstack="L10_USB4105_SMD060X115" actualXY=(37.6 7.355)
+PHYSICAL_PIN_CONTRACT ref="J2" pin="A1_B12" net="GND" padstack="L10_USB4105_SMD060X115" actualXY=(36.8 7.355)
+PHYSICAL_PIN_CONTRACT ref="J3" pin="3" net="GND" padstack="VIA_1D0_1D54" actualXY=(74.0 9.46)
+PHYSICAL_PIN_CONTRACT ref="J3" pin="2" net="CAN_L" padstack="VIA_1D0_1D54" actualXY=(74.0 12.0)
+PHYSICAL_PIN_CONTRACT ref="J3" pin="1" net="CAN_H" padstack="VIA_1D0_1D54S" actualXY=(74.0 14.54)
+PHYSICAL_PIN_CONTRACT ref="J4" pin="4" net="GND" padstack="VIA_1D0_1D54" actualXY=(74.0 21.19)
+PHYSICAL_PIN_CONTRACT ref="J4" pin="3" net="UART_RX" padstack="VIA_1D0_1D54" actualXY=(74.0 23.73)
+PHYSICAL_PIN_CONTRACT ref="J4" pin="2" net="UART_TX" padstack="VIA_1D0_1D54" actualXY=(74.0 26.27)
+PHYSICAL_PIN_CONTRACT ref="J4" pin="1" net="V3V3" padstack="VIA_1D0_1D54S" actualXY=(74.0 28.81)
+PHYSICAL_PIN_CONTRACT ref="J5" pin="4" net="GND" padstack="VIA_1D0_1D54" actualXY=(74.0 35.19)
+PHYSICAL_PIN_CONTRACT ref="J5" pin="3" net="I2C_SDA" padstack="VIA_1D0_1D54" actualXY=(74.0 37.73)
+PHYSICAL_PIN_CONTRACT ref="J5" pin="2" net="I2C_SCL" padstack="VIA_1D0_1D54" actualXY=(74.0 40.27)
+PHYSICAL_PIN_CONTRACT ref="J5" pin="1" net="V3V3" padstack="VIA_1D0_1D54S" actualXY=(74.0 42.81)
+PHYSICAL_PIN_CONTRACT ref="J6" pin="6" net="GND" padstack="VIAS_30_CIRCLE" actualXY=(7.0 38.7)
+PHYSICAL_PIN_CONTRACT ref="J6" pin="5" net="SPI_NSS" padstack="VIAS_30_CIRCLE" actualXY=(7.0 36.16)
+PHYSICAL_PIN_CONTRACT ref="J6" pin="4" net="SPI_MISO" padstack="VIAS_30_CIRCLE" actualXY=(7.0 33.62)
+PHYSICAL_PIN_CONTRACT ref="J6" pin="3" net="SPI_MOSI" padstack="VIAS_30_CIRCLE" actualXY=(7.0 31.08)
+PHYSICAL_PIN_CONTRACT ref="J6" pin="2" net="SPI_SCK" padstack="VIAS_30_CIRCLE" actualXY=(7.0 28.54)
+PHYSICAL_PIN_CONTRACT ref="J6" pin="1" net="V3V3" padstack="VIAS_30_SQUARE" actualXY=(7.0 26.0)
+PHYSICAL_PIN_CONTRACT ref="J9" pin="6" net="SWO" padstack="VIAS_30_CIRCLE" actualXY=(63.7 20.0)
+PHYSICAL_PIN_CONTRACT ref="J9" pin="5" net="NRST" padstack="VIAS_30_CIRCLE" actualXY=(61.16 20.0)
+PHYSICAL_PIN_CONTRACT ref="J9" pin="4" net="SWCLK" padstack="VIAS_30_CIRCLE" actualXY=(58.62 20.0)
+PHYSICAL_PIN_CONTRACT ref="J9" pin="3" net="SWDIO" padstack="VIAS_30_CIRCLE" actualXY=(56.08 20.0)
+PHYSICAL_PIN_CONTRACT ref="J9" pin="2" net="GND" padstack="VIAS_30_CIRCLE" actualXY=(53.54 20.0)
+PHYSICAL_PIN_CONTRACT ref="J9" pin="1" net="V3V3" padstack="VIAS_30_SQUARE" actualXY=(51.0 20.0)
+PHYSICAL_PIN_CONTRACT ref="J11" pin="8" net="GPIO_PA3" padstack="VIA_1D0_1D54" actualXY=(26.89 55.0)
+PHYSICAL_PIN_CONTRACT ref="J11" pin="7" net="GPIO_PA2" padstack="VIA_1D0_1D54" actualXY=(24.35 55.0)
+PHYSICAL_PIN_CONTRACT ref="J11" pin="6" net="GPIO_PA1" padstack="VIA_1D0_1D54" actualXY=(21.81 55.0)
+PHYSICAL_PIN_CONTRACT ref="J11" pin="5" net="GPIO_PC15" padstack="VIA_1D0_1D54" actualXY=(19.27 55.0)
+PHYSICAL_PIN_CONTRACT ref="J11" pin="4" net="GPIO_PC14" padstack="VIA_1D0_1D54" actualXY=(16.73 55.0)
+PHYSICAL_PIN_CONTRACT ref="J11" pin="3" net="GPIO_PC13" padstack="VIA_1D0_1D54" actualXY=(14.19 55.0)
+PHYSICAL_PIN_CONTRACT ref="J11" pin="2" net="GND" padstack="VIA_1D0_1D54" actualXY=(11.65 55.0)
+PHYSICAL_PIN_CONTRACT ref="J11" pin="1" net="V3V3" padstack="VIA_1D0_1D54S" actualXY=(9.11 55.0)
+PHYSICAL_PIN_CONTRACT ref="J12" pin="8" net="GPIO_PB14" padstack="VIA_1D0_1D54" actualXY=(48.89 55.0)
+PHYSICAL_PIN_CONTRACT ref="J12" pin="7" net="GPIO_PB13" padstack="VIA_1D0_1D54" actualXY=(46.35 55.0)
+PHYSICAL_PIN_CONTRACT ref="J12" pin="6" net="GPIO_PB12" padstack="VIA_1D0_1D54" actualXY=(43.81 55.0)
+PHYSICAL_PIN_CONTRACT ref="J12" pin="5" net="GPIO_PB11" padstack="VIA_1D0_1D54" actualXY=(41.27 55.0)
+PHYSICAL_PIN_CONTRACT ref="J12" pin="4" net="GPIO_PB10" padstack="VIA_1D0_1D54" actualXY=(38.73 55.0)
+PHYSICAL_PIN_CONTRACT ref="J12" pin="3" net="GPIO_PB1" padstack="VIA_1D0_1D54" actualXY=(36.19 55.0)
+PHYSICAL_PIN_CONTRACT ref="J12" pin="2" net="GND" padstack="VIA_1D0_1D54" actualXY=(33.65 55.0)
+PHYSICAL_PIN_CONTRACT ref="J12" pin="1" net="V3V3" padstack="VIA_1D0_1D54S" actualXY=(31.11 55.0)
+PHYSICAL_PIN_CONTRACT ref="J13" pin="8" net="GPIO_PB9" padstack="VIA_1D0_1D54" actualXY=(70.89 55.0)
+PHYSICAL_PIN_CONTRACT ref="J13" pin="7" net="GPIO_PB8" padstack="VIA_1D0_1D54" actualXY=(68.35 55.0)
+PHYSICAL_PIN_CONTRACT ref="J13" pin="6" net="GPIO_PB5" padstack="VIA_1D0_1D54" actualXY=(65.81 55.0)
+PHYSICAL_PIN_CONTRACT ref="J13" pin="5" net="GPIO_PB4" padstack="VIA_1D0_1D54" actualXY=(63.27 55.0)
+PHYSICAL_PIN_CONTRACT ref="J13" pin="4" net="GPIO_PA15" padstack="VIA_1D0_1D54" actualXY=(60.73 55.0)
+PHYSICAL_PIN_CONTRACT ref="J13" pin="3" net="GPIO_PB15" padstack="VIA_1D0_1D54" actualXY=(58.19 55.0)
+PHYSICAL_PIN_CONTRACT ref="J13" pin="2" net="GND" padstack="VIA_1D0_1D54" actualXY=(55.65 55.0)
+PHYSICAL_PIN_CONTRACT ref="J13" pin="1" net="V3V3" padstack="VIA_1D0_1D54S" actualXY=(53.11 55.0)
+PHYSICAL_PIN_CONTRACT ref="R23" pin="1" net="PA4_SPI_NSS" padstack="SMD_37X32RET" actualXY=(33.3984 32.1)
+PHYSICAL_PIN_CONTRACT ref="R23" pin="2" net="SPI_NSS" padstack="SMD_37X32RET" actualXY=(31.8236 32.1)
+PHYSICAL_PIN_CONTRACT ref="R21" pin="1" net="PA5_SPI_SCK" padstack="SMD_37X32RET" actualXY=(33.6 30.7)
+PHYSICAL_PIN_CONTRACT ref="R21" pin="2" net="SPI_SCK" padstack="SMD_37X32RET" actualXY=(32.0252 30.7)
+PHYSICAL_PIN_CONTRACT ref="R24" pin="1" net="PA6_SPI_MISO" padstack="SMD_37X32RET" actualXY=(33.6 29.0)
+PHYSICAL_PIN_CONTRACT ref="R24" pin="2" net="SPI_MISO" padstack="SMD_37X32RET" actualXY=(32.0252 29.0)
+PHYSICAL_PIN_CONTRACT ref="R22" pin="1" net="PA7_SPI_MOSI" padstack="SMD_37X32RET" actualXY=(33.6 27.0)
+PHYSICAL_PIN_CONTRACT ref="R22" pin="2" net="SPI_MOSI" padstack="SMD_37X32RET" actualXY=(32.0252 27.0)
+PHYSICAL_PIN_CONTRACT ref="R25" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(31.1016 33.7)
+PHYSICAL_PIN_CONTRACT ref="R25" pin="2" net="PA4_SPI_NSS" padstack="SMD_37X32RET" actualXY=(32.6764 33.7)
+PHYSICAL_PIN_CONTRACT ref="R19" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(56.9252 35.0)
+PHYSICAL_PIN_CONTRACT ref="R19" pin="2" net="I2C_SCL" padstack="SMD_37X32RET" actualXY=(58.5 35.0)
+PHYSICAL_PIN_CONTRACT ref="R20" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(56.9252 37.0)
+PHYSICAL_PIN_CONTRACT ref="R20" pin="2" net="I2C_SDA" padstack="SMD_37X32RET" actualXY=(58.5 37.0)
+PHYSICAL_PIN_CONTRACT ref="C13" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(34.0 22.6)
+PHYSICAL_PIN_CONTRACT ref="C13" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(34.0 24.1748)
+PHYSICAL_PIN_CONTRACT ref="C14" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(43.9 20.3)
+PHYSICAL_PIN_CONTRACT ref="C14" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(42.3252 20.3)
+PHYSICAL_PIN_CONTRACT ref="C15" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(47.3 30.3)
+PHYSICAL_PIN_CONTRACT ref="C15" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(47.3 28.7252)
+PHYSICAL_PIN_CONTRACT ref="C17" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(46.2016 32.4)
+PHYSICAL_PIN_CONTRACT ref="C17" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(47.7764 32.4)
+PHYSICAL_PIN_CONTRACT ref="C18" pin="1" net="VDDA" padstack="SMD_37X32RET" actualXY=(37.0 33.2)
+PHYSICAL_PIN_CONTRACT ref="C18" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(37.0 34.7748)
+PHYSICAL_PIN_CONTRACT ref="C19" pin="1" net="VDDA" padstack="SMD_37X32RET" actualXY=(34.8 37.0)
+PHYSICAL_PIN_CONTRACT ref="C19" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(34.8 38.5748)
+PHYSICAL_PIN_CONTRACT ref="C21" pin="1" net="NRST" padstack="SMD_37X32RET" actualXY=(39.3764 36.25)
+PHYSICAL_PIN_CONTRACT ref="C21" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(37.8016 36.25)
+PHYSICAL_PIN_CONTRACT ref="C22" pin="1" net="OSC_IN" padstack="SMD_37X32RET" actualXY=(46.2 34.0)
+PHYSICAL_PIN_CONTRACT ref="C22" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(46.2 35.5748)
+PHYSICAL_PIN_CONTRACT ref="C23" pin="1" net="XTAL_OUT" padstack="SMD_37X32RET" actualXY=(39.8 37.7)
+PHYSICAL_PIN_CONTRACT ref="C23" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(38.2252 37.7)
+PHYSICAL_PIN_CONTRACT ref="C24" pin="1" net="ADC0" padstack="SMD_37X32RET" actualXY=(34.8 33.0)
+PHYSICAL_PIN_CONTRACT ref="C24" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(34.8 34.5748)
+PHYSICAL_PIN_CONTRACT ref="R26" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(29.5 37.0)
+PHYSICAL_PIN_CONTRACT ref="R26" pin="2" net="VDDA" padstack="SMD_37X32RET" actualXY=(29.5 38.5748)
+PHYSICAL_PIN_CONTRACT ref="R27" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(38.1016 41.3)
+PHYSICAL_PIN_CONTRACT ref="R27" pin="2" net="NRST" padstack="SMD_37X32RET" actualXY=(39.6764 41.3)
+PHYSICAL_PIN_CONTRACT ref="R28" pin="1" net="BOOT0" padstack="SMD_37X32RET" actualXY=(52.8984 28.0)
+PHYSICAL_PIN_CONTRACT ref="R28" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(51.3236 28.0)
+PHYSICAL_PIN_CONTRACT ref="R29" pin="1" net="BOOT1" padstack="SMD_37X32RET" actualXY=(31.4 23.0)
+PHYSICAL_PIN_CONTRACT ref="R29" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(29.8252 23.0)
+PHYSICAL_PIN_CONTRACT ref="R30" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(56.7 31.1016)
+PHYSICAL_PIN_CONTRACT ref="R30" pin="2" net="BOOT_SERVICE" padstack="SMD_37X32RET" actualXY=(56.7 32.6764)
+PHYSICAL_PIN_CONTRACT ref="R31" pin="1" net="OSC_OUT" padstack="SMD_37X32RET" actualXY=(40.2 33.2)
+PHYSICAL_PIN_CONTRACT ref="R31" pin="2" net="XTAL_OUT" padstack="SMD_37X32RET" actualXY=(40.2 34.7748)
+PHYSICAL_PIN_CONTRACT ref="R32" pin="1" net="ADC_IN" padstack="SMD_37X32RET" actualXY=(31.1016 35.5)
+PHYSICAL_PIN_CONTRACT ref="R32" pin="2" net="ADC0" padstack="SMD_37X32RET" actualXY=(32.6764 35.5)
+PHYSICAL_PIN_CONTRACT ref="F1" pin="1" net="VIN_RAW" padstack="SMD_37X32RET" actualXY=(9.3016 13.0)
+PHYSICAL_PIN_CONTRACT ref="F1" pin="2" net="VIN_FUSED" padstack="SMD_37X32RET" actualXY=(10.8764 13.0)
+PHYSICAL_PIN_CONTRACT ref="C3" pin="1" net="VIN_PROT" padstack="SMD_37X32RET" actualXY=(26.0984 18.0)
+PHYSICAL_PIN_CONTRACT ref="C3" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(24.5236 18.0)
+PHYSICAL_PIN_CONTRACT ref="C4" pin="1" net="BUCK_BOOT" padstack="SMD_37X32RET" actualXY=(26.5984 23.7)
+PHYSICAL_PIN_CONTRACT ref="C4" pin="2" net="BUCK_SW" padstack="SMD_37X32RET" actualXY=(25.0236 23.7)
+PHYSICAL_PIN_CONTRACT ref="R1" pin="1" net="V5" padstack="SMD_37X32RET" actualXY=(30.8984 19.1)
+PHYSICAL_PIN_CONTRACT ref="R1" pin="2" net="BUCK_FB" padstack="SMD_37X32RET" actualXY=(29.3236 19.1)
+PHYSICAL_PIN_CONTRACT ref="R2" pin="1" net="BUCK_FB" padstack="SMD_37X32RET" actualXY=(29.7984 21.3)
+PHYSICAL_PIN_CONTRACT ref="R2" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(28.2236 21.3)
+PHYSICAL_PIN_CONTRACT ref="C7" pin="1" net="V5" padstack="SMD_37X32RET" actualXY=(30.8984 17.3)
+PHYSICAL_PIN_CONTRACT ref="C7" pin="2" net="BUCK_FB" padstack="SMD_37X32RET" actualXY=(29.3236 17.3)
+PHYSICAL_PIN_CONTRACT ref="C10" pin="1" net="USB_VBUS" padstack="SMD_37X32RET" actualXY=(42.7 9.2016)
+PHYSICAL_PIN_CONTRACT ref="C10" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(42.7 10.7764)
+PHYSICAL_PIN_CONTRACT ref="R3" pin="1" net="USB_CC1" padstack="SMD_37X32RET" actualXY=(35.0 10.1016)
+PHYSICAL_PIN_CONTRACT ref="R3" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(35.0 11.6764)
+PHYSICAL_PIN_CONTRACT ref="R4" pin="1" net="USB_CC2" padstack="SMD_37X32RET" actualXY=(45.5 10.1016)
+PHYSICAL_PIN_CONTRACT ref="R4" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(45.5 11.6764)
+PHYSICAL_PIN_CONTRACT ref="R5" pin="1" net="PA12_SHARED" padstack="SMD_37X32RET" actualXY=(41.1 18.3984)
+PHYSICAL_PIN_CONTRACT ref="R5" pin="2" net="USB_DP" padstack="SMD_37X32RET" actualXY=(41.1 16.8236)
+PHYSICAL_PIN_CONTRACT ref="R6" pin="1" net="PA11_SHARED" padstack="SMD_37X32RET" actualXY=(39.4 18.3984)
+PHYSICAL_PIN_CONTRACT ref="R6" pin="2" net="USB_DM" padstack="SMD_37X32RET" actualXY=(39.4 16.8236)
+PHYSICAL_PIN_CONTRACT ref="R7" pin="1" net="USB_VBUS" padstack="SMD_37X32RET" actualXY=(49.1016 7.0)
+PHYSICAL_PIN_CONTRACT ref="R7" pin="2" net="VBUS_GATE" padstack="SMD_37X32RET" actualXY=(50.6764 7.0)
+PHYSICAL_PIN_CONTRACT ref="R8" pin="1" net="VBUS_GATE" padstack="SMD_37X32RET" actualXY=(56.2 9.1016)
+PHYSICAL_PIN_CONTRACT ref="R8" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(56.2 10.6764)
+PHYSICAL_PIN_CONTRACT ref="R9" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(56.2 13.1016)
+PHYSICAL_PIN_CONTRACT ref="R9" pin="2" net="VBUS_PRESENT_N" padstack="SMD_37X32RET" actualXY=(56.2 14.6764)
+PHYSICAL_PIN_CONTRACT ref="R10" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(48.6016 17.2)
+PHYSICAL_PIN_CONTRACT ref="R10" pin="2" net="USB_ATTACH_N" padstack="SMD_37X32RET" actualXY=(50.1764 17.2)
+PHYSICAL_PIN_CONTRACT ref="R11" pin="1" net="USB_PULLUP_SRC" padstack="SMD_37X32RET" actualXY=(42.8748 14.6)
+PHYSICAL_PIN_CONTRACT ref="R11" pin="2" net="USB_DP" padstack="SMD_37X32RET" actualXY=(41.3 14.6)
+PHYSICAL_PIN_CONTRACT ref="R12" pin="1" net="PA12_SHARED" padstack="SMD_37X32RET" actualXY=(42.9016 18.3)
+PHYSICAL_PIN_CONTRACT ref="R12" pin="2" net="CAN_TXD" padstack="SMD_37X32RET" actualXY=(44.4764 18.3)
+PHYSICAL_PIN_CONTRACT ref="R13" pin="1" net="PA11_SHARED" padstack="SMD_37X32RET" actualXY=(37.8984 18.3)
+PHYSICAL_PIN_CONTRACT ref="R13" pin="2" net="CAN_RXD" padstack="SMD_37X32RET" actualXY=(36.3236 18.3)
+PHYSICAL_PIN_CONTRACT ref="C11" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(61.8 13.46)
+PHYSICAL_PIN_CONTRACT ref="C11" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(61.8 15.0348)
+PHYSICAL_PIN_CONTRACT ref="C12" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(59.8 13.46)
+PHYSICAL_PIN_CONTRACT ref="C12" pin="2" net="GND" padstack="SMD_37X32RET" actualXY=(59.8 15.0348)
+PHYSICAL_PIN_CONTRACT ref="R14" pin="1" net="V3V3" padstack="SMD_37X32RET" actualXY=(60.4016 17.9)
+PHYSICAL_PIN_CONTRACT ref="R14" pin="2" net="CAN_TXD" padstack="SMD_37X32RET" actualXY=(61.9764 17.9)
+PHYSICAL_PIN_CONTRACT ref="R16" pin="1" net="PA9_UART_TX" padstack="SMD_37X32RET" actualXY=(45.6016 19.9)
+PHYSICAL_PIN_CONTRACT ref="R16" pin="2" net="UART_TX" padstack="SMD_37X32RET" actualXY=(47.1764 19.9)
+PHYSICAL_PIN_CONTRACT ref="R17" pin="1" net="PA10_UART_RX" padstack="SMD_37X32RET" actualXY=(50.1016 23.5)
+PHYSICAL_PIN_CONTRACT ref="R17" pin="2" net="UART_RX" padstack="SMD_37X32RET" actualXY=(51.6764 23.5)
+PHYSICAL_PIN_CONTRACT ref="R18" pin="1" net="UART_RX" padstack="SMD_37X32RET" actualXY=(68.1016 25.0)
+PHYSICAL_PIN_CONTRACT ref="R18" pin="2" net="V3V3" padstack="SMD_37X32RET" actualXY=(69.6764 25.0)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="48" net="V3V3" padstack="L09_QFP120X030_M05" actualXY=(44.25 29.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="47" net="GND" padstack="L09_QFP120X030_M05" actualXY=(44.25 29.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="46" net="GPIO_PB9" padstack="L09_QFP120X030_M05" actualXY=(44.25 28.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="45" net="GPIO_PB8" padstack="L09_QFP120X030_M05" actualXY=(44.25 28.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="44" net="BOOT0" padstack="L09_QFP120X030_M05" actualXY=(44.25 27.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="43" net="I2C_SDA" padstack="L09_QFP120X030_M05" actualXY=(44.25 27.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="42" net="I2C_SCL" padstack="L09_QFP120X030_M05" actualXY=(44.25 26.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="41" net="GPIO_PB5" padstack="L09_QFP120X030_M05" actualXY=(44.25 26.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="40" net="GPIO_PB4" padstack="L09_QFP120X030_M05" actualXY=(44.25 25.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="39" net="SWO" padstack="L09_QFP120X030_M05" actualXY=(44.25 25.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="38" net="GPIO_PA15" padstack="L09_QFP120X030_M05" actualXY=(44.25 24.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="37" net="SWCLK" padstack="L09_QFP120X030_M05" actualXY=(44.25 24.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="36" net="V3V3" padstack="L09_QFP120X030_M05" actualXY=(42.75 22.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="35" net="GND" padstack="L09_QFP120X030_M05" actualXY=(42.25 22.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="34" net="SWDIO" padstack="L09_QFP120X030_M05" actualXY=(41.75 22.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="33" net="PA12_SHARED" padstack="L09_QFP120X030_M05" actualXY=(41.25 22.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="32" net="PA11_SHARED" padstack="L09_QFP120X030_M05" actualXY=(40.75 22.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="31" net="PA10_UART_RX" padstack="L09_QFP120X030_M05" actualXY=(40.25 22.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="30" net="PA9_UART_TX" padstack="L09_QFP120X030_M05" actualXY=(39.75 22.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="29" net="USB_ATTACH_N" padstack="L09_QFP120X030_M05" actualXY=(39.25 22.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="28" net="GPIO_PB15" padstack="L09_QFP120X030_M05" actualXY=(38.75 22.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="27" net="GPIO_PB14" padstack="L09_QFP120X030_M05" actualXY=(38.25 22.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="26" net="GPIO_PB13" padstack="L09_QFP120X030_M05" actualXY=(37.75 22.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="25" net="GPIO_PB12" padstack="L09_QFP120X030_M05" actualXY=(37.25 22.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="24" net="V3V3" padstack="L09_QFP120X030_M05" actualXY=(35.75 24.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="23" net="GND" padstack="L09_QFP120X030_M05" actualXY=(35.75 24.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="22" net="GPIO_PB11" padstack="L09_QFP120X030_M05" actualXY=(35.75 25.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="21" net="GPIO_PB10" padstack="L09_QFP120X030_M05" actualXY=(35.75 25.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="20" net="BOOT1" padstack="L09_QFP120X030_M05" actualXY=(35.75 26.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="19" net="GPIO_PB1" padstack="L09_QFP120X030_M05" actualXY=(35.75 26.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="18" net="VBUS_PRESENT_N" padstack="L09_QFP120X030_M05" actualXY=(35.75 27.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="17" net="PA7_SPI_MOSI" padstack="L09_QFP120X030_M05" actualXY=(35.75 27.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="16" net="PA6_SPI_MISO" padstack="L09_QFP120X030_M05" actualXY=(35.75 28.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="15" net="PA5_SPI_SCK" padstack="L09_QFP120X030_M05" actualXY=(35.75 28.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="14" net="PA4_SPI_NSS" padstack="L09_QFP120X030_M05" actualXY=(35.75 29.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="13" net="GPIO_PA3" padstack="L09_QFP120X030_M05" actualXY=(35.75 29.75)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="12" net="GPIO_PA2" padstack="L09_QFP120X030_M05" actualXY=(37.25 31.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="11" net="GPIO_PA1" padstack="L09_QFP120X030_M05" actualXY=(37.75 31.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="10" net="ADC0" padstack="L09_QFP120X030_M05" actualXY=(38.25 31.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="9" net="VDDA" padstack="L09_QFP120X030_M05" actualXY=(38.75 31.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="8" net="GND" padstack="L09_QFP120X030_M05" actualXY=(39.25 31.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="7" net="NRST" padstack="L09_QFP120X030_M05" actualXY=(39.75 31.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="6" net="OSC_OUT" padstack="L09_QFP120X030_M05" actualXY=(40.25 31.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="5" net="OSC_IN" padstack="L09_QFP120X030_M05" actualXY=(40.75 31.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="4" net="GPIO_PC15" padstack="L09_QFP120X030_M05" actualXY=(41.25 31.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="3" net="GPIO_PC14" padstack="L09_QFP120X030_M05" actualXY=(41.75 31.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="2" net="GPIO_PC13" padstack="L09_QFP120X030_M05" actualXY=(42.25 31.25)
+PHYSICAL_PIN_CONTRACT ref="U1" pin="1" net="V3V3" padstack="L09_QFP120X030_M05" actualXY=(42.75 31.25)
+PHYSICAL_PIN_CONTRACT ref="C16" pin="1" net="V3V3" padstack="SMD_40X50RET" actualXY=(49.5 30.3)
+PHYSICAL_PIN_CONTRACT ref="C16" pin="2" net="GND" padstack="SMD_40X50RET" actualXY=(49.5 28.268)
+PHYSICAL_PIN_CONTRACT ref="C20" pin="1" net="VDDA" padstack="SMD_40X50RET" actualXY=(32.2 37.0)
+PHYSICAL_PIN_CONTRACT ref="C20" pin="2" net="GND" padstack="SMD_40X50RET" actualXY=(32.2 39.032)
+PHYSICAL_PIN_CONTRACT ref="C8" pin="1" net="V5" padstack="SMD_40X50RET" actualXY=(24.2 31.0)
+PHYSICAL_PIN_CONTRACT ref="C8" pin="2" net="GND" padstack="SMD_40X50RET" actualXY=(24.2 28.968)
+PHYSICAL_PIN_CONTRACT ref="C9" pin="1" net="V3V3" padstack="SMD_40X50RET" actualXY=(29.8 30.95)
+PHYSICAL_PIN_CONTRACT ref="C9" pin="2" net="GND" padstack="SMD_40X50RET" actualXY=(29.8 28.918)
+PHYSICAL_PIN_CONTRACT ref="Y1" pin="4" net="GND" padstack="DE_SMD180X120" actualXY=(42.0 33.7)
+PHYSICAL_PIN_CONTRACT ref="Y1" pin="3" net="XTAL_OUT" padstack="DE_SMD180X120" actualXY=(42.0 37.7)
+PHYSICAL_PIN_CONTRACT ref="Y1" pin="2" net="GND" padstack="DE_SMD180X120" actualXY=(44.4 37.7)
+PHYSICAL_PIN_CONTRACT ref="Y1" pin="1" net="OSC_IN" padstack="DE_SMD180X120" actualXY=(44.4 33.7)
+PHYSICAL_PIN_CONTRACT ref="J7" pin="2" net="GND" padstack="VIA_1D0_1D54" actualXY=(31.73 43.0)
+PHYSICAL_PIN_CONTRACT ref="J7" pin="1" net="NRST" padstack="VIA_1D0_1D54S" actualXY=(34.27 43.0)
+PHYSICAL_PIN_CONTRACT ref="J8" pin="2" net="BOOT0" padstack="VIA_1D0_1D54" actualXY=(54.0 30.73)
+PHYSICAL_PIN_CONTRACT ref="J8" pin="1" net="BOOT_SERVICE" padstack="VIA_1D0_1D54S" actualXY=(54.0 33.27)
+PHYSICAL_PIN_CONTRACT ref="J10" pin="2" net="GND" padstack="VIA_1D0_1D54" actualXY=(23.73 34.0)
+PHYSICAL_PIN_CONTRACT ref="J10" pin="1" net="ADC_IN" padstack="VIA_1D0_1D54S" actualXY=(26.27 34.0)
+PHYSICAL_PIN_CONTRACT ref="J1" pin="2" net="GND" padstack="VIA_1D0_1D54" actualXY=(6.0 11.73)
+PHYSICAL_PIN_CONTRACT ref="J1" pin="1" net="VIN_RAW" padstack="VIA_1D0_1D54S" actualXY=(6.0 14.27)
+PHYSICAL_PIN_CONTRACT ref="D1" pin="2" net="VIN_FUSED" padstack="PAD67X78" actualXY=(13.1 13.0)
+PHYSICAL_PIN_CONTRACT ref="D1" pin="1" net="VIN_PROT" padstack="PAD67X78" actualXY=(16.95 13.0)
+PHYSICAL_PIN_CONTRACT ref="C1" pin="2" net="GND" padstack="VIA_1D0_1D54" actualXY=(12.45 18.3)
+PHYSICAL_PIN_CONTRACT ref="C1" pin="1" net="VIN_PROT" padstack="VIA_1D0_1D54S" actualXY=(9.95 18.3)
+PHYSICAL_PIN_CONTRACT ref="C2" pin="1" net="VIN_PROT" padstack="SMD_60X63RET" actualXY=(25.2 15.4)
+PHYSICAL_PIN_CONTRACT ref="C2" pin="2" net="GND" padstack="SMD_60X63RET" actualXY=(22.152 15.4)
+PHYSICAL_PIN_CONTRACT ref="C5" pin="1" net="V5" padstack="SMD_60X63RET" actualXY=(14.4 23.1)
+PHYSICAL_PIN_CONTRACT ref="C5" pin="2" net="GND" padstack="SMD_60X63RET" actualXY=(14.4 26.148)
+PHYSICAL_PIN_CONTRACT ref="C6" pin="1" net="V5" padstack="SMD_60X63RET" actualXY=(11.7 23.1)
+PHYSICAL_PIN_CONTRACT ref="C6" pin="2" net="GND" padstack="SMD_60X63RET" actualXY=(11.7 26.148)
+PHYSICAL_PIN_CONTRACT ref="R15" pin="1" net="CAN_H" padstack="SMD_60X63RET" actualXY=(71.5 14.75)
+PHYSICAL_PIN_CONTRACT ref="R15" pin="2" net="CAN_L" padstack="SMD_60X63RET" actualXY=(71.5 11.702)
+PHYSICAL_PIN_CONTRACT ref="U2" pin="6" net="BUCK_BOOT" padstack="PAD_0D6_1D1O" actualXY=(26.8 21.95)
+PHYSICAL_PIN_CONTRACT ref="U2" pin="5" net=nil padstack="PAD_0D6_1D1O" actualXY=(26.8 21.0)
+PHYSICAL_PIN_CONTRACT ref="U2" pin="4" net="BUCK_FB" padstack="PAD_0D6_1D1O" actualXY=(26.8 20.05)
+PHYSICAL_PIN_CONTRACT ref="U2" pin="3" net="VIN_PROT" padstack="PAD_0D6_1D1O" actualXY=(24.2 20.05)
+PHYSICAL_PIN_CONTRACT ref="U2" pin="2" net="BUCK_SW" padstack="PAD_0D6_1D1O" actualXY=(24.2 21.0)
+PHYSICAL_PIN_CONTRACT ref="U2" pin="1" net="GND" padstack="PAD_0D6_1D1O" actualXY=(24.2 21.95)
+PHYSICAL_PIN_CONTRACT ref="U4" pin="6" net="USB_DP" padstack="PAD_0D6_1D1O" actualXY=(41.2 10.1)
+PHYSICAL_PIN_CONTRACT ref="U4" pin="5" net="USB_VBUS" padstack="PAD_0D6_1D1O" actualXY=(40.25 10.1)
+PHYSICAL_PIN_CONTRACT ref="U4" pin="4" net="USB_DM" padstack="PAD_0D6_1D1O" actualXY=(39.3 10.1)
+PHYSICAL_PIN_CONTRACT ref="U4" pin="3" net="USB_DM" padstack="PAD_0D6_1D1O" actualXY=(39.3 12.7)
+PHYSICAL_PIN_CONTRACT ref="U4" pin="2" net="GND" padstack="PAD_0D6_1D1O" actualXY=(40.25 12.7)
+PHYSICAL_PIN_CONTRACT ref="U4" pin="1" net="USB_DP" padstack="PAD_0D6_1D1O" actualXY=(41.2 12.7)
+PHYSICAL_PIN_CONTRACT ref="L1" pin="2" net="V5" padstack="DE_SMD143X550" actualXY=(17.98 24.0)
+PHYSICAL_PIN_CONTRACT ref="L1" pin="1" net="BUCK_SW" padstack="DE_SMD143X550" actualXY=(22.02 24.0)
+PHYSICAL_PIN_CONTRACT ref="U3" pin="1" net="V5" padstack="PAD_1D3_0D6" actualXY=(25.7 29.95)
+PHYSICAL_PIN_CONTRACT ref="U3" pin="2" net="GND" padstack="PAD_1D3_0D6" actualXY=(25.7 29.0)
+PHYSICAL_PIN_CONTRACT ref="U3" pin="3" net="V5" padstack="PAD_1D3_0D6" actualXY=(25.7 28.05)
+PHYSICAL_PIN_CONTRACT ref="U3" pin="4" net=nil padstack="PAD_1D3_0D6" actualXY=(28.3 28.05)
+PHYSICAL_PIN_CONTRACT ref="U3" pin="5" net="V3V3" padstack="PAD_1D3_0D6" actualXY=(28.3 29.95)
+PHYSICAL_PIN_CONTRACT ref="Q1" pin="1" net="VBUS_GATE" padstack="PAD_36_47" actualXY=(51.0475 9.5282)
+PHYSICAL_PIN_CONTRACT ref="Q1" pin="2" net="GND" padstack="PAD_36_47" actualXY=(52.9525 9.5282)
+PHYSICAL_PIN_CONTRACT ref="Q1" pin="3" net="VBUS_PRESENT_N" padstack="PAD_36_47" actualXY=(52.0 12.0718)
+PHYSICAL_PIN_CONTRACT ref="Q2" pin="1" net="USB_ATTACH_N" padstack="PAD_36_47" actualXY=(47.0475 12.2282)
+PHYSICAL_PIN_CONTRACT ref="Q2" pin="2" net="V3V3" padstack="PAD_36_47" actualXY=(48.9525 12.2282)
+PHYSICAL_PIN_CONTRACT ref="Q2" pin="3" net="USB_PULLUP_SRC" padstack="PAD_36_47" actualXY=(48.0 14.7718)
+PHYSICAL_PIN_CONTRACT ref="U5" pin="1" net="CAN_TXD" padstack="RE60X24" actualXY=(64.0 16.0)
+PHYSICAL_PIN_CONTRACT ref="U5" pin="2" net="GND" padstack="RE60X24" actualXY=(64.0 14.73)
+PHYSICAL_PIN_CONTRACT ref="U5" pin="3" net="V3V3" padstack="RE60X24" actualXY=(64.0 13.46)
+PHYSICAL_PIN_CONTRACT ref="U5" pin="4" net="CAN_RXD" padstack="RE60X24" actualXY=(64.0 12.19)
+PHYSICAL_PIN_CONTRACT ref="U5" pin="5" net=nil padstack="RE60X24" actualXY=(69.588 12.19)
+PHYSICAL_PIN_CONTRACT ref="U5" pin="6" net="CAN_L" padstack="RE60X24" actualXY=(69.588 13.46)
+PHYSICAL_PIN_CONTRACT ref="U5" pin="7" net="CAN_H" padstack="RE60X24" actualXY=(69.588 14.73)
+PHYSICAL_PIN_CONTRACT ref="U5" pin="8" net=nil padstack="RE60X24" actualXY=(69.588 16.0)
+HI_PHYSICAL_TERMINAL_CONTRACT_COMPLETE physicalPins=272 namedNetPins=266 ncPseudoPins=6
+HI_UNWIND_DRC_RESTORED=t
+HI_ENDPOINT_PROOF from="U1.25" to="SOUTH_SOURCE_25_VIA" expected=t actual=t objects=4
+HI_ENDPOINT_PROOF from="U1.26" to="SOUTH_SOURCE_26_VIA" expected=t actual=t objects=4
+HI_ENDPOINT_PROOF from="U1.27" to="SOUTH_SOURCE_27_VIA" expected=t actual=t objects=4
+HI_ENDPOINT_PROOF from="U1.28" to="SOUTH_SOURCE_28_VIA" expected=t actual=t objects=4
+HI_ENDPOINT_PROOF from="U1.29" to="SOUTH_SOURCE_29_VIA" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="U1.30" to="SOUTH_SOURCE_30_VIA" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.31" to="SOUTH_SOURCE_31_VIA" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.34" to="SOUTH_SOURCE_34_VIA" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.14" to="R25.2" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U1.35" to="C14.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="U1.35" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="U1.25" to="NODE_JS_1" expected=t actual=t objects=4
+HI_ENDPOINT_PROOF from="U1.26" to="NODE_JS_2" expected=t actual=t objects=4
+HI_ENDPOINT_PROOF from="U1.27" to="NODE_JS_3" expected=t actual=t objects=4
+HI_ENDPOINT_PROOF from="U1.28" to="NODE_JS_4" expected=t actual=t objects=4
+HI_ENDPOINT_PROOF from="U1.24" to="C13.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="U1.23" to="C13.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C13.2" to="U1.35" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="U1.20" to="R29.1" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.18" to="LEFT07_VBUS18_VIA" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="U1.19" to="LEFT_SOURCE_19_VIA" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="U1.14" to="R23.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R23.2" to="J6.5" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.15" to="R21.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="R21.2" to="J6.2" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.10" to="C24.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="C24.1" to="R32.2" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R32.1" to="J10.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="R25.1" to="U1.24" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="U1.37" to="J9.4" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.38" to="J13.4" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U1.39" to="J9.6" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.40" to="J13.5" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U1.41" to="J13.6" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="U1.42" to="J5.2" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U1.43" to="J5.3" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="U1.44" to="J8.2" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U1.45" to="J13.7" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="U1.46" to="J13.8" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.42" to="R19.2" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U1.43" to="R20.2" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="R28.2" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="U1.48" to="C15.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="U1.47" to="C15.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C15.1" to="C16.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C15.2" to="C16.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="U1.37" to="NODE_JS_5" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.38" to="NODE_JS_6" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U1.39" to="NODE_JS_7" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.40" to="NODE_JS_8" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U1.41" to="NODE_JS_9" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="U1.42" to="NODE_JS_10" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U1.43" to="NODE_JS_11" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="U1.44" to="NODE_JS_12" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U1.45" to="NODE_JS_13" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="U1.46" to="NODE_JS_14" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="RIGHT_RETURN_RIGHT_SDA_FAR_VIA" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="RIGHT_RETURN_RIGHT_PA15_FAR_VIA" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="RIGHT_RETURN_RIGHT_PB4_FAR_VIA" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="RIGHT_RETURN_RIGHT_PB5_MID_VIA" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="RIGHT_RETURN_RIGHT_PB5_FAR_VIA" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="RIGHT_RETURN_RIGHT_PB8_MID_VIA" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="RIGHT_RETURN_RIGHT_PB8_FAR_VIA" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="RIGHT_RETURN_RIGHT_SWO_FAR_VIA" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="RIGHT_SWCLK_WEST_RETURN" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="RIGHT_SWCLK_EAST_RETURN" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="RIGHT_SWCLK_MID_RETURN" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="R19.2" to="J5.2" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R20.2" to="J5.3" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="R30.2" to="J8.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R12.2" to="R14.2" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="U1.34" to="J9.3" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.31" to="R17.1" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.30" to="R16.1" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="U1.29" to="R10.2" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="U1.35" to="ROOT_SWDIO_RETURN_COMMON" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="GPIO_NORTH_COMMON_RETURN" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="SOUTH_RETURN_WEST" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="SOUTH_RETURN_MID" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="SOUTH_RETURN_EAST" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="RIGHT_PC14_RETURN" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="HSE_SINGLE_ANCHOR_REWORK" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="RIGHT_C15_COMMON_GND" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="RIGHT_R28_GND_RETURN" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="ROOT_SWDIO_RETURN_COMMON" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C10.1" to="J2.A4_B9" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="C10.1" to="J2.B4_A9" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="C10.1" to="R7.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="C10.1" to="U4.5" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="J6.2" to="R21.2" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="R13.1" to="R6.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R13.1" to="U1.32" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="C4.2" to="L1.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="C4.2" to="U2.2" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="J2.A6" to="J2.B6" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="J2.A6" to="R11.2" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="J2.A6" to="R5.2" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="J2.A6" to="U4.1" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="J2.A6" to="U4.6" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="Q2.1" to="R10.2" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="R14.2" to="U5.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="J3.2" to="R15.2" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="J3.2" to="U5.6" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="J2.B5" to="R4.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="J3.1" to="R15.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="J3.1" to="U5.7" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R23.1" to="R25.2" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R23.1" to="U1.14" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R31.1" to="U1.6" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="J2.A5" to="R3.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="R12.1" to="R5.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R12.1" to="U1.33" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="D1.2" to="F1.2" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="C1.2" to="C10.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C11.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C12.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C13.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C14.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C15.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C16.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C17.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C18.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C19.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C2.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C20.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C21.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C22.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C23.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C24.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C3.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C5.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C6.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C8.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="C9.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J1.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J10.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J11.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J12.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J13.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J2.SH1" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J2.SH2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J2.SH3" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J2.SH4" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J3.3" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J4.4" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J5.4" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J6.6" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J7.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="J9.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="R2.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="R28.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="R3.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="R4.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="U1.23" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="U1.35" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="U1.47" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="U1.8" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="U2.1" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="U3.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="U4.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="U5.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="Y1.2" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C1.2" to="Y1.4" expected=t actual=t objects=262
+HI_ENDPOINT_PROOF from="C24.1" to="U1.10" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="J4.3" to="R18.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="C4.1" to="U2.6" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="C11.1" to="C12.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="C13.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="C14.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="C15.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="C16.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="C17.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="C9.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="J11.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="J12.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="J13.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="J4.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="J5.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="J6.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="J9.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="Q2.2" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="R10.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="R14.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="R18.2" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="R19.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="R20.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="R25.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="R26.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="R27.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="R30.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="R9.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="U1.1" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="U1.24" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="U1.36" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="U1.48" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="U3.5" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="C11.1" to="U5.3" expected=t actual=t objects=96
+HI_ENDPOINT_PROOF from="Q2.3" to="R11.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="R24.1" to="U1.16" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="C18.1" to="C19.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C18.1" to="C20.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C18.1" to="R26.2" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C18.1" to="U1.9" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="Q1.3" to="R9.2" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="F1.1" to="J1.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="J6.5" to="R23.2" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="C5.1" to="C6.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="C5.1" to="C7.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="C5.1" to="C8.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="C5.1" to="L1.2" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="C5.1" to="R1.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="C5.1" to="U3.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="C5.1" to="U3.3" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="J6.3" to="R22.2" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="J6.4" to="R24.2" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="C7.2" to="R1.2" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C7.2" to="R2.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C7.2" to="U2.4" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="J10.1" to="R32.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="R21.1" to="U1.15" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="R22.1" to="U1.17" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="C23.1" to="R31.2" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="C23.1" to="Y1.3" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="J2.A7" to="J2.B7" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="J2.A7" to="R6.2" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="J2.A7" to="U4.3" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="J2.A7" to="U4.4" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="Q1.1" to="R7.2" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="Q1.1" to="R8.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="C22.1" to="U1.5" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="C22.1" to="Y1.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="C1.1" to="C2.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C1.1" to="C3.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C1.1" to="D1.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C1.1" to="U2.3" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C21.1" to="U1.7" expected=t actual=t objects=7
+HI_PENDING_SCOPE_NO_WHOLE_BOARD_DRC_REQUEST time="Oct 22 04:29:31 2026" rawStoredDRCCountForensicOnly=14 nativeDRC=UNRECOMPUTED physicalModes=((allow_padconnect off) (allow_ts on) (allow_etch on) (bbvia_stagger_max off) (bbvia_stagger_min on) (vias on) (width_max on) (width_min on)) spacingModes=((bbvia_gap on) (shape_shape on) (bondpad_bondpad on) (bondpad_shape on) (bondpad_line on) (hole_via on) (hole_thrupin on) (hole_hole on) (hole_shape on) (hole_line on) (uvia_bondpad on) (uvia_testvia on) (uvia_uvia on) (uvia_bbvia on) (uvia_via on) (uvia_testpin on) (uvia_smdpin on) (uvia_thrupin on) (uvia_shape on) (uvia_line on) (bbvia_bondpad on) (bbvia_testvia on) (bbvia_bbvia on) (bbvia_via on) (bbvia_testpin on) (bbvia_smdpin on) (bbvia_thrupin on) (bbvia_shape on) (bbvia_line on) (via_bondpad on) (via_via on) (via_shape on) (via_line on) (testvia_bondpad on) (testvia_testvia on) (testvia_via on) (testvia_smdpin on) (testvia_thrupin on) (testvia_shape on) (testvia_line on) (testpin_bondpad on) (testpin_testvia on) (testpin_via on) (testpin_testpin on) (testpin_smdpin on) (testpin_thrupin on) (testpin_shape on) (testpin_line on) (smdpin_bondpad on) (smdpin_via on) (smdpin_smdpin on) (smdpin_shape on) (smdpin_line on) (thrupin_bondpad on) (thrupin_via on) (thrupin_smdpin on) (thrupin_thrupin on) (thrupin_shape on) (thrupin_line on) (line_shape on) (line_line on)) electricalModes=((Minimum_Line_Width on) (Maximum_Line_Width on) (Relative_Propagation_Delay off) (Propagation_Delay off) (Maximum_Via_Count on) (Match_Via_Count off) (Maximum_Stub_Length off) (Parallelism off) (Impedance off) (Maximum_Crosstalk off) (Maximum_Peak_Crosstalk off) (Maximum_Exposed_Length off) (Total_Etch_Length off) (Differential_Pair_Primary_Gap on) (LayerSet_group off) (Impedance_Fanout_Max_Length off) (Max_Ignored_Reference_Path_Deviation_Length off)) online=t

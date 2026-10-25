@@ -1,0 +1,179 @@
+{
+  "status": "FAIL_NATIVE_VALIDATION",
+  "scope": "80 component placements on two controlled 2L/4L variants plus 3 local VDD/VSS decoupling circuits and C16 branches; not full-board routing or manufacturing release. Native CLI/SKILL practice, not GUI practice.",
+  "boards": {
+    "4L": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\current\\G_4L_LAYOUT_v1.brd",
+      "sha256": "2D4A146A61F92AE6459C9E855AB086ED47B42360409608D8A12E30BB7EA21526",
+      "readback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\final_reopen_4L_01",
+      "normalized": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\inventory\\normalized_actual_4L.json",
+      "placed": 80,
+      "logicalPins": 272,
+      "nets": 69,
+      "drcCount": 0,
+      "actualLayers": [
+        "TOP",
+        "L2",
+        "L3",
+        "BOTTOM"
+      ],
+      "physicalMaskRows": 0,
+      "filmCount": 17,
+      "referenceLayer": "ETCH/L2",
+      "generatedGroundShapes": 1,
+      "dynamicOutOfDate": 0,
+      "manualTopSegments": 27,
+      "thermalReferenceSegments": 64,
+      "vias": 4,
+      "netclasses": 28,
+      "classMembers": 207,
+      "couponConnectivity": {
+        "pinCapTargetProofs": 8,
+        "groundReferenceProofs": 4
+      },
+      "exceptions": {
+        "region": "G31_U1_ESCAPE",
+        "shapeCount": 3,
+        "layer": "CONSTRAINT REGION/TOP",
+        "necklengthNativeMM": 1.4,
+        "physicalCSetsCopiedFrom": {
+          "G31_POWER_ESCAPE": "P_POWER_060",
+          "G31_GND_ESCAPE": "P_GND_PLANE"
+        },
+        "widthMM": 0.6,
+        "neckWidthMM": 0.25,
+        "outsidePhysicalNeckMM": 1.0,
+        "spacingOnly4L": {
+          "smdpin_line": 0.2,
+          "line_line": 0.2
+        }
+      }
+    },
+    "2L": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\current\\G_2L_LAYOUT_v1.brd",
+      "sha256": "FC411A509940E8727A8CB62D036324D1A63A60E042F9CC8AEAECE10C0425BE7D",
+      "readback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\final_reopen_2L_01",
+      "normalized": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\inventory\\normalized_actual_2L.json",
+      "placed": 80,
+      "logicalPins": 272,
+      "nets": 69,
+      "drcCount": 0,
+      "actualLayers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "physicalMaskRows": 0,
+      "filmCount": 15,
+      "referenceLayer": "ETCH/BOTTOM",
+      "generatedGroundShapes": 1,
+      "dynamicOutOfDate": 0,
+      "manualTopSegments": 27,
+      "thermalReferenceSegments": 64,
+      "vias": 4,
+      "netclasses": 2,
+      "classMembers": 2,
+      "couponConnectivity": {
+        "pinCapTargetProofs": 8,
+        "groundReferenceProofs": 4
+      },
+      "exceptions": {
+        "region": "G31_U1_ESCAPE",
+        "shapeCount": 3,
+        "layer": "CONSTRAINT REGION/TOP",
+        "necklengthNativeMM": 1.4,
+        "physicalCSetsCopiedFrom": {
+          "G31_POWER_ESCAPE": "G2L_POWER_DEMO",
+          "G31_GND_ESCAPE": "G2L_GND_DEMO"
+        },
+        "widthMM": 0.6,
+        "neckWidthMM": 0.25,
+        "outsidePhysicalNeckMM": 1.0,
+        "spacingOnly4L": {
+          "smdpin_line": 0.2,
+          "line_line": 0.2
+        }
+      }
+    }
+  },
+  "operationExercises": {
+    "move": true,
+    "rotate": true,
+    "originYAlign": true,
+    "genericGroupDirectTransformAfterDBRefresh": true,
+    "all80PoseRollbackExact": true,
+    "scope": "temporary transactional exercises, file hashes unchanged"
+  },
+  "sourceHashesUnchanged": [
+    {
+      "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\current\\F29_CONSTRAINTS_v4.brd",
+      "snapshot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\backups\\G_4L_INPUT.brd",
+      "sha256": "18ED6701C902A0918558AB13072290046F88299D73432C6882239919CD3C0233",
+      "unchanged": true
+    },
+    {
+      "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\current\\F28_2L_USERFIX.brd",
+      "snapshot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\backups\\G_2L_INPUT.brd",
+      "sha256": "A8E00C31A0B1D16FCF24972518244580244025164F0898CA760F31AFA559CCFB",
+      "unchanged": true
+    }
+  ],
+  "constraintSemantics": "G31 CSets are copies of the named template CSet, not dynamically inheriting parents. All copied key/layer values are independently compared, with only explicit neck/spacing changes. Physical GND class split is an intentional metadata change.",
+  "validation": {
+    "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\review\\native_validation.json",
+    "checks": 3584,
+    "failures": 3
+  },
+  "failedAttempts": [
+    {
+      "log": "logs/place_4L_v1",
+      "issue": "parent component symbol cache required axlDBRefreshId after native creates; no output saved"
+    },
+    {
+      "log": "logs/reopen_4L_v1",
+      "issue": "C8 pad spacing .1773 under .2; corrected real placement"
+    },
+    {
+      "log": "logs/reconcile_4L_01",
+      "issue": "C9 rotation exposed NC pad copper gap .1374 under .2; shifted +.2x"
+    },
+    {
+      "log": "logs/loops_4L_01",
+      "issue": "pad-edge start had no native pin attach and 30 spacing DRC; not saved"
+    },
+    {
+      "log": "logs/loops_4L_02",
+      "issue": "pin-center attach counted 1.3657 neck; BFS shape/line result-list normalization failed; not saved"
+    },
+    {
+      "log": "logs/loops_4L_03",
+      "issue": "pad-edge+overlap DRC0 still not native pin attached; not saved"
+    },
+    {
+      "log": "logs/loops_4L_04",
+      "issue": "axlNetClassGet requires 3 arguments; not saved"
+    },
+    {
+      "log": "logs/bulk_4L_01",
+      "issue": "bulk was successfully saved DRC0 before optional proof wrong API capitalization; corrected final readonly proof"
+    },
+    {
+      "log": "logs/exercises_2L_02",
+      "issue": "generic transform worked but stale member cache caused false negative; second batch doubled movement, transaction automatically cancelled; no save"
+    },
+    {
+      "log": "logs/freeze_4L_01",
+      "issue": "post-DRC cache stale after restoring spacing; fixed refresh before assertions; no frozen output saved"
+    }
+  ],
+  "limitations": [
+    "Same 80 coordinate plan for 2L and 4L is a controlled comparison, not two independently optimized complete layouts.",
+    "Only three decoupling VDD/VSS circuits and C16 bulk branches are routed; LDO 3V3 feed, HSE, USB, switch-mode power, analog and all other nets remain to route.",
+    "Ground plane is a real dynamic filled polygon with clearance holes and thermals; 4L L3 remains unpoured.",
+    "VSS-to-cap HF connection is on TOP with one cap-side ground via per group to the reference; graph reachability does not prove current direction or a mandatory plane path.",
+    "Native center-based neck is 1.3657mm <= local1.4; 0.6mm lies inside the pin pad and external neck is0.7657mm. The original global1mm was not claimed to cover the whole center-based segment.",
+    "Unknown actual component heights and unselected MPNs are not certified by default package height; root geometry review covers avoiding the restricted-height zone.",
+    "USB90ohm geometry/factory release, final assembly variant, thermal/current capacity, full-route return paths and EMI review remain subsequent engineering gates.",
+    "Film definitions remain exact to user templates; existing invalid references/filtering and missingREFDES silkscreen template issue are historical known boundaries, not production CAM certification.",
+    "No native GUI workflow, independent SI/PI waveform simulation, fabrication output CAM audit or board manufacturing release was performed."
+  ]
+}

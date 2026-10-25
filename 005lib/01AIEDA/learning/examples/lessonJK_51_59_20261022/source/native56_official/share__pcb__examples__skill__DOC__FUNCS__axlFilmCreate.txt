@@ -1,0 +1,73 @@
+
+  NAME
+         axlFilmCreate - create or replace an artwork film
+  SYNOPSIS
+         axlFilmCreate(
+                 t_filmname
+                 ?negative               t/nil
+                 ?undefineLineWidth      f_width
+                 ?sequence               x_number
+                 ?rotation               x_angle
+                 ?xOffset                f_x
+                 ?yOffset                f_y
+                 ?shapeBoundingBox       f_value
+                 ?mirrored               t/nil
+                 ?fullContact            t/nil
+                 ?suppressUnconnectPads  t/nil
+                 ?drawMissingPadApertures t/nil
+                 ?useApertureRotation    t/nil
+                 ?suppressShapeFill      t/nil
+                 ?vectorBasedPad         t/nil
+                 ?drawHolesOnly          t/nil
+                 ?layers                 lt_layers
+                 ?domains                lt_domains
+                 ?ipc2581                lt_ipcDomains
+         ) -> t/nil
+  FUNCTION
+         This creates a new artwork film or replaces an existing film.
+         The terminology used matches the artwork dialog. You should reference
+         the help for this dialog to understand how the fields are used.
+ 
+         Defaults for all boolean entiess is nil.
+ 
+         Due to Valor issue suppressShapeFill will always be nil if using Gerber 4x or 6x.
+ 
+         drawHolesOnly if t will draw the drill holes for all pads defined on the VIA and PIN
+         CLASS for the film.
+ 
+         Enanble axlDebug for additional error messages.
+  NEEDS
+         t_filmname - film name
+         f_width - undefined line width, default is 0.
+         x_sequence - For PDF output ordering. Default is 1, range is 1 to 255.
+                      If films have the same number, their database order will determine output.
+         x_angle - film rotations, values are 0, 90, 180 or 270, Default is 0.
+         f_x, f_y - film offset in design units, Default is 0,0
+         f_shapeBoundingBox - Shape bounding box in design units. Default is 0.
+         lt_layers - list of Allegro layers to apply to film. Default is none.
+                 Layer names are fully qualified (include both class and subclass)
+                    Example: "ETCH/TOP"
+                 A mode exists where if you specify the class name all subclasses of that class
+                 are listed in the film. Example: "MANUFACTURING"
+         lt_domains - list of domains where film should be visible. Values are
+                 ipc2581, pdf, artwork and visibility. Default is all.
+         lt_ipc2581 - list of domains where film should be used in IPC2581. 
+                 Values are inner, outer, misc, doc and soldermask.
+  RETURNS
+         t if film created
+         nil if error
+  SEE ALSO
+         axlGetParam, axlDeleteObject, axlDebug
+  EXAMPLES
+         Add/Change:
+            - In artwork dialog use RMB to save a film to film (FILM_SETUP.txt) to understand
+              how to add films.
+         Get all films:
+              p = axlGetParam("artwork")
+              p->groupMembers
+         Get a single film (where format is "artwork:<film name>"):
+              s = axlGetParam("artwork:top")
+              s->??
+         Delete a film (in this case top):
+             axlDeleteObject(s)
+

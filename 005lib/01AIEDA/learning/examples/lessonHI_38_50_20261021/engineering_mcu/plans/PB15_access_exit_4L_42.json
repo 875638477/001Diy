@@ -1,0 +1,105 @@
+{
+  "status": "REJECTED_GEOMETRIC_CANDIDATE",
+  "variant": "4L",
+  "batchId": "PB15_access_exit_4L_42",
+  "operations": [
+    {
+      "type": "deleteVia",
+      "id": "PB15_EAST_RETURN_RIP",
+      "net": "GND",
+      "xy": [
+        38,
+        20
+      ]
+    },
+    {
+      "type": "deleteSegment",
+      "id": "PB15_UP_TAIL_RIP",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          38.5,
+          20.675
+        ],
+        [
+          38.5,
+          22.3
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "via",
+      "id": "PB15_EAST_RETURN_RELOCATED",
+      "net": "GND",
+      "xy": [
+        37.5,
+        19.05
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26,
+      "purpose": "Retain a real nearby application-ground stitch while opening the southern GPIO outlet; refresh actual plane connection and all-layer via-only parent permissions."
+    },
+    {
+      "type": "route",
+      "id": "PB15_DOWN_NORMAL_EXIT",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "width": 0.2,
+      "points": [
+        [
+          38.5,
+          20.675
+        ],
+        [
+          38.1,
+          20.3
+        ],
+        [
+          38.1,
+          19.7
+        ]
+      ],
+      "purpose": "Replace upward dead-end partial with accessible southern normal-width route, preserving MCU TOP source and all power/ADC/HSE copper."
+    }
+  ],
+  "partialEndpoints": {
+    "GPIO_PB15": {
+      "xy": [
+        38.1,
+        19.7
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.28"
+    }
+  },
+  "issues": [
+    {
+      "a": "PB15_EAST_RETURN_RELOCATED",
+      "net": "GND",
+      "b": "R13.1",
+      "otherNet": "PA11_SHARED",
+      "layer": "TOP",
+      "d": 0.0835000000000008,
+      "gap": 0.2,
+      "bbox": [
+        37.4284,
+        17.8935,
+        38.3684,
+        18.7065
+      ]
+    }
+  ],
+  "returnDistancesMM": {
+    "newGPIOendToGround": 0.8845903006477065,
+    "PA10sourceToGround": 2.8900692033236846,
+    "attachSourceToGround": 2.617250465660477
+  },
+  "pending": [
+    "Actual application-ground graph/plane geometry, not nominal same-net label",
+    "Recopy all-layer actual via permission parent at relocated return",
+    "Complete PB15 long path/reference and native DRC before acceptance"
+  ]
+}

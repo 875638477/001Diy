@@ -1,0 +1,138 @@
+HI_BATCH_DRC_BEFORE=t
+HI_ASSEMBLY_ONLINE_DRC_TEMPORARILY_DISABLED=nil
+HI_CSET_COPY domain=physical name="HI_STAR_RETURN_GND_P_4L" copyTemplate="P_GND_PLANE" changes=((necklength_max "1.4 MM"))
+HI_REGION_CLASS region="HI_STAR_RETURN_GND" class1="G31_GND_P" class2=nil domain=physical cset="HI_STAR_RETURN_GND_P_4L" table=(objType "classTable" readOnly t prop propList:000001CB44C44020 assembly nil sameNet nil spacing nil physical "HI_STAR_RETURN_GND_P_4L" region dbid:000001CB45497528 netclass2 nil netclass1 dbid:000001CB45444548)
+HI_REGION_GEOMETRY (prop nil bBox ((35.15 24.45) (38.4 25.7)) readOnly t net nil objType "polygon" segments (dbid:000001CB45497948 dbid:000001CB45497998 dbid:000001CB454979E8 dbid:000001CB45497A38) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:000001CB45497528))
+HI_DELETE_EXACT_SEGMENT id="RIPUP_STAR_OLD_1" before=(prop nil readOnly t bBox ((30.4 23.7) (31.0 32.3)) net dbid:000001CB453AB798 isEtch t font nil lineType vertical layer "ETCH/BOTTOM" width 0.6 startEnd ((30.7 32.0) (30.7 24.0)) parent dbid:000001CB4544C558 objType "line") parentType="path" thermal=nil
+HI_DELETE_EXACT_SEGMENT_COMPLETE id="RIPUP_STAR_OLD_1" net="V3V3" layer="BOTTOM" points=((30.7 32.0) (30.7 24.0)) width=0.6
+HI_DELETE_EXACT_SEGMENT id="RIPUP_STAR_OLD_2" before=(prop nil readOnly t bBox ((30.4 23.7) (37.3 24.3)) net dbid:000001CB453AB798 isEtch t font nil lineType horizontal layer "ETCH/BOTTOM" width 0.6 startEnd ((30.7 24.0) (37.0 24.0)) parent dbid:000001CB45497AB8 objType "line") parentType="path" thermal=nil
+HI_DELETE_EXACT_SEGMENT_COMPLETE id="RIPUP_STAR_OLD_2" net="V3V3" layer="BOTTOM" points=((30.7 24.0) (37.0 24.0)) width=0.6
+LOCAL_ROUTE	STAR_BOTTOM_FEED_DIAGONAL	"V3V3"	"ETCH/BOTTOM"	((30.7 32.0) (37.0 25.7) (37.0 24.0))	(0.6 0.6)	((dbid:000001CB45498EE8) nil)
+LOCAL_ROUTE	STAR_PERIPH_TAP_TOP	"V3V3"	"ETCH/TOP"	((37.0 24.0) (33.3 24.0) (33.3 22.5))	(0.6 0.6)	((dbid:000001CB4549A390) nil)
+LOCAL_ROUTE	STAR_DIAG_GROUND_RETURN	"GND"	"ETCH/TOP"	((35.75 24.75) (36.48 24.75) (36.952 25.222) (38.0 25.27))	(0.25 0.25 0.6)	((dbid:000001CB4549A4D8) nil)
+HI_VIA id="V_HI_STAR_GND_EAST" net="GND" xy=(38.0 25.27) padstack="L28_VIA030_C060" result=(dbid:000001CB4549A670 nil)
+LOCAL_ROUTE	V3_PERIPH_SOUTH	"V3V3"	"ETCH/TOP"	((33.3 22.5) (33.3 1.0) (76.8 1.0) (78.2 2.4))	(0.6 0.6 0.6)	((dbid:000001CB4549CA48) nil)
+LOCAL_ROUTE	V3_PERIPH_EAST	"V3V3"	"ETCH/TOP"	((78.2 2.4) (78.2 58.2))	(0.6)	((dbid:000001CB4549DF40) nil)
+LOCAL_ROUTE	V3_PERIPH_NORTH	"V3V3"	"ETCH/TOP"	((78.2 58.2) (1.8 58.2))	(0.6)	((dbid:000001CB4549F398) nil)
+LOCAL_ROUTE	V3_PERIPH_WEST_J6	"V3V3"	"ETCH/TOP"	((1.8 58.2) (1.8 26.0) (7.0 26.0))	(0.6 0.6)	((dbid:000001CB454A07F0) nil)
+LOCAL_ROUTE	V3_J4	"V3V3"	"ETCH/TOP"	((78.2 28.81) (74.0 28.81))	(0.6)	((dbid:000001CB454A1C98 dbid:000001CB454A07F0 dbid:000001CB48532040) nil)
+LOCAL_ROUTE	V3_J5	"V3V3"	"ETCH/TOP"	((78.2 42.81) (74.0 42.81))	(0.6)	((dbid:000001CB48533448 dbid:000001CB454A07F0 dbid:000001CB485335B8) nil)
+LOCAL_ROUTE	V3_J11	"V3V3"	"ETCH/TOP"	((9.11 58.2) (9.11 55.0))	(0.6)	((dbid:000001CB485349C0 dbid:000001CB454A07F0 dbid:000001CB48534B30) nil)
+LOCAL_ROUTE	V3_J12	"V3V3"	"ETCH/TOP"	((31.11 58.2) (31.11 55.0))	(0.6)	((dbid:000001CB48535F38 dbid:000001CB48534B30 dbid:000001CB485360A8) nil)
+LOCAL_ROUTE	V3_J13	"V3V3"	"ETCH/TOP"	((53.11 58.2) (53.11 55.0))	(0.6)	((dbid:000001CB485374B0 dbid:000001CB485360A8 dbid:000001CB48537620) nil)
+LOCAL_ROUTE	V3_CAN_MAIN	"V3V3"	"ETCH/TOP"	((60.5 1.0) (60.5 12.76) (59.8 13.46))	(0.6 0.6)	((dbid:000001CB48538A28 dbid:000001CB48532040 dbid:000001CB48538BE8) nil)
+LOCAL_ROUTE	V3_SPI_NSS_PULLUP	"V3V3"	"ETCH/TOP"	((33.3 22.5) (33.5748 22.2252) (33.5748 21.0))	(0.6 0.6)	((dbid:000001CB48539FF0 dbid:000001CB48538BE8 dbid:000001CB4853A1B0) nil)
+LOCAL_ROUTE	V3_USB_AUX_R9	"V3V3"	"ETCH/TOP"	((59.8 13.46) (56.2 13.46) (56.2 13.1016))	(0.6 0.6)	((dbid:000001CB4853B5B8) nil)
+LOCAL_ROUTE	V3_USB_AUX_Q2	"V3V3"	"ETCH/TOP"	((56.2 13.46) (53.8 13.46) (53.8 10.73) (49.9 10.73) (49.9 12.2282) (48.9525 12.2282))	(0.6 0.6 0.6 0.6 0.6)	((dbid:000001CB4853CA60) nil)
+LOCAL_ROUTE	V3_USB_ATTACH_PULLUP	"V3V3"	"ETCH/TOP"	((49.9 12.2282) (49.9 16.0) (48.6016 16.0) (48.6016 17.2))	(0.6 0.6 0.6)	((dbid:000001CB4853E0C8) nil)
+LOCAL_ROUTE	V3_SWD_VTREF	"V3V3"	"ETCH/TOP"	((48.6016 17.2) (48.6016 18.0) (50.0 19.3984) (51.0 20.0))	(0.6 0.6 0.6)	((dbid:000001CB4853F690) nil)
+LOCAL_ROUTE	V3_UART_IDLE	"V3V3"	"ETCH/TOP"	((74.0 28.81) (72.0 28.81) (71.0 27.81) (69.6764 27.81) (69.6764 25.0))	(0.6 0.6 0.6 0.6)	((dbid:000001CB48540B88) nil)
+LOCAL_ROUTE	V3_BOOT_SERVICE	"V3V3"	"ETCH/TOP"	((74.0 28.81) (72.5 30.31) (59.0 30.31) (57.4916 31.1016) (56.7 31.1016))	(0.6 0.6 0.6 0.6)	((dbid:000001CB485420D0) nil)
+LOCAL_ROUTE	V3_I2C_PULLUPS	"V3V3"	"ETCH/TOP"	((78.2 47.0) (56.9252 47.0) (56.9252 37.0) (56.9252 35.0))	(0.6 0.6 0.6)	((dbid:000001CB48543788 dbid:000001CB48543618 dbid:000001CB48537620 dbid:000001CB485438D0) nil)
+LOCAL_ROUTE	V3_RESET_PULLUP	"V3V3"	"ETCH/TOP"	((31.11 55.0) (31.11 47.0) (38.1016 47.0) (38.1016 41.3))	(0.6 0.6 0.6)	((dbid:000001CB48544CD8) nil)
+LOCAL_ROUTE	GPIO_GPIO_PC13_TOP	"GPIO_PC13"	"ETCH/TOP"	((42.25 31.25) (42.25 29.15) (42.0 28.9))	(0.2 0.2)	((dbid:000001CB485461D0) nil)
+HI_VIA id="GPIO_GPIO_PC13_VIA" net="GPIO_PC13" xy=(42.0 28.9) padstack="L28_VIA030_C060" result=(dbid:000001CB48546318 nil)
+LOCAL_ROUTE	GPIO_GPIO_PC14_TOP	"GPIO_PC14"	"ETCH/TOP"	((41.75 31.25) (41.75 29.8) (41.0 29.8) (41.0 27.8))	(0.2 0.2 0.2)	((dbid:000001CB48546C90) nil)
+HI_VIA id="GPIO_GPIO_PC14_VIA" net="GPIO_PC14" xy=(41.0 27.8) padstack="L28_VIA030_C060" result=(dbid:000001CB48546E28 nil)
+LOCAL_ROUTE	GPIO_GPIO_PC15_TOP	"GPIO_PC15"	"ETCH/TOP"	((41.25 31.25) (41.25 30.25) (40.3 30.25) (40.3 28.9))	(0.2 0.2 0.2)	((dbid:000001CB48547AC0) nil)
+HI_VIA id="GPIO_GPIO_PC15_VIA" net="GPIO_PC15" xy=(40.3 28.9) padstack="L28_VIA030_C060" result=(dbid:000001CB48547C58 nil)
+LOCAL_ROUTE	GPIO_GPIO_PC13_BOTTOM_START	"GPIO_PC13"	"ETCH/BOTTOM"	((42.0 28.9) (42.0 31.1) (35.8 31.1))	(0.2 0.2)	((dbid:000001CB48548C10) nil)
+LOCAL_ROUTE	GPIO_GPIO_PC14_BOTTOM_START	"GPIO_PC14"	"ETCH/BOTTOM"	((41.0 27.8) (43.6 25.2) (45.6 25.2))	(0.2 0.2)	((dbid:000001CB48548D58) nil)
+LOCAL_ROUTE	GPIO_GPIO_PC15_BOTTOM_START	"GPIO_PC15"	"ETCH/BOTTOM"	((40.3 28.9) (40.3 30.3) (35.4 30.3))	(0.2 0.2)	((dbid:000001CB48548EA0) nil)
+HI_VIA id="GPIO_RETURN_EAST" net="GND" xy=(42.0 27.9) padstack="L28_VIA030_C060" result=(dbid:000001CB48548FE8 nil)
+HI_VIA id="GPIO_RETURN_WEST" net="GND" xy=(39.8 27.3) padstack="L28_VIA030_C060" result=(dbid:000001CB4854B3C0 nil)
+HI_VIA id="GPIO_PC14_EAST_EXIT" net="GPIO_PC14" xy=(45.6 25.2) padstack="L28_VIA030_C060" result=(dbid:000001CB4854D798 nil)
+HI_VIA id="GPIO_RETURN_EAST_EXIT" net="GND" xy=(46.95 24.9) padstack="L28_VIA030_C060" result=(dbid:000001CB4854E110 nil)
+LOCAL_ROUTE	CAN_H_U5_TERM	"CAN_H"	"ETCH/TOP"	((69.588 14.73) (71.5 14.75))	(0.3)	((dbid:000001CB485504E8) nil)
+LOCAL_ROUTE	CAN_H_TERM_J3	"CAN_H"	"ETCH/TOP"	((71.5 14.75) (74.0 14.54))	(0.3)	((dbid:000001CB48550720) nil)
+LOCAL_ROUTE	CAN_L_U5_TERM	"CAN_L"	"ETCH/TOP"	((69.588 13.46) (70.8 13.46) (71.5 12.76) (71.5 11.702))	(0.3 0.3 0.3)	((dbid:000001CB48550958) nil)
+LOCAL_ROUTE	CAN_L_TERM_J3	"CAN_L"	"ETCH/TOP"	((71.5 11.702) (72.5 11.702) (74.0 12.0))	(0.3 0.3)	((dbid:000001CB48550C30) nil)
+LOCAL_ROUTE	CAN_TX_IDLE_BRANCH	"CAN_TXD"	"ETCH/TOP"	((64.0 16.0) (62.9 16.0) (61.9764 16.9236) (61.9764 17.9))	(0.2 0.2 0.2)	((dbid:000001CB48550EB8) nil)
+LOCAL_ROUTE	CAN_VCC_LOCAL	"V3V3"	"ETCH/TOP"	((59.8 13.46) (61.8 13.46) (64.0 13.46))	(0.6 0.6)	((dbid:000001CB485512B0 dbid:000001CB48551190) nil)
+LOCAL_ROUTE	CAN_GND_LOCAL	"GND"	"ETCH/TOP"	((64.0 14.73) (62.7 14.73) (61.8 15.0348) (59.8 15.0348))	(0.6 0.6 0.6)	((dbid:000001CB48552850 dbid:000001CB485526E0) nil)
+LOCAL_ROUTE	CAN_GND_VIA_A	"GND"	"ETCH/TOP"	((62.7 14.73) (62.6 14.73))	(0.6)	((dbid:000001CB48554B80) nil)
+HI_VIA id="V_HI_CAN_GND_A" net="GND" xy=(62.6 14.73) padstack="L28_VIA030_C060" result=(dbid:000001CB48554D48 nil)
+LOCAL_ROUTE	CAN_GND_VIA_B	"GND"	"ETCH/TOP"	((60.8 15.0348) (60.8 15.8348))	(0.6)	((dbid:000001CB48559380 dbid:000001CB48552850 dbid:000001CB485594F0) nil)
+HI_VIA id="V_HI_CAN_GND_B" net="GND" xy=(60.8 15.8348) padstack="L28_VIA030_C060" result=(dbid:000001CB48559598 nil)
+LOCAL_ROUTE	CAN_TX_PULLUP_V3	"V3V3"	"ETCH/TOP"	((59.8 13.46) (58.2 13.46) (58.2 17.9) (60.4016 17.9))	(0.6 0.6 0.6)	((dbid:000001CB4855BC00 dbid:000001CB4855B970 dbid:000001CB4855BB80) nil)
+LOCAL_ROUTE	NSS_SOURCE_SERIES	"PA4_SPI_NSS"	"ETCH/TOP"	((35.75 29.25) (34.8 29.25) (34.8 31.15) (32.93 33.02) (32.7984 33.02))	(0.2 0.2 0.2 0.2)	((dbid:000001CB4855D030) nil)
+LOCAL_ROUTE	NSS_PULLUP_INWARD	"PA4_SPI_NSS"	"ETCH/TOP"	((35.75 29.25) (36.8 29.25) (39.0 27.05) (39.0 26.2))	(0.2 0.2 0.2)	((dbid:000001CB4855D358) nil)
+HI_VIA id="NSS_PULLUP_INNER_VIA" net="PA4_SPI_NSS" xy=(39.0 26.2) padstack="L28_VIA030_C060" result=(dbid:000001CB4855D4F0 nil)
+HI_VIA id="NSS_PULLUP_WEST_VIA" net="PA4_SPI_NSS" xy=(32.2 22.0) padstack="L28_VIA030_C060" result=(dbid:000001CB4855E228 nil)
+LOCAL_ROUTE	NSS_PULLUP_BOTTOM	"PA4_SPI_NSS"	"ETCH/BOTTOM"	((39.0 26.2) (39.0 21.3) (32.2 21.3) (32.2 22.0))	(0.2 0.2 0.2)	((dbid:000001CB4855EB00) nil)
+LOCAL_ROUTE	NSS_PULLUP_RESISTOR	"PA4_SPI_NSS"	"ETCH/TOP"	((32.2 22.0) (32.0 21.0))	(0.2)	((dbid:000001CB4855EDD8) nil)
+HI_VIA id="NSS_PULLUP_GND_RETURN" net="GND" xy=(31.0 21.6) padstack="L28_VIA030_C060" result=(dbid:000001CB4855F010 nil)
+LOCAL_ROUTE	SPI_SOURCE_SCK_PRECISE	"PA5_SPI_SCK"	"ETCH/TOP"	((35.75 28.75) (34.385 28.75) (34.385 30.215) (33.6 31.0))	(0.2 0.2 0.2)	((dbid:000001CB485613E8) nil)
+LOCAL_ROUTE	SPI_SOURCE_MISO_PRECISE	"PA6_SPI_MISO"	"ETCH/TOP"	((35.75 28.25) (33.6 28.25) (33.6 29.0))	(0.2 0.2)	((dbid:000001CB48561620) nil)
+LOCAL_ROUTE	SPI_SOURCE_MOSI_PRECISE	"PA7_SPI_MOSI"	"ETCH/TOP"	((35.75 27.75) (34.35 27.75) (33.6 27.0))	(0.2 0.2)	((dbid:000001CB48561808) nil)
+HI_UNWIND_DRC_RESTORED=t
+DRC_STATUS	HI_BATCH_FINAL	0	t
+HI_ENDPOINT_PROOF from="V_HI_V3_SOURCE" to="V_HI_V3_STAR" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="V_HI_V3_STAR" to="V3_PERIPH_SOURCE_TOP" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="U1.23" to="V_HI_STAR_GND_EAST" expected=t actual=t objects=283
+HI_ENDPOINT_PROOF from="V3_PERIPH_SOURCE_TOP" to="V3_PERIM_EAST_LOW" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="V3_PERIM_EAST_LOW" to="V3_PERIM_EAST_HIGH" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="V3_PERIM_EAST_HIGH" to="V3_PERIM_WEST_HIGH" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="V3_PERIM_WEST_HIGH" to="J6.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="V3_PERIPH_EAST" to="J4.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="V3_PERIPH_EAST" to="J5.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="V3_PERIPH_NORTH" to="J11.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="V3_PERIPH_NORTH" to="J12.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="V3_PERIPH_NORTH" to="J13.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="V3_PERIPH_SOUTH" to="C12.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="V3_PERIPH_SOURCE_TOP" to="R25.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C12.1" to="R9.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="V3_USB_AUX_R9" to="Q2.2" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="V3_USB_AUX_Q2" to="R10.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="R10.1" to="J9.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="J4.1" to="R18.2" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="J4.1" to="R30.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="V3_PERIPH_EAST" to="R19.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="J12.1" to="R27.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="U1.2" to="GPIO_GPIO_PC13_VIA" expected=t actual=t objects=4
+HI_ENDPOINT_PROOF from="U1.3" to="GPIO_GPIO_PC14_VIA" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U1.4" to="GPIO_GPIO_PC15_VIA" expected=t actual=t objects=4
+HI_ENDPOINT_PROOF from="GPIO_GPIO_PC14_VIA" to="GPIO_PC14_EAST_EXIT" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U5.7" to="R15.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R15.1" to="J3.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U5.6" to="R15.2" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R15.2" to="J3.2" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U5.1" to="R14.2" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="C12.1" to="U5.3" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="U5.2" to="C12.2" expected=t actual=t objects=283
+HI_ENDPOINT_PROOF from="CAN_GND_LOCAL" to="V_HI_CAN_GND_A" expected=t actual=t objects=283
+HI_ENDPOINT_PROOF from="CAN_GND_LOCAL" to="V_HI_CAN_GND_B" expected=t actual=t objects=283
+HI_ENDPOINT_PROOF from="C12.1" to="R14.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="NSS_PULLUP_INNER_VIA" to="NSS_PULLUP_WEST_VIA" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="U1.15" to="R21.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="U1.16" to="R24.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="U1.17" to="R22.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="U1.14" to="R23.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="U1.14" to="R25.2" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="U1.15" to="R21.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="U1.16" to="R24.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="U1.17" to="R22.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="C9.1" to="J4.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="J5.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="J6.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="J9.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="J11.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="J12.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="J13.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="R25.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="R19.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="R20.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="R27.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="R30.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="R9.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="R10.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="R18.2" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="Q2.2" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="C12.1" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="U1.23" to="V_HI_STAR_GND_EAST" expected=t actual=t objects=283
+HI_ENDPOINT_PROOF from="U1.23" to="U1.47" expected=t actual=t objects=283
+HI_ENDPOINT_PROOF from="C9.1" to="U1.24" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="U1.36" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="U1.48" expected=t actual=t objects=93
+HI_ENDPOINT_PROOF from="C9.1" to="U1.1" expected=t actual=t objects=93
+HI_BATCH_COMPLETED drcCount=0 status=CANDIDATE_DRC_ZERO_NOT_ENGINEERING_RELEASE board="D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native/HI_4L_postcritical_4L_b010.brd"

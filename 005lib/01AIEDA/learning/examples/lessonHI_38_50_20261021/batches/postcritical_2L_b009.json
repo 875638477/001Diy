@@ -1,0 +1,1854 @@
+{
+  "status": "EXPLICIT_POST_USB_CRITICAL_CANDIDATE_REQUIRE_NATIVE_DRC",
+  "nativeVariant": "2L",
+  "units": "mm",
+  "constraintOperations": [
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_STAR_RETURN_GND_P_2L",
+      "copyFrom": "HI2L_P_GROUND",
+      "values": {
+        "necklength_max": "1.5 MM"
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_STAR_RETURN_GND",
+      "layer": "TOP",
+      "polygon": [
+        [
+          35.15,
+          24.45
+        ],
+        [
+          38.4,
+          24.45
+        ],
+        [
+          38.4,
+          25.7
+        ],
+        [
+          35.15,
+          25.7
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GROUND_P",
+          "cset": "HI_STAR_RETURN_GND_P_2L"
+        }
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "type": "deleteSegment",
+      "id": "RIPUP_STAR_OLD_1",
+      "net": "V3V3",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          30.7,
+          32
+        ],
+        [
+          30.7,
+          24
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Delete uniqueactualsegment bynet/layer/exactstartEnd(orreverse)/width only; neverdeleteentiremergedpath. Preserveallothercopper."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "RIPUP_STAR_OLD_2",
+      "net": "V3V3",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          30.7,
+          24
+        ],
+        [
+          37,
+          24
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Delete uniqueactualsegment bynet/layer/exactstartEnd(orreverse)/width only; neverdeleteentiremergedpath. Preserveallothercopper."
+    },
+    {
+      "type": "route",
+      "id": "STAR_BOTTOM_FEED_DIAGONAL",
+      "net": "V3V3",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          30.7,
+          32
+        ],
+        [
+          37,
+          25.7
+        ],
+        [
+          37,
+          24
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "V_HI_V3_SOURCE",
+      "to": "V_HI_V3_STAR",
+      "purpose": "H45realreroute: oldverticalx30.7 blockedSPIwestheaderescape; diagonal opensx31.65/y27.9 corridor without longMOSI detour."
+    },
+    {
+      "type": "route",
+      "id": "STAR_PERIPH_TAP_TOP",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          37,
+          24
+        ],
+        [
+          33.3,
+          24
+        ],
+        [
+          33.3,
+          22.5
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "V_HI_V3_STAR",
+      "to": "V3_PERIPH_SOURCE_TOP",
+      "purpose": "Peripheralmain .6C9takeofffromstarvia, notMCUpadneck. SameTOP eliminatesproposedsecondvia33.3,22.5 andBOTTOMhorizontalbranch. ActualGND23padgap.30/oldGNDlinegap.325."
+    },
+    {
+      "type": "route",
+      "id": "STAR_DIAG_GROUND_RETURN",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          24.75
+        ],
+        [
+          36.48,
+          24.75
+        ],
+        [
+          37,
+          25.27
+        ],
+        [
+          38,
+          25.27
+        ]
+      ],
+      "widths": [
+        0.25,
+        0.25,
+        0.6
+      ],
+      "from": "U1.23",
+      "to": "V_HI_STAR_GND_EAST",
+      "purpose": "GNDneck .73+.735391=1.465391 aroundGPIO22andretainedVDD24tip; onlynewGNDsmallphysicalregionmax1.5, normal.6 afterpadfield. No extrabroadspacingexception."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_STAR_GND_EAST",
+      "net": "GND",
+      "xy": [
+        38,
+        25.27
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "EastofnewBOTTOMstarvertical, gap.40;TOP .6normalreturn gap.42 toexistingVDD24 .6tip, .35 toGPIO22pad."
+    },
+    {
+      "type": "route",
+      "id": "V3_PERIPH_SOUTH",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          33.3,
+          22.5
+        ],
+        [
+          33.3,
+          1
+        ],
+        [
+          76.8,
+          1
+        ],
+        [
+          78.2,
+          2.4
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "V3_PERIPH_SOURCE_TOP",
+      "to": "V3_PERIM_EAST_LOW",
+      "purpose": "TOPperimeter supply leavesSPIx7..35/y27..36 entirelyfree. y1 belowUSBshell copper; actualedge/keepinverify.",
+      "length_mm": 66.97989898732234
+    },
+    {
+      "type": "route",
+      "id": "V3_PERIPH_EAST",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          78.2,
+          2.4
+        ],
+        [
+          78.2,
+          58.2
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V3_PERIM_EAST_LOW",
+      "to": "V3_PERIM_EAST_HIGH",
+      "purpose": "Outsideallrightheadercontacts butinside board/mountingkeepouts; digitaltracesenterfromleft.",
+      "length_mm": 55.800000000000004
+    },
+    {
+      "type": "route",
+      "id": "V3_PERIPH_NORTH",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          78.2,
+          58.2
+        ],
+        [
+          1.8,
+          58.2
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V3_PERIM_EAST_HIGH",
+      "to": "V3_PERIM_WEST_HIGH",
+      "purpose": "Outsidey55GPIOheaderrow, noTOP3VrailthroughHSE/MCUfanout.",
+      "length_mm": 76.4
+    },
+    {
+      "type": "route",
+      "id": "V3_PERIPH_WEST_J6",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          1.8,
+          58.2
+        ],
+        [
+          1.8,
+          26
+        ],
+        [
+          7,
+          26
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "V3_PERIM_WEST_HIGH",
+      "to": "J6.1",
+      "purpose": "J6supplyapproachesfromy26; SPI source/headercorridorx7..35/y27..36 reserved forsignals.",
+      "length_mm": 37.400000000000006
+    },
+    {
+      "type": "route",
+      "id": "V3_J4",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          78.2,
+          28.81
+        ],
+        [
+          74,
+          28.81
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V3_PERIPH_EAST",
+      "to": "J4.1",
+      "purpose": "ShortbranchtoUARTconnectorV3pin, no fine neck.",
+      "length_mm": 4.200000000000003
+    },
+    {
+      "type": "route",
+      "id": "V3_J5",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          78.2,
+          42.81
+        ],
+        [
+          74,
+          42.81
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V3_PERIPH_EAST",
+      "to": "J5.1",
+      "purpose": "ShortbranchtoI2CconnectorV3pin.",
+      "length_mm": 4.200000000000003
+    },
+    {
+      "type": "route",
+      "id": "V3_J11",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          9.11,
+          58.2
+        ],
+        [
+          9.11,
+          55
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V3_PERIPH_NORTH",
+      "to": "J11.1",
+      "purpose": "GPIOheaderV3 shortnorthbranch; no routebetween.6line/.3space andadjacent2.54mmordinarypads.",
+      "length_mm": 3.200000000000003
+    },
+    {
+      "type": "route",
+      "id": "V3_J12",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          31.11,
+          58.2
+        ],
+        [
+          31.11,
+          55
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V3_PERIPH_NORTH",
+      "to": "J12.1",
+      "purpose": "GPIOheaderV3 shortnorthbranch; no routebetween.6line/.3space andadjacent2.54mmordinarypads.",
+      "length_mm": 3.200000000000003
+    },
+    {
+      "type": "route",
+      "id": "V3_J13",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          53.11,
+          58.2
+        ],
+        [
+          53.11,
+          55
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V3_PERIPH_NORTH",
+      "to": "J13.1",
+      "purpose": "GPIOheaderV3 shortnorthbranch; no routebetween.6line/.3space andadjacent2.54mmordinarypads.",
+      "length_mm": 3.200000000000003
+    },
+    {
+      "type": "route",
+      "id": "V3_CAN_MAIN",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          60.5,
+          1
+        ],
+        [
+          60.5,
+          12.76
+        ],
+        [
+          59.8,
+          13.46
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "V3_PERIPH_SOUTH",
+      "to": "C12.1",
+      "purpose": "DedicatedCAN60mAbranchtodecouplingbank C12/C11/U5; no currentthroughMCUdecapneck.",
+      "length_mm": 12.74994949366117
+    },
+    {
+      "type": "route",
+      "id": "V3_SPI_NSS_PULLUP",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          33.3,
+          22.5
+        ],
+        [
+          33.5748,
+          22.2252
+        ],
+        [
+          33.5748,
+          21
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "V3_PERIPH_SOURCE_TOP",
+      "to": "R25.1",
+      "purpose": "NSSpullup only, noSPIclocksource orderchange.",
+      "length_mm": 1.6138258869401312
+    },
+    {
+      "type": "route",
+      "id": "V3_USB_AUX_R9",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          59.8,
+          13.46
+        ],
+        [
+          56.2,
+          13.46
+        ],
+        [
+          56.2,
+          13.1016
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "C12.1",
+      "to": "R9.1",
+      "purpose": "VBUSdetectoroutputpullup fedV3, notUSBVBUS.",
+      "length_mm": 3.9583999999999957
+    },
+    {
+      "type": "route",
+      "id": "V3_USB_AUX_Q2",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          56.2,
+          13.46
+        ],
+        [
+          53.8,
+          13.46
+        ],
+        [
+          53.8,
+          10.73
+        ],
+        [
+          49.9,
+          10.73
+        ],
+        [
+          49.9,
+          12.2282
+        ],
+        [
+          48.9525,
+          12.2282
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "V3_USB_AUX_R9",
+      "to": "Q2.2",
+      "purpose": ".6V3corridorbetweenQ1source/gateanddrain, tightestnominalcoppergap.3018 tolowerrow. AvoidshortingVBUSdrain/gate.",
+      "length_mm": 11.475700000000002
+    },
+    {
+      "type": "route",
+      "id": "V3_USB_ATTACH_PULLUP",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          49.9,
+          12.2282
+        ],
+        [
+          49.9,
+          16
+        ],
+        [
+          48.6016,
+          16
+        ],
+        [
+          48.6016,
+          17.2
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "V3_USB_AUX_Q2",
+      "to": "R10.1",
+      "purpose": "Q2defaultoffgatepulluptosource; do not tieR10.2attachcontroltoV3.",
+      "length_mm": 6.270200000000001
+    },
+    {
+      "type": "route",
+      "id": "V3_SWD_VTREF",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          48.6016,
+          17.2
+        ],
+        [
+          48.6016,
+          18
+        ],
+        [
+          50,
+          19.3984
+        ],
+        [
+          51,
+          20
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "R10.1",
+      "to": "J9.1",
+      "purpose": "SenseonlyVTREF. Probe mustnotpowerrail, TLV755noreverseblocking. Signalroutingmusthonorthissupplycorridor.",
+      "length_mm": 3.944650624282887
+    },
+    {
+      "type": "route",
+      "id": "V3_UART_IDLE",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          74,
+          28.81
+        ],
+        [
+          72,
+          28.81
+        ],
+        [
+          71,
+          27.81
+        ],
+        [
+          69.6764,
+          27.81
+        ],
+        [
+          69.6764,
+          25
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "J4.1",
+      "to": "R18.2",
+      "purpose": "UART_RXidle10kpullup independentofdata source; keepsupplyawayfromadjacentconnectorTX/RXpads.",
+      "length_mm": 7.547813562373093
+    },
+    {
+      "type": "route",
+      "id": "V3_BOOT_SERVICE",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          74,
+          28.81
+        ],
+        [
+          72.5,
+          30.31
+        ],
+        [
+          59,
+          30.31
+        ],
+        [
+          57.4916,
+          31.1016
+        ],
+        [
+          56.7,
+          31.1016
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "J4.1",
+      "to": "R30.1",
+      "purpose": "ApproachR30V3fromsouth/right, neverfromnorththroughBOOT_SERVICEpad2.",
+      "length_mm": 18.116417076752867
+    },
+    {
+      "type": "route",
+      "id": "V3_I2C_PULLUPS",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          78.2,
+          47
+        ],
+        [
+          56.9252,
+          47
+        ],
+        [
+          56.9252,
+          37
+        ],
+        [
+          56.9252,
+          35
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "V3_PERIPH_EAST",
+      "to": "R19.1",
+      "purpose": "FeedsR20.1andR19.1. Doesnotcrossy55GPIOpads/75,55mountingkeepout. I2Cdata approachfromy<34 beforebranching.",
+      "length_mm": 33.274800000000006
+    },
+    {
+      "type": "route",
+      "id": "V3_RESET_PULLUP",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          31.11,
+          55
+        ],
+        [
+          31.11,
+          47
+        ],
+        [
+          38.1016,
+          47
+        ],
+        [
+          38.1016,
+          41.3
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "J12.1",
+      "to": "R27.1",
+      "purpose": "OutsideHSEvoidtopedge39.75; .6resetpullupsupplyfromGPIOheaderV3branch, not throughquietisland.",
+      "length_mm": 20.6916
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC13_TOP",
+      "net": "GPIO_PC13",
+      "layer": "TOP",
+      "points": [
+        [
+          42.25,
+          31.25
+        ],
+        [
+          42.25,
+          29.15
+        ],
+        [
+          42,
+          28.9
+        ]
+      ],
+      "width": 0.2,
+      "from": "U1.2",
+      "purpose": "Shortinsideescape; noHSEshadowcross",
+      "to": "GPIO_GPIO_PC13_VIA"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_GPIO_PC13_VIA",
+      "net": "GPIO_PC13",
+      "xy": [
+        42,
+        28.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "OffpadunderLQFP; masktent/return/referencecheck"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC14_TOP",
+      "net": "GPIO_PC14",
+      "layer": "TOP",
+      "points": [
+        [
+          41.75,
+          31.25
+        ],
+        [
+          41.75,
+          29.8
+        ],
+        [
+          41,
+          29.8
+        ],
+        [
+          41,
+          27.8
+        ]
+      ],
+      "width": 0.2,
+      "from": "U1.3",
+      "purpose": "Shortinsideescape; noHSEshadowcross",
+      "to": "GPIO_GPIO_PC14_VIA"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_GPIO_PC14_VIA",
+      "net": "GPIO_PC14",
+      "xy": [
+        41,
+        27.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "OffpadunderLQFP; masktent/return/referencecheck"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC15_TOP",
+      "net": "GPIO_PC15",
+      "layer": "TOP",
+      "points": [
+        [
+          41.25,
+          31.25
+        ],
+        [
+          41.25,
+          30.25
+        ],
+        [
+          40.3,
+          30.25
+        ],
+        [
+          40.3,
+          28.9
+        ]
+      ],
+      "width": 0.2,
+      "from": "U1.4",
+      "purpose": "Shortinsideescape; noHSEshadowcross",
+      "to": "GPIO_GPIO_PC15_VIA"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_GPIO_PC15_VIA",
+      "net": "GPIO_PC15",
+      "xy": [
+        40.3,
+        28.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "OffpadunderLQFP; masktent/return/referencecheck"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC13_BOTTOM_START",
+      "net": "GPIO_PC13",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          42,
+          28.9
+        ],
+        [
+          42,
+          31.1
+        ],
+        [
+          35.8,
+          31.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "OnlypartialwestescapeunderMCU, completeordinaryGPIOoutsideHSEmoat;2LactualTOPreferencecoverageandgaplengthmustbechecked",
+      "from": "GPIO_GPIO_PC13_VIA"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC14_BOTTOM_START",
+      "net": "GPIO_PC14",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          41,
+          27.8
+        ],
+        [
+          43.6,
+          25.2
+        ],
+        [
+          45.6,
+          25.2
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Rootrequested southeastBOTTOMescape; no weststub acrossnewSTARorSPIbank.",
+      "to": "GPIO_PC14_EAST_EXIT",
+      "from": "GPIO_GPIO_PC14_VIA"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC15_BOTTOM_START",
+      "net": "GPIO_PC15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.3,
+          28.9
+        ],
+        [
+          40.3,
+          30.3
+        ],
+        [
+          35.4,
+          30.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "OnlypartialwestescapeunderMCU, completeordinaryGPIOoutsideHSEmoat;2LactualTOPreferencecoverageandgaplengthmustbechecked",
+      "from": "GPIO_GPIO_PC15_VIA"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_RETURN_EAST",
+      "net": "GND",
+      "xy": [
+        42,
+        27.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "NearbyapplicationGNDreturn tiesactualTOPreference to2LBOTTOM or4LL2/L3. Physicalplaneconnectivityrequired."
+    },
+    {
+      "type": "via",
+      "id": "GPIO_RETURN_WEST",
+      "net": "GND",
+      "xy": [
+        39.8,
+        27.3
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "NearbyapplicationGNDreturn tiesactualTOPreference to2LBOTTOM or4LL2/L3. Physicalplaneconnectivityrequired."
+    },
+    {
+      "type": "via",
+      "id": "GPIO_PC14_EAST_EXIT",
+      "net": "GPIO_PC14",
+      "xy": [
+        45.6,
+        25.2
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "OffpadBOTTOM-toTOP eastanchor, thenrootroutesoutsideHSEtoJ11; no danglingweststub"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_RETURN_EAST_EXIT",
+      "net": "GND",
+      "xy": [
+        46.95,
+        24.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "ApplicationGNDnearPC14easttransition distance1.382932mm; realreferenceandplaneproofrequired"
+    },
+    {
+      "type": "route",
+      "id": "CAN_H_U5_TERM",
+      "net": "CAN_H",
+      "layer": "TOP",
+      "points": [
+        [
+          69.588,
+          14.73
+        ],
+        [
+          71.5,
+          14.75
+        ]
+      ],
+      "widths": [
+        0.3
+      ],
+      "from": "U5.7",
+      "to": "R15.1",
+      "purpose": "Short branch joins end-node termination next to J3; retain two-end-only population rule."
+    },
+    {
+      "type": "route",
+      "id": "CAN_H_TERM_J3",
+      "net": "CAN_H",
+      "layer": "TOP",
+      "points": [
+        [
+          71.5,
+          14.75
+        ],
+        [
+          74,
+          14.54
+        ]
+      ],
+      "widths": [
+        0.3
+      ],
+      "from": "R15.1",
+      "to": "J3.1",
+      "purpose": "Main connector route via termination pad; no long T stub."
+    },
+    {
+      "type": "route",
+      "id": "CAN_L_U5_TERM",
+      "net": "CAN_L",
+      "layer": "TOP",
+      "points": [
+        [
+          69.588,
+          13.46
+        ],
+        [
+          70.8,
+          13.46
+        ],
+        [
+          71.5,
+          12.76
+        ],
+        [
+          71.5,
+          11.702
+        ]
+      ],
+      "widths": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "from": "U5.6",
+      "to": "R15.2",
+      "purpose": "Horizontal escape avoids U5 NC5 copper before descending, remain beside CANH corridor without crossing."
+    },
+    {
+      "type": "route",
+      "id": "CAN_L_TERM_J3",
+      "net": "CAN_L",
+      "layer": "TOP",
+      "points": [
+        [
+          71.5,
+          11.702
+        ],
+        [
+          72.5,
+          11.702
+        ],
+        [
+          74,
+          12
+        ]
+      ],
+      "widths": [
+        0.3,
+        0.3
+      ],
+      "from": "R15.2",
+      "to": "J3.2",
+      "purpose": "Direct short route to bus connector; preserve connector GND3."
+    },
+    {
+      "type": "route",
+      "id": "CAN_TX_IDLE_BRANCH",
+      "net": "CAN_TXD",
+      "layer": "TOP",
+      "points": [
+        [
+          64,
+          16
+        ],
+        [
+          62.9,
+          16
+        ],
+        [
+          61.9764,
+          16.9236
+        ],
+        [
+          61.9764,
+          17.9
+        ]
+      ],
+      "widths": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "from": "U5.1",
+      "to": "R14.2",
+      "purpose": "10k idle pullup branch near TXD; main TXD approaches U5 from left, do not route digital track between CAN bus pins."
+    },
+    {
+      "type": "route",
+      "id": "CAN_VCC_LOCAL",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          59.8,
+          13.46
+        ],
+        [
+          61.8,
+          13.46
+        ],
+        [
+          64,
+          13.46
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "C12.1",
+      "to": "U5.3",
+      "purpose": "Independent main-source supply must reachC12positive; C11.1 inline local100nF toVCC, .6not throughMCUescape."
+    },
+    {
+      "type": "route",
+      "id": "CAN_GND_LOCAL",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          64,
+          14.73
+        ],
+        [
+          62.7,
+          14.73
+        ],
+        [
+          61.8,
+          15.0348
+        ],
+        [
+          59.8,
+          15.0348
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "U5.2",
+      "to": "C12.2",
+      "purpose": "DirectTOPwide GNDlink fromC11/C12negative totransceiverGND, not depend only on distantplane."
+    },
+    {
+      "type": "route",
+      "id": "CAN_GND_VIA_A",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          62.7,
+          14.73
+        ],
+        [
+          62.6,
+          14.73
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "CAN_GND_LOCAL",
+      "to": "V_HI_CAN_GND_A",
+      "purpose": "Offpad nearU5GND andC11 HFloop."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_CAN_GND_A",
+      "net": "GND",
+      "xy": [
+        62.6,
+        14.73
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "LocalGNDreference via, powercurrentnotthin signalreturn."
+    },
+    {
+      "type": "route",
+      "id": "CAN_GND_VIA_B",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          60.8,
+          15.0348
+        ],
+        [
+          60.8,
+          15.8348
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "CAN_GND_LOCAL",
+      "to": "V_HI_CAN_GND_B",
+      "purpose": "Second groundvia offC11/C12negativepads."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_CAN_GND_B",
+      "net": "GND",
+      "xy": [
+        60.8,
+        15.8348
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Common reference parallelgroundvia, actualplane connectivity required."
+    },
+    {
+      "type": "route",
+      "id": "CAN_TX_PULLUP_V3",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          59.8,
+          13.46
+        ],
+        [
+          58.2,
+          13.46
+        ],
+        [
+          58.2,
+          17.9
+        ],
+        [
+          60.4016,
+          17.9
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "C12.1",
+      "to": "R14.1",
+      "purpose": "10kTXDidle pullup receives independent3V3; do not call a33ohm dampingresistor."
+    },
+    {
+      "type": "route",
+      "id": "NSS_SOURCE_SERIES",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          29.25
+        ],
+        [
+          34.8,
+          29.25
+        ],
+        [
+          34.8,
+          31.15
+        ],
+        [
+          32.93,
+          33.02
+        ],
+        [
+          32.7984,
+          33.02
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit source-first NSS and pullup branch, preserves west SPI corridor; native/reference validation pending"
+    },
+    {
+      "type": "route",
+      "id": "NSS_PULLUP_INWARD",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          29.25
+        ],
+        [
+          36.8,
+          29.25
+        ],
+        [
+          39,
+          27.05
+        ],
+        [
+          39,
+          26.2
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit source-first NSS and pullup branch, preserves west SPI corridor; native/reference validation pending",
+      "to": "NSS_PULLUP_INNER_VIA"
+    },
+    {
+      "type": "via",
+      "id": "NSS_PULLUP_INNER_VIA",
+      "net": "PA4_SPI_NSS",
+      "xy": [
+        39,
+        26.2
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad layerchange; nearby actual GND return and reference review required"
+    },
+    {
+      "type": "via",
+      "id": "NSS_PULLUP_WEST_VIA",
+      "net": "PA4_SPI_NSS",
+      "xy": [
+        32.2,
+        22
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad layerchange; nearby actual GND return and reference review required"
+    },
+    {
+      "type": "route",
+      "id": "NSS_PULLUP_BOTTOM",
+      "net": "PA4_SPI_NSS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39,
+          26.2
+        ],
+        [
+          39,
+          21.3
+        ],
+        [
+          32.2,
+          21.3
+        ],
+        [
+          32.2,
+          22
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit source-first NSS and pullup branch, preserves west SPI corridor; native/reference validation pending",
+      "from": "NSS_PULLUP_INNER_VIA",
+      "to": "NSS_PULLUP_WEST_VIA"
+    },
+    {
+      "type": "route",
+      "id": "NSS_PULLUP_RESISTOR",
+      "net": "PA4_SPI_NSS",
+      "layer": "TOP",
+      "points": [
+        [
+          32.2,
+          22
+        ],
+        [
+          32,
+          21
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit source-first NSS and pullup branch, preserves west SPI corridor; native/reference validation pending",
+      "from": "NSS_PULLUP_WEST_VIA"
+    },
+    {
+      "type": "via",
+      "id": "NSS_PULLUP_GND_RETURN",
+      "net": "GND",
+      "xy": [
+        31,
+        21.6
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Offpad layerchange; nearby actual GND return and reference review required"
+    },
+    {
+      "type": "route",
+      "id": "SPI_SOURCE_SCK_PRECISE",
+      "net": "PA5_SPI_SCK",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          28.75
+        ],
+        [
+          34.385,
+          28.75
+        ],
+        [
+          34.385,
+          30.215
+        ],
+        [
+          33.6,
+          31
+        ]
+      ],
+      "width": 0.2,
+      "from": "U1.15",
+      "to": "R21.1",
+      "purpose": "Explicit precise source-side route with correct series-resistor order, controls actual pad edge gaps; native/return verification pending"
+    },
+    {
+      "type": "route",
+      "id": "SPI_SOURCE_MISO_PRECISE",
+      "net": "PA6_SPI_MISO",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          28.25
+        ],
+        [
+          33.6,
+          28.25
+        ],
+        [
+          33.6,
+          29
+        ]
+      ],
+      "width": 0.2,
+      "from": "U1.16",
+      "to": "R24.1",
+      "purpose": "Explicit precise source-side route with correct series-resistor order, controls actual pad edge gaps; native/return verification pending"
+    },
+    {
+      "type": "route",
+      "id": "SPI_SOURCE_MOSI_PRECISE",
+      "net": "PA7_SPI_MOSI",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          27.75
+        ],
+        [
+          34.35,
+          27.75
+        ],
+        [
+          33.6,
+          27
+        ]
+      ],
+      "width": 0.2,
+      "from": "U1.17",
+      "to": "R22.1",
+      "purpose": "Explicit precise source-side route with correct series-resistor order, controls actual pad edge gaps; native/return verification pending"
+    },
+    {
+      "type": "shape",
+      "id": "HI_GPIO_TOP_REF_1_1",
+      "net": "GND",
+      "layer": "TOP",
+      "polygon": [
+        [
+          42.4,
+          27.0
+        ],
+        [
+          35.8,
+          27.0
+        ],
+        [
+          35.8,
+          31.9
+        ],
+        [
+          40.25,
+          31.9
+        ],
+        [
+          40.25,
+          31.6
+        ],
+        [
+          42.4,
+          31.6
+        ]
+      ],
+      "voids": [],
+      "dynamic": true
+    },
+    {
+      "type": "shape",
+      "id": "HI_GPIO_TOP_REF_2_1",
+      "net": "GND",
+      "layer": "TOP",
+      "polygon": [
+        [
+          47.5,
+          28.4
+        ],
+        [
+          47.5,
+          24.6
+        ],
+        [
+          39.2,
+          24.6
+        ],
+        [
+          39.2,
+          28.4
+        ],
+        [
+          44.75,
+          28.4
+        ],
+        [
+          44.75,
+          28.15
+        ],
+        [
+          46.15,
+          28.15
+        ],
+        [
+          46.15,
+          28.4
+        ]
+      ],
+      "voids": [],
+      "dynamic": true
+    }
+  ],
+  "aliases": [
+    {
+      "id": "V_HI_V3_SOURCE",
+      "net": "V3V3",
+      "layer": "BOTTOM",
+      "xy": [
+        30.7,
+        32
+      ],
+      "type": "via"
+    },
+    {
+      "id": "V_HI_V3_STAR",
+      "net": "V3V3",
+      "layer": "BOTTOM",
+      "xy": [
+        37,
+        24
+      ],
+      "type": "via"
+    },
+    {
+      "id": "V3_PERIPH_SOURCE_TOP",
+      "net": "V3V3",
+      "layer": "TOP",
+      "xy": [
+        33.3,
+        22.5
+      ],
+      "type": "point"
+    },
+    {
+      "id": "V3_PERIM_EAST_LOW",
+      "net": "V3V3",
+      "layer": "TOP",
+      "xy": [
+        78.2,
+        2.4
+      ],
+      "type": "point"
+    },
+    {
+      "id": "V3_PERIM_EAST_HIGH",
+      "net": "V3V3",
+      "layer": "TOP",
+      "xy": [
+        78.2,
+        58.2
+      ],
+      "type": "point"
+    },
+    {
+      "id": "V3_PERIM_WEST_HIGH",
+      "net": "V3V3",
+      "layer": "TOP",
+      "xy": [
+        1.8,
+        58.2
+      ],
+      "type": "point"
+    }
+  ],
+  "proofs": [
+    {
+      "from": "U1.14",
+      "to": "R23.1",
+      "connected": true
+    },
+    {
+      "from": "U1.14",
+      "to": "R25.2",
+      "connected": true
+    },
+    {
+      "from": "U1.15",
+      "to": "R21.1",
+      "connected": true
+    },
+    {
+      "from": "U1.16",
+      "to": "R24.1",
+      "connected": true
+    },
+    {
+      "from": "U1.17",
+      "to": "R22.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "J4.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "J5.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "J6.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "J9.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "J11.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "J12.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "J13.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "R25.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "R19.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "R20.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "R27.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "R30.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "R9.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "R10.1",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "R18.2",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "Q2.2",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "C12.1",
+      "connected": true
+    },
+    {
+      "from": "U1.23",
+      "to": "V_HI_STAR_GND_EAST",
+      "connected": true
+    },
+    {
+      "from": "U1.23",
+      "to": "U1.47",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "U1.24",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "U1.36",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "U1.48",
+      "connected": true
+    },
+    {
+      "from": "C9.1",
+      "to": "U1.1",
+      "connected": true
+    }
+  ],
+  "postChecks": [
+    {
+      "type": "hseIsolation",
+      "anchorXY": [
+        45.45,
+        28.85
+      ],
+      "localLayer": "BOTTOM",
+      "guardPoints": [
+        [
+          42.2,
+          39.8
+        ],
+        [
+          44.2,
+          39.8
+        ],
+        [
+          47.8,
+          33.5
+        ]
+      ]
+    }
+  ],
+  "engineeringSources": [
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\STAR_reroute_07b.json",
+      "sha256": "B5DE1C5F431E56F06FF9E849929A3346F3435BDDFEE0820B75832C7F9A6D2858"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\V3_peripheral_distribution_06b.json",
+      "sha256": "04D51ECF32D9D987970F63BECF98CC67BB166603A3128BDB863CA81919E99256"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\gpio_north_escape_v6.json",
+      "sha256": "B1240DD05F2B8CBEA95098871EC7A0DBBC20F7B949580B1F79DA916E21B90B97"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\interface_CAN_routes_04.json",
+      "sha256": "BE3F8E582668C2CEAAB3A7D1CF6F9597845CF7F51D21667E217B8742005BD564"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\CAN_local_supply_05.json",
+      "sha256": "5E867A6718D1FD382259BE85226FD9CF29B202DA9A0B30065138ED64C6FF6A81"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\SPI_source_explicit_v5.json",
+      "sha256": "36A7AC369B3A16A76ABD02FF3B1AEC0C6F98962F006D49A33C6399A81E591F41"
+    }
+  ],
+  "twoLayerReferencePatchClipping": [
+    {
+      "sourcePolygon": [
+        [
+          35.8,
+          27
+        ],
+        [
+          42.4,
+          27
+        ],
+        [
+          42.4,
+          31.9
+        ],
+        [
+          35.8,
+          31.9
+        ]
+      ],
+      "sourceArea": 32.339999999999996,
+      "clippedArea": 31.695,
+      "removedMoatOverlapArea": 0.6449999999999935
+    },
+    {
+      "sourcePolygon": [
+        [
+          39.2,
+          24.6
+        ],
+        [
+          47.5,
+          24.6
+        ],
+        [
+          47.5,
+          28.4
+        ],
+        [
+          39.2,
+          28.4
+        ]
+      ],
+      "sourceArea": 31.539999999999967,
+      "clippedArea": 31.189999999999966,
+      "removedMoatOverlapArea": 0.34999999999999964
+    }
+  ],
+  "notes": [
+    "Exactly remove two old BOTTOM STAR segments, preserve all other old supply copper, then build reviewed diagonal and TOP peripheral tap.",
+    "New1.465391mm GND escape may conflict with existing1.4G31 overlap. Record actual DRC; do not silently change existingG31 or globalbudget.",
+    "GPIO6 reference patches geometrically exclude application-HSE moat on TOP; actual auto-voids/coverage/connected components require review.",
+    "SPI source5 leaves header-side ordinary routes unfinished; reference and HSE negative test are explicit, not a whole-board acceptance."
+  ]
+}

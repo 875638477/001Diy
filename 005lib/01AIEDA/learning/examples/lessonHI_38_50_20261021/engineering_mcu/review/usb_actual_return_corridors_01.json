@@ -1,0 +1,231 @@
+{
+  "status": "ACTUAL_COPPER_AVAILABLE_RETURN_CORRIDORS_NOT_FIELD_CURRENT_PREDICTION",
+  "date": "2026-10-22T00:25:42.879251+08:00",
+  "method": "Check complete buffered polylines inside actualgroundpolygon+GNDclines+qualifiednativepads. Stated lengths are available geometric upperbounds, not shortest electromagnetic paths; startpointsy4.9 intentionally.9mm southofsignalvias, not the signalcenters.",
+  "cases": {
+    "4L": {
+      "normalized": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\usb_esd_4L_b008\\normalized.json",
+      "sha256": "de5ac2bc18cdbe97c1a928f51fb22fb2af911d6ff5950c7110fa2d26c934e9cc",
+      "readback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_usb_esd_4L_b008",
+      "sourceScope": "4LformalUSB8checkpoint",
+      "mirrorReturnCorridors": [
+        {
+          "id": "MirrorLeftReturn",
+          "layer": "L3",
+          "points": [
+            [
+              39.75,
+              4.9
+            ],
+            [
+              38.9,
+              4.9
+            ],
+            [
+              38.15,
+              5.8
+            ]
+          ],
+          "verifiedCopperCorridorWidth": 0.4,
+          "lengthUpperBound": 2.021537451385999,
+          "uncoveredStripArea": 0.0,
+          "wholeStripInActualGND": true
+        },
+        {
+          "id": "MirrorRightReturn",
+          "layer": "L3",
+          "points": [
+            [
+              40.75,
+              4.9
+            ],
+            [
+              41.3,
+              4.9
+            ],
+            [
+              41.7,
+              5.8
+            ]
+          ],
+          "verifiedCopperCorridorWidth": 0.4,
+          "lengthUpperBound": 1.5348857801796094,
+          "uncoveredStripArea": 0.0,
+          "wholeStripInActualGND": true
+        },
+        {
+          "id": "MirrorCommonReturnStrip",
+          "layer": "L3",
+          "points": [
+            [
+              38.15,
+              5.8
+            ],
+            [
+              38.9,
+              4.9
+            ],
+            [
+              41.3,
+              4.9
+            ],
+            [
+              41.7,
+              5.8
+            ]
+          ],
+          "verifiedCopperCorridorWidth": 0.4,
+          "lengthUpperBound": 4.556423231565609,
+          "uncoveredStripArea": 0.0,
+          "wholeStripInActualGND": true
+        }
+      ],
+      "groundVias": [
+        {
+          "xy": [
+            38.15,
+            5.8
+          ],
+          "actualThroughVia": "L28_VIA030_C060",
+          "refLayerPointInsideGround": true,
+          "signalViaCenterDistance": 1.6000000000000014
+        },
+        {
+          "xy": [
+            41.7,
+            5.8
+          ],
+          "actualThroughVia": "L28_VIA030_C060",
+          "refLayerPointInsideGround": true,
+          "signalViaCenterDistance": 0.9500000000000028
+        }
+      ],
+      "entryReferenceDetour": null
+    },
+    "2L": {
+      "normalized": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\review\\inputs\\usb_failed2L_normalized.json",
+      "sha256": "634a9fd07626929334b2a88f4faa9e3cd15f84d2bebf065a08a3010e6952352b",
+      "readback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\usb_esd_2L_b006a",
+      "sourceScope": "2LfirstUSBcandidatephysicalgeometryvalidbutelectrical/classDRCfailed; final2Lmustrecheck",
+      "mirrorReturnCorridors": [
+        {
+          "id": "MirrorLeftReturn",
+          "layer": "TOP",
+          "points": [
+            [
+              39.75,
+              4.9
+            ],
+            [
+              38.9,
+              4.9
+            ],
+            [
+              38.15,
+              5.8
+            ]
+          ],
+          "verifiedCopperCorridorWidth": 0.4,
+          "lengthUpperBound": 2.021537451385999,
+          "uncoveredStripArea": 0.0,
+          "wholeStripInActualGND": true
+        },
+        {
+          "id": "MirrorRightReturn",
+          "layer": "TOP",
+          "points": [
+            [
+              40.75,
+              4.9
+            ],
+            [
+              41.3,
+              4.9
+            ],
+            [
+              41.7,
+              5.8
+            ]
+          ],
+          "verifiedCopperCorridorWidth": 0.4,
+          "lengthUpperBound": 1.5348857801796094,
+          "uncoveredStripArea": 0.0,
+          "wholeStripInActualGND": true
+        },
+        {
+          "id": "MirrorCommonReturnStrip",
+          "layer": "TOP",
+          "points": [
+            [
+              38.15,
+              5.8
+            ],
+            [
+              38.9,
+              4.9
+            ],
+            [
+              41.3,
+              4.9
+            ],
+            [
+              41.7,
+              5.8
+            ]
+          ],
+          "verifiedCopperCorridorWidth": 0.4,
+          "lengthUpperBound": 4.556423231565609,
+          "uncoveredStripArea": 0.0,
+          "wholeStripInActualGND": true
+        }
+      ],
+      "groundVias": [
+        {
+          "xy": [
+            38.15,
+            5.8
+          ],
+          "actualThroughVia": "L28_VIA030_C060",
+          "refLayerPointInsideGround": true,
+          "signalViaCenterDistance": 1.6000000000000014
+        },
+        {
+          "xy": [
+            41.7,
+            5.8
+          ],
+          "actualThroughVia": "L28_VIA030_C060",
+          "refLayerPointInsideGround": true,
+          "signalViaCenterDistance": 0.9500000000000028
+        }
+      ],
+      "entryReferenceDetour": {
+        "id": "ESD_VBUS_BOTTOM_SLOT_LEFT_DETOUR",
+        "referenceLayer": "BOTTOM",
+        "points": [
+          [
+            40.7,
+            8.4
+          ],
+          [
+            39.4,
+            8.4
+          ],
+          [
+            39.4,
+            10.1
+          ],
+          [
+            41.2,
+            10.1
+          ]
+        ],
+        "verifiedCopperCorridorWidth": 0.3,
+        "lengthUpperBound": 4.800000000000008,
+        "uncoveredStripArea": 0.0,
+        "wholeStripInActualGND": true,
+        "qualification": "Actual available aroundleftend ofVBUSbridge; directprojectiongap1.34262mm remains. NotsayingHFcurrentmustfollowthispolyline, notuniformreference orUSBcompliance."
+      }
+    }
+  }
+}

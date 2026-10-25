@@ -1,0 +1,286 @@
+{
+  "status": "READ_ONLY_LOCAL_CANDIDATE_GEOMETRY_CHECKED_NOT_NATIVE_OR_SI_SIGNOFF",
+  "sourceStatus": "Saved b019 DRC_PENDING; USB solver/full-board checks still pending",
+  "variants": {
+    "2L": {
+      "boardSHA256": "AA3BFC0E01B06CB1058462439C71E56BC316F1F2929859B6A224320BE1013420",
+      "placementAndEveryPhysicalPinStrictlyUnchanged": true,
+      "outerAuditRecords": 26,
+      "innerViaAuditRecords": 0,
+      "unresolvedBaseAndFiniteSpacingIssues": 0,
+      "physicalConnectivityGeometry": {
+        "GPIO_PA3": {
+          "terminalComponents": [
+            [
+              "J11.8",
+              "U1.13"
+            ]
+          ],
+          "allActualPhysicalPinsConnected": true,
+          "geometryOnlyNotNativeBFS": true
+        },
+        "GPIO_PA2": {
+          "terminalComponents": [
+            [
+              "J11.7",
+              "U1.12"
+            ]
+          ],
+          "allActualPhysicalPinsConnected": true,
+          "geometryOnlyNotNativeBFS": true
+        },
+        "GPIO_PA1": {
+          "terminalComponents": [
+            [
+              "J11.6",
+              "U1.11"
+            ]
+          ],
+          "allActualPhysicalPinsConnected": true,
+          "geometryOnlyNotNativeBFS": true
+        },
+        "GPIO_PC15": {
+          "terminalComponents": [
+            [
+              "J11.5",
+              "U1.4"
+            ]
+          ],
+          "allActualPhysicalPinsConnected": true,
+          "geometryOnlyNotNativeBFS": true
+        },
+        "GPIO_PC13": {
+          "terminalComponents": [
+            [
+              "J11.3",
+              "U1.2"
+            ]
+          ],
+          "allActualPhysicalPinsConnected": true,
+          "geometryOnlyNotNativeBFS": true
+        },
+        "GPIO_PB10": {
+          "terminalComponents": [
+            [
+              "J12.4"
+            ],
+            [
+              "U1.21"
+            ]
+          ],
+          "allActualPhysicalPinsConnected": false,
+          "geometryOnlyNotNativeBFS": true,
+          "sourcePinToCandidateVia": true,
+          "fullJ12ExpectedDisconnected": true
+        }
+      },
+      "referenceGaps": [
+        {
+          "id": "PB10_NW_0657_NORMAL",
+          "signalLayer": "BOTTOM",
+          "referenceLayer": "TOP",
+          "missingCurrentFillCenterlineWKT": "MULTILINESTRING ((38 26.3, 38 27.72, 37.940429858299716 27.779570141700287), (36.5102 29.2098, 32.99289533175458 32.72710466824542), (32.5867 33.1333, 32.0462 33.6738), (31.731799999999996 33.9882, 31.4533 34.2667), (30.793 34.927, 30.227 35.493))",
+          "missingLengthMM": 8.437150651022636,
+          "comment": "Original fill only; old via holes/thermal voids are stale after this candidate. Refill and native return/common/HSE checks are mandatory."
+        },
+        {
+          "id": "PB10_NW_TOP_PORTAL",
+          "signalLayer": "TOP",
+          "referenceLayer": "BOTTOM",
+          "missingCurrentFillCenterlineWKT": "LINESTRING (30 35.72, 29.6 36.1, 29.233999999999995 36.1)",
+          "missingLengthMM": 0.9177245689653564,
+          "comment": "Original fill only; old via holes/thermal voids are stale after this candidate. Refill and native return/common/HSE checks are mandatory."
+        }
+      ],
+      "proposedReturnCurrentFillOverlap": [
+        {
+          "xy": [
+            29.2,
+            35.35
+          ],
+          "layer": "TOP",
+          "copperPadOverlapCurrentGNDMM2": 0.282736242102987,
+          "padAreaMM2": 0.2827362421029868,
+          "nativeCommonProof": "PENDING_NATIVE_REFILL"
+        },
+        {
+          "xy": [
+            29.2,
+            35.35
+          ],
+          "layer": "BOTTOM",
+          "copperPadOverlapCurrentGNDMM2": 0.282736242102987,
+          "padAreaMM2": 0.2827362421029868,
+          "nativeCommonProof": "PENDING_NATIVE_REFILL"
+        },
+        {
+          "xy": [
+            36.9,
+            27.8
+          ],
+          "layer": "TOP",
+          "copperPadOverlapCurrentGNDMM2": 0.28273624210298687,
+          "padAreaMM2": 0.2827362421029872,
+          "nativeCommonProof": "PENDING_NATIVE_REFILL"
+        },
+        {
+          "xy": [
+            36.9,
+            27.8
+          ],
+          "layer": "BOTTOM",
+          "copperPadOverlapCurrentGNDMM2": 0.28273624210298687,
+          "padAreaMM2": 0.2827362421029872,
+          "nativeCommonProof": "PENDING_NATIVE_REFILL"
+        }
+      ],
+      "newReturnViaToPB10ViaMM": 0.881419309976812,
+      "newPC13ViaToRetainedReturnMM": 0.8246211251235335,
+      "ruleChanges": [],
+      "newViaPadstack": "L28_VIA030_C060 globally approved in existing profile",
+      "newNormalWidthsMM": 0.2,
+      "inputHashes": {
+        "inventory\\checkpoints\\padentry_2L_b019_DRC_PENDING\\normalized.json": "7F0AE208BC6B379E4FB4E93E9E263BB49D1FECA3B1C9896A8BC463E8287F5A11",
+        "inventory\\checkpoints\\padentry_2L_b019_DRC_PENDING\\networks.json": "87B627F41F4199FE32B4079F212D8888E90646D6768D1EEE5A2CBB8151B194D2",
+        "inventory\\checkpoints\\padentry_2L_b019_DRC_PENDING\\base_net_rules.json": "6A822399D9531B5899D543F6D2D2D000B7C31A9902B4856B25204341E7AB651C",
+        "engineering_mcu\\plans\\GPIO_PB1_inward_2L_80_delta.json": "134A03B8338EFC38BF88945E6FDBF365222B85F07E92355982E125EDAAF38A8C",
+        "engineering_mcu\\plans\\GPIO_PB1_inward_2L_80_policy.json": "1F1CAD0059BD228A4C1CD3837FD4FAE83E43ACB5E36E05679654FFD5880B1DE5"
+      }
+    },
+    "4L": {
+      "boardSHA256": "B7A32330992F49609339E33C00BE92D989D0EA0C4AF64ED2763D0678DE14B501",
+      "placementAndEveryPhysicalPinStrictlyUnchanged": true,
+      "outerAuditRecords": 24,
+      "innerViaAuditRecords": 6,
+      "unresolvedBaseAndFiniteSpacingIssues": 0,
+      "physicalConnectivityGeometry": {
+        "GPIO_PA3": {
+          "terminalComponents": [
+            [
+              "J11.8",
+              "U1.13"
+            ]
+          ],
+          "allActualPhysicalPinsConnected": true,
+          "geometryOnlyNotNativeBFS": true
+        },
+        "GPIO_PA2": {
+          "terminalComponents": [
+            [
+              "J11.7",
+              "U1.12"
+            ]
+          ],
+          "allActualPhysicalPinsConnected": true,
+          "geometryOnlyNotNativeBFS": true
+        },
+        "GPIO_PA1": {
+          "terminalComponents": [
+            [
+              "J11.6",
+              "U1.11"
+            ]
+          ],
+          "allActualPhysicalPinsConnected": true,
+          "geometryOnlyNotNativeBFS": true
+        },
+        "GPIO_PC15": {
+          "terminalComponents": [
+            [
+              "J11.5",
+              "U1.4"
+            ]
+          ],
+          "allActualPhysicalPinsConnected": true,
+          "geometryOnlyNotNativeBFS": true
+        },
+        "GPIO_PC13": {
+          "terminalComponents": [
+            [
+              "J11.3",
+              "U1.2"
+            ]
+          ],
+          "allActualPhysicalPinsConnected": true,
+          "geometryOnlyNotNativeBFS": true
+        },
+        "GPIO_PB10": {
+          "terminalComponents": [
+            [
+              "J12.4"
+            ],
+            [
+              "U1.21"
+            ]
+          ],
+          "allActualPhysicalPinsConnected": false,
+          "geometryOnlyNotNativeBFS": true,
+          "sourcePinToCandidateVia": true,
+          "fullJ12ExpectedDisconnected": true
+        }
+      },
+      "referenceGaps": [
+        {
+          "id": "PB10_NW_0657_NORMAL",
+          "signalLayer": "BOTTOM",
+          "referenceLayer": "L3",
+          "missingCurrentFillCenterlineWKT": "LINESTRING (38 26.3, 38 27.72, 37.940429858299716 27.779570141700287)",
+          "missingLengthMM": 1.5042449023050297,
+          "comment": "Original fill only; old via holes/thermal voids are stale after this candidate. Refill and native return/common/HSE checks are mandatory."
+        },
+        {
+          "id": "PB10_NW_TOP_PORTAL",
+          "signalLayer": "TOP",
+          "referenceLayer": "L2",
+          "missingCurrentFillCenterlineWKT": "LINESTRING EMPTY",
+          "missingLengthMM": 0.0,
+          "comment": "Original fill only; old via holes/thermal voids are stale after this candidate. Refill and native return/common/HSE checks are mandatory."
+        }
+      ],
+      "proposedReturnCurrentFillOverlap": [
+        {
+          "xy": [
+            29.2,
+            35.35
+          ],
+          "layer": "TOP",
+          "copperPadOverlapCurrentGNDMM2": 0.282736242102987,
+          "padAreaMM2": 0.2827362421029868,
+          "nativeCommonProof": "PENDING_NATIVE_REFILL"
+        },
+        {
+          "xy": [
+            29.2,
+            35.35
+          ],
+          "layer": "BOTTOM",
+          "copperPadOverlapCurrentGNDMM2": 0.0,
+          "padAreaMM2": 0.2827362421029868,
+          "nativeCommonProof": "PENDING_NATIVE_REFILL"
+        }
+      ],
+      "newReturnViaToPB10ViaMM": 0.881419309976812,
+      "newPC13ViaToRetainedReturnMM": 0.8246211251235335,
+      "ruleChanges": [],
+      "newViaPadstack": "L28_VIA030_C060 globally approved in existing profile",
+      "newNormalWidthsMM": 0.2,
+      "inputHashes": {
+        "inventory\\checkpoints\\padentry_4L_b019_DRC_PENDING\\normalized.json": "5C8DD51F7D7F5F3E5E0B7CD7A64D76690631A7D6E28856FF9223E8CD909A673F",
+        "inventory\\checkpoints\\padentry_4L_b019_DRC_PENDING\\networks.json": "4D4BE9E7E13085335E6696876A3951D8EF50412641F3C9EE2C8570C64A7085ED",
+        "inventory\\checkpoints\\padentry_4L_b019_DRC_PENDING\\base_net_rules.json": "B844153533C33FB2D7C2462F05B01399ABD152E5181861543D138FFC082AB234",
+        "engineering_mcu\\plans\\GPIO_PB1_inward_4L_80_delta.json": "8157A04A0D6F02260F3F9A6BA4B6C3F5B6B423D8086B714DAA5DD8FE8609E20A",
+        "engineering_mcu\\plans\\GPIO_PB1_inward_4L_80_policy.json": "3EEBFC239525950B8152A311CC5EBE2C4F57FACBAA80FC943F7D07033810CAC0"
+      }
+    }
+  },
+  "changesRequireNativeReview": true,
+  "nativeStarted": false,
+  "priorSealedCollection": {
+    "manifest": "review/b017_b019_native_artifact_manifest.json",
+    "manifestSHA256": "10647D1C4E6B9A6706E4CF6A8A64262E1381FFD009A3DD8864A543E2B7C3004B",
+    "count": 1545,
+    "failureCount": 0,
+    "failures": [],
+    "all1545Unchanged": true
+  }
+}

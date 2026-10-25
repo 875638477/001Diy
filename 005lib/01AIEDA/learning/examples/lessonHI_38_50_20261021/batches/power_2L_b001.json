@@ -1,0 +1,434 @@
+{
+  "status": "FIRST_PILOT_ENGINEERING_CANDIDATE",
+  "date": "2026-10-21",
+  "units": "mm",
+  "appliesTo": [
+    "2L",
+    "4L"
+  ],
+  "placementChanges": [
+    {
+      "ref": "C3",
+      "xy": [
+        26.2,
+        18
+      ],
+      "rotation": 180,
+      "oldXY": [
+        26.2,
+        18.6
+      ],
+      "purpose": "Create feasible .6mm VIN corridor with .3mm clearances; no netlist change."
+    }
+  ],
+  "operations": [
+    {
+      "type": "route",
+      "id": "VIN_U2_ESCAPE",
+      "net": "VIN_PROT",
+      "layer": "TOP",
+      "points": [
+        [
+          24.2,
+          20.05
+        ],
+        [
+          24.2,
+          19.1
+        ],
+        [
+          26.0984,
+          19.1
+        ],
+        [
+          26.0984,
+          18
+        ]
+      ],
+      "widths": [
+        0.25,
+        0.6,
+        0.6
+      ],
+      "from": "U2.3",
+      "to": "C3.1",
+      "purpose": "Keep global normal .6; short neck .95mm; corridor only clears C3 GND and U2FB after C3 y18.0.",
+      "status": "ENGINEERING_CANDIDATE_REQUIRE_NATIVE_DRC"
+    },
+    {
+      "type": "route",
+      "id": "VIN_C2_C3",
+      "net": "VIN_PROT",
+      "layer": "TOP",
+      "points": [
+        [
+          25.2,
+          15.4
+        ],
+        [
+          26.0984,
+          18
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "C2.1",
+      "to": "C3.1",
+      "purpose": "Local reservoir to HF bypass; no long thin power trace.",
+      "status": "ENGINEERING_CANDIDATE_REQUIRE_NATIVE_DRC"
+    },
+    {
+      "type": "route",
+      "id": "SW_U2_L1",
+      "net": "BUCK_SW",
+      "layer": "TOP",
+      "points": [
+        [
+          24.2,
+          21
+        ],
+        [
+          23.05,
+          21
+        ],
+        [
+          22.6,
+          21
+        ],
+        [
+          22.02,
+          21.58
+        ],
+        [
+          22.02,
+          24
+        ]
+      ],
+      "widths": [
+        0.25,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "U2.2",
+      "to": "L1.1",
+      "purpose": "Short lead correct; first neck1.15mm measured from pad center requires explicit local1.2mm exception.",
+      "status": "ENGINEERING_CANDIDATE_REQUIRE_NATIVE_DRC"
+    },
+    {
+      "type": "route",
+      "id": "BOOT_U2_C4",
+      "net": "BUCK_BOOT",
+      "layer": "TOP",
+      "points": [
+        [
+          26.8,
+          21.95
+        ],
+        [
+          26.8,
+          22.55
+        ],
+        [
+          26.5984,
+          22.7516
+        ],
+        [
+          26.5984,
+          23.7
+        ]
+      ],
+      "widths": [
+        0.25,
+        0.6,
+        0.6
+      ],
+      "from": "U2.6",
+      "to": "C4.1",
+      "purpose": "BOOT capacitor to pin6, first neck.6mm avoids adjacent NC pad.",
+      "status": "ENGINEERING_CANDIDATE_REQUIRE_NATIVE_DRC"
+    },
+    {
+      "type": "route",
+      "id": "SW_C4_L1",
+      "net": "BUCK_SW",
+      "layer": "TOP",
+      "points": [
+        [
+          25.0236,
+          23.7
+        ],
+        [
+          25.0236,
+          24.6
+        ],
+        [
+          22.02,
+          24.6
+        ],
+        [
+          22.02,
+          24
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "C4.2",
+      "to": "L1.1",
+      "purpose": "BOOT return to SW, never GND; route above local ground vias.",
+      "status": "ENGINEERING_CANDIDATE_REQUIRE_NATIVE_DRC"
+    },
+    {
+      "type": "route",
+      "id": "C3_GND_VIAS",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          24.5236,
+          18
+        ],
+        [
+          23.2,
+          18
+        ],
+        [
+          23.2,
+          18.8
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "C3.2",
+      "to": "V_HI_C3_B",
+      "purpose": "Input cap negative local dual-via return; actual plane connectivity/neck and detour to U2 ground must be verified.",
+      "status": "ENGINEERING_CANDIDATE_REQUIRE_NATIVE_DRC"
+    },
+    {
+      "type": "route",
+      "id": "U2_GND_VIAS",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          24.2,
+          21.95
+        ],
+        [
+          24.2,
+          22.55
+        ],
+        [
+          23.7,
+          22.55
+        ],
+        [
+          23.7,
+          23.35
+        ]
+      ],
+      "widths": [
+        0.25,
+        0.6,
+        0.6
+      ],
+      "from": "U2.1",
+      "to": "V_HI_U2_B",
+      "purpose": "First .6mm neck clears SW pin; no switching current under IC. Dual vias close to power ground.",
+      "status": "ENGINEERING_CANDIDATE_REQUIRE_NATIVE_DRC"
+    },
+    {
+      "type": "route",
+      "id": "C2_GND_VIAS",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          22.152,
+          15.4
+        ],
+        [
+          22.152,
+          14.25
+        ],
+        [
+          22.152,
+          13.45
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "C2.2",
+      "to": "V_HI_C2_B",
+      "purpose": "C2 ground local parallel vias, separate from feedback return.",
+      "status": "ENGINEERING_CANDIDATE_REQUIRE_NATIVE_DRC"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_C3_A",
+      "net": "GND",
+      "xy": [
+        23.2,
+        18
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "C3 negative near via A"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_C3_B",
+      "net": "GND",
+      "xy": [
+        23.2,
+        18.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "C3 negative near via B"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_U2_A",
+      "net": "GND",
+      "xy": [
+        23.7,
+        22.55
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "U2 GND near via A"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_U2_B",
+      "net": "GND",
+      "xy": [
+        23.7,
+        23.35
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "U2 GND near via B"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_C2_A",
+      "net": "GND",
+      "xy": [
+        22.152,
+        14.25
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "C2 GND via A"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_C2_B",
+      "net": "GND",
+      "xy": [
+        22.152,
+        13.45
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "C2 GND via B"
+    }
+  ],
+  "returnModel": {
+    "4L": "C3-/U2.GND dual vias connect existing actual L2 GND; hTOP_L2=.2104mm; verify same generated component, OOD=false, no neck/long detour.",
+    "2L": "C3-/U2.GND dual vias connect existing BOTTOM GND; dielectric h=1.524mm, larger external loop than4L; re-evaluate return after other BOTTOM routes; not equivalent EMI/PI."
+  },
+  "rules": [
+    {
+      "id": "HI_U2_SW_ESCAPE",
+      "scope": "TOP local region only on NC_SWITCHING_P around U2.2",
+      "polygon": [
+        [
+          22.95,
+          20.55
+        ],
+        [
+          24.9,
+          20.55
+        ],
+        [
+          24.9,
+          21.45
+        ],
+        [
+          22.95,
+          21.45
+        ]
+      ],
+      "copyFrom": "P_SWITCH_060",
+      "changes": {
+        "necklength_max": {
+          "old": 1,
+          "new": 1.2,
+          "unit": "mm"
+        }
+      },
+      "keep": {
+        "width_min": 0.6,
+        "neckwidth_min": 0.25,
+        "spacing": "existing switch.5 and isolate1.0 unchanged",
+        "allowedLayers": "TOP/BOTTOM only; no L2/L3 nonGND"
+      },
+      "actualPlannedNeckLength_mm": 1.15,
+      "validation": "Native region-class membership, raw effective fields inside/outside, deliberate over-neck challenge and rollback required."
+    }
+  ],
+  "openItems": [
+    "Not yet native DRC checked; do not call completed routing.",
+    "No whole-board connectivity/EMC/impedance or manufacturing release.",
+    "CIN forward path and return plane must be checked as one loop, not separate endpoint distances."
+  ],
+  "batchId": "power_2L_b001",
+  "variant": "2L",
+  "sourceExpectedSHA256": "07C6C449E2DEFC14D0D567916054AD31E7F920F8C58C4DF1FAB88A616DA69FF7",
+  "constraintOperations": [
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_U2_SW_ESCAPE_P",
+      "copyFrom": "HI2L_P_SWITCH",
+      "values": {
+        "necklength_max": "1.2 MM"
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_U2_SW_ESCAPE",
+      "layer": "TOP",
+      "polygon": [
+        [
+          22.95,
+          20.55
+        ],
+        [
+          24.9,
+          20.55
+        ],
+        [
+          24.9,
+          21.45
+        ],
+        [
+          22.95,
+          21.45
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_SWITCH_P",
+          "cset": "HI_U2_SW_ESCAPE_P"
+        }
+      ]
+    }
+  ]
+}

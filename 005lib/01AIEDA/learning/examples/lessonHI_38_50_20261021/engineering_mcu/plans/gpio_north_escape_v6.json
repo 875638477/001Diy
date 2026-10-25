@@ -1,0 +1,330 @@
+{
+  "status": "CANDIDATE_V6_PC14_EAST_EXIT_PRESERVE_SPI_SOURCE_BANK",
+  "operations": [
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC13_TOP",
+      "net": "GPIO_PC13",
+      "layer": "TOP",
+      "points": [
+        [
+          42.25,
+          31.25
+        ],
+        [
+          42.25,
+          29.15
+        ],
+        [
+          42,
+          28.9
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "U1",
+        "2"
+      ],
+      "purpose": "Shortinsideescape; noHSEshadowcross"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_GPIO_PC13_VIA",
+      "net": "GPIO_PC13",
+      "xy": [
+        42,
+        28.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "OffpadunderLQFP; masktent/return/referencecheck"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC14_TOP",
+      "net": "GPIO_PC14",
+      "layer": "TOP",
+      "points": [
+        [
+          41.75,
+          31.25
+        ],
+        [
+          41.75,
+          29.8
+        ],
+        [
+          41,
+          29.8
+        ],
+        [
+          41,
+          27.8
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "U1",
+        "3"
+      ],
+      "purpose": "Shortinsideescape; noHSEshadowcross"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_GPIO_PC14_VIA",
+      "net": "GPIO_PC14",
+      "xy": [
+        41,
+        27.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "OffpadunderLQFP; masktent/return/referencecheck"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC15_TOP",
+      "net": "GPIO_PC15",
+      "layer": "TOP",
+      "points": [
+        [
+          41.25,
+          31.25
+        ],
+        [
+          41.25,
+          30.25
+        ],
+        [
+          40.3,
+          30.25
+        ],
+        [
+          40.3,
+          28.9
+        ]
+      ],
+      "width": 0.2,
+      "from": [
+        "U1",
+        "4"
+      ],
+      "purpose": "Shortinsideescape; noHSEshadowcross"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_GPIO_PC15_VIA",
+      "net": "GPIO_PC15",
+      "xy": [
+        40.3,
+        28.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "OffpadunderLQFP; masktent/return/referencecheck"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC13_BOTTOM_START",
+      "net": "GPIO_PC13",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          42,
+          28.9
+        ],
+        [
+          42,
+          31.1
+        ],
+        [
+          35.8,
+          31.1
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "OnlypartialwestescapeunderMCU, completeordinaryGPIOoutsideHSEmoat;2LactualTOPreferencecoverageandgaplengthmustbechecked"
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC14_BOTTOM_START",
+      "net": "GPIO_PC14",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          41,
+          27.8
+        ],
+        [
+          43.6,
+          25.2
+        ],
+        [
+          45.6,
+          25.2
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Rootrequested southeastBOTTOMescape; no weststub acrossnewSTARorSPIbank.",
+      "to": [
+        "GPIO_PC14_EAST_EXIT"
+      ]
+    },
+    {
+      "type": "route",
+      "id": "GPIO_GPIO_PC15_BOTTOM_START",
+      "net": "GPIO_PC15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.3,
+          28.9
+        ],
+        [
+          40.3,
+          30.3
+        ],
+        [
+          35.4,
+          30.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "OnlypartialwestescapeunderMCU, completeordinaryGPIOoutsideHSEmoat;2LactualTOPreferencecoverageandgaplengthmustbechecked"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_RETURN_EAST",
+      "net": "GND",
+      "xy": [
+        42,
+        27.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "NearbyapplicationGNDreturn tiesactualTOPreference to2LBOTTOM or4LL2/L3. Physicalplaneconnectivityrequired."
+    },
+    {
+      "type": "via",
+      "id": "GPIO_RETURN_WEST",
+      "net": "GND",
+      "xy": [
+        39.8,
+        27.3
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "NearbyapplicationGNDreturn tiesactualTOPreference to2LBOTTOM or4LL2/L3. Physicalplaneconnectivityrequired."
+    },
+    {
+      "type": "via",
+      "id": "GPIO_PC14_EAST_EXIT",
+      "net": "GPIO_PC14",
+      "xy": [
+        45.6,
+        25.2
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "OffpadBOTTOM-toTOP eastanchor, thenrootroutesoutsideHSEtoJ11; no danglingweststub"
+    },
+    {
+      "type": "via",
+      "id": "GPIO_RETURN_EAST_EXIT",
+      "net": "GND",
+      "xy": [
+        46.95,
+        24.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "ApplicationGNDnearPC14easttransition distance1.382932mm; realreferenceandplaneproofrequired"
+    }
+  ],
+  "localRule": "Preserve ordinarydigital.2; finepitchvsoscillator/power parent.3 needsnorthregionexception only",
+  "reference": "FourlayerBOTTOM needsrealL3reference;2LBOTTOM needsactualTOPapplicationGNDpatch minusallpad/clines, measure gaps causedbyotherMCUescape slots, donotclaimcontinuousreferencefromabstractrectangle.",
+  "topReferenceCandidatePolygon": [
+    [
+      35.8,
+      27
+    ],
+    [
+      42.4,
+      27
+    ],
+    [
+      42.4,
+      31.9
+    ],
+    [
+      35.8,
+      31.9
+    ]
+  ],
+  "furtherRouting": "TheseBOTTOMescapeendsremainunfinished; preservealllayerreferenceandavoidHSEshadow.2LTOPreferencepatchwillhaveSMD/otherescapeapertures, so readactualcoverageandreturnpath; rectanglealoneisnotcontinuousplane.",
+  "supersedes": "GPIO3westPC14netwouldapproachnewSTAR. v4/v5westexitwouldoccupyrootSPI_NSS/SCK/MISObankx33.5..35.4/y26.5..33.5; rejectedbeforeexecution. No SPIbankviainv6.",
+  "continuation": {
+    "GPIO_PC13": {
+      "layer": "BOTTOM",
+      "xy": [
+        35.8,
+        31.1
+      ]
+    },
+    "GPIO_PC14": {
+      "layer": "TOP",
+      "xy": [
+        45.6,
+        25.2
+      ],
+      "via": "GPIO_PC14_EAST_EXIT"
+    },
+    "GPIO_PC15": {
+      "layer": "BOTTOM",
+      "xy": [
+        35.4,
+        30.3
+      ]
+    }
+  },
+  "twoLayerReferencePatches": [
+    {
+      "layer": "TOP",
+      "net": "GND",
+      "polygon": [
+        [
+          35.8,
+          27
+        ],
+        [
+          42.4,
+          27
+        ],
+        [
+          42.4,
+          31.9
+        ],
+        [
+          35.8,
+          31.9
+        ]
+      ]
+    },
+    {
+      "layer": "TOP",
+      "net": "GND",
+      "polygon": [
+        [
+          39.2,
+          24.6
+        ],
+        [
+          47.5,
+          24.6
+        ],
+        [
+          47.5,
+          28.4
+        ],
+        [
+          39.2,
+          28.4
+        ]
+      ]
+    }
+  ],
+  "referenceLimitation": "2LnewBOTTOMPC14crossesprojectionofTOPV3starx43; realTOPGNDsplitbyrailmustconnectthroughnearGNDviasandBOTTOMglobalcopper, NOTuniformmicrostripclaim. Actualgap/returnreviewrequired;4LactualL3referenceindependent. TOPpatchescliprealpads/linesandstopbelowquietanchormoat."
+}

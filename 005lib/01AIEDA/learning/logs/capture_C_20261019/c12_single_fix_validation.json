@@ -1,0 +1,79 @@
+{
+  "date_asia_shanghai": "2026-10-19",
+  "status": "PASS",
+  "runs": [
+    {
+      "label": "create",
+      "command": [
+        "C:\\Program0\\Cadence\\spb172\\tcltk\\bin\\tclsh.exe",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\c12_build_single_fix.tcl"
+      ],
+      "returncode": 0,
+      "waited_to_exit": true
+    },
+    {
+      "label": "fresh_reopen",
+      "command": [
+        "C:\\Program0\\Cadence\\spb172\\tcltk\\bin\\tclsh.exe",
+        "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\c12_reopen_single_fix.tcl"
+      ],
+      "returncode": 0,
+      "waited_to_exit": true
+    }
+  ],
+  "old_libraries_unchanged": true,
+  "old_library_hashes": {
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson12_capture\\c12_qmi8610.olb": "F72BD5B156049A1ABB155B1863C2A9C9D0D36C94F020F8A7FF70F416EA7DFACC",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson12_capture\\c12_qmi8610_spi4.olb": "0CE9DA3C5178ED3C44FCD3356CBD6B1157D8158BDA6596502B975ECEB5AB318C"
+  },
+  "new_library_hashes": {
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson12_capture\\c12_qmi8610_single.olb": "3D04AF9F739438A74FEDB2FD3BCA324164C47F223277F630A070DA9867EEF57D",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson12_capture\\c12_qmi8610_spi4_single.olb": "7ABA0B2EAFF8D0578D7637997549013918329A9AE5A521A44E7F3A8CD98AE34A"
+  },
+  "comparisons": [
+    {
+      "file": "c12_single_fresh_i2c/c12_pins.tsv",
+      "unchanged_vs_first_symbol": true
+    },
+    {
+      "file": "c12_single_fresh_i2c/c12_vectors.tsv",
+      "unchanged_vs_first_symbol": true
+    },
+    {
+      "file": "c12_single_fresh_i2c/c12_display_properties.tsv",
+      "unchanged_vs_first_symbol": true
+    },
+    {
+      "file": "c12_single_fresh_i2c/c12_readback_result.tcldict",
+      "unchanged_vs_first_symbol": true
+    },
+    {
+      "file": "c12_single_fresh_i2c/c12_properties.tsv",
+      "only_expected_revision_change": true
+    },
+    {
+      "file": "c12_single_fresh_spi4/c12_pins.tsv",
+      "unchanged_vs_first_symbol": true
+    },
+    {
+      "file": "c12_single_fresh_spi4/c12_vectors.tsv",
+      "unchanged_vs_first_symbol": true
+    },
+    {
+      "file": "c12_single_fresh_spi4/c12_display_properties.tsv",
+      "unchanged_vs_first_symbol": true
+    },
+    {
+      "file": "c12_single_fresh_spi4/c12_readback_result.tcldict",
+      "unchanged_vs_first_symbol": true
+    },
+    {
+      "file": "c12_single_fresh_spi4/c12_properties.tsv",
+      "only_expected_revision_change": true
+    }
+  ],
+  "lockfiles_after": [],
+  "suffix_check": "Native fresh-process GetDesignator empty assertion passed; see c12_single_freshprocess_result.tcldict",
+  "lock_check_scope": "New single libraries only; post-run review matches .OLBlck and .OLB.lck names case-insensitively",
+  "lock_check_corrected_from": "Initial glob *.lck omitted Capture .OLBlck naming; corrected and checked on the new libraries, without deleting any file"
+}

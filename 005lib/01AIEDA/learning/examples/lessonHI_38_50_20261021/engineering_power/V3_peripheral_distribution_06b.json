@@ -1,0 +1,625 @@
+{
+  "status": "CANDIDATE_FULL_V3_PERIPHERAL_DISTRIBUTION_NEEDS_GROUP_SCREEN_NATIVE",
+  "operations": [
+    {
+      "type": "route",
+      "id": "V3_PERIPH_SOUTH",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          33.3,
+          22.5
+        ],
+        [
+          33.3,
+          1
+        ],
+        [
+          76.8,
+          1
+        ],
+        [
+          78.2,
+          2.4
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "V3_PERIPH_SOURCE_TOP",
+      "to": "V3_PERIM_EAST_LOW",
+      "purpose": "TOPperimeter supply leavesSPIx7..35/y27..36 entirelyfree. y1 belowUSBshell copper; actualedge/keepinverify.",
+      "length_mm": 66.97989898732234
+    },
+    {
+      "type": "route",
+      "id": "V3_PERIPH_EAST",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          78.2,
+          2.4
+        ],
+        [
+          78.2,
+          58.2
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V3_PERIM_EAST_LOW",
+      "to": "V3_PERIM_EAST_HIGH",
+      "purpose": "Outsideallrightheadercontacts butinside board/mountingkeepouts; digitaltracesenterfromleft.",
+      "length_mm": 55.800000000000004
+    },
+    {
+      "type": "route",
+      "id": "V3_PERIPH_NORTH",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          78.2,
+          58.2
+        ],
+        [
+          1.8,
+          58.2
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V3_PERIM_EAST_HIGH",
+      "to": "V3_PERIM_WEST_HIGH",
+      "purpose": "Outsidey55GPIOheaderrow, noTOP3VrailthroughHSE/MCUfanout.",
+      "length_mm": 76.4
+    },
+    {
+      "type": "route",
+      "id": "V3_PERIPH_WEST_J6",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          1.8,
+          58.2
+        ],
+        [
+          1.8,
+          26
+        ],
+        [
+          7,
+          26
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "V3_PERIM_WEST_HIGH",
+      "to": "J6.1",
+      "purpose": "J6supplyapproachesfromy26; SPI source/headercorridorx7..35/y27..36 reserved forsignals.",
+      "length_mm": 37.400000000000006
+    },
+    {
+      "type": "route",
+      "id": "V3_J4",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          78.2,
+          28.81
+        ],
+        [
+          74,
+          28.81
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V3_PERIPH_EAST",
+      "to": "J4.1",
+      "purpose": "ShortbranchtoUARTconnectorV3pin, no fine neck.",
+      "length_mm": 4.200000000000003
+    },
+    {
+      "type": "route",
+      "id": "V3_J5",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          78.2,
+          42.81
+        ],
+        [
+          74,
+          42.81
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V3_PERIPH_EAST",
+      "to": "J5.1",
+      "purpose": "ShortbranchtoI2CconnectorV3pin.",
+      "length_mm": 4.200000000000003
+    },
+    {
+      "type": "route",
+      "id": "V3_J11",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          9.11,
+          58.2
+        ],
+        [
+          9.11,
+          55
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V3_PERIPH_NORTH",
+      "to": "J11.1",
+      "purpose": "GPIOheaderV3 shortnorthbranch; no routebetween.6line/.3space andadjacent2.54mmordinarypads.",
+      "length_mm": 3.200000000000003
+    },
+    {
+      "type": "route",
+      "id": "V3_J12",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          31.11,
+          58.2
+        ],
+        [
+          31.11,
+          55
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V3_PERIPH_NORTH",
+      "to": "J12.1",
+      "purpose": "GPIOheaderV3 shortnorthbranch; no routebetween.6line/.3space andadjacent2.54mmordinarypads.",
+      "length_mm": 3.200000000000003
+    },
+    {
+      "type": "route",
+      "id": "V3_J13",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          53.11,
+          58.2
+        ],
+        [
+          53.11,
+          55
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V3_PERIPH_NORTH",
+      "to": "J13.1",
+      "purpose": "GPIOheaderV3 shortnorthbranch; no routebetween.6line/.3space andadjacent2.54mmordinarypads.",
+      "length_mm": 3.200000000000003
+    },
+    {
+      "type": "route",
+      "id": "V3_CAN_MAIN",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          60.5,
+          1
+        ],
+        [
+          60.5,
+          12.76
+        ],
+        [
+          59.8,
+          13.46
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "V3_PERIPH_SOUTH",
+      "to": "C12.1",
+      "purpose": "DedicatedCAN60mAbranchtodecouplingbank C12/C11/U5; no currentthroughMCUdecapneck.",
+      "length_mm": 12.74994949366117
+    },
+    {
+      "type": "route",
+      "id": "V3_SPI_NSS_PULLUP",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          33.3,
+          22.5
+        ],
+        [
+          33.5748,
+          22.2252
+        ],
+        [
+          33.5748,
+          21
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "V3_PERIPH_SOURCE_TOP",
+      "to": "R25.1",
+      "purpose": "NSSpullup only, noSPIclocksource orderchange.",
+      "length_mm": 1.6138258869401312
+    },
+    {
+      "type": "route",
+      "id": "V3_USB_AUX_R9",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          59.8,
+          13.46
+        ],
+        [
+          56.2,
+          13.46
+        ],
+        [
+          56.2,
+          13.1016
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "C12.1",
+      "to": "R9.1",
+      "purpose": "VBUSdetectoroutputpullup fedV3, notUSBVBUS.",
+      "length_mm": 3.9583999999999957
+    },
+    {
+      "type": "route",
+      "id": "V3_USB_AUX_Q2",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          56.2,
+          13.46
+        ],
+        [
+          53.8,
+          13.46
+        ],
+        [
+          53.8,
+          10.73
+        ],
+        [
+          49.9,
+          10.73
+        ],
+        [
+          49.9,
+          12.2282
+        ],
+        [
+          48.9525,
+          12.2282
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "V3_USB_AUX_R9",
+      "to": "Q2.2",
+      "purpose": ".6V3corridorbetweenQ1source/gateanddrain, tightestnominalcoppergap.3018 tolowerrow. AvoidshortingVBUSdrain/gate.",
+      "length_mm": 11.475700000000002
+    },
+    {
+      "type": "route",
+      "id": "V3_USB_ATTACH_PULLUP",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          49.9,
+          12.2282
+        ],
+        [
+          49.9,
+          16
+        ],
+        [
+          48.6016,
+          16
+        ],
+        [
+          48.6016,
+          17.2
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "V3_USB_AUX_Q2",
+      "to": "R10.1",
+      "purpose": "Q2defaultoffgatepulluptosource; do not tieR10.2attachcontroltoV3.",
+      "length_mm": 6.270200000000001
+    },
+    {
+      "type": "route",
+      "id": "V3_SWD_VTREF",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          48.6016,
+          17.2
+        ],
+        [
+          48.6016,
+          18
+        ],
+        [
+          50,
+          19.3984
+        ],
+        [
+          51,
+          20
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "R10.1",
+      "to": "J9.1",
+      "purpose": "SenseonlyVTREF. Probe mustnotpowerrail, TLV755noreverseblocking. Signalroutingmusthonorthissupplycorridor.",
+      "length_mm": 3.944650624282887
+    },
+    {
+      "type": "route",
+      "id": "V3_UART_IDLE",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          74,
+          28.81
+        ],
+        [
+          72,
+          28.81
+        ],
+        [
+          71,
+          27.81
+        ],
+        [
+          69.6764,
+          27.81
+        ],
+        [
+          69.6764,
+          25
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "J4.1",
+      "to": "R18.2",
+      "purpose": "UART_RXidle10kpullup independentofdata source; keepsupplyawayfromadjacentconnectorTX/RXpads.",
+      "length_mm": 7.547813562373093
+    },
+    {
+      "type": "route",
+      "id": "V3_BOOT_SERVICE",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          74,
+          28.81
+        ],
+        [
+          72.5,
+          30.31
+        ],
+        [
+          59,
+          30.31
+        ],
+        [
+          57.4916,
+          31.1016
+        ],
+        [
+          56.7,
+          31.1016
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "J4.1",
+      "to": "R30.1",
+      "purpose": "ApproachR30V3fromsouth/right, neverfromnorththroughBOOT_SERVICEpad2.",
+      "length_mm": 18.116417076752867
+    },
+    {
+      "type": "route",
+      "id": "V3_I2C_PULLUPS",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          78.2,
+          47
+        ],
+        [
+          56.9252,
+          47
+        ],
+        [
+          56.9252,
+          37
+        ],
+        [
+          56.9252,
+          35
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "V3_PERIPH_EAST",
+      "to": "R19.1",
+      "purpose": "FeedsR20.1andR19.1. Doesnotcrossy55GPIOpads/75,55mountingkeepout. I2Cdata approachfromy<34 beforebranching.",
+      "length_mm": 33.274800000000006
+    },
+    {
+      "type": "route",
+      "id": "V3_RESET_PULLUP",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          31.11,
+          55
+        ],
+        [
+          31.11,
+          47
+        ],
+        [
+          38.1016,
+          47
+        ],
+        [
+          38.1016,
+          41.3
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "J12.1",
+      "to": "R27.1",
+      "purpose": "OutsideHSEvoidtopedge39.75; .6resetpullupsupplyfromGPIOheaderV3branch, not throughquietisland.",
+      "length_mm": 20.6916
+    }
+  ],
+  "rules": [],
+  "placementChanges": [],
+  "constraints": [
+    "Allroutesnormal.6, noaddedpowerneck. 07alreadybuildsTOPtakeoff37,24->33.3,24->33.3,22.5; nosecondvia orBOTTOMhorizontalbranch.",
+    "Preserveuppercasephysicalnames/fullFilm. 4LnonGNDinnerneverallowed. MostnewpowerTOPaboveactualL2or2Lbottomground.",
+    "CANsourceC12positive joinsCAN_local_supply_05; CANH/LR15 useinterface_CAN_routes_04, lattertwofilesmustmerge.",
+    "ExternalGPIO+headerscombined10mA. CAN60mA worstallocation, totalnormalboard150mA/Ta0..40C untestedthermal.",
+    "R9/Q2/R10/J9 supplynearUSBcontrol, stillnotUSBVBUSpowerrail. Reject anyshort/crossing withUSBcriticalorGNDslot.",
+    "NoSPIroutingthroughSW/ADC, noTOPpowerinsideSPIcorridorx7..35/y27..36; J6entersaty26.",
+    "Powercorridorscanforceordinarysignals toshortBOTTOMcrossovers; maintainactualGNDreturnandnearGNDstitch, do notsolvebylongthinV3.",
+    "ExampleDCresistance usesrhoCu20C1.724e-8ohm-m andnominal35um: .6mm routeR=0.000821ohm/mm; actualCu/temp/via/contact/loadmustconfirm. Notampacitycertification.",
+    "Actualminimumline-pad .3018 nearQ1 reliesnativepositions/precision. IfactualDRCflag, reroute .6 orlocalplacementreview; do notgloballyreducepower.3spacing."
+  ],
+  "expectedNewV3Endpoints": [
+    "J4.1",
+    "J5.1",
+    "J6.1",
+    "J9.1",
+    "J11.1",
+    "J12.1",
+    "J13.1",
+    "R25.1",
+    "R19.1",
+    "R20.1",
+    "R27.1",
+    "R30.1",
+    "R9.1",
+    "R10.1",
+    "R18.2",
+    "Q2.2",
+    "C12.1"
+  ],
+  "reservedAreas": [
+    {
+      "polygon": [
+        [
+          0.9,
+          0.7
+        ],
+        [
+          79,
+          0.7
+        ],
+        [
+          79,
+          2.8
+        ],
+        [
+          0.9,
+          2.8
+        ]
+      ],
+      "allowedNets": [
+        "V3V3",
+        "GND"
+      ],
+      "purpose": "Candidateperimeterpowercorridor, mustyieldtoactualUSBconnectorcopper/boardedgechecks, notoverridekeepout."
+    }
+  ],
+  "revision": "06b consumes07TOPtakeoffat33.3,22.5; original06BOTTOMtapandproposedvia removedbeforeexecution",
+  "prerequisites": [
+    "STAR_reroute_07 actualvalidated andsourceTOPendpoint33.3,22.5 available."
+  ]
+}

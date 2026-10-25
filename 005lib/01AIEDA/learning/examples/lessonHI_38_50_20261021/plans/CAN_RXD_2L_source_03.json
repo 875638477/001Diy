@@ -1,0 +1,108 @@
+{
+  "status": "UNEXECUTED_EXPLICIT_SOURCE_CANDIDATE",
+  "batchId": "CAN_RXD_2L_source_03",
+  "variant": "2L",
+  "operations": [
+    {
+      "type": "via",
+      "id": "CAN2L_PHY_V",
+      "net": "CAN_RXD",
+      "xy": [
+        61.45,
+        12.2
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_DNP_V",
+      "net": "CAN_RXD",
+      "xy": [
+        36.4,
+        17.4
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "CAN2L_PHY_TOP",
+      "net": "CAN_RXD",
+      "layer": "TOP",
+      "points": [
+        [
+          64,
+          12.19
+        ],
+        [
+          64,
+          12.2
+        ],
+        [
+          61.45,
+          12.2
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "CAN2L_DNP_TOP",
+      "net": "CAN_RXD",
+      "layer": "TOP",
+      "points": [
+        [
+          36.4,
+          17.4
+        ],
+        [
+          36.3236,
+          17.4764
+        ],
+        [
+          36.3236,
+          18.3
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_PHY_RETURN",
+      "net": "GND",
+      "xy": [
+        61.7,
+        11.2
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_DNP_RETURN",
+      "net": "GND",
+      "xy": [
+        35.4,
+        17
+      ],
+      "padstack": "L28_VIA030_C060"
+    }
+  ],
+  "partialEndpoints": {
+    "CAN_RXD_PHY": {
+      "xy": [
+        61.45,
+        12.2
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U5.4"
+    },
+    "CAN_RXD_DNP": {
+      "xy": [
+        36.4,
+        17.4
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "R13.2"
+    }
+  },
+  "reason": "Keep CAN perimeter copper onBOTTOM belowUSBhousing; reserve oppositeTOPcommonGND and avoid adding TOPtrace beneath metalconnector. Main BOTTOM route, USBmirror spacing/reference and actual common-ground proof pending."
+}

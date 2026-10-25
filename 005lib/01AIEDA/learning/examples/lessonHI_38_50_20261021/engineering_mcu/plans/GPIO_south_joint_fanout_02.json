@@ -1,0 +1,699 @@
+{
+  "status": "ENGINEERED_SOURCE_GROUP_PENDING_NATIVE_DRC_REFERENCE",
+  "batchId": "GPIO_south_joint_fanout_02",
+  "placementChanges": [
+    {
+      "ref": "R16",
+      "xy": [
+        36.9016,
+        19.9
+      ],
+      "rotation": 180,
+      "purpose": "Free south GPIO/UART fanout window while preserving 33R electrical identity; pin1(36.8,19.9),pin2(35.2252,19.9)."
+    }
+  ],
+  "operations": [
+    {
+      "type": "deleteSegment",
+      "id": "SOUTH_RIP_NSS_PULLUP_0",
+      "net": "PA4_SPI_NSS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39,
+          26.2
+        ],
+        [
+          39,
+          21.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Release south fanout bank by moving only low-current R25 pullup branch; main TOP U1-to-R23 NSS unchanged."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "SOUTH_RIP_NSS_PULLUP_1",
+      "net": "PA4_SPI_NSS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39,
+          21.3
+        ],
+        [
+          32.2,
+          21.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Release south fanout bank by moving only low-current R25 pullup branch; main TOP U1-to-R23 NSS unchanged."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "SOUTH_RIP_NSS_PULLUP_2",
+      "net": "PA4_SPI_NSS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          32.2,
+          21.3
+        ],
+        [
+          32.2,
+          22
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Release south fanout bank by moving only low-current R25 pullup branch; main TOP U1-to-R23 NSS unchanged."
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_25_NECK",
+      "net": "GPIO_PB12",
+      "layer": "TOP",
+      "points": [
+        [
+          37.25,
+          22.75
+        ],
+        [
+          37.25,
+          22.1
+        ],
+        [
+          37.0,
+          21.85
+        ],
+        [
+          37,
+          21.25
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Finite dense-source neck before private staggered PTH via; outside source window normal .20mm remains."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_25_VIA",
+      "net": "GPIO_PB12",
+      "xy": [
+        37,
+        21.25
+      ],
+      "padstack": "HI_VIA026_C052_TENTED",
+      "purpose": "Private PTH .26drill/.52Cu, .13annulus, no mask aperture; only source region approved variant, native definition verification pending."
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_26_NECK",
+      "net": "GPIO_PB13",
+      "layer": "TOP",
+      "points": [
+        [
+          37.75,
+          22.75
+        ],
+        [
+          37.75,
+          22.1
+        ],
+        [
+          37.5,
+          21.85
+        ],
+        [
+          37.5,
+          20.75
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Finite dense-source neck before private staggered PTH via; outside source window normal .20mm remains."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_26_VIA",
+      "net": "GPIO_PB13",
+      "xy": [
+        37.5,
+        20.75
+      ],
+      "padstack": "HI_VIA026_C052_TENTED",
+      "purpose": "Private PTH .26drill/.52Cu, .13annulus, no mask aperture; only source region approved variant, native definition verification pending."
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_27_NECK",
+      "net": "GPIO_PB14",
+      "layer": "TOP",
+      "points": [
+        [
+          38.25,
+          22.75
+        ],
+        [
+          38.25,
+          22.1
+        ],
+        [
+          38.0,
+          21.85
+        ],
+        [
+          38,
+          21.25
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Finite dense-source neck before private staggered PTH via; outside source window normal .20mm remains."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_27_VIA",
+      "net": "GPIO_PB14",
+      "xy": [
+        38,
+        21.25
+      ],
+      "padstack": "HI_VIA026_C052_TENTED",
+      "purpose": "Private PTH .26drill/.52Cu, .13annulus, no mask aperture; only source region approved variant, native definition verification pending."
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_28_NECK",
+      "net": "GPIO_PB15",
+      "layer": "TOP",
+      "points": [
+        [
+          38.75,
+          22.75
+        ],
+        [
+          38.75,
+          22.1
+        ],
+        [
+          38.5,
+          21.85
+        ],
+        [
+          38.5,
+          20.7
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Finite dense-source neck before private staggered PTH via; outside source window normal .20mm remains."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_28_VIA",
+      "net": "GPIO_PB15",
+      "xy": [
+        38.5,
+        20.7
+      ],
+      "padstack": "HI_VIA026_C052_TENTED",
+      "purpose": "Private PTH .26drill/.52Cu, .13annulus, no mask aperture; only source region approved variant, native definition verification pending."
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_29_NECK",
+      "net": "USB_ATTACH_N",
+      "layer": "TOP",
+      "points": [
+        [
+          39.25,
+          22.75
+        ],
+        [
+          39.25,
+          22.1
+        ],
+        [
+          39.0,
+          21.85
+        ],
+        [
+          39,
+          21.2
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Finite dense-source neck before private staggered PTH via; outside source window normal .20mm remains."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_29_VIA",
+      "net": "USB_ATTACH_N",
+      "xy": [
+        39,
+        21.2
+      ],
+      "padstack": "HI_VIA026_C052_TENTED",
+      "purpose": "Private PTH .26drill/.52Cu, .13annulus, no mask aperture; only source region approved variant, native definition verification pending."
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_30_NECK",
+      "net": "PA9_UART_TX",
+      "layer": "TOP",
+      "points": [
+        [
+          39.75,
+          22.75
+        ],
+        [
+          39.75,
+          21.75
+        ],
+        [
+          39.7,
+          21.7
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Finite dense-source neck before private staggered PTH via; outside source window normal .20mm remains."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_30_VIA",
+      "net": "PA9_UART_TX",
+      "xy": [
+        39.7,
+        21.7
+      ],
+      "padstack": "HI_VIA026_C052_TENTED",
+      "purpose": "Private PTH .26drill/.52Cu, .13annulus, no mask aperture; only source region approved variant, native definition verification pending."
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_31_NECK",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          22.75
+        ],
+        [
+          40.25,
+          22.05
+        ],
+        [
+          40.22,
+          22.02
+        ],
+        [
+          40.22,
+          21.3
+        ],
+        [
+          40,
+          21.08
+        ],
+        [
+          40,
+          20.5
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Finite dense-source neck before private staggered PTH via; outside source window normal .20mm remains."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_31_VIA",
+      "net": "PA10_UART_RX",
+      "xy": [
+        40,
+        20.5
+      ],
+      "padstack": "HI_VIA026_C052_TENTED",
+      "purpose": "Private PTH .26drill/.52Cu, .13annulus, no mask aperture; only source region approved variant, native definition verification pending."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_RETURN_WEST",
+      "net": "GND",
+      "xy": [
+        36.1,
+        21.1
+      ],
+      "padstack": "HI_VIA026_C052_TENTED",
+      "purpose": "Dense-source common-plane return stitch, requires actual application GND attachment/branch proof; not quiet HSE."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_RETURN_MID",
+      "net": "GND",
+      "xy": [
+        38.0,
+        20.0
+      ],
+      "padstack": "HI_VIA026_C052_TENTED",
+      "purpose": "Dense-source common-plane return stitch, requires actual application GND attachment/branch proof; not quiet HSE."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_RETURN_EAST",
+      "net": "GND",
+      "xy": [
+        39.25,
+        20.3
+      ],
+      "padstack": "HI_VIA026_C052_TENTED",
+      "purpose": "Dense-source common-plane return stitch, requires actual application GND attachment/branch proof; not quiet HSE."
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_SOURCE_34_NECK",
+      "net": "SWDIO",
+      "layer": "TOP",
+      "points": [
+        [
+          41.75,
+          22.75
+        ],
+        [
+          41.75,
+          22.1
+        ],
+        [
+          41.85,
+          22.0
+        ],
+        [
+          41.85,
+          21.6
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Right-of-pair SWDIO finite source escape; actual USB/via reference clearance must pass."
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_SOURCE_34_VIA",
+      "net": "SWDIO",
+      "xy": [
+        41.85,
+        21.6
+      ],
+      "padstack": "HI_VIA026_C052_TENTED"
+    },
+    {
+      "type": "via",
+      "id": "SOUTH_RETURN_SWDIO",
+      "net": "GND",
+      "xy": [
+        42.0,
+        20.7
+      ],
+      "padstack": "HI_VIA026_C052_TENTED"
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_NSS_PULLUP_RELOCATED",
+      "net": "PA4_SPI_NSS",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          39,
+          26.2
+        ],
+        [
+          39,
+          23.2
+        ],
+        [
+          32.2,
+          23.2
+        ],
+        [
+          32.2,
+          22
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Preserve same pullup branch endpoints via39,26.2 and32.2,22; altered finite two-layer reference shadow must be checked."
+    }
+  ],
+  "partialEndpoints": {
+    "GPIO_PB12": {
+      "xy": [
+        37,
+        21.25
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.25"
+    },
+    "GPIO_PB13": {
+      "xy": [
+        37.5,
+        20.75
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.26"
+    },
+    "GPIO_PB14": {
+      "xy": [
+        38,
+        21.25
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.27"
+    },
+    "GPIO_PB15": {
+      "xy": [
+        38.5,
+        20.7
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.28"
+    },
+    "USB_ATTACH_N": {
+      "xy": [
+        39,
+        21.2
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.29"
+    },
+    "PA9_UART_TX": {
+      "xy": [
+        39.7,
+        21.7
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.30"
+    },
+    "PA10_UART_RX": {
+      "xy": [
+        40,
+        20.5
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.31"
+    },
+    "SWDIO": {
+      "xy": [
+        41.85,
+        21.6
+      ],
+      "layer": "BOTTOM",
+      "connectedTo": "U1.34"
+    }
+  },
+  "physicalExceptions": [
+    {
+      "id": "HI_SOUTH_DENSE_SOURCE_P",
+      "layer": "TOP",
+      "polygon": [
+        [
+          36.6,
+          20
+        ],
+        [
+          42.2,
+          20
+        ],
+        [
+          42.2,
+          23.4
+        ],
+        [
+          36.6,
+          23.4
+        ]
+      ],
+      "nets": [
+        "GPIO_PB12",
+        "GPIO_PB13",
+        "GPIO_PB14",
+        "GPIO_PB15",
+        "USB_ATTACH_N",
+        "PA9_UART_TX",
+        "PA10_UART_RX",
+        "SWDIO"
+      ],
+      "neckWidthMinMM": 0.16,
+      "maxNeckMM": 2.4,
+      "approvedVias": [
+        "L28_VIA030_C060",
+        "HI_VIA026_C052_TENTED"
+      ],
+      "basis": "Longest explicit proposed neck2.353553mm (U1.31 to via40,20.5). Local max2.4 only, parent unchanged; native may include connect graph endpoint differently and must report actual."
+    }
+  ],
+  "spacingExceptions": [
+    {
+      "id": "HI_SOUTH_DIGITAL_VIA_ESCAPE_S",
+      "layer": "TOP",
+      "polygon": [
+        [
+          36.6,
+          20.0
+        ],
+        [
+          40.55,
+          20.0
+        ],
+        [
+          40.55,
+          23.4
+        ],
+        [
+          36.6,
+          23.4
+        ]
+      ],
+      "nets": [
+        "GPIO_PB12",
+        "GPIO_PB13",
+        "GPIO_PB14",
+        "GPIO_PB15",
+        "USB_ATTACH_N",
+        "PA9_UART_TX",
+        "PA10_UART_RX",
+        "SWDIO"
+      ],
+      "onlyFields": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "basis": "0.5pitch adjacent .52via and .16line yields .16 copper gap; staggered via centers .7071 give .1871 edge gap. All other spacing preserved unless actual source screen proves necessary.",
+      "layers": [
+        "TOP",
+        "BOTTOM"
+      ]
+    },
+    {
+      "id": "HI_UART_RX_USB_ESCAPE_S",
+      "layer": "TOP",
+      "polygon": [
+        [
+          39.65,
+          20.0
+        ],
+        [
+          40.55,
+          20.0
+        ],
+        [
+          40.55,
+          22.15
+        ],
+        [
+          39.65,
+          22.15
+        ]
+      ],
+      "netsA": [
+        "PA10_UART_RX"
+      ],
+      "netsB": [
+        "PA11_SHARED",
+        "PA12_SHARED"
+      ],
+      "onlyFields": {
+        "via_line": 0.2,
+        "line_line": 0.2
+      },
+      "basis": "UART_RX source via40,20.5 to DM trunk40.6 exact edge gap.24; outside USB-other .5 unchanged. Actual reference antipad and return transition must be inspected."
+    },
+    {
+      "id": "HI_SOUTH_GND_RX_VIA_ONLY_S",
+      "layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "polygon": [
+        [
+          39,
+          20
+        ],
+        [
+          40.4,
+          20
+        ],
+        [
+          40.4,
+          21.1
+        ],
+        [
+          39,
+          21.1
+        ]
+      ],
+      "netsA": [
+        "GND"
+      ],
+      "netsB": [
+        "PA10_UART_RX"
+      ],
+      "onlyFields": {
+        "via_via": 0.2
+      },
+      "basis": "Proposed tiny common-GNDvia39.25,20.3 to RXvia40,20.5 actual gap .2562; original GND global .3 unchanged outside finite source transition."
+    },
+    {
+      "id": "HI_SWDIO_USB_VIA_ESCAPE_S",
+      "layer": "TOP",
+      "polygon": [
+        [
+          41.5,
+          21.2
+        ],
+        [
+          42.1,
+          21.2
+        ],
+        [
+          42.1,
+          23.4
+        ],
+        [
+          41.5,
+          23.4
+        ]
+      ],
+      "netsA": [
+        "SWDIO"
+      ],
+      "netsB": [
+        "PA12_SHARED"
+      ],
+      "onlyFields": {
+        "via_line": 0.2
+      },
+      "basis": "Source via41.85,21.6 copper clears actual sharedDP bend by .3108; original .5 outside source retained."
+    }
+  ],
+  "remainingSourceTasks": [
+    "Root-integrated source UART_TX via39.7,21.7\u2192movedR16.1; UART_RX R17.1\u2192via40,20.5; PA8Attach partial\u2192Q2; SWDIO partial\u2192serviceheader. These are explicit unresolved joins, not claimed connected."
+  ],
+  "manufacturingBasis": {
+    "2L": "OSH Park published min finished hole .254mm / annular .127mm; .26/.52=.13 annular leaves only .006mm hole and .003mm annulus over published minima, tool availability/tolerance/tenting not certified.",
+    "4L": "JLC PCB capabilities archived lesson28 source: multilayer min hole .15/preferred .2, pad minus hole .10/preferred .15. .26/.52 satisfies published geometry, drill pos +/- .075 separate manufacturing tolerance, actual quote/tool confirmation open."
+  },
+  "sourceBranchTradeoff": "Only NSS pullup branch BOTTOM y21.3 is moved to y23.2. Main TOP SPI source/corner/series resistor path unchanged. On2L this moves a finite reference slot under inner end of MCU bottom-row SMD pads and C13 power-node vicinity; inspect direct-TOP local cap/VSS loops and same-layer application-GND returns. Not continuous opposite-plane claim."
+}

@@ -1,0 +1,221 @@
+{
+  "status": "LONG_PATH_GEOMETRY_CANDIDATE_NEEDS_ENGINEERING_REVIEW",
+  "variant": "4L",
+  "sourceExpectedSHA256": "DB0FB0243BA036E986976862DD00389A41F79FBF8E6592CD4243590EAB7338BD",
+  "operations": [
+    {
+      "type": "route",
+      "id": "RIGHT_LONG_SWCLK_0_R0",
+      "net": "SWCLK",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.4,
+          24.15
+        ],
+        [
+          47.15,
+          24.15
+        ],
+        [
+          48.85,
+          25.85
+        ],
+        [
+          52.75,
+          25.85
+        ],
+        [
+          58.6,
+          20.0
+        ],
+        [
+          58.62,
+          20.0
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit endpoint/corridor long route after engineered source; actual native/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_LONG_I2C_SDA_0_R0",
+      "net": "I2C_SDA",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.4,
+          27.15
+        ],
+        [
+          47.8,
+          27.15
+        ],
+        [
+          52.85,
+          32.2
+        ],
+        [
+          52.85,
+          34.2
+        ],
+        [
+          56.4,
+          37.75
+        ],
+        [
+          60.3,
+          37.75
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit endpoint/corridor long route after engineered source; actual native/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_LONG_I2C_SDA_0_R1",
+      "net": "I2C_SDA",
+      "layer": "TOP",
+      "points": [
+        [
+          60.3,
+          37.75
+        ],
+        [
+          59.25,
+          37.75
+        ],
+        [
+          58.5,
+          37.0
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit endpoint/corridor long route after engineered source; actual native/reference review pending"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_LONG_BOOT0_1_R0",
+      "net": "BOOT0",
+      "layer": "TOP",
+      "points": [
+        [
+          52.8984,
+          28.0
+        ],
+        [
+          52.9,
+          28.0
+        ],
+        [
+          52.9,
+          29.65
+        ],
+        [
+          54.0,
+          30.75
+        ],
+        [
+          54.0,
+          30.73
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit endpoint/corridor long route after engineered source; actual native/reference review pending"
+    }
+  ],
+  "proofs": [
+    {
+      "net": "SWCLK",
+      "source": "U1.37",
+      "target": "J9.4"
+    },
+    {
+      "net": "I2C_SDA",
+      "source": "U1.43",
+      "target": "R20.2"
+    },
+    {
+      "net": "BOOT0",
+      "source": "R28.1",
+      "target": "J8.2"
+    }
+  ],
+  "reviews": [
+    {
+      "net": "SWCLK",
+      "source": "ANCHOR_SWCLK",
+      "target": "J9.4",
+      "viaCount": 0,
+      "length_mm": 15.347312395916868,
+      "expanded": 14472
+    },
+    {
+      "net": "I2C_SDA",
+      "source": "ANCHOR_I2C_SDA",
+      "target": "R20.2",
+      "viaCount": 0,
+      "length_mm": 21.57289680818844,
+      "expanded": 86618
+    },
+    {
+      "net": "BOOT0",
+      "source": "R28.1",
+      "target": "J8.2",
+      "viaCount": 0,
+      "length_mm": 3.2272349186104012,
+      "expanded": 372
+    }
+  ],
+  "failures": [
+    {
+      "net": "SWO",
+      "source": "ANCHOR_SWO",
+      "target": "J9.6",
+      "reason": "No geometric candidate after 23 expanded cells"
+    },
+    {
+      "net": "GPIO_PA15",
+      "source": "ANCHOR_GPIO_PA15",
+      "target": "J13.4",
+      "reason": "No legal source grid cell under supplied rule/policy"
+    },
+    {
+      "net": "GPIO_PB4",
+      "source": "ANCHOR_GPIO_PB4",
+      "target": "J13.5",
+      "reason": "No legal source grid cell under supplied rule/policy"
+    },
+    {
+      "net": "GPIO_PB5",
+      "source": "ANCHOR_GPIO_PB5",
+      "target": "J13.6",
+      "reason": "No geometric candidate after 23 expanded cells"
+    },
+    {
+      "net": "GPIO_PB8",
+      "source": "ANCHOR_GPIO_PB8",
+      "target": "J13.7",
+      "reason": "No geometric candidate after 23 expanded cells"
+    },
+    {
+      "net": "GPIO_PB9",
+      "source": "ANCHOR_GPIO_PB9",
+      "target": "J13.8",
+      "reason": "No legal source grid cell under supplied rule/policy"
+    },
+    {
+      "net": "I2C_SCL",
+      "source": "ANCHOR_I2C_SCL",
+      "target": "R19.2",
+      "reason": "No legal source grid cell under supplied rule/policy"
+    },
+    {
+      "net": "BOOT0",
+      "source": "ANCHOR_BOOT0",
+      "target": "R28.1",
+      "reason": "No legal source grid cell under supplied rule/policy"
+    }
+  ],
+  "scope": "Specified right10 long endpoints only; sourcejoint and all declared future plans are obstacles. I2C remote R19/R20 toJ5 from rootv7 retained as separate knowncandidate, no duplicate automaticstar. Signal transitions need final ground. No Cadence invoked."
+}

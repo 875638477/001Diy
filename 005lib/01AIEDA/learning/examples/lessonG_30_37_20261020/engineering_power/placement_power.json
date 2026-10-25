@@ -1,0 +1,1714 @@
+[
+  {
+    "ref": "J1",
+    "xy": [
+      6,
+      13
+    ],
+    "rotation": 0,
+    "purpose": "Bench DC entry; exact connector/cable/tool envelope pending",
+    "package": "PIN02_2D54MM_1X2",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        4.63,
+        10.36
+      ],
+      [
+        7.37,
+        15.64
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          6.0,
+          11.73
+        ]
+      },
+      {
+        "number": "1",
+        "net": "VIN_RAW",
+        "xy": [
+          6.0,
+          14.27
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "F1",
+    "xy": [
+      9.2,
+      13
+    ],
+    "rotation": 0,
+    "purpose": "Before reverse diode, visible service fuse",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        8.5904,
+        12.3396
+      ],
+      [
+        11.5876,
+        13.6604
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "VIN_FUSED",
+        "xy": [
+          10.8764,
+          13.0
+        ]
+      },
+      {
+        "number": "1",
+        "net": "VIN_RAW",
+        "xy": [
+          9.3016,
+          13.0
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "D1",
+    "xy": [
+      15,
+      13
+    ],
+    "rotation": 90,
+    "purpose": "SS14 anode left, cathode right to VIN_PROT",
+    "package": "DO-214AC_SMA",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        12.2534,
+        11.476
+      ],
+      [
+        17.7906,
+        14.524
+      ]
+    ],
+    "pins": [
+      {
+        "number": "1",
+        "net": "VIN_PROT",
+        "xy": [
+          16.95,
+          13.0
+        ]
+      },
+      {
+        "number": "2",
+        "net": "VIN_FUSED",
+        "xy": [
+          13.1,
+          13.0
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "C1",
+    "xy": [
+      11.2,
+      18.3
+    ],
+    "rotation": 0,
+    "purpose": "Bulk input after D1; positive pin1; 11mm teaching envelope",
+    "package": "DE_CAPRADIAL_6D3_P2D5",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        7.7,
+        14.8
+      ],
+      [
+        14.7,
+        21.8
+      ]
+    ],
+    "pins": [
+      {
+        "number": "1",
+        "net": "VIN_PROT",
+        "xy": [
+          9.95,
+          18.3
+        ]
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          12.45,
+          18.3
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "C2",
+    "xy": [
+      25.2,
+      15.4
+    ],
+    "rotation": 180,
+    "purpose": "22uF VIN local reservoir; retain low impedance ground corridor",
+    "package": "1206",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        21.136,
+        14.384
+      ],
+      [
+        26.216,
+        16.416
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          22.152,
+          15.4
+        ]
+      },
+      {
+        "number": "1",
+        "net": "VIN_PROT",
+        "xy": [
+          25.2,
+          15.4
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "C3",
+    "xy": [
+      26.2,
+      18.6
+    ],
+    "rotation": 180,
+    "purpose": "Closest HF VIN bypass; pin1 toward U2 VIN, pin2 GND via/corridor",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        23.8124,
+        17.9396
+      ],
+      [
+        26.8096,
+        19.2604
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          24.5236,
+          18.6
+        ]
+      },
+      {
+        "number": "1",
+        "net": "VIN_PROT",
+        "xy": [
+          26.0984,
+          18.6
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "U2",
+    "xy": [
+      25.5,
+      21
+    ],
+    "rotation": 270,
+    "purpose": "SW left / FB right; high di/dt CIN loop planned separately from output loop",
+    "package": "SOT23-6",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        23.9582,
+        19.4989
+      ],
+      [
+        27.0507,
+        22.4999
+      ]
+    ],
+    "pins": [
+      {
+        "number": "3",
+        "net": "VIN_PROT",
+        "xy": [
+          24.2,
+          20.05
+        ]
+      },
+      {
+        "number": "2",
+        "net": "BUCK_SW",
+        "xy": [
+          24.2,
+          21.0
+        ]
+      },
+      {
+        "number": "1",
+        "net": "GND",
+        "xy": [
+          24.2,
+          21.95
+        ]
+      },
+      {
+        "number": "4",
+        "net": "BUCK_FB",
+        "xy": [
+          26.8,
+          20.05
+        ]
+      },
+      {
+        "number": "5",
+        "net": null,
+        "xy": [
+          26.8,
+          21.0
+        ]
+      },
+      {
+        "number": "6",
+        "net": "BUCK_BOOT",
+        "xy": [
+          26.8,
+          21.95
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "C4",
+    "xy": [
+      26.7,
+      23.7
+    ],
+    "rotation": 180,
+    "purpose": "BOOT pin1 to U2.6; pin2 to SW not ground",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        24.3124,
+        23.0396
+      ],
+      [
+        27.3096,
+        24.3604
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "BUCK_SW",
+        "xy": [
+          25.0236,
+          23.7
+        ]
+      },
+      {
+        "number": "1",
+        "net": "BUCK_BOOT",
+        "xy": [
+          26.5984,
+          23.7
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "L1",
+    "xy": [
+      20,
+      24
+    ],
+    "rotation": 0,
+    "purpose": "Short lead local pin1 right faces U2 SW; real height max6.1mm",
+    "package": "DE_XAL6060_2LAND",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        16.45,
+        20.35
+      ],
+      [
+        23.55,
+        27.65
+      ]
+    ],
+    "pins": [
+      {
+        "number": "1",
+        "net": "BUCK_SW",
+        "xy": [
+          22.02,
+          24.0
+        ]
+      },
+      {
+        "number": "2",
+        "net": "V5",
+        "xy": [
+          17.98,
+          24.0
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "C5",
+    "xy": [
+      14.4,
+      23.1
+    ],
+    "rotation": 90,
+    "purpose": "Output cap V5 pin1 lower, GND pin2 upper; sample clean V5 here",
+    "package": "1206",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        13.384,
+        22.084
+      ],
+      [
+        15.416,
+        27.164
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          14.4,
+          26.148
+        ]
+      },
+      {
+        "number": "1",
+        "net": "V5",
+        "xy": [
+          14.4,
+          23.1
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "C6",
+    "xy": [
+      11.7,
+      23.1
+    ],
+    "rotation": 90,
+    "purpose": "Parallel output cap next to C5",
+    "package": "1206",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        10.684,
+        22.084
+      ],
+      [
+        12.716,
+        27.164
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          11.7,
+          26.148
+        ]
+      },
+      {
+        "number": "1",
+        "net": "V5",
+        "xy": [
+          11.7,
+          23.1
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R1",
+    "xy": [
+      31,
+      19.1
+    ],
+    "rotation": 180,
+    "purpose": "Feedback upper resistor; own quiet sense from C5 positive",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        28.6124,
+        18.4396
+      ],
+      [
+        31.6096,
+        19.7604
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "BUCK_FB",
+        "xy": [
+          29.3236,
+          19.1
+        ]
+      },
+      {
+        "number": "1",
+        "net": "V5",
+        "xy": [
+          30.8984,
+          19.1
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R2",
+    "xy": [
+      29.9,
+      21.3
+    ],
+    "rotation": 180,
+    "purpose": "Feedback lower resistor; Kelvin GND to U2.1 outside power return",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        27.5124,
+        20.6396
+      ],
+      [
+        30.5096,
+        21.9604
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          28.2236,
+          21.3
+        ]
+      },
+      {
+        "number": "1",
+        "net": "BUCK_FB",
+        "xy": [
+          29.7984,
+          21.3
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "C7",
+    "xy": [
+      31,
+      17.3
+    ],
+    "rotation": 180,
+    "purpose": "Feedforward across R1; small FB node away from SW",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        28.6124,
+        16.6396
+      ],
+      [
+        31.6096,
+        17.9604
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "BUCK_FB",
+        "xy": [
+          29.3236,
+          17.3
+        ]
+      },
+      {
+        "number": "1",
+        "net": "V5",
+        "xy": [
+          30.8984,
+          17.3
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "U3",
+    "xy": [
+      30.4,
+      27
+    ],
+    "rotation": 0,
+    "purpose": "LDO DBV5: input left/top output right/top; no exposed pad",
+    "package": "SOT23-5",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        29.0,
+        25.3
+      ],
+      [
+        31.85,
+        28.7
+      ]
+    ],
+    "pins": [
+      {
+        "number": "5",
+        "net": "V3V3",
+        "xy": [
+          31.7,
+          27.95
+        ]
+      },
+      {
+        "number": "4",
+        "net": null,
+        "xy": [
+          31.7,
+          26.05
+        ]
+      },
+      {
+        "number": "1",
+        "net": "V5",
+        "xy": [
+          29.1,
+          27.95
+        ]
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          29.1,
+          27.0
+        ]
+      },
+      {
+        "number": "3",
+        "net": "V5",
+        "xy": [
+          29.1,
+          26.05
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "C8",
+    "xy": [
+      27.8,
+      29
+    ],
+    "rotation": 270,
+    "purpose": "LDO input 0805 pin1 V5 near U3.1; pin2 GND near U3.2",
+    "package": "0805",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        26.911,
+        26.206
+      ],
+      [
+        28.689,
+        29.762
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          27.8,
+          26.968
+        ]
+      },
+      {
+        "number": "1",
+        "net": "V5",
+        "xy": [
+          27.8,
+          29.0
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "C9",
+    "xy": [
+      31.2,
+      30.6
+    ],
+    "rotation": 0,
+    "purpose": "LDO output 0805 above U3; avoids root SPI R24 at y28.2",
+    "package": "0805",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        30.438,
+        29.711
+      ],
+      [
+        33.994,
+        31.489
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          33.232,
+          30.6
+        ]
+      },
+      {
+        "number": "1",
+        "net": "V3V3",
+        "xy": [
+          31.2,
+          30.6
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "U4",
+    "xy": [
+      40.25,
+      10
+    ],
+    "rotation": 180,
+    "purpose": "USBLC6 flow-through: connector to6/4, protected side1/3; GND2 at y11.3",
+    "package": "SOT23-6",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        38.7489,
+        8.4493
+      ],
+      [
+        41.7499,
+        11.5418
+      ]
+    ],
+    "pins": [
+      {
+        "number": "5",
+        "net": "USB_VBUS",
+        "xy": [
+          40.25,
+          8.7
+        ]
+      },
+      {
+        "number": "4",
+        "net": "USB_DM",
+        "xy": [
+          39.3,
+          8.7
+        ]
+      },
+      {
+        "number": "3",
+        "net": "USB_DM",
+        "xy": [
+          39.3,
+          11.3
+        ]
+      },
+      {
+        "number": "6",
+        "net": "USB_DP",
+        "xy": [
+          41.2,
+          8.7
+        ]
+      },
+      {
+        "number": "1",
+        "net": "USB_DP",
+        "xy": [
+          41.2,
+          11.3
+        ]
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          40.25,
+          11.3
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "C10",
+    "xy": [
+      42.7,
+      8.6
+    ],
+    "rotation": 90,
+    "purpose": "ESD VBUS rail local100nF; short return via near ground pad",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        42.0396,
+        7.9904
+      ],
+      [
+        43.3604,
+        10.9876
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          42.7,
+          10.2764
+        ]
+      },
+      {
+        "number": "1",
+        "net": "USB_VBUS",
+        "xy": [
+          42.7,
+          8.7016
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R3",
+    "xy": [
+      35,
+      10
+    ],
+    "rotation": 90,
+    "purpose": "CC1 own5.1k to GND; not combined with CC2",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        34.3396,
+        9.3904
+      ],
+      [
+        35.6604,
+        12.3876
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          35.0,
+          11.6764
+        ]
+      },
+      {
+        "number": "1",
+        "net": "USB_CC1",
+        "xy": [
+          35.0,
+          10.1016
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R4",
+    "xy": [
+      45.5,
+      10
+    ],
+    "rotation": 90,
+    "purpose": "CC2 own5.1k to GND; no TypeC all-pins ESD assertion",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        44.8396,
+        9.3904
+      ],
+      [
+        46.1604,
+        12.3876
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          45.5,
+          11.6764
+        ]
+      },
+      {
+        "number": "1",
+        "net": "USB_CC2",
+        "xy": [
+          45.5,
+          10.1016
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R5",
+    "xy": [
+      41.4,
+      18.5
+    ],
+    "rotation": 270,
+    "purpose": "USB D+ series position pin1 MCU, pin2 USB; history22R unresolved",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        40.7396,
+        16.1124
+      ],
+      [
+        42.0604,
+        19.1096
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "USB_DP",
+        "xy": [
+          41.4,
+          16.8236
+        ]
+      },
+      {
+        "number": "1",
+        "net": "PA12_SHARED",
+        "xy": [
+          41.4,
+          18.3984
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R6",
+    "xy": [
+      39.4,
+      18.5
+    ],
+    "rotation": 270,
+    "purpose": "USB D- series position pin1 MCU, pin2 USB; moved below C14 envelope",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        38.7396,
+        16.1124
+      ],
+      [
+        40.0604,
+        19.1096
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "USB_DM",
+        "xy": [
+          39.4,
+          16.8236
+        ]
+      },
+      {
+        "number": "1",
+        "net": "PA11_SHARED",
+        "xy": [
+          39.4,
+          18.3984
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R7",
+    "xy": [
+      49,
+      7
+    ],
+    "rotation": 0,
+    "purpose": "USB VBUS sense gate series10k; outside USB pair main corridor",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        48.3904,
+        6.3396
+      ],
+      [
+        51.3876,
+        7.6604
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "VBUS_GATE",
+        "xy": [
+          50.6764,
+          7.0
+        ]
+      },
+      {
+        "number": "1",
+        "net": "USB_VBUS",
+        "xy": [
+          49.1016,
+          7.0
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R8",
+    "xy": [
+      56.2,
+      9
+    ],
+    "rotation": 90,
+    "purpose": "VBUS MOS gate pull-down; keep off protected pair",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        55.5396,
+        8.3904
+      ],
+      [
+        56.8604,
+        11.3876
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          56.2,
+          10.6764
+        ]
+      },
+      {
+        "number": "1",
+        "net": "VBUS_GATE",
+        "xy": [
+          56.2,
+          9.1016
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "Q1",
+    "xy": [
+      52,
+      10.8
+    ],
+    "rotation": 0,
+    "purpose": "2N7002 VBUS presence sense, source GND; no USB board power",
+    "package": "SOT23-3",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        50.45,
+        9.05
+      ],
+      [
+        53.55,
+        12.55
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          52.9525,
+          9.5282
+        ]
+      },
+      {
+        "number": "1",
+        "net": "VBUS_GATE",
+        "xy": [
+          51.0475,
+          9.5282
+        ]
+      },
+      {
+        "number": "3",
+        "net": "VBUS_PRESENT_N",
+        "xy": [
+          52.0,
+          12.0718
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R9",
+    "xy": [
+      56.2,
+      13
+    ],
+    "rotation": 90,
+    "purpose": "VBUS presence drain pullup to3V3",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        55.5396,
+        12.3904
+      ],
+      [
+        56.8604,
+        15.3876
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "VBUS_PRESENT_N",
+        "xy": [
+          56.2,
+          14.6764
+        ]
+      },
+      {
+        "number": "1",
+        "net": "V3V3",
+        "xy": [
+          56.2,
+          13.1016
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "Q2",
+    "xy": [
+      48,
+      13.5
+    ],
+    "rotation": 0,
+    "purpose": "D+ attach PMOS source3V3, drain to pullup; default off",
+    "package": "SOT23-3",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        46.45,
+        11.75
+      ],
+      [
+        49.55,
+        15.25
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "V3V3",
+        "xy": [
+          48.9525,
+          12.2282
+        ]
+      },
+      {
+        "number": "1",
+        "net": "USB_ATTACH_N",
+        "xy": [
+          47.0475,
+          12.2282
+        ]
+      },
+      {
+        "number": "3",
+        "net": "USB_PULLUP_SRC",
+        "xy": [
+          48.0,
+          14.7718
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R10",
+    "xy": [
+      48.5,
+      17.2
+    ],
+    "rotation": 0,
+    "purpose": "Attach gate-source off resistor local toQ2",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        47.8904,
+        16.5396
+      ],
+      [
+        50.8876,
+        17.8604
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "USB_ATTACH_N",
+        "xy": [
+          50.1764,
+          17.2
+        ]
+      },
+      {
+        "number": "1",
+        "net": "V3V3",
+        "xy": [
+          48.6016,
+          17.2
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R11",
+    "xy": [
+      46,
+      16.2
+    ],
+    "rotation": 180,
+    "purpose": "1.5k D+ pullup branch; right end source / left end near D+ path",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        43.6124,
+        15.5396
+      ],
+      [
+        46.6096,
+        16.8604
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "USB_DP",
+        "xy": [
+          44.3236,
+          16.2
+        ]
+      },
+      {
+        "number": "1",
+        "net": "USB_PULLUP_SRC",
+        "xy": [
+          45.8984,
+          16.2
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R12",
+    "xy": [
+      43.4,
+      18.3
+    ],
+    "rotation": 0,
+    "purpose": "DNP default USB; CAN_TX select pad branch near R5 shared-side node",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        42.7904,
+        17.6396
+      ],
+      [
+        45.7876,
+        18.9604
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "CAN_TXD",
+        "xy": [
+          45.0764,
+          18.3
+        ]
+      },
+      {
+        "number": "1",
+        "net": "PA12_SHARED",
+        "xy": [
+          43.5016,
+          18.3
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R13",
+    "xy": [
+      37.4,
+      18.3
+    ],
+    "rotation": 180,
+    "purpose": "DNP default USB; CAN_RX select pad branch near R6 shared-side node",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        35.0124,
+        17.6396
+      ],
+      [
+        38.0096,
+        18.9604
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "CAN_RXD",
+        "xy": [
+          35.7236,
+          18.3
+        ]
+      },
+      {
+        "number": "1",
+        "net": "PA11_SHARED",
+        "xy": [
+          37.2984,
+          18.3
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "U5",
+    "xy": [
+      64,
+      16
+    ],
+    "rotation": 0,
+    "purpose": "SO8 pin1 origin: digital left, bus pins6/7 right towardJ3",
+    "package": "SO8",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        63.238,
+        11.555
+      ],
+      [
+        70.35,
+        16.6858
+      ]
+    ],
+    "pins": [
+      {
+        "number": "3",
+        "net": "V3V3",
+        "xy": [
+          64.0,
+          13.46
+        ]
+      },
+      {
+        "number": "1",
+        "net": "CAN_TXD",
+        "xy": [
+          64.0,
+          16.0
+        ]
+      },
+      {
+        "number": "4",
+        "net": "CAN_RXD",
+        "xy": [
+          64.0,
+          12.19
+        ]
+      },
+      {
+        "number": "8",
+        "net": null,
+        "xy": [
+          69.588,
+          16.0
+        ]
+      },
+      {
+        "number": "5",
+        "net": null,
+        "xy": [
+          69.588,
+          12.19
+        ]
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          64.0,
+          14.73
+        ]
+      },
+      {
+        "number": "6",
+        "net": "CAN_L",
+        "xy": [
+          69.588,
+          13.46
+        ]
+      },
+      {
+        "number": "7",
+        "net": "CAN_H",
+        "xy": [
+          69.588,
+          14.73
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "C11",
+    "xy": [
+      61.8,
+      13.3584
+    ],
+    "rotation": 90,
+    "purpose": "CAN100nF: pin1 aligns U5.3 VCC; pin2 near U5.2GND",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        61.1396,
+        12.7488
+      ],
+      [
+        62.4604,
+        15.746
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          61.8,
+          15.0348
+        ]
+      },
+      {
+        "number": "1",
+        "net": "V3V3",
+        "xy": [
+          61.8,
+          13.46
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "C12",
+    "xy": [
+      59.8,
+      13.3584
+    ],
+    "rotation": 90,
+    "purpose": "CAN1uF next toHF cap, independent local ground return",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        59.1396,
+        12.7488
+      ],
+      [
+        60.4604,
+        15.746
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND",
+        "xy": [
+          59.8,
+          15.0348
+        ]
+      },
+      {
+        "number": "1",
+        "net": "V3V3",
+        "xy": [
+          59.8,
+          13.46
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R14",
+    "xy": [
+      60.3,
+      17.9
+    ],
+    "rotation": 0,
+    "purpose": "TXD recessive pullup near U5.1",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        59.6904,
+        17.2396
+      ],
+      [
+        62.6876,
+        18.5604
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "CAN_TXD",
+        "xy": [
+          61.9764,
+          17.9
+        ]
+      },
+      {
+        "number": "1",
+        "net": "V3V3",
+        "xy": [
+          60.4016,
+          17.9
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R15",
+    "xy": [
+      71.5,
+      14.75
+    ],
+    "rotation": 270,
+    "purpose": "120R across bus near connector; endpoint-only population",
+    "package": "1206",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        70.484,
+        10.686
+      ],
+      [
+        72.516,
+        15.766
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "CAN_L",
+        "xy": [
+          71.5,
+          11.702
+        ]
+      },
+      {
+        "number": "1",
+        "net": "CAN_H",
+        "xy": [
+          71.5,
+          14.75
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R16",
+    "xy": [
+      46.5,
+      20.5
+    ],
+    "rotation": 0,
+    "purpose": "UART TX33R position; source path longer than ideal due USB/decoupling priorities, review route",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        45.8904,
+        19.8396
+      ],
+      [
+        48.8876,
+        21.1604
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "UART_TX",
+        "xy": [
+          48.1764,
+          20.5
+        ]
+      },
+      {
+        "number": "1",
+        "net": "PA9_UART_TX",
+        "xy": [
+          46.6016,
+          20.5
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R17",
+    "xy": [
+      50.3,
+      19.4
+    ],
+    "rotation": 0,
+    "purpose": "UART RX0R from external receiver path",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        49.6904,
+        18.7396
+      ],
+      [
+        52.6876,
+        20.0604
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "UART_RX",
+        "xy": [
+          51.9764,
+          19.4
+        ]
+      },
+      {
+        "number": "1",
+        "net": "PA10_UART_RX",
+        "xy": [
+          50.4016,
+          19.4
+        ]
+      }
+    ]
+  },
+  {
+    "ref": "R18",
+    "xy": [
+      54.5,
+      18.2
+    ],
+    "rotation": 90,
+    "purpose": "UART RX idle pullup",
+    "package": "0603",
+    "proposalOnly": true,
+    "transformedBodyBBox": [
+      [
+        53.8396,
+        17.5904
+      ],
+      [
+        55.1604,
+        20.5876
+      ]
+    ],
+    "pins": [
+      {
+        "number": "2",
+        "net": "V3V3",
+        "xy": [
+          54.5,
+          19.8764
+        ]
+      },
+      {
+        "number": "1",
+        "net": "UART_RX",
+        "xy": [
+          54.5,
+          18.3016
+        ]
+      }
+    ]
+  }
+]

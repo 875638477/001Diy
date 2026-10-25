@@ -1,0 +1,805 @@
+{
+  "status": "ENGINEERING_CANDIDATE_REQUIRE_NATIVE_DRC",
+  "prerequisite": "power_critical_paths_01: C3y18.0, first buck saved checkpoint; retain same placement",
+  "operations": [
+    {
+      "type": "route",
+      "id": "IN_J1_F1",
+      "net": "VIN_RAW",
+      "layer": "TOP",
+      "points": [
+        [
+          6,
+          14.27
+        ],
+        [
+          7.9,
+          14.27
+        ],
+        [
+          9.3016,
+          13
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "J1.1",
+      "to": "F1.1",
+      "purpose": "Entry to fuse, no branch before protection."
+    },
+    {
+      "type": "route",
+      "id": "IN_F1_D1",
+      "net": "VIN_FUSED",
+      "layer": "TOP",
+      "points": [
+        [
+          10.8764,
+          13
+        ],
+        [
+          13.1,
+          13
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "F1.2",
+      "to": "D1.2",
+      "purpose": "Anode2 receives fused input; cathode1 is protected rail."
+    },
+    {
+      "type": "route",
+      "id": "IN_D1_C2",
+      "net": "VIN_PROT",
+      "layer": "TOP",
+      "points": [
+        [
+          16.95,
+          13
+        ],
+        [
+          23.2,
+          13
+        ],
+        [
+          25.2,
+          15.4
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "D1.1",
+      "to": "C2.1",
+      "purpose": "Protected rail local reservoir."
+    },
+    {
+      "type": "route",
+      "id": "IN_D1_C1",
+      "net": "VIN_PROT",
+      "layer": "TOP",
+      "points": [
+        [
+          16.95,
+          13
+        ],
+        [
+          17.5,
+          13.55
+        ],
+        [
+          17.5,
+          16.2
+        ],
+        [
+          14,
+          19.7
+        ],
+        [
+          9.95,
+          19.7
+        ],
+        [
+          9.95,
+          18.3
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "D1.1",
+      "to": "C1.1",
+      "purpose": "Bulk positive routed around its GND pin; exact electrolytic MPN pending."
+    },
+    {
+      "type": "route",
+      "id": "IN_C1_GND",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          12.45,
+          18.3
+        ],
+        [
+          13.8,
+          18.3
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "C1.2",
+      "to": "V_HI_C1",
+      "purpose": "Bulk ground offpad via."
+    },
+    {
+      "type": "route",
+      "id": "OUT_L1_C5",
+      "net": "V5",
+      "layer": "TOP",
+      "points": [
+        [
+          17.98,
+          24
+        ],
+        [
+          16.8,
+          24
+        ],
+        [
+          15.9,
+          23.1
+        ],
+        [
+          14.4,
+          23.1
+        ]
+      ],
+      "widths": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "from": "L1.2",
+      "to": "C5.1",
+      "purpose": "Filtered side output, do not sense SW side."
+    },
+    {
+      "type": "route",
+      "id": "OUT_C5_C6",
+      "net": "V5",
+      "layer": "TOP",
+      "points": [
+        [
+          14.4,
+          23.1
+        ],
+        [
+          11.7,
+          23.1
+        ]
+      ],
+      "widths": [
+        0.8
+      ],
+      "from": "C5.1",
+      "to": "C6.1",
+      "purpose": "Parallel output capacitors, total effective capacitance still needs MPN evidence."
+    },
+    {
+      "type": "route",
+      "id": "OUT_C5_C6_GND",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          14.4,
+          26.148
+        ],
+        [
+          13,
+          26.148
+        ],
+        [
+          11.7,
+          26.148
+        ]
+      ],
+      "widths": [
+        0.8,
+        0.8
+      ],
+      "from": "C5.2",
+      "to": "C6.2",
+      "purpose": "Wide local Cout ground and parallel plane vias."
+    },
+    {
+      "type": "route",
+      "id": "OUT_GND_B",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          13,
+          26.148
+        ],
+        [
+          13,
+          27
+        ]
+      ],
+      "widths": [
+        0.8
+      ],
+      "from": "V_HI_OUT_A",
+      "to": "V_HI_OUT_B",
+      "purpose": "Parallel ground return, critical via solid connection preferred."
+    },
+    {
+      "type": "route",
+      "id": "V5_LDO_MAIN",
+      "net": "V5",
+      "layer": "TOP",
+      "points": [
+        [
+          14.4,
+          23.1
+        ],
+        [
+          16,
+          24.7
+        ],
+        [
+          16,
+          28.4
+        ],
+        [
+          22.8,
+          28.4
+        ],
+        [
+          22.8,
+          31
+        ],
+        [
+          24.2,
+          31
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "C5.1",
+      "to": "C8.1",
+      "purpose": "Main V5 from filtered capacitor to input bypass, skirt inductor top, no SW crossing."
+    },
+    {
+      "type": "route",
+      "id": "V5_C8_U3IN",
+      "net": "V5",
+      "layer": "TOP",
+      "points": [
+        [
+          24.2,
+          31
+        ],
+        [
+          25,
+          31
+        ],
+        [
+          25.7,
+          30.3
+        ],
+        [
+          25.7,
+          29.95
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "C8.1",
+      "to": "U3.1",
+      "purpose": "LDO input bypass to IN1."
+    },
+    {
+      "type": "route",
+      "id": "V5_U3_EN",
+      "net": "V5",
+      "layer": "TOP",
+      "points": [
+        [
+          25.7,
+          29.95
+        ],
+        [
+          26.95,
+          29.95
+        ],
+        [
+          26.95,
+          28.05
+        ],
+        [
+          25.7,
+          28.05
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "U3.1",
+      "to": "U3.3",
+      "purpose": "EN tied to input around GND2 inside no-EP DBV body, .30min clearance must native-check."
+    },
+    {
+      "type": "route",
+      "id": "LDO_OUT_C9",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          28.3,
+          29.95
+        ],
+        [
+          28.3,
+          30.5
+        ],
+        [
+          28.75,
+          30.95
+        ],
+        [
+          29.8,
+          30.95
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "U3.5",
+      "to": "C9.1",
+      "purpose": "Output first reaches local output cap; all other loads branch from this rail, not through MCU neck."
+    },
+    {
+      "type": "route",
+      "id": "LDO_C8_GND",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          25.7,
+          29
+        ],
+        [
+          24.2,
+          28.968
+        ],
+        [
+          24.2,
+          27.8
+        ],
+        [
+          24.2,
+          27
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "U3.2",
+      "to": "V_HI_LDO_IN_B",
+      "purpose": "Short TOP input/GND2 connection, dual vias below cap avoid V5 main trunk."
+    },
+    {
+      "type": "route",
+      "id": "LDO_C9_GND",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          29.8,
+          28.918
+        ],
+        [
+          29.8,
+          29
+        ],
+        [
+          28.6,
+          29
+        ],
+        [
+          27.9,
+          29
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "C9.2",
+      "to": "V_HI_LDO_OUT_B",
+      "purpose": "Ground vias between NC4 and OUT5 without touching either; do not place via inside C9 pad."
+    },
+    {
+      "type": "route",
+      "id": "V5_R1_C7",
+      "net": "V5",
+      "layer": "TOP",
+      "points": [
+        [
+          30.8984,
+          19.1
+        ],
+        [
+          30.8984,
+          17.3
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "R1.1",
+      "to": "C7.1",
+      "purpose": "Feedforward upper endpoint."
+    },
+    {
+      "type": "route",
+      "id": "FB_C7_R1",
+      "net": "BUCK_FB",
+      "layer": "TOP",
+      "points": [
+        [
+          29.3236,
+          17.3
+        ],
+        [
+          29.3236,
+          19.1
+        ]
+      ],
+      "widths": [
+        0.2
+      ],
+      "from": "C7.2",
+      "to": "R1.2",
+      "purpose": "Small quiet feedback branch, no vias/no test stub."
+    },
+    {
+      "type": "route",
+      "id": "FB_U2_R2",
+      "net": "BUCK_FB",
+      "layer": "TOP",
+      "points": [
+        [
+          26.8,
+          20.05
+        ],
+        [
+          29.3236,
+          20.05
+        ],
+        [
+          29.7984,
+          20.5248
+        ],
+        [
+          29.7984,
+          21.3
+        ]
+      ],
+      "widths": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "from": "U2.4",
+      "to": "R2.1",
+      "purpose": "FB away from SW/BOOT; preserve1mm switch-sensitive isolation."
+    },
+    {
+      "type": "route",
+      "id": "FB_R1_JOIN",
+      "net": "BUCK_FB",
+      "layer": "TOP",
+      "points": [
+        [
+          29.3236,
+          19.1
+        ],
+        [
+          29.3236,
+          20.05
+        ]
+      ],
+      "widths": [
+        0.2
+      ],
+      "from": "R1.2",
+      "to": "FB_U2_R2",
+      "purpose": "Divider junction."
+    },
+    {
+      "type": "route",
+      "id": "FB_GND_QUIET",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          28.2236,
+          21.3
+        ],
+        [
+          28.2236,
+          22.4
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "R2.2",
+      "to": "V_HI_FB_GND",
+      "purpose": "Quiet-side plane return, separate from CIN/Cout shared neck; not strict isolated Kelvin copper, inspect actual reference current bottlenecks."
+    },
+    {
+      "type": "via",
+      "id": "V_HI_C1",
+      "net": "GND",
+      "xy": [
+        13.8,
+        18.3
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Bulk GND offpad"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_OUT_A",
+      "net": "GND",
+      "xy": [
+        13,
+        26.148
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Cout GND via A"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_OUT_B",
+      "net": "GND",
+      "xy": [
+        13,
+        27
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Cout GND via B"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_LDO_IN_A",
+      "net": "GND",
+      "xy": [
+        24.2,
+        27.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "LDO input GND via A"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_LDO_IN_B",
+      "net": "GND",
+      "xy": [
+        24.2,
+        27
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "LDO input GND via B"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_LDO_OUT_A",
+      "net": "GND",
+      "xy": [
+        28.6,
+        29
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "LDO output ground via A, offpad between package rows"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_LDO_OUT_B",
+      "net": "GND",
+      "xy": [
+        27.9,
+        29
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "LDO output ground via B, verify V5_EN.30gap"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_FB_GND",
+      "net": "GND",
+      "xy": [
+        28.2236,
+        22.4
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "FB divider quiet ground via"
+    },
+    {
+      "type": "route",
+      "id": "V5_SENSE_TOP_SOURCE",
+      "net": "V5",
+      "layer": "TOP",
+      "points": [
+        [
+          14.4,
+          23.1
+        ],
+        [
+          15.5,
+          22
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "C5.1",
+      "to": "V_HI_V5_SENSE_SOURCE",
+      "purpose": "Filtered source, offpad via and no load branch"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_V5_SENSE_SOURCE",
+      "net": "V5",
+      "xy": [
+        15.5,
+        22
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Sense offpad source via"
+    },
+    {
+      "type": "route",
+      "id": "V5_SENSE_BOTTOM",
+      "net": "V5",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          15.5,
+          22
+        ],
+        [
+          15.5,
+          12
+        ],
+        [
+          31.8,
+          12
+        ],
+        [
+          31.8,
+          19.1
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "from": "V_HI_V5_SENSE_SOURCE",
+      "to": "V_HI_V5_SENSE_END",
+      "purpose": "Go below CIN/U2 hot-return region, not between C3 ground and U2 ground; bounded reference slot must be rechecked"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_V5_SENSE_END",
+      "net": "V5",
+      "xy": [
+        31.8,
+        19.1
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Sense offpad end via outside R1 pad"
+    },
+    {
+      "type": "route",
+      "id": "V5_SENSE_TOP_END",
+      "net": "V5",
+      "layer": "TOP",
+      "points": [
+        [
+          31.8,
+          19.1
+        ],
+        [
+          30.8984,
+          19.1
+        ]
+      ],
+      "widths": [
+        0.6
+      ],
+      "from": "V_HI_V5_SENSE_END",
+      "to": "R1.1",
+      "purpose": "Low impedance V5 branch ends at divider upper node; BUCK_FB stays TOP"
+    },
+    {
+      "type": "route",
+      "id": "V5_SENSE_2L_GND_BRIDGE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          13.8,
+          18.3
+        ],
+        [
+          13.8,
+          15.5
+        ],
+        [
+          16.5,
+          15.5
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.6
+      ],
+      "from": "V_HI_C1",
+      "to": "V_HI_INPUT_RETURN_BRIDGE",
+      "purpose": "Restore short input GND across BOTTOM sense vertical slot; avoids forcing bulk/source return around entire cut"
+    },
+    {
+      "type": "via",
+      "id": "V_HI_INPUT_RETURN_BRIDGE",
+      "net": "GND",
+      "xy": [
+        16.5,
+        15.5
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Ground stitch on right of BOTTOM sense slot"
+    }
+  ],
+  "groundConnection": "CIN/U2/Cout critical vias prefer solid GND to actual filled generated plane; if thermal relief exists export spoke count,width,length and aggregate bottleneck, do not silently use one long .25 neck.",
+  "holdPoints": [
+    "V5 sense route is deliberately separate from load trunk, but source and feedback response/compensation not hardware validated.",
+    "R2 ground quiet-side via connects shared reference plane, not a physically isolated Kelvin net; verify no power return constriction between it and U2GND.",
+    "LDO no reverse blocking: prohibit SWD/header backfeed, actual PCB thermal and capacitor MPN/DC-bias remain open.",
+    "All routes are deterministic TOP candidates requiring native endpoint proof, DRC, plane update and current-loop review after other routing.",
+    "Sense branch around lower power region is deliberately long but low impedance; not oscillator/FB high impedance net. Actual feedback stability/load-step hardware check remains open. Two layer GND bridge must be native connected and plane neck/detour reviewed."
+  ],
+  "ruleChanges": [],
+  "supersedes": "power_paths_02.json: V5_SENSE_C5_R1 TOP path crosses VIN_C2_C3; preserve old file as rejected path history"
+}

@@ -1,0 +1,6818 @@
+{
+  "status": "DRAFT_UNAPPLIED_NATIVE_RULE_ADAPTER_ONLY_GEOMETRY_BATCH_NOT_AUTHORIZED",
+  "variant": "2L",
+  "sourceBoard": {
+    "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native\\HI_2L_USB_aux_2L_b014.brd",
+    "sha256": "3D84945A5CC18046C82883328D0A743A670D5961D831D87251B8A6A0CDFFACC9",
+    "readback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only",
+    "checkpointDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\USB_aux_2L_b014",
+    "summary": {
+      "netCount": 69,
+      "nettedTerminalCount": 266.0,
+      "nativeRemainingConnections": 45.0,
+      "graphMinTerminalJoins": 45.0,
+      "netsNeedingConnection": 36,
+      "nativeDRC": 0,
+      "drcEvidenceScope": "BUILD_REQUESTED_FULL_DRC_ZERO; FRESH_STORED_STATE_ONLY; FINAL_FULL_RECOMPUTE_PENDING",
+      "nativeTerminalFreeBranches": 0
+    }
+  },
+  "engineeringSources": [
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\GPIO_north_joint_fanout_02.json",
+      "sha256": "02C08DAAA4ADE31A98001E681012A0C879CABF719B88B914D023C95F320AE714"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\GPIO_south_joint_fanout_05.json",
+      "sha256": "123804B3D22D936AB6DAA56CDA39D5B35C000CD94588C951D5461BECEFB915AA"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\plans\\GPIO_left_joint_fanout_06.json",
+      "sha256": "8DDF7033F4BE0884C5A8D29A34177B1702403366CACB1B74486D703A651E832A"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\RIGHT10_FULL_2L_v10.json",
+      "sha256": "414DF2C319A6860276960DC70AC3691E080A90D6EF1826276FE5EA6C99C90C9A"
+    }
+  ],
+  "constraintOperations": [
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P001_2L",
+      "copyFrom": "HI2L_P_GPIO",
+      "values": {
+        "neckwidth_min": 0.16,
+        "necklength_max": 2.4,
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "sourceClass": "HI2L_GPIO_P",
+        "requestedNets": [
+          "GPIO_PB12",
+          "GPIO_PB13",
+          "GPIO_PB14",
+          "GPIO_PB15"
+        ],
+        "onlyDelta": [
+          "neckwidth_min",
+          "necklength_max",
+          "vias"
+        ],
+        "sourceReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P002_2L",
+      "copyFrom": "HI2L_P_USB_AUX",
+      "values": {
+        "neckwidth_min": 0.16,
+        "necklength_max": 2.4,
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "sourceClass": "HI2L_USB_AUX_P",
+        "requestedNets": [
+          "USB_ATTACH_N"
+        ],
+        "onlyDelta": [
+          "neckwidth_min",
+          "necklength_max",
+          "vias"
+        ],
+        "sourceReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P003_2L",
+      "copyFrom": "HI2L_P_UART_CAN_DIGITAL",
+      "values": {
+        "neckwidth_min": 0.16,
+        "necklength_max": 2.4,
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "sourceClass": "HI2L_UART_CAN_DIGITAL_P",
+        "requestedNets": [
+          "PA9_UART_TX",
+          "PA10_UART_RX"
+        ],
+        "onlyDelta": [
+          "neckwidth_min",
+          "necklength_max",
+          "vias"
+        ],
+        "sourceReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P004_2L",
+      "copyFrom": "HI2L_P_RESET_BOOT_SWD",
+      "values": {
+        "neckwidth_min": 0.16,
+        "necklength_max": 2.4,
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "sourceClass": "HI2L_RESET_BOOT_SWD_P",
+        "requestedNets": [
+          "SWDIO"
+        ],
+        "onlyDelta": [
+          "neckwidth_min",
+          "necklength_max",
+          "vias"
+        ],
+        "sourceReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only"
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R001_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          36.6,
+          20
+        ],
+        [
+          42.2,
+          20
+        ],
+        [
+          42.2,
+          23.4
+        ],
+        [
+          36.6,
+          23.4
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GPIO_P",
+          "cset": "HI_JS_P001_2L"
+        },
+        {
+          "domain": "physical",
+          "netClass": "HI2L_USB_AUX_P",
+          "cset": "HI_JS_P002_2L"
+        },
+        {
+          "domain": "physical",
+          "netClass": "HI2L_UART_CAN_DIGITAL_P",
+          "cset": "HI_JS_P003_2L"
+        },
+        {
+          "domain": "physical",
+          "netClass": "HI2L_RESET_BOOT_SWD_P",
+          "cset": "HI_JS_P004_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P005_2L",
+      "copyFrom": "HI2L_P_GPIO",
+      "values": {
+        "neckwidth_min": 0.16,
+        "necklength_max": 2.4,
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "sourceClass": "HI2L_GPIO_P",
+        "requestedNets": [
+          "GPIO_PB12",
+          "GPIO_PB13",
+          "GPIO_PB14",
+          "GPIO_PB15"
+        ],
+        "onlyDelta": [
+          "neckwidth_min",
+          "necklength_max",
+          "vias"
+        ],
+        "sourceReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only"
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R002_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          36.4,
+          19.6
+        ],
+        [
+          39,
+          19.6
+        ],
+        [
+          39,
+          23
+        ],
+        [
+          36.4,
+          23
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GPIO_P",
+          "cset": "HI_JS_P005_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S006_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_GPIO_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_GPIO"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S007_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_RESET_BOOT_SWD_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_RESET_BOOT_SWD"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S008_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_UART_CAN_DIGITAL_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_UART_CAN_DIGITAL"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S009_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_USB_AUX_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_USB_AUX"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S010_2L",
+      "copyFrom": "HI2L_S_RESET_BOOT_SWD",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_RESET_BOOT_SWD_S",
+          "HI2L_RESET_BOOT_SWD_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_RESET_BOOT_SWD",
+          "HI2L_S_RESET_BOOT_SWD"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S011_2L",
+      "copyFrom": "HI2L_S_RESET_BOOT_SWD",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_RESET_BOOT_SWD_S",
+          "HI2L_UART_CAN_DIGITAL_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_RESET_BOOT_SWD",
+          "HI2L_S_UART_CAN_DIGITAL"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S012_2L",
+      "copyFrom": "HI2L_S_RESET_BOOT_SWD",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_RESET_BOOT_SWD_S",
+          "HI2L_USB_AUX_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_RESET_BOOT_SWD",
+          "HI2L_S_USB_AUX"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S013_2L",
+      "copyFrom": "HI2L_S_UART_CAN_DIGITAL",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_UART_CAN_DIGITAL_S",
+          "HI2L_UART_CAN_DIGITAL_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_UART_CAN_DIGITAL",
+          "HI2L_S_UART_CAN_DIGITAL"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S014_2L",
+      "copyFrom": "HI2L_S_UART_CAN_DIGITAL",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_UART_CAN_DIGITAL_S",
+          "HI2L_USB_AUX_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_UART_CAN_DIGITAL",
+          "HI2L_S_USB_AUX"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S015_2L",
+      "copyFrom": "HI2L_S_USB_AUX",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_USB_AUX_S",
+          "HI2L_USB_AUX_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_USB_AUX",
+          "HI2L_S_USB_AUX"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R003_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          36.6,
+          20.0
+        ],
+        [
+          40.55,
+          20.0
+        ],
+        [
+          40.55,
+          23.4
+        ],
+        [
+          36.6,
+          23.4
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_GPIO_S",
+          "cset": "HI_JS_S006_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_RESET_BOOT_SWD_S",
+          "cset": "HI_JS_S007_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_UART_CAN_DIGITAL_S",
+          "cset": "HI_JS_S008_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_USB_AUX_S",
+          "cset": "HI_JS_S009_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_RESET_BOOT_SWD_S",
+          "otherNetClass": "HI2L_RESET_BOOT_SWD_S",
+          "cset": "HI_JS_S010_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_RESET_BOOT_SWD_S",
+          "otherNetClass": "HI2L_UART_CAN_DIGITAL_S",
+          "cset": "HI_JS_S011_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_RESET_BOOT_SWD_S",
+          "otherNetClass": "HI2L_USB_AUX_S",
+          "cset": "HI_JS_S012_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_UART_CAN_DIGITAL_S",
+          "otherNetClass": "HI2L_UART_CAN_DIGITAL_S",
+          "cset": "HI_JS_S013_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_UART_CAN_DIGITAL_S",
+          "otherNetClass": "HI2L_USB_AUX_S",
+          "cset": "HI_JS_S014_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_USB_AUX_S",
+          "otherNetClass": "HI2L_USB_AUX_S",
+          "cset": "HI_JS_S015_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S016_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_GPIO_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_GPIO"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S017_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_RESET_BOOT_SWD_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_RESET_BOOT_SWD"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S018_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_UART_CAN_DIGITAL_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_UART_CAN_DIGITAL"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S019_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_USB_AUX_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_USB_AUX"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S020_2L",
+      "copyFrom": "HI2L_S_RESET_BOOT_SWD",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_RESET_BOOT_SWD_S",
+          "HI2L_RESET_BOOT_SWD_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_RESET_BOOT_SWD",
+          "HI2L_S_RESET_BOOT_SWD"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S021_2L",
+      "copyFrom": "HI2L_S_RESET_BOOT_SWD",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_RESET_BOOT_SWD_S",
+          "HI2L_UART_CAN_DIGITAL_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_RESET_BOOT_SWD",
+          "HI2L_S_UART_CAN_DIGITAL"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S022_2L",
+      "copyFrom": "HI2L_S_RESET_BOOT_SWD",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_RESET_BOOT_SWD_S",
+          "HI2L_USB_AUX_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_RESET_BOOT_SWD",
+          "HI2L_S_USB_AUX"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S023_2L",
+      "copyFrom": "HI2L_S_UART_CAN_DIGITAL",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_UART_CAN_DIGITAL_S",
+          "HI2L_UART_CAN_DIGITAL_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_UART_CAN_DIGITAL",
+          "HI2L_S_UART_CAN_DIGITAL"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S024_2L",
+      "copyFrom": "HI2L_S_UART_CAN_DIGITAL",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_UART_CAN_DIGITAL_S",
+          "HI2L_USB_AUX_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_UART_CAN_DIGITAL",
+          "HI2L_S_USB_AUX"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S025_2L",
+      "copyFrom": "HI2L_S_USB_AUX",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_USB_AUX_S",
+          "HI2L_USB_AUX_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_USB_AUX",
+          "HI2L_S_USB_AUX"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R004_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          36.6,
+          20.0
+        ],
+        [
+          40.55,
+          20.0
+        ],
+        [
+          40.55,
+          23.4
+        ],
+        [
+          36.6,
+          23.4
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_GPIO_S",
+          "cset": "HI_JS_S016_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_RESET_BOOT_SWD_S",
+          "cset": "HI_JS_S017_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_UART_CAN_DIGITAL_S",
+          "cset": "HI_JS_S018_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_USB_AUX_S",
+          "cset": "HI_JS_S019_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_RESET_BOOT_SWD_S",
+          "otherNetClass": "HI2L_RESET_BOOT_SWD_S",
+          "cset": "HI_JS_S020_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_RESET_BOOT_SWD_S",
+          "otherNetClass": "HI2L_UART_CAN_DIGITAL_S",
+          "cset": "HI_JS_S021_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_RESET_BOOT_SWD_S",
+          "otherNetClass": "HI2L_USB_AUX_S",
+          "cset": "HI_JS_S022_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_UART_CAN_DIGITAL_S",
+          "otherNetClass": "HI2L_UART_CAN_DIGITAL_S",
+          "cset": "HI_JS_S023_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_UART_CAN_DIGITAL_S",
+          "otherNetClass": "HI2L_USB_AUX_S",
+          "cset": "HI_JS_S024_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_USB_AUX_S",
+          "otherNetClass": "HI2L_USB_AUX_S",
+          "cset": "HI_JS_S025_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S026_2L",
+      "copyFrom": "HI2L_S_CLASSCLASS_8",
+      "values": {
+        "via_line": 0.2,
+        "line_line": 0.2
+      },
+      "rationale": {
+        "baseline": "existing global native Class-Class CSet",
+        "classes": [
+          "HI2L_UART_CAN_DIGITAL_S",
+          "HI2L_USB_FS_S"
+        ],
+        "source": "HI2L_S_CLASSCLASS_8",
+        "onlyDelta": [
+          "via_line",
+          "line_line"
+        ]
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R005_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          39.65,
+          20.0
+        ],
+        [
+          40.55,
+          20.0
+        ],
+        [
+          40.55,
+          22.15
+        ],
+        [
+          39.65,
+          22.15
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_UART_CAN_DIGITAL_S",
+          "otherNetClass": "HI2L_USB_FS_S",
+          "cset": "HI_JS_S026_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S027_2L",
+      "copyFrom": "HI2L_S_GROUND",
+      "values": {
+        "via_via": 0.2
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GROUND_S",
+          "HI2L_UART_CAN_DIGITAL_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GROUND",
+          "HI2L_S_UART_CAN_DIGITAL"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R006_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          39,
+          20
+        ],
+        [
+          40.4,
+          20
+        ],
+        [
+          40.4,
+          21.1
+        ],
+        [
+          39,
+          21.1
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GROUND_S",
+          "otherNetClass": "HI2L_UART_CAN_DIGITAL_S",
+          "cset": "HI_JS_S027_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S028_2L",
+      "copyFrom": "HI2L_S_GROUND",
+      "values": {
+        "via_via": 0.2
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GROUND_S",
+          "HI2L_UART_CAN_DIGITAL_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GROUND",
+          "HI2L_S_UART_CAN_DIGITAL"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R007_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          39,
+          20
+        ],
+        [
+          40.4,
+          20
+        ],
+        [
+          40.4,
+          21.1
+        ],
+        [
+          39,
+          21.1
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GROUND_S",
+          "otherNetClass": "HI2L_UART_CAN_DIGITAL_S",
+          "cset": "HI_JS_S028_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S029_2L",
+      "copyFrom": "HI2L_S_CLASSCLASS_6",
+      "values": {
+        "smdpin_line": 0.2,
+        "line_line": 0.2,
+        "via_line": 0.2
+      },
+      "rationale": {
+        "baseline": "existing global native Class-Class CSet",
+        "classes": [
+          "HI2L_RESET_BOOT_SWD_S",
+          "HI2L_USB_FS_S"
+        ],
+        "source": "HI2L_S_CLASSCLASS_6",
+        "onlyDelta": [
+          "smdpin_line",
+          "line_line",
+          "via_line"
+        ]
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R008_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          41.3,
+          21.0
+        ],
+        [
+          42.1,
+          21.0
+        ],
+        [
+          42.1,
+          23.4
+        ],
+        [
+          41.3,
+          23.4
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_RESET_BOOT_SWD_S",
+          "otherNetClass": "HI2L_USB_FS_S",
+          "cset": "HI_JS_S029_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S030_2L",
+      "copyFrom": "HI2L_S_GROUND",
+      "values": {
+        "via_line": 0.2,
+        "via_via": 0.2
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GROUND_S",
+          "HI2L_RESET_BOOT_SWD_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GROUND",
+          "HI2L_S_RESET_BOOT_SWD"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R009_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          41.2,
+          21
+        ],
+        [
+          42.6,
+          21
+        ],
+        [
+          42.6,
+          21.8
+        ],
+        [
+          41.2,
+          21.8
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GROUND_S",
+          "otherNetClass": "HI2L_RESET_BOOT_SWD_S",
+          "cset": "HI_JS_S030_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S031_2L",
+      "copyFrom": "HI2L_S_GROUND",
+      "values": {
+        "via_line": 0.2,
+        "via_via": 0.2
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GROUND_S",
+          "HI2L_RESET_BOOT_SWD_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GROUND",
+          "HI2L_S_RESET_BOOT_SWD"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R010_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          41.2,
+          21
+        ],
+        [
+          42.6,
+          21
+        ],
+        [
+          42.6,
+          21.8
+        ],
+        [
+          41.2,
+          21.8
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GROUND_S",
+          "otherNetClass": "HI2L_RESET_BOOT_SWD_S",
+          "cset": "HI_JS_S031_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S032_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "shape_shape": 0.3,
+        "via_shape": 0.3,
+        "via_line": 0.16,
+        "smdpin_line": 0.3,
+        "line_shape": 0.3,
+        "line_line": 0.3
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_GROUND_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_GROUND"
+        ],
+        "conservativeBaselineDeltas": {
+          "shape_shape": 0.3,
+          "via_shape": 0.3,
+          "via_line": 0.3,
+          "smdpin_line": 0.3,
+          "line_shape": 0.3,
+          "line_line": 0.3
+        },
+        "onlyEngineeringRelaxedFields": [
+          "via_line"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R011_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          37.8,
+          19.5
+        ],
+        [
+          38.8,
+          19.5
+        ],
+        [
+          38.8,
+          20.85
+        ],
+        [
+          37.8,
+          20.85
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_GROUND_S",
+          "cset": "HI_JS_S032_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P033_2L",
+      "copyFrom": "HI2L_P_GPIO",
+      "values": {
+        "neckwidth_min": 0.16,
+        "necklength_max": 2.6,
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "sourceClass": "HI2L_GPIO_P",
+        "requestedNets": [
+          "GPIO_PB1",
+          "GPIO_PB10",
+          "GPIO_PB11"
+        ],
+        "onlyDelta": [
+          "neckwidth_min",
+          "necklength_max",
+          "vias"
+        ],
+        "sourceReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P034_2L",
+      "copyFrom": "HI2L_P_RESET_BOOT_SWD",
+      "values": {
+        "neckwidth_min": 0.16,
+        "necklength_max": 2.6,
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "sourceClass": "HI2L_RESET_BOOT_SWD_P",
+        "requestedNets": [
+          "BOOT1"
+        ],
+        "onlyDelta": [
+          "neckwidth_min",
+          "necklength_max",
+          "vias"
+        ],
+        "sourceReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only"
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R012_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          33.1,
+          24.9
+        ],
+        [
+          36.5,
+          24.9
+        ],
+        [
+          36.5,
+          25.4
+        ],
+        [
+          38.4,
+          25.4
+        ],
+        [
+          38.4,
+          27.4
+        ],
+        [
+          33.1,
+          27.4
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GPIO_P",
+          "cset": "HI_JS_P033_2L"
+        },
+        {
+          "domain": "physical",
+          "netClass": "HI2L_RESET_BOOT_SWD_P",
+          "cset": "HI_JS_P034_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S035_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "shape_shape": 0.3,
+        "via_shape": 0.3,
+        "via_line": 0.3,
+        "smdpin_line": 0.2,
+        "line_shape": 0.3,
+        "line_line": 0.2
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_GROUND_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_GROUND"
+        ],
+        "conservativeBaselineDeltas": {
+          "shape_shape": 0.3,
+          "via_shape": 0.3,
+          "via_line": 0.3,
+          "smdpin_line": 0.3,
+          "line_shape": 0.3,
+          "line_line": 0.3
+        },
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "smdpin_line"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R013_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          36.4,
+          25.4
+        ],
+        [
+          37.0,
+          25.4
+        ],
+        [
+          37,
+          26.9
+        ],
+        [
+          36.4,
+          26.9
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_GROUND_S",
+          "cset": "HI_JS_S035_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S036_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_GPIO_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_GPIO"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S037_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_RESET_BOOT_SWD_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_RESET_BOOT_SWD"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S038_2L",
+      "copyFrom": "HI2L_S_RESET_BOOT_SWD",
+      "values": {
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_RESET_BOOT_SWD_S",
+          "HI2L_RESET_BOOT_SWD_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_RESET_BOOT_SWD",
+          "HI2L_S_RESET_BOOT_SWD"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "line_line",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R014_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          33.2,
+          25.0
+        ],
+        [
+          35.2,
+          25
+        ],
+        [
+          35.2,
+          27.0
+        ],
+        [
+          33.2,
+          27.0
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_GPIO_S",
+          "cset": "HI_JS_S036_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_RESET_BOOT_SWD_S",
+          "cset": "HI_JS_S037_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_RESET_BOOT_SWD_S",
+          "otherNetClass": "HI2L_RESET_BOOT_SWD_S",
+          "cset": "HI_JS_S038_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P039_2L",
+      "copyFrom": "HI2L_P_RESET_BOOT_SWD",
+      "values": {
+        "neckwidth_min": 0.16,
+        "necklength_max": 2.0,
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "sourceClass": "HI2L_RESET_BOOT_SWD_P",
+        "requestedNets": [
+          "SWCLK",
+          "SWO",
+          "BOOT0"
+        ],
+        "onlyDelta": [
+          "neckwidth_min",
+          "necklength_max",
+          "vias"
+        ],
+        "sourceReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P040_2L",
+      "copyFrom": "HI2L_P_GPIO",
+      "values": {
+        "neckwidth_min": 0.16,
+        "necklength_max": 2.0,
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "sourceClass": "HI2L_GPIO_P",
+        "requestedNets": [
+          "GPIO_PA15",
+          "GPIO_PB4",
+          "GPIO_PB5",
+          "GPIO_PB8",
+          "GPIO_PB9"
+        ],
+        "onlyDelta": [
+          "neckwidth_min",
+          "necklength_max",
+          "vias"
+        ],
+        "sourceReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P041_2L",
+      "copyFrom": "HI2L_P_I2C",
+      "values": {
+        "neckwidth_min": 0.16,
+        "necklength_max": 2.0,
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "sourceClass": "HI2L_I2C_P",
+        "requestedNets": [
+          "I2C_SCL",
+          "I2C_SDA"
+        ],
+        "onlyDelta": [
+          "neckwidth_min",
+          "necklength_max",
+          "vias"
+        ],
+        "sourceReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only"
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R015_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          43.5,
+          23.7
+        ],
+        [
+          47.5,
+          23.7
+        ],
+        [
+          47.5,
+          29.0
+        ],
+        [
+          43.5,
+          29.0
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_RESET_BOOT_SWD_P",
+          "cset": "HI_JS_P039_2L"
+        },
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GPIO_P",
+          "cset": "HI_JS_P040_2L"
+        },
+        {
+          "domain": "physical",
+          "netClass": "HI2L_I2C_P",
+          "cset": "HI_JS_P041_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S042_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "smdpin_line": 0.16,
+        "line_line": 0.16,
+        "smdpin_via": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_GPIO_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_GPIO"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "smdpin_line",
+          "line_line",
+          "smdpin_via",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S043_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "smdpin_line": 0.16,
+        "line_line": 0.16,
+        "smdpin_via": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_I2C_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_I2C"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "smdpin_line",
+          "line_line",
+          "smdpin_via",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S044_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "smdpin_line": 0.16,
+        "line_line": 0.16,
+        "smdpin_via": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_RESET_BOOT_SWD_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_RESET_BOOT_SWD"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "smdpin_line",
+          "line_line",
+          "smdpin_via",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S045_2L",
+      "copyFrom": "HI2L_S_I2C",
+      "values": {
+        "smdpin_line": 0.16,
+        "line_line": 0.16,
+        "smdpin_via": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_I2C_S",
+          "HI2L_I2C_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_I2C",
+          "HI2L_S_I2C"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "smdpin_line",
+          "line_line",
+          "smdpin_via",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S046_2L",
+      "copyFrom": "HI2L_S_I2C",
+      "values": {
+        "smdpin_line": 0.16,
+        "line_line": 0.16,
+        "smdpin_via": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_I2C_S",
+          "HI2L_RESET_BOOT_SWD_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_I2C",
+          "HI2L_S_RESET_BOOT_SWD"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "smdpin_line",
+          "line_line",
+          "smdpin_via",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S047_2L",
+      "copyFrom": "HI2L_S_RESET_BOOT_SWD",
+      "values": {
+        "smdpin_line": 0.16,
+        "line_line": 0.16,
+        "smdpin_via": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_RESET_BOOT_SWD_S",
+          "HI2L_RESET_BOOT_SWD_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_RESET_BOOT_SWD",
+          "HI2L_S_RESET_BOOT_SWD"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "smdpin_line",
+          "line_line",
+          "smdpin_via",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R016_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          43.5,
+          23.7
+        ],
+        [
+          47.5,
+          23.7
+        ],
+        [
+          47.5,
+          29.0
+        ],
+        [
+          43.5,
+          29.0
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_GPIO_S",
+          "cset": "HI_JS_S042_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_I2C_S",
+          "cset": "HI_JS_S043_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_RESET_BOOT_SWD_S",
+          "cset": "HI_JS_S044_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_I2C_S",
+          "otherNetClass": "HI2L_I2C_S",
+          "cset": "HI_JS_S045_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_I2C_S",
+          "otherNetClass": "HI2L_RESET_BOOT_SWD_S",
+          "cset": "HI_JS_S046_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_RESET_BOOT_SWD_S",
+          "otherNetClass": "HI2L_RESET_BOOT_SWD_S",
+          "cset": "HI_JS_S047_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P048_2L",
+      "copyFrom": "HI2L_P_RESET_BOOT_SWD",
+      "values": {
+        "neckwidth_min": 0.16,
+        "necklength_max": 2.0,
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "sourceClass": "HI2L_RESET_BOOT_SWD_P",
+        "requestedNets": [
+          "SWCLK",
+          "SWO",
+          "BOOT0"
+        ],
+        "onlyDelta": [
+          "neckwidth_min",
+          "necklength_max",
+          "vias"
+        ],
+        "sourceReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P049_2L",
+      "copyFrom": "HI2L_P_GPIO",
+      "values": {
+        "neckwidth_min": 0.16,
+        "necklength_max": 2.0,
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "sourceClass": "HI2L_GPIO_P",
+        "requestedNets": [
+          "GPIO_PA15",
+          "GPIO_PB4",
+          "GPIO_PB5",
+          "GPIO_PB8",
+          "GPIO_PB9"
+        ],
+        "onlyDelta": [
+          "neckwidth_min",
+          "necklength_max",
+          "vias"
+        ],
+        "sourceReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only"
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P050_2L",
+      "copyFrom": "HI2L_P_I2C",
+      "values": {
+        "neckwidth_min": 0.16,
+        "necklength_max": 2.0,
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "sourceClass": "HI2L_I2C_P",
+        "requestedNets": [
+          "I2C_SCL",
+          "I2C_SDA"
+        ],
+        "onlyDelta": [
+          "neckwidth_min",
+          "necklength_max",
+          "vias"
+        ],
+        "sourceReadback": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only"
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R017_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          43.5,
+          23.7
+        ],
+        [
+          47.5,
+          23.7
+        ],
+        [
+          47.5,
+          29.0
+        ],
+        [
+          43.5,
+          29.0
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_RESET_BOOT_SWD_P",
+          "cset": "HI_JS_P048_2L"
+        },
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GPIO_P",
+          "cset": "HI_JS_P049_2L"
+        },
+        {
+          "domain": "physical",
+          "netClass": "HI2L_I2C_P",
+          "cset": "HI_JS_P050_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S051_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "smdpin_line": 0.16,
+        "line_line": 0.16,
+        "smdpin_via": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_GPIO_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_GPIO"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "smdpin_line",
+          "line_line",
+          "smdpin_via",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S052_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "smdpin_line": 0.16,
+        "line_line": 0.16,
+        "smdpin_via": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_I2C_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_I2C"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "smdpin_line",
+          "line_line",
+          "smdpin_via",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S053_2L",
+      "copyFrom": "HI2L_S_GPIO",
+      "values": {
+        "smdpin_line": 0.16,
+        "line_line": 0.16,
+        "smdpin_via": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_GPIO_S",
+          "HI2L_RESET_BOOT_SWD_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_GPIO",
+          "HI2L_S_RESET_BOOT_SWD"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "smdpin_line",
+          "line_line",
+          "smdpin_via",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S054_2L",
+      "copyFrom": "HI2L_S_I2C",
+      "values": {
+        "smdpin_line": 0.16,
+        "line_line": 0.16,
+        "smdpin_via": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_I2C_S",
+          "HI2L_I2C_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_I2C",
+          "HI2L_S_I2C"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "smdpin_line",
+          "line_line",
+          "smdpin_via",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S055_2L",
+      "copyFrom": "HI2L_S_I2C",
+      "values": {
+        "smdpin_line": 0.16,
+        "line_line": 0.16,
+        "smdpin_via": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_I2C_S",
+          "HI2L_RESET_BOOT_SWD_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_I2C",
+          "HI2L_S_RESET_BOOT_SWD"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "smdpin_line",
+          "line_line",
+          "smdpin_via",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "csetCopy",
+      "domain": "spacing",
+      "name": "HI_JS_S056_2L",
+      "copyFrom": "HI2L_S_RESET_BOOT_SWD",
+      "values": {
+        "smdpin_line": 0.16,
+        "line_line": 0.16,
+        "smdpin_via": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "rationale": {
+        "baseline": "per-field conservative maximum of two native class CSet values when no explicit global pair exists",
+        "classes": [
+          "HI2L_RESET_BOOT_SWD_S",
+          "HI2L_RESET_BOOT_SWD_S"
+        ],
+        "sourceCSets": [
+          "HI2L_S_RESET_BOOT_SWD",
+          "HI2L_S_RESET_BOOT_SWD"
+        ],
+        "conservativeBaselineDeltas": {},
+        "onlyEngineeringRelaxedFields": [
+          "smdpin_line",
+          "line_line",
+          "smdpin_via",
+          "via_line",
+          "via_via"
+        ],
+        "nativeDRCAndScopeReviewRequired": true
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R018_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          43.5,
+          23.7
+        ],
+        [
+          47.5,
+          23.7
+        ],
+        [
+          47.5,
+          29.0
+        ],
+        [
+          43.5,
+          29.0
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_GPIO_S",
+          "cset": "HI_JS_S051_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_I2C_S",
+          "cset": "HI_JS_S052_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_GPIO_S",
+          "otherNetClass": "HI2L_RESET_BOOT_SWD_S",
+          "cset": "HI_JS_S053_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_I2C_S",
+          "otherNetClass": "HI2L_I2C_S",
+          "cset": "HI_JS_S054_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_I2C_S",
+          "otherNetClass": "HI2L_RESET_BOOT_SWD_S",
+          "cset": "HI_JS_S055_2L"
+        },
+        {
+          "domain": "spacing",
+          "netClass": "HI2L_RESET_BOOT_SWD_S",
+          "otherNetClass": "HI2L_RESET_BOOT_SWD_S",
+          "cset": "HI_JS_S056_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P057_2L",
+      "copyFrom": "HI2L_P_USB_AUX",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "USB_ATTACH_N",
+        "actualExistingRegionalTemplate": "HI2L_P_USB_AUX",
+        "layer": "BOTTOM",
+        "xy": [
+          39,
+          21.2
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R019_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          38.99,
+          21.19
+        ],
+        [
+          39.01,
+          21.19
+        ],
+        [
+          39.01,
+          21.21
+        ],
+        [
+          38.99,
+          21.21
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_USB_AUX_P",
+          "cset": "HI_JS_P057_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P058_2L",
+      "copyFrom": "HI2L_P_UART_CAN_DIGITAL",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "PA9_UART_TX",
+        "actualExistingRegionalTemplate": "HI2L_P_UART_CAN_DIGITAL",
+        "layer": "BOTTOM",
+        "xy": [
+          39.7,
+          21.7
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R020_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          39.69,
+          21.69
+        ],
+        [
+          39.71,
+          21.69
+        ],
+        [
+          39.71,
+          21.71
+        ],
+        [
+          39.69,
+          21.71
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_UART_CAN_DIGITAL_P",
+          "cset": "HI_JS_P058_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P059_2L",
+      "copyFrom": "HI2L_P_UART_CAN_DIGITAL",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "PA10_UART_RX",
+        "actualExistingRegionalTemplate": "HI2L_P_UART_CAN_DIGITAL",
+        "layer": "BOTTOM",
+        "xy": [
+          40,
+          20.5
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R021_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          39.99,
+          20.49
+        ],
+        [
+          40.01,
+          20.49
+        ],
+        [
+          40.01,
+          20.51
+        ],
+        [
+          39.99,
+          20.51
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_UART_CAN_DIGITAL_P",
+          "cset": "HI_JS_P059_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P060_2L",
+      "copyFrom": "HI2L_P_GROUND",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "GND",
+        "actualExistingRegionalTemplate": "HI2L_P_GROUND",
+        "layer": "TOP",
+        "xy": [
+          35.8,
+          21.95
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R022_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          35.79,
+          21.94
+        ],
+        [
+          35.81,
+          21.94
+        ],
+        [
+          35.81,
+          21.96
+        ],
+        [
+          35.79,
+          21.96
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GROUND_P",
+          "cset": "HI_JS_P060_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P061_2L",
+      "copyFrom": "HI2L_P_GROUND",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "GND",
+        "actualExistingRegionalTemplate": "HI2L_P_GROUND",
+        "layer": "BOTTOM",
+        "xy": [
+          35.8,
+          21.95
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R023_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          35.79,
+          21.94
+        ],
+        [
+          35.81,
+          21.94
+        ],
+        [
+          35.81,
+          21.96
+        ],
+        [
+          35.79,
+          21.96
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GROUND_P",
+          "cset": "HI_JS_P061_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P062_2L",
+      "copyFrom": "HI2L_P_GROUND",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "GND",
+        "actualExistingRegionalTemplate": "HI2L_P_GROUND",
+        "layer": "TOP",
+        "xy": [
+          38.0,
+          20.0
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R024_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          37.99,
+          19.99
+        ],
+        [
+          38.01,
+          19.99
+        ],
+        [
+          38.01,
+          20.01
+        ],
+        [
+          37.99,
+          20.01
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GROUND_P",
+          "cset": "HI_JS_P062_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P063_2L",
+      "copyFrom": "HI2L_P_GROUND",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "GND",
+        "actualExistingRegionalTemplate": "HI2L_P_GROUND",
+        "layer": "BOTTOM",
+        "xy": [
+          38.0,
+          20.0
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R025_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          37.99,
+          19.99
+        ],
+        [
+          38.01,
+          19.99
+        ],
+        [
+          38.01,
+          20.01
+        ],
+        [
+          37.99,
+          20.01
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GROUND_P",
+          "cset": "HI_JS_P063_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P064_2L",
+      "copyFrom": "HI2L_P_GROUND",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "GND",
+        "actualExistingRegionalTemplate": "HI2L_P_GROUND",
+        "layer": "TOP",
+        "xy": [
+          39.25,
+          20.3
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R026_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          39.24,
+          20.29
+        ],
+        [
+          39.26,
+          20.29
+        ],
+        [
+          39.26,
+          20.31
+        ],
+        [
+          39.24,
+          20.31
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GROUND_P",
+          "cset": "HI_JS_P064_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P065_2L",
+      "copyFrom": "HI2L_P_GROUND",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "GND",
+        "actualExistingRegionalTemplate": "HI2L_P_GROUND",
+        "layer": "BOTTOM",
+        "xy": [
+          39.25,
+          20.3
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R027_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          39.24,
+          20.29
+        ],
+        [
+          39.26,
+          20.29
+        ],
+        [
+          39.26,
+          20.31
+        ],
+        [
+          39.24,
+          20.31
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GROUND_P",
+          "cset": "HI_JS_P065_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P066_2L",
+      "copyFrom": "HI2L_P_RESET_BOOT_SWD",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "SWDIO",
+        "actualExistingRegionalTemplate": "HI2L_P_RESET_BOOT_SWD",
+        "layer": "BOTTOM",
+        "xy": [
+          41.5,
+          21.25
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R028_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          41.49,
+          21.24
+        ],
+        [
+          41.51,
+          21.24
+        ],
+        [
+          41.51,
+          21.26
+        ],
+        [
+          41.49,
+          21.26
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_RESET_BOOT_SWD_P",
+          "cset": "HI_JS_P066_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P067_2L",
+      "copyFrom": "HI2L_P_MCU_ESCAPE_GROUND",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "GND",
+        "actualExistingRegionalTemplate": "HI2L_P_MCU_ESCAPE_GROUND",
+        "layer": "TOP",
+        "xy": [
+          42.3,
+          21.35
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R029_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          42.29,
+          21.34
+        ],
+        [
+          42.31,
+          21.34
+        ],
+        [
+          42.31,
+          21.36
+        ],
+        [
+          42.29,
+          21.36
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GROUND_P",
+          "cset": "HI_JS_P067_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P068_2L",
+      "copyFrom": "HI2L_P_GROUND",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "GND",
+        "actualExistingRegionalTemplate": "HI2L_P_GROUND",
+        "layer": "BOTTOM",
+        "xy": [
+          42.3,
+          21.35
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R030_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          42.29,
+          21.34
+        ],
+        [
+          42.31,
+          21.34
+        ],
+        [
+          42.31,
+          21.36
+        ],
+        [
+          42.29,
+          21.36
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GROUND_P",
+          "cset": "HI_JS_P068_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P069_2L",
+      "copyFrom": "HI2L_P_GPIO",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "GPIO_PB1",
+        "actualExistingRegionalTemplate": "HI2L_P_GPIO",
+        "layer": "BOTTOM",
+        "xy": [
+          34.55,
+          26.75
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R031_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          34.54,
+          26.74
+        ],
+        [
+          34.56,
+          26.74
+        ],
+        [
+          34.56,
+          26.76
+        ],
+        [
+          34.54,
+          26.76
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GPIO_P",
+          "cset": "HI_JS_P069_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P070_2L",
+      "copyFrom": "HI2L_P_GPIO",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "GPIO_PB10",
+        "actualExistingRegionalTemplate": "HI2L_P_GPIO",
+        "layer": "BOTTOM",
+        "xy": [
+          38,
+          26.4
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R032_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          37.99,
+          26.39
+        ],
+        [
+          38.01,
+          26.39
+        ],
+        [
+          38.01,
+          26.41
+        ],
+        [
+          37.99,
+          26.41
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GPIO_P",
+          "cset": "HI_JS_P070_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P071_2L",
+      "copyFrom": "HI2L_P_GPIO",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "GPIO_PB11",
+        "actualExistingRegionalTemplate": "HI2L_P_GPIO",
+        "layer": "BOTTOM",
+        "xy": [
+          33.7,
+          25.3
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R033_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          33.69,
+          25.29
+        ],
+        [
+          33.71,
+          25.29
+        ],
+        [
+          33.71,
+          25.31
+        ],
+        [
+          33.69,
+          25.31
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_GPIO_P",
+          "cset": "HI_JS_P071_2L"
+        }
+      ]
+    },
+    {
+      "type": "csetCopy",
+      "domain": "physical",
+      "name": "HI_JS_P072_2L",
+      "copyFrom": "HI2L_P_RESET_BOOT_SWD",
+      "values": {
+        "vias": [
+          "L28_VIA030_C060",
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "rationale": {
+        "onlyDelta": "approvedVias",
+        "net": "BOOT1",
+        "actualExistingRegionalTemplate": "HI2L_P_RESET_BOOT_SWD",
+        "layer": "BOTTOM",
+        "xy": [
+          34.4,
+          26
+        ],
+        "preserve": "All other physical keys and layer permissions are copied unchanged; external neck/spacing scope handled separately."
+      }
+    },
+    {
+      "type": "region",
+      "id": "HI_JS_R034_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          34.39,
+          25.99
+        ],
+        [
+          34.41,
+          25.99
+        ],
+        [
+          34.41,
+          26.01
+        ],
+        [
+          34.39,
+          26.01
+        ]
+      ],
+      "assignments": [
+        {
+          "domain": "physical",
+          "netClass": "HI2L_RESET_BOOT_SWD_P",
+          "cset": "HI_JS_P072_2L"
+        }
+      ]
+    }
+  ],
+  "regionNameMapping": [
+    {
+      "engineeringId": "HI_SOUTH_DENSE_SOURCE_P",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R001_2L"
+    },
+    {
+      "engineeringId": "HI_SOUTH_GPIO_BOTTOM_BREAKOUT_P",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R002_2L"
+    },
+    {
+      "engineeringId": "HI_SOUTH_DIGITAL_VIA_ESCAPE_S",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R003_2L"
+    },
+    {
+      "engineeringId": "HI_SOUTH_DIGITAL_VIA_ESCAPE_S",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R004_2L"
+    },
+    {
+      "engineeringId": "HI_UART_RX_USB_ESCAPE_S",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R005_2L"
+    },
+    {
+      "engineeringId": "HI_SOUTH_GND_RX_VIA_ONLY_S",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R006_2L"
+    },
+    {
+      "engineeringId": "HI_SOUTH_GND_RX_VIA_ONLY_S",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R007_2L"
+    },
+    {
+      "engineeringId": "HI_SWDIO_USB_VIA_ESCAPE_S",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R008_2L"
+    },
+    {
+      "engineeringId": "HI_SWDIO_GND_VIA_ESCAPE_S",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R009_2L"
+    },
+    {
+      "engineeringId": "HI_SWDIO_GND_VIA_ESCAPE_S",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R010_2L"
+    },
+    {
+      "engineeringId": "HI_GPIO15_GND_STITCH_NECK_S",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R011_2L"
+    },
+    {
+      "engineeringId": "HI_LEFT_DIGITAL_SOURCE_P",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R012_2L"
+    },
+    {
+      "engineeringId": "HI_LEFT_GND_SOURCE_S",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R013_2L"
+    },
+    {
+      "engineeringId": "HI_LEFT_DIGITAL_DENSE_S",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R014_2L"
+    },
+    {
+      "engineeringId": "HI_RIGHT10_ESCAPE_P",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R015_2L"
+    },
+    {
+      "engineeringId": "HI_RIGHT10_ESCAPE_S",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R016_2L"
+    },
+    {
+      "engineeringId": "HI_RIGHT10_ESCAPE_P",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R017_2L"
+    },
+    {
+      "engineeringId": "HI_RIGHT10_ESCAPE_S",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R018_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_SOUTH_SOURCE_29_VIA",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R019_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_SOUTH_SOURCE_30_VIA",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R020_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_SOUTH_SOURCE_31_VIA",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R021_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_SOUTH_RETURN_WEST",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R022_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_SOUTH_RETURN_WEST",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R023_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_SOUTH_RETURN_MID",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R024_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_SOUTH_RETURN_MID",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R025_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_SOUTH_RETURN_EAST",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R026_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_SOUTH_RETURN_EAST",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R027_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_SOUTH_SOURCE_34_VIA",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R028_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_SOUTH_RETURN_SWDIO",
+      "layer": "TOP",
+      "nativeName": "HI_JS_R029_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_SOUTH_RETURN_SWDIO",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R030_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_LEFT_SOURCE_19_VIA",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R031_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_LEFT_SOURCE_21_VIA",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R032_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_LEFT_SOURCE_22_VIA",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R033_2L"
+    },
+    {
+      "engineeringId": "VIA_ONLY_LEFT_BOOT1_SOURCE_VIA",
+      "layer": "BOTTOM",
+      "nativeName": "HI_JS_R034_2L"
+    }
+  ],
+  "scopeAudit": [
+    {
+      "region": "HI_JS_R001_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          36.6,
+          20
+        ],
+        [
+          42.2,
+          20
+        ],
+        [
+          42.2,
+          23.4
+        ],
+        [
+          36.6,
+          23.4
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GPIO_PB12",
+        "GPIO_PB13",
+        "GPIO_PB14",
+        "GPIO_PB15",
+        "USB_ATTACH_N",
+        "PA9_UART_TX",
+        "PA10_UART_RX",
+        "SWDIO"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GPIO_P",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P001_2L"
+        },
+        {
+          "class1": "HI2L_USB_AUX_P",
+          "allClass1NetMembers": [
+            "USB_ATTACH_N",
+            "USB_CC1",
+            "USB_CC2",
+            "USB_PULLUP_SRC",
+            "VBUS_GATE",
+            "VBUS_PRESENT_N"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P002_2L"
+        },
+        {
+          "class1": "HI2L_UART_CAN_DIGITAL_P",
+          "allClass1NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P003_2L"
+        },
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_P",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P004_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R002_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          36.4,
+          19.6
+        ],
+        [
+          39,
+          19.6
+        ],
+        [
+          39,
+          23
+        ],
+        [
+          36.4,
+          23
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GPIO_PB12",
+        "GPIO_PB13",
+        "GPIO_PB14",
+        "GPIO_PB15"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GPIO_P",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P005_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R003_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          36.6,
+          20.0
+        ],
+        [
+          40.55,
+          20.0
+        ],
+        [
+          40.55,
+          23.4
+        ],
+        [
+          36.6,
+          23.4
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GPIO_PB12",
+        "GPIO_PB13",
+        "GPIO_PB14",
+        "GPIO_PB15",
+        "PA10_UART_RX",
+        "PA9_UART_TX",
+        "SWDIO",
+        "USB_ATTACH_N"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_GPIO_S",
+          "allClass2NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S006_2L"
+        },
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_RESET_BOOT_SWD_S",
+          "allClass2NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S007_2L"
+        },
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_UART_CAN_DIGITAL_S",
+          "allClass2NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S008_2L"
+        },
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_USB_AUX_S",
+          "allClass2NetMembers": [
+            "USB_ATTACH_N",
+            "USB_CC1",
+            "USB_CC2",
+            "USB_PULLUP_SRC",
+            "VBUS_GATE",
+            "VBUS_PRESENT_N"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S009_2L"
+        },
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_S",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": "HI2L_RESET_BOOT_SWD_S",
+          "allClass2NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S010_2L"
+        },
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_S",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": "HI2L_UART_CAN_DIGITAL_S",
+          "allClass2NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S011_2L"
+        },
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_S",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": "HI2L_USB_AUX_S",
+          "allClass2NetMembers": [
+            "USB_ATTACH_N",
+            "USB_CC1",
+            "USB_CC2",
+            "USB_PULLUP_SRC",
+            "VBUS_GATE",
+            "VBUS_PRESENT_N"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S012_2L"
+        },
+        {
+          "class1": "HI2L_UART_CAN_DIGITAL_S",
+          "allClass1NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "class2": "HI2L_UART_CAN_DIGITAL_S",
+          "allClass2NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S013_2L"
+        },
+        {
+          "class1": "HI2L_UART_CAN_DIGITAL_S",
+          "allClass1NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "class2": "HI2L_USB_AUX_S",
+          "allClass2NetMembers": [
+            "USB_ATTACH_N",
+            "USB_CC1",
+            "USB_CC2",
+            "USB_PULLUP_SRC",
+            "VBUS_GATE",
+            "VBUS_PRESENT_N"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S014_2L"
+        },
+        {
+          "class1": "HI2L_USB_AUX_S",
+          "allClass1NetMembers": [
+            "USB_ATTACH_N",
+            "USB_CC1",
+            "USB_CC2",
+            "USB_PULLUP_SRC",
+            "VBUS_GATE",
+            "VBUS_PRESENT_N"
+          ],
+          "class2": "HI2L_USB_AUX_S",
+          "allClass2NetMembers": [
+            "USB_ATTACH_N",
+            "USB_CC1",
+            "USB_CC2",
+            "USB_PULLUP_SRC",
+            "VBUS_GATE",
+            "VBUS_PRESENT_N"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S015_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R004_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          36.6,
+          20.0
+        ],
+        [
+          40.55,
+          20.0
+        ],
+        [
+          40.55,
+          23.4
+        ],
+        [
+          36.6,
+          23.4
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GPIO_PB12",
+        "GPIO_PB13",
+        "GPIO_PB14",
+        "GPIO_PB15",
+        "PA10_UART_RX",
+        "PA9_UART_TX",
+        "SWDIO",
+        "USB_ATTACH_N"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_GPIO_S",
+          "allClass2NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S016_2L"
+        },
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_RESET_BOOT_SWD_S",
+          "allClass2NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S017_2L"
+        },
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_UART_CAN_DIGITAL_S",
+          "allClass2NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S018_2L"
+        },
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_USB_AUX_S",
+          "allClass2NetMembers": [
+            "USB_ATTACH_N",
+            "USB_CC1",
+            "USB_CC2",
+            "USB_PULLUP_SRC",
+            "VBUS_GATE",
+            "VBUS_PRESENT_N"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S019_2L"
+        },
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_S",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": "HI2L_RESET_BOOT_SWD_S",
+          "allClass2NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S020_2L"
+        },
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_S",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": "HI2L_UART_CAN_DIGITAL_S",
+          "allClass2NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S021_2L"
+        },
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_S",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": "HI2L_USB_AUX_S",
+          "allClass2NetMembers": [
+            "USB_ATTACH_N",
+            "USB_CC1",
+            "USB_CC2",
+            "USB_PULLUP_SRC",
+            "VBUS_GATE",
+            "VBUS_PRESENT_N"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S022_2L"
+        },
+        {
+          "class1": "HI2L_UART_CAN_DIGITAL_S",
+          "allClass1NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "class2": "HI2L_UART_CAN_DIGITAL_S",
+          "allClass2NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S023_2L"
+        },
+        {
+          "class1": "HI2L_UART_CAN_DIGITAL_S",
+          "allClass1NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "class2": "HI2L_USB_AUX_S",
+          "allClass2NetMembers": [
+            "USB_ATTACH_N",
+            "USB_CC1",
+            "USB_CC2",
+            "USB_PULLUP_SRC",
+            "VBUS_GATE",
+            "VBUS_PRESENT_N"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S024_2L"
+        },
+        {
+          "class1": "HI2L_USB_AUX_S",
+          "allClass1NetMembers": [
+            "USB_ATTACH_N",
+            "USB_CC1",
+            "USB_CC2",
+            "USB_PULLUP_SRC",
+            "VBUS_GATE",
+            "VBUS_PRESENT_N"
+          ],
+          "class2": "HI2L_USB_AUX_S",
+          "allClass2NetMembers": [
+            "USB_ATTACH_N",
+            "USB_CC1",
+            "USB_CC2",
+            "USB_PULLUP_SRC",
+            "VBUS_GATE",
+            "VBUS_PRESENT_N"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S025_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R005_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          39.65,
+          20.0
+        ],
+        [
+          40.55,
+          20.0
+        ],
+        [
+          40.55,
+          22.15
+        ],
+        [
+          39.65,
+          22.15
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "PA10_UART_RX",
+        "PA11_SHARED",
+        "PA12_SHARED"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_UART_CAN_DIGITAL_S",
+          "allClass1NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "class2": "HI2L_USB_FS_S",
+          "allClass2NetMembers": [
+            "PA11_SHARED",
+            "PA12_SHARED",
+            "USB_DM",
+            "USB_DP"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S026_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R006_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          39,
+          20
+        ],
+        [
+          40.4,
+          20
+        ],
+        [
+          40.4,
+          21.1
+        ],
+        [
+          39,
+          21.1
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GND",
+        "PA10_UART_RX"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GROUND_S",
+          "allClass1NetMembers": [
+            "GND"
+          ],
+          "class2": "HI2L_UART_CAN_DIGITAL_S",
+          "allClass2NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S027_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R007_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          39,
+          20
+        ],
+        [
+          40.4,
+          20
+        ],
+        [
+          40.4,
+          21.1
+        ],
+        [
+          39,
+          21.1
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GND",
+        "PA10_UART_RX"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GROUND_S",
+          "allClass1NetMembers": [
+            "GND"
+          ],
+          "class2": "HI2L_UART_CAN_DIGITAL_S",
+          "allClass2NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S028_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R008_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          41.3,
+          21.0
+        ],
+        [
+          42.1,
+          21.0
+        ],
+        [
+          42.1,
+          23.4
+        ],
+        [
+          41.3,
+          23.4
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "PA12_SHARED",
+        "SWDIO"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_S",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": "HI2L_USB_FS_S",
+          "allClass2NetMembers": [
+            "PA11_SHARED",
+            "PA12_SHARED",
+            "USB_DM",
+            "USB_DP"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S029_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R009_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          41.2,
+          21
+        ],
+        [
+          42.6,
+          21
+        ],
+        [
+          42.6,
+          21.8
+        ],
+        [
+          41.2,
+          21.8
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GND",
+        "SWDIO"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GROUND_S",
+          "allClass1NetMembers": [
+            "GND"
+          ],
+          "class2": "HI2L_RESET_BOOT_SWD_S",
+          "allClass2NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S030_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R010_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          41.2,
+          21
+        ],
+        [
+          42.6,
+          21
+        ],
+        [
+          42.6,
+          21.8
+        ],
+        [
+          41.2,
+          21.8
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GND",
+        "SWDIO"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GROUND_S",
+          "allClass1NetMembers": [
+            "GND"
+          ],
+          "class2": "HI2L_RESET_BOOT_SWD_S",
+          "allClass2NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S031_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R011_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          37.8,
+          19.5
+        ],
+        [
+          38.8,
+          19.5
+        ],
+        [
+          38.8,
+          20.85
+        ],
+        [
+          37.8,
+          20.85
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GND",
+        "GPIO_PB15"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_GROUND_S",
+          "allClass2NetMembers": [
+            "GND"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S032_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R012_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          33.1,
+          24.9
+        ],
+        [
+          36.5,
+          24.9
+        ],
+        [
+          36.5,
+          25.4
+        ],
+        [
+          38.4,
+          25.4
+        ],
+        [
+          38.4,
+          27.4
+        ],
+        [
+          33.1,
+          27.4
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GPIO_PB1",
+        "GPIO_PB10",
+        "GPIO_PB11",
+        "BOOT1"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GPIO_P",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P033_2L"
+        },
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_P",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P034_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R013_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          36.4,
+          25.4
+        ],
+        [
+          37.0,
+          25.4
+        ],
+        [
+          37,
+          26.9
+        ],
+        [
+          36.4,
+          26.9
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GND",
+        "GPIO_PB10"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_GROUND_S",
+          "allClass2NetMembers": [
+            "GND"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S035_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R014_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          33.2,
+          25.0
+        ],
+        [
+          35.2,
+          25
+        ],
+        [
+          35.2,
+          27.0
+        ],
+        [
+          33.2,
+          27.0
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "BOOT1",
+        "GPIO_PB1",
+        "GPIO_PB11"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_GPIO_S",
+          "allClass2NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S036_2L"
+        },
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_RESET_BOOT_SWD_S",
+          "allClass2NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S037_2L"
+        },
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_S",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": "HI2L_RESET_BOOT_SWD_S",
+          "allClass2NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S038_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R015_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          43.5,
+          23.7
+        ],
+        [
+          47.5,
+          23.7
+        ],
+        [
+          47.5,
+          29.0
+        ],
+        [
+          43.5,
+          29.0
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "SWCLK",
+        "GPIO_PA15",
+        "SWO",
+        "GPIO_PB4",
+        "GPIO_PB5",
+        "I2C_SCL",
+        "I2C_SDA",
+        "BOOT0",
+        "GPIO_PB8",
+        "GPIO_PB9"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_P",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P039_2L"
+        },
+        {
+          "class1": "HI2L_GPIO_P",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P040_2L"
+        },
+        {
+          "class1": "HI2L_I2C_P",
+          "allClass1NetMembers": [
+            "I2C_SCL",
+            "I2C_SDA"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P041_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R016_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          43.5,
+          23.7
+        ],
+        [
+          47.5,
+          23.7
+        ],
+        [
+          47.5,
+          29.0
+        ],
+        [
+          43.5,
+          29.0
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "BOOT0",
+        "GPIO_PA15",
+        "GPIO_PB4",
+        "GPIO_PB5",
+        "GPIO_PB8",
+        "GPIO_PB9",
+        "I2C_SCL",
+        "I2C_SDA",
+        "SWCLK",
+        "SWO"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_GPIO_S",
+          "allClass2NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S042_2L"
+        },
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_I2C_S",
+          "allClass2NetMembers": [
+            "I2C_SCL",
+            "I2C_SDA"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S043_2L"
+        },
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_RESET_BOOT_SWD_S",
+          "allClass2NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S044_2L"
+        },
+        {
+          "class1": "HI2L_I2C_S",
+          "allClass1NetMembers": [
+            "I2C_SCL",
+            "I2C_SDA"
+          ],
+          "class2": "HI2L_I2C_S",
+          "allClass2NetMembers": [
+            "I2C_SCL",
+            "I2C_SDA"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S045_2L"
+        },
+        {
+          "class1": "HI2L_I2C_S",
+          "allClass1NetMembers": [
+            "I2C_SCL",
+            "I2C_SDA"
+          ],
+          "class2": "HI2L_RESET_BOOT_SWD_S",
+          "allClass2NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S046_2L"
+        },
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_S",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": "HI2L_RESET_BOOT_SWD_S",
+          "allClass2NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S047_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R017_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          43.5,
+          23.7
+        ],
+        [
+          47.5,
+          23.7
+        ],
+        [
+          47.5,
+          29.0
+        ],
+        [
+          43.5,
+          29.0
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "SWCLK",
+        "GPIO_PA15",
+        "SWO",
+        "GPIO_PB4",
+        "GPIO_PB5",
+        "I2C_SCL",
+        "I2C_SDA",
+        "BOOT0",
+        "GPIO_PB8",
+        "GPIO_PB9"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_P",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P048_2L"
+        },
+        {
+          "class1": "HI2L_GPIO_P",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P049_2L"
+        },
+        {
+          "class1": "HI2L_I2C_P",
+          "allClass1NetMembers": [
+            "I2C_SCL",
+            "I2C_SDA"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P050_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R018_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          43.5,
+          23.7
+        ],
+        [
+          47.5,
+          23.7
+        ],
+        [
+          47.5,
+          29.0
+        ],
+        [
+          43.5,
+          29.0
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "BOOT0",
+        "GPIO_PA15",
+        "GPIO_PB4",
+        "GPIO_PB5",
+        "GPIO_PB8",
+        "GPIO_PB9",
+        "I2C_SCL",
+        "I2C_SDA",
+        "SWCLK",
+        "SWO"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_GPIO_S",
+          "allClass2NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S051_2L"
+        },
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_I2C_S",
+          "allClass2NetMembers": [
+            "I2C_SCL",
+            "I2C_SDA"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S052_2L"
+        },
+        {
+          "class1": "HI2L_GPIO_S",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": "HI2L_RESET_BOOT_SWD_S",
+          "allClass2NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S053_2L"
+        },
+        {
+          "class1": "HI2L_I2C_S",
+          "allClass1NetMembers": [
+            "I2C_SCL",
+            "I2C_SDA"
+          ],
+          "class2": "HI2L_I2C_S",
+          "allClass2NetMembers": [
+            "I2C_SCL",
+            "I2C_SDA"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S054_2L"
+        },
+        {
+          "class1": "HI2L_I2C_S",
+          "allClass1NetMembers": [
+            "I2C_SCL",
+            "I2C_SDA"
+          ],
+          "class2": "HI2L_RESET_BOOT_SWD_S",
+          "allClass2NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S055_2L"
+        },
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_S",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": "HI2L_RESET_BOOT_SWD_S",
+          "allClass2NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "domain": "spacing",
+          "cset": "HI_JS_S056_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R019_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          38.99,
+          21.19
+        ],
+        [
+          39.01,
+          21.19
+        ],
+        [
+          39.01,
+          21.21
+        ],
+        [
+          38.99,
+          21.21
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "USB_ATTACH_N"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_USB_AUX_P",
+          "allClass1NetMembers": [
+            "USB_ATTACH_N",
+            "USB_CC1",
+            "USB_CC2",
+            "USB_PULLUP_SRC",
+            "VBUS_GATE",
+            "VBUS_PRESENT_N"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P057_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R020_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          39.69,
+          21.69
+        ],
+        [
+          39.71,
+          21.69
+        ],
+        [
+          39.71,
+          21.71
+        ],
+        [
+          39.69,
+          21.71
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "PA9_UART_TX"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_UART_CAN_DIGITAL_P",
+          "allClass1NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P058_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R021_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          39.99,
+          20.49
+        ],
+        [
+          40.01,
+          20.49
+        ],
+        [
+          40.01,
+          20.51
+        ],
+        [
+          39.99,
+          20.51
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "PA10_UART_RX"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_UART_CAN_DIGITAL_P",
+          "allClass1NetMembers": [
+            "CAN_RXD",
+            "CAN_TXD",
+            "PA10_UART_RX",
+            "PA9_UART_TX",
+            "UART_RX",
+            "UART_TX"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P059_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R022_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          35.79,
+          21.94
+        ],
+        [
+          35.81,
+          21.94
+        ],
+        [
+          35.81,
+          21.96
+        ],
+        [
+          35.79,
+          21.96
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GND"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GROUND_P",
+          "allClass1NetMembers": [
+            "GND"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P060_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R023_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          35.79,
+          21.94
+        ],
+        [
+          35.81,
+          21.94
+        ],
+        [
+          35.81,
+          21.96
+        ],
+        [
+          35.79,
+          21.96
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GND"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GROUND_P",
+          "allClass1NetMembers": [
+            "GND"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P061_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R024_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          37.99,
+          19.99
+        ],
+        [
+          38.01,
+          19.99
+        ],
+        [
+          38.01,
+          20.01
+        ],
+        [
+          37.99,
+          20.01
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GND"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GROUND_P",
+          "allClass1NetMembers": [
+            "GND"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P062_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R025_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          37.99,
+          19.99
+        ],
+        [
+          38.01,
+          19.99
+        ],
+        [
+          38.01,
+          20.01
+        ],
+        [
+          37.99,
+          20.01
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GND"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GROUND_P",
+          "allClass1NetMembers": [
+            "GND"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P063_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R026_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          39.24,
+          20.29
+        ],
+        [
+          39.26,
+          20.29
+        ],
+        [
+          39.26,
+          20.31
+        ],
+        [
+          39.24,
+          20.31
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GND"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GROUND_P",
+          "allClass1NetMembers": [
+            "GND"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P064_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R027_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          39.24,
+          20.29
+        ],
+        [
+          39.26,
+          20.29
+        ],
+        [
+          39.26,
+          20.31
+        ],
+        [
+          39.24,
+          20.31
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GND"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GROUND_P",
+          "allClass1NetMembers": [
+            "GND"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P065_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R028_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          41.49,
+          21.24
+        ],
+        [
+          41.51,
+          21.24
+        ],
+        [
+          41.51,
+          21.26
+        ],
+        [
+          41.49,
+          21.26
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "SWDIO"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_P",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P066_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R029_2L",
+      "layer": "TOP",
+      "polygon": [
+        [
+          42.29,
+          21.34
+        ],
+        [
+          42.31,
+          21.34
+        ],
+        [
+          42.31,
+          21.36
+        ],
+        [
+          42.29,
+          21.36
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GND"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GROUND_P",
+          "allClass1NetMembers": [
+            "GND"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P067_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R030_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          42.29,
+          21.34
+        ],
+        [
+          42.31,
+          21.34
+        ],
+        [
+          42.31,
+          21.36
+        ],
+        [
+          42.29,
+          21.36
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GND"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GROUND_P",
+          "allClass1NetMembers": [
+            "GND"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P068_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R031_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          34.54,
+          26.74
+        ],
+        [
+          34.56,
+          26.74
+        ],
+        [
+          34.56,
+          26.76
+        ],
+        [
+          34.54,
+          26.76
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GPIO_PB1"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GPIO_P",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P069_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R032_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          37.99,
+          26.39
+        ],
+        [
+          38.01,
+          26.39
+        ],
+        [
+          38.01,
+          26.41
+        ],
+        [
+          37.99,
+          26.41
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GPIO_PB10"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GPIO_P",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P070_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R033_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          33.69,
+          25.29
+        ],
+        [
+          33.71,
+          25.29
+        ],
+        [
+          33.71,
+          25.31
+        ],
+        [
+          33.69,
+          25.31
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "GPIO_PB11"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_GPIO_P",
+          "allClass1NetMembers": [
+            "GPIO_PA1",
+            "GPIO_PA15",
+            "GPIO_PA2",
+            "GPIO_PA3",
+            "GPIO_PB1",
+            "GPIO_PB10",
+            "GPIO_PB11",
+            "GPIO_PB12",
+            "GPIO_PB13",
+            "GPIO_PB14",
+            "GPIO_PB15",
+            "GPIO_PB4",
+            "GPIO_PB5",
+            "GPIO_PB8",
+            "GPIO_PB9",
+            "GPIO_PC13",
+            "GPIO_PC14",
+            "GPIO_PC15"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P071_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    },
+    {
+      "region": "HI_JS_R034_2L",
+      "layer": "BOTTOM",
+      "polygon": [
+        [
+          34.39,
+          25.99
+        ],
+        [
+          34.41,
+          25.99
+        ],
+        [
+          34.41,
+          26.01
+        ],
+        [
+          34.39,
+          26.01
+        ]
+      ],
+      "engineeringRequestedNets": [
+        "BOOT1"
+      ],
+      "actualNativeClassScope": [
+        {
+          "class1": "HI2L_RESET_BOOT_SWD_P",
+          "allClass1NetMembers": [
+            "BOOT0",
+            "BOOT1",
+            "BOOT_SERVICE",
+            "NRST",
+            "SWCLK",
+            "SWDIO",
+            "SWO"
+          ],
+          "class2": null,
+          "allClass2NetMembers": null,
+          "domain": "physical",
+          "cset": "HI_JS_P072_2L"
+        }
+      ],
+      "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+    }
+  ],
+  "privateViaLayerScope": [
+    {
+      "operationId": "SOUTH_SOURCE_25_VIA",
+      "net": "GPIO_PB12",
+      "xy": [
+        37,
+        21.25
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "SOUTH_SOURCE_25_VIA",
+      "net": "GPIO_PB12",
+      "xy": [
+        37,
+        21.25
+      ],
+      "layer": "BOTTOM",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "SOUTH_SOURCE_26_VIA",
+      "net": "GPIO_PB13",
+      "xy": [
+        37.5,
+        20.75
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "SOUTH_SOURCE_26_VIA",
+      "net": "GPIO_PB13",
+      "xy": [
+        37.5,
+        20.75
+      ],
+      "layer": "BOTTOM",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "SOUTH_SOURCE_27_VIA",
+      "net": "GPIO_PB14",
+      "xy": [
+        38,
+        21.25
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "SOUTH_SOURCE_27_VIA",
+      "net": "GPIO_PB14",
+      "xy": [
+        38,
+        21.25
+      ],
+      "layer": "BOTTOM",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "SOUTH_SOURCE_28_VIA",
+      "net": "GPIO_PB15",
+      "xy": [
+        38.5,
+        20.7
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "SOUTH_SOURCE_28_VIA",
+      "net": "GPIO_PB15",
+      "xy": [
+        38.5,
+        20.7
+      ],
+      "layer": "BOTTOM",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "SOUTH_SOURCE_29_VIA",
+      "net": "USB_ATTACH_N",
+      "xy": [
+        39,
+        21.2
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "SOUTH_SOURCE_29_VIA",
+      "net": "USB_ATTACH_N",
+      "xy": [
+        39,
+        21.2
+      ],
+      "layer": "BOTTOM",
+      "coverage": "HI_JS_R019_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "USB_ATTACH_N",
+        "layer": "BOTTOM",
+        "xy": [
+          39,
+          21.2
+        ]
+      },
+      "copyTemplate": "HI2L_P_USB_AUX",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "SOUTH_SOURCE_30_VIA",
+      "net": "PA9_UART_TX",
+      "xy": [
+        39.7,
+        21.7
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "SOUTH_SOURCE_30_VIA",
+      "net": "PA9_UART_TX",
+      "xy": [
+        39.7,
+        21.7
+      ],
+      "layer": "BOTTOM",
+      "coverage": "HI_JS_R020_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "PA9_UART_TX",
+        "layer": "BOTTOM",
+        "xy": [
+          39.7,
+          21.7
+        ]
+      },
+      "copyTemplate": "HI2L_P_UART_CAN_DIGITAL",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "SOUTH_SOURCE_31_VIA",
+      "net": "PA10_UART_RX",
+      "xy": [
+        40,
+        20.5
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "SOUTH_SOURCE_31_VIA",
+      "net": "PA10_UART_RX",
+      "xy": [
+        40,
+        20.5
+      ],
+      "layer": "BOTTOM",
+      "coverage": "HI_JS_R021_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "PA10_UART_RX",
+        "layer": "BOTTOM",
+        "xy": [
+          40,
+          20.5
+        ]
+      },
+      "copyTemplate": "HI2L_P_UART_CAN_DIGITAL",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "SOUTH_RETURN_WEST",
+      "net": "GND",
+      "xy": [
+        35.8,
+        21.95
+      ],
+      "layer": "TOP",
+      "coverage": "HI_JS_R022_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "GND",
+        "layer": "TOP",
+        "xy": [
+          35.8,
+          21.95
+        ]
+      },
+      "copyTemplate": "HI2L_P_GROUND",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "SOUTH_RETURN_WEST",
+      "net": "GND",
+      "xy": [
+        35.8,
+        21.95
+      ],
+      "layer": "BOTTOM",
+      "coverage": "HI_JS_R023_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "GND",
+        "layer": "BOTTOM",
+        "xy": [
+          35.8,
+          21.95
+        ]
+      },
+      "copyTemplate": "HI2L_P_GROUND",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "SOUTH_RETURN_MID",
+      "net": "GND",
+      "xy": [
+        38.0,
+        20.0
+      ],
+      "layer": "TOP",
+      "coverage": "HI_JS_R024_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "GND",
+        "layer": "TOP",
+        "xy": [
+          38.0,
+          20.0
+        ]
+      },
+      "copyTemplate": "HI2L_P_GROUND",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "SOUTH_RETURN_MID",
+      "net": "GND",
+      "xy": [
+        38.0,
+        20.0
+      ],
+      "layer": "BOTTOM",
+      "coverage": "HI_JS_R025_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "GND",
+        "layer": "BOTTOM",
+        "xy": [
+          38.0,
+          20.0
+        ]
+      },
+      "copyTemplate": "HI2L_P_GROUND",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "SOUTH_RETURN_EAST",
+      "net": "GND",
+      "xy": [
+        39.25,
+        20.3
+      ],
+      "layer": "TOP",
+      "coverage": "HI_JS_R026_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "GND",
+        "layer": "TOP",
+        "xy": [
+          39.25,
+          20.3
+        ]
+      },
+      "copyTemplate": "HI2L_P_GROUND",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "SOUTH_RETURN_EAST",
+      "net": "GND",
+      "xy": [
+        39.25,
+        20.3
+      ],
+      "layer": "BOTTOM",
+      "coverage": "HI_JS_R027_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "GND",
+        "layer": "BOTTOM",
+        "xy": [
+          39.25,
+          20.3
+        ]
+      },
+      "copyTemplate": "HI2L_P_GROUND",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "SOUTH_SOURCE_34_VIA",
+      "net": "SWDIO",
+      "xy": [
+        41.5,
+        21.25
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "SOUTH_SOURCE_34_VIA",
+      "net": "SWDIO",
+      "xy": [
+        41.5,
+        21.25
+      ],
+      "layer": "BOTTOM",
+      "coverage": "HI_JS_R028_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "SWDIO",
+        "layer": "BOTTOM",
+        "xy": [
+          41.5,
+          21.25
+        ]
+      },
+      "copyTemplate": "HI2L_P_RESET_BOOT_SWD",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "SOUTH_RETURN_SWDIO",
+      "net": "GND",
+      "xy": [
+        42.3,
+        21.35
+      ],
+      "layer": "TOP",
+      "coverage": "HI_JS_R029_2L",
+      "actualParentReadbackSelection": {
+        "source": "existingRegionClass",
+        "regions": [
+          "G31_U1_ESCAPE"
+        ],
+        "net": "GND",
+        "layer": "TOP",
+        "xy": [
+          42.3,
+          21.35
+        ]
+      },
+      "copyTemplate": "HI2L_P_MCU_ESCAPE_GROUND",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "SOUTH_RETURN_SWDIO",
+      "net": "GND",
+      "xy": [
+        42.3,
+        21.35
+      ],
+      "layer": "BOTTOM",
+      "coverage": "HI_JS_R030_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "GND",
+        "layer": "BOTTOM",
+        "xy": [
+          42.3,
+          21.35
+        ]
+      },
+      "copyTemplate": "HI2L_P_GROUND",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "LEFT_SOURCE_19_VIA",
+      "net": "GPIO_PB1",
+      "xy": [
+        34.55,
+        26.75
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "LEFT_SOURCE_19_VIA",
+      "net": "GPIO_PB1",
+      "xy": [
+        34.55,
+        26.75
+      ],
+      "layer": "BOTTOM",
+      "coverage": "HI_JS_R031_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "GPIO_PB1",
+        "layer": "BOTTOM",
+        "xy": [
+          34.55,
+          26.75
+        ]
+      },
+      "copyTemplate": "HI2L_P_GPIO",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "LEFT_SOURCE_21_VIA",
+      "net": "GPIO_PB10",
+      "xy": [
+        38,
+        26.4
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "LEFT_SOURCE_21_VIA",
+      "net": "GPIO_PB10",
+      "xy": [
+        38,
+        26.4
+      ],
+      "layer": "BOTTOM",
+      "coverage": "HI_JS_R032_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "GPIO_PB10",
+        "layer": "BOTTOM",
+        "xy": [
+          38,
+          26.4
+        ]
+      },
+      "copyTemplate": "HI2L_P_GPIO",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "LEFT_SOURCE_22_VIA",
+      "net": "GPIO_PB11",
+      "xy": [
+        33.7,
+        25.3
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "LEFT_SOURCE_22_VIA",
+      "net": "GPIO_PB11",
+      "xy": [
+        33.7,
+        25.3
+      ],
+      "layer": "BOTTOM",
+      "coverage": "HI_JS_R033_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "GPIO_PB11",
+        "layer": "BOTTOM",
+        "xy": [
+          33.7,
+          25.3
+        ]
+      },
+      "copyTemplate": "HI2L_P_GPIO",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "LEFT_BOOT1_SOURCE_VIA",
+      "net": "BOOT1",
+      "xy": [
+        34.4,
+        26
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "LEFT_BOOT1_SOURCE_VIA",
+      "net": "BOOT1",
+      "xy": [
+        34.4,
+        26
+      ],
+      "layer": "BOTTOM",
+      "coverage": "HI_JS_R034_2L",
+      "actualParentReadbackSelection": {
+        "source": "baseNetCSet",
+        "net": "BOOT1",
+        "layer": "BOTTOM",
+        "xy": [
+          34.4,
+          26
+        ]
+      },
+      "copyTemplate": "HI2L_P_RESET_BOOT_SWD",
+      "onlyDelta": "viasAdd privatevia",
+      "allOtherKeysCopied": true
+    },
+    {
+      "operationId": "RIGHT_SWO_VIA",
+      "net": "SWO",
+      "xy": [
+        46.2,
+        25.15
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "RIGHT_SWO_VIA",
+      "net": "SWO",
+      "xy": [
+        46.2,
+        25.15
+      ],
+      "layer": "BOTTOM",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "RIGHT_GPIO_PB5_VIA",
+      "net": "GPIO_PB5",
+      "xy": [
+        46.2,
+        26.15
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "RIGHT_GPIO_PB5_VIA",
+      "net": "GPIO_PB5",
+      "xy": [
+        46.2,
+        26.15
+      ],
+      "layer": "BOTTOM",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "RIGHT_I2C_SDA_VIA",
+      "net": "I2C_SDA",
+      "xy": [
+        46.2,
+        27.15
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "RIGHT_I2C_SDA_VIA",
+      "net": "I2C_SDA",
+      "xy": [
+        46.2,
+        27.15
+      ],
+      "layer": "BOTTOM",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "RIGHT_GPIO_PB8_VIA",
+      "net": "GPIO_PB8",
+      "xy": [
+        46.2,
+        28.15
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "RIGHT_GPIO_PB8_VIA",
+      "net": "GPIO_PB8",
+      "xy": [
+        46.2,
+        28.15
+      ],
+      "layer": "BOTTOM",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "RIGHT_GPIO_PB9_VIA",
+      "net": "GPIO_PB9",
+      "xy": [
+        45.7,
+        28.65
+      ],
+      "layer": "TOP",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    },
+    {
+      "operationId": "RIGHT_GPIO_PB9_VIA",
+      "net": "GPIO_PB9",
+      "xy": [
+        45.7,
+        28.65
+      ],
+      "layer": "BOTTOM",
+      "coverage": "planned outer finite source PSet already includes privatevia; no point override to avoid tightening its local neck budget"
+    }
+  ],
+  "pending": [
+    "Root complete joint source+long routing approval and final version hashes.",
+    "Existing finite USB_MCU escape via_line remains.5 in b014; overlapping South SWDIO_USB exception needs explicit finite amendment or nested scope authorization.",
+    "Apply/retain actual native DRC and controlled local neck/spacing/via rule challenges, then fullboard build and fresh-state readback.",
+    "Outside old/global fields and other geometry must be compared; these JSONs are not applied constraints."
+  ]
+}

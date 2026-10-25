@@ -1,0 +1,77 @@
+{
+  "status": "GEOMETRIC_CANDIDATE_WITH_PENDING_NATIVE_AND_RETURN_REVIEW",
+  "batchId": "prototype_GPIO_PB5_4L_unexecuted",
+  "variant": "4L",
+  "sourceExpectedSHA256": "E74EACF82947EE81D24F8A6F3A729AC83588B96799908355D4CEDC9BDD281725",
+  "sourceNativeLog": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_power_4L_b001",
+  "operations": [
+    {
+      "type": "route",
+      "id": "HI_4L_GPIO_PB5_1_R1",
+      "net": "GPIO_PB5",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          26.25
+        ],
+        [
+          45.25,
+          26.25
+        ],
+        [
+          46.3,
+          27.3
+        ],
+        [
+          50.35,
+          27.3
+        ],
+        [
+          52.85,
+          29.8
+        ],
+        [
+          52.85,
+          42.05
+        ],
+        [
+          65.8,
+          55.0
+        ],
+        [
+          65.81,
+          55.0
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+    }
+  ],
+  "proofs": [
+    {
+      "from": "U1.41",
+      "to": "J13.6",
+      "connected": true
+    }
+  ],
+  "candidateReviews": [
+    {
+      "net": "GPIO_PB5",
+      "joins": 1,
+      "nativeInitialMinimumJoins": 1.0,
+      "remainingCandidateComponents": 1,
+      "seconds": 3.71
+    }
+  ],
+  "failures": [],
+  "scope": "Only specified ordinary nets; explicit critical routes excluded. Paths obey supplied geometry/clearance/keepout policies but this is not native DRC approval, automatic product routing, reference certification or manufacturing release.",
+  "pending": [
+    "Native batch create/update/DRC/fresh reopen",
+    "Actual reference continuity along both layers",
+    "Signal transition nearby GND return connections",
+    "Whole-board plane island/neck review",
+    "Physical/electrical class exceptions at actual positions"
+  ],
+  "seconds": 3.71
+}

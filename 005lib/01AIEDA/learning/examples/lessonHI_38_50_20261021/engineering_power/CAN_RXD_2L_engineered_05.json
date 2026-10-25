@@ -1,0 +1,437 @@
+{
+  "batchId": "CAN_RXD_2L_engineered_05",
+  "variant": "2L",
+  "status": "EXPLICIT_CAN_AND_LOW_SPEED_VBUS_FUTURE_REPLACEMENT_REQUIRES_NATIVE",
+  "operations": [
+    {
+      "type": "via",
+      "id": "CAN2L_PHY_V",
+      "net": "CAN_RXD",
+      "xy": [
+        61.45,
+        12.2
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "CAN2L_PHY_TOP",
+      "net": "CAN_RXD",
+      "layer": "TOP",
+      "points": [
+        [
+          64,
+          12.19
+        ],
+        [
+          64,
+          12.2
+        ],
+        [
+          61.45,
+          12.2
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "CAN2L_BOTTOM_PERIMETER",
+      "net": "CAN_RXD",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          61.45,
+          12.2
+        ],
+        [
+          55.8,
+          12.2
+        ],
+        [
+          45,
+          1.4
+        ],
+        [
+          43.4,
+          1.4
+        ],
+        [
+          42.6,
+          2.2
+        ],
+        [
+          37,
+          2.2
+        ],
+        [
+          36.2,
+          1.4
+        ],
+        [
+          35,
+          1.4
+        ],
+        [
+          34.45,
+          1.95
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_USB_WEST_V",
+      "net": "CAN_RXD",
+      "xy": [
+        34.45,
+        1.95
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "CAN2L_WEST_TOP_DNP",
+      "net": "CAN_RXD",
+      "layer": "TOP",
+      "points": [
+        [
+          34.45,
+          1.95
+        ],
+        [
+          34.05,
+          2.35
+        ],
+        [
+          34.05,
+          16.05
+        ],
+        [
+          36.3,
+          18.3
+        ],
+        [
+          36.3236,
+          18.3
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_PHY_RETURN",
+      "net": "GND",
+      "xy": [
+        61.7,
+        11.2
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_REFERENCE_CROSS_LEFT",
+      "net": "GND",
+      "xy": [
+        34.25,
+        17.25
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "CommonGND either sideof finiteVBUSsenseBOTTOMslot, pairedwith explicitTOPgroundbridge"
+    },
+    {
+      "type": "via",
+      "id": "CAN2L_REFERENCE_CROSS_RIGHT",
+      "net": "GND",
+      "xy": [
+        35.2,
+        18.5
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "CommonGND either sideof finiteVBUSsenseBOTTOMslot, pairedwith explicitTOPgroundbridge"
+    },
+    {
+      "type": "route",
+      "id": "CAN2L_REFERENCE_COPLANAR_BRIDGE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          34.25,
+          17.25
+        ],
+        [
+          35.2,
+          18.2
+        ],
+        [
+          35.2,
+          18.5
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "TOPactualcommonGNDbridgeacrossBOTTOMslow-sense slot paralleltoCANdiagonal, minCANcoppergap.3071; not unboundedmicrostripclaim"
+    },
+    {
+      "type": "route",
+      "id": "HI_2L_VBUS_PRESENT_N_1_R1",
+      "net": "VBUS_PRESENT_N",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          34.6,
+          26.85
+        ],
+        [
+          36.05,
+          25.4
+        ],
+        [
+          36.05,
+          23.6
+        ],
+        [
+          35.6,
+          23.15
+        ],
+        [
+          34.75,
+          23.15
+        ],
+        [
+          34.55,
+          22.95
+        ],
+        [
+          34.55,
+          18.0
+        ],
+        [
+          36.05,
+          16.5
+        ],
+        [
+          36.05,
+          9.3
+        ],
+        [
+          34.55,
+          7.8
+        ],
+        [
+          34.55,
+          5.85
+        ],
+        [
+          37.35,
+          3.05
+        ],
+        [
+          42.9,
+          3.05
+        ],
+        [
+          45.75,
+          5.9
+        ],
+        [
+          47.7,
+          5.9
+        ],
+        [
+          51.15,
+          9.35
+        ],
+        [
+          51.15,
+          11.7
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Low-speed sensependingreplacement avoids~10mmnearparallelunderTOPCAN; onefiniteorthogonalcross with.6TOPGNDreturnbridge. USBcritical copper unchanged."
+    }
+  ],
+  "proofs": [
+    {
+      "net": "CAN_RXD",
+      "source": "U5.4",
+      "target": "R13.2"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "target": "J2.SH3"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "targetAlias": "CAN2L_PHY_RETURN"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "targetAlias": "CAN2L_REFERENCE_CROSS_LEFT"
+    },
+    {
+      "net": "GND",
+      "source": "U1.35",
+      "targetAlias": "CAN2L_REFERENCE_CROSS_RIGHT"
+    }
+  ],
+  "engineering": {
+    "bodyAndEdge": "CANpassesUSBhousingonBOTTOM; shortedgey1.4bypassSH3/SH4THTpads, centralunderbodyy2.2. TOPwestx34.05outsidehousingand.35mmcoppergapfromV3mainx33.3. Finalnativekeepout/groundcheckrequired.",
+    "referenceCross": "Low-speed VBUSsensependingroute movedtoBOTTOMx36.05,y9.3..16.5. ExtendedparallelTOPCAN/BOTTOMslotremoved. Oneorthogonalcross ofTOPCANdiagx-y18 andBOTTOMsensex+y52.55 at35.275,17.275; .6TOPGNDbridgex-y17 tiesbothactualcommonBOTTOMsidesvia34.25,17.25/35.2,18.5. Idealnormalclearancefootprintcrosslength.8mm (w.2+2gap.3), not wholepathcontinuousreferenceclaim.",
+    "westLayerTransition": "ExistingactualGNDJ2.SH3 platedshellTHTcenter35.68,2.6 atdistance1.3912mm fromsignalvia34.45,1.95; noedgeGNDviastackedintoV3main. NativeproveSH3/commongroundconnectivity andactualsame-layerreturnstrip.",
+    "sourceTransition": "PreserveCAN2L_PHY_RETURN61.7,11.2; ~1.0308mmfromsignal61.45,12.2.",
+    "shortEdgeSegments": "AtBOTTOMy1.4nearestboardedgecommonstripnominal.5mm betweenboardGNDedge.5andclearanceboundary1.0, whilecentraly2.2widensstrip1.3mm. RetainexplicitlocalnarrowreturnreviewnearSH3/4, no completeunboundedplaneclaim.",
+    "interfaceConditions": "CANlogicRXDoutputedge is not boundedby500kbpsassumption; actualTCAN332load/cable/slew or dampingassessmentnotyetcertified. Thiskeepsschematic/USBcritical/power/HSEunchanged."
+  },
+  "replacePendingOperations": [
+    {
+      "plan": "plans/root_remaining_2L_v19.json",
+      "id": "HI_2L_VBUS_PRESENT_N_1_R1",
+      "original": {
+        "type": "route",
+        "id": "HI_2L_VBUS_PRESENT_N_1_R1",
+        "net": "VBUS_PRESENT_N",
+        "layer": "BOTTOM",
+        "points": [
+          [
+            34.6,
+            26.85
+          ],
+          [
+            36.05,
+            25.4
+          ],
+          [
+            36.05,
+            23.6
+          ],
+          [
+            35.6,
+            23.15
+          ],
+          [
+            34.75,
+            23.15
+          ],
+          [
+            34.55,
+            22.95
+          ],
+          [
+            34.55,
+            5.85
+          ],
+          [
+            37.35,
+            3.05
+          ],
+          [
+            42.9,
+            3.05
+          ],
+          [
+            45.75,
+            5.9
+          ],
+          [
+            47.7,
+            5.9
+          ],
+          [
+            51.15,
+            9.35
+          ],
+          [
+            51.15,
+            11.7
+          ]
+        ],
+        "width": 0.2,
+        "purpose": "Explicit candidate under native base rules and engineering reservations; native DRC/graph and actual return/reference review pending"
+      },
+      "replacement": {
+        "type": "route",
+        "id": "HI_2L_VBUS_PRESENT_N_1_R1",
+        "net": "VBUS_PRESENT_N",
+        "layer": "BOTTOM",
+        "points": [
+          [
+            34.6,
+            26.85
+          ],
+          [
+            36.05,
+            25.4
+          ],
+          [
+            36.05,
+            23.6
+          ],
+          [
+            35.6,
+            23.15
+          ],
+          [
+            34.75,
+            23.15
+          ],
+          [
+            34.55,
+            22.95
+          ],
+          [
+            34.55,
+            18.0
+          ],
+          [
+            36.05,
+            16.5
+          ],
+          [
+            36.05,
+            9.3
+          ],
+          [
+            34.55,
+            7.8
+          ],
+          [
+            34.55,
+            5.85
+          ],
+          [
+            37.35,
+            3.05
+          ],
+          [
+            42.9,
+            3.05
+          ],
+          [
+            45.75,
+            5.9
+          ],
+          [
+            47.7,
+            5.9
+          ],
+          [
+            51.15,
+            9.35
+          ],
+          [
+            51.15,
+            11.7
+          ]
+        ],
+        "width": 0.2,
+        "purpose": "Low-speed sensependingreplacement avoids~10mmnearparallelunderTOPCAN; onefiniteorthogonalcross with.6TOPGNDreturnbridge. USBcritical copper unchanged."
+      },
+      "reason": "Move onlylow-speedVBUSsenseBOTTOM westverticalfrom34.55 to36.05 over9.3..16.5; remove extendedCANreference-nearbyvoid, leaveonefinitecross"
+    }
+  ],
+  "nativeIntegration": "BOTTOMVBUSreplacement ispending futureoperation notexistingnativeb014. Exclude originalHI_2L_VBUS_PRESENT_N_1_R1 exactlyonce, replacewith includedoperation; do not drawboth. If originalalreadyappliednative byintegrationtime, require newuniqueactualsegmentripupdelta first. Do not execute old04."
+}

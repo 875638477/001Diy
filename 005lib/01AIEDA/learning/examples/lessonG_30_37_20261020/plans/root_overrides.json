@@ -1,0 +1,151 @@
+{
+  "reason": "Global 80-component bbox and pin-path pre-review; engineering proposals retained unchanged as prior evidence",
+  "placements": [
+    {
+      "ref": "U3",
+      "x": 27,
+      "y": 29,
+      "rotation": 0,
+      "purpose": "Shift LDO left/up to free MCU-SPI escape; retain local input/output capacitors"
+    },
+    {
+      "ref": "C8",
+      "x": 24.2,
+      "y": 31,
+      "rotation": 270,
+      "purpose": "Shift left 0.2mm after native four-layer SMD-to-SMD .1773/.2mm DRC at LDO input group"
+    },
+    {
+      "ref": "C9",
+      "x": 29.8,
+      "y": 30.95,
+      "rotation": 270,
+      "purpose": "Rotate ground toward U3, then shift right 0.2mm after native .1374/.2mm spacing to NC pin4; NC pad is still copper"
+    },
+    {
+      "ref": "C10",
+      "x": 42.7,
+      "y": 9.1,
+      "rotation": 90,
+      "purpose": "USB ESD VBUS bypass, clear USB connector courtyard"
+    },
+    {
+      "ref": "R23",
+      "pin": 1,
+      "pinXY": [
+        33.6,
+        33
+      ],
+      "rotation": 180,
+      "purpose": "NSS upper fanout lane, no overlap with ADC resistor"
+    },
+    {
+      "ref": "R21",
+      "pin": 1,
+      "pinXY": [
+        33.6,
+        31
+      ],
+      "rotation": 180,
+      "purpose": "SPI SCK source-side fanout lane, preserve pin order"
+    },
+    {
+      "ref": "R24",
+      "pin": 1,
+      "pinXY": [
+        33.6,
+        29
+      ],
+      "rotation": 180,
+      "purpose": "MISO middle lane clear LDO and BOOT1 pull-down"
+    },
+    {
+      "ref": "R22",
+      "pin": 1,
+      "pinXY": [
+        33.6,
+        27
+      ],
+      "rotation": 180,
+      "purpose": "MOSI lower lane clear C13 decoupling loop"
+    },
+    {
+      "ref": "R29",
+      "pin": 1,
+      "pinXY": [
+        31.4,
+        23
+      ],
+      "rotation": 180,
+      "purpose": "BOOT1 pull-down below left fanout, do not occupy source resistor channel"
+    },
+    {
+      "ref": "R32",
+      "x": 31,
+      "y": 35,
+      "rotation": 0,
+      "purpose": "ADC input resistor upstream of local C24, clear SPI NSS lane"
+    },
+    {
+      "ref": "R19",
+      "pin": 2,
+      "pinXY": [
+        58.5,
+        35
+      ],
+      "rotation": 0,
+      "purpose": "I2C SCL pullup clear BOOT service header and tool access"
+    },
+    {
+      "ref": "R20",
+      "pin": 2,
+      "pinXY": [
+        58.5,
+        37
+      ],
+      "rotation": 0,
+      "purpose": "I2C SDA pullup aligned to SCL group; keep baseline 2.2k"
+    },
+    {
+      "ref": "R16",
+      "pin": 1,
+      "pinXY": [
+        37.5,
+        21
+      ],
+      "rotation": 180,
+      "purpose": "UART TX damping at MCU side rather than connector side; output can use other layer"
+    },
+    {
+      "ref": "R17",
+      "x": 50,
+      "y": 23.5,
+      "rotation": 0,
+      "purpose": "UART RX zero-ohm option clear SWD row"
+    },
+    {
+      "ref": "R18",
+      "x": 68,
+      "y": 25,
+      "rotation": 0,
+      "purpose": "UART RX pullup near connector, clear SWD mating/probe area"
+    },
+    {
+      "ref": "R25",
+      "pin": 2,
+      "pinXY": [
+        32,
+        21
+      ],
+      "rotation": 180,
+      "purpose": "SPI NSS pullup on quiet DC branch clear ADC resistor, LDO feedback, UART and escape channel"
+    },
+    {
+      "ref": "C18",
+      "x": 37,
+      "y": 33.0984,
+      "rotation": 90,
+      "purpose": "Lift VDDA local capacitor 0.2mm to preserve ADC north-side signal fanout allowance including actual copper and spacing"
+    }
+  ]
+}

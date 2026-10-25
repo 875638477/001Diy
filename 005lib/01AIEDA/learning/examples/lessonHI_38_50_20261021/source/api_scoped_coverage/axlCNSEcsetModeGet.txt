@@ -1,0 +1,61 @@
+
+  NAME
+         axlCNSEcsetModeGet - inquire about electrical constraint modes
+  FUNCTION
+         axlCNSEcsetModeGet(
+                 nil
+         ) ==> ls_constraints
+ 
+         axlCNSEcsetModeGet(
+                 'all
+         ) ==> lls_constraintNModes
+ 
+         axlCNSEcsetModeGet(
+                 s_name/t_name
+         ) ==> s_mode/nil
+ 
+         axlCNSEcsetModeGet(
+                 s_name/t_name
+                 'print
+         ) ==> t_name/nil
+  SYNOPSIS
+         This fetches the current drc mode(s) for checks that are
+         members of electrical constaints. These modes pertain
+         to the entire board.
+         
+         Certain checks may not be available in all levels of Allegro.
+         Thus different sets of checks may be available depending
+         on the current Allegro level that is active.
+ 
+         To determine the set currently supported do a axlCNSEcsetModeGet().
+ 
+         The 'print mode offers the name shown in reports like show element.
+ 
+         This has axlDebug support.
+  CAUTION
+         Future releases may add or subtract constraint checks. The
+         axl interface does guarantee the checks returned by this
+         interface will remain constant from release to release.
+  NEEDS
+         nil: returns all checks in design type DRC
+         'all: returns all checks and current mode
+         s_name: symbol name of check.
+         t_name: string name of check
+         'print: printable constraint name option
+  RETURNS
+         ls_names: - list of checks (s_name ...)
+         lls_names: - list of checks and their mode ((s_name s_mode) ...)
+         s_mode: mode 'on, 'off or 'batch
+         t_name:  the printable constraint name
+  SEE ALSO
+         axlCNSEcsetModeSet, axlCNSEcsetValueGet
+  EXAMPLES:
+         1) get current list of electrical constaints
+                 axlCNSEcsetMode(nil)
+         2) get list of settings for all ellectrical constraints
+                 axlCNSEcsetMode('all)
+         3) get current setting of stub length
+                 axlCNSEcsetMode('Maximum_Stub_Length)
+         4) get current setting of via count
+                 axlCNSEcsetMode("Maximum_Via_Count")
+

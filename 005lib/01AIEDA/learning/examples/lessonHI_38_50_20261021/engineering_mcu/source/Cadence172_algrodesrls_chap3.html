@@ -1,0 +1,2823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html xmlns="http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Creating Design Rules -- 3</title>
+<META NAME="Approver" CONTENT="Technical Publications">
+<META NAME="Author" CONTENT="Technical Publications">
+<META NAME="CreateDate" CONTENT="2017-03-27">
+<META NAME="CreateTime" CONTENT="1490591672">
+<META NAME="DataType" CONTENT="Manuals">
+<META NAME="Description" CONTENT="Describes how to create design rules using the Allegro PCB Editor, Allegro Package Designer, and the System-in-Package tools.">
+<META NAME="DocTitle" CONTENT="Creating Design Rules">
+<META NAME="DocType" CONTENT="User Guide">
+<META NAME="EdmsRelease" CONTENT="FM-Wiki-1.0_P005">
+<META NAME="FileTitle" CONTENT="3">
+<META NAME="FileType" CONTENT="Chapter">
+<META NAME="Group" CONTENT="Allegro User Guide">
+<META NAME="Keyword" CONTENT="algrodesrls">
+<META NAME="Language" CONTENT="English">
+<META NAME="ModifiedDate" CONTENT="2017-03-27">
+<META NAME="ModifiedTime" CONTENT="1490591672">
+<META NAME="NextFile" CONTENT="">
+<META NAME="Order" CONTENT="6">
+<META NAME="PageCount" CONTENT="48">
+<META NAME="Platform" CONTENT="ALL">
+<META NAME="PrevFile" CONTENT="chap2.html">
+<META NAME="Product" CONTENT="Allegro, Cadence SiP Digital, Cadence SiP RF, IC Packaging">
+<META NAME="ProductFamily" CONTENT="PCB Design, IC Packaging, IC Packaging, IC Packaging">
+<META NAME="ProductVersion" CONTENT="17.2-2016">
+<META NAME="RightsManagement" CONTENT="Copyright 19912016 Cadence Design Systems Inc.">
+<META NAME="Title" CONTENT="Creating Design Rules -- 3">
+<META NAME="TopicTags" CONTENT="FALSE">
+<META NAME="Version" CONTENT="17.2-2016">
+  </head>
+  <body style="margin-left: 5%;">
+    <a name="pagetop"></a>
+    <a name="firstpage"></a>
+    <!-- Begin Buttons -->
+    <table width="650" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td height="36" width="650" colspan="10">
+          <img src="images/header_doc.gif" width="650" height="34">
+        </td>
+      </tr>
+      <tr>
+        <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+                </td>
+<td height="20" width="73">
+<a href="algrodesrlsTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+        <td>
+          <a href="chap2.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+        </td>
+        <td height="20">
+          <img src="images/nav2_next_b.gif" alt="Previous">
+        </td>
+        <td height="20">
+          <a>
+<a href="algrodesrls.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+          </a>
+        </td>
+        <td height="20" width="59">
+          <img src="images/nav_next_b.gif" alt="Next" border="0">
+        </td>
+        <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+        </td>
+        <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+        </td>
+        <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+        </td>
+        <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+        </td>
+      </tr>
+    </table>
+    <!-- End Buttons -->
+    <p>
+    <hr>
+    <p>
+      <h3>
+        <center>
+          <font >
+            <div>Allegro&#174; User Guide:  Creating Design Rules</div>
+            <font >
+              <div>Product Version 17.2&#45;2016 April 2016</div>
+            </font>
+          </font>
+        </center>
+      </h3>
+      <br>
+    </p>
+    <div>
+      <h1>3<a name="1035237">&nbsp;</a></h1>
+      <h1><a name="1035239">Working with Constraints</a></h1>
+      <p><a name="1054884">A constraint is a user&#45;defined rule applied by Design Rule Check (DRC) to a physical element in a design. When you define and apply a constraint, the layout editor adheres to that constraint during automatic and interactive processing and flags violations with DRC markers.</a></p>
+      <p><a name="1057469">Cadence recommends using Constraint Manager to specify a variety of constraints. Choose </a><font color="#000000"><em>Setup - Constraints - Constraint Manager</em></font> (<a href="../ccoms/cchap.html#cmgr" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>cmgr</u></font></a> command) to access Constraint Manager. Constraint Manager provides worksheets for specifying Electrical, Physical, and Spacing constraints, as well as general DRC values and Property assignments. Basic Spacing and Physical constraints are called standard or default values.</p>
+      <p><a name="1057471">Constraint Manager provides the following functionality:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1054891">Creating topology files to use with electrical constraint sets</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1054892">Importing electrical constraint sets</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1054893">Assigning electrical constraint sets to buses, differential pairs, and XNets</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1054894">For additional information on Constraint Manager, see the </a><font color="#000000"><em>Allegro Constraint Manager User Guide</em></font>. For detailed descriptions of the constraints, see the Allegro Platform Constraints Reference.</p>
+      <p><a name="1054895">You control when DRC runs for a constraint by setting a DRC mode on that constraint. See </a><a href="chap1.html#drc_modes" title="1"><font color="#0000ff"><u>"DRC Modes"</u></font></a><a href="chap1.html#drc_modes" title="1"> </a> for definitions of each mode and tips for setting them.</p>
+      <p><a name="1054882">Lower tiers of the layout editor restrict access to certain types of constraints. For example, if you set electrical DRCs in a high&#45;tier version of the layout editor, and then open the design in a lower tier, the layout editor preserves the constraint data, but may disable DRC. When you again open the design in the higher tier, DRC functions, but the DRC status is out&#45;of&#45;date. You need to run a DRC update to have the DRC markers reflect the current design state. </a></p>
+      <h2><a name="1055569">Types of Constraint Sets</a></h2>
+      <p><a name="1055573">The layout editor organizes design rules, according to the behavior and type of element to which they apply, into the following pre&#45;defined constraint sets:</a></p>
+      <p align="left"><a name="1042714">&nbsp;</a></p>
+      <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="650">
+        <caption>
+        <tr>
+          <td cellpadding="4" valign="top" width="144">
+            <p><a name="1042687">Spacing </a></p>
+          </td>
+          <td cellpadding="4" valign="top" width="506">
+            <p><a name="1042689">Constraints governing the spacing between elements on different nets (for example, </a>Line To Thru Pin Spacing).</p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1058377">Same Net Spacing</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1058379">Constraints governing the spacing between elements on the same net </a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1042691">Physical </a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1042693">Constraints governing physical construction of a net (for example, </a>Minimum Line Width and Allowed ETCH&#47;CONDUCTOR Layers).</p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1054390">Electrical</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1054392">Constraints governing electrical behavior of an entire net (for example, </a>Minimum Propagation Delay) and differential pairs (for example, <font color="#000000"><em>Primary Gap</em></font>).</p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1042699">Design</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1042701">Board&#45;level constraints that are non&#45;area and non&#45;net in nature (for example, </a>Negative Plane Islands). Constraints that flag a set of vias or pins with overlapping antipads or thermal pads that cut off a piece of a negative shape.</p>
+          </td>
+        </tr>
+      </table>
+      <p><a name="1054410">The layout editor designs begin with default constraint sets (named DEFAULT) for spacing and physical constraints. However, electrical constraint sets do not have a default. </a></p>
+      <p><a name="1054405">The layout editor assigns nets without electrical constraint sets to the constraint set UPREV_DEFAULT in designs that you uprev to version 15.x.</a></p>
+      <p><a name="1036079">You can edit the spacing and physical default constraint sets and specify where and to what elements each constraint applies. You can also assign height information to package   symbol files (</a><font size="2" face="'Courier New'" color="#000000">.dra</font>) and to package keepin and package keepout areas of a board file (<font size="2" face="'Courier New'" color="#000000">.brd</font>) or substrate design file (<font size="2" face="'Courier New'" color="#000000">.mcm</font>).</p>
+      <h3><a name="1042722">Spacing Constraint Sets</a></h3>
+      <p><a name="1042723">A spacing constraint set (also called a spacing rule set) defines for each ETCH&#47;CONDUCTOR subclass the spacing between pairs of elements on the subclass and the controls for same&#45;net checking.</a></p>
+      <p><a name="1058396">When checking design rules, a DRC does not check pins (thru pins, test pins, smd pins) against route keepins or keepouts.</a></p>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1058397">Spacing Constraints are organized by net&#45;to&#45;net (</a><font color="#000000"><em>Spacing</em></font> domain) and same net (<font color="#000000"><em>Same Net Spacing</em></font> domain) in Constraint Manager.</p>
+      <p><a name="1056110">For information on how to define a spacing constraint set, see the </a><font color="#000000"><em>Allegro Constraint Manager User Guide</em></font> and the Allegro Platform Constraints Reference<font color="#000000"><em>.</em></font></p>
+      <h3><a name="1055621">Physical Constraint Sets</a></h3>
+      <p><a name="1042726">A physical constraint set defines rules that apply as you create the interconnections of an individual net. For example, physical constraints specify:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1042727">Connect line (cline) widths to use in different areas and on different layers</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1042728">Allowable connections on a particular layer</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1042729">Acceptable vias to use with a particular net</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1042730">This differs from the spacing constraint set, which specifies spacing rules between pairs of net elements.</a></p>
+      <p><a name="1053238"><font color="#000000">The layout editor uses these constraints to construct and check clines for minimum line width, maximum line width,</font></a> <font color="#000000">minimum neck width, and maximum neck length. During routing, the layout editor adds each cline segment using the</font> <font color="#000000">minimum line width.</font> <font color="#000000">When you choose </font>Neck<font color="#000000"> from the pop&#45;up menu, the layout editor adds the next cline segment with minimum neck width. A DRC places an error marker on a cline segment for any of the following violations: </font></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1053245">Less than minimum neck width</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1053246">Less than minimum neck width and longer than maximum neck length</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1053444">Greater than the maximum line width</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1053440">You can also attach properties to a net that correspond to physical constraint sets. Property values override values in the physical constraint set. </a></p>
+      <p><a name="1055912">For information on how to define a physical constraint set, see the </a><font color="#000000"><em>Allegro Constraint Manager User Guide</em></font> and the Allegro Platform Constraints Reference<font color="#000000"><em>.</em></font></p>
+      <h3><a name="1055926">Electrical Constraint Sets</a></h3>
+      <p><a name="1054244">Electrical constraint sets contain rules controlling the electrical behavior of a net, bus or differential pair, for example, timing and noise tolerance.</a></p>
+      <p><a name="1042856">Electrical constraints apply to all parts of a net, regardless of ETCH&#47;CONDUCTOR subclass or layout area. Therefore, constraint areas do not apply to electrical constraints, and there is no assignment table for them. Instead, when you assign an electrical constraint set to a net, the ELECTRICAL_CONSTRAINT_SET property attaches to the net that is set to the name of that constraint set.</a></p>
+      <p><a name="1042984">You can also attach properties to nets that correspond to electrical constraints. Property values override values in the electrical constraint set. </a></p>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1055816">Electrical constraints are not available in Allegro PCB Design L</a></p>
+      <p><a name="1055822">For information on how to define an electrical constraint set, see the </a><font color="#000000"><em>Allegro Constraint Manager User Guide</em></font> and the Allegro Platform Constraints Reference<font color="#000000"><em>.</em></font></p>
+      <h3><a name="1055818">Design Constraints</a></h3>
+      <p><a name="1042933">Design constraints comprise board&#45;level constraints for which you can run a DRC. The layout editor considers placement keepins and keepouts design constraints, and as such they have a fixed spacing value of </a><font size="2" face="'Courier New'" color="#000000">0 mil</font>. A DRC considers ETCH&#47;CONDUCTOR elements and package symbols in violation when they touch or are outside&#47;inside a keepin&#47;keepout. Similarly, the layout editor considers package to package placement a design constraint and has a fixed spacing value of <font size="2" face="'Courier New'" color="#000000">0 mil</font>.</p>
+      <p><a name="1042917">Design constraints also let you identify potential alignment and spacing problems for soldermask openings within a symbol or pin or for pad soldermask to nearby pad or ETCH&#47;CONDUCTOR soldermask. The soldermask constraints are not area&#45;dependent.</a></p>
+      <p><a name="1055869">For information on how to define a design constraint set, see </a><font color="#000000"><em>Allegro Constraint Manager User Guide</em></font> and the Allegro Platform Constraints Reference.</p>
+      <h4><a name="soldermask_drc"></a><a name="1057025">The Soldermask Design Rule Check</a></h4>
+      <p><a name="1057026">External layer copper or etch&#47;conductor that is not protected by a soldermask coating is considered exposed. Exposed copper can cause decay of the trace due to contamination buildup or acid cleaning as well as shorts in the design. Typically, using the symbol library, you build soldermask openings (on the soldermask layers) associated with the top&#45; and bottom&#45;side component pads. You can make these pads the same size as the surface pads or larger.</a></p>
+      <p><a name="1057027">The Soldermask Design Rule Check reports exposed copper or etch&#47;conductor on the outer layers with DRC errors. It checks the TOP_COND layer with the Soldermask_Top layer in the Substrate Geometry and the Pin and Via classes of the design. It also checks the BOT_COND layer with the Soldermask_Bottom layer in the Substrate Geometry and Pin and Via classes of the design. Any copper or etch&#47;conductor that infringes on a soldermask opening generates a DRC error. </a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;1&nbsp; </strong></font></strong>
+        <strong><a name="1062047">Example of Conductor Infringing on Soldermask Opening</a></strong>
+      </p>
+      <p align="left"><a name="1062052"><img src="images/chap3.6.1.01.png" alt=""><br></a></p>
+      <h4>
+        <em></em>
+        <em><a name="1057028">Soldermask Design Rule Check Parameters</a></em>
+      </h4>
+      <p><a name="1057029">The Soldermask Design Rule Check supports these optional soldermask&#45;to&#45;copper or etch&#47;conductor spacing parameters:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1057030">Soldermask&#45;to&#45;pad and cline</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1057031">Soldermask&#45;to&#45;shape</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1057021">To access the soldermask&#45;to&#45;copper or ETCH&#47;CONDUCTOR spacing parameters, choose </a><font color="#000000"><em>Setup - Constraints - Modes </em></font>(<font size="2" face="'Courier New'" color="#000000">cns modes</font> command, or alternately <font size="2" face="'Courier New'" color="#000000">cns design </font>command) from the menu and click the <font color="#000000"><em>Design Constraints</em></font> tab. Refer to the <a href="../ccoms/cchap.html#cnsdesigndialog" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>cns design</u></font></a> command in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font> for the description of the soldermask&#45;to&#45;copper or etch&#47;conductor parameters found in the Design Constraints dialog box. </p>
+      <h4>
+        <em></em>
+        <em><a name="1057042">Generation of Soldermask DRC Errors</a></em>
+      </h4>
+      <p><a name="1057043">The following table summarizes the situations when soldermask DRC errors are generated. </a></p>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1057044">Constraint Manager displays the soldermask DRC errors in the DRC Design worksheet.</a></p>
+      <table summary="" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF" width="648">
+        <caption>
+        <tr>
+          <td cellpadding="4" border="0" valign="middle" >
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1057047">For....</a></strong></font>
+            </p>
+          </td>
+          <td cellpadding="4" border="0" valign="middle" >
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1057049">A Soldermask DRC occurs when...</a></strong></font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1057051">Pads </a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1057053">The pad is not entirely within the soldermask&#45;to&#45;pad and cline clearance. Overlap of the pad with the clearance results in a DRC error. </a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1057055">Clines</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1057057">Any cline comes within the soldermask opening or the optional soldermask&#45;to&#45;pad and cline clearance. However, there are two exceptions. The layout tool suppresses soldermask design rule checks on clines:</a></p>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td >
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1057058">When the cline connects to a pad that has a soldermask opening.</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1057059">When the cline has the FILLET property attached.</a></td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1057061">Shapes</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1057063">Any copper or etch&#47;conductor shape comes within the soldermask opening or the optional soldermask&#45;to&#45;shape clearance. The layout tool suppresses soldermask design rule checks on clines when the shape connects to a pad that has a soldermask opening.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" cellpadding="4" border="0" valign="top">
+            <p><font color="#000000"><strong>Note: </strong></font><a name="1057065">For Lines and text, no soldermask DRC error occurs.</a></p>
+          </td>
+        </tr>
+      </table>
+      <p><a name="1062265">Figure </a><a href="#1062267" title="3"><font color="#0000ff"><u>3&#45;2</u></font></a> shows the DRC errors generated during a soldermask design rule check. </p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;2&nbsp; </strong></font></strong>
+        <strong><a name="1062267">SiP and APD: Soldermask DRC Errors<br><br><img src="images/solder_pic.png" alt=""><br></a></strong>
+      </p>
+      <h3><a name="1057085">Soldermask DRC Text Markers</a></h3>
+      <p><a name="1057100">The soldermask DRC marker appears on the DRC TOP_ETCH&#47;COND or BOT_ETCH&#47;COND subclass matching the copper or etch&#47;conductor subclass object in violation. The layout tool generates a single error for each cline, shape, or pad. The following are soldermask DRC text markers:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1057104">M&#45;L: Soldermask to Cline</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1057105">M&#45;V: Soldermask to Via</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1057106">M&#45;P: Soldermask to Pin</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1057107">M&#45;S: Soldermask to Shape</a></td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="link_to_icp_diffpairs"></a><a name="setting_up_differential_pairs"></a><a name="settingupdiffpairs"></a><a name="1056346">Differential Pairs </a></h2>
+      <p><a name="1049274">The layout editor supports routing physical and electrical DRCs for edge&#45;coupled differential pairs, that is, a pair of nets or XNets routed side&#45;by&#45;side on the same layers of a board. You can set up differential pairs as an electrical constraint set, or if you require a more robust line and space gap control, you can use a combination of physical and electrical constraint sets.</a></p>
+      <p><a name="1049277">The following sections describe the basic flow for defining differential pairs:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#define_diff_pairs" title="3" name="1049281"><font color="#0000ff"><u>Designating Nets as Differential Pairs</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1049308" title="3" name="1049285"><font color="#0000ff"><u>Assigning Electrical Constraint Sets to Differential Pairs</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1053736" title="3" name="1049289"><font color="#0000ff"><u>Enabling a DRC</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <h3><a name="define_diff_pairs"></a><a name="1049291">Designating Nets as Differential Pairs</a></h3>
+      <p><a name="1049292">You can create differential pairs in the following ways:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1049293">Assign nets you want routed as differential pairs by choosing </a><font color="#000000"><em>Logic - Assign Differential Pair</em></font> (<a href="../dcoms/dchap.html#diff_pairsdialogboxes" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>diff pairs</u></font></a> command). You can assign nets individually or in groups using the net naming conventions.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1049298">Import differential pair logic from a schematic by choosing </a><font color="#000000"><em>File - Import - Logic</em></font> (<a href="../ncoms/nchap.html#netin" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>netin</u></font></a> command).</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1049306">Designate nets in a signal model as differential pairs. Refer to </a><a href="../squg/03_models.html" target="external_window"><font color="#0000ff"><u>Model and Library Management</u></font></a> in the <font color="#000000"><em>Allegro PCB SI User Guide</em></font> for details.</td>
+          </tr>
+        </table>
+      </div>
+      <h3><a name="1049308">Assigning Electrical Constraint Sets to Differential Pairs</a></h3>
+      <p><a name="1049316">You can assign electrical constraint sets (ECSets) to differential pairs at the net or XNet level or the differential pair object level.</a></p>
+      <p><a name="1049332">If you assign ECSets at both the net or XNet level and the differential pair object level, a DRC uses the differential pair constraints at the differential pair object level. </a></p>
+      <p><a name="1049333">If you assign different ECSets to each of the member nets or XNets, a DRC uses the ECSet with the most conservative settings:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1049334">Smallest phase tolerance</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1049335">Smallest gaps and gap tolerances</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1049336"><font color="#000000"><em>Gather control</em></font></a> set to <font color="#000000"><em>Include</em></font><font color="#000000"><em> takes precedence over</em></font><font color="#000000"><em> Ignore</em></font></td>
+          </tr>
+        </table>
+      </div>
+      <p><font color="#000000"><strong>Notes: </strong></font><a name="1049337">&nbsp;</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1049338">Properties override ECSet settings. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1049339">When you set differential pair properties on nets, nearly all of these properties rise up to the XNet and differential pair group levels. The differential pair properties begin with DIFFP_ and correspond to the constraints in the</a><font color="#000000"><em> DiffPair Values</em></font> tab of the Electrical Constraints dialog box. The MIN_LINE_WIDTH and MIN_NECK_WIDTH properties (<font color="#000000"><em>Primary</em></font> <font color="#000000"><em>Line Width</em></font> and <font color="#000000"><em>Neck Width</em></font> in the Electrical Constraints dialog box), also rise up to the XNet and differential pair group levels. </td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1055494"><font color="#0000ff"><u>Figure </u></font></a><a href="#1049404" title="3"><font color="#0000ff"><u>3&#45;3</u></font></a> shows the various parameters used for controlling a differential pair:</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;3&nbsp; </strong></font></strong>
+        <strong><a name="1049404">Controlling a Differential Pair </a></strong>
+      </p>
+      <p align="left"><a name="1054940"><font color="#000000"><strong><img src="images/chap3.6.1.03.png" alt=""><br></strong></font></a></p>
+      <h3><a name="1053736">Enabling a DRC</a></h3>
+      <p><a name="1053738">If not done in the previous step, enable a DRC for the differential pair constraints and update the DRC. See </a><a href="../ccoms/cchap.html#assign_electrical_constraint_sets_to_objects" target="external_window"><font color="#0000ff"><u>Setting DRC Modes for the Electrical Constraint Set</u></font></a> in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>. Set<font color="#000000"><em> All Differential pair checks</em></font> to <font color="#000000"><em>On</em></font> and choose <font color="#000000"><em>Tools - Update DRC</em></font> (<a href="../dcoms/dchap.html#drc_update" target="external_window"><font size="2" face="'Courier New'" color="#0000ff">drc update</font></a> command), so that the DRC markers reflect the current design state. </p>
+      <p><a name="1049414">You can set and verify the following DRCs, shown in </a><font color="#0000ff"><u>Figure </u></font><a href="#1049473" title="3"><font color="#0000ff"><u>3&#45;4</u></font></a>, based on the parameters in <font color="#0000ff"><u>Figure </u></font><a href="#1049404" title="3"><font color="#0000ff"><u>3&#45;3</u></font></a>:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1049418">Segment coupling (either primary gap or neck gap plus or minus tolerance, if defined).</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+<blockquote>        <font color="#000000"><a name="1049678">The length of uncoupled segments adds to the total of uncoupled length. This total is then compared to the </a><font color="#000000"><em>Max uncoupled length</em></font> constraint. </font></blockquote>
+      </blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1049420">Tolerance check comparison of the length or delay between corresponding driver&#47;receiver pairs of the two differential pair nets or XNets.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.00064" align="right">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1049685">Minimum segment&#45;to&#45;segment spacing.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+<blockquote>        <font color="#000000"><a name="1049688">A minimum segment&#45;to&#45;segment spacing check is based on the specified differential pair minimum line spacing constraint or the </a><font color="#000000"><em>Line To Line</em></font> spacing in the Spacing rule set if a minimum spacing is not defined for the differential pair. </font></blockquote>
+      </blockquote>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;4&nbsp; </strong></font></strong>
+        <strong><a name="1049473">Setting and Verifying DRCs</a></strong>
+      </p>
+      <p align="left"><a name="1056212"><font color="#000000"><strong><img src="images/chap3.6.1.04.png" alt=""><br></strong></font></a></p>
+      <h3><a name="define_diff_pairs_bylayer"></a><a name="1056215">Defining Differential Pairs by Layer </a></h3>
+      <p><a name="1056216">The following describes the basic flow for defining differential pairs by layer:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1049504" title="3" name="1049483"><font color="#0000ff"><u>Designating Nets as Differential Pairs</u></font></a><a href="#1049504" title="3"> </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1049509" title="3" name="1049487"><font color="#0000ff"><u>Assigning Electrical Constraint Sets for Differential Pairs</u></font></a><a href="#1049509" title="3"> </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1049524" title="3" name="1049495"><font color="#0000ff"><u>Creating a Physical Constraint Set</u></font></a><a href="#1049524" title="3"> </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1049532" title="3" name="1049503"><font color="#0000ff"><u>Enabling a DRC</u></font></a><a href="#1049532" title="3"> </a></td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="1049504">Designating Nets as Differential Pairs</a></h4>
+      <p><a name="1049508">See </a><a href="#define_diff_pairs" title="3"><font color="#0000ff"><u>Designating Nets as Differential Pairs</u></font></a><a href="#define_diff_pairs" title="3"> </a> for detailed information.</p>
+      <h4><a name="1049509">Assigning Electrical Constraint Sets for Differential Pairs</a></h4>
+      <p><a name="1049510">To define differential pair gap and neck width by layer, choose </a><font color="#000000"><em>Setup - Constraints - Physical</em></font> (<font size="2" face="'Courier New'" color="#000000">cmgr_phys</font> command). In the tree view, expand the <font color="#000000"><em>Physical Constraint Set</em></font> folder, then click the <font color="#000000"><em>All Layers </em></font>icon. Enter values under the <font color="#000000"><em>Differential Pair Gap &#45; Primary </em></font>and <font color="#000000"><em>Differential Pair Gap &#45; Neck</em></font> columns for each layer in the design.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <font size="3"><img src="images/important.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1049515">Differential Pair values that you enter in the Electrical worksheet of Constraint Manager (</a><font color="#000000"><em>Setup - Constraints - Electrical</em></font> or <font size="2" face="'Courier New'" color="#000000">cmgr_elec</font> command) will override the values you set in the Physical worksheet. </font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1055102">You do not need to perform the following steps if all the differential pairs are using the same </a><font color="#000000"><em>Primary gap</em></font> and <font color="#000000"><em>Line width</em></font> values from the default Physical Constraint Set. </p>
+      <h4><a name="1049524">Creating a Physical Constraint Set</a></h4>
+      <p><a name="1057924">Create a physical constraint set in the Physical worksheet of Constraint Manager by choosing </a><font color="#000000"><em>Setup - Constraints - Physical</em></font> (<font size="2" face="'Courier New'" color="#000000">cmgr_phys</font> command). Enter values for <font color="#000000"><em>Differential Pair Gap &#45; Primary</em></font>, <font color="#000000"><em>Differential Pair Gap &#45; Neck</em></font>, <font color="#000000"><em>Line Width &#45; Min</em></font>, <font color="#000000"><em>Line Width &#45; Max</em></font>, and <font color="#000000"><em>Neck &#45; Min Width</em></font>.</p>
+      <h4><a name="1049532">Enabling a DRC</a></h4>
+      <p><a name="1058083">See </a><a href="#1053736" title="3"><font color="#0000ff"><u>Enabling a DRC</u></font></a><a href="#1053736" title="3"> </a> for information. </p>
+      <h3><a name="PCBEditor_uses_values"></a><a name="1058089">Using Constraint Values in Routing and Checking Differential Pairs</a></h3>
+      <p><a name="1049541">When routing or checking differential pairs, the layout editor determines the following:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1049542">Whether to use a primary gap or a neck gap</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1049543">The primary line width</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1049544">Neck line width</a></td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="1049545">Primary Gap or Neck Gap</a></h4>
+      <p><a name="1058115">The layout editor uses </a><font color="#000000"><em>Neck gap</em></font> over <font color="#000000"><em>Primary gap</em></font> when the line width of the differential pair is less than the value of the <font color="#000000"><em>Primary line width</em></font>.</p>
+      <p><a name="1058173">Special necking is implemented when the line width constraint equals the neck width constraint for nets, but the </a><font color="#000000"><em>Neck gap</em></font> is less than the <font color="#000000"><em>Primary gap</em></font>. A segment that comes within the neck gap plus the (+) tolerance to segments of its diff pair partner are considered necked for both the differential pair DRC check and the differential pair line width check.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058118">For the uncoupling check, the neck gap band is the defining coupled band. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058119">For the dynamic phase check, the neck gap band is the defining band for coupling&#47;uncoupling events. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058110">For the neck length check, these segments are considered necked and must not exceed the neck length.</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1049547">When using </a><font color="#000000"><em>Primary gap</em></font> during routing or checking, the layout editor looks for the following in sequential order:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1049548">DIFFP_PRIMARY_GAP property value on the differential pair object.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1049549"><font color="#000000"><em>Primary gap</em></font></a> value in the ECSet.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1049550"><font color="#000000"><em>DiffPair primary gap</em></font></a> value in the Physical Rule set.</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1049692">If you did not define a value in this rule set, the layout editor defaults to </a><font size="2" face="'Courier New'" color="#000000">0 mil</font>.</blockquote>
+      <p><a name="1049551">When using </a><font color="#000000"><em>Neck gap</em></font> during routing or checking, the layout editor looks for the following in sequential order:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1049552">DIFFP_NECK_GAP property value on the differential pair object.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1049553"><font color="#000000"><em>Neck gap </em></font></a><font color="#000000"><em>value in the ECSet.</em></font></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1049554"><font color="#000000"><em>DiffPair neck gap </em></font></a><font color="#000000"><em>value in the Physical Rule set.</em></font></td>
+          </tr>
+        </table>
+      </div>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1049555">If the layout editor does not find any of these values, it uses the </a><font color="#000000"><em>Primary gap</em></font> value in the order described above to search for a primary gap value. </p>
+      <h4><a name="1049556">Primary Line Width</a></h4>
+      <p><a name="1049557">When determining the primary line width, the layout editor looks for the following in sequential order:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1049558"><font color="#000000"><em>Primary line width</em></font></a> assigned to the differential pair object. You set this only in the Constraint Manager, or you can set the MIN_LINE_WIDTH property on individual nets, which bubble up to the differential pair object.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1049559">Differential pair</a><font color="#000000"><em> Primary line width</em></font> in the ECSet.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1049560"><font color="#000000"><em>Min line width </em></font></a>in the Physical Rule set.</td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="1049561">Neck Line Width</a></h4>
+      <p><a name="1049562">The layout editor determines the value of the neck line width in the following sequence:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1049563"><font color="#000000"><em>Neck width</em></font></a> assigned to the differential pair object. You set this only in the Constraint Manager, or you can set the MIN_NECK_WIDTH property on individual nets, which bubble up to the differential pair object.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1049564">Differential pair</a><font color="#000000"><em> Neck width</em></font> value in the ECSet.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1049565"><font color="#000000"><em>Min neck width </em></font></a>value in the Physical Rule set.</td>
+          </tr>
+        </table>
+      </div>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1056047">When you define the primary gap or neck gap in a physical constraint set (differential pair by gap layer), the layout editor always uses values from the constraint set that applies to the differential pair for points outside all constraint areas. The layout editor does not use values from constraint sets assigned to the differential pair for points inside a constraint area. </a></p>
+      <h3><a name="1056057">Viewing DRC Violations for Differential Pairs</a></h3>
+      <p><a name="1056060">In addition to flagging nets that violate differential pair constraints with DRC markers, the layout editor also marks the offending line segments with a highlighting color that is half the width of the line. To see these segments: </a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1044268">Choose </a><font color="#000000"><em>Display - Color&#47;Visibility</em></font> (<a href="../ccoms/cchap.html#color192" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>color192</u></font></a> command).</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1046549">In the Color dialog box, choose </a><font color="#000000"><em>Stack&#45;Up</em></font>.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1046550">In the </a><font color="#000000"><em>DRC</em></font> column, enable the ETCH&#47;CONDUCTOR subclasses on which the differential pairs appear. </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	4.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1044320">If necessary, modify the DRC subclass colors. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	5.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1062628">Click </a><font color="#000000"><em>OK</em></font>.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	6.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1062631">Choose </a><font color="#000000"><em>Display - Layer Priority</em></font> (<a href="../lcoms/lchap.html#layer_priority" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>layer priority</u></font></a> command). See <a href="../lcoms/lchap.html#colorpriorityproc" target="external_window"><font color="#0000ff"><u>Assigning a Display Priority to Layers</u></font></a> in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font> for instructions.</td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="1045840">Transferring Logic from Older Schematics</a></h4>
+      <p><a name="1045841">You can transfer logic from 14.x schematics into a Release 15.x design. The differential pair properties on nets in the logic file connect to the 15.x elements in the following ways:</a></p>
+      <p align="left"><a name="1046413">&nbsp;</a></p>
+      <table summary="" border="1" cellpadding="5" cellspacing="0" width="487">
+        <caption>
+        <tr>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="182">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1046435">14.x Properties</a></strong></font>
+            </p>
+          </td>
+          <td bgcolor="#CCCCCC" cellpadding="4" border="2" bordercolor="#000000" valign="middle" width="304">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1046437">Connected to these 15.x Elements</a></strong></font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1046439">DIFFERENTIAL_PAIR</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1046441">differential pair group object</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1046443">DIFFP_LENGTH_TOL</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1046445">DIFFP_PHASE_TOL property</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1046447">DIFFP_2ND_LENGTH</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1046449">DIFFP_UNCOUPLED_LENGTH property</a></p>
+          </td>
+        </tr>
+      </table>
+      <p><a name="1045946">To transfer logic, choose </a><font color="#000000"><em>File - Import - Logic</em></font> (<a href="../ncoms/nchap.html#netin" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>netin</u></font></a> command) and the <a href="../ncoms/nchap.html#netrev" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>netrev</u></font></a> command, described in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>.</p>
+      <h2><a name="layer_set_constraints"></a><a name="1049891">Layer Sets</a></h2>
+      <p><a name="layer_sets"></a><a name="layer_sets"></a><a name="layer_sets"></a><a name="layer_sets"></a><a name="1049937">The layout editor lets you assign layer&#45;set wiring rules to net&#45;based objects to control impedance, shielding, or return path requirements. You place layer&#45;set constraints on nets, XNets, differential pairs, or buses, ensuring adherence to wiring requirements by locking routes within the appropriate layer sets.</a></p>
+      <p><a name="1053642">Topics covered in this section include:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <u><font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font></u>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <u><a href="#1051104" title="3" name="1053646"><font color="#0000ff"><u>Defining Layer Sets</u></font></a></u>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <u><font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font></u>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <u><a href="#1052666" title="3" name="1053650"><font color="#0000ff"><u>Assigning Layer&#45;Set Constraints</u></font></a></u>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <u><font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font></u>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <u><a href="#1052870" title="3" name="1053654"><font color="#0000ff"><u>Using Layer&#45;Set Constraints in DRC Mode</u></font></a></u>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1051124">The following definitions apply to layer sets:</a></p>
+      <p><a name="1051125">&nbsp;</a></p>
+      <table summary="" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF" width="648">
+        <caption>
+        <tr>
+          <td cellpadding="4" border="0" valign="top" >
+            <p><a name="1051128"><font color="#000000"><strong>Layer Set</strong></font></a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top" >
+            <p><a name="1051130">Group of ETCH&#47;CONDUCTOR layers (also referred to as subclasses) applied to nets, XNets, diff pairs, or buses. You can assign one or more layer sets to an object. </a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1051136"><font color="#000000"><strong>Pin Escape</strong></font></a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1051138">Series of blind, buried, or through&#45;hole vias and clines that defines a path from an outer layer to an inner target routing layer. </a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1051144"><font color="#000000"><strong>Short side of an XNet</strong></font></a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1051146">Shortest two&#45;pin net of a two&#45;net XNet.</a></p>
+          </td>
+        </tr>
+      </table>
+      <h3><a name="1051104">Defining Layer Sets</a></h3>
+      <p><a name="1052664">Before you can apply a layer&#45;set constraint, you must define a layer set. Using the Layer Sets dialog box, accessed by running the </a><font size="2" face="'Courier New'" color="#000000">define layersets</font> command or through the Electrical Constraints dialog box (<font color="#000000"><em>Setup - Constraints - Electrical constraint sets)</em></font>, you choose available layers and group them in a layer set. There is no limit to the number of layers that can belong to a layer set.</p>
+      <h3><a name="1052666">Assigning Layer&#45;Set Constraints</a></h3>
+      <p><a name="1052148">After you define the layer set, assign the layer&#45;set constraint to applicable ETCH&#47;CONDUCTOR objects using one of the following methods:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1052150">Include a layer set in an ECSet.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1053157">A layer set can belong to multiple ECSets. For additional information on assigning a layer set to an ECSet, see the </a><font color="#0000ff"><u>Select Layer Sets Dialog Box</u></font> in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>. </blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1052189">Attach the LAYERSET_GROUP property.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1052743">For more information about this property, see </a><a href="../propref/properties.html#ls_property" target="external_window"><font color="#0000ff"><u>LAYERSET_GROUP</u></font></a> in the <font color="#000000"><em>Allegro Platform Properties Reference</em></font>.</blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1052712">Use Constraint Manager to assign a layer&#45;set constraint to a net, XNet, differential pair, bus, or ECSet.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1052919">Cadence recommends using the </a><font color="#000000"><em>Electrical Constraint Spreadsheet</em></font>, available by choosing <font color="#000000"><em>Setup - Electrical Constraint Spreadsheet</em></font>, to manage layer&#45;set constraints. For information about layer sets in the <font color="#000000"><em>Electrical Constraint Spreadsheet,</em></font> see <a href="../constraintcore/chap3.html#layer_sets" target="external_window"><font color="#0000ff"><u>Layer Sets</u></font></a> in the <font color="#000000"><em>Allegro Platform Constraints Reference</em></font>. </blockquote>
+      <h3><a name="1052870">Using Layer&#45;Set Constraints in DRC Mode</a></h3>
+      <p><a name="1052871">Enable design rule checking, so that the DRC markers reflect the current design state. </a></p>
+      <p><a name="1052790">When checking layer&#45;set constraints, the layout editor determines the following:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1050699">All nets of an XNet route on the same layer set to avoid a DRC error. However, a DRC violation does not occur when the short&#45;side of an XNet runs on a surface&#45;layer between two pins.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1050701">The DRC on a bus is independent from other nets on the bus.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1050902">If the cline is on the path from a surface&#45;mount pin to a legal routing layer, either through a via or a staggered path that progresses towards the legal routing layer, no DRC errors occur. This is considered a pin escape, as shown in </a><font color="#0000ff"><u>Figure </u></font><a href="#1052320" title="3"><font color="#0000ff"><u>3&#45;5</u></font></a>. <strong>Example of Pin Escape Etch</strong></td>
+          </tr>
+        </table>
+      </div>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;5&nbsp; </strong></font></strong>
+        <strong><a name="1052320">PCB Editor: Example of Pin Escape Etch</a></strong>
+      </p>
+      <p align="left"><a name="1052328"><img src="images/chap3.6.1.05.png" alt=""><br></a></p>
+      <h4><a name="1050973">Viewing DRC Violations for Layer&#45;Set Constraints</a></h4>
+      <p><a name="1052393">When a layer&#45;set constraint violation occurs, a DRC marker appears directly on the cline and status information appears in the </a><font color="#000000"><em>Electrical Constraint Spreadsheet</em></font>, as shown in <font color="#0000ff"><u>Figure </u></font><a href="#1052398" title="3"><font color="#0000ff"><u>3&#45;6</u></font></a><font color="#0000ff">. </font></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;6&nbsp; </strong></font></strong>
+        <strong><a name="1052398">Example of a DRC Violation in Constraint Manager and Allegro PCB Editor</a></strong>
+      </p>
+      <p align="left"><a name="1052402"><img src="images/drc_reporting.png" alt=""><br></a></p>
+      <p><a name="1052391">In this example, a violation occurred because you cannot interchange the two layer sets (defined as </a><font size="2" face="'Courier New'" color="#000000">LS3&#45;4</font> and <font size="2" face="'Courier New'" color="#000000">LS6&#45;7</font>), even though the purple cline exists on a subclass of the alternate layer set, <font size="2" face="'Courier New'" color="#000000">LS6&#45;7</font>. To avoid this violation, you must route the purple cline on layer <font size="2" face="'Courier New'" color="#000000">Sig_4V</font> or route the yellow cline on one of the two layers of layer set <font size="2" face="'Courier New'" color="#000000">LS6&#45;7</font>. Constraint Manager reports the actual results as a PASS&#47;FAIL condition. The accumulated amount of etch length on non&#45;layer set subclasses appears in the <font color="#000000"><em>Length</em></font> column of the Electrical Constraint Spreadsheet.</p>
+      <p><a name="1050166">In addition to flagging nets that violate layer&#45;set constraints with DRC markers, the layout editor also marks the offending cline with a highlighting color. See </a><a href="../ccoms/cchap.html#assign_colors2subclasses" target="external_window"><font color="#0000ff"><u>Assigning Colors to Subclasses</u></font></a> in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font> for instructions.</p>
+      <h2><a name="pindelay"></a><a name="1047952">Using Pin Delay</a></h2>
+      <p><a name="1047953">You can include pin delay in DRC calculations for DIFFERENTIAL PAIR PHASE TOLERANCE, PROPAGATION DELAY, and RELATIVE PROPAGATION DELAY by assigning the PIN_ DELAY property to component instance or definition pins in the layout editor. The PIN_ DELAY property specifies the time delay or length from the internal package connection to the pin's mounting layer. Use the PIN_DELAY property to manage interchip delay or die&#45;to&#45;die timing paths across a printed circuit board and thereby factor inter&#45;package delay into timing requirements.</a></p>
+      <p><a name="1047954">When pin delay is measured in time units, it is multiplied by the </a><font color="#000000"><em>Pin Delay Propagation Velocity Factor, </em></font>which is a constant used to convert from time to ETCH&#47;CONDUCTOR layer length units if you defined DIFFERENTIAL PAIR PHASE TOLERANCE, PROPAGATION DELAY, and RELATIVE PROPAGATION DELAY in time units. To factor pin delay into these DRC calculations, choose <font color="#000000"><em>Setup - Constraints - Modes</em></font>, then click the Electrical Options tab. In the <font color="#000000"><em>Pin Delay</em></font> group box, enable <font color="#000000"><em>Include in all Propagation Delays and DiffPair Phase checks</em></font> and enter a value for <font color="#000000"><em>Propagation velocity factor</em></font>. For more information, see the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>.</p>
+      <p><a name="1047957">A schematic&#45; or a board&#45;driven flow supports pin&#45;delay values. </a></p>
+      <h3><a name="1047958">Schematic&#45;driven Pin Delay Flow</a></h3>
+      <p><a name="1047959">In a schematic&#45;driven flow, these pin&#45;level delay values are defined as library properties that can be written to the Allegro Design Entry HDL, System Connectivity Manager, or</a><font size="2" face="'Courier New'" color="#000000"> </font>Allegro Design Entry CIS library files sent to the layout editor. You can use Allegro PCB Librarian XL to manually assign the PIN_DELAY property and values to symbol pins or automatically import the PIN_DELAY values through its <font color="#000000"><em>Import Wizard</em></font>, which supports Comma Separated Value (<font size="2" face="'Courier New'" color="#000000">.csv</font>) and Excel (<font size="2" face="'Courier New'" color="#000000">.xls</font>) file format options.</p>
+      <p><a name="1047960">Packager&#45;XL packages the design into </a><font size="2" face="'Courier New'" color="#000000">pst*.dat</font> files. The <font size="2" face="'Courier New'" color="#000000">pstchip.dat</font> file contains the default values of the PIN_DELA Y property, subsequently imported into the layout editor using the latter's <font color="#000000"><em>File - Import - Logic</em></font> (<a href="../ncoms/nchap.html#netrev" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>netrev</u></font></a> command). </p>
+      <p><a name="1057006">You can use the PIN_DELAY property values in Constraint Manager, interactive routing in the layout editor or PCB Router, automatic routing in PCB Router, and DRC verification in both the layout editor and Allegro PCB Router. For more information on using pin delays in Allegro Constraint Manager and Allegro PCB Router, see </a><font color="#000000"><em>Analyze - Analysis Modes</em></font> in the <font color="#0000ff"><u><em>Allegro </em></u></font><a href="../cmref/cmrefTOC.html" target="external_window"><font color="#0000ff"><u><em>Constraint Manager Reference</em></u></font></a> and the <a href="../spug/spugTOC.html" target="external_window"><font color="#0000ff"><u><em>Allegro PCB Router User Guide</em></u></font></a>, respectively.</p>
+      <p><a name="1047971">You can then optionally edit and override the PIN_DELAY values from the </a><font size="2" face="'Courier New'" color="#000000">pstchip.dat</font> file on component&#45;instance pins. Only overrides are backannotated to the schematic. </p>
+      <p><a name="1047994"><font color="#000000"><strong>Board&#45;driven Pin Delay Flow</strong></font></a></p>
+      <p><a name="1047972">In a board&#45;driven, pin&#45;delay flow, you can export pin delay values from an external source using </a><font color="#000000"><em>File - Export - Pin Delay </em></font>(<a href="../pcoms/pchap.html#pin_delay_out" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>pin_delay out</u></font></a> command) and then import them to another design and annotate them to component instance pins using <font color="#000000"><em>File - Import - Pin Delay </em></font>(<a href="../pcoms/pchap.html#pin_delay_in" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>pin_delay in</u></font></a> command) in the layout editor. You can also use<font color="#000000"><em> Edit - Properties</em></font> (<a href="../pcoms/pchap.html#property_edit" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>property edit</u></font></a> command) to assign the PIN_DELAY property.</p>
+      <p><a name="1047978">When you change the value of the PIN_DELAY property in the layout editor and use</a><font color="#000000"><em> File - Export - Logic</em></font> (<a href="../fcoms/fchap.html#feedback" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>feedback</u></font></a> command) to export modifications to Allegro Design Entry HDL or System Connectivity Manager, both the layout editor&#45;modified (instance) and Allegro Design Entry HDL or System Connectivity Manager&#45;generated (definition) PIN_DELAY values come across in the <font size="2" face="'Courier New'" color="#000000">cmdbview.dat</font> file if you are using a Constraint&#45;Manager&#45;enabled flow. If you are using a flow without Constraint Manager, manual edits to the value of the PIN_DELAY property pass in the <font size="2" face="'Courier New'" color="#000000">pstxprt.dat</font> file.</p>
+      <p><a name="1047980">Constraint Manager is an optional point to enter PIN_DELAY values and to edit those propagated from the </a><font size="2" face="'Courier New'" color="#000000">chip.prt</font> files. The Constraint Manager flow maintains any overrides of the PIN_DELAY property made in Constraint Manager or in the layout editor, but does not backannotate them to the Allegro Design Entry HDL or System Connectivity Manager schematic. For more information on using the PIN_DELAY property in Constraint Manager, see <font color="#000000"><em>Analyze - Analysis Modes</em></font> in the Allegro Constraint Manager Reference.</p>
+      <h2><a name="1048003">Using Z Axis Delay</a></h2>
+      <p><a name="1063629">To more accurately account for delay in your designs, you can include the conducting portion of a via&#47;pin (also known as Z Axis Delay) in DRC calculations for DIFFERENTIAL PAIR PHASE TOLERANCE, PROPAGATION DELAY, and RELATIVE PROPAGATION DELAY. Z Axis Delay includes component pin and via depth values in a pin&#45;pair path. The conducting portion of a via&#47;pin comprises the thickness through the board from the placed symbol layer where a net enters a padstack, which may be a via or a pin, to the layer from which it exits. </a></p>
+      <p><a name="1063630">All layer dielectric and conductor thickness lengths between the entry and exit layers are calculated for the conducting portion of a via&#47;pin and are added to the overall net or pin pair length. The conductor thickness is included in the calculation only when the entry and exit layers are opposing z&#45;axis directions. Surface mount vias, such as testpoints, and pin to pin connections on the same layer the component is placed have no effect on the Z Axis Delay calculations. </a></p>
+      <p><a name="1063631">When the conducting portion of a via&#47;pin is measured in time units, it is multiplied by the </a><font color="#000000"><em>Z Axis Delay Propagation Velocity Factor, </em></font>which is a constant used to convert from time to ETCH&#47;CONDUCTOR layer length units if you defined DIFFERENTIAL PAIR PHASE TOLERANCE, PROPAGATION DELAY, and RELATIVE PROPAGATION DELAY in time units. </p>
+      <p><a name="1063632">To factor the conducting portion of a via&#47;pin into these DRC calculations, choose </a><font color="#000000"><em>Setup - Constraints - Modes</em></font>, then click the Electrical Options tab. In the <font color="#000000"><em>Z Axis Delay</em></font> group box, enable <font color="#000000"><em>Include in all Propagation Delays and DiffPair Phase checks</em></font> and enter a value for <font color="#000000"><em>Propagation velocity factor</em></font>. For more information, see the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>.</p>
+      <h4><a name="1048009">Z Axis Delay Example</a></h4>
+      <p><a name="1048010">Assume the following stackup is defined in the </a><font color="#000000"><em>Layer Cross Section</em></font> dialog box, accessible by running <font color="#000000"><em>Setup - Cross&#45;section</em></font> (<a href="../xcoms/xchap.html#xsection" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>xsection</u></font></a>command), described in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>:</p>
+      <p><a name="1047949"><img src="images/chap3.6.1.07.png" alt=""><br></a></p>
+      <p><a name="1058245">Consider the following stackup and layer thicknesses, as outlined in the preceding figure, as an example.</a></p>
+      <p><a name="1048883">&nbsp;</a></p>
+      <table summary="" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF" width="540">
+        <caption>
+        <tr>
+          <td cellpadding="4" valign="middle" >
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1049080">Layer Type</a></strong></font>
+            </p>
+          </td>
+          <td cellpadding="4" valign="middle" >
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1049082">ETCH&#47;CONDUCTOR Subclass Name</a></strong></font>
+            </p>
+          </td>
+          <td cellpadding="4" valign="middle" >
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1049084">Thickness</a></strong></font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049086">Conductor</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049088">Tc1</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049090">1.2 mils</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049092">Dielectric</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049094">Td1</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049096">5.0 mils</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049098">Plane</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049100">Tc2</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049102">1.2 mils</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049104">Dielectric</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049106">Td2</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049108">5.0 mils</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049110">Conductor</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049112">Tc3</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049114">0.7 mils</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049116">Dielectric</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049118">Td3</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049120">5.0 mils</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049122">Conductor</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049124">Tc4</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049126">0.7 mils</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049128">Dielectric</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049130">Td4</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049132">5.0 mils</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049134">Plane</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049136">Tc5</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049138">1.2 mils</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049140">Dielectric</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049142">Td5</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049144">5.0 mils</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049146">Conductor</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049148">Tc6</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1049150">1.2 mils</a></p>
+          </td>
+        </tr>
+      </table>
+      <h2><a name="1058451">Setting Nets to Check Themselves for Crosstalk and Parallelism </a></h2>
+      <p><a name="1058452">To enable the nets in your design to perform a design rule self&#45;check for crosstalk and parallelism (in addition to the checks the net makes against all other nets), you can turn on the feature using the </a><font color="#000000"><em>Objects &#45; Create &#45; Electrical CSet i</em></font>n Constraint Manager. </p>
+      <p><a name="1058494">Enabling this command creates same net crosstalk records in your design database. Because such data is not supported in releases prior to 15.5.1, you must perform a database down rev in Release 15.2 to remove these objects. For releases earlier than 15.5.1, attempts to open designs containing same net DRC data produce an error message and the design does not open.</a></p>
+      <h2><a name="1062689">Design For Assembly Legacy Checking</a></h2>
+      <p><a name="1062734">Dynamic Design For Assembly (DFA) checks in the layout editor support package&#45;to&#45;package clearance modeling. By implementing rules&#45;driven design techniques, constraints identified during system design control the physical layout. Real&#45;time design for assembly analysis occurs as you manually place components. </a></p>
+      <h3><a name="using_realtime_DFA"></a><a name="1058553">Using Dynamic Design for Assembly (DFA) Constraints</a></h3>
+      <p><a name="1059798">During interactive placement, designers can understand component&#45;clearance requirements using the rules&#45;driven DFA Constraints Dialog spreadsheet, whose values can be associated with a design.</a></p>
+      <p><a name="1058558">You can apply an external design assembly checks table owned by manufacturing that represents corporate design assembly checks standards to a design, then edit or override the table values using the DFA Constraints Dialog spreadsheet, which defines component side&#45;side (S&#45;S), side&#45;end (S&#45;E), end&#45;end (E&#45;E), and end&#45;side (E&#45;S) spacing values in one view that supports top and bottom sides of the PCB separately. </a></p>
+      <p><a name="1063580">In the figure below, A and B both represent a side&#45;end (S&#45;E) condition where different values are applicable:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1063732">The symbol considered the Reference Symbol is located in the column of the DFA spreadsheet. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1063733">If end&#45;side (E&#45;S) value is not present, DRC uses side&#45;end (S&#45;E) value for both the conditions (pre 16.5 behavior).</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1063596">When comparing two identical symbols, only the side&#45;end (S&#45;E) value is used and, end&#45;side (E&#45;S) is considered superfluous.</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1063774"><img src="images/dfa.gif" alt=""><br></a></p>
+      <p><a name="1063572">Conversely, use the </a><font color="#000000"><em>Read&#45;only</em></font> field on the DFA Constraints Dialog spreadsheet to prevent users from overriding corporate design assembly checks standards. The DFA Constraints Dialog spreadsheet is available by choosing <font color="#000000"><em>Setup - Constraints - DFA Constraint Spreadsheet </em></font>(<a href="../dcoms/dchap.html#dfa_spreadsheet" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>dfa_spreadsheet</u></font></a> command). </p>
+      <p><a name="1058550">These values in the design assembly checks rules table drive real&#45;time DRC feedback during placement. For example, a DRC flags too&#45;small part&#45;to&#45;part spacing during part placement and updates it in real time. All assembly checks occur in the same environment in which you designed the board, to preclude juggling between the layout editor and third&#45;party tools for fabrication checks.</a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;7&nbsp; </strong></font></strong>
+        <strong><a name="1058611">Real&#45;time Design Assembly Checks process</a></strong>
+      </p>
+      <p align="left"><a name="1058649"><img src="images/chap3.6.1.09.png" alt=""><br></a></p>
+      <h3><a name="1058664">Grouping symbol definitions with the DFA_DEV_CLASS property </a></h3>
+      <p><a name="1058665">You can group symbol definitions that share the same clearance values by assigning the DFA_DEV_CLASS property to them. The DFA_DEV_CLASS property classifies components according to the Design for Assembly (DFA) package&#45;to&#45;package spacing values defined in the DFA Constraints Dialog spreadsheet, available by choosing </a><font color="#000000"><em>Setup - Constraints - DFA Constraint Spreadsheet </em></font>(<a href="../dcoms/dchap.html#dfa_spreadsheet" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>dfa_spreadsheet</u></font></a> command). </p>
+      <p><a name="1058668">You use the </a><a href="../dcoms/dchap.html#dfa_spreadsheetdialogbox" target="external_window"><font color="#0000ff"><u>DFA Classification Editor</u></font></a> dialog box to add or remove symbol definitions from user&#45;defined classes. (The DFA Classification Editor is available by clicking Show symbol classifications... on the DFA Constraints Dialog spreadsheet.) The layout editor treats these classes as components comprised of symbols to which the design assembly checks spacing values defined for the class default.</p>
+      <p><a name="1058683">For example, fifty versions of an 0805 package symbol may exist, all complying to the same design assembly checks set. A single class line entry in the spreadsheet assumes the rules for each instance of the 0805 class of package symbols. </a></p>
+      <p><a name="1058684">Clicking </a><font color="#000000"><em>Update</em></font> on the DFA Classification Editor dialog box assigns the DFA_DEV_CLASS property to the symbol definitions in the classes you specified.</p>
+      <h3><a name="1058685">DRC for Design Assembly Checks</a> </h3>
+      <p><a name="1058686">The DRC marker (D&#45;C) for design assembly checks verifies design assembly checks spacing rules prior to and after symbol placement either interactively or in batch mode. When violations occur during manual placement, the D&#45;C marker and design assembly checks extents appear in the color assigned to design assembly checks DRC in the Color dialog box. Design assembly checks DRCs appear in Constraint Manager in the DRC workbook under the Design worksheet. Design assembly checks DRC supports alternate symbols. </a></p>
+      <p><a name="1058687">For example, a design assembly checks DRC error appears in error reports as:</a></p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1058688">DIP14&#45;DIP14 violated 100:200:100 rule. </a></font>
+      </blockquote>
+      <p><a name="1058689">Design assembly checks DRC determines the correct rule set by checking:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058690">Defined design assembly checks in the DFA Constraints Dialog spreadsheet for the associated symbol definition </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058691">The DFA_DEV_CLASS property assigned to symbol definitions and design assembly checks rules in the DFA tables </a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1058692">You can choose to enable or disable design assembly rules checking independently of existing package&#45; to&#45;package rules checking on the Design Constraints dialog box, accessed by running (</a><a href="../ccoms/cchap.html#cns_design" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>cns design</u></font></a> command) in the layout editor. Design assembly checks DRC occurs in conjunction with batch package&#45;to&#45;package DRCs if you:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058697">Enable design assembly checking on the DFA Constraints Dialog spreadsheet</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058698">Create design for assembly place&#45;bounds for the symbol, enable design assembly checking, and an entry exists in the DFA Constraints Dialog spreadsheet </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058699">When one or both symbol definitions lack design assembly place&#45;bounds, DRC uses the existing place&#45;bound and generates a warning. You can generate design assembly place&#45;bounds for legacy symbols automatically using </a><font size="2" face="'Courier New'" color="#000000">dfa_update</font>.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058700">Assign the HEIGHT property to either package</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1058609">During manual placement, as a dynamic component approaches placed components' DFA place&#45;bound extents, DRC runs based on the correct S&#45;S, E&#45;E, S&#45;E, and E&#45;S value in the DFA Constraints Dialog spreadsheet. Spacing circles appear on screen between the components to show the actual spacing value visually, and to highlight potential design assembly checks DRC errors in the color you assigned for DRCs.</a></p>
+      <p><a name="1058720">If a violation occurs, the layout editor calculates the design assembly extent on all placed components that come within the range of potential design assembly checks DRC errors, and a DRC marker displays there. </a></p>
+      <blockquote><font color="#000000"><strong>Note: </strong></font><a name="1058721">To remove the butterfly from appearing with the spacing circles, use </a><font color="#000000"><em>Setup - User Preferences </em></font><font color="#000000"><em>(</em></font><a href="../ecoms/echap.html#enved" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>enved</u></font></a> command) and enable the <font size="2" face="'Courier New'" color="#000000">no_dfa_drc_marker</font> variable. </blockquote>
+      <p><a name="1058723">This DRC and design for assembly place&#45;bound extents remain highlighted until you move the component from the violation extent area; the spacing circles then disappear as well. If you move components, DRCs become out of date for design assembly errors. </a></p>
+      <h4><a name="1063442">Using DFA_PAUSE_LEVEL property to remove design for assembly (DFA) DRC</a></h4>
+      <p><a name="1063478">To meet the minimum design for assembly clearance rule you can set the DFA_PAUSE_LEVEL property with value 3. This property pauses the active component during movement to meet the design for assembly clearance rule.</a></p>
+      <h3><a name="1058724">Design for Assembly place&#45;bounds</a></h3>
+      <p><a name="1058725">You can create design for assembly place&#45;bound shapes in Symbol mode as you do place&#45;bound shapes using the </a><a href="../pcoms/pchap.html#package_bound" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>package_bound</u></font></a> command. Place&#45;bound rectangles are filled rectangles that define the package boundary and govern placement restrictions. Placement tools use these rectangles for overlapping and mechanical restraints. DRC also uses them to check for violations of package&#45;to&#45;package keepin areas and keepout areas. For legacy symbols, you can add the design for assembly place&#45;bound to the symbol definition, with <a href="../dcoms/dchap.html#dfa_update" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>dfa_update</u></font></a>.</p>
+      <p><a name="1058728">A rectangular&#45;shaped design for assembly place&#45;bound differs from a place&#45;bound in that the former has differentiating edges and ends to comply with design for assembly spacing rules. For circles or polygons, design for assembly DRC uses the largest, or most conservative, value specified in the DFA Constraints Dialog spreadsheet for that symbol if three values exist. Unlike current place&#45;bounds, which allow you to concatenate multiple shapes, each layer allows only one shape for a design for assembly place&#45;bound. </a></p>
+      <p><a name="1058708">The layout editor determines the design for assembly place&#45;bound end, which comprises the shorter sides of the extent at a zero degree rotation; side as the longer sides of the extent. </a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;8&nbsp; </strong></font></strong>
+        <strong><a name="1058748">DFA place&#45;bound Description</a></strong>
+      </p>
+      <p align="left"><a name="1058785"><img src="images/chap3.6.1.10.png" alt=""><br></a></p>
+      <p><a name="1058786">In the example below, the design for assembly place&#45;bound surrounds the package pins, but with respect to the assembly outline in blue.</a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;9&nbsp; </strong></font></strong>
+        <strong><a name="1058746">DFA place&#45;bound: SOIC</a></strong>
+      </p>
+      <p align="left"><a name="1058797"><img src="images/chap3.6.1.11.png" alt=""><br></a></p>
+      <p><a name="1058803">In the example below, the red outline surrounds the package pins, including fiducials.</a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;10&nbsp; </strong></font></strong>
+        <strong><a name="1058801">DFA place&#45;bound: BGA</a></strong>
+      </p>
+      <p align="left"><a name="1058814"><img src="images/chap3.6.1.12.png" alt=""><br></a></p>
+      <p><a name="1058831">Design for assembly place&#45;bounds, created on DFA_BOUND_TOP and DFA_BOUND_BOTTOM layers of the PACKAGE GEOMETRY class, follow the symbol rotation as </a><a href="#1058835" title="3"><font color="#0000ff"><u>Figure&nbsp;3&#45;11</u></font></a><a href="#1058835" title="3"> </a> shows. </p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;11&nbsp; </strong></font></strong>
+        <strong><a name="1058835">DFA place&#45;bound Rotation Rules</a></strong>
+      </p>
+      <p align="left"><a name="1058868"><img src="images/chap3.6.1.13.png" alt=""><br> </a></p>
+      <h2><a name="1058877">Using Batch&#45;Mode Design for Assembly (DFA) Analysis</a></h2>
+      <p><a name="1058881">The layout editor provides batch&#45;mode design assembly checks analysis on a printed circuit board with a set of audits for which you can specify constraints, and define and prioritize them if necessary. </a></p>
+      <p><a name="1058882">Design assembly checks allows you to run the following audits:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058883">Component clearance</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058884">Component orientation and mounting layer</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058885">Lead span</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058886">Hole</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058887">Testability</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058888">Orphan via</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1058889">Hanging trace</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1058890">Running these audits enables you to verify that your design adheres to a particular set of constraints. After performing the audits, you can view the violations written back to the design as DRCs; you can cross&#45;probe and highlight the violations in the layout editor using the markers utility. </a></p>
+      <p><a name="1058875">Figure </a><a href="#1058909" title="3"><font color="#0000ff"><u>3&#45;12</u></font></a> depicts the typical use model of batch&#45;mode design assembly checks. Batch&#45;mode design assembly checks can be performed anytime after placing components on your design.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;12&nbsp; </strong></font></strong>
+        <strong><a name="1058909">Overview of Batch&#45;Mode Design Assembly Checks Analysis</a></strong>
+      </p>
+      <p align="left"><a name="1058993"><img src="images/chap3.6.1.14.png" alt=""><br></a></p>
+      <h3><a name="1059015">Defining Batch&#45;Mode Design for Assembly (DFA) Constraints</a></h3>
+      <p><a name="1059016">Constraints are defined in the DFA Audit Setup dialog box, and constraint sets must be defined for each audit as the first step in the design assembly checks process. For details, see </a><a href="../dcoms/dchap.html#creating_spec_constraints" target="external_window"><font color="#0000ff"><u>Creating Specialized Constraints for DFA Check </u></font></a>in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>.</p>
+      <h4><a name="1059022">Prioritizing Constraints</a></h4>
+      <p><a name="1059026">The layout editor provides a default for the audits that support prioritization. Details are provided for all audits. Typically, you assign general--that is, non&#45;specialized--constraint values to the default set (also known as a "child item"). In the case of the Component Assembly Clearance audit, for instance, the constraints written against the default child item apply to all components in your design. The default constraint set, therefore, represents the highest evaluated level of constraints within an audit. Additional child items that you create from the default (or current) child item should have more specialized constraints associated with them. </a></p>
+      <p><a name="1059030">During an audit, the layout editor evaluates specialized constraint sets before less stringent constraints in a bottom&#45;to&#45;top order. You can maintain this progression of less stringent to more stringent constraints by inserting new or modified constraint sets between existing ones.</a></p>
+      <p><a name="1059031">Each child item in an audit can be considered a place holder for the constraints associated with it. The most general constraint--default--must be at the top of the list of child items in audits that require prioritization of constraints because the layout editor evaluates constraints from bottom to top. When the layout editor finds a match for a specialized constraint, higher level--more generalized--constraints are not evaluated. The audits that require prioritization are:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059038">Component Assembly Clearance</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059039">Component Orientation and Mounting Layer</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059040">Lead Span</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059041">Hole Audit</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059051">Test Point Audit</a></td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="1059055">Saving Constraints</a></h4>
+      <p><a name="1059052">After you have defined a new set of constraints in the DFA Audit Setup dialog box, save the constraint set by clicking the </a><font color="#000000"><em>Save</em></font> button in the main dialog box (Design For Assembly). Clicking <font color="#000000"><em>Save</em></font> opens a constraint file browser. </p>
+      <p align="left"><a name="1059073"><img src="images/dfa_save.gif" alt=""><br></a></p>
+      <p><a name="1059082">The information entered in the Audit Setup dialog box can be written to a new or existing</a><font size="2" face="'Courier New'" color="#000000">.par</font> file and is read when future audits of that constraint set are performed. </p>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1059083">Clicking the </a><font color="#000000"><em>OK</em></font> button in the Audit Setup dialog box saves the modified constraints in the directory pointed to by the browser, then closes the dialog box. Clicking <font color="#000000"><em>Cancel</em></font> closes the dialog box, discarding the changes made in that session.</p>
+      <p><a name="1059084">All the design assembly checks constraint files are ASCII files, thus they can be edited; however, we recommend that changes made to constraints be performed in the Audit Setup dialog box. Constraint files are structured in the following format:</a></p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059085">STARTENV DFA</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059086">STARTRULE    component_orientation_layer_audit</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059087">    PARAM    SELECTOR_TYPE_     &#34;Component&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059088">    PARAM    SELECTOR_NUMBER_     1</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059089">    PARAM    PARAMETER_TYPES_     &#34;S&#34; , &#34;S&#34; , &#34;S&#34; , &#34;NL&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059090">    PARAM    PARAMETER_WIDGETS_     &#34;P&#34; , &#34;E&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059091">    PARAM    PARAMETER_POPUPS_     &#34;POPUP_LAYER&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059092">    PARAM    CONSTRAINTS     &#34;Constraint_1&#34; , &#34;smd2smd&#34; , &#34;Default&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059093">    PARAM    SELECT_BY1     &#34;Symbol&#34; , &#34;Property&#34; , &#34;Any&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059094">    PARAM    VALUE1     &#34;ocs&#34; , &#34;DFA_DEV_CLASS=ALL&#34; , &#34;*&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059095">    PARAM    LAYER     &#34;BOTTOM&#34; , &#34;TOP&#34; , &#34;Either&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059096">    PARAM    ORIENTATION     &#34;90&#34; , &#34;0&#34; , &#34;0 90 180 270&#34;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059097">ENDRULE</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059098">&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059099">STARTRULE test_point_audit</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059100">&nbsp;&nbsp;&nbsp;&nbsp;PARAM MIN_SIZE 50</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059101">&nbsp;&nbsp;&nbsp;&nbsp;PARAM MAX_SIZE 100</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059102">ENDRULE</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059103">ENDENV</a></font>
+      </p>
+      <p><a name="1059104">The sample above defines the:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059105">Environment in which the file is to be used</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059106">Constraints and their values</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059107">Prioritization of constraints (where supported)</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1059118">The default </a><font size="2" face="'Courier New'" color="#000000">dfa_constraints.par</font> file exists in <font size="2" face="'Courier New'" color="#000000">$CDS_INST_DIR&#47;share&#47;pcb&#47;assembly</font>. </p>
+      <h3><a name="1059120">Selecting the Audits To Run</a></h3>
+      <p><a name="1059121">Choose the audit and the child item (if prioritization is supported) in the Setup dialog box. The lower portion of the dialog box displays the constraint values associated with your selection. For details, see the </a><a href="../dcoms/dchap.html#dfa" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>dfa</u></font></a> command in the <font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font>.</p>
+      <h3><a name="1059127">Performing the Audit</a></h3>
+      <p><a name="1059131">Run the audit(s) from the layout editor with the</a><font size="2" face="'Courier New'" color="#000000"> dfa </font>command. Make sure you have set all parameters to your satisfaction, and you have chose the appropriate audit(s) to run.</p>
+      <p><a name="1059132">When you run an audit on a constraint set, the following files are created in the design directory:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059133"><font size="2" face="'Courier New'" color="#000000">dfa.msg</font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059134"><font size="2" face="'Courier New'" color="#000000">dfa.log</font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059135"><font size="2" face="'Courier New'" color="#000000">dfa.mkr</font></a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1059136">The message, log, and marker files are updated automatically and contain the violations that were generated during the most recent audit. Move&#47;copy or rename files generated earlier for purposes of comparisons with more recent runs.</a></p>
+      <h3><a name="1059138">Viewing Violations and Reports</a></h3>
+      <p><a name="1059080">Design assembly checks assume a default value of 200 violations.</a><font color="#0000ff"> </font>You can reset the maximum by assigning a specific number as a property value, or by entering a value in the DFA dialog box.</p>
+      <p><a name="1059158">You can view violations in two ways: on the board itself as DRCs or from the dfa.mkr file through the markers utility (when you click the </a><font color="#000000"><em>Explore Violations </em></font>button in the DFA dialog box). Clicking on a violation in the markers window highlights the violation in the layout editor's working area. All design assembly checks DRCs are cleared from the board at the beginning of each audit session.</p>
+      <p><a name="1059162">Clicking the </a><font color="#000000"><em>Report</em></font> button in the DFA dialog box lets you view the <font size="2" face="'Courier New'" color="#000000">dfa.msg</font> file containing details of every violation. The <font size="2" face="'Courier New'" color="#000000">dfa.log</font> file provides details of the audit process. </p>
+      <h3><a name="1059164">Completing the Process</a></h3>
+      <p><a name="1059165">If violations are present after running the audit, make the necessary corrections, then run the audit again. Perform this step until your board is free of violations.</a></p>
+      <h2><a name="1059166">Design for Assembly (DFA) Audit Descriptions</a></h2>
+      <p><a name="1059156">This section contains information on each of the design assembly checks audits. The accompanying illustrations depict the Audit Setup dialog box as configured for the separate audits.</a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;13&nbsp; </strong></font></strong>
+        <strong><a name="1059177">Component Assembly Clearance</a></strong>
+      </p>
+      <p align="left"><a name="1059174"><img src="images/comp_assem_clearance.gif" alt=""><br></a></p>
+      <p><a name="1059201">This audit checks the spacing between the components to accommodate assembly, inspection, and repair. A group of components can be chosen by defining a selection criteria using the "</a><font color="#000000"><em>Select By</em></font>" and "<font color="#000000"><em>Value</em></font>" fields. These values are described in the online Help found in the layout editor.</p>
+      <p><a name="1059205">The Component Assembly Clearance audit supports prioritization of constraints. Distance is calculated in user&#45;defined design units.</a></p>
+      <h4><a name="1059206">Example</a></h4>
+      <p><a name="1059207">Two child items, Default and ResToIC, exist in the Component Assembly Clearance Audit in the order shown. The value of each field in the constraints section of the Audit Setup dialog box is:</a></p>
+      <p align="left"><a name="1059263">:</a></p>
+      <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="648">
+        <caption>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top" width="72">
+            <p><a name="1059210">Child Item</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top" width="72">
+            <p><a name="1059212">Comp1</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top" width="72">
+            <p><a name="1059214">Value1</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top" width="72">
+            <p><a name="1059216">Edge1</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top" width="72">
+            <p><a name="1059218">Comp2</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top" width="72">
+            <p><a name="1059220">Value2</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top" width="72">
+            <p><a name="1059222">Edge2</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top" width="72">
+            <p><a name="1059224">Layer</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top" width="72">
+            <p><a name="1059226">Spacing</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059228">Default</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059230">All</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059232">*</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059234">Any</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059236">All</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059238">*</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059240">Any</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059242">Any</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059244">1200</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059246">ResToIC</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059248">RefDesR</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059250">*</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059252">Any</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059254">RefDesU</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059256">*</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059258">Any</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059260">Top</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059262">1000</a></p>
+          </td>
+        </tr>
+      </table>
+      <p><a name="1059199">In the example, the minimum distance between any two components on any layer is 1200 design units. The minimum distance between any resistor component with a reference designator (refdes) R and any IC with a reference designator U on the top layer is 1000 design units.</a></p>
+      <p><a name="1059269">When you run the audit, design assembly checks for a minimum spacing of 1000 design units between resistors and ICs on the top layer. All other elements are checked for a minimum spacing of 1200 design units. If the priority is reversed-- if ResToIC is moved to the top--the audit first checks for a minimum spacing of 1200 design units between any two components, and the ResToIC constraint is never checked.</a></p>
+      <h4><a name="1059270">Error Messages</a></h4>
+      <p><a name="1059271">The error message generated by the audit is:</a></p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059272">ERROR (component_clearance_audit)</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059273">Clearance between components U23 and C32 : 50</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059274">Minimum clearance required : 100</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059275">Categories used are category1: RefDes  * category 2: RefDes   *</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059276">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059277">ERROR (component_clearance_audit)</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059278">Clearance between components C32 and U23 : 50</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059279">Minimum clearance required : 100</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059280">Categories used are category1: RefDes  * category 2: RefDes   *</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059281">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059282">ERROR (component_clearance_audit)</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059283">Clearance between components U12 and U21 : 25</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059284">Minimum clearance required : 100</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059285">Categories used are category1: RefDes  * category 2: RefDes   *</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059286">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059287">ERROR (component_clearance_audit)</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059288">Clearance between components U21 and U12 : 25</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059289">Minimum clearance required : 100</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059267">Categories used are category1: RefDes  * category 2: RefDes   *</a></font>
+      </blockquote>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;14&nbsp; </strong></font></strong>
+        <strong><a name="1059310">Component Orientation and Mounting Layer</a></strong>
+      </p>
+      <p align="left"><a name="1059319"><img src="images/comp_ori_mt.gif" alt=""><br></a></p>
+      <p><a name="1059332">This audit checks that component orientation is correct for the soldering process used, and that components are mounted only on allowed layers. </a></p>
+      <p><a name="1059335">A group of components can be chosen by defining a selection criteria. Refer to the </a><font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font> for descriptions of field selection values and criteria. Prioritization of constraints is supported.</p>
+      <h4><a name="1059337">Example</a></h4>
+      <p><a name="1059338">The audit has two child items: Default and Resistor. The value of each field in the constraints section of the Audit Setup dialog box is</a></p>
+      <p align="left"><a name="1059370">:</a></p>
+      <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="540">
+        <caption>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top" width="108">
+            <p><a name="1059341">Child Item</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top" width="108">
+            <p><a name="1059343">Select By</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top" width="108">
+            <p><a name="1059345">Value</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top" width="108">
+            <p><a name="1059347">Layer</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top" width="108">
+            <p><a name="1059349">Orientation</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059351">Default</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059353">All</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059355">*</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059357">Top</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059359">0</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059361">Resistor</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059363">RefDesR</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059365">*</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059367">Bottom</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1059369">90</a></p>
+          </td>
+        </tr>
+      </table>
+      <p><a name="1059371">All resistors on the bottom layer should have an orientation of 90 or 270 degrees. Any component on the top layer should have an orientation of 0 or 180 degrees. The parameters of this audit specify that only resistors are allowed on the bottom layer. </a></p>
+      <p><a name="1059372">If the two items were reversed, all components should be present on the top layer with allowed orientations of 0 or 180 degrees. Resistors on the bottom layer generate error messages. </a></p>
+      <p><a name="1059323">The error messages generated by the audit are:</a></p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059382">&#34;ERROR : Component mounted on the wrong layer &#34;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059383">Component           : &#39;R1&#39; </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059384">Layer               : TOP </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059385">Allowed Layer       : BOTTOM </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059386">Constraint name     : Constraint_1 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059387">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059388">ERROR : Component has wrong orientation&#34;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059389">Component           :&#39;U2&#39; </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059390">Orientation         : 0 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059391">Allowed Orientation : 90 180</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059392">Constraint name     : Default </a></font>
+      </blockquote>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;15&nbsp; </strong></font></strong>
+        <strong><a name="1059380">Lead Span </a></strong>
+      </p>
+      <p align="left"><a name="1059400"><img src="images/lead_span.gif" alt=""><br></a></p>
+      <p><a name="1059409">Axial components must be able to fit into the holes at the span defined in the symbol. This audit verifies the span values for components. Allowed span values can be specified by list or by equation.</a></p>
+      <p><a name="1059410">The value list is entered on a separate form for both the options; that is, selecting span values by list, or by equation (shown above). Refer to the online Help for descriptions of field selection values and criteria. Prioritization of constraints is supported.</a></p>
+      <p><a name="1059411">If span value checking is by list, the component span is the distance between the two pads of the component. With this method, you enter a space&#45;separated list in the span value list field. The actual component span should match one in the list.</a></p>
+      <p><a name="1059412">If the span value is calculated by equation, the equation used for determining the span values is</a></p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059413">:X*Body Length + Y * LEAD_DIAMETER + Z </a></font>
+      </blockquote>
+      <p><a name="1059414">where X, Y, Z are constants which can be customized. The "</a><font color="#000000"><em>Base&#45;Increment value list</em></font>" field has a space separated list of base increment pairs in the format base:increment. The actual span value is checked against the base:increment pair. </p>
+      <h4><a name="1059415">Example </a></h4>
+      <p><a name="1059416">Assume that X=Y =1 and Z=100 mils. Base: Increment = 300:100. Let the component span evaluate to 750 mils. The allowable span values are 300, 400, 500, 700, 700, 800 etc. Since 750 &#62;700 and 750 &#60; 800, the allowable span value is 800. So the actual pad&#45;to&#45; pad distance is checked against this value. </a></p>
+      <p><a name="1059407">The audit is applied only to axial components where axial components are defined as package symbols with attached property DFA_DEV_CLASS and two pins with attached property LEAD_DIAMETER (when span values are chosen by equation).</a></p>
+      <p><a name="1059440">The error message generated by the rule is:</a></p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059441">&#34;ERROR : Component does not have standard span value&#34;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059442">&#34;ERROR (lead_span_audit) </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059443">Allowed span value(s) : 200 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059444">Component             : &#39;C91&#39; </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059445">Span Value            : 140 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059446">Body Length           : 170 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059447">Span value specified  : By Equation </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059448">Constraint name       : Default </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059449">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059450">ERROR (lead_span_audit) </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059451">Allowed span value(s) : 205 220 220 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059452">Component             : &#39;C94&#39; </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059453">Span Value            : 140 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059454">Body Length           : 170 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059455">Span value specified  : By List </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059456">Constraint name       : Default </a></font>
+      </blockquote>
+      <h3><a name="1059457">Orphan Via</a></h3>
+      <p><a name="1059458">Choose this audit to report on vias that meet both of the following criteria:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059459">The via has no clines connected to it.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059473">The via is not on a net.</a></td>
+          </tr>
+        </table>
+      </div>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;16&nbsp; </strong></font></strong>
+        <strong><a name="1059472">Hole</a></strong>
+      </p>
+      <p align="left"><a name="1059478"><img src="images/hole.gif" alt=""><br></a></p>
+      <p><a name="1059484">This audit: </a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059485">Verifies all pads have the minimum annular</a><font color="#0000ff"> </font>ring width</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059486">Allows only permissible drill sizes in the design</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1059487">Checks minimum&#47;maximum via size and whether duplicate holes are present in the same location</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1059488">The audit reports the number of unique drill sizes in the design.</a></p>
+      <p><a name="1059492">Refer to the </a><font color="#000000"><em>Allegro PCB and Package Physical Layout Command Reference</em></font> for details of field parameter values.</p>
+      <p><a name="1059493">The error messages generated by this rule are:</a></p>
+      <p><a name="1059494"><font color="#000000">INFO (hole_audit)</font></a></p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059495">Maximum via size   : 2</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059496">Following vias violate this criteria:</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059497">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059498">        VIA1@(1000.0 2260.0)          14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059499">        VIA1@(800.0 2540.0)           14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059500">        VIA1@(1920.0 2560.0)          14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059501">        VIA1@(2120.0 2260.0)          14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059502">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059503">INFO (hole_audit)</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059504">Minimum via size   : 30</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059505">Following vias violate this criteria:</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059506">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059507">        VIA1@(1000.0 2260.0)          14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059508">        VIA1@(800.0 2540.0)           14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059509">        VIA1@(1920.0 2560.0)          14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059510">        VIA1@(2120.0 2260.0)          14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059511">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059512">ERROR (hole_audit)</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059513">Preferred plated hole size(s) : 5  6  7.</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059514">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059515">The following vias violate this criteria:</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059516">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059517">        VIA1@(1000.0 2260.0)          14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059518">        VIA1@(800.0 2540.0)           14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059519">        VIA1@(1920.0 2560.0)          14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059520">        VIA1@(2120.0 2260.0)          14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059521">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059522">ERROR (hole_audit)</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059523">Preferred plated hole size(s) : 5  6  7.</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059524">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059525">The following pins violate this criteria:</a></font>
+      </blockquote>
+      <p><a name="1059526">&nbsp;</a></p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059527">        R1.2                          14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059528">        R2.2                          14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059529">        R2.1                          14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059530">        R1.1                          14 </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059531">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059532">ERROR (hole_audit)</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059533">Minimum annular ring size for pads is 8.</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059534">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059535">The following vias violates this criteria:</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059536">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059537">        VIA1@(1000.0 2260.0)          3  </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059538">        VIA1@(800.0 2540.0)           3  </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059539">        VIA1@(1920.0 2560.0)          3  </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059540">        VIA1@(2120.0 2260.0)          3  </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059541">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059542">ERROR (hole_audit)</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059543">Minimum annular ring size for pads is 8 .</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059544">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059545">The following pins violates this criteria:</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059546">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059547">        R1.2                          3  </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059548">        R2.2                          3  </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059549">        R2.1                          3  </a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1059550">        R1.1                          3  </a></font>
+      </blockquote>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;17&nbsp; </strong></font></strong>
+        <strong><a name="1059552">Testability</a></strong>
+      </p>
+      <p align="left"><a name="1059556"><img src="images/testability.gif" alt=""><br></a></p>
+      <p><a name="1059557">This audit checks for test points under components, the minimum&#47;maximum size of test points, and tented test points (test points covered by solder mask).</a></p>
+      <p><a name="1059558">A test point is defined as a pin&#47;via with the attached property TESTPOINT and a value ETCH&#47;CONDUCTOR&#47;&#60;SUBCLASS&#62; placed on it, where &#60;SUBCLASS&#62; can be either top or bottom.</a></p>
+      <p><a name="1059559">The error messages generated by this rule are:</a></p>
+      <p><a name="1059560"><font color="#000000">ERROR(test_point_audit): Test point found under component</font></a></p>
+      <p><a name="1059561"><font color="#000000">The following components have test points under them:</font></a></p>
+      <p><a name="1059562"><font color="#000000">        		U1 	 	 	 	via1(70,85)</font></a></p>
+      <p><a name="1059563"><font color="#000000">	 	U2 	 	 	 	via2(30,908)</font></a></p>
+      <p><a name="1059564"><font color="#000000">ERROR(test_point_audit):Test point size less than minimum</font></a></p>
+      <p><a name="1059565"><font color="#000000">Minimum test point size   : 30</font></a></p>
+      <blockquote><a name="1059566">Following vias violate this criteria:</a></blockquote>
+      <p><a name="1059567"><font color="#000000">VIA1@(1000.0 2260.0)          3  </font></a></p>
+      <p><a name="1059568"><font color="#000000">VIA1@(800.0 2540.0)           3  </font></a></p>
+      <p><a name="1059569"><font color="#000000">VIA1@(1920.0 2560.0)          3 </font></a></p>
+      <blockquote><a name="1059570">ERROR(test_point_audit):Test point covered by Solder Mask</a></blockquote>
+      <blockquote><a name="1059571">The following test points are covered by solder mask:</a></blockquote>
+      <p><a name="1059572"><font color="#000000">VIA1@(1000.0 2260.0)</font></a></p>
+      <p><a name="1059573"><font color="#000000">VIA1@(800.0 2540.0)</font></a></p>
+      <h3><a name="1059574">Hanging Trace</a></h3>
+      <p><a name="1059575">Choose this audit to report on cline segments that do not have a net assigned to them.</a></p>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1059576">Cline segments assigned to dummy nets are not considered hanging traces, and this audit does not report them.</a></p>
+      <p><a name="1059577">&nbsp;</a></p>
+      <p><a name="1059482">&nbsp;</a></p>
+    </div>
+    <br>
+    <a href="#pagetop">Return to top of page</a>
+    <hr>
+    <hr align="left">
+    <div style="text-align: left;">
+      <!-- Begin Buttons -->
+      <table width="650" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+                    </td>
+<td height="20" width="73">
+<a href="algrodesrlsTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+          <td>
+            <a href="chap2.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+          </td>
+          <td height="20">
+            <img src="images/nav2_next_b.gif" alt="Previous">
+          </td>
+          <td>
+            <a>
+<a href="algrodesrls.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+            </a>
+          </td>
+          <td height="20" width="59">
+            <img src="images/nav_next_b.gif" alt="Next" border="0">
+          </td>
+          <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+          </td>
+          <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+          </td>
+          <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+          </td>
+          <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+          </td>
+        </tr>
+      </table>
+      <!-- End Buttons -->
+    </div>
+    <br>
+    <font size="-1" >
+For support, see <a href="http://support.cadence.com" target="_blank">Cadence Online Support</a> service.</font>
+    <br>
+    <br>
+    <font size="-1" >
+<font size="-1"><i>Copyright &#169; 2016, <a href ="http://www.cadence.com">Cadence Design Systems, Inc.</a></i></font>
+    </font>
+    <br>
+    <font size="-1" >
+All rights reserved.</font>
+    <br>
+    <br>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+{
+  "status": "PASS_SYNTHETIC_REGRESSION_NO_CAD",
+  "tests": [
+    {
+      "test": "generated_ids_and_same_net_owner_and_userprop_order",
+      "expected_equal": true,
+      "exit_code": 0,
+      "pass": true
+    },
+    {
+      "test": "pin_attribute_change_rejected",
+      "expected_equal": false,
+      "exit_code": 2,
+      "pass": true
+    },
+    {
+      "test": "junction_removed_rejected",
+      "expected_equal": false,
+      "exit_code": 2,
+      "pass": true
+    },
+    {
+      "test": "junction_duplicate_rejected",
+      "expected_equal": false,
+      "exit_code": 2,
+      "pass": true
+    },
+    {
+      "test": "property_value_change_rejected",
+      "expected_equal": false,
+      "exit_code": 2,
+      "pass": true
+    },
+    {
+      "test": "generated_id_collision_rejected",
+      "expected_equal": false,
+      "exit_code": 2,
+      "pass": true
+    },
+    {
+      "test": "junction_off_owner_rejected",
+      "expected_equal": false,
+      "exit_code": 2,
+      "pass": true
+    },
+    {
+      "test": "strict_identity_merge",
+      "pass": true,
+      "exit_code": 0
+    },
+    {
+      "test": "pin_electrical_type_difference_blocks_merge_before_output",
+      "pass": true,
+      "exit_code": 1
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+HI_EXISTING_VIA_ALIAS "V_HI_C1" (13.8 18.3) dbid:000001E73EC8D7D8
+HI_EXISTING_VIA_ALIAS "V_HI_OUT_A" (13.0 26.148) dbid:000001E73EC8D868
+HI_EXISTING_VIA_ALIAS "V_HI_OUT_B" (13.0 27.0) dbid:000001E73EC8D8F8
+HI_EXISTING_VIA_ALIAS "V_HI_LDO_IN_A" (24.2 27.8) dbid:000001E73EC8D988
+HI_EXISTING_VIA_ALIAS "V_HI_LDO_IN_B" (24.2 27.0) dbid:000001E73EC8DAE8
+HI_EXISTING_VIA_ALIAS "V_HI_LDO_OUT_A" (28.6 29.0) dbid:000001E73EC8DB78
+HI_EXISTING_VIA_ALIAS "V_HI_LDO_OUT_B" (27.9 29.0) dbid:000001E73EC8DCD8
+HI_EXISTING_VIA_ALIAS "V_HI_FB_GND" (28.2236 22.4) dbid:000001E73EC8DD68
+HI_EXISTING_VIA_ALIAS "V_HI_V5_SENSE_SOURCE" (15.5 22.0) dbid:000001E73EC8DEC8
+HI_EXISTING_VIA_ALIAS "V_HI_V5_SENSE_END" (31.8 19.1) dbid:000001E73EC8E0C8
+HI_EXISTING_VIA_ALIAS "V_HI_INPUT_RETURN_BRIDGE" (16.5 15.5) dbid:000001E73EC8E7D0
+HI_ENDPOINT_PROOF from="J1.1" to="F1.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="F1.2" to="D1.2" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="D1.1" to="C2.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="D1.1" to="C1.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="C1.2" to="V_HI_C1" expected=t actual=t objects=140
+HI_ENDPOINT_PROOF from="L1.2" to="C5.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="C5.1" to="C6.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="C5.2" to="C6.2" expected=t actual=t objects=140
+HI_ENDPOINT_PROOF from="V_HI_OUT_A" to="V_HI_OUT_B" expected=t actual=t objects=140
+HI_ENDPOINT_PROOF from="C5.1" to="C8.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="C8.1" to="U3.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="U3.1" to="U3.3" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="U3.5" to="C9.1" expected=t actual=t objects=3
+HI_ENDPOINT_PROOF from="U3.2" to="V_HI_LDO_IN_B" expected=t actual=t objects=140
+HI_ENDPOINT_PROOF from="C9.2" to="V_HI_LDO_OUT_B" expected=t actual=t objects=140
+HI_ENDPOINT_PROOF from="R1.1" to="C7.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="C7.2" to="R1.2" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="U2.4" to="R2.1" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="R1.2" to="FB_U2_R2" expected=t actual=t objects=9
+HI_ENDPOINT_PROOF from="R2.2" to="V_HI_FB_GND" expected=t actual=t objects=140
+HI_ENDPOINT_PROOF from="C5.1" to="V_HI_V5_SENSE_SOURCE" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="V_HI_V5_SENSE_SOURCE" to="V_HI_V5_SENSE_END" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="V_HI_V5_SENSE_END" to="R1.1" expected=t actual=t objects=19
+HI_ENDPOINT_PROOF from="V_HI_C1" to="V_HI_INPUT_RETURN_BRIDGE" expected=t actual=t objects=140
+HI_REOPEN_ALL_ENDPOINTS_COMPLETE

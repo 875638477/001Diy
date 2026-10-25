@@ -1,0 +1,148 @@
+{
+  "status": "ENGINEERING_CANDIDATE_NEEDS_GROUP_GEOMETRY_AND_NATIVE",
+  "operations": [
+    {
+      "type": "route",
+      "id": "CAN_H_U5_TERM",
+      "net": "CAN_H",
+      "layer": "TOP",
+      "points": [
+        [
+          69.588,
+          14.73
+        ],
+        [
+          71.5,
+          14.75
+        ]
+      ],
+      "widths": [
+        0.3
+      ],
+      "from": "U5.7",
+      "to": "R15.1",
+      "purpose": "Short branch joins end-node termination next to J3; retain two-end-only population rule."
+    },
+    {
+      "type": "route",
+      "id": "CAN_H_TERM_J3",
+      "net": "CAN_H",
+      "layer": "TOP",
+      "points": [
+        [
+          71.5,
+          14.75
+        ],
+        [
+          74,
+          14.54
+        ]
+      ],
+      "widths": [
+        0.3
+      ],
+      "from": "R15.1",
+      "to": "J3.1",
+      "purpose": "Main connector route via termination pad; no long T stub."
+    },
+    {
+      "type": "route",
+      "id": "CAN_L_U5_TERM",
+      "net": "CAN_L",
+      "layer": "TOP",
+      "points": [
+        [
+          69.588,
+          13.46
+        ],
+        [
+          70.8,
+          13.46
+        ],
+        [
+          71.5,
+          12.76
+        ],
+        [
+          71.5,
+          11.702
+        ]
+      ],
+      "widths": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "from": "U5.6",
+      "to": "R15.2",
+      "purpose": "Horizontal escape avoids U5 NC5 copper before descending, remain beside CANH corridor without crossing."
+    },
+    {
+      "type": "route",
+      "id": "CAN_L_TERM_J3",
+      "net": "CAN_L",
+      "layer": "TOP",
+      "points": [
+        [
+          71.5,
+          11.702
+        ],
+        [
+          72.5,
+          11.702
+        ],
+        [
+          74,
+          12
+        ]
+      ],
+      "widths": [
+        0.3,
+        0.3
+      ],
+      "from": "R15.2",
+      "to": "J3.2",
+      "purpose": "Direct short route to bus connector; preserve connector GND3."
+    },
+    {
+      "type": "route",
+      "id": "CAN_TX_IDLE_BRANCH",
+      "net": "CAN_TXD",
+      "layer": "TOP",
+      "points": [
+        [
+          64,
+          16
+        ],
+        [
+          62.9,
+          16
+        ],
+        [
+          61.9764,
+          16.9236
+        ],
+        [
+          61.9764,
+          17.9
+        ]
+      ],
+      "widths": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "from": "U5.1",
+      "to": "R14.2",
+      "purpose": "10k idle pullup branch near TXD; main TXD approaches U5 from left, do not route digital track between CAN bus pins."
+    }
+  ],
+  "placementChanges": [],
+  "rules": [],
+  "scopeNotes": [
+    "TOP only, no CAN bus vias planned. Width.3 gap>=.2 per class; PCB differential impedance not certified, no forced serpentines.",
+    "H/L different pin and termination coordinates yield modest length imbalance; 500kbps<=1m isolated bench contract does not remove fast-edge reference requirement.",
+    "R15=120ohm>=.25W populated only at physical two cable ends, DNP at intermediate nodes. One board termination is not complete bus topology.",
+    "TCAN332 100nF C11 and1uF C12/local GND must be connected before bus test; no arbitrary bus TVS justified by internal ESD rating."
+  ]
+}

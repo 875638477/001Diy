@@ -1,0 +1,13 @@
+procedure(hiAll69ReadonlyScoped()
+ let((f net count failures)
+  f=outfile("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/nonUSB65_scoped_TOP_trial_2L_b018_01/all69_per_net_scoped.txt") failures=0
+  unless(axlDBControl('drcEnable) error("Existing master DRC disabled; stop no mode change\n"))
+  fprintf(f "NON_USB_65_SCOPE=AXL_DRC_ITEM_PER_REAL_NET_NOT_WHOLE_BOARD_UPDATE_NOT_BATCH_ONLY\nDESIGN=%L\nPHYSICAL=%L\nSPACING=%L\nELECTRICAL=%L\n" axlCNSDesignModeGet('all) axlCNSPhysicalModeGet('all) axlCNSSpacingModeGet('all) axlCNSEcsetModeGet('all)) drain(f)
+  foreach(name list("ADC0" "ADC_IN" "BOOT0" "BOOT1" "BOOT_SERVICE" "BUCK_BOOT" "BUCK_FB" "BUCK_SW" "CAN_RXD" "CAN_TXD" "GND" "GPIO_PA1" "GPIO_PA15" "GPIO_PA2" "GPIO_PA3" "GPIO_PB1" "GPIO_PB10" "GPIO_PB11" "GPIO_PB12" "GPIO_PB13" "GPIO_PB14" "GPIO_PB15" "GPIO_PB4" "GPIO_PB5" "GPIO_PB8" "GPIO_PB9" "GPIO_PC13" "GPIO_PC14" "GPIO_PC15" "I2C_SCL" "I2C_SDA" "NRST" "OSC_IN" "OSC_OUT" "PA10_UART_RX" "PA4_SPI_NSS" "PA5_SPI_SCK" "PA6_SPI_MISO" "PA7_SPI_MOSI" "PA9_UART_TX" "SPI_MISO" "SPI_MOSI" "SPI_NSS" "SPI_SCK" "SWCLK" "SWDIO" "SWO" "UART_RX" "UART_TX" "USB_ATTACH_N" "USB_CC1" "USB_CC2" "USB_PULLUP_SRC" "USB_VBUS" "V3V3" "V5" "VBUS_GATE" "VBUS_PRESENT_N" "VDDA" "VIN_FUSED" "VIN_PROT" "VIN_RAW" "XTAL_OUT" "CAN_H" "CAN_L")
+   net=axlDBFindByName('net name) unless(net error("Actual net missing\n"))
+   fprintf(f "NON_USB_65_NET_BEGIN name=%L time=%L\n" name getCurrentTime()) drain(f)
+   count=axlDRCItem(nil net)
+   fprintf(f "NON_USB_65_NET_RESULT name=%L result=%L time=%L\n" name count getCurrentTime()) drain(f)
+   unless(numberp(count) error("Native scoped result not numeric; do not treat as zero\n"))
+   when(count!=0 failures=failures+1 f29DumpDRC(f strcat("NON_USB_65_NONZERO_" name))))
+  fprintf(f "NON_USB_65_NET_SCOPED_COMPLETE netCount=65 nonzeroNets=%d masterDRC=%L WHOLE_BOARD_DRC_UNRECOMPUTED=t USB4_NOT_EXECUTED_KNOWN_SOLVER_BLOCK=t\n" failures axlDBControl('drcEnable)) close(f) t))

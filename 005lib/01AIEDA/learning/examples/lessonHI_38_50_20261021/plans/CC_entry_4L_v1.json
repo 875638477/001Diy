@@ -1,0 +1,137 @@
+{
+  "status": "ENGINEERING_CANDIDATE_ONLY",
+  "variant": "4L",
+  "operations": [
+    {
+      "type": "route",
+      "id": "CC1_ENTRY",
+      "net": "USB_CC1",
+      "layer": "TOP",
+      "points": [
+        [
+          38.75,
+          7.355
+        ],
+        [
+          38.75,
+          8.3
+        ],
+        [
+          36.9484,
+          10.1016
+        ],
+        [
+          35.0,
+          10.1016
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit connector auxiliary topology candidate; combined actual-copper/native spacing/return review pending."
+    },
+    {
+      "type": "route",
+      "id": "CC2_ENTRY",
+      "net": "USB_CC2",
+      "layer": "TOP",
+      "points": [
+        [
+          41.75,
+          7.355
+        ],
+        [
+          41.75,
+          8.4
+        ],
+        [
+          43.4516,
+          10.1016
+        ],
+        [
+          45.5,
+          10.1016
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit connector auxiliary topology candidate; combined actual-copper/native spacing/return review pending."
+    },
+    {
+      "type": "route",
+      "id": "CC_R3_GND",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          35.0,
+          11.6764
+        ],
+        [
+          33.9,
+          11.6764
+        ]
+      ],
+      "width": 0.4,
+      "purpose": "Explicit connector auxiliary topology candidate; combined actual-copper/native spacing/return review pending."
+    },
+    {
+      "type": "via",
+      "id": "CC_R3_GND_V",
+      "net": "GND",
+      "xy": [
+        33.9,
+        11.6764
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "CC_R4_GND",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          45.5,
+          11.6764
+        ],
+        [
+          46.6,
+          11.6764
+        ]
+      ],
+      "width": 0.4,
+      "purpose": "Explicit connector auxiliary topology candidate; combined actual-copper/native spacing/return review pending."
+    },
+    {
+      "type": "via",
+      "id": "CC_R4_GND_V",
+      "net": "GND",
+      "xy": [
+        46.6,
+        11.6764
+      ],
+      "padstack": "L28_VIA030_C060"
+    }
+  ],
+  "proofs": [
+    {
+      "from": "R3.2",
+      "to": "U1.23",
+      "connected": true
+    },
+    {
+      "from": "R4.2",
+      "to": "U1.23",
+      "connected": true
+    },
+    {
+      "from": "J2.A5",
+      "to": "R3.1",
+      "connected": true
+    },
+    {
+      "from": "J2.B5",
+      "to": "R4.1",
+      "connected": true
+    }
+  ],
+  "scope": "No widening global USB spacing; finite connector .2mm Class-Class line_line region may be required and must be explicitly proven."
+}

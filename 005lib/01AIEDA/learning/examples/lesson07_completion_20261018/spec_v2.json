@@ -1,0 +1,123 @@
+{
+  "lesson": 7,
+  "date": "2026-10-18",
+  "root": "D:/001DIY/005lib/01AIEDA/learning/examples/lesson07_completion_20261018",
+  "purpose": "Native CAD learning coupon; no production dimensions or real component implied.",
+  "units": "millimeters",
+  "accuracy": 3,
+  "npth": {
+    "diameter": 2.0,
+    "plating": "NON_PLATED",
+    "packageXY": [
+      0,
+      0
+    ],
+    "boardXY": [
+      20,
+      20
+    ],
+    "regularFigure": "NULL",
+    "routeKeepoutSide": 3.0,
+    "minimumCopperClearance": 0.5,
+    "padstackKeepout": false,
+    "expectedImporterWarning": "No default internal pads are defined"
+  },
+  "pth": {
+    "diameter": 0.8,
+    "regularDiameter": 1.6,
+    "antiDiameter": 2.0,
+    "maskDiameter": 1.8,
+    "pins": [
+      {
+        "number": "1",
+        "xy": [
+          -5,
+          0
+        ],
+        "rotation": 0,
+        "boardNet": "GND"
+      },
+      {
+        "number": "2",
+        "xy": [
+          5,
+          0
+        ],
+        "rotation": 90,
+        "boardNet": "OTHER"
+      }
+    ]
+  },
+  "thermalFlash": {
+    "name": "eda_l07c_th4_200_160_w30_d80",
+    "innerDiameter": 1.6,
+    "outerDiameter": 2.0,
+    "spokeWidth": 0.3,
+    "spokes": 4,
+    "centerDotDiameter": 0.8,
+    "meaning": "Clearance sectors used on negative plane, leaving four copper spokes. Native FLASH symbol, not a solid CIRCLE thermal."
+  },
+  "layers": [
+    "TOP",
+    "L2",
+    "L3",
+    "BOTTOM"
+  ],
+  "negativePlane": "L3",
+  "copper": {
+    "net": "GND",
+    "boundingBox": [
+      [
+        11,
+        15
+      ],
+      [
+        29,
+        25
+      ]
+    ],
+    "npthVoidBox": [
+      [
+        18.5,
+        18.5
+      ],
+      [
+        21.5,
+        21.5
+      ]
+    ],
+    "positiveLayers": "Dynamic BOUNDARY explicitly axlDBAssignNet to GND; generated ETCH readback GND.",
+    "negativeL3": "explicit static shape void"
+  },
+  "requiredTexts": [
+    "REF DES/SILKSCREEN_TOP",
+    "REF DES/ASSEMBLY_TOP",
+    "COMPONENT VALUE/ASSEMBLY_TOP"
+  ],
+  "requiredTextXY": [
+    0,
+    0
+  ],
+  "heightMax": "1 MM",
+  "revision": 2,
+  "finalBoard": "library/eda_l07c_clearance_4layer_v2.brd",
+  "finalReadback": "logs/reopen_board02/readback.txt",
+  "finalNativeSource": "scripts/lesson07c_v2.il",
+  "v1Status": "Historical: NPTH keepout/clearance valid; dynamic boundary net parameter ignored, so v1 positive shapes not GND. v2 assigns boundary GND explicitly and verifies actual copper and thermal clines.",
+  "positiveThermals": {
+    "pin": "1",
+    "layers": [
+      "TOP",
+      "L2",
+      "BOTTOM"
+    ],
+    "nativeWidth": 0.127,
+    "countPerLayer": 4,
+    "center": [
+      15,
+      20
+    ],
+    "radialEndpoint": 0.98,
+    "note": "Actual positive dynamic thermal geometry differs from negative-plane flash. Native default width is educational only; current/fabrication must define production rules."
+  }
+}

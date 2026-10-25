@@ -1,0 +1,55 @@
+procedure(hiManualLineSignature(o)
+ let((pp)
+  pp=o->startEnd
+  when(caar(pp)>caadr(pp) || (equal(caar(pp) caadr(pp)) && cadar(pp)>cadadr(pp)) pp=reverse(pp))
+  sprintf(nil "%L" list(if(o->net then o->net->name else nil) o->layer pp o->width))))
+procedure(hiExactRipupInventory(exclude)
+ let((seen lines vias)
+  seen=nil lines=nil vias=nil
+  foreach(o axlExtractMap("C:/Program0/Cadence/SPB172/share/pcb/text/views/fgeo_bv.txt" nil)
+   unless(member(o seen)
+    seen=cons(o seen)
+    unless(member(o exclude)
+     when(equal(o->objType "line") && o->isEtch && !o->thermal && !(o->parent && o->parent->thermal)
+      lines=cons(hiManualLineSignature(o) lines))
+     when(equal(o->objType "via") vias=cons(sprintf(nil "%L" hiViaIdentity(o)) vias)))))
+  list(sort(lines 'alphalessp) sort(vias 'alphalessp))))
+procedure(hiDeleteExactBatch(f specs)
+ let((objects seen targets matches selected before expected after mark complete type id net layer geom value)
+  objects=axlExtractMap("C:/Program0/Cadence/SPB172/share/pcb/text/views/fgeo_bv.txt" nil)
+  seen=nil targets=nil complete=nil
+  foreach(spec specs
+   type=car(spec) id=cadr(spec) net=caddr(spec) layer=nth(3 spec) geom=nth(4 spec) value=nth(5 spec)
+   matches=nil seen=nil
+   foreach(o objects
+    unless(member(o seen)
+     seen=cons(o seen)
+     when(o->net && equal(o->net->name net)
+      cond(
+       ((equal(type "deleteVia") && equal(o->objType "via") && equal(o->xy geom) && equal(o->name value)) matches=cons(o matches))
+       ((equal(type "deleteSegment") && equal(o->objType "line") && o->isEtch && equal(o->layer strcat("ETCH/" layer)) && abs(o->width-value)<0.00001 && (equal(o->startEnd geom) || equal(reverse(o->startEnd) geom))) matches=cons(o matches))))))
+   unless(length(matches)==1 error("Controlled batch ripup prebinding requires unique original net+geometry for %s found=%L\n" id matches))
+   selected=car(matches)
+   when(member(selected targets) error("Duplicate selection in controlled exact batch ripup %s\n" id))
+   when(equal(type "deleteSegment") && (selected->thermal || (selected->parent && selected->parent->thermal)) error("Refuse thermal-relief target\n"))
+   fprintf(f "HI_EXACT_RIPUP_PREBOUND id=%L type=%L originalNet=%L object=%L parent=%L\n" id type net selected->?? if(selected->parent then selected->parent->?? else nil))
+   targets=cons(selected targets))
+  before=hiExactRipupInventory(nil)
+  expected=hiExactRipupInventory(targets)
+  fprintf(f "HI_EXACT_RIPUP_BATCH_START targets=%d manualLinesBefore=%d viasBefore=%d expectedOtherManualLines=%d expectedOtherVias=%d\n" length(targets) length(car(before)) length(cadr(before)) length(car(expected)) length(cadr(expected)))
+  mark=axlDBTransactionStart()
+  unless(mark error("Cannot start exact-ripup transaction\n"))
+  unwindProtect(
+   progn(
+    unless(axlDeleteObject(targets) error("Official atomic list deletion failed\n"))
+    axlDBRefreshId(nil)
+    after=hiExactRipupInventory(nil)
+    fprintf(f "HI_EXACT_RIPUP_BATCH_ACTUAL remainingManualLines=%d remainingVias=%d nonTargetManualLineGeometryNetWidthPreserved=%L nonTargetViaIdentityPreserved=%L\n" length(car(after)) length(cadr(after)) equal(car(expected) car(after)) equal(cadr(expected) cadr(after)))
+    unless(equal(expected after) error("Exact-ripup changed non-target manual copper/via identities; rollback required\n"))
+    unless(axlDBTransactionCommit(mark) error("Cannot commit exact-ripup transaction\n"))
+    complete=t)
+   unless(complete
+    axlDBTransactionRollback(mark) axlDBRefreshId(nil)
+    fprintf(f "HI_EXACT_RIPUP_BATCH_FAILED_ROLLBACK=%L\n" equal(before hiExactRipupInventory(nil)))))
+  fprintf(f "HI_EXACT_RIPUP_BATCH_COMPLETE_NO_NON_TARGET_CHANGE targetCount=%d\n" length(targets))
+  t))

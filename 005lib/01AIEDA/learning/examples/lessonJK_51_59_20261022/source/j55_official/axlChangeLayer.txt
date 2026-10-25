@@ -1,0 +1,52 @@
+
+  NAME
+         axlChangeLayer - change layer for dbids
+  FUNCTION
+         axlChangeLayer(
+                 lo_dbid/o_dbid
+                 t_newLayer
+                 [o_padStackDbid]/[t_padstackname]
+         )
+         ==> t/nil
+  SYNOPSIS
+         Changes layer for lines, clines or segments, shapes and text.
+         Functionality offered, at the global level, matches the Allegro change command
+         but can differ in certain areas.
+ 
+         If moving clines or cline segments across layers, you should provide a
+         via to be used to maintain connections. Via must meet contraint rules.
+  NOTES:
+         - If you need to change the layer of multiple etch objects, it is more efficient
+            to pass them as a list of dbids then to call this function for each dbid.
+         - Note for via to be accepted if must have:
+                 - pads on start and destination layers
+                 - be in the constraint via list for the net and location
+           If the provided padstack is not acceptable, system will select an acceptable
+           padstack based upon the via list for net and location.
+  NEEDS
+         lo_dbid/o_dbid - a single dbid or list of dbids
+         t_newLayer - new layer.
+         o_padStackDbid - if moving clines across layers, allegro will add a via 
+                 to maintain connection. This is that via. If this argument is not
+                 provided the system default via is used.
+         t_padStackName - name of padstack to be used
+  RETURNS
+         t if succeeded, nil if failure
+ 
+         FAILURES: (for debug purposes set axlDebug(t) to see additional messages)
+             - an dbid is of a type supported
+             - illegal option types
+             - target layer matches object current layer
+  EXAMPLES
+         1) Move an object to ETCH/BOTTOM
+             ; ashOne is a selection utility found at
+             ;   <cdsroot>/pcb/examples/skill/ash-fxf/ashone.il
+             dbid = ashOne()
+ 
+             ; pick an object (set find filter)
+             result = axlChangeLayer(dbid "ETCH/BOTTOM")
+             ;   or if moving clines
+             result = axlChangeLayer(dbid "ETCH/BOTTOM" "PAD60SQ36D")
+  SEE ALSO
+         axlTransformObject, axlDBChangeText, axlChangeWidth
+

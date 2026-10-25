@@ -1,0 +1,2112 @@
+{
+  "status": "FROZEN_SOURCE_ENGINEERING_CANDIDATE_NEEDS_PARENT_INTEGRATION_NATIVE",
+  "batchId": "RIGHT10_source_joint_v2",
+  "variant": "BOTH",
+  "operations": [
+    {
+      "type": "deleteVia",
+      "id": "OLD_PC14",
+      "net": "GPIO_PC14",
+      "xy": [
+        45.6,
+        25.2
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Exact unique native via removal before net disconnect, preserve unrelated vias"
+    },
+    {
+      "type": "deleteVia",
+      "id": "OLD_PC14_GND",
+      "net": "GND",
+      "xy": [
+        46.95,
+        24.9
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Exact unique native via removal before net disconnect, preserve unrelated vias"
+    },
+    {
+      "type": "deleteVia",
+      "id": "OLD_HSE_ANCHOR",
+      "net": "GND",
+      "xy": [
+        45.45,
+        28.85
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Exact unique native via removal before net disconnect, preserve unrelated vias"
+    },
+    {
+      "type": "deleteVia",
+      "id": "OLD_C15_COMMON_GND",
+      "net": "GND",
+      "xy": [
+        47.45,
+        28.7252
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Exact unique native via removal before net disconnect, preserve unrelated vias"
+    },
+    {
+      "type": "deleteSegment",
+      "id": "RIGHT_RIP_0",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          45.05,
+          29.25
+        ],
+        [
+          45.45,
+          28.85
+        ]
+      ],
+      "width": 0.25
+    },
+    {
+      "type": "deleteSegment",
+      "id": "RIGHT_RIP_1",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          29.25
+        ],
+        [
+          45.05,
+          29.25
+        ]
+      ],
+      "width": 0.25
+    },
+    {
+      "type": "deleteSegment",
+      "id": "RIGHT_RIP_2",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          45.45,
+          28.85
+        ],
+        [
+          46.5,
+          28.7252
+        ]
+      ],
+      "width": 0.6
+    },
+    {
+      "type": "deleteSegment",
+      "id": "RIGHT_RIP_3",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          46.5,
+          28.7252
+        ],
+        [
+          47.45,
+          28.7252
+        ]
+      ],
+      "width": 0.6
+    },
+    {
+      "type": "deleteSegment",
+      "id": "RIGHT_RIP_4",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          47.9428,
+          28.7252
+        ],
+        [
+          47.45,
+          28.7252
+        ]
+      ],
+      "width": 0.6
+    },
+    {
+      "type": "deleteSegment",
+      "id": "RIGHT_RIP_5",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          48.4,
+          28.268
+        ],
+        [
+          47.9428,
+          28.7252
+        ]
+      ],
+      "width": 0.6
+    },
+    {
+      "type": "deleteSegment",
+      "id": "RIGHT_RIP_6",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          49.5,
+          28.268
+        ],
+        [
+          48.4,
+          28.268
+        ]
+      ],
+      "width": 0.6
+    },
+    {
+      "type": "deleteSegment",
+      "id": "RIGHT_RIP_7",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          45.45,
+          30.15
+        ],
+        [
+          46.5,
+          30.3
+        ]
+      ],
+      "width": 0.6
+    },
+    {
+      "type": "deleteSegment",
+      "id": "RIGHT_RIP_8",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          45.05,
+          29.75
+        ],
+        [
+          45.45,
+          30.15
+        ]
+      ],
+      "width": 0.25
+    },
+    {
+      "type": "deleteSegment",
+      "id": "RIGHT_RIP_9",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          29.75
+        ],
+        [
+          45.05,
+          29.75
+        ]
+      ],
+      "width": 0.25
+    },
+    {
+      "type": "deleteSegment",
+      "id": "RIGHT_RIP_10",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          49.5,
+          30.3
+        ],
+        [
+          46.5,
+          30.3
+        ]
+      ],
+      "width": 0.6
+    },
+    {
+      "type": "deleteSegment",
+      "id": "RIGHT_RIP_11",
+      "net": "GPIO_PC14",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          43.6,
+          25.2
+        ],
+        [
+          45.6,
+          25.2
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_PC14_SOUTH_BYPASS",
+      "net": "GPIO_PC14",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          43.6,
+          25.2
+        ],
+        [
+          44.2,
+          24.6
+        ],
+        [
+          44.2,
+          22.7
+        ],
+        [
+          49.2,
+          22.7
+        ],
+        [
+          49.2,
+          25.2
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_PC14_FINAL",
+      "net": "GPIO_PC14",
+      "xy": [
+        49.2,
+        25.2
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required"
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_PC14_RETURN",
+      "net": "GND",
+      "xy": [
+        50.2,
+        24.8
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_VSS47_NECK",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          29.25
+        ],
+        [
+          45.05,
+          29.25
+        ],
+        [
+          45.3,
+          29.5
+        ],
+        [
+          45.4,
+          29.5
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.25
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_VSS47_CAP_GROUND",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          45.4,
+          29.5
+        ],
+        [
+          45.7,
+          29.5
+        ],
+        [
+          46.35,
+          29.4
+        ],
+        [
+          47.0248,
+          28.7252
+        ],
+        [
+          47.3,
+          28.7252
+        ],
+        [
+          48.25,
+          28.7252
+        ],
+        [
+          48.7072,
+          28.268
+        ],
+        [
+          49.5,
+          28.268
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.6
+    },
+    {
+      "type": "via",
+      "id": "HSE_SINGLE_ANCHOR_REWORK",
+      "net": "GND",
+      "xy": [
+        46.35,
+        29.4
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required"
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_C15_COMMON_GND",
+      "net": "GND",
+      "xy": [
+        48.25,
+        28.7252
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_VDD48_NECK",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          29.75
+        ],
+        [
+          44.7,
+          29.75
+        ],
+        [
+          45.3,
+          30.35
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.25
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_VDD48_CAP",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          45.3,
+          30.35
+        ],
+        [
+          47.3,
+          30.3
+        ],
+        [
+          49.5,
+          30.3
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.6
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_SWCLK_VIA",
+      "net": "SWCLK",
+      "xy": [
+        46.2,
+        24.15
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_SWCLK_TOP",
+      "net": "SWCLK",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          24.25
+        ],
+        [
+          45,
+          24.25
+        ],
+        [
+          45.1,
+          24.15
+        ],
+        [
+          46.2,
+          24.15
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_SWCLK_BOTTOM_ANCHOR",
+      "net": "SWCLK",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.2,
+          24.15
+        ],
+        [
+          46.35,
+          24.15
+        ],
+        [
+          46.5,
+          24.15
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "widths": [
+        0.16,
+        0.2
+      ]
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_GPIO_PA15_VIA",
+      "net": "GPIO_PA15",
+      "xy": [
+        45.7,
+        24.65
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_GPIO_PA15_TOP",
+      "net": "GPIO_PA15",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          24.75
+        ],
+        [
+          45,
+          24.75
+        ],
+        [
+          45.1,
+          24.65
+        ],
+        [
+          45.7,
+          24.65
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_GPIO_PA15_BOTTOM_ANCHOR",
+      "net": "GPIO_PA15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          45.7,
+          24.65
+        ],
+        [
+          46.35,
+          24.65
+        ],
+        [
+          46.5,
+          24.65
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "widths": [
+        0.16,
+        0.2
+      ]
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_SWO_VIA",
+      "net": "SWO",
+      "xy": [
+        46.2,
+        25.15
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_SWO_TOP",
+      "net": "SWO",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          25.25
+        ],
+        [
+          45,
+          25.25
+        ],
+        [
+          45.1,
+          25.15
+        ],
+        [
+          46.2,
+          25.15
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_SWO_BOTTOM_ANCHOR",
+      "net": "SWO",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.2,
+          25.15
+        ],
+        [
+          46.35,
+          25.15
+        ],
+        [
+          46.5,
+          25.15
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "widths": [
+        0.16,
+        0.2
+      ]
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_GPIO_PB4_VIA",
+      "net": "GPIO_PB4",
+      "xy": [
+        45.7,
+        25.65
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_GPIO_PB4_TOP",
+      "net": "GPIO_PB4",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          25.75
+        ],
+        [
+          45,
+          25.75
+        ],
+        [
+          45.1,
+          25.65
+        ],
+        [
+          45.7,
+          25.65
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_GPIO_PB4_BOTTOM_ANCHOR",
+      "net": "GPIO_PB4",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          45.7,
+          25.65
+        ],
+        [
+          46.35,
+          25.65
+        ],
+        [
+          46.5,
+          25.65
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "widths": [
+        0.16,
+        0.2
+      ]
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_GPIO_PB5_VIA",
+      "net": "GPIO_PB5",
+      "xy": [
+        46.2,
+        26.15
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_GPIO_PB5_TOP",
+      "net": "GPIO_PB5",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          26.25
+        ],
+        [
+          45,
+          26.25
+        ],
+        [
+          45.1,
+          26.15
+        ],
+        [
+          46.2,
+          26.15
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_GPIO_PB5_BOTTOM_ANCHOR",
+      "net": "GPIO_PB5",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.2,
+          26.15
+        ],
+        [
+          46.35,
+          26.15
+        ],
+        [
+          46.5,
+          26.15
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "widths": [
+        0.16,
+        0.2
+      ]
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_I2C_SCL_VIA",
+      "net": "I2C_SCL",
+      "xy": [
+        45.7,
+        26.65
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_I2C_SCL_TOP",
+      "net": "I2C_SCL",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          26.75
+        ],
+        [
+          45,
+          26.75
+        ],
+        [
+          45.1,
+          26.65
+        ],
+        [
+          45.7,
+          26.65
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_I2C_SCL_BOTTOM_ANCHOR",
+      "net": "I2C_SCL",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          45.7,
+          26.65
+        ],
+        [
+          46.35,
+          26.65
+        ],
+        [
+          46.5,
+          26.65
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "widths": [
+        0.16,
+        0.2
+      ]
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_I2C_SDA_VIA",
+      "net": "I2C_SDA",
+      "xy": [
+        46.2,
+        27.15
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_I2C_SDA_TOP",
+      "net": "I2C_SDA",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          27.25
+        ],
+        [
+          45,
+          27.25
+        ],
+        [
+          45.1,
+          27.15
+        ],
+        [
+          46.2,
+          27.15
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_I2C_SDA_BOTTOM_ANCHOR",
+      "net": "I2C_SDA",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.2,
+          27.15
+        ],
+        [
+          46.35,
+          27.15
+        ],
+        [
+          46.5,
+          27.15
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "widths": [
+        0.16,
+        0.2
+      ]
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_BOOT0_VIA",
+      "net": "BOOT0",
+      "xy": [
+        45.7,
+        27.65
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_BOOT0_TOP",
+      "net": "BOOT0",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          27.75
+        ],
+        [
+          45,
+          27.75
+        ],
+        [
+          45.1,
+          27.65
+        ],
+        [
+          45.7,
+          27.65
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_BOOT0_BOTTOM_ANCHOR",
+      "net": "BOOT0",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          45.7,
+          27.65
+        ],
+        [
+          46.35,
+          27.65
+        ],
+        [
+          46.5,
+          27.65
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "widths": [
+        0.16,
+        0.2
+      ]
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_GPIO_PB8_VIA",
+      "net": "GPIO_PB8",
+      "xy": [
+        46.2,
+        28.15
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_GPIO_PB8_TOP",
+      "net": "GPIO_PB8",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          28.25
+        ],
+        [
+          45,
+          28.25
+        ],
+        [
+          45.1,
+          28.15
+        ],
+        [
+          46.2,
+          28.15
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_GPIO_PB8_BOTTOM_ANCHOR",
+      "net": "GPIO_PB8",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          46.2,
+          28.15
+        ],
+        [
+          46.35,
+          28.15
+        ],
+        [
+          46.5,
+          28.15
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "widths": [
+        0.16,
+        0.2
+      ]
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_GPIO_PB9_VIA",
+      "net": "GPIO_PB9",
+      "xy": [
+        45.7,
+        28.65
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_GPIO_PB9_TOP",
+      "net": "GPIO_PB9",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          28.75
+        ],
+        [
+          45,
+          28.75
+        ],
+        [
+          45.1,
+          28.65
+        ],
+        [
+          45.7,
+          28.65
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_GPIO_PB9_BOTTOM_ANCHOR",
+      "net": "GPIO_PB9",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          45.7,
+          28.65
+        ],
+        [
+          46.35,
+          28.65
+        ],
+        [
+          46.5,
+          28.65
+        ]
+      ],
+      "purpose": "Joint manual fanout, no arbitrary signal over quiet shadow",
+      "widths": [
+        0.16,
+        0.2
+      ]
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_GROUND_STITCH_0",
+      "net": "GND",
+      "xy": [
+        47.1,
+        25.15
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_GROUND_STITCH_1",
+      "net": "GND",
+      "xy": [
+        47.1,
+        26.65
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_GROUND_STITCH_2",
+      "net": "GND",
+      "xy": [
+        47.1,
+        28.0
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "purpose": "Joint fanout/quiet-anchor rework; native import/plane and negative challenge required",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26
+    },
+    {
+      "type": "via",
+      "id": "RIGHT_R28_GND_RETURN",
+      "net": "GND",
+      "xy": [
+        51.3,
+        29.2
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Dedicated real offpad ground connection for moved BOOT0 pulldown"
+    },
+    {
+      "type": "route",
+      "id": "RIGHT_R28_GND_TOP",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          51.3236,
+          28
+        ],
+        [
+          51.3,
+          28.0236
+        ],
+        [
+          51.3,
+          29.2
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "MovedR28.2 direct .6 to nearby common GND via; do not rely on floating TOP dynamic patch"
+    }
+  ],
+  "placementChanges": [
+    {
+      "ref": "C15",
+      "xy": [
+        47.3,
+        30.4016
+      ],
+      "rotation": 270,
+      "purpose": "Free PB8/PB9 source copper, maintain local direct VDD/VSS loop"
+    },
+    {
+      "ref": "R28",
+      "xy": [
+        53,
+        28
+      ],
+      "rotation": 180,
+      "purpose": "BOOT0 pulldown removes old ground pad/thermal obstruction from PB5 fanout"
+    }
+  ],
+  "sourceCheckpoint": "postcritical_2L/4L_b010; rebase final SPIb012 geometry",
+  "rules": [
+    {
+      "id": "HI_RIGHT10_ESCAPE",
+      "layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "polygon": [
+        [
+          43.5,
+          23.7
+        ],
+        [
+          47.5,
+          23.7
+        ],
+        [
+          47.5,
+          29.0
+        ],
+        [
+          43.5,
+          29.0
+        ]
+      ],
+      "signalNets": [
+        "SWCLK",
+        "GPIO_PA15",
+        "SWO",
+        "GPIO_PB4",
+        "GPIO_PB5",
+        "I2C_SCL",
+        "I2C_SDA",
+        "BOOT0",
+        "GPIO_PB8",
+        "GPIO_PB9"
+      ],
+      "physicalCopyFrom": "Each actual own current CSet, preserving every other field",
+      "physicalOnlyDelta": {
+        "neckwidth_min": 0.16,
+        "necklength_max": 2.0,
+        "viasAdd": [
+          "HI_VIA026_C052_TENT"
+        ]
+      },
+      "spacingCopyFrom": "Each own current source and explicit class-pair CSet",
+      "spacingOnlyDelta": {
+        "smdpin_line": 0.16,
+        "line_line": 0.16,
+        "smdpin_via": 0.16,
+        "via_line": 0.16,
+        "via_via": 0.16
+      },
+      "groundViaException": {
+        "net": "GND",
+        "addApprovedVia": "HI_VIA026_C052_TENT",
+        "onlySpacingDelta": {
+          "via_line": 0.2,
+          "via_via": 0.2
+        },
+        "preserve": "All GND width/neck/length/thermal/global otherfields unchanged"
+      },
+      "purpose": "Only dense source .5pitch fanout; external anchors resume .2 normal and original outside-region spacing; .26drill/.52Cu board-private, no public library modification"
+    }
+  ],
+  "requiredProofs": [
+    {
+      "net": "SWCLK",
+      "source": "U1.37",
+      "targetXY": [
+        46.5,
+        24.15
+      ]
+    },
+    {
+      "net": "GPIO_PA15",
+      "source": "U1.38",
+      "targetXY": [
+        46.5,
+        24.65
+      ]
+    },
+    {
+      "net": "SWO",
+      "source": "U1.39",
+      "targetXY": [
+        46.5,
+        25.15
+      ]
+    },
+    {
+      "net": "GPIO_PB4",
+      "source": "U1.40",
+      "targetXY": [
+        46.5,
+        25.65
+      ]
+    },
+    {
+      "net": "GPIO_PB5",
+      "source": "U1.41",
+      "targetXY": [
+        46.5,
+        26.15
+      ]
+    },
+    {
+      "net": "I2C_SCL",
+      "source": "U1.42",
+      "targetXY": [
+        46.5,
+        26.65
+      ]
+    },
+    {
+      "net": "I2C_SDA",
+      "source": "U1.43",
+      "targetXY": [
+        46.5,
+        27.15
+      ]
+    },
+    {
+      "net": "BOOT0",
+      "source": "U1.44",
+      "targetXY": [
+        46.5,
+        27.65
+      ]
+    },
+    {
+      "net": "GPIO_PB8",
+      "source": "U1.45",
+      "targetXY": [
+        46.5,
+        28.15
+      ]
+    },
+    {
+      "net": "GPIO_PB9",
+      "source": "U1.46",
+      "targetXY": [
+        46.5,
+        28.65
+      ]
+    }
+  ],
+  "oscillatorReferenceRework": {
+    "source": {
+      "net": "GND",
+      "islandPolygon": [
+        [
+          45.1,
+          28.5
+        ],
+        [
+          45.8,
+          28.5
+        ],
+        [
+          45.8,
+          31.25
+        ],
+        [
+          45.1,
+          31.95
+        ],
+        [
+          45.3,
+          31.95
+        ],
+        [
+          45.3,
+          33.2
+        ],
+        [
+          47.5,
+          33.2
+        ],
+        [
+          47.5,
+          39.4
+        ],
+        [
+          37.2,
+          39.4
+        ],
+        [
+          37.2,
+          36.8
+        ],
+        [
+          40.0,
+          36.8
+        ],
+        [
+          40.0,
+          32.8
+        ],
+        [
+          40.6,
+          32.8
+        ],
+        [
+          40.6,
+          31.95
+        ],
+        [
+          44.4,
+          31.95
+        ],
+        [
+          45.1,
+          31.25
+        ]
+      ],
+      "applicationGroundVoidPolygon": [
+        [
+          44.75,
+          28.15
+        ],
+        [
+          46.15,
+          28.15
+        ],
+        [
+          46.15,
+          31.4
+        ],
+        [
+          45.65,
+          31.9
+        ],
+        [
+          45.65,
+          32.85
+        ],
+        [
+          47.85,
+          32.85
+        ],
+        [
+          47.85,
+          39.75
+        ],
+        [
+          36.85,
+          39.75
+        ],
+        [
+          36.85,
+          36.45
+        ],
+        [
+          39.65,
+          36.45
+        ],
+        [
+          39.65,
+          32.45
+        ],
+        [
+          40.25,
+          32.45
+        ],
+        [
+          40.25,
+          31.6
+        ],
+        [
+          44.25,
+          31.6
+        ],
+        [
+          44.75,
+          31.1
+        ]
+      ],
+      "localLayer": {
+        "2L": "BOTTOM",
+        "4L": "L2"
+      },
+      "allOtherCopperLayers": "No application-GND metal under local HSE vias or inside moat; explicit void on any global L3/BOTTOM/TOP pour. Allow only quiet TOP routes/guard and separate case traces without connecting intersection.",
+      "singleBridgeOperation": "HSE_SINGLE_ANCHOR",
+      "allThroughViaPadChecks": [
+        "HSE_LOCAL_C22",
+        "HSE_LOCAL_C23",
+        "HSE_SINGLE_ANCHOR"
+      ],
+      "negativeChallenge": "Transaction delete only HSE_SINGLE_ANCHOR via45.45,28.85: C22.2/C23.2/localshape/quietguard stay mutually connected but must not reach VSS47/globalGND/Y1case; existing C15/VSS47/global and Y1.2/.4 remain connected. Restore via/transaction, update+DRC and save/reopen. No TOP segment is newly designated mandatory anchor.",
+      "guardPort": "North x42.2..44.2 intentionally open for case return; source ports south for oscillator nets; do not bridge with same-net fills",
+      "neckProjectionException": "Main HSE shadow excludes C17 app decoupling via/right-bottom notch. The narrow GND connection neck near source VSS47 can have a short nearby/projecting VBAT feed in dense source escape; it is not an unrelated digital route corridor or a claim of zero field coupling."
+    },
+    "islandPolygon": [
+      [
+        46,
+        29.3
+      ],
+      [
+        46.7,
+        29.3
+      ],
+      [
+        46.7,
+        31.25
+      ],
+      [
+        46.2,
+        31.75
+      ],
+      [
+        46.2,
+        33.2
+      ],
+      [
+        47.5,
+        33.2
+      ],
+      [
+        47.5,
+        39.4
+      ],
+      [
+        37.2,
+        39.4
+      ],
+      [
+        37.2,
+        36.8
+      ],
+      [
+        40,
+        36.8
+      ],
+      [
+        40,
+        32.8
+      ],
+      [
+        40.6,
+        32.8
+      ],
+      [
+        40.6,
+        31.95
+      ],
+      [
+        45.3,
+        31.95
+      ],
+      [
+        46,
+        31.25
+      ]
+    ],
+    "applicationGroundVoidPolygon": [
+      [
+        45.65,
+        28.95
+      ],
+      [
+        45.65,
+        31.10502525316942
+      ],
+      [
+        45.15502525316942,
+        31.599999999999998
+      ],
+      [
+        40.25,
+        31.599999999999998
+      ],
+      [
+        40.25,
+        32.449999999999996
+      ],
+      [
+        39.65,
+        32.449999999999996
+      ],
+      [
+        39.65,
+        36.449999999999996
+      ],
+      [
+        36.85,
+        36.449999999999996
+      ],
+      [
+        36.85,
+        39.75
+      ],
+      [
+        47.85,
+        39.75
+      ],
+      [
+        47.85,
+        32.85
+      ],
+      [
+        46.550000000000004,
+        32.85
+      ],
+      [
+        46.550000000000004,
+        31.89497474683058
+      ],
+      [
+        47.050000000000004,
+        31.39497474683058
+      ],
+      [
+        47.050000000000004,
+        28.95
+      ]
+    ],
+    "localLayer": {
+      "2L": "BOTTOM",
+      "4L": "L2"
+    },
+    "singleBridgeOperation": "HSE_SINGLE_ANCHOR_REWORK",
+    "negativeChallenge": "Only remove HSE_SINGLE_ANCHOR_REWORK via46.35,29.4; C22/C23/quiet guard and island stay together but lose all VSS47/common/case connectivity. Restore then DRC0/fullfill/readback. Keep TOP HSE guard open ports; no global TOP pour across moat.",
+    "allAffectedObjects": "Replace original quiet island; replace permanent application voids on every application copper plane; replace HSE shadow keepout/constraint region and all associated parent/child geometries consistently. Root f29 must inventory old objects and prove oldstem copper/keepout removed, not overlay both.",
+    "guard": "Main HSE guard/case traces remain original, only neck/shadow moved outside right10 source. North open port must remain open."
+  },
+  "anchors": [
+    {
+      "pin": 37,
+      "net": "SWCLK",
+      "via": [
+        46.2,
+        24.15
+      ],
+      "anchorLayer": "BOTTOM",
+      "anchor": [
+        46.5,
+        24.15
+      ],
+      "topNeck_mm": 1.9914213562373106,
+      "bottomNeck_mm": 0.14999999999999858
+    },
+    {
+      "pin": 38,
+      "net": "GPIO_PA15",
+      "via": [
+        45.7,
+        24.65
+      ],
+      "anchorLayer": "BOTTOM",
+      "anchor": [
+        46.5,
+        24.65
+      ],
+      "topNeck_mm": 1.4914213562373106,
+      "bottomNeck_mm": 0.6499999999999986
+    },
+    {
+      "pin": 39,
+      "net": "SWO",
+      "via": [
+        46.2,
+        25.15
+      ],
+      "anchorLayer": "BOTTOM",
+      "anchor": [
+        46.5,
+        25.15
+      ],
+      "topNeck_mm": 1.9914213562373106,
+      "bottomNeck_mm": 0.14999999999999858
+    },
+    {
+      "pin": 40,
+      "net": "GPIO_PB4",
+      "via": [
+        45.7,
+        25.65
+      ],
+      "anchorLayer": "BOTTOM",
+      "anchor": [
+        46.5,
+        25.65
+      ],
+      "topNeck_mm": 1.4914213562373106,
+      "bottomNeck_mm": 0.6499999999999986
+    },
+    {
+      "pin": 41,
+      "net": "GPIO_PB5",
+      "via": [
+        46.2,
+        26.15
+      ],
+      "anchorLayer": "BOTTOM",
+      "anchor": [
+        46.5,
+        26.15
+      ],
+      "topNeck_mm": 1.9914213562373106,
+      "bottomNeck_mm": 0.14999999999999858
+    },
+    {
+      "pin": 42,
+      "net": "I2C_SCL",
+      "via": [
+        45.7,
+        26.65
+      ],
+      "anchorLayer": "BOTTOM",
+      "anchor": [
+        46.5,
+        26.65
+      ],
+      "topNeck_mm": 1.4914213562373106,
+      "bottomNeck_mm": 0.6499999999999986
+    },
+    {
+      "pin": 43,
+      "net": "I2C_SDA",
+      "via": [
+        46.2,
+        27.15
+      ],
+      "anchorLayer": "BOTTOM",
+      "anchor": [
+        46.5,
+        27.15
+      ],
+      "topNeck_mm": 1.9914213562373106,
+      "bottomNeck_mm": 0.14999999999999858
+    },
+    {
+      "pin": 44,
+      "net": "BOOT0",
+      "via": [
+        45.7,
+        27.65
+      ],
+      "anchorLayer": "BOTTOM",
+      "anchor": [
+        46.5,
+        27.65
+      ],
+      "topNeck_mm": 1.4914213562373106,
+      "bottomNeck_mm": 0.6499999999999986
+    },
+    {
+      "pin": 45,
+      "net": "GPIO_PB8",
+      "via": [
+        46.2,
+        28.15
+      ],
+      "anchorLayer": "BOTTOM",
+      "anchor": [
+        46.5,
+        28.15
+      ],
+      "topNeck_mm": 1.9914213562373106,
+      "bottomNeck_mm": 0.14999999999999858
+    },
+    {
+      "pin": 46,
+      "net": "GPIO_PB9",
+      "via": [
+        45.7,
+        28.65
+      ],
+      "anchorLayer": "BOTTOM",
+      "anchor": [
+        46.5,
+        28.65
+      ],
+      "topNeck_mm": 1.4914213562373106,
+      "bottomNeck_mm": 0.6499999999999986
+    }
+  ],
+  "physicalLengths_mm": {
+    "VSS47newNeck": 1.2535533905932739,
+    "VDD48newNeck": 1.298528137423857,
+    "note": "Centerline lengths including pad center to flare are conservative upper bounds; native effective neck must be measured and satisfy original1.4 without raising."
+  },
+  "manufacturingBasis": {
+    "JLC": "Official pcb-capabilities drilling and via minimums rechecked2026-10-22; local source lesson28_stackup_20261019/source/jlc_capabilities_20261019.txt lines186-193",
+    "OSH": "Official2L min drill.254mm/annulus.127mm; .26/.52 gives.13mm nominal annulus. No manufacturing approval implied.",
+    "open": "Mask tenting/registration, actual laminate aspect ratio/tool and MPN dimensions remain DFM conditions"
+  },
+  "reworkReason": "PC14 oldvia blocksSWO; quiet oldstem blocksPB9; oldR28 ground pad blocksPB5; frozen geometry must be jointly changed, not global rules relaxed.",
+  "oscillatorReference": {
+    "net": "GND",
+    "islandPolygon": [
+      [
+        46,
+        29.3
+      ],
+      [
+        46.7,
+        29.3
+      ],
+      [
+        46.7,
+        31.25
+      ],
+      [
+        46.2,
+        31.75
+      ],
+      [
+        46.2,
+        33.2
+      ],
+      [
+        47.5,
+        33.2
+      ],
+      [
+        47.5,
+        39.4
+      ],
+      [
+        37.2,
+        39.4
+      ],
+      [
+        37.2,
+        36.8
+      ],
+      [
+        40,
+        36.8
+      ],
+      [
+        40,
+        32.8
+      ],
+      [
+        40.6,
+        32.8
+      ],
+      [
+        40.6,
+        31.95
+      ],
+      [
+        45.3,
+        31.95
+      ],
+      [
+        46,
+        31.25
+      ]
+    ],
+    "applicationGroundVoidPolygon": [
+      [
+        45.65,
+        28.95
+      ],
+      [
+        45.65,
+        31.10502525316942
+      ],
+      [
+        45.15502525316942,
+        31.599999999999998
+      ],
+      [
+        40.25,
+        31.599999999999998
+      ],
+      [
+        40.25,
+        32.449999999999996
+      ],
+      [
+        39.65,
+        32.449999999999996
+      ],
+      [
+        39.65,
+        36.449999999999996
+      ],
+      [
+        36.85,
+        36.449999999999996
+      ],
+      [
+        36.85,
+        39.75
+      ],
+      [
+        47.85,
+        39.75
+      ],
+      [
+        47.85,
+        32.85
+      ],
+      [
+        46.550000000000004,
+        32.85
+      ],
+      [
+        46.550000000000004,
+        31.89497474683058
+      ],
+      [
+        47.050000000000004,
+        31.39497474683058
+      ],
+      [
+        47.050000000000004,
+        28.95
+      ]
+    ],
+    "localLayer": {
+      "2L": "BOTTOM",
+      "4L": "L2"
+    },
+    "allOtherCopperLayers": "No application-GND metal under local HSE vias or inside moat; explicit void on any global L3/BOTTOM/TOP pour. Allow only quiet TOP routes/guard and separate case traces without connecting intersection.",
+    "singleBridgeOperation": "HSE_SINGLE_ANCHOR_REWORK",
+    "allThroughViaPadChecks": [
+      "HSE_LOCAL_C22",
+      "HSE_LOCAL_C23",
+      "HSE_SINGLE_ANCHOR_REWORK"
+    ],
+    "negativeChallenge": "Only remove HSE_SINGLE_ANCHOR_REWORK via46.35,29.4; C22/C23/quiet guard and island stay together but lose all VSS47/common/case connectivity. Restore then DRC0/fullfill/readback. Keep TOP HSE guard open ports; no global TOP pour across moat.",
+    "guardPort": "North x42.2..44.2 intentionally open for case return; source ports south for oscillator nets; do not bridge with same-net fills",
+    "neckProjectionException": "Main HSE shadow excludes C17 app decoupling via/right-bottom notch. The narrow GND connection neck near source VSS47 can have a short nearby/projecting VBAT feed in dense source escape; it is not an unrelated digital route corridor or a claim of zero field coupling."
+  },
+  "reservedAreas": [
+    {
+      "id": "HSE_QUIET_SHADOW",
+      "polygon": [
+        [
+          45.65,
+          28.95
+        ],
+        [
+          45.65,
+          31.10502525316942
+        ],
+        [
+          45.15502525316942,
+          31.599999999999998
+        ],
+        [
+          40.25,
+          31.599999999999998
+        ],
+        [
+          40.25,
+          32.449999999999996
+        ],
+        [
+          39.65,
+          32.449999999999996
+        ],
+        [
+          39.65,
+          36.449999999999996
+        ],
+        [
+          36.85,
+          36.449999999999996
+        ],
+        [
+          36.85,
+          39.75
+        ],
+        [
+          47.85,
+          39.75
+        ],
+        [
+          47.85,
+          32.85
+        ],
+        [
+          46.550000000000004,
+          32.85
+        ],
+        [
+          46.550000000000004,
+          31.89497474683058
+        ],
+        [
+          47.050000000000004,
+          31.39497474683058
+        ],
+        [
+          47.050000000000004,
+          28.95
+        ]
+      ],
+      "allowedNets": [
+        "OSC_IN",
+        "OSC_OUT",
+        "XTAL_OUT",
+        "GND"
+      ],
+      "forbidden": "PC13/14/15, SPI/I2C/USB/clock/test branches and unrelated power/returns on all layers; case GND only defined separate TOP path; quiet/app GND not interchangeable",
+      "sourceEscapeException": "Only short VBAT/VDD source-area feed near narrow grounding neck as separately checked; no PC13/14/15 or arbitrary fast signal crossing."
+    },
+    {
+      "id": "ADC_TOP_CORRIDOR",
+      "polygon": [
+        [
+          26,
+          31.8
+        ],
+        [
+          39,
+          31.8
+        ],
+        [
+          39,
+          39.8
+        ],
+        [
+          26,
+          39.8
+        ]
+      ],
+      "allowedNets": [
+        "ADC_IN",
+        "ADC0",
+        "VDDA",
+        "GND",
+        "NRST"
+      ],
+      "purpose": "Not blanket route keepout, prioritize measured paths and return over arbitrary ordinary digital cut"
+    }
+  ],
+  "sourceExpectedSHA256": {
+    "2L": "24DDF112FFCC9B7A8F44401B406BBBCEC7523B3A5F42E73A816A7D3349BCF602",
+    "4L": "DB0FB0243BA036E986976862DD00389A41F79FBF8E6592CD4243590EAB7338BD"
+  },
+  "partialEndpoints": {
+    "SWCLK": {
+      "layer": "BOTTOM",
+      "xy": [
+        46.5,
+        24.15
+      ],
+      "connectedTo": "U1.37"
+    },
+    "GPIO_PA15": {
+      "layer": "BOTTOM",
+      "xy": [
+        46.5,
+        24.65
+      ],
+      "connectedTo": "U1.38"
+    },
+    "SWO": {
+      "layer": "BOTTOM",
+      "xy": [
+        46.5,
+        25.15
+      ],
+      "connectedTo": "U1.39"
+    },
+    "GPIO_PB4": {
+      "layer": "BOTTOM",
+      "xy": [
+        46.5,
+        25.65
+      ],
+      "connectedTo": "U1.40"
+    },
+    "GPIO_PB5": {
+      "layer": "BOTTOM",
+      "xy": [
+        46.5,
+        26.15
+      ],
+      "connectedTo": "U1.41"
+    },
+    "I2C_SCL": {
+      "layer": "BOTTOM",
+      "xy": [
+        46.5,
+        26.65
+      ],
+      "connectedTo": "U1.42"
+    },
+    "I2C_SDA": {
+      "layer": "BOTTOM",
+      "xy": [
+        46.5,
+        27.15
+      ],
+      "connectedTo": "U1.43"
+    },
+    "BOOT0": {
+      "layer": "BOTTOM",
+      "xy": [
+        46.5,
+        27.65
+      ],
+      "connectedTo": "U1.44"
+    },
+    "GPIO_PB8": {
+      "layer": "BOTTOM",
+      "xy": [
+        46.5,
+        28.15
+      ],
+      "connectedTo": "U1.45"
+    },
+    "GPIO_PB9": {
+      "layer": "BOTTOM",
+      "xy": [
+        46.5,
+        28.65
+      ],
+      "connectedTo": "U1.46"
+    },
+    "GPIO_PC14": {
+      "layer": "TOP",
+      "xy": [
+        49.2,
+        25.2
+      ],
+      "connectedTo": "U1.3"
+    }
+  },
+  "nativeAcceptance": [
+    "Private via definition/import verified separately; approve lists restricted to right region signals andGND only; no inner nonGND route changes",
+    "Retain original G31 source P/S fields and no VSS/VDD maxneck increase; exact native measured neck <=1.4",
+    "New right10 field delta necklength<=2.0, only .16 source signal spacing, GNDvia_line .20 locally. Read back actual fields with region bindings and class/domain flags",
+    "Replace old island and every application permanentvoid on allGND pours, old HSEshadow keepouts/constraint geometries; preserve main HSE north guard opening/case separation. No oldstem duplicate",
+    "Controlled deletion newanchor46.35,29.4 isolates C22/C23/localisland/guard from VSS47/common/case while local pair stays connected; restore fullDRC0",
+    "Prove10U1pin to exactBOTTOManchor andPC14existingU1pin to newTOPanchor, commonGNDvia connectivity, VDD48/C15/C16local loop",
+    "2L and4L fullfill/DRC0/nooutofdate, 69net80component272logicalpin original connections preserved, fresh reopen/hash. Full actual final return/reference later after long routes"
+  ],
+  "revision": "v2 only extendsBOTTOManchor.1mm and relocates3GNDstitches to remove Astar grid false blockage, adds movedR28 actual GND. No source via/quiet/pose/neck/rule widening changes. Actual geometric/native prerequisites remain."
+}

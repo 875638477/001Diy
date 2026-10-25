@@ -1,0 +1,15 @@
+\t (00:00:01) allegro 17.2 S045 Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Thu Oct 22 04:53:24 2026
+\t (00:00:01)         Host=ECMCFS2 User=Administrator Pid=3608 CPUs=12
+\t (00:00:01) CmdLine= C:\Program0\Cadence\SPB172\tools\bin\allegro.exe -product Allegro_performance -safe -nographic -readonly -s D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\scripts\discover_shape_params_b015_01.scr -p D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\logs\discover_shape_params_b015_01 D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\native_candidates\HI_2L_source_b015_DRC_PENDING.brd
+\t (00:00:01) 
+   (00:00:01) Loading axlcore.cxt 
+\t (00:00:04) Opening existing design...
+\d (00:00:04) Design opened: D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native_candidates/HI_2L_source_b015_DRC_PENDING.brd
+\i (00:00:04) trapsize 181034
+\i (00:00:04) replay 'D:`\001DIY`\005lib`\01AIEDA`\learning`\examples`\lessonHI_38_50_20261021`\scripts`\discover_shape_params_b015_01.scr' 
+\i (00:00:04) set NOCONFIRM 
+\i (00:00:04) skill 'let((f names p) f=outfile("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/discover_shape_params_b015_01/shape_parameters.txt") names=axlGetParam(nil) fprintf(f "SUPPORTED_PARAMETER_NAMES=%L`\nDESIGN_PROPERTIES=%L`\nDYNAMIC_FILL_MODE=%L`\n" names axlDBGetProperties(axlDBGetDesign()) axlDBControl(`'dynamicFillMode)) foreach(n names when(rexMatchp("[Ss][Hh][Aa][Pp][Ee]`\`\|[Tt][Hh][Ee][Rr][Mm][Aa][Ll]`\`\|[Vv][Oo][Ii][Dd]" n) p=axlGetParam(n) fprintf(f "SHAPE_PARAMETER name=%L attributes=%L`\n" n if(p then p->?? else nil)))) close(f))' 
+   (00:00:04) t
+\i (00:00:04) quit 
+\t (00:00:05)     Journal end - Thu Oct 22 04:53:27 2026

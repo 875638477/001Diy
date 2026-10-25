@@ -1,0 +1,48 @@
+; Load the published PSM through only the explicit public library paths.
+procedure(qmiPlace(outDir)
+  let((report pinFile cases c result s pin saved objs obj textFile)
+    unless(equal(axlCurrentDesign() "qmi8610_validation") error("Unexpected validation board\n"))
+    report = outfile(strcat(outDir "/placement.txt"))
+    pinFile = outfile(strcat(outDir "/placement_pins.tsv"))
+    unless(report && pinFile error("Cannot open placement output\n"))
+    fprintf(report "QMI8610_PSM_LOAD START\ndesign=%L type=%L\n" axlCurrentDesign() axlDesignType(t))
+    axlDBChangeDesignUnits("millimeters" 3)
+    unless(equal(axlDBGetDesignUnits() list("millimeters" 3)) error("Unexpected board units\n"))
+    unless(axlDBChangeDesignExtents(list(-30.0:-15.0 30.0:15.0)) error("Cannot set board extents\n"))
+    axlSetVariable("padpath" list("D:/001DIY/005lib/01Pad_lib" "D:/001DIY/005lib/01Psm_lib"))
+    axlSetVariable("psmpath" list("D:/001DIY/005lib/01Psm_lib"))
+    fprintf(report "padpath=%L psmpath=%L\n" axlGetVariableList("padpath") axlGetVariableList("psmpath"))
+    fprintf(pinFile "case\tnumber\tx\ty\trelx\trely\trotation\tmirrored\ttop\tbottom\n")
+    cases = list(list("TOP_0" -10.0:0.0 nil 0.0) list("TOP_90" 0.0:0.0 nil 90.0) list("BOTTOM_0" 10.0:0.0 t 0.0))
+    foreach(c cases
+      result = axlDBCreateSymbol(list("qmi8610_lga16_3d3_p0d5" "PACKAGE") cadr(c) caddr(c) cadddr(c))
+      unless(result error("Cannot load compiled public PSM\n"))
+      s = car(result)
+      fprintf(report "case=%L symbol=%L xy=%L mirror=%L rotation=%L pins=%d createDRC=%L\n"
+        car(c) s->name s->xy s->isMirrored s->rotation length(s->pins) cadr(result))
+      unless(length(s->pins)==16 error("Expected 16 compiled pins\n"))
+      foreach(pin s->pins
+        fprintf(pinFile "%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\n"
+          car(c) pin->number car(pin->xy) cadr(pin->xy) car(pin->relxy) cadr(pin->relxy)
+          pin->rotation pin->isMirrored axlPadOnLayer(pin "TOP") axlPadOnLayer(pin "BOTTOM")))
+    )
+    saved = axlSaveDesign(?design strcat(outDir "/qmi8610_validation.brd") ?noMru t ?noConfirm t)
+    unless(saved error("Cannot save isolated validation board\n"))
+    fprintf(report "saved=%L\nQMI8610_PSM_LOAD COMPLETE\n" saved)
+    close(report)
+    close(pinFile)
+    t
+  )
+)
+procedure(qmiTextBoxes(outDir)
+  let((f objs obj)
+    f=outfile(strcat(outDir "/text_boxes.tsv"))
+    fprintf(f "layer\ttext\tbbox\n")
+    objs=axlExtractMap("C:/Program0/Cadence/SPB172/share/pcb/text/views/fgeo_bv.txt" nil)
+    foreach(obj objs
+      when(equal(obj->objType "text") && member(obj->layer list("REF DES/SILKSCREEN_TOP" "REF DES/ASSEMBLY_TOP" "COMPONENT VALUE/ASSEMBLY_TOP"))
+        fprintf(f "%L\t%L\t%L\n" obj->layer obj->text obj->bBox)))
+    close(f)
+    t
+  )
+)

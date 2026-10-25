@@ -1,0 +1,35 @@
+{
+  "status": "CORRECTION_TO_EARLIER_TAIL_ONLY_AND_STOP_RECORD_SUMMARY",
+  "originalRecord": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\all69_scoped_TOP_trial_4L_b018_01\\owned_termination_evidence.json",
+  "originalRecordSHA256": "53588A5D1CB38A0AA0FBAE1383DDF0F2E5B7C2AF9DD6705D4C9789DF265E9F43",
+  "reason": "Return count was wrongly labeled zero count, and prior progress messages examined only tail CAN zero results. Full parser counts all per-net results. Raw original record and native log preserved.",
+  "actualCompletedReturnedNets": 65,
+  "actualZeroNets": 61,
+  "actualNonzeroNets": [
+    {
+      "net": "BOOT0",
+      "result": 2.0
+    },
+    {
+      "net": "GPIO_PA15",
+      "result": 2.0
+    },
+    {
+      "net": "GPIO_PB4",
+      "result": 2.0
+    },
+    {
+      "net": "I2C_SCL",
+      "result": 2.0
+    }
+  ],
+  "actualUniqueDRCMarkers": 8,
+  "pending": [
+    "USB_DP started solver nonreturn and owned stop",
+    "USB_DM notrun",
+    "PA11_SHARED notrun",
+    "PA12_SHARED notrun"
+  ],
+  "unchangedFacts": "Owned parent/child identity, CPU/input/OUT0 and board protected SHA/termination evidence remain valid. No whole-board pass.",
+  "preventRecurrence": "Require parsed complete per-net results and distinguish returned/zero/nonzero/incomplete before any summary; never infer allpass from logtail or process exit."
+}

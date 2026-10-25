@@ -1,0 +1,49 @@
+{
+  "variant": "4L",
+  "operations": [
+    {
+      "type": "route",
+      "id": "VBUS_PRESENT_INWARD_SOURCE",
+      "net": "VBUS_PRESENT_N",
+      "layer": "TOP",
+      "points": [
+        [
+          35.75,
+          27.25
+        ],
+        [
+          36.15,
+          27.25
+        ],
+        [
+          36.5,
+          27.6
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Inward access avoids source PB1 via wall; verify actual STAR/ADC/SPI and direct common GND return, not blanket outward-fanout rule."
+    },
+    {
+      "type": "via",
+      "id": "VBUS_PRESENT_INWARD_V",
+      "net": "VBUS_PRESENT_N",
+      "xy": [
+        36.5,
+        27.6
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "via",
+      "id": "VBUS_PRESENT_SOURCE_RETURN",
+      "net": "GND",
+      "xy": [
+        37.4,
+        27.4
+      ],
+      "padstack": "L28_VIA030_C060"
+    }
+  ],
+  "proofs": [],
+  "scope": "Candidate inward source pin18, real geometry/native graph/DRC pending; source commonGND near .922mm."
+}

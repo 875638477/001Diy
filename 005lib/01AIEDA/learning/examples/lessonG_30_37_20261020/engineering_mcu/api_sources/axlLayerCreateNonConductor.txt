@@ -1,0 +1,24 @@
+
+  NAME
+     axlLayerCreateNonConductor - create a new subclass for non-etch subclasses
+  FUNCTION
+     axlLayerCreateNonConductor(
+         t_layerName
+     )
+     ==> t/nil
+  SYNOPSIS
+     Creates a new subclass for non-etch subclasses.
+ 
+     Note if subclass exists it returns t.
+  NEEDS
+     t_layerName            - <class>/<subclass>
+ 
+  RETURNS
+     t/nil   - Returns t if subclass create, nil if name is illegal
+ 
+  SEE ALSO
+     axlLayerCreateCrossSection
+     axlLayerGet
+  EXAMPLE
+     axlLayerCreateNonConductor("BOARD GEOMETRY/FOO")
+

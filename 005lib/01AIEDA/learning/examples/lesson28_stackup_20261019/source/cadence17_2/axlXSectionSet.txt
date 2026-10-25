@@ -1,0 +1,57 @@
+
+  NAME
+         axlXSectionSet - modify a cross section entry
+  SYNOPSIS
+         axlXSectionSet(
+                 g_option
+                 [g_xsectionDefStruct]
+         ) -> t/nil
+ 
+         axlXSectionSet(
+                 'locked
+                 nil/l_lockType
+         ) -> t/nil
+  FUNCTION
+         Modifies an existing cross section entry. Use axlXSectioModify
+         to create a xsection defstruct with the attributes you wish to modify.
+ 
+         See axlXSectionGet for a description of the other available attributes.
+         If changing material, it also updates the material characturistics
+         to values of the new material.
+ 
+         Allegro PCB does not allow name layers above top or below bottom.
+  PROGRAMM TIPS
+         - See tips in axlXSectionCreate
+         - In Allegro PCB cannot rename TOP or BOTTOM
+         - Cannot unname a layer with data on the ETCH layers
+         - DRC is marked out of date
+  NEEDS
+         nil - 1st argument must always be nil
+         g_option
+                 o_xsectionDBID - delete layer by XSection dbid
+                 t_etchSubclass - modify by sublass name
+                 x_position - modify by xsection position. This is the position
+                         attribute in the xsection dbid.
+                 'locked         - update user inteface layer locking
+         g_xsectionDefStruct
+                 A Skill defsruct with all possible attributes for xsection entry
+                     make_axlXSection - creates a new entry
+                     copy_axlXSection - copies an existing entry
+                     axlXSectionCopy - copies contents of an existing xsection
+                                 dbid to a new deftruct.
+         l_lockType - change user interface locking
+                 - may be nil to unlock 
+                 - 'layer - prevent layer addition or deletion
+                 - 'value - prevent changing values
+                 - list of both
+  RETURNS
+         t - if successful
+         nil - failed.
+  SEE ALSO
+         axlXSectionCreate, axlXSectionCopy
+  EXAMPLES
+         - see <cdsroot>/share/pcb/examples/skill/dbcreate/xsection.il
+         - lock layer values
+                 axlXSectionSet('locked 'layer)
+ 
+

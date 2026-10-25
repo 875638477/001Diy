@@ -1,0 +1,44 @@
+
+  NAME
+         axlShapeChangeDynamicType - swap shape from static to dynamic
+  FUNCTION
+         axlShapeChangeDynamicType(
+                 o_shapeId
+                 g_dynamic
+                 g_msgs
+         ) -> o_dynShapeId/l_staticShapeId/nil
+  SYNOPSIS
+         This swaps a connectivity shape from static to dynamic or vice
+         versa. This offers the same functionality as the allegro command
+         "shape change type".
+ 
+         Notes:
+         1) Voids in static are deleted when shape is converted to dynamic.
+         2) Converting a dynamic shape to static can result in the loss of
+            the original boundary since we convert the generated shapes
+            (on ETCH) to static shapes not the boundary shape.
+         3) Shapes convert to static will have their voids maintained.
+         4) Filled rectangles are supported on ETCH, converted to a shape. 
+  TIP
+         If changing type of multiple shapes or doing multiple operations
+         on a single shape (e.g. convert then raise priority) consider wrapping 
+         the code in axlDBCloak to batch updates.
+  NEEDS
+         o_shapeId - dynamic shape id or static id.
+         g_dynamic - t make shape dynamic, nil make static
+         g_msgs - t issue error messages if failed to convert; else be silent
+  RETURNS
+         nil: failure
+         o_dynShapeId: the dbid of the dynamic shape that was converted from static
+         l_staticShapeId: list of static shapes that was converted from a dynamic shape.
+ 
+  SEE ALSO
+         axlShapeChangeDynamicType
+  EXAMPLES
+         See <cdsroot>/share/pcb/examples/skill/axlcore/ashshape.il
+ 
+         1) change to dynamic with messages
+            ret = axlShapeChangeDynamicType(shape t t)
+         2) change to static no messages
+            ret = axlShapeChangeDynamicType(shape nil nil)
+

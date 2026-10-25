@@ -1,0 +1,86 @@
+# Package-defaults preview source; plain text PowerShell + System.Drawing.
+# Executed inline, not as a .ps1 file; no execution-policy change.
+# No execution-policy setting was changed. Re-running writes preview.png at the configured destination.
+$ErrorActionPreference='Stop'
+Add-Type -AssemblyName System.Drawing
+$src='D:/001DIY/005lib/01AIEDA/learning/logs/package_defaults_20261017/reopen'
+$dest='D:/001DIY/005lib/01AIEDA/learning/examples/lesson04_package/preview.png'
+$pins=Import-Csv -LiteralPath ($src+'/pins.tsv') -Delimiter "`t"
+$pads=Import-Csv -LiteralPath ($src+'/pads.tsv') -Delimiter "`t"
+$segments=Import-Csv -LiteralPath ($src+'/segments.tsv') -Delimiter "`t"
+$geom=Import-Csv -LiteralPath ($src+'/geometry.tsv') -Delimiter "`t"
+$texts=Import-Csv -LiteralPath ($src+'/texts.tsv') -Delimiter "`t"
+$requiredTexts=Import-Csv -LiteralPath ($src+'/required_texts.tsv') -Delimiter "`t"
+$defaults=Get-Content -Raw -LiteralPath ($src+'/defaults.txt')
+if($pins.Count -ne 2 -or $requiredTexts.Count -ne 3){throw 'Unexpected source data'}
+foreach($text in $requiredTexts){if([double]$text.x -ne 0 -or [double]$text.y -ne 0 -or [double]$text.rotation -ne 0){throw 'Unexpected text anchor or rotation'}}
+foreach($layer in @('REF DES/SILKSCREEN_TOP','REF DES/ASSEMBLY_TOP','COMPONENT VALUE/ASSEMBLY_TOP')){if(@($requiredTexts|Where-Object{$_.layer -eq $layer}).Count -ne 1){throw 'Missing required text layer'}}
+if(-not $defaults.Contains('units=("millimeters" 3)') -or -not $defaults.Contains('PACKAGE_HEIGHT_MAX "1 MM"')){throw 'Unverified package units or maximum height'}
+$bmp=[Drawing.Bitmap]::new(1500,1120);$g=[Drawing.Graphics]::FromImage($bmp)
+$g.SmoothingMode=[Drawing.Drawing2D.SmoothingMode]::AntiAlias
+$g.TextRenderingHint=[Drawing.Text.TextRenderingHint]::AntiAliasGridFit
+$g.Clear([Drawing.Color]::White)
+$navy=[Drawing.ColorTranslator]::FromHtml('#17304B');$muted=[Drawing.ColorTranslator]::FromHtml('#54677B')
+$gold=[Drawing.ColorTranslator]::FromHtml('#E4A93E');$mask=[Drawing.ColorTranslator]::FromHtml('#DCC6F0');$paste=[Drawing.ColorTranslator]::FromHtml('#A8D7F1')
+$silk=[Drawing.ColorTranslator]::FromHtml('#23886B');$assembly=[Drawing.ColorTranslator]::FromHtml('#8964B5');$bound=[Drawing.ColorTranslator]::FromHtml('#748298')
+$fontTitle=[Drawing.Font]::new('Segoe UI',30,[Drawing.FontStyle]::Bold);$fontSub=[Drawing.Font]::new('Segoe UI',16)
+$fontSmall=[Drawing.Font]::new('Segoe UI',13);$fontBold=[Drawing.Font]::new('Segoe UI',17,[Drawing.FontStyle]::Bold)
+$fontPin=[Drawing.Font]::new('Segoe UI',29,[Drawing.FontStyle]::Bold);$fontRef=[Drawing.Font]::new('Segoe UI',43)
+function Txt($value,$font,$color,$x,$y){$b=[Drawing.SolidBrush]::new($color);try{$g.DrawString([string]$value,$font,$b,[float]$x,[float]$y)}finally{$b.Dispose()}}
+function CenterTxt($value,$font,$color,$x,$y){$s=$g.MeasureString([string]$value,$font);Txt $value $font $color ($x-$s.Width/2) ($y-$s.Height/2)}
+$ox=545.0;$oy=650.0;$scale=185.0
+function SX($x){[float]($ox+[double]$x*$scale)}
+function SY($y){[float]($oy-[double]$y*$scale)}
+function RectMM($a,$b,$c,$d){[Drawing.RectangleF]::new((SX $a),(SY $d),[float](($c-$a)*$scale),[float](($d-$b)*$scale))}
+function Leg($y,$color,$name,$detail,$dash=$false){$p=[Drawing.Pen]::new($color,4);if($dash){$p.DashStyle=[Drawing.Drawing2D.DashStyle]::Dash};$g.DrawLine($p,1055,[float]($y+16),1095,[float]($y+16));$p.Dispose();Txt $name $fontBold $navy 1110 $y;Txt $detail $fontSmall $muted 1110 ($y+33)}
+try{
+ Txt 'Database preview - training footprint' $fontTitle $navy 65 38
+ Txt 'EDA_L04_TWO_PIN_TRAINING  |  top view  |  updated defaults  |  mm' $fontSub $muted 68 98
+ $b=[Drawing.SolidBrush]::new([Drawing.ColorTranslator]::FromHtml('#F6F8FB'));$g.FillRectangle($b,55,160,950,850);$b.Dispose()
+ $b=[Drawing.SolidBrush]::new([Drawing.ColorTranslator]::FromHtml('#F8F9FB'));$g.FillRectangle($b,1030,160,420,850);$b.Dispose()
+ Txt 'READ BACK FROM SAVED .DRA' $fontSmall $muted 80 180
+ Txt 'TEXT DEFAULTS: ALL ANCHORS (0.000, 0.000)' $fontBold $navy 100 245
+ Txt 'Shown here: REF DES / SILKSCREEN_TOP' $fontSmall $muted 100 285
+ Txt 'Also at origin: REF DES / ASSEMBLY_TOP and' $fontSmall $muted 100 315
+ Txt 'COMPONENT VALUE / ASSEMBLY_TOP (not overlaid).' $fontSmall $muted 100 343
+ $grid=[Drawing.Pen]::new([Drawing.ColorTranslator]::FromHtml('#E6EBF2'),1)
+ for($i=-4;$i -le 4;$i++){$xx=SX ($i*0.5);$g.DrawLine($grid,$xx,(SY -1.9),$xx,(SY 2.25))}
+ for($i=-3;$i -le 4;$i++){$yy=SY ($i*0.5);$g.DrawLine($grid,(SX -2.2),$yy,(SX 2.2),$yy)};$grid.Dispose()
+ $p=[Drawing.Pen]::new([Drawing.ColorTranslator]::FromHtml('#C3CDDA'),1.3);$p.DashStyle=[Drawing.Drawing2D.DashStyle]::Dash;$g.DrawLine($p,(SX -2.2),(SY 0),(SX 2.2),(SY 0));$g.DrawLine($p,(SX 0),(SY -1.9),(SX 0),(SY 2.25));$p.Dispose()
+ foreach($s in $geom|Where-Object{$_.layer -eq 'PACKAGE GEOMETRY/PLACE_BOUND_TOP'}){$r=RectMM ([double]$s.min_x) ([double]$s.min_y) ([double]$s.max_x) ([double]$s.max_y);$p=[Drawing.Pen]::new($bound,2.5);$p.DashStyle=[Drawing.Drawing2D.DashStyle]::Dash;$g.DrawRectangle($p,$r.X,$r.Y,$r.Width,$r.Height);$p.Dispose()}
+ foreach($layer in @('PIN/SOLDERMASK_TOP','ETCH/TOP','PIN/PASTEMASK_TOP')){
+  foreach($pad in $pads|Where-Object{$_.layer -eq $layer -and $_.figure -eq 'RECTANGLE'}){
+   $pin=$pins|Where-Object{$_.number -eq $pad.number};if([double]$pin.rotation -ne 0 -or $pin.mirrored -ne 'nil' -or $pad.local_offset -ne '(0.0 0.0)'){throw 'Unexpected pad transform'}
+   $cx=[double]$pin.x;$cy=[double]$pin.y;$w=[double]$pad.width;$h=[double]$pad.height;$r=RectMM ($cx-$w/2) ($cy-$h/2) ($cx+$w/2) ($cy+$h/2)
+   $col=switch($layer){'PIN/SOLDERMASK_TOP'{$mask};'ETCH/TOP'{$gold};'PIN/PASTEMASK_TOP'{$paste}}
+   $b=[Drawing.SolidBrush]::new($col);$g.FillRectangle($b,$r);$b.Dispose();$p=[Drawing.Pen]::new([Drawing.Color]::FromArgb(180,[int]($col.R*0.7),[int]($col.G*0.7),[int]($col.B*0.7)),1.3);$g.DrawRectangle($p,$r.X,$r.Y,$r.Width,$r.Height);$p.Dispose()
+  }
+ }
+ foreach($s in $segments){$col=if($s.layer -eq 'PACKAGE GEOMETRY/SILKSCREEN_TOP'){$silk}else{$assembly};$p=[Drawing.Pen]::new($col,[float]([double]$s.width*$scale));if($s.layer -eq 'PACKAGE GEOMETRY/ASSEMBLY_TOP'){$p.DashStyle=[Drawing.Drawing2D.DashStyle]::Dash};$g.DrawLine($p,(SX $s.start_x),(SY $s.start_y),(SX $s.end_x),(SY $s.end_y));$p.Dispose()}
+ foreach($pin in $pins){CenterTxt $pin.number $fontPin $navy (SX $pin.x) (SY $pin.y)}
+ foreach($t in $texts){CenterTxt $t.text $fontRef $silk (SX $t.x) (SY ([double]$t.y+0.25))}
+ $p=[Drawing.Pen]::new($muted,1.6);$g.DrawEllipse($p,(SX 0)-4,(SY 0)-4,8,8);$p.Dispose();CenterTxt '(0, 0)' $fontSmall $muted (SX 0) (SY -0.75)
+ $x1=[double]$pins[0].x;$x2=[double]$pins[1].x;$dist=[Math]::Abs($x2-$x1);$dimY=-1.60
+ $p=[Drawing.Pen]::new($muted,1.5);foreach($x in @($x1,$x2)){$g.DrawLine($p,(SX $x),(SY -0.88),(SX $x),(SY -1.70))};$g.DrawLine($p,(SX $x1),(SY $dimY),(SX $x2),(SY $dimY));$p.Dispose()
+ $b=[Drawing.SolidBrush]::new([Drawing.ColorTranslator]::FromHtml('#F6F8FB'));$g.FillRectangle($b,(SX 0)-115,(SY $dimY)-20,230,40);$b.Dispose();CenterTxt ($dist.ToString('0.000')+' mm pitch') $fontBold $navy (SX 0) (SY $dimY)
+ Txt 'LAYERS AND READ-BACK SIZES' $fontSmall $muted 1055 185
+ Leg 232 $gold 'Top copper' '1.000 x 1.500 mm'
+ Leg 324 $mask 'Top solder mask' '1.100 x 1.600 mm'
+ Leg 416 $paste 'Top paste mask' '0.900 x 1.400 mm'
+ Leg 508 $silk 'Silkscreen' '3.400 x 2.000; stroke 0.100'
+ Leg 600 $assembly 'Assembly' '1.600 x 1.000; stroke 0.050' $true
+ Leg 692 $bound 'Place-bound' '3.600 x 2.200 mm' $true
+ Txt 'Package height MAX: 1.000 mm' $fontSmall $navy 1055 778
+ Txt 'Boundary shown as outline;' $fontSmall $muted 1055 813
+ Txt 'CAD object is filled.' $fontSmall $muted 1055 840
+ Txt 'Pins 1 and 2: SMD, no drill' $fontSmall $muted 1055 882
+ Txt 'Top-side layers only' $fontSmall $muted 1055 911
+ Txt 'Training dimensions only' $fontBold $navy 1055 947
+ Txt 'Source: package_defaults_20261017/reopen TSV + defaults.txt; latest reopened database values.' $fontSmall $muted 65 1030
+ Txt 'Static database drawing. Refdes glyphs are illustrative; assembly/value text is not overlaid. Training footprint, not a Cadence screenshot.' $fontSmall $muted 65 1063
+ $bmp.Save($dest,[Drawing.Imaging.ImageFormat]::Png)
+}finally{$g.Dispose();$bmp.Dispose();$fontTitle.Dispose();$fontSub.Dispose();$fontSmall.Dispose();$fontBold.Dispose();$fontPin.Dispose();$fontRef.Dispose()}
+Get-Item -LiteralPath $dest|Select-Object FullName,Length
+Get-FileHash -LiteralPath $dest -Algorithm SHA256
+
+

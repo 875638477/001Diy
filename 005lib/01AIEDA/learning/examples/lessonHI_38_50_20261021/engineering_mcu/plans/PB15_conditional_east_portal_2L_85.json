@@ -1,0 +1,57 @@
+{
+  "status": "CONDITIONAL_PORTAL_ONLY_NOT_EXECUTABLE",
+  "variant": "2L",
+  "prerequisites": [
+    "PB14 real source via38,21.25 retired by independently verified inward-source replacement",
+    "PB1 L joint with f29 validated; provisional conditional bend used only for this geometry study"
+  ],
+  "operations": [
+    {
+      "type": "route",
+      "id": "PB15_NORTH_EAST_CONDITIONAL85",
+      "net": "GPIO_PB15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          38.5,
+          20.7
+        ],
+        [
+          38.35,
+          20.85
+        ],
+        [
+          38.35,
+          22.95
+        ],
+        [
+          41.25,
+          22.95
+        ],
+        [
+          41.6,
+          23.3
+        ],
+        [
+          47.1,
+          23.3
+        ]
+      ],
+      "width": 0.2
+    }
+  ],
+  "checks": [
+    {
+      "id": "PB15_NORTH_EAST_CONDITIONAL85",
+      "clear": false,
+      "hits": [
+        {
+          "reservation": "USB_SHARED_REFERENCE_USB_SHARED_DP"
+        },
+        {
+          "reservation": "USB_SHARED_REFERENCE_USB_SHARED_DM"
+        }
+      ]
+    }
+  ]
+}

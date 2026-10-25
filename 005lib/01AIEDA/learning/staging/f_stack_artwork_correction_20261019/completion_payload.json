@@ -1,0 +1,38 @@
+{
+  "requiredEvidence": [
+    {
+      "path": "learning/examples/lessonF_stack_artwork_correction_20261019/validation.json",
+      "status": "PASS_NATIVE_USER_LAYER_ARTWORK_CORRECTION"
+    },
+    {
+      "path": "learning/examples/lessonF_stack_artwork_correction_20261019/review/review.json",
+      "status": "PASS_INDEPENDENT_USER_CORRECTION_REVIEW"
+    }
+  ],
+  "artifactManifests": [
+    "learning/examples/lessonF_stack_artwork_correction_20261019/artifact_manifest.json",
+    "learning/examples/lessonF_stack_artwork_correction_20261019/review/artifact_manifest.json"
+  ],
+  "noteReplacements": [
+    [
+      "{{EVIDENCE_LINKS}}",
+      "原始板和模板身份见[input_manifest.json](../examples/lessonF_stack_artwork_correction_20261019/input_manifest.json)，源文件均有同SHA备份。补验见[原生验证](../examples/lessonF_stack_artwork_correction_20261019/validation.json)、[独立审查](../examples/lessonF_stack_artwork_correction_20261019/review/review.json)，文件身份见[产物清单](../examples/lessonF_stack_artwork_correction_20261019/artifact_manifest.json)。当前笔记/索引修订及历史备份对应见[本轮总清单](../logs/f_stack_artwork_correction_20261019.json)。"
+    ],
+    [
+      "{{NATIVE_RESULT}}",
+      "三块新板均由官方17.2 CLI/SKILL修改，保存退出后另进程只读重开，不以setter返回t代替结果：\n\n| 新板 | 原生导电层序 | 物理MASK数 | 模板Film数 | 当前DRC |\n| --- | --- | --- | --- | --- |\n| F28_2L_USERFIX | TOP-BOTTOM | 0 | 15 | 0 / t |\n| F28_4L_USERFIX | TOP-L2-L3-BOTTOM | 0 | 17 | 0 / t |\n| F29_CONSTRAINTS_v4 | TOP-L2-L3-BOTTOM | 0 | 17 | 0 / t |\n\n旧/新XSection API原始值、ETCH groupMembers及axlSubclassRoute交叉读取，真实名称是大写TOP/BOTTOM；用户截图中的Top/Bottom显示样式不作为改名依据。原错误F28_DESIGN_OUTLINE已移除。新增与真实板框相同的BOARD GEOMETRY/OUTLINE，供既有模板输出，实际DESIGN_OUTLINE根对象保持。\n\nF29当前技术约束文件另导出为[F29_RULES_v4.tcf](../examples/lessonF_stack_artwork_correction_20261019/exports/F29_RULES_v4.tcf)，官方比较及日志在exports内；旧TCF含已撤销MASK，只保留为历史文件。"
+    ],
+    [
+      "{{TEMPLATE_AND_PRECISION}}",
+      "本机将三块副本从millimeters/3提高为millimeters/4，独立重开后每张Film的undefineLineWidth均实际保存0.0025；旧板0.002的量化差异已闭合。shapeBoundingBox=2.54及每张不同的fullContact/mirrored等值按原文核对。精度调整不能免除原几何和规则保真比较，详见补验与独立审查。\n\n原生会过滤模板中的无效引用：SKILTOP/SKILBOTTOM及PDFTOP/PDFBOTTOM中的BOARD GEMETRY拼写错误；两层DisAll中的CONSTRAINT REGION/L2与L3不存在。重复引用也会由API合并。当前保留原文、记录实际有效成员，不改01env、不造假class，也不为了两层模板文字而增加内铜。\n\n模板SKILTOP/SKILBOTTOM未包含REF DES/SILKSCREEN_*，PDFTOP/PDFBOTTOM才引用REF DES/ASSEMBLY_*。这意味着按模板加载Film不证明位号已进入丝印Gerber；实际内容待CAM审查。本轮按用户要求沿用模板，未擅改丝印映射。\n\nFilmControl的每张Film及Options存入BRD；General Parameters的设备/格式参数另属art_param.txt，孔径表另属art_aper.txt。drill2/4只有FilmCreate，不设置全部CAM机器参数。本次验证完整Film定义与实际成员，不宣称已完成General Parameters或输出、审核生产包。"
+    ],
+    [
+      "此前犯了三处错误：\n1.",
+      "此前犯了三处错误：\n\n1."
+    ],
+    [
+      "本轮是对第28课及其派生第29课的实际纠正，不能将原402/99/543/937项检查当作已经符合用户完整规范的证明。",
+      "已在三块新板完成物理MASK移除、完整模板重放及保存重开补验；原生验收与独立审查均通过。本轮纠正第28课及其派生第29课，原402/99/543/937项检查未覆盖用户全部规范。"
+    ]
+  ]
+}

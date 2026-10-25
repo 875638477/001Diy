@@ -1,0 +1,9 @@
+from pathlib import Path
+import json,hashlib
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'RIGHT10_source_joint_v2.json').read_text());p['batchId']='RIGHT10_source_joint_v3';p['operations']=[o for o in p['operations'] if not o['id'].startswith('RIGHT_GROUND_STITCH_')];p['status']='ENGINEERING_SOURCE_WITH_LONG_ROUTE_TOPOLOGY_REVIEW_REQUIRED';p['revision']='v3 removes three nominal-nearest ground stitches that, with adjacent dense stub clearance, enclosed multiple source pockets. DRC and ground distance alone were insufficient. Keep source/quiet/pose/neck unchanged; choose return stitches after real longroute geometry and quantify local source limits, do not silently relax rules.'
+p['nativeAcceptance'].append('Source3 deliberately has no three-ground-via wall. Final source/longroute actual reference and return distances must be reviewed; 1.5mm is planning target, not false compliance or automatic reason to create blockage.')
+(R/'RIGHT10_source_joint_v3.json').write_text(json.dumps(p,indent=2),encoding='utf-8')
+for v in ['2L','4L']:
+ pol=json.loads((R/f'RIGHT10_long_policy_{v}_v2.json').read_text());pol['pendingOperations']=[o for o in pol['pendingOperations'] if not o['id'].startswith('RIGHT_GROUND_STITCH_')];pol['sourcePlans']=[x for x in pol['sourcePlans'] if x['path']!='engineering_power/RIGHT10_source_joint_v2.json'];pol['sourcePlans'].append(dict(path='engineering_power/RIGHT10_source_joint_v3.json',sha256=hashlib.sha256((R/'RIGHT10_source_joint_v3.json').read_bytes()).hexdigest()));(R/f'RIGHT10_long_policy_{v}_v3.json').write_text(json.dumps(pol,indent=2),encoding='utf-8')
+s=(R/'scripts/precheck_RIGHT10_v1.py').read_text().replace('source_joint_v1.json','source_joint_v3.json').replace('RIGHT10_v1_','RIGHT10_v3_');(R/'scripts/precheck_RIGHT10_v3.py').write_text(s,encoding='utf-8')
+print('source3',len(p['operations']))

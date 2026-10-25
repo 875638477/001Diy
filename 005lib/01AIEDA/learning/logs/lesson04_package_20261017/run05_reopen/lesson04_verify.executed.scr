@@ -1,0 +1,6 @@
+# Reopen the saved package in read-only mode; no saves or edits.
+set NOCONFIRM
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/scripts/lesson04_verify.il") t)
+skill errset(edaL4Verify("D:/001DIY/005lib/01AIEDA/learning/logs/lesson04_package_20261017/run05_reopen") t)
+quit
+fillin "yes"

@@ -1,0 +1,6 @@
+from pathlib import Path
+import json,hashlib,subprocess,sys,shutil
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper();d=json.loads((R/'batches/clearance_remaining_2L_b016_tail_cleanup_viafix.json').read_text());p=R/'engineering_power/SH2_common_return_2L_01.json';q=json.loads(p.read_text());snap=R/'source/engineering_snapshots/clearance_remaining_2L_b016_DRC_PENDING/06_SH2_common_return_2L_01.json';assert not snap.exists();shutil.copyfile(p,snap);assert sha(snap)=='850995C66D4249B14F2AE1F2419FF96D724E6778BEC5345FE791FC509F071705';d['engineeringSources'].append({'source':str(p),'snapshot':str(snap),'sha256':sha(snap)});idx=next(i for i,o in enumerate(d['operations']) if o['type']=='exactBatch');d['operations'][idx:idx]=q['operations'];d['proofs'] += q['proofs'];d['SH2ApplicationGroundBridgeEvidence']=q
+for c in d['postChecks']:
+ if c['type']=='changedNetworks':c['nets']=sorted(set(c['nets'])|{'USB_CC1','USB_CC2'})
+p=R/'batches/clearance_remaining_2L_b016_SH2_common_fixed.json';p.write_text(json.dumps(d,indent=2),encoding='utf8');subprocess.run([sys.executable,str(R/'scripts/prepare_b016_retryHI_v3.py'),'--variant','2L','--try-number','12','--compiler','33','--plan',str(p)],check=True)

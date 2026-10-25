@@ -1,0 +1,74 @@
+{
+  "status": "PASS_OFFICIAL_TECHFILE_EXPORT_COMPARE",
+  "boards": {
+    "4L": {
+      "records": [
+        {
+          "step": "export",
+          "startUTC": "2026-10-20T15:57:19.596234+00:00",
+          "pid": 15632,
+          "args": [
+            "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\techfile.exe",
+            "-w",
+            "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\current\\G_4L_LAYOUT_v1.brd",
+            "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\exports\\G_4L_RULES_v1.tcf"
+          ],
+          "exitCode": 0,
+          "boardBefore": "2D4A146A61F92AE6459C9E855AB086ED47B42360409608D8A12E30BB7EA21526",
+          "boardAfter": "2D4A146A61F92AE6459C9E855AB086ED47B42360409608D8A12E30BB7EA21526"
+        },
+        {
+          "step": "compare",
+          "startUTC": "2026-10-20T15:57:21.115973+00:00",
+          "pid": 16844,
+          "args": [
+            "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\techfile.exe",
+            "-c",
+            "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\exports\\G_4L_RULES_v1.tcf",
+            "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\current\\G_4L_LAYOUT_v1.brd"
+          ],
+          "exitCode": 0,
+          "boardBefore": "2D4A146A61F92AE6459C9E855AB086ED47B42360409608D8A12E30BB7EA21526",
+          "boardAfter": "2D4A146A61F92AE6459C9E855AB086ED47B42360409608D8A12E30BB7EA21526"
+        }
+      ],
+      "output": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\exports\\G_4L_RULES_v1.tcf",
+      "outputSHA256": "9654206B46A5B97BA5825013EB71716DE605A0371D2B7B07F27EA7633465375D"
+    },
+    "2L": {
+      "records": [
+        {
+          "step": "export",
+          "startUTC": "2026-10-20T15:57:22.585525+00:00",
+          "pid": 19244,
+          "args": [
+            "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\techfile.exe",
+            "-w",
+            "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\current\\G_2L_LAYOUT_v1.brd",
+            "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\exports\\G_2L_RULES_v1.tcf"
+          ],
+          "exitCode": 0,
+          "boardBefore": "FC411A509940E8727A8CB62D036324D1A63A60E042F9CC8AEAECE10C0425BE7D",
+          "boardAfter": "FC411A509940E8727A8CB62D036324D1A63A60E042F9CC8AEAECE10C0425BE7D"
+        },
+        {
+          "step": "compare",
+          "startUTC": "2026-10-20T15:57:23.825094+00:00",
+          "pid": 9200,
+          "args": [
+            "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\techfile.exe",
+            "-c",
+            "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\exports\\G_2L_RULES_v1.tcf",
+            "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\current\\G_2L_LAYOUT_v1.brd"
+          ],
+          "exitCode": 0,
+          "boardBefore": "FC411A509940E8727A8CB62D036324D1A63A60E042F9CC8AEAECE10C0425BE7D",
+          "boardAfter": "FC411A509940E8727A8CB62D036324D1A63A60E042F9CC8AEAECE10C0425BE7D"
+        }
+      ],
+      "output": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\exports\\G_2L_RULES_v1.tcf",
+      "outputSHA256": "88442621EF27E2BC8CB4100CBAB3A6371A778595CBA7CBA5DFE49F10C71EFFAA"
+    }
+  },
+  "scope": "Technology/CSet export and compare; native readback supplies net/class/region mappings. Not a full DCF export."
+}

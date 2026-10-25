@@ -1,0 +1,90 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    NC DRILL Log                                                     )
+(                                                                     )
+(    Drawing          : JK_4L_J55_text_height_review_NOT_RELEASED.brd )
+(    Software Version : 17.2S045                                      )
+(    Date/Time        : Fri Oct 23 00:33:12 2026                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+ Processing NC Parameters file 'nc_param.txt' ...
+
+ NC PARAMETERS
+ -------------
+
+ FORMAT   		3.4
+ MACHINE-OFFSET		x:0.00000	y:0.00000   (mm)
+ FEEDRATE		1
+ COORDINATES		ABSOLUTE
+ OUTPUT-UNITS		METRIC
+ TOOL-ORDER		INCREASING
+ REPEAT-CODES		YES
+ SUPPRESS-LEAD-ZEROES	NO
+ SUPPRESS-TRAIL-ZEROES	NO
+ SUPPRESS-EQUAL		NO
+ TOOL-SELECT		YES
+ HEADER			none
+ LEADER			12
+ CODE			ASCII
+ SEPARATE		YES
+ SEPARATE-ROUTING	YES
+ OPTIMIZE_DRILLING	NO
+ ENHANCED_EXCELLON	YES
+ SCALE			1.000000
+
+ WARNING(SPMHMF-358): Design precision is the same as that of the drill output file data.
+ WARNING(SPMHMF-359): Data rounding errors may still be possible.
+ WARNING(SPMHMF-365): This design contains 4 slot holes that can NOT be drilled.
+ WARNING(SPMHMF-366): They can be processed by NC routing instead.
+ WARNING(SPMHMF-368): Cannot find NC Drill tool file 'nc_tools.txt'
+ WARNING(SPMHMF-369): ... will auto-generate tool file 'nc_tools_auto.txt'.
+
+
+     Auto-generating tool file 'nc_tools_auto.txt' ...
+
+           Size  Plating  Tool        + Tolerance  - Tolerance
+
+         0.2600  P        T01            0.000000     0.000000
+         0.3000  P        T02            0.000000     0.000000
+         0.7620  P        T03            0.000000     0.000000
+         1.0000  P        T04            0.000000     0.000000
+         0.6500  N        T05            0.000000     0.000000
+         2.0000  N        T06            0.000000     0.000000
+
+
+ Drill files being output to directory 'D:/001DIY/005lib/01AIEDA/learning/examples/lessonJK_51_59_20261022/exports/J55_corrected_4L_TRAINING_NOT_FOR_FAB' ...
+
+
+
+     'J55_TRAINING_NOT_FOR_FAB_4L-1-4.drl' created for holes connecting TOP and BOTTOM ; Plating = PLATED
+     ----------------------------------------------------------------------------------------------------
+
+     Tool  Num     Size      +/- Tolerance     Plating   Quantity
+
+     T01    1.   0.2600    0.0000/  0.0000      PLATED         21
+     T02    2.   0.3000    0.0000/  0.0000      PLATED        129
+     T03    3.   0.7620    0.0000/  0.0000      PLATED         12
+     T04    4.   1.0000    0.0000/  0.0000      PLATED         45
+
+     ---- Total holes:                                        207
+
+     ---- Total head travel:              7.52 feet (2.29 meters)
+
+
+
+
+     'J55_TRAINING_NOT_FOR_FAB_4L-1-4-np.drl' created for holes connecting TOP and BOTTOM ; Plating = NON_PLATED
+     -----------------------------------------------------------------------------------------------------------
+
+     Tool  Num     Size      +/- Tolerance     Plating   Quantity
+
+     T05    1.   0.6500    0.0000/  0.0000  NON_PLATED          2
+     T06    2.   2.0000    0.0000/  0.0000  NON_PLATED          4
+
+     ---- Total holes:                                          6
+
+     ---- Total head travel:              0.70 feet (0.21 meters)
+

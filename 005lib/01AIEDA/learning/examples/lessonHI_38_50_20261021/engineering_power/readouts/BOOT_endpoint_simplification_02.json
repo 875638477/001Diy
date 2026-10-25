@@ -1,0 +1,176 @@
+{
+  "status": "SCOPED_ENDPOINT_SIMPLIFICATION_GEOMETRY_NOT_API_CAUSE_PROOF",
+  "originalFailure": "RIGHT_BOOT_DIRECT_TOP axlDBCreatePath=nil/SPMHSY49 Error9 after R28 correctactual180pose",
+  "newPoints": [
+    [
+      46.8,
+      27.65
+    ],
+    [
+      47.27,
+      27.18
+    ],
+    [
+      52.8984,
+      27.18
+    ],
+    [
+      52.8984,
+      28
+    ]
+  ],
+  "net": "BOOT0",
+  "layer": "TOP",
+  "width": 0.2,
+  "reason": "Eliminate in-pad turn and restore actual.3mm GNDpadclearance: original y27.3 gives.1935; y27.18 gives.3135. No global/local rule relax. R28.1center52.8984,28 correct. Does not prove nativeAPI rootcause.",
+  "reviews": [
+    {
+      "variant": "2L",
+      "nearbyOtherCopper": [
+        {
+          "kind": "pad",
+          "ref": "R28",
+          "pin": "2",
+          "net": "GND",
+          "gap": 0.31349999999999767,
+          "overlap": 0.0
+        },
+        {
+          "kind": "line",
+          "net": "GND",
+          "startEnd": [
+            [
+              51.3236,
+              28
+            ],
+            [
+              51.3,
+              28.0236
+            ]
+          ],
+          "gap": 0.41999999999999815,
+          "overlap": 0.0
+        },
+        {
+          "kind": "via",
+          "net": "GPIO_PB8",
+          "xy": [
+            46.2,
+            28.15
+          ],
+          "gap": 0.4210438241423095,
+          "overlap": 0.0
+        },
+        {
+          "kind": "via",
+          "net": "I2C_SDA",
+          "xy": [
+            46.2,
+            27.15
+          ],
+          "gap": 0.4210438241423149,
+          "overlap": 0.0
+        },
+        {
+          "kind": "line",
+          "net": "GND",
+          "startEnd": [
+            [
+              51.3,
+              28.0236
+            ],
+            [
+              51.3,
+              29.2
+            ]
+          ],
+          "gap": 0.4435999999999965,
+          "overlap": 0.0
+        },
+        {
+          "kind": "pad",
+          "ref": "C16",
+          "pin": "2",
+          "net": "GND",
+          "gap": 0.4800000000000004,
+          "overlap": 0.0
+        }
+      ],
+      "status": "NO_OTHER_NET_OVERLAP_ENDPOINT_SIMPLIFICATION_ONLY_NATIVE_PILOT_REQUIRED"
+    },
+    {
+      "variant": "4L",
+      "nearbyOtherCopper": [
+        {
+          "kind": "pad",
+          "ref": "R28",
+          "pin": "2",
+          "net": "GND",
+          "gap": 0.31349999999999767,
+          "overlap": 0.0
+        },
+        {
+          "kind": "line",
+          "net": "GND",
+          "startEnd": [
+            [
+              51.3236,
+              28
+            ],
+            [
+              51.3,
+              28.0236
+            ]
+          ],
+          "gap": 0.41999999999999815,
+          "overlap": 0.0
+        },
+        {
+          "kind": "via",
+          "net": "GPIO_PB8",
+          "xy": [
+            46.2,
+            28.15
+          ],
+          "gap": 0.4210438241423095,
+          "overlap": 0.0
+        },
+        {
+          "kind": "via",
+          "net": "I2C_SDA",
+          "xy": [
+            46.2,
+            27.15
+          ],
+          "gap": 0.4210438241423149,
+          "overlap": 0.0
+        },
+        {
+          "kind": "line",
+          "net": "GND",
+          "startEnd": [
+            [
+              51.3,
+              28.0236
+            ],
+            [
+              51.3,
+              29.2
+            ]
+          ],
+          "gap": 0.4435999999999965,
+          "overlap": 0.0
+        },
+        {
+          "kind": "pad",
+          "ref": "C16",
+          "pin": "2",
+          "net": "GND",
+          "gap": 0.4800000000000004,
+          "overlap": 0.0
+        }
+      ],
+      "status": "NO_OTHER_NET_OVERLAP_ENDPOINT_SIMPLIFICATION_ONLY_NATIVE_PILOT_REQUIRED"
+    }
+  ]
+}

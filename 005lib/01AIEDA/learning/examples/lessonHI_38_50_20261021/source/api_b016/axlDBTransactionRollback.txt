@@ -1,0 +1,16 @@
+
+  NAME
+         axlDBTransactionRollback - undo a database transaction
+  SYNOPSIS
+         axlDBTransactionRollback(
+             x_mark
+         ) ==> t/nil
+  FUNCTION
+         undo a database transaction
+  NEEDS
+         x_mark - database mark previously returned by axlDBTransactionStart
+  RETURNS
+         nil if not successful, t if successful
+  EXAMPLE
+         see axlDBTransactionStart()
+

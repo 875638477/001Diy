@@ -1,0 +1,8 @@
+let((fp d)
+  fp=outfile("D:/001DIY/023USB/08UsbIPDapLink/02pcb/compact_layout/probe_result.txt")
+  fprintf(fp "SKILL_READY\n")
+  d=axlDBGetDesign()
+  fprintf(fp "DESIGN %L\n" d)
+  fprintf(fp "SYMBOL_COUNT %d\n" length(d->symbols))
+  close(fp)
+)

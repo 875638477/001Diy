@@ -1,0 +1,235 @@
+{
+  "batchId": "root_source_clearance_cleanup_4L_02",
+  "variant": "4L",
+  "status": "CORRECTED_SOURCE_DELTA_PRESERVE_LIVE_NRST_FEED_REQUIRES_NATIVE",
+  "sourceCheckpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\source_4L_b015_DRC_PENDING",
+  "sourceExpectedSHA256": "51CA6A748B3FB376AE49A39E799B9777CB7223D4AA613665331AECA9418BACE4",
+  "operations": [
+    {
+      "type": "deleteSegment",
+      "id": "SOUTH_RX_CLEARANCE_RIP_0",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          22.75
+        ],
+        [
+          40.25,
+          22.05
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "deleteSegment",
+      "id": "SOUTH_RX_CLEARANCE_RIP_1",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          22.05
+        ],
+        [
+          40.22,
+          22.02
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "deleteSegment",
+      "id": "SOUTH_RX_CLEARANCE_RIP_2",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          40.22,
+          22.02
+        ],
+        [
+          40.22,
+          21.3
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "deleteSegment",
+      "id": "SOUTH_RX_CLEARANCE_RIP_3",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          40.22,
+          21.3
+        ],
+        [
+          40,
+          21.08
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "deleteSegment",
+      "id": "SOUTH_RX_CLEARANCE_RIP_4",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          40,
+          21.08
+        ],
+        [
+          40,
+          20.5
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "SOUTH_RX_CLEARANCE_REPLACE",
+      "net": "PA10_UART_RX",
+      "layer": "TOP",
+      "points": [
+        [
+          40.25,
+          22.75
+        ],
+        [
+          40.25,
+          22.05
+        ],
+        [
+          40.205,
+          22.005
+        ],
+        [
+          40.205,
+          21.285
+        ],
+        [
+          40,
+          21.08
+        ],
+        [
+          40,
+          20.5
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Move source neck .015mm left to preserve actual USB line-line .2mm rule; source MCU pad and existing private via unchanged."
+    }
+  ],
+  "proofs": [
+    {
+      "net": "PA10_UART_RX",
+      "source": "U1.31",
+      "targetAlias": "SOUTH_SOURCE_31_VIA"
+    },
+    {
+      "net": "V3V3",
+      "source": "J12.1",
+      "target": "C9.1"
+    },
+    {
+      "net": "V3V3",
+      "source": "R25.1",
+      "target": "C9.1"
+    },
+    {
+      "net": "V3V3",
+      "source": "C11.1",
+      "target": "R27.1"
+    }
+  ],
+  "spacingExceptions": [
+    {
+      "id": "HI_RX_USB_SOURCE_SMD_ONLY",
+      "layer": "TOP",
+      "polygon": [
+        [
+          39.65,
+          20
+        ],
+        [
+          40.55,
+          20
+        ],
+        [
+          40.55,
+          23.4
+        ],
+        [
+          39.65,
+          23.4
+        ]
+      ],
+      "netsA": [
+        "PA10_UART_RX"
+      ],
+      "netsB": [
+        "PA11_SHARED",
+        "PA12_SHARED"
+      ],
+      "onlyFields": {
+        "smdpin_line": 0.2
+      },
+      "basis": "Local .5mm pitch MCU source escape; native cache reported .27/.284/.3216 vs inherited USB-other .5. Existing line-line/via-line .2 retained; outside finite area .5 unchanged. Verify exact effective native overlap, scoped stricter challenge and full DRC. No reduction of source line-line .2; geometric .19 fixed by moving source copper."
+    }
+  ],
+  "measurements": {
+    "oldUSBLineGapMM": 0.19,
+    "newUSBVerticalLineGapMM": 0.205,
+    "newSourceNeckCenterlineMM": 2.3535533905932726,
+    "preservedLiveNRSTFeedSegments": 2
+  },
+  "scope": "Only PA10 source geometric clearance plus finite SMT source rules. No V3 deletion. Actual total-branch summary is not proof that a selected feed is unused.",
+  "supersedes": {
+    "path": "plans/root_source_clearance_cleanup_4L_01.json",
+    "sha256": "EB850326B991C0FBA1B36B9A5ED1C92052DC4E68228D40C2F2B5BF67711D71B3",
+    "reason": "Two V3 segments were wrongly classified as old R25 deadbranch. Both boards continue from38.1016,47 toR27.1(38.1016,41.3). Preserve all livefeed; native C11.1-R27.1 rejected unsaved edits."
+  },
+  "withdrawnOperations": [
+    {
+      "type": "deleteSegment",
+      "id": "NSS_OLD_R25_V3_BRANCH_CLEANUP_0",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          31.11,
+          55
+        ],
+        [
+          31.11,
+          47
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Remove old R25-only supply dead branch after actual R25 relocation; preserve live J12 supply from north and main y58.2 bus."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NSS_OLD_R25_V3_BRANCH_CLEANUP_1",
+      "net": "V3V3",
+      "layer": "TOP",
+      "points": [
+        [
+          31.11,
+          47
+        ],
+        [
+          38.1016,
+          47
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "Remove old R25-only supply dead branch after actual R25 relocation; preserve live J12 supply from north and main y58.2 bus."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+set NOCONFIRM
+source $TELENV
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/scripts/de_board_read.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019/scripts/lesson27.il") t)
+skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019/scripts/read27.il") t)
+skill errset(l27Read("D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019/readback") t)
+skill errset(l27More("D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019/readback") t)
+quit
+fillin "yes"

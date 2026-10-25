@@ -1,0 +1,71 @@
+{
+  "status": "PASS_SCOPED_CANDIDATE_GEOMETRY_NATIVE_REBASE_AND_REFERENCE_PENDING",
+  "date": "2026-10-22",
+  "variants": [
+    {
+      "variant": "2L",
+      "plan": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\UART_RX_receiver_bridge_2L_03.json",
+      "sha256": "8251B63248CAC9D8958C636F0279A59B842B321C3937296A84CCE0C3A538C08D",
+      "precheck": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\readouts\\UART_RX_bridge03_full_2L.json",
+      "precheckSHA256": "168A0B501F7CA09B5FB717E483A1B7750CE4C959BD0E256BFA0DCAC3F6405BD2",
+      "operations": 9,
+      "wholeGroupDefiniteOverlapPieces": 0,
+      "otherGroupBaseRuleWarningPieces": 60,
+      "newUARTBaseRuleWarnings": 0,
+      "receiverCenterlineLengthMM": 18.686840011296436,
+      "bottomBridgeCenterlineLengthMM": 2.7213203435596367,
+      "routeEndpointContinuity": true,
+      "newSignalVias": 2,
+      "removedGroundVias": 1,
+      "noOtherGroundMove": true
+    },
+    {
+      "variant": "4L",
+      "plan": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\UART_RX_receiver_bridge_4L_03.json",
+      "sha256": "426B8FFB4555623A3B5FCC25382BAE55244D06874DBF6BAD2570A50D350977E0",
+      "precheck": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\readouts\\UART_RX_bridge03_full_4L.json",
+      "precheckSHA256": "3D0D1AEBA9C7D0388FB320929B4FD176247A795BA12A9911A392654F9210AED9",
+      "operations": 9,
+      "wholeGroupDefiniteOverlapPieces": 0,
+      "otherGroupBaseRuleWarningPieces": 62,
+      "newUARTBaseRuleWarnings": 0,
+      "receiverCenterlineLengthMM": 18.686840011296436,
+      "bottomBridgeCenterlineLengthMM": 2.7213203435596367,
+      "routeEndpointContinuity": true,
+      "newSignalVias": 2,
+      "removedGroundVias": 1,
+      "noOtherGroundMove": true
+    }
+  ],
+  "sourceStage": "Virtual integrated review on USB_aux_b014 plus frozen joint sources; not an actual b015 native result",
+  "requiredNativeActions": [
+    "Confirm actual b015 input SHA and whether service18 or19 supplied R17; unique-match old source copper, pose and removed GNDvia before applying delta",
+    "If service19 already saved, explicitly omit already-applied R17 and PA10 edits without rebuilding sources",
+    "Full DRC, exact U1.31-R17.1 and R17.2-R18.1 connectivity proofs, no orphan branch; verify PB4via returns through retained GND62.6,25.65",
+    "Refresh actual ground and examine 2L TOP projection over short BOTTOM bridge; for 4L verify actual L2/L3 around both new through-vias; stored/fresh reopen evidence required"
+  ],
+  "returnAssignments": {
+    "newSignalViaToRetainedGND_MM": [
+      1.0578341079772335,
+      1.043845295050947
+    ],
+    "retainedPB4SignalViaToAlternativeGND_MM": 0.8246211251235369,
+    "retainedPB5MidGroundXY": [
+      56.757,
+      25.092
+    ],
+    "removedRedundantPB4GroundXY": [
+      61.8,
+      24.95
+    ],
+    "retainedAlternativeGroundXY": [
+      62.6,
+      25.65
+    ]
+  },
+  "rejectedHistory": [
+    "Parent proposed GND55.4,27.25 intersects actual future SCL TOP diagonal and SDA BOTTOM y27.15",
+    "Bridge02 second BOTTOM bridge intersects root_remaining18 NRST BOTTOM x60.25; preserved failure readout",
+    "No global width/spacing/via list changed; all new receiver copper .20mm and stock L28_VIA030_C060"
+  ]
+}

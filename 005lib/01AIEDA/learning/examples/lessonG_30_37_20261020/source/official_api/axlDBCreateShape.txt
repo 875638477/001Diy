@@ -1,0 +1,56 @@
+
+  NAME
+         axlDBCreateShape - create a shape in the database
+  FUNCTION
+         axlDBCreateShape(
+             o_polygon / r_path
+             [l_r_fill/t/nil]
+             [t_layer]
+             [t_netName]
+             [o_parent]
+         )
+         ==> l_result/nil
+  
+  SYNOPSIS
+         This is a convenience function that takes the same arguments as 
+         axlDBCreateOpenShape and adds the o_polygon or r_path shape to the 
+         database in exactly the same way. The only difference is that this 
+         function creates the shape and puts it into the closed state
+         immediately, rather than leaving it open for later modification. 
+         Use axlDBCreateShape to add shapes without voids.
+ 
+         axlDBCreateShape has the same restrictions on its arguments as 
+         axlDBCreateOpenShape.
+  
+  NEEDS
+         o_polygon/r_path:  The outline as an r_path from axlPathXXX data 
+                         structure or an o_polygon from axlPolyXXX interfaces.
+         l_r_fill:       Can have one of three possible values:
+                         t --> create shape solid filled
+                         nil --> create shape unfilled
+                         or a list of structures specifying crosshatch 
+                         parameters for creating the shape:
+ 
+                         Note: As with all SKILL defstructs, use 
+                         constructor function:
+                            make_axlFill to create instances of axlFill. 
+                         Use copy function
+                            copy_axlFill to copy instances of axlFill.
+         t_layer:        Layer on which the shape is to be created.
+         t_netName:      Name of the net of which the shape is to be a member.
+         o_parent:       dbid of the object to be the parent of the shape 
+                         (the parent can be a symbol instance or nil for the 
+                         design itself).
+  RETURNS
+         l_result/nil:   nil if nothing was created. Otherwise it returns a
+                         list:
+                         * (car) dbid of shape created
+                         * (cadr)t if DRCs created. Otherwise returns nil.
+  SEE ALSO
+         axlDBCreateOpenShape
+  EXAMPLE 
+         p1 = axlPolyFromDB(inElem)
+         ;; add it as a unfilled shape on BOARD GEOMETRY/OUTLINE
+         res = axlDBCreateShape( car(p1) nil "BOARD GEOMETRY/OUTLINE")
+  
+

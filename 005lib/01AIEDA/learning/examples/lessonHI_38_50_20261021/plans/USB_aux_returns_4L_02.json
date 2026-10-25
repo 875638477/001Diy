@@ -1,0 +1,128 @@
+{
+  "status": "PARTIAL_RETURN_REQUIRES_ENGINEERING",
+  "variant": "4L",
+  "sourceExpectedSHA256": "DB0FB0243BA036E986976862DD00389A41F79FBF8E6592CD4243590EAB7338BD",
+  "sourcePlans": [
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\aux_remote_4L_v9.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\CC_entry_4L_v4.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\VBUS_entry_4L_v3.json"
+  ],
+  "operations": [
+    {
+      "type": "via",
+      "id": "APP_RETURN_HI_4L_USB_ATTACH_N_1_V1",
+      "net": "GND",
+      "xy": [
+        51.411,
+        17.028
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Nearby signal transition APP-GND stitch, both external copper layers screened. Native updated-copper common-GND connectivity and reference continuity still required."
+    },
+    {
+      "type": "via",
+      "id": "APP_RETURN_HI_4L_USB_ATTACH_N_1_V2",
+      "net": "GND",
+      "xy": [
+        47.0,
+        13.45
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Nearby signal transition APP-GND stitch, both external copper layers screened. Native updated-copper common-GND connectivity and reference continuity still required."
+    },
+    {
+      "type": "via",
+      "id": "APP_RETURN_VBUS_LEFT_V",
+      "net": "GND",
+      "xy": [
+        36.077,
+        8.725
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Nearby signal transition APP-GND stitch, both external copper layers screened. Native updated-copper common-GND connectivity and reference continuity still required."
+    }
+  ],
+  "proofs": [],
+  "reviews": [
+    {
+      "signalVia": "HI_4L_USB_ATTACH_N_1_V1",
+      "net": "USB_ATTACH_N",
+      "xy": [
+        50.8,
+        16.3
+      ],
+      "return": {
+        "xy": [
+          51.411,
+          17.028
+        ],
+        "source": "APP_RETURN_HI_4L_USB_ATTACH_N_1_V1"
+      },
+      "distanceMM": 0.9504235897745816,
+      "newStitch": true
+    },
+    {
+      "signalVia": "HI_4L_USB_ATTACH_N_1_V2",
+      "net": "USB_ATTACH_N",
+      "xy": [
+        47.95,
+        13.45
+      ],
+      "return": {
+        "xy": [
+          47.0,
+          13.45
+        ],
+        "source": "APP_RETURN_HI_4L_USB_ATTACH_N_1_V2"
+      },
+      "distanceMM": 0.9500000000000028,
+      "newStitch": true
+    },
+    {
+      "signalVia": "CC2_RECEIVER_V",
+      "net": "USB_CC2",
+      "xy": [
+        44.7,
+        10.1016
+      ],
+      "return": {
+        "xy": [
+          43.8,
+          10.7764
+        ],
+        "source": "native_GND_via"
+      },
+      "distanceMM": 1.1248800113789967,
+      "newStitch": false
+    },
+    {
+      "signalVia": "VBUS_LEFT_V",
+      "net": "USB_VBUS",
+      "xy": [
+        36.9,
+        9.2
+      ],
+      "return": {
+        "xy": [
+          36.077,
+          8.725
+        ],
+        "source": "APP_RETURN_VBUS_LEFT_V"
+      },
+      "distanceMM": 0.9502389173255326,
+      "newStitch": true
+    }
+  ],
+  "failures": [
+    {
+      "signalVia": "CC2_ENTRY_V",
+      "net": "USB_CC2",
+      "xy": [
+        41.75,
+        8.3
+      ],
+      "reason": "No fully screened APP-GND stitch <=1.5mm; explicit topology review required"
+    }
+  ],
+  "scope": "Distance is a geometry screen only: not proof of reference continuity, return-current distribution, impedance or EMI. Excludes HSE quiet island and guard region. Drill/solder-mask/body/assembly assumptions remain."
+}

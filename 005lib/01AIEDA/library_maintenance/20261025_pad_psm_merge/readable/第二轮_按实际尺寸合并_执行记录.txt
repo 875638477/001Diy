@@ -1,0 +1,51 @@
+﻿按实际几何合并公共焊盘与封装：执行记录
+日期：2026-10-25（Asia/Shanghai）
+结果：PASS，已应用到实际公共库并以 Cadence 17.2 重读验证。
+
+本轮新增合并
+焊盘 PAD：50 个路径。
+封装 PSM：38 个路径。
+封装/图形源文件 DRA：44 个路径。
+辅助形状 SSM：5 个路径；辅助热焊图形 FSM：1 个路径。
+总计 138 个旧路径已指向各自主文件的同一 NTFS 实体。
+旧名称保留为兼容硬链接，因此目录里的名称数不减少；实体内容已经合并。
+C/R/L 开头的封装、辅助符号保持原样，逐文件 SHA 验证通过。
+上一轮删除的数字0402/0603/0805带后缀封装，本轮没有恢复或新增。
+
+实际尺寸与几何依据
+不是按文件名、外框或引脚数量判重复。
+焊盘先精确换算到mm，1 mil=0.0254mm，不设置尺寸相近公差。
+比较每个铜层、阻焊、锡膏、热焊与隔离盘、孔径/槽孔/镀孔、公差、偏移、圆角以及行为选项。
+自定义SHAPE/FLASH先以compiled文件原始单位/精度读取完整几何，确认一致后再归一引用。
+例如14c.pad与ball14.pad：铜直径0.3556mm、阻焊0.508mm、锡膏0.3556mm，实际完整定义相同，已合并。
+仅钻孔绘图图例不同的12条别名也合并为主焊盘图例；实体铜、孔、阻焊、锡膏均未改变。
+
+封装比较
+先筛选2110个非C/R/L的PSM；用官方extracta读取2110份原始单位/精度/图纸范围。
+候选按各自原单位、精度和范围，在隔离空板逐件重新加载，排除实际LOAD有舍入警告或错误的结果。
+比较引脚原编号、相对位置、角度/镜像、焊盘完整原始XML定义、各层完整图形、丝印/固定文字、字体笔画、普通属性与STEP主/备用映射。
+REF DES与COMPONENT VALUE只规范动态内容，保留位置、角度、字体及引用。
+例如ao3413_sot23-3与ao3414_sot23-3名称与文件内容不同，完整实际几何一致，已合并。
+源DRA单独读取其原生几何，不假设DRA与已编译PSM自动同步；源文件只有自身完整几何一致才合并。
+
+验证与备份
+全部合并先在工作区用独立master副本和旧名硬链接模拟，原生重新加载后逐项比原始别名几何。
+应用后再次读取实际库：50个PAD别名及46个PAD主名、38个PSM别名、44个DRA和6个辅助图形全部通过。
+本轮基线全部13094个文件校验通过，138个别名均与主文件具有同一Windows文件身份。
+所有被替换原件均在写入前独立备份并核验SHA，备份目录：
+D:\001DIY\005lib\_library_geometry_backup_20261025
+恢复脚本：该备份目录内 Apply-PhysicalMerge.ps1 -Rollback。
+回滚先解除硬链接再复制原件，避免写穿主文件；恢复后核验SHA。
+PCB、DSN、网表及环境配置没有修改。
+
+保留项与范围
+铜尺寸相同但钻孔、阻焊、锡膏、其它实体层或行为选项不同，保留区别。
+4个无有效几何的PAD、缺少库依赖或有读取/舍入警告的PSM、空几何DRA，不由不完整证据推导新合并。
+异常详情保留在psm_original_unit_retry_verified/manifest_audited.json、psm_candidates_native_final/manifest_audited.json、dra_geometry_final.json。
+后续只修改某个兼容旧名时，应先复制成独立文件；原地编辑硬链接会同时影响同组名称。
+
+清单与机器证据
+physical_merge_plan.csv：本轮每个旧名、主名、原始SHA和原生几何证明。
+canonical_physical_index.csv：每组唯一主文件及兼容旧路径。
+final_library_verification.json：全库文件、硬链接、备份和C/R/L保护核验。
+live_physical_pad_verification.json、live_physical_symbol_verification.json、live_psm_alias_verification_20261025_123306_444789\verification.json：实际库原生重读结果。

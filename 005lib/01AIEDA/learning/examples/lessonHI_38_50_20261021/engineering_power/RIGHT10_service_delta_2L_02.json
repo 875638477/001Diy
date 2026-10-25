@@ -1,0 +1,12 @@
+{
+  "status": "JOINT_SERVICE_DELTA_PENDING_COMBINED_CHECK",
+  "variant": "2L",
+  "sourcePlan": "plans/GPIO_south_joint_root_v8.json",
+  "removePendingOperations": [
+    "SOUTH_RETURN_SWDIO",
+    "SOUTH_GND_SWDIO_BRANCH"
+  ],
+  "replacementRightPlan": "engineering_power/RIGHT10_FULL_2L_v11.json",
+  "servicePlanUnchanged": "plans/root_south_services_2L_v16.json",
+  "explanation": "Remove only unexecuted SWDIOground43,21.5+branch, preserve directVSS35. SWDIOsourceGND actualC14via42.3252,19.35 distance2.07145mm and initialdebuglowrate condition, externalprobeedge stillneeds returnreview. SWCLK bridge avoids allidentifiedcrossings whilekeeping J9 actualpinorder. No componentmoves beyondexistingjointplans."
+}

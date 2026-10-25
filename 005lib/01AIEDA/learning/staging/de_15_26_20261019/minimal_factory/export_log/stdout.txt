@@ -1,0 +1,22 @@
+INFO(ORCAP-36080): Scanning netlist files ...
+
+Loading... D:\001DIY\005lib\01AIEDA\learning\staging\de_15_26_20261019\minimal_factory\netlist/pstchip.dat
+
+Loading... D:\001DIY\005lib\01AIEDA\learning\staging\de_15_26_20261019\minimal_factory\netlist/pstchip.dat
+
+Loading... D:\001DIY\005lib\01AIEDA\learning\staging\de_15_26_20261019\minimal_factory\netlist/pstxprt.dat
+
+Loading... D:\001DIY\005lib\01AIEDA\learning\staging\de_15_26_20261019\minimal_factory\netlist/pstxnet.dat
+packaging the design view...#228 ERROR(SPCODD-228): Cannot package the following primitive instance in any section of the physical part 'DE_RES_0603_1K'.
+      Primitive Instance: @de_integrated_two_res.top(sch_1):ins19@de_training_two_res.\de_res.normal\(chips) (MODULE: DE_INTEGRATED_TWO_RES; PART: DE_RES)
+      The primitive instance has pins which does not match the section definition in chips.prt. Check the pin definitions for each section in the chips.prt file. Regenerate the netlist and rerun packager.
+       
+	Details: This error occurs when the entity/verilog.v file is not in sync with the physical part used in the design and Packager-XL fails to package the primitive instance in any of the sections of the physical part. Rewrite the part symbols with the new name. This will create a new entity/verilog.v file and then package the design.
+#53 ERROR(SPCODD-53): Packaging cannot be completed because packaging has encountered a null object ID. The design may not have been saved correctly. Save the design before packaging.
+      ERROR(SPCODD-391): 
+      Reference Designator: R32. Could not pack schematic instance @de_integrated_two_res.top(sch_1):ins19@de_training_two_res.\de_res.normal\(chips) (MODULE: DE_INTEGRATED_TWO_RES; PART: DE_RES) in sections.
+      
+#53 ERROR(SPCODD-53): Packaging cannot be completed because packaging has encountered a null object ID. The design may not have been saved correctly. Save the design before packaging.
+      ERROR(SPCODD-384): Error at line 18 in file D:\001DIY\005lib\01AIEDA\learning\staging\de_15_26_20261019\minimal_factory\netlist/pstxnet.dat. Could not package design view
+      
+#1 ERROR(ORCAP-36026): Unable to read logical netlist data.

@@ -1,0 +1,1495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html xmlns="http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Getting Started with Physical Design -- 4</title>
+<META NAME="Approver" CONTENT="Technical Publications">
+<META NAME="Author" CONTENT="Technical Publications">
+<META NAME="CreateDate" CONTENT="2018-04-17">
+<META NAME="CreateTime" CONTENT="1523941070">
+<META NAME="DataType" CONTENT="Manuals">
+<META NAME="Description" CONTENT="Describes how to use Allegro PCB Editor, Allegro Package Designer, and System-in-Package tools.">
+<META NAME="DocTitle" CONTENT="Getting Started with Physical Design">
+<META NAME="DocType" CONTENT="User Guide">
+<META NAME="EdmsRelease" CONTENT="FM-Wiki-2.0_HF2">
+<META NAME="FileTitle" CONTENT="4">
+<META NAME="FileType" CONTENT="Chapter">
+<META NAME="Group" CONTENT="Allegro User Guide">
+<META NAME="Keyword" CONTENT="algrostart">
+<META NAME="Language" CONTENT="English">
+<META NAME="ModifiedDate" CONTENT="2018-04-17">
+<META NAME="ModifiedTime" CONTENT="1523941070">
+<META NAME="NextFile" CONTENT="chap4.html">
+<META NAME="Order" CONTENT="2">
+<META NAME="PageCount" CONTENT="16">
+<META NAME="Platform" CONTENT="ALL">
+<META NAME="PrevFile" CONTENT="chap2.html">
+<META NAME="Product" CONTENT="Allegro PCB Editor, Cadence SiP Digital, Cadence SiP RF">
+<META NAME="ProductFamily" CONTENT="Silicon-Package-Board Co-Design, Silicon-Package-Board Co-Design, Silicon-Package-Board Co-Design">
+<META NAME="ProductVersion" CONTENT="17.2-2016">
+<META NAME="RightsManagement" CONTENT="Copyright 19912017 Cadence Design Systems Inc.">
+<META NAME="Title" CONTENT="Getting Started with Physical Design -- 4">
+<META NAME="TopicTags" CONTENT="FALSE">
+<META NAME="Version" CONTENT="17.2-2016">
+  </head>
+  <body style="margin-left: 5%;">
+    <a name="pagetop"></a>
+    <a name="firstpage"></a>
+    <!-- Begin Buttons -->
+    <table width="650" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td height="36" width="650" colspan="10">
+          <img src="images/header_doc.gif" width="650" height="34">
+        </td>
+      </tr>
+      <tr>
+        <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+
+                </td>
+<td height="20" width="73">
+<a href="algrostartTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+
+        <td>
+          <a href="chap2.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+        </td>
+        <td>
+          <a href="chap4.html"><img src="images/nav_next.gif" alt="Next" border="0"></a>
+        </td>
+        <td height="20">
+          <a>
+<a href="algrostart.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+
+          </a>
+        </td>
+        <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+
+        </td>
+        <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+
+        </td>
+        <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+
+        </td>
+        <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+
+        </td>
+      </tr>
+    </table>
+    <!-- End Buttons -->
+    <p>
+    <hr>
+    <p>
+      <h3>
+        <center>
+          <font >
+            <div>Allegro&#174; User Guide: Getting Started with Physical Design</div>
+            <font >
+              <div>Product Version 17.2&#45;2016 April 2016</div>
+            </font>
+          </font>
+        </center>
+      </h3>
+      <br>
+    </p>
+    <div>
+      <h1>4<a name="1044799">&nbsp;</a></h1>
+      <h1><a name="1044801">Managing Environment Variables</a></h1>
+      <p><a name="1031808">This chapter describes how you can use environment variables to set operating conditions at the local and site levels. It includes a description of the global environment. It also describes how to set user&#45;defined variables. Included in this chapter are these topics:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1040551" title="4" name="1039431"><font color="#0000ff"><u>The Global Environment File</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1041239" title="4" name="1039436"><font color="#0000ff"><u>Setting User&#45;Defined Variables</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1035678" title="4" name="1039440"><font color="#0000ff"><u>Setting Project Level and Site Customization Variables</u></font></a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <font size="3"><img src="images/important.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="global_env_file"></a><a name="1040539">The layout editor uses environment variables specified in the local </a><font size="2" face="'Courier New'" color="#000000">env</font> file or in the interactive User Preferences Editor dialog box to set padstack, footprint, and other search paths. If you define search paths such as PADPATH in Allegro Project Manager rather than in the layout editor, you must use Project Manager to launch the layout editor to locate the specified files.</font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1040551">The Global Environment File</a></h2>
+      <p><a name="1040555">The layout editor provides a global environment file during installation.This ASCII text file contains system and configuration information critical to the operation of the software in the form of variables and aliases.</a></p>
+      <p><a name="1031825">The global environment file (</a><font size="2" face="'Courier New'" color="#000000">envenv</font>) resides in the the layout editor install directory in:</p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1042496"><font size="2" face="'Courier New'" color="#000000">$allegro_install_root\share\pcb\text</font></a> </font>
+      </blockquote>
+      <p><a name="1042501">The layout editor looks for the </a><font size="2" face="'Courier New'" color="#000000">env</font> file in this location on startup and, if not found there, generates an error message. </p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <strong><em><img src="images/caution.gif" alt="ParagraphBullet" border="0"></em></strong>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <strong><em><a name="1040615">Do not move the </a><font size="2" face="'Courier New'" color="#000000">env</font> file nor copy or modify the contents. Changes made to the file will be lost if you reinstall your layout editor or if you upgrade the software. See <a href="#1041239" title="4"><font color="#0000ff"><u>Setting User&#45;Defined Variables</u></font></a> for details on how to customize local environment variables.</em></strong>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h3><a name="1040623">Variables</a></h3>
+      <p><a name="1031834">The layout editor uses other configuration variables to locate system files for menus, forms, and messages. For example:</a></p>
+      <blockquote>
+        <font size="2" face="Courier" color="#000000"></font>
+        <font size="2" face="Courier" color="#000000"><a name="1042504"><font size="2" face="'Courier New'" color="#000000">set alibpath = . D:\PCBENV\share\PCB\pcb_lib</font></a></font>
+      </blockquote>
+      <p><a name="1031835">In addition to these configuration variables, the global </a><font size="2" face="'Courier New'" color="#000000">env</font> file also contains the Cadence default library search path variables that determine how the layout editor searches for various types of files, for example: symbol, device, and help files. Typically, these paths are modified. For information on modifying these variables, see <a href="#1035678" title="4"><font color="#0000ff"><u>Setting Project Level and Site Customization Variables</u></font></a>, and <a href="#1041239" title="4"><font color="#0000ff"><u>Setting User&#45;Defined Variables</u></font></a>.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <font size="3"><img src="images/important.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1031836">In either case, do not move these directories without making the appropriate changes in the path variables or the layout editor generates errors and will fail to locate information.</a></font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="1031894">Library Path Variables</a></h4>
+      <p><a name="1042507">The global environment file contains the library search paths to all the libraries that are provided with the layout editor. In a local environment file, you can add or modify environment variables that define custom library search paths; for example, to locate component libraries for specific design projects. This procedure is explained in more detail in </a><a href="#1041768" title="4"><font color="#0000ff"><u>Defining Library Path Variables in a Local env File</u></font></a>. </p>
+      <h3><a name="1031900">System Variables</a></h3>
+      <p><a name="1031901">The </a><font size="2" face="'Courier New'" color="#000000">env</font> file controls the appearance and behavior of the layout editor through variables that modify graphics displays, control automatic save functions and plotting, allow file versioning, influence glossing, change the contents of backannotation files, and perform other functions. However, not every variable is included in the installed <font size="2" face="'Courier New'" color="#000000">env</font> file. See <a href="#1041239" title="4"><font color="#0000ff"><u>Setting User&#45;Defined Variables</u></font></a> for a list of variables you add at the local level.</p>
+      <p><a name="1038823">The following variables should not be used in user&#45;defined programs that are not going to be used for the layout editor&#45;specific applications:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1038798">CDS_SITE </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1038809">ALLEGRO_SITE </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1038810">TELENV </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1038811">ALLEGRO_INSTALL_DIR </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1038799">ALLEGRO_INSTALL_TOOLS </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1038815">ALLEGRO_INSTALL_ROOT </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1038816">ALLEGRO_TYPE</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1038796">__UNIX (if UNIX)</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1038817">_PROGRAM </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1038819">HOME </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1038820">LOCALPATH</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1038821">LOCALENV</a></td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="setting_user_defined_variables"></a><a name="1041239">Setting User&#45;Defined Variables </a></h2>
+      <p><a name="1039426">User&#45;defined variables let you add or modify certain behaviors to the layout editor. Variables can be set at the local level to provide you with pathways to individual project directories and associated libraries, accommodate individual display preferences, or set certain behaviors. </a></p>
+      <p><a name="1039067">To set user&#45;defined variables, use one of these methods:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039068">Modifying the local env file</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039069">Setting variables at the console window prompt</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1039070">The User Preferences Editor</a></td>
+          </tr>
+        </table>
+      </div>
+      <h3><a name="1041745">Modifying a Local env File</a></h3>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041746">Locate your </a><font size="2" face="'Courier New'" color="#000000">env</font> file in the <font size="2" face="'Courier New'" color="#000000">pcbenv</font> directory.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041747">Open the file using an ASCII text editor.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+        <font size="2" face="Courier" color="#000000"></font>
+        <font size="2" face="Courier" color="#000000"><a name="1041748"><font size="2" face="'Courier New'" color="#000000">source $TELENV</font></a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="Courier" color="#000000"></font>
+        <font size="2" face="Courier" color="#000000"><a name="1041749">&nbsp;</a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="Courier" color="#000000"></font>
+        <font size="2" face="Courier" color="#000000"><a name="1041750"><font size="2" face="'Courier New'" color="#000000">### User Preferences section</font></a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="Courier" color="#000000"></font>
+        <font size="2" face="Courier" color="#000000"><a name="1041751"><font size="2" face="'Courier New'" color="#000000">### This section is computer generated.</font></a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="Courier" color="#000000"></font>
+        <font size="2" face="Courier" color="#000000"><a name="1041752"><font size="2" face="'Courier New'" color="#000000">### Please do not modify to the end of the file.</font></a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="Courier" color="#000000"></font>
+        <font size="2" face="Courier" color="#000000"><a name="1041753"><font size="2" face="'Courier New'" color="#000000">### Place your hand edits above this section.</font></a></font>
+      </blockquote>
+      <blockquote>
+        <font size="2" face="Courier" color="#000000"></font>
+        <font size="2" face="Courier" color="#000000"><a name="1041754"><font size="2" face="'Courier New'" color="#000000">###</font></a></font>
+      </blockquote>
+      <blockquote><a name="1041755">The pound sign as the first non&#45;whitespace character tells the system to ignore the information on that line. Comment lines can be inserted anywhere in the file. </a></blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <font size="3"><img src="images/important.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1041756">Do not modify line one of the local env file. Line one contains the source command which tells the system to read and execute all the information in the global environment file. </a></font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1041921">Any data that you enter after line one in the local file becomes part of the "instruction set" of the the layout editor software. Entries before the commented section are permanently saved in the file. </a></blockquote>
+      <blockquote><a name="1041763">The location of information in the local file is pertinent. Do not insert text below the commented section. This area is reserved for User Preferences Editor insertions. These insertions override values located above the commented section.</a></blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041764">When you have finished adding or modifying variables in the local env file, save your changes and close the file.</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a href="#1041954" title="4" name="1041941"><font color="#0000ff"><u>Figure 4&#45;1</u></font></a> illustrates a modified local env file.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 4&#45;1&nbsp; </strong></font></strong>
+        <strong><a name="1041954">Modified Local env File</a></strong>
+      </p>
+      <p align="left"><a name="1041965"><img src="images/chap3.06.1.1.png" width="675" height="181" alt=""><br></a></p>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1041765">For Windows users only: if a variable path value contains a space, the path strings must be enclosed with quotation marks. For example, </a><font size="2" face="'Courier New'" color="#000000">set psmpath= .</font> "<font size="2" face="'Courier New'" color="#000000">.&#47;symbols smt</font>"</p>
+      <h4><a name="defining_library_path_variables"></a><a name="1041768">Defining Library Path Variables in a Local env File</a></h4>
+      <p><a name="1041769">When you create a new library, you can enter a library path variable in your local environment file that accesses that library instead of the default libraries provided with the layout editor. </a></p>
+      <p><a name="1041776">The pathname is a directory search list. The layout editor looks for data in the order listed in the path. For example:</a></p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041777">set PSMPATH = . symbols ..&nbsp;&nbsp; ..&#47;symbols $LIBPATH&#47;symbols </a></font>
+      </blockquote>
+      <p><a name="1041778">defines a search path that looks for the required directory (symbols) in the current working directory. If there is a symbols library, the layout editor accesses it for symbols as needed. If there is no symbols library in the current working directory, the layout editor continues to look in the next directories higher up. If no user&#45;created symbols libraries are found, the layout editor uses the installed symbols library.</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041790">Place project directories containing custom libraries in a location other than the software&#45;installed libraries. </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1041792">In your local environment file, enter the new library search path variable.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1041793">Example: You have created a custom symbols library for a project, and have placed that library in a directory called </a><font size="2" face="'Courier New'" color="#000000">sym_pro1</font> in the current working directory. In your local <font size="2" face="'Courier New'" color="#000000">env</font> file, <font color="#000000"><em>under</em></font> the line that sources the global <font size="2" face="'Courier New'" color="#000000">env</font>, add this line:</blockquote>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041794">set PSMPATH = .&#47;sym_pro1 .. &nbsp;&nbsp;..&#47;symbols $LIBPATH&#47;symbols </a></font>
+      </blockquote>
+      <blockquote><a name="1041798">The layout editor searches this path for the symbol library instead of the symbols path name in the global env file.</a></blockquote>
+      <h3><a name="1041743">Setting Variables at the Console Window Prompt</a></h3>
+      <p><a name="1041317">You can override variables and aliases in your local environment file by entering </a><font size="2" face="'Courier New'" color="#000000">set</font> commands at the console window prompt. Commands that you set here remain in effect for the duration of the current work session.</p>
+      <h4><a name="1039078">The </a><font size="2" face="'Courier New'" color="#000000"><strong>set</strong></font> Command</h4>
+      <p><a name="1039079">The </a><font size="2" face="'Courier New'" color="#000000">set</font> command is one way that you can define or replace an environment variable for the current session. Only environment variables that have immediate effectivity apply to the current session. For more information about when variables become effective, see the User Preferences Editor dialog box. To set these environment variables permanently, either use the User Preferences Editor dialog box or manually edit the local <font size="2" face="'Courier New'" color="#000000">env</font> file. </p>
+      <p><a name="1039083">The syntax for the </a><font size="2" face="'Courier New'" color="#000000">set</font> command is:</p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1039084">set variable_name = value(s)</a></font>
+      </blockquote>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1039085">Methods for setting environment variables vary according to the shell you are using. If you are using </a><font size="2" face="'Courier New'" color="#000000">csh</font>, for example, you can set variables using the <font size="2" face="'Courier New'" color="#000000">setenv</font> command. If you do not know what shell you are using, refer to your operating&#45;system documentation or see your system administrator.</p>
+      <p><a name="1039104">A simple example is setting the database to save your work automatically every 30 minutes. In your local </a><font size="2" face="'Courier New'" color="#000000">env</font> file: </p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1039387">set autosave_time = 30</a></font>
+      </blockquote>
+      <blockquote><font color="#000000"><strong>Note: </strong></font><a name="1039105">An autosave only occurs if you make changes to a design; if you open a design without editing it, no autosave occurs. Nor does an autosave occur while a command is active. If a command is active when an autosave is due to occur, the message "</a><font size="2" face="'Courier New'" color="#000000">Autosave pending</font>" appears on the command line. Once you exit the command, the autosave then proceeds as scheduled.</blockquote>
+      <p><a name="1039106">To disable settings in your local file, you can delete the entry or use the </a><font size="2" face="'Courier New'" color="#000000">unset</font> command. </p>
+      <h4><a name="1039107">The</a><font size="2" face="'Courier New'" color="#000000"><strong> settoggle</strong></font> Command</h4>
+      <p><a name="1039108">Use the </a><font size="2" face="'Courier New'" color="#000000">settoggle</font> command to change the value of an environment variable based on its current value and a list of possible values. The syntax for the <font size="2" face="'Courier New'" color="#000000">settoggle</font> command is:</p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1039109"><font size="2" face="'Courier New'" color="#000000">settoggle </font></a><font color="#000000"><em>&#60;variable name&#62; [value1] [value2] ... [value n]</em></font></font>
+      </blockquote>
+      <p align="left"><a name="1041890">&nbsp;</a></p>
+      <table summary="" border="1" cellpadding="5" cellspacing="0" width="624">
+        <tr>
+          <td cellpadding="4" border="2" bordercolor="#000000" valign="top" width="120">
+            <p><a name="1041817"><font color="#000000"><strong>variable name</strong></font></a></p>
+          </td>
+          <td colspan="2" cellpadding="4" border="2" bordercolor="#000000" valign="top" width="504">
+            <p><a name="1041819">required environment variable name</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top" width="120">
+            <p><a name="1041823"><font color="#000000"><strong>values [1 &#45; n]</strong></font></a></p>
+          </td>
+          <td colspan="2" cellpadding="4" valign="top" width="504">
+            <p><a name="1041825">an	 optional list of possible values for the environment variable</a></p>
+            <p><a name="1041826">&nbsp;</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top" width="120">
+            <p><a name="1041830">&nbsp;</a></p>
+          </td>
+          <td cellpadding="4" valign="top" width="192">
+            <p><a name="1041832">			If you specify no optional values...</a></p>
+          </td>
+          <td cellpadding="4" valign="top" width="312">
+            <p><a name="1041836">...and the variable is unset, the layout editor sets the variable with a value of &#34; &#34;, which is equivalent to:</a></p>
+            <p>
+              <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041838">&nbsp;&nbsp;&nbsp;&nbsp;set </a><font color="#000000"><em>&#60;variable name&#62;</em></font></font>
+            </p>
+            <p><a name="1041839">&nbsp;</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1041841">&nbsp;</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1041843">&nbsp;</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1041847">...and the variable is currently set, the layout editor unsets the variable, which is equivalent to:</a></p>
+            <p>
+              <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041849">&nbsp;&nbsp;&nbsp;&nbsp;unset </a><font color="#000000"><em>&#60;variable name&#62;</em></font></font>
+            </p>
+            <p>
+              <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041850">&nbsp;</a></font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1041852">&nbsp;</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1041854">If you specify one value...</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1041858">...and the variable is unset, the layout editor sets the variable to that of the specified value				, which is equivalent to:</a></p>
+            <p>
+              <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041860">  &nbsp;&nbsp;&nbsp;&nbsp;set </a><font color="#000000"><em>&#60;variable name&#62; value 1</em></font></font>
+            </p>
+            <p>
+              <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041861">&nbsp;</a></font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1041863">&nbsp;</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1041865">&nbsp;</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1041869">...and the variable is currently set, the layout editor unsets the variable, which is equivalent to:</a></p>
+            <p>
+              <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1041871">unset </a><font color="#000000"><em>&#60;variable name&#62;</em></font></font>
+            </p>
+            <p><a name="1041872">&nbsp;</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1041874">&nbsp;</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1041876">If you specify more than one value...</a></p>
+          </td>
+          <td cellpadding="4" border="1" bordercolor="#000000" valign="top">
+            <p><a name="1041881">...the layout editor substitutes the value listed immediately after the current environment variable value for the current variable. The comparison is case insensitive. The layout editor sets the environment variable to the first value in the value 				list when the variable:</a></p>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1041885">is currently unset</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1041886">			has a value not in the list</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1041887">				has the same value as the last item in the value list</a></td>
+                </tr>
+              </table>
+            </div>
+            <p><a name="1041888">This is equivalent to:</a></p>
+            <p><a name="1041889"><font color="#000000">set </font></a><font color="#000000"><em>&#60;variable name&#62; value 1</em></font></p>
+          </td>
+        </tr>
+      </table>
+      <h4>
+        <em></em>
+        <em><a name="1041891">Command Examples for </a><font size="2" face="'Courier New'" color="#000000"><strong>settoggle </strong></font></em>
+      </h4>
+      <p><a name="1041892"><font color="#000000"><strong>Example 1</strong></font></a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1039170">The following unsets the </a><font size="2" face="'Courier New'" color="#000000">pcb_cursor</font> environment variable:</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1039171">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unset pcb_cursor</a></font>
+      </blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1039172">The following sets the </a><font size="2" face="'Courier New'" color="#000000">pcb_cursor</font> environment variable to <font size="2" face="'Courier New'" color="#000000">infinite</font>:</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1039173">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;settoggle pcb_cursor infinite cross</a></font>
+      </blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1039174">The following sets the </a><font size="2" face="'Courier New'" color="#000000">pcb_cursor</font> environment variable to <font size="2" face="'Courier New'" color="#000000">cross</font>:</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1039175">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;settoggle pcb_cursor infinite cross</a></font>
+      </blockquote>
+      <p><a name="1039176"><font color="#000000"><strong>Example 2</strong></font></a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1039177">The following unsets the </a><font size="2" face="'Courier New'" color="#000000"><em>display_drcfill</em></font> environment variable:</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1039178">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unset display_drcfill</a></font>
+      </blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1039179">The following sets the </a><font size="2" face="'Courier New'" color="#000000"><em>display_drcfill</em></font> environment variable: </td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1039180">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;settoggle display_drcfill</a></font>
+      </blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1039181">	 The following unsets the </a><font size="2" face="'Courier New'" color="#000000"><em>display_drcfill</em></font> environment variable: </td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1039182">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;settoggle display_drcfill</a></font>
+      </blockquote>
+      <h3><a name="1041572">The User Preferences Editor</a></h3>
+      <p><a name="1041573">You can set or unset environment variables from the User Preferences Editor, a graphical user interface that you open by choosing </a><font color="#000000"><em>Setup - User Preferences</em></font> (<a href="../ecoms/echap.html#enved" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>enved</u></font></a> command). A list of all user preference variables and a complete description appears when you click <font color="#000000"><em>Info</em></font> in the User Preferences Editor dialog box. A summary description of each variable also appears at the bottom of the dialog box when you change a value. </p>
+      <h4><a name="1041579">Customizing the User Preferences Editor</a></h4>
+      <p><a name="1043517">You can tailor the User Preferences Editor to display variables in groupings that meet your design needs, using either of the following:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1043546">A </a><font color="#000000"><em>My Favorites</em></font> category </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1043554">Preference (.</a><font size="2" face="'Courier New'" color="#000000">prf</font>) files</td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1043712">The</a><font color="#000000"><em> My Favorites</em></font> category in the tree view in the User Preferences Editor centralizes frequently accessed variables. Selecting the <font color="#000000"><em>Favorites</em></font> check box next to a variable includes it in <font color="#000000"><em>My Favorites, </em></font>in addition to its current category; deselecting the check box removes the variable from <font color="#000000"><em>My Favorites</em></font>. Any change to the <font color="#000000"><em>My Favorites </em></font>folder updates the <font size="2" face="'Courier New'" color="#000000">my_favorites.prf</font> file in the <font size="2" face="'Courier New'" color="#000000">pcbenv</font> directory. </p>
+      <p><a name="1043724">The User Preferences Editor dialog box displays groupings of preferences (user&#45;defined environment variables) through a mechanism called a user preference file.  Preference (.</a><font size="2" face="'Courier New'" color="#000000">prf</font>) files specify variables and their associated categories, so they can be used to customize the tree view control in the <font color="#000000"><em>Category </em></font>section of the User Preferences Editor dialog box. </p>
+      <p><a name="1043880">The tree view contains parent and child categories, as opposed to a single&#45;depth listing of categories.  A category named </a><font color="#000000"><em>xyz</em></font> may have categories beneath it called <font color="#000000"><em>abc, def, </em></font>and <font color="#000000"><em>ghi,</em></font> for example. Use the PARENT_L entry in the <font size="2" face="'Courier New'" color="#000000">.prf</font> file to assign a parent category to any child category.</p>
+      <p><a name="1043881">Note the following:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1043832">Unless explicitly specified within the file, the name of the preference file determines the name of a category that appears in the dialog box. The name of the category associated with a preference file can be specified within the </a><font size="2" face="'Courier New'" color="#000000">.prf</font> file via the PARENT_L entry. </td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1043872">If no PARENT_L is specified at the beginning of the </a><font size="2" face="'Courier New'" color="#000000">.prf</font> file, then the name of the file determines the category appearing in the dialog.  Otherwise, the PARENT_L string does. For example, for a file named <font size="2" face="'Courier New'" color="#000000">xyz.prf,</font> with the appropriate entry within that file, you can specify that its associated category be <font color="#000000"><em>abc</em></font> instead of <font color="#000000"><em>xyz</em></font>. </blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1043813">Each entry in the file describes an environment variable that corresponds to one displayed in the User Preferences Editor dialog box.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1043814">Entries in the </a><font size="2" face="'Courier New'" color="#000000">.prf </font>file do not contain or store value settings.  They contain only the descriptions of the variables contained in the category.  A variable&#39;s settings are saved to a user preferences section of your local <font size="2" face="'Courier New'" color="#000000">env</font> file</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <font size="3"><img src="images/important.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <font size="3"><a name="1041665">When you create </a><font size="2" face="'Courier New'" color="#000000">.prf</font> files, ensure there are no blank lines at the end of the file. Blank lines in a user&#45;created <font size="2" face="'Courier New'" color="#000000">.prf </font>file may cause the layout editor to crash.</font>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1041672">Default reference files supplied by Cadence are located in your Allegro software install directory. Searching begins at the local level, so that preference files stored locally or in your home directory take precedence over preference files of the same name located elsewhere; for example, at a customer site location available to a group of users.</a></p>
+      <h2><a name="1035678">Setting Project Level and Site Customization Variables</a></h2>
+      <p><a name="1035688">If you are working within an HDL&#45;based project, you may want to specify design library search paths at the project level to enhance integration of these tools into the design flow. If you are a CAD site administrator, you can customize the the layout editor environment for your work place.</a></p>
+      <h3><a name="1035693">Project File Variables</a></h3>
+      <p><a name="1035694">To better integrate a project into HDL&#45;based design flows, you can base design path variables on the contents of the standard HDL </a><font size="2" face="'Courier New'" color="#000000">(.cpm</font>) file. This file controls variable settings when you work with HDL&#45;based hierarchy; that is, when you open the Allegro software through Program Manager. You can also set environment variables when you run <font size="2" face="'Courier New'" color="#000000">enved</font> with a special option (see <a href="#1035736" title="4"><font color="#0000ff"><u>Setting .cpm Variables</u></font></a>). </p>
+      <p><a name="1035928">If design path variables are not set in the </a><font size="2" face="'Courier New'" color="#000000">.cpm</font> file, your design tool uses the variables defined in the PATH settings of your local environment file. The <font size="2" face="'Courier New'" color="#000000">.cpm</font> file supports any of the following design variables:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035766">PARAMPATH</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1043413">PSMPATH</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035769">PADPATH</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035770">TECHPATH</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035771">MODULEPATH</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035772">TOPOLOGY_TEMPLATE_PATH</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035773">SIGNOISEPATH</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1035734">The </a><font size="2" face="'Courier New'" color="#000000">.cpm</font> design path settings defines the<font color="#000000"><em> </em></font><font size="2" face="'Courier New'" color="#000000">.cpm</font> project file at your user&#45;defined location</p>
+      <h4><a name="1035736">Setting .cpm Variables</a></h4>
+      <p><a name="1035787">You can set </a><font size="2" face="'Courier New'" color="#000000">.cpm</font>&#45;based design path variables by:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035778">Editing the </a><font size="2" face="'Courier New'" color="#000000">.cpm</font> file</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035779">Accessing the env file </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1038128">Running Tool Setup in Project Manager</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035780">Using the </a><font size="2" face="'Courier New'" color="#000000">enved</font> command with the <font size="2" face="'Courier New'" color="#000000">&#45;proj &#60;</font><font color="#000000"><em>.cpm file location</em></font><font size="2" face="'Courier New'" color="#000000">&#62;</font> option. This is the recommended method and the one described in this section.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1035790">Run the </a><font size="2" face="'Courier New'" color="#000000">enved</font> command from your operating system prompt with the <font size="2" face="'Courier New'" color="#000000">&#45;proj</font> option, as shown in the example:</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1035791">enved &#45;proj&#60;.cpm file location&#62;</a></font>
+      </blockquote>
+      <blockquote><a name="1035801">The User Preferences Editor opens.</a></blockquote>
+      <blockquote><font color="#000000"><strong>Note: </strong></font><a name="1035792">You cannot run </a><font size="2" face="'Courier New'" color="#000000">enved</font> with the <font size="2" face="'Courier New'" color="#000000">&#45;proj</font> option from the command prompt in the layout editor.</blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1035794">Choose </a><font color="#000000"><em>Design_paths</em></font> from the Categories list.</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1035812">The design path preferences are listed in the dialog box. The CPM column appears only if you run </a><font size="2" face="'Courier New'" color="#000000">enved</font> with the <font size="2" face="'Courier New'" color="#000000">&#45;proj</font> option. </blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1035848">Check the CPM boxes for the design paths you want defined by the </a><font color="#000000"><em>.</em></font><font size="2" face="'Courier New'" color="#000000">cpm</font> file.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	4.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1035849">Choose </a><font color="#000000"><em>OK</em></font> to save the changes and close the dialog box.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	5.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1035850">Restart the layout editor to put the changes into effect. (This step is necessary only if you are running </a><font size="2" face="'Courier New'" color="#000000">enved</font> in stand&#45;alone mode, or if you are running setup from Project Manager</td>
+          </tr>
+        </table>
+      </div>
+      <h3><a name="1035855">Site Customization</a></h3>
+      <p><a name="1035856">Site customization through the operating&#45;system variable CDS_SITE lets you customize the Cadence&#45;supplied environment by overriding the default site location, </a><font size="2" face="'Courier New'" color="#000000">&#60;cdsroot&#62;&#47;share&#47;local</font>. It allows you to create a directory hierarchy in CDS_SITE where you can place personalized files that extend or enhance your site's entire suite of Cadence tools. In addition to the CDS_SITE variable at the operating&#45;system level, you can set a variable, ALLEGRO_SITE, within the layout editor for individual users. ALLEGRO_SITE lets you locate specific configuration files outside the standard default location, $CDS_SITE&#47;pcb. Site customization does not require any changes to the installation hierarchy or modification to the local environment.</p>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1035859">This feature is designed for use by CAD site administrators.</a></p>
+      <p><a name="1035881">The layout editor searches for site&#45;specific locations in the following order:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035882">$ALLEGRO_SITE (default location: CDS_SITE&#47;pcb) </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035883">$CDS_SITE&#47;pcb</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035884">&#60;cds_root&#62; &#47;local&#47;pcb</a></td>
+          </tr>
+        </table>
+      </div>
+      <h3><a name="1035885">Using CDS_SITE Functionality</a></h3>
+      <p><a name="1035886">The CDS_SITE variable allows you to create directories and files that support the Allegro software functionality. Directories you might choose to create at the CDS_SITE location could include:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035899">Standard script files in a "scripts" directory</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035900">Locally developed Skill programs--and an </a><font color="#000000"><em>allegro.ilinit</em></font> file to load them--in a "skill" directory<br><br>The layout editor searches for Skill files in the following order:</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.872">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.128319999999995">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035966">&#60;cdsroot&#62;&#47;share&#47;pcb&#47;etc&#47;skill (or a user&#45;defined location specified by CDS_SITE)</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.872">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.128319999999995">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035967">$ALLEGRO_SITE&#47;skill</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.872">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.128319999999995">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035968">$HOME&#47;pcbenv</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.872">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.128319999999995">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035969">. (the program's start directory)</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><font color="#000000"><strong>Note: </strong></font><a name="1035970">You can reverse the search order by setting the environment variable </a><font color="#000000"><strong>skill_old_ilinit</strong></font>.</blockquote>
+      <p><a name="1035901">You can also create a </a><font color="#000000"><em>site.env</em></font> file containing variable settings that would propagate across an entire design site. For example:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1038135">Infinite cross&#45;hair cursor</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1035942">Replacement of default Allegro symbol paths with your own</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1035943">To effect these settings, your site.env file would need to contain the following data:</a></p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1035948">set pcb_cursor = infinite</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1035949">set psmpath = . $allegro_site&#47;symbol1 $allegro_site&#47;symbol12</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1035950">set padpath = . $allegro_site&#47;symbol1 $allegro_site&#47;symbol12</a></font>
+      </p>
+      <p><a name="1035957">To load Skill files, your </a><font size="2" face="'Courier New'" color="#000000">allegro.ilinit</font> file must contain specific data. The following is an example of a .<font size="2" face="'Courier New'" color="#000000">ilinit</font> file. (This example file can be found at <font size="2" face="'Courier New'" color="#000000">&#60;cdsroot&#62;&#47;share&#47;local&#47;pcb&#47;skill</font>.)</p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1035977">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038174">; This example file shows how to load Skill files (those with the</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038175">; &nbsp;&nbsp;&nbsp;&nbsp;extension ".il" in the current directory.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038176">; To use, copy to allegro.ilinit if to be used by all Allegro PCB Editor&#45;based programs</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038177">; or &#60;programName&#62;.ilinit if intended for only one program</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038178">;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038179">; Setting Allegro PCB Editor environment variable, LoadSkillFilesDebug will turn</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038180">; on printing the name of each file as it is loaded.</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038181">&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038183">unless(boundp(`LoadSkillFilesDebug) </a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038184">&nbsp;&nbsp;&nbsp;&nbsp;LoadSkillFilesDebug = axlGetVariable("LoadSkillFilesDebug"))</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038185">&nbsp;</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038187">when(LoadSkillFilesDebug printf("\n"))</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038188">(foreach file (rexMatchList "\\.il$" (getDirFiles "."))</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038189">      when(LoadSkillFilesDebug printf("Loading Skill file: %s\n" file))</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038190">      (load strcat(".&#47;" file))</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038191">)</a></font>
+      </p>
+      <p>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038192">when(LoadSkillFilesDebug printf("\n"))</a></font>
+      </p>
+      <h3><a name="1042792">Customizing Default Measurement Units Using CDS_SITE</a></h3>
+      <p><a name="1043097">You may want to customize a default unit value at the site level to accommodate your design requirements. For instance, when you run the </a><a href="../ecoms/echap.html#extracta" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>extracta</u></font></a> command to generate reports for a design, the default measurement units in the <font size="2" face="'Courier New'" color="#000000">$CDS_SITE&#47;pcb&#47;signal</font> directory are used when simulations have not been run on the design (that is, no  <font size="2" face="'Courier New'" color="#000000">signoise.run</font> folder exists containing a <font size="2" face="'Courier New'" color="#000000">cds_signoise.cfg</font> file). For designs for which simulations have been run, a <font size="2" face="'Courier New'" color="#000000">cds_signoise.cfg</font> file exists in the <font size="2" face="'Courier New'" color="#000000">signoise.run</font> folder of each work directory, and the units specified in the <font size="2" face="'Courier New'" color="#000000">cds_signoise.cfg</font> take precedence.</p>
+      <p><a name="1043132">For site&#45;level customization of a default unit value, Cadence recommends copying the Cadence&#45;supplied, system default </a><font size="2" face="'Courier New'" color="#000000">cds_signoise.cfg</font> file located at:</p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043098">&#60;cdsroot&#62;&#47;share&#47;pcb&#47;signal&#47;cds_signoise.cfg</a></font>
+      </blockquote>
+      <p><a name="1043099">to the CDS_SITE directory, the standard location for placing company&#45;wide customization files for Cadence tools:</a></p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1043296">&#60;CDS_SITE&#62;&#47;pcb&#47;signal</a></font>
+      </blockquote>
+      <p><a name="1042812">The CDS_SITE default location is:</a></p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1042822">CDS_SITE = &#60;cdsroot&#62;&#47;share&#47;local</a></font>
+      </blockquote>
+      <p><a name="1042850">For example, to change the default value of </a><font color="#000000"><em>EtchThicknessUnits</em></font> from mil to mm, edit the <font color="#000000"><em>Report Units</em></font> section of the <font size="2" face="'Courier New'" color="#000000">cds_signoise.cfg</font> file to reflect the new value. If no local version of <font size="2" face="'Courier New'" color="#000000">cds_signoise.cfg</font> exists at the design level (<font size="2" face="'Courier New'" color="#000000">.brd</font>), then the tool uses the CDS_SITE version. Once the company site file exists, you may have to delete the local <font size="2" face="'Courier New'" color="#000000">cds_signoise.cfg</font> file to ensure default values refresh.</p>
+      <p><a name="1042861">For designs for which simulations have been run, modify the </a><font color="#000000"><em>Etch Thickness Units</em></font> field on the <font color="#000000"><em>Units</em></font> tab of the <font color="#000000"><em>Analysis Preferences</em></font> dialog box, available by choosing<font color="#000000"><em> Analyze - SI&#47;EMI Sim - Preferences</em></font> (<a href="../scoms/schap.html#signal_prefs" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>signal prefs</u></font></a> command). Modify the <font size="2" face="'Courier New'" color="#000000">cds_signoise.cfg</font> as well to ensure any new designs  function properly.</p>
+      <p><a name="1042873">Cadence does not recommend modification of  </a><font size="2" face="'Courier New'" color="#000000">units.dat,</font> a private Allegro file in the Cadence installation hierarchy, as subsequent installation of patches can overwrite modifications. </p>
+      <h3><a name="1038148">Environment Compatibility</a></h3>
+      <p><a name="1038149">HDL design path information is ignored when you open designs in pre 14.2 releases. In these instances, traditional environment path variables are used.</a></p>
+      <p><a name="1039032">Site&#45;based changes that you make through the CDS_SITE variable are ignored in older shell environments unless you use the &#45;q option when you source your environment file. Doing so appends a line to your master env file that reads the </a><font color="#000000"><em>site.env</em></font> file, when present. The format for the command is </p>
+      <blockquote>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
+        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1038162">source [&#45;q] &#60;</a><font color="#000000"><em>environment_filename</em></font>&#62;</font>
+      </blockquote>
+      <p><a name="1040564">&nbsp;</a></p>
+    </div>
+    <br>
+    <a href="#pagetop">Return to top of page</a>
+    <hr>
+    <hr align="left">
+    <div style="text-align: left;">
+      <!-- Begin Buttons -->      <table width="650" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+
+                    </td>
+<td height="20" width="73">
+<a href="algrostartTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+
+          <td>
+            <a href="chap2.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+          </td>
+          <td>
+            <a href="chap4.html"><img src="images/nav_next.gif" alt="Next" border="0"></a>
+          </td>
+          <td>
+            <a>
+<a href="algrostart.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+
+            </a>
+          </td>
+          <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+
+          </td>
+          <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+
+          </td>
+          <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+
+          </td>
+          <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+
+          </td>
+        </tr>
+      </table>
+      <!-- End Buttons -->
+    </div>
+    <br>
+    <font size="-1" >
+For support, see <a href="http://support.cadence.com" target="_blank">Cadence Online Support</a> service.</font>
+    <br>
+    <br>
+    <font size="-1" >
+      <i>Copyright &#169; 2017, <a href="http://www.cadence.com">Cadence Design Systems, Inc.</a></i>
+    </font>
+    <br>
+    <font size="-1" >
+All rights reserved.</font>
+    <br>
+    <br>
+  </body>
+</html>

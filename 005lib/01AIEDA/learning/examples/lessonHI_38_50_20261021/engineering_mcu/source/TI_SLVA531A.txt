@@ -1,0 +1,3266 @@
+=== PDF_INDEX_1BASED 1 ===
+Application Report
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Aviad Yarmakov....................................................................................................... Industrial Interface
+ABSTRACT
+Many times when approaching a new design, significant time and effort can be saved by applying correct
+and recommended design guidelines already in the planning phase. The purpose of this document is to
+supply these guidelines to the engineer working with the TLK family of products; saving time, effort, and
+cost, and decreasing time to market for their solution.
+Contents
+1
+Introduction ..................................................................................................................
+3
+2
+MDI (TP/CAT-V) Connections ............................................................................................. 4
+2.1
+RJ-45 Connections ................................................................................................ 4
+2.2
+ESD EMI EMC Recommendations .............................................................................. 4
+2.3
+Fiber Optic Implementations ...................................................................................... 5
+3
+Power Supply ................................................................................................................
+6
+3.1
+Filtering ..............................................................................................................
+6
+3.2
+Single-Supply Operation .......................................................................................... 7
+3.3
+Dual-Supply Operation ............................................................................................ 8
+3.4
+I/O Voltage Supply ................................................................................................. 8
+3.5
+CT Supply ...........................................................................................................
+8
+4
+MAC Interfaces ..............................................................................................................
+9
+4.1
+Media Independent Interface (MII) ............................................................................... 9
+4.2
+Reduced Media Independent Interface (RMII) ................................................................ 10
+4.3
+Termination Requirement ....................................................................................... 10
+4.4
+Recommended Maximum Trace Length ...................................................................... 11
+5
+Clock Requirements .......................................................................................................
+11
+5.1
+External Oscillator Clock Source ............................................................................... 11
+5.2
+Crystal Clock Source ............................................................................................. 12
+5.3
+Oscillator or Crystal .............................................................................................. 12
+6
+LED and Non-LED Strap Pins ........................................................................................... 13
+7
+PCB Layout Considerations .............................................................................................. 14
+7.1
+Calculating Impedance .......................................................................................... 15
+7.2
+PCB Layer Stacking .............................................................................................. 16
+8
+Magnetics ...................................................................................................................
+18
+9
+ESD Design Guidelines ...................................................................................................
+19
+9.1
+Board Design Guidelines ........................................................................................ 19
+9.2
+Board Layout Guidelines ........................................................................................ 20
+10
+Reset Operation ...........................................................................................................
+22
+10.1
+Hardware Reset ..................................................................................................
+22
+10.2
+POR_BYPASS mode (TLK110 only) .......................................................................... 22
+10.3
+Software Reset ...................................................................................................
+22
+11
+Schematics Example ......................................................................................................
+23
+12
+Other Applicable Documents ............................................................................................. 29
+List of Figures
+1
+Typical Application..........................................................................................................
+3
+1
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 2 ===
+www.ti.com
+2
+MDI Connection ............................................................................................................
+4
+3
+Recommended Magnetics.................................................................................................
+5
+4
+Chassis GND and Board GND Separation ..............................................................................
+5
+5
+VDD Layout ...................................................................................................................
+6
+6
+Power Connections for Single-Supply Operation.......................................................................
+7
+7
+Power Connections for Dual-Supply Operation ........................................................................
+8
+8
+MII Signaling.................................................................................................................
+9
+9
+RMII/MAC Connection....................................................................................................
+10
+10
+Oscillator Circuit ...........................................................................................................
+11
+11
+Crystal Oscillator Circuit ..................................................................................................
+12
+12
+Strapping and LED Loading Example ..................................................................................
+13
+13
+Differential Signal Pair – Stubs ..........................................................................................
+14
+14
+Differential Signal Pair – Plane Crossing...............................................................................
+14
+15
+Microstrip Impedance – Single-Ended..................................................................................
+15
+16
+Microstrip Impedance – Differential .....................................................................................
+15
+17
+Stripline Impedance – Single-Ended....................................................................................
+16
+18
+Stripline Impedance – Differential.......................................................................................
+16
+19
+PCB Stripline Layer Stacking ............................................................................................
+17
+20
+Alternative PCB Stripline Layer Stacking...............................................................................
+17
+21
+Grounds Separation.......................................................................................................
+19
+22
+Decoupling Capacitors....................................................................................................
+20
+23
+Layer Separation ..........................................................................................................
+21
+24
+Grounds Layout Separation..............................................................................................
+21
+25
+Schematic 1 of 6...........................................................................................................
+23
+26
+Schematic 2 of 6...........................................................................................................
+24
+27
+Schematic 3 of 6...........................................................................................................
+25
+28
+Schematic 4 of 6...........................................................................................................
+26
+29
+Schematic 5 of 6...........................................................................................................
+27
+30
+Schematic 6 of 6...........................................................................................................
+28
+List of Tables
+1
+25-MHz Oscillator Requirements........................................................................................
+12
+2
+50-MHz Oscillator Requirements........................................................................................
+12
+3
+25-MHz Crystal Requirements...........................................................................................
+13
+4
+Magnetics Requirements .................................................................................................
+18
+5
+Recommended Magnetics................................................................................................
+18
+2
+TLK1XX Design and Layout Guide
+SLVA531A–February 2013–Revised September 2013
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 3 ===
+MPU/CPU
+Mode Access Controller
+MII/RMII
+TLK110
+10/100 Mbps
+25/50 MHz
+Clock
+Source
+Status
+LEDs
+Magnetics
+RJ-45
+10BASE-T
+or
+100BASE-TX
+www.ti.com
+Introduction
+1
+Introduction
+The TLK1XX family of products are robust, full-featured, low-power, 10/100 physical layer devices. With
+cable length performance far exceeding IEEE specifications and features that provide lower cost solutions,
+for both 10BASE-T and 100BASE-TX Ethernet protocols, the devices ensure compatibility and
+interoperability with other standards-based Ethernet products in these applications:
+•
+High-end peripheral devices
+•
+Industrial controls
+•
+Factory automation
+•
+General embedded applications
+Use of this document, in conjunction with product data sheets, application notes, and reference designs,
+help ensure issue-free system products. In this application note we review: MAC Interface, Physical
+medium interface, Board design, Power supply, Configuration, and Components selection, among other
+topics. Product Applicability: TLK110, TLK105, TLK106.
+Figure 1. Typical Application
+3
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 4 ===
+PHY Device
+RD–
+RD+
+TD–
+TD+
+49.9 Ω
+49.9 Ω
+49.9 Ω
+49.9 Ω
+1
+F
+µ
+1
+F
+µ
+1
+F
+µ
+1
+F
+µ
+Place These Resistors and
+Capacitors Close to the Device
+Note: Center TAP is Pulled to VDD
+Transformer Center Taps
+*Place Capacitors Close to the
+100-
+Differential
+Ω
+T1
+1:1 with Common-Mode Choke
+0
+1206
+Ω
+0
+1206
+Ω
+1500 pF
+2 kV
+Bob-Smith Termination
+75
+Each
+Ω
+RD–
+RJ45
+RD+
+TD–
+NC
+NC
+TD+
+NC
+NC
+3.3 V
+Supply
+3.3 V
+Supply
+3.3 V
+Supply
+0.1
+F
+µ
+0.1
+F
+µ
+0.1
+F*
+µ
+0.1
+F*
+µ
+100-
+Differential
+Ω
+MDI (TP/CAT-V) Connections
+www.ti.com
+2
+MDI (TP/CAT-V) Connections
+The network or medium dependent interface (MDI) connection is via the transmit (TD+ & TD–) and receive
+(RD+ & RD–) differential pair pins. These connect to a termination network, then to 1:1 magnetics
+(transformer) and an RJ-45. For space savings, the magnetics and RJ-45 may be a single-integrated
+component. A standard CAT-V Ethernet cable is then used to connect to the rest of the network. Figure 2
+shows the recommended 10/100 Mb/s twisted pair interface circuit.
+Figure 2. MDI Connection
+2.1
+RJ-45 Connections
+The transformer used in the MDI connection provides DC isolation between local circuitry and the network
+cable. The center tap of the isolated winding has Bob Smith termination through a 75-Ω resistor and a
+1000-pF capacitor to chassis ground. The termination capacitor should be rated to a voltage of at least 2
+kV.
+NOTE:
+Bob-Smith termination does not apply for Power Over Ethernet (PoE) applications.
+Bob-Smith termination is used to reduce noise resulting from common mode current flows,
+as well as reduce susceptibility to any noise from unused wire pairs on the RJ-45. It is
+described in patent publication US5321372 A.
+2.2
+ESD EMI EMC Recommendations
+The following recommendations are provided to improve EMI performance:
+•
+Use a metal shielded RJ-45 connector, and connect the shield to chassis ground.
+•
+Use magnetics with integrated common-mode choking devices with the choke on the side of the PHY
+(for example PULSE HX1198).
+•
+Do not overlap the circuit and chassis ground planes, keep them isolated. Connect chassis ground and
+system ground together using one 4700 pF NPO 2000 V 10% across the void between the ground
+planes on the 1, 2 pair side of the RJ-45.
+4
+TLK1XX Design and Layout Guide
+SLVA531A–February 2013–Revised September 2013
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 5 ===
+MAGNETICS
+CHA
+RJ45_RA
+CHB
+100NF
+1UF
+I88
+CT_INPUT
+HX1188NL
+I41
+75
+75
+I87
+I89
+I51
+10NF
+75
+10NF
+I47
+TH
+HMTSW-101-07-TM-S-240
+MECHANICAL
+MC0002R
+6116526-1
+75
+PN0021R
+I86
+1UF
+100NF
+I92
+4700PF
+1
+TP30MIL1
+T1
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+U2
+2
+1
+R8
+1
+2
+C8
+2
+1
+R7
+2
+1
+R6
+1
+2
+C7
+2
+1
+R5
+2
+1
+C14
+2
+1
+C9
+2
+1
+C15
+2
+1
+C10
+1
+2
+C16
+GND_PIN10
+GND_PIN9
+I/0_PIN8
+I/0_PIN7
+I/0_PIN6
+I/0_PIN5
+I/0_PIN4
+I/0_PIN3
+I/0_PIN2
+I/0_PIN1
+H1102
+TX_P16
+TX_P15
+TX_P14
+NC_P13
+RX_P8
+TX_P3
+RX_P10
+RX_P11
+NC_P12
+NC_P5
+NC_P4
+RX_P7
+RX_P6
+TX_P2
+TX_P1
+RX_P9
+IN
+1:1
+1:1
+11
+16
+10
+15
+7
+2
+6
+1
+8
+3
+9
+14
+RECEIVE
+www.ti.com
+MDI (TP/CAT-V) Connections
+Figure 3. Recommended Magnetics
+Figure 4. Chassis GND and Board GND Separation
+2.3
+Fiber Optic Implementations
+Some TLK1XX family products utilize the MDI interface to connect to fiber optic transceivers. Individual
+device datasheets describe how to terminate the MDI signals when enabling fiber mode in these devices.
+Although the termination requirements for fiber mode operation differ from the termination requirements of
+twisted pair operation, the characteristic impedance of the terminations and the associated signal traces
+are the same. Therefore, the same MDI signal routing recommendations described in Section 7 apply to
+Fiber-enabled systems as well.
+5
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 6 ===
+PCB
+Via
+PHY
+Component
+Optional 0 Ω
+PCB Via
+Ground Pin
+V
+Pin
+DD
+1 nF
+10 nF
+10
+F
+µ
+100 pF
+3.3 V
+Supply
+Power Supply
+www.ti.com
+3
+Power Supply
+3.1
+Filtering
+Bypass the power rails with the following low-impedance surface mount capacitors: 10 µF, 10 nF, 1 nF, an
+100 pF. To reduce EMI, place the capacitors as close as possible to the component VDD supply pins,
+preferably between the supply pins and the vias connecting to the power plane. In some systems it may
+be desirable to add 0-Ω resistors in series with supply pins, as the resistor pads provide flexibility if adding
+EMI beads becomes necessary to meet system level certification testing requirements, see Figure 5.
+It is recommended the PCB have at least one solid ground plane and one solid VDD plane to provide a low
+impedance power source to the component. This also provides a low impedance return path for non-
+differential digital MII and clock signals. (See Figure 5.)
+Place a 10.0-μF capacitor near the PHY component for local bulk bypassing between the VDD and ground
+planes. The rise time of the VDD should be typically 500 µs.
+Figure 5. VDD Layout
+6
+TLK1XX Design and Layout Guide
+SLVA531A–February 2013–Revised September 2013
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 7 ===
+3.3-V
+Supply
+3.3-V
+Supply
+AVDD33
+PFBOUT
+PFBIN1
+PFBIN2
+0.1 µF
+10 µF
+0.1 µF
+VDD33_IO
+TD+
+TD
+RD
+RD+
+49.9 Ω
+49.9 Ω
+0.1 µF
+1:1
+T1
+1:1
+RD
+RD+
+TD+
+TD
+RJ45
+1
+F
+µ
+1
+F
+µ
+3.3-V
+Supply
+0.1
+F
+µ
+0.1
+F
+µ
+1 nF
+10 nF
+10 nF
+1 nF
+10
+F
+µ
+100 pF
+10
+F
+µ
+100 pF
+VDD33_IO
+49.9 Ω
+49.9 Ω
+1
+F
+µ
+3.3-V
+Supply
+0.1
+F
+µ
+1
+F
+µ
+0.1
+F
+µ
+3.3-V
+Supply
+10 nF
+1 nF
+100 pF
+10
+F
+µ
+www.ti.com
+Power Supply
+3.2
+Single-Supply Operation
+If a single 3.3-V power supply is desired, the TLK10x internal regulator provides the necessary core
+supply voltages. Place 10-μF and 0.1-μF ceramic capacitors close to the PFBOUT pin, the output of the
+internal regulator. Connect the PFBOUT pin to the PFBIN1 and PFBIN2 pins. Put a 0.1-μF capacitor close
+to the PFBIN1 and PFBIN2 pins. To operate in this mode, connect the TLK10x supply pins as shown in
+Figure 6.
+Figure 6. Power Connections for Single-Supply Operation
+7
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 8 ===
+3.3-V
+Supply
+1.55-V
+Supply
+3.3-V
+Supply
+AVDD33
+PFBOUT
+PFBIN1
+PFBIN2
+VDD33_IO
+TD+
+TD
+RD
+RD+
+Floating
+49.9 Ω
+49.9 Ω
+1:1
+T1
+1:1
+RD
+RD+
+TD+
+TD
+RJ45
+1
+F
+µ
+1
+F
+µ
+3.3-V
+Supply
+0.1
+F
+µ
+0.1
+F
+µ
+49.9 Ω
+49.9 Ω
+1
+F
+µ
+3.3-V
+Supply
+0.1
+F
+µ
+1
+F
+µ
+0.1
+F
+µ
+3.3-V
+Supply
+10 nF
+1 nF
+100 pF
+10
+F
+µ
+Power Supply
+www.ti.com
+3.3
+Dual-Supply Operation
+When a 1.55-V external power rail is available on board, the TLK1XX may be configured to work with dual
+power supply and thus reduce power consumption in the overall system. The TLK1XX dual supply
+configuration is shown in Figure 7. PFBOUT is left floating. The 1.55-V external supply is connected to
+PFBIN1 and PFBIN2. Furthermore, to lower the power consumption, power down the internal regulator by
+writing 1 to bit 15 of the VRCR register (0x00d0h).
+Figure 7. Power Connections for Dual-Supply Operation
+3.4
+I/O Voltage Supply
+The TLK1XX I/O's have the flexibility to work with the VDDIO voltage level which is lower than 3.3 V, refer
+to the VDDIO application note for more thorough information.
+3.5
+CT Supply
+It is recommended to provide a constant power supply to the center tap when connected to a link partner.
+8
+TLK1XX Design and Layout Guide
+SLVA531A–February 2013–Revised September 2013
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 9 ===
+PHY
+MAC
+TX_CLK
+TX_EN
+TXD [3:0]
+RX_CLK
+RX_DV
+RX_ER
+RXD [3:0]
+CRS
+COL
+COL
+CRS
+RXD [3:0]
+RX_ERR
+RX_DV
+RX_CLK
+TXD [3:0]
+TX_EN
+TX_CLK
+www.ti.com
+MAC Interfaces
+4
+MAC Interfaces
+The TLK1XX family supports both MII and RMII connectivity to the Media Access Controller (MAC). When
+using MII, the advantages are in the round trip delay of the data transmission of the PHY. The TLK1XX
+allows MII mode to maintain state-of-the-art, low deterministic round-trip delay, which is a crucial factor for
+many automated industrial protocols like EtherCAT, PROFINET, and more. For space-critical designs,
+RMII mode is usually used, due to the reduced number of pins required (save both traces on board and
+number of pins required by host)
+4.1
+Media Independent Interface (MII)
+The Media Independent Interface (MII) is a synchronous 4-bit wide nibble data interface that connects the
+PHY to the MAC in 100B-TX and 10B-T modes. The MII is fully compliant with IEEE802.3-2002 clause 22.
+The MII signals are summarized below:
+Data signals:
+MII_TXD [3:0]
+RXD [3:0]
+Transmit and receive-valid signals:
+MII_TX_EN
+MII_RX_DV
+Line-status signals:
+CRS (carrier sense)
+COL (collision)
+Figure 8. MII Signaling
+The isolate register 0.10 defined in IEEE802.3-2002 used to electrically isolate the PHY from the MII (if
+Set, all transactions on the MII interface are ignored by the PHY).
+Additionally, the MII interface includes the carrier sense signal CRS, as well as a collision detect signal
+COL. The CRS signal asserts to indicate the reception of data from the network or as a function of
+Transmit data in Half Duplex mode. The COL signal asserts as an indication of a collision which can occur
+During half-duplex operations when both transmit and receive operation occur simultaneously.
+9
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 10 ===
+PHY
+MAC
+TX_CLK
+RX_ER
+RXD [1:0]
+CRS/RX_DV
+XI
+RX_DV
+TX_EN
+TXD [1:0]
+TXD [1:0]
+RX_CLK (optional)
+RX_CLK
+RX_DV (optional)
+RX_ER
+RXD [1:0]
+CRS/RX_DV
+50-MHZ
+Clock Source
+MAC Interfaces
+www.ti.com
+4.2
+Reduced Media Independent Interface (RMII)
+TLK110 incorporates the Reduced Media Independent Interface (RMII) as specified in the RMII
+specification (rev1.2) from the RMII consortium. The purpose of this interface is to provide a low cost
+alternative to the IEEE 802.3u [2] MII as specified in Clause 22. Architecturally, the RMII specification
+provides an additional reconciliation layer on either side of the MII, but can be implemented in the absence
+of an MII.
+The RMII specification has the following characteristics:
+•
+It is capable of supporting 10 Mbps and 100 Mbps data rates
+•
+A single clock reference is sourced from the MAC to PHY (or from an external source)
+•
+It provides independent 2 bit wide (di-bit) transmit and receive data paths
+Figure 9. RMII/MAC Connection
+4.2.1
+MII to RMII Schematic Changes
+1. Change the OSC to 50 MHz, connect it to PHY (Xi pin) and MAC
+2. External Pull up MII_MODE (RX_DV) (Pin 39)
+3. No need to connect PHY and MAC with: TXD[3:2],RXD[3:2], TX_CLK, RX_CLK
+If a given design requires both MII and RMII modes of operation, it is recommended to use a single 50-
+MHz oscillator on board. While in RMII mode, this is the required configuration, for MII mode, by using
+register access, the TLK1XX can be configured to work in MII mode also when the source clock is 50
+MHz.
+4.3
+Termination Requirement
+To reduce digital signal energy, 33-Ω series termination resistors are recommended for all MII output
+signals (including RXCLK, TXCLK, and RX data signals.
+10
+TLK1XX Design and Layout Guide
+SLVA531A–February 2013–Revised September 2013
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 11 ===
+VDD
+RS
+RP
+X2
+X1
+25/50 MHz
+www.ti.com
+Clock Requirements
+4.4
+Recommended Maximum Trace Length
+Although RMII and MII are synchronous bus architectures, there are a number of factors limiting signal
+trace lengths. With a longer trace, the signal becomes more attenuated at the destination and thus more
+susceptible to noise interference.
+Longer traces also act as antennas, and if run on the surface layer, can increase EMI radiation. If a long
+trace is running near and adjacent to a noisy signal, the unwanted signals could be coupled in as cross
+talk.
+It is recommended to keep the signal trace lengths as short as possible. Ideally, keep the traces under 6
+inches.
+Trace length matching, to within 2.0 inches on the MII or RMII bus is also recommended. Significant
+differences in the trace lengths can cause data timing issues.
+As with any high-speed data signal, good design practices dictate that impedance should be maintained
+and stubs should be avoided throughout the entire data path.
+5
+Clock Requirements
+TLK1XX family products support either an external CMOS level oscillator source or a crystal resonator
+device. The X1 pin is the clock input, requiring either 25 or 50 MHz, depending on the MII/RMII mode.
+In MII mode, use either a 25-MHz crystal or 50-MHz oscillator. For RMII mode, only a 50-MHz oscillator
+can be used.
+The input clock signal is also buffered and provided as an output signal on some TLK1XX family products.
+5.1
+External Oscillator Clock Source
+If an oscillator is used, XI should be tied to the clock source and XO should be left floating. No series or
+load termination is required from the clock source, but may prove beneficial in some circumstances.
+For EMI purposes, it may be beneficial to include series termination to limit the energy sourced from the
+oscillator. If series termination is used, the termination resistor should be placed as close to the oscillator
+output as possible on the PCB.
+For longer traces, series termination coupled with matched parallel termination to ground and matched
+trace impedance may prove beneficial as well. If a parallel termination resistor is used, it should be placed
+as closely as possible to the XI pin.
+Connections for using an oscillator are shown in Figure 10. Specifications for CMOS oscillators are listed
+in Table 1.
+Figure 10. Oscillator Circuit
+11
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 12 ===
+CL1
+XO
+XI
+R1
+CL2
+Clock Requirements
+www.ti.com
+5.2
+Crystal Clock Source
+For MII mode, the recommended crystal is a 25-MHz, parallel, 20-pF load crystal resonator. Figure 11
+shows a typical circuit for a crystal resonator. The load capacitor values will vary with the crystal vendors;
+check with the vendor for load recommendations.
+Approximate load capacitor values can be calculated by
+2 × Crystal load spec – 7 pF = CL.
+The oscillator circuit is designed to drive a parallel resonance AT cut crystal with a minimum drive level of
+100 µW and a maximum of 500 µW. If a crystal is specified for a lower drive level, a current limiting
+resistor should be placed in series between XO and the crystal.
+As a starting point for evaluating an oscillator circuit, if the requirements for the crystal are not known, CL1
+and CL2 should be set at 33 pF, and R1 should be set at 0 Ω.
+Figure 11. Crystal Oscillator Circuit
+5.3
+Oscillator or Crystal
+The parametric specifications for utilizing an external oscillator are shown in Table 1 and Table 2.
+The commonly used crystal is AT cut and fundamental frequency. This is the recommended type for
+TLK1XX components since AT cut exhibits the most frequency stability over a wide temperature range.
+The requirements for 25-MHz crystals are listed in Table 3.
+In the case where multiple clock sources are needed, a high speed PLL clock distribution driver is
+recommended. The drivers may be obtained from vendors such as Texas Instruments, Pericom, and
+Integrated Device Technology. Consult vendor for specifics.
+Table 1. 25-MHz Oscillator Requirements
+Parameter
+Test Conditions
+MIN
+TYP
+MAX
+Unit
+Frequency
+25
+MHz
+Frequency tolerance
+Operational temperature
+±50
+ppm
+Frequency stability
+1 year aging
+±50
+ppm
+Rise/Fall Time
+10%–90%
+8
+ns
+Jitter (short term)
+Cycle-to-cycle
+50
+ps
+Jitter (long term)
+Accumulative over 10 ms
+1
+ns
+Symmetry
+Duty cycle
+40%
+60%
+Load capacitance
+15
+30
+pF
+Table 2. 50-MHz Oscillator Requirements
+Parameter
+Test Conditions
+MIN
+TYP
+MAX
+Unit
+Frequency
+50
+MHz
+Frequency tolerance
+Operational temperature
+±50
+ppm
+Frequency stability
+1 year aging
+±50
+ppm
+Rise/Fall Time
+10%–90%
+6
+ns
+12
+TLK1XX Design and Layout Guide
+SLVA531A–February 2013–Revised September 2013
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 13 ===
+VDD
+LED I/O Pin
+Strapped High,
+Active Low
+Convention
+Input/Output
+Strapped High
+Convention
+Input/Output
+Strapped Low
+LED I/O Pin
+Strapped High,
+Active Low
+2.2 kΩ
+470 kΩ
+2.2 kΩ
+2.2 kΩ
+2.2 kΩ
+470 kΩ
+www.ti.com
+LED and Non-LED Strap Pins
+Table 2. 50-MHz Oscillator Requirements (continued)
+Parameter
+Test Conditions
+MIN
+TYP
+MAX
+Unit
+Jitter (short term)
+Cycle-to-cycle
+50
+ps
+Jitter (long term)
+Accumulative over 10 ms
+1
+ns
+Symmetry
+Duty cycle
+40%
+60%
+Load capacitance
+xx
+xx
+pF
+Table 3. 25-MHz Crystal Requirements
+Parameter
+Test Conditions
+MIN
+TYP
+MAX
+Unit
+Frequency
+25
+MHz
+Frequency tolerance
+Operational temperature
+±50
+ppm
+At 25°C
+±50
+ppm
+Frequency stability
+1 year aging
+±5
+ppm
+Load capacitance
+10
+40
+pF
+6
+LED and Non-LED Strap Pins
+TLK1XX products support both conventional configuration strap input/output pins and multi-purpose Light
+Emitting Diode (LED) I/O pins. The LED pins can display the status of Link, Speed, Activity, or the
+presence of Collisions.
+Many conventional strap I/O pins have high impedance (10 k to 20 k) default strap resistors present
+internal to the device. In order to overdrive these internal strap resistors, it is recommended that 2.2 kΩ
+resistors be used for selecting non-default strap options.
+Additionally, even though the internal strap resistors are adequate for configuring the device in most
+applications, in some applications with noisy environments it is recommended that additional external 2.2 k
+straps be used to select default options as well.
+With regard to multi-purpose LED I/O pins, in order to achieve dual input/output functionality, the active
+state of each LED output driver is dependent on the input logic level sampled during power-up/reset. For
+example, if a multifunction LED pin is resistively pulled low, then the corresponding output is configured as
+active high. Conversely, if an input is resistively pulled high, then the corresponding output is configured
+as active low.
+Figure 12 illustrates example of both conventional and multipurpose LED pin strap configurations.
+Figure 12. Strapping and LED Loading Example
+13
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 14 ===
+Do Not Cross Power
+or Ground Planes
+Ground or Power Plane
+Does Not Maintain Parallelism
+Avoid
+Stubs
+Ground or Power Plane
+PCB Layout Considerations
+www.ti.com
+7
+PCB Layout Considerations
+•
+Place the 49.9-Ω,1% resistors, and the decoupling capacitors, near the TLK1XX TD± and RD± pins
+and via directly to the VDD plane.
+•
+Avoid stubs on all signal traces, especially the differential signal pairs. See Figure 13.
+•
+Within the pairs (for example, TD+ & TD–) the trace lengths should be run parallel to each other and
+matched in length. Matched lengths minimize delay differences, avoiding an increase in common mode
+noise and increased EMI. See Figure 13.
+•
+Ideally, there should be no crossover or via on the signal paths. Vias present impedance
+discontinuities and should be minimized. Route an entire trace pair on a single layer, if possible.
+•
+Keep PCB trace lengths as short as possible.
+•
+Signal traces should not be run such that they cross a plane split. See Figure 14. A signal crossing a
+plane split may cause unpredictable return path currents and would likely impact signal quality as well,
+potentially creating EMI problems.
+•
+MDI signal traces should have 50 Ω to ground or 100-Ω differential controlled impedance. Many tools
+are available online to calculate this, two are located here:
+http://www.emclab.umr.edu/pcbtlc/index.html
+http://www.ultracad/articles/diff_z.pdf
+Figure 13. Differential Signal Pair – Stubs
+Figure 14. Differential Signal Pair – Plane Crossing
+14
+TLK1XX Design and Layout Guide
+SLVA531A–February 2013–Revised September 2013
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 15 ===
+W
+T
+H
+W
+S
+S
+H
+0.96
+Zdiff
+2Zo 1 0.48 e
+æ
+ö
+-
+ç
+÷
+è
+ø
+æ
+ö
+æ
+ö
+ç
+÷
+=
+-
+ç
+÷
+ç
+÷
+ç
+÷
+è
+ø
+è
+ø
+W
+T
+H
+87
+H
+Zo
+1N 5.98 0.8W
+T
+Er
+(1.41)
+æ
+ö
+æ
+ö
+= ç
+÷
+ç
+÷
+ç
+÷
++
++
+è
+ø
+è
+ø
+www.ti.com
+PCB Layout Considerations
+Optimally, we would want to keep all the traces as short as possible. In those cases where it is not
+possible, spacings should have the following priority:
+1. Distance between the PHY and the 50-Ω termination resistors.
+2. Distance between the magnetic and the RJ-45.
+3. Distance between the 50-Ω termination resistors and the magnetic.
+4. Distance between the MAC and the PHY.
+This gives the flexibility to make some adjustments, but hopefully minimizes the impact on performance.
+7.1
+Calculating Impedance
+Use the following equations to calculate the differential impedance of the board.
+7.1.1
+Microstrip Impedance – Single-ended
+(1)
+W = Width of the trace
+H = Height of dielectric above the return plane
+T = Trace thickness
+Er = Relative permittivity of the dielectric
+Figure 15. Microstrip Impedance – Single-Ended
+7.1.2
+Microstrip Impedance – Differential
+(2)
+W = Width of the trace
+H = Height of dielectric above the return plane
+T = Trace thickness
+S = Space between traces
+Er = Relative permittivity of the dielectric
+Figure 16. Microstrip Impedance – Differential
+15
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 16 ===
+W
+S
+W
+H
+T
+H
+S
+H
+2.9
+Zo
+2Zo 1 0.347 e
+æ
+ö
+-
+ç
+÷
+è
+ø
+æ
+ö
+æ
+ö
+ç
+÷
+=
+-
+ç
+÷
+ç
+÷
+ç
+÷
+è
+ø
+è
+ø
+W
+H
+T
+H
+60
+2H
+T
+Zo
+Ln 1.9 0.8W
+T
+Er
++
+æ
+ö
+=
+ç
+÷
++
+è
+ø
+PCB Layout Considerations
+www.ti.com
+For microstrip traces, a solid ground plane is needed under the signal traces. The ground plane helps
+keep the EMI localized and the trace impedance continuous. Since stripline traces are typically
+sandwiched between the ground and supply planes, they have the advantage of lower EMI radiation and
+less noise coupling. The tradeoff of using strip line is a lower propagation speed.
+7.1.3
+Stripline Impedance – Single-ended
+(3)
+W = Width of the trace
+H = Height of the dielectric above the return plane
+T = Trace thickness
+Er = Relative permittivity of the dielectric
+Figure 17. Stripline Impedance – Single-Ended
+7.1.4
+Stripline Impedance – Differential
+(4)
+W = Width of the trace
+H = Height of the dielectric above the return plane
+T = Trace thickness
+S = Space between traces
+Er = Relative permittivity of the dielectric
+Figure 18. Stripline Impedance – Differential
+7.2
+PCB Layer Stacking
+To meet signal integrity and performance requirements, at minimum a four layer PCB is recommended for
+implementing TLK1XX components in end-user systems. The following layer stack-ups are recommended
+for 4-, 6-, and 8-layer boards, although other options are possible.
+16
+TLK1XX Design and Layout Guide
+SLVA531A–February 2013–Revised September 2013
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 17 ===
+Chassis Ground
+V
+Supply
+DD
+High Speed Signal
+Chassis Ground
+Chassis Ground
+High Speed Signal
+V
+Supply
+DD
+Chassis Ground
+4 Layer
+High Speed Signal
+Ground
+V
+Supply
+DD
+High Speed Signal
+High Speed Signal
+Ground
+High Speed Signal
+High Speed Signal
+V
+Supply
+DD
+High Speed Signal
+High Speed Signal
+Ground
+High Speed Signal
+V
+Supply
+DD
+Ground
+High Speed Signal
+V
+Supply/Ground
+DD
+High Speed Signal
+6 Layer
+8 Layer
+www.ti.com
+PCB Layout Considerations
+Figure 19. PCB Stripline Layer Stacking
+Within a PCB it may be desirable to run traces using different methods, microstrip vs. stripline, depending
+on the location of the signal on the PCB. For example, it may be desirable to change layer stacking where
+an isolated chassis ground plane is used. Figure 20 illustrates alternative PCB stacking options.
+Figure 20. Alternative PCB Stripline Layer Stacking
+17
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 18 ===
+Magnetics
+www.ti.com
+8
+Magnetics
+Within a design, the selection of certain components is very important in respect to the system
+performance. One of the main components among these is the magnetic. The magnetics have a large
+impact on the PHY performance. While several components are listed below, the TLK1XX maintains high
+performance with most existing on the shelf magnetics (RJ45 integrated or not), as long as they
+compatible with the requirements listed in Table 4. It is recommended that the magnetics include both an
+isolation transformer and an integrated common mode choke to reduce EMI. When doing the layout, do
+not run signals under the magnetics. This could cause unwanted noise crosstalk. Likewise, void the
+planes under discrete magnetics, helping to prevent common-mode noise coupling. To save board space
+and reduce component count, use an RJ-45 with integrated magnetics.
+Table 4. Magnetics Requirements
+Parameter
+TYP
+Units
+Condition
+Turn Ratio
+1:1
+–
+±2%
+Insertion Loss
+–1
+dB
+1–100 MHz
+Return Loss
+–16
+dB
+1–30 MHz
+–12
+dB
+30–60 MHz
+–10
+dB
+60–80 MHz
+Differential to common rejection ration
+–30
+dB
+1–50 MHz
+–20
+dB
+50–150 MHz
+Crosstalk
+–35
+dB
+30 MHz
+–30
+dB
+60 MHz
+Isolation
+1,500
+Vrms
+HPOT
+Recommended magnetics include:
+Table 5. Recommended Magnetics(1)
+Manufacturer
+Part Number
+Pulse Engineering, Inc.
+HX1188
+HX1189
+(1)
+Contact magnetics manufacturers for latest part numbers and product specifications. Thoroughly test and validate all magnetics
+before using them in production.
+18
+TLK1XX Design and Layout Guide
+SLVA531A–February 2013–Revised September 2013
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 19 ===
+MAGNETICS
+CHA
+RJ45_RA
+CHB
+100NF
+1UF
+I88
+CT_INPUT
+HX1188NL
+I41
+75
+75
+I87
+I89
+I51
+10NF
+75
+10NF
+I47
+TH
+HMTSW-101-07-TM-S-240
+MECHANICAL
+MC0002R
+6116526-1
+75
+PN0021R
+I86
+1UF
+100NF
+I92
+4700PF
+1
+TP30MIL1
+T1
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+U2
+2
+1
+R8
+1
+2
+C8
+2
+1
+R7
+2
+1
+R6
+1
+2
+C7
+2
+1
+R5
+2
+1
+C14
+2
+1
+C9
+2
+1
+C15
+2
+1
+C10
+1
+2
+C16
+GND_PIN10
+GND_PIN9
+I/0_PIN8
+I/0_PIN7
+I/0_PIN6
+I/0_PIN5
+I/0_PIN4
+I/0_PIN3
+I/0_PIN2
+I/0_PIN1
+H1102
+TX_P16
+TX_P15
+TX_P14
+NC_P13
+RX_P8
+TX_P3
+RX_P10
+RX_P11
+NC_P12
+NC_P5
+NC_P4
+RX_P7
+RX_P6
+TX_P2
+TX_P1
+RX_P9
+IN
+www.ti.com
+ESD Design Guidelines
+9
+ESD Design Guidelines
+9.1
+Board Design Guidelines
+The following list refers to guidelines of the external BOM system:
+•
+Capacitors:
+–
+Solder a HV capacitor between RJ45 and the board GND (refer to Figure 21)
+–
+Place the capacitor close to lines 1-2 (Channel A).
+–
+Capacitor value and DC rating has little effect (1.5–3.9 nF, 2 kV and above were used with no
+noticeable difference).
+–
+Capacitors on power supplies: 4 caps in parallel, values of 10 µF, 1 µF, 100 nF and 100 pF (refer to
+figure Figure 22).
+•
+Connect the shielding to earth ground as close to the RJ45 connector.
+•
+While TLK supports a large variety of magnetics, it is recommended in some systems to use Pulse's
+H1198 magnetic (Opposite iso-magnetic architecture in comparison to H1188) with RJ45 without
+magnetic.
+Figure 21. Grounds Separation
+19
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 20 ===
+3.3-V
+Supply
+3.3-V
+Supply
+AVDD33
+PFBOUT
+PFBIN1
+PFBIN2
+0.1 µF
+10 µF
+0.1 µF
+VDD33_IO
+TD+
+TD
+RD
+RD+
+49.9 Ω
+49.9 Ω
+0.1 µF
+1:1
+T1
+1:1
+RD
+RD+
+TD+
+TD
+RJ45
+1
+F
+µ
+1
+F
+µ
+3.3-V
+Supply
+0.1
+F
+µ
+0.1
+F
+µ
+1 nF
+10 nF
+10 nF
+1 nF
+10
+F
+µ
+100 pF
+10
+F
+µ
+100 pF
+VDD33_IO
+49.9 Ω
+49.9 Ω
+1
+F
+µ
+3.3-V
+Supply
+0.1
+F
+µ
+1
+F
+µ
+0.1
+F
+µ
+3.3-V
+Supply
+10 nF
+1 nF
+100 pF
+10
+F
+µ
+ESD Design Guidelines
+www.ti.com
+Figure 22. Decoupling Capacitors
+9.2
+Board Layout Guidelines
+Board layout can make extensive enhancements to ESD immunity. To meet signal integrity and
+performance requirements, at minimum, a four-layer PCB is recommended for implementing TLK1XX
+components in end-user systems. Refer to Figure 19 for layer stack-ups.
+It is strongly recommended to separate the chassis and main ground by layer, as seen in Figure 23.
+20
+TLK1XX Design and Layout Guide
+SLVA531A–February 2013–Revised September 2013
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 21 ===
+Board GND
+Ground Gap
+Width for HV Cap
+RJ45
+Chassis
+GND
+Gap Should Include Magnetic
+Design Consideration
+Component Side
+Main Ground Layer
+Chassis Ground Layer
+No Other Ground on this Layer
+Chassis Ground
+Ground Clearing
+Ground Clearing
+RJ45
+Top Layer
+Bottom Layer
+Intermediate Layer
+(Main Ground Layer)
+Max Possible Layer Separation
+Minimum 1 Layer
+www.ti.com
+ESD Design Guidelines
+Figure 23. Layer Separation
+Grounds and supplies should each have their own dedicated layer.
+Please note, if one-layer separation was not possible after all (less recommended), and the RJ45 and
+main ground are on the same layer, they should be spaced as much as possible – at least 256 mil. Please
+see Figure 24.
+Figure 24. Grounds Layout Separation
+The RJ45 ground must be hooked to enable direct connection from the board to the earth ground (this
+should be the ground connected to the earth ground during ESD test).
+21
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 22 ===
+Reset Operation
+www.ti.com
+10
+Reset Operation
+TLK1XX products include an internal POR function and do not need to be explicitly reset after power up
+(except for the TLK100), for normal operation. If required during normal operation, the device can be reset
+by a hardware or a software reset.
+10.1
+Hardware Reset
+A hardware reset (HW reset) is accomplished by applying a low pulse (CMOS level), with a duration of at
+least 1 µS, to the RESET_N. This resets the device such that all registers are re-initialized to default
+values and the hardware configuration values are re-latched into the device (similar to the power-up and
+reset operation).
+10.2
+POR_BYPASS mode (TLK110 only)
+This mode is mainly used if faster RESET and wake up (less than the 270 ms) time is required. This
+RESET is applied after power is ramped up (90% build up at least!). This mode is applicable if POR is at
+bypass. Connect PIN 20 to pull down (via 2.2-kΩ resistor). Release the RESET_N pin 1 ms (minimum
+requirement) after power activation. The time from RESET_N release to wake up is 1 ms.
+10.3
+Software Reset
+A software reset is accomplished by setting the reset bit (bit 15) of the Basic Mode Control Register
+(BMCR). The period of time from setting the reset bit, to the time when software reset has concluded is
+approximately 1 ms.
+In a software reset all the registers in the device are reset to default values and the hardware
+configuration values are maintained. Software driver code must wait 3 ms following a software reset
+before allowing further serial MII (MDIO/MDC) communications with the device.
+22
+TLK1XX Design and Layout Guide
+SLVA531A–February 2013–Revised September 2013
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 23 ===
+RESET
+POWER SUPPLY
+POR
+MAGNETICS
+GND
+MII
+RMII
+IN RMII MODE CONNECT JUMPER BETWEEN 2-3
+TLK110 DUT
+RESISTOR CLOSE TO DUT
+TLK110 CONFIGURATION
+MII_CONECTOR
+1_5V_PS
+COL
+LED_LINK
+CRS
+TXD0
+RXD3
+RXD2
+MDC
+CRS
+COL
+TX_CLK
+25_50M_REF
+RXD1
+MTLW-103-23-S-S-260
+PN0035R
+TPS3825-33DBVT
+MX0052
+I37
+1NF
+I35
+RESET_N
+IGNORE
+IGNORE
+IGNORE
+1NF
+5V_PS
+3_3V_PS
+1_5V_PS
+IGNORE
+RESET_N
+ROOM=MAG_DUT
+TDP_A
+TDM_A
+RDP_B
+RDM_B
+TXD1
+TXD3
+ROOM=POWER SUPPLY
+TX_EN
+RXD0
+ROOM=MII_CONNECTOR
+RX_ER
+RX_DV
+TXD2
+MDIO
+RX_CLK
+ROOM=TLK110_DUT
+25_50M_REF
+MDC
+MDIO
+RDM_B
+RDP_B
+RXD0
+RXD1
+RXD2
+RXD3
+RX_CLK
+RX_DV
+RX_ER
+TDM_A
+TDP_A
+TXD0
+TXD1
+TXD2
+TXD3
+TX_CLK
+TX_EN
+0
+3_3V_PS
+3_3V_PS
+ROOM=CONFIGURATIONS
+3_3V_PS
+COL
+CRS
+LED_LINK
+RXD0
+RXD1
+RXD2
+RXD3
+RX_DV
+RX_ER
+M201
+J2
+M202
+M203
+M200
+1
+TP30MIL19
+1
+TP30MIL20
+1
+TP30MIL21
+1
+TP30MIL22
+1
+1
+1
+1
+2
+1
+C29
+2
+1
+C30
+2
+1
+5
+4
+3
+U3
+2
+1
+R32
+1
+2
+3
+J1
+MII_REV2
+TXD3
+TXD2
+TXD1
+TXD0
+RXD3
+RXD2
+RXD1
+RXD0
+TX_EN
+TX_CLK
+RX_ER
+RX_DV
+RX_CLK
+MDIO
+MDC
+CRS
+COL
+5V_PS
+3xjumper
+IN3
+IN2
+IN1
+TLK110_CONFIGURATION_DUT_REV2
+RX_ER
+RX_DV
+RXD3
+RXD2
+RXD1
+RXD0
+LED_LINK
+CRS
+COL
+3_3V_PS
+TLK110_DUT_32P_REV1
+TX_EN
+TX_CLK
+TXD3
+TXD2
+TXD1
+TXD0
+TDP_A
+TDM_A
+RX_ER
+RX_DV
+RX_CLK
+RXD3
+RXD2
+RXD1
+RXD0
+RDP_B
+RDM_B
+MDIO
+MDC
+LED_LINK
+CRS
+COL
+25M_50M_REF
+RESET_N
+3_3V_PS
+1_5V_PS
+TLK110_CUSTOMER_PS
+3_3V_PS
+1_5V_PS
+5V_PS
+tps3825-33dbvt
+RESET_OUT_PIN3
+MR_N_IN_PIN4
+VDD_PWR_PIN5
+RESET_N_OUT_PIN1
+GND_PWR_PIN2
+VIA
+VIA
+VIA
+JUMPER
+MAGNETICS_REV2
+CT_INPUT
+RDM_B
+RDP_B
+TDM_A
+TDP_A
+VIA
+TP30MIL
+1
+TP30MIL
+1
+TP30MIL
+1
+TP30MIL
+1
+www.ti.com
+Schematics Example
+11
+Schematics Example
+This section contains the TLK105 and TLK106 schematics.
+Figure 25. Schematic 1 of 6
+23
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 24 ===
+MAGNETICS
+MAGNETICS
+CHA
+RJ45_RA
+CHB
+100NF
+1UF
+I88
+49.9
+49.9
+CT_INPUT
+CT_INPUT
+HX1188NL
+I41
+75
+75
+I87
+I89
+I51
+10NF
+75
+100NF
+I83
+10NF
+I47
+TH
+HMTSW-101-07-TM-S-240
+MECHANICAL
+MC0002R
+49.9
+6116526-1
+0
+75
+PN0021R
+0
+I84
+100NF
+I85
+1UF
+I82
+1UF
+49.9
+TDM_A
+RDP_B
+RDM_B
+I86
+TDP_A
+1UF
+100NF
+I92
+4700PF
+I80
+4700PF
+2
+1
+R10
+2
+1
+R14
+2
+1
+R11
+2
+1
+R12
+1
+TP30MIL1
+T1
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+U2
+2
+1
+R8
+1
+2
+C8
+2
+1
+R7
+2
+1
+R6
+1
+2
+C7
+2
+1
+R5
+2
+1
+R13
+2
+1
+R9
+1
+2
+C19
+1
+2
+C24
+1
+2
+C23
+1
+2
+C25
+1
+2
+C26
+2
+1
+C14
+2
+1
+C9
+2
+1
+C15
+2
+1
+C10
+1
+2
+C16
+IN
+GND_PIN10
+GND_PIN9
+I/0_PIN8
+I/0_PIN7
+I/0_PIN6
+I/0_PIN5
+I/0_PIN4
+I/0_PIN3
+I/0_PIN2
+I/0_PIN1
+H1102
+TX_P16
+TX_P15
+TX_P14
+NC_P13
+RX_P8
+TX_P3
+RX_P10
+RX_P11
+NC_P12
+NC_P5
+NC_P4
+RX_P7
+RX_P6
+TX_P2
+TX_P1
+RX_P9
+IN
+TP30MIL
+1
+IN
+IN
+IN
+IN
+Schematics Example
+www.ti.com
+Figure 26. Schematic 2 of 6
+24
+TLK1XX Design and Layout Guide
+SLVA531A–February 2013–Revised September 2013
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 25 ===
+MII_CONNECTORMALE
+IGNORE
+IGNORE
+IGNORE
+IGNORE
+IGNORE
+IGNORE
+IGNORE
+MC0002R
+IGNORE
+IGNORE
+MC0002R
+IGNORE
+MC0002R
+IGNORE
+MC0002R
+IGNORE
+MC0002R
+IGNORE
+MC0002R
+IGNORE
+MC0002R
+IGNORE
+MC0002R
+33
+TXD2
+TXD0
+RX_CLK
+RX_DV
+47UF
+33
+33
+33
+33
+33
+33
+33
+33
+33
+33
+33
+33
+TXD3
+RX_ER
+RXD1
+RXD0
+RXD2
+MDC
+TXD1
+COL
+CRS
+RXD3
+33
+TX_EN
+TX_CLK
+47UF
+33
+MDIO
+5V_PS
+5V_PS
+5V_PS
+5V_PS
+PN0212
+AMP174218-2
+IGNORE
+MC0002R
+33
+33
+IGNORE
+2
+1
+R29
+1
+TP30MIL17
+1
+TP30MIL15
+1
+TP30MIL13
+1
+TP30MIL11
+1
+TP30MIL9
+1
+TP30MIL7
+1
+TP30MIL5
+2
+1
+R24
+2
+1
+R22
+2
+1
+R30
+2
+1
+R26
+2
+1
+R31
+2
+1
+R27
+2
+1
+R28
+2
+1
+R25
+2
+1
+R23
+41
+42
+P1
+2
+1
+R20
+2
+1
+R19
+2
+1
+R17
+2
+1
+R16
+2
+1
+R15
+2
+1
+C27
+2
+1
+C28
+1
+TP30MIL18
+2
+1
+R21
+2
+1
+R18
+1
+TP30MIL2
+1
+TP30MIL3
+1
+TP30MIL4
+1
+TP30MIL6
+1
+TP30MIL8
+1
+TP30MIL10
+1
+TP30MIL12
+1
+TP30MIL14
+1
+TP30MIL16
+TP30MIL
+1
+TP30MIL
+1
+TP30MIL
+1
+TP30MIL
+1
+TP30MIL
+1
+TP30MIL
+1
+TP30MIL
+1
+TP30MIL
+1
+IN
+IN
+IN
+IN
+IN
+IN
+IN
+IN
+TP30MIL
+1
+TP30MIL
+1
+OUT
++
++
+IN
+IN
+IN
+IN
+IN
+IN
+IN
+IN
+IN
+GND_PIN42
+GND_PIN41
+PIN40
+PIN39
+PIN38
+PIN37
+PIN36
+PIN35
+PIN34
+PIN33
+PIN32
+PIN31
+PIN30
+PIN29
+PIN28
+PIN27
+PIN26
+PIN25
+PIN24
+PIN23
+PIN22
+PIN21
+PIN20
+PIN19
+PIN18
+PIN17
+PIN16
+PIN15
+PIN14
+PIN13
+PIN12
+PIN11
+PIN10
+PIN9
+PIN8
+PIN7
+PIN6
+PIN5
+PIN4
+PIN3
+PIN2
+PIN1
+TP30MIL
+1
+TP30MIL
+1
+TP30MIL
+1
+TP30MIL
+1
+TP30MIL
+1
+TP30MIL
+1
+TP30MIL
+1
+www.ti.com
+Schematics Example
+Figure 27. Schematic 3 of 6
+25
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 26 ===
+3.3V_PS
+OFF = MII 5V
+MII 3V3
+ON =
+PULLUP
+RESISTOR
+1.5V_PS
+4.99K
+3_3V_PS
+1_5V_PS
+1_5V_PS
+3_3V_PS
+3_3V_PS
+I40
+1UF
+100UF
+0
+IGNORE
+0
+0
+VR0096R
+TPS74801DRC
+I33
+27PF
+5.62K
+10K
+I26
+1NF
+I25
+100PF
+I24100NF
+I20
+SOT23
+NPN_SM-MMBT2222A
+TR0001R
+1K
+I19
+17_21SYGC_S530
+200
+IGNORE
+220NF
+100UF
+0
+0
+VR0095R
+TPS75433Q
+3.3K
+100UF
+10NF
+1NF
+100PF
+RC0805D
+17_21SYGC_S530
+GREEN
+402
+I2
+I5
+I6
+I7
+I17
+3_3V_PS
+0
+IGNORE
+0
+5V_PS
+I2810UF
+2
+1
+R4
+2
+1
+R3
+21
+U1
+2
+1
+R1
+2
+1
+R2
+2
+1
+C2
+1
+2
+C1
+2
+1
+R63
+2
+1
+LD8
+2
+1
+LD1
+2
+3
+1
+Q1
+2
+1
+R62
+1
+2
+C38
+1
+2
+C37
+1
+2
+C36
+1
+2
+C34
+2
+1
+R60
+2
+1
+R58
+2
+1
+R61
+1
+2
+C33
+7
+3
+9
+8
+1
+2
+5
+4
+10
+11
+6
+U4
+2
+1
+R57
+2
+1
+R33
+2
+1
+C32
+2
+1
+R55
+1
+2
+C31
+2
+1
+R56
+2
+1
+R59
+1
+2
+C6
+1
+2
+C5
+1
+2
+C4
+2
+1
+C3
++
+OUT
++
+tps74801drc
+GND_PWR_PIN6
+THERMAL_PAD_PWR_PIN11
+OUT_OUT_PIN10
+BIAS_IN_PIN4
+EN_IN_PIN5
+IN_IN_PIN2
+IN_IN_PIN1
+FB_OUT_PIN8
+OUT_OUT_PIN9
+PG_OUT_PIN3
+SS_OUT_PIN7
+OUT
+K
+A
+K
+A
++
+tps75433q
+PWR_PAD_GND
+GND/HEATSINK_PWR_PIN1
+GND/HEATSINK_PWR_PIN11
+GND_PWR_PIN17
+GND/HEATSINK_PWR_PIN10
+GND/HEATSINK_PWR_PIN20
+RESET/PG_OUT_PIN6
+EN_IN_PIN5
+IN_IN_PIN4
+NC_PIN2
+NC_PIN12
+NC_PIN14
+NC_PIN13
+NC_PIN18
+NC_PIN16
+NC_PIN15
+NC_PIN19
+OUTPUT_OUT_PIN9
+OUTPUT_OUT_PIN8
+IN_IN_PIN3
+FB/SENSE_IN_PIN7
+IN
+Schematics Example
+www.ti.com
+Figure 28. Schematic 4 of 6
+26
+TLK1XX Design and Layout Guide
+SLVA531A–February 2013–Revised September 2013
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 27 ===
+0805
+FOOTPRINT
+0805
+FOOTPRINT
+0805
+FOOTPRINT
+0805
+FOOTPRINT
+0805
+FOOTPRINT
+0805
+FOOTPRINT
+MUST
+BE CONNECTED
+WHEN
+WORKING
+IN RMII
+MODE
+CLOSE TO PIN 15
+CLOSE TO PIN 16
+CLOSE TO PIN 24
+25/50MHZ OSCILATOR
+CLOSE TO PIN 13
+TLK110 DUT
+TLK110
+3_3V_PS
+MDIO
+IGNORE
+RBIAS
+PFBIN2
+I47
+IGNORE
+1_5V_PS
+1_5V_PS
+1_5V_PS
+PFBOUT
+PFBOUT
+0
+0
+I171
+100NF
+0
+I182
+10NF
+I181
+1NF
+I180
+100PF
+0
+IGNORE
+2.2K
+RESET_N
+3_3V_PS
+3_3V_PS
+IOVDD33
+AVDD33
+10UF
+10NF
+1NF
+0
+100PF
+0
+10UF
+10NF
+1NF
+100PF
+I14
+I16
+I17
+I18
+I126
+I149
+I150
+I151
+100NF
+100NF
+I185
+2.2K
+10UF
+I183
+2.2K
+2.2K
+IGNORE
+3_3V_PS
+IGNORE
+2.2K
+RXD3
+TX_CLK
+TX_EN
+TXD0
+TXD1
+TXD2
+TXD3
+100NF
+I51
+I52
+10UF
+4.87K
+PFBIN1
+VF3AH1-25MHZ
+OS0040R
+IGNORE
+4.7K
+0
+IGNORE
+0
+100PF
+I138
+1NF
+I139
+10NF
+I140
+0
+I110
+33PF
+1M
+I128
+33PF
+25M_50M_REF
+3_3V_PS
+0
+HH2500-18-E-25PPM
+OX0040R
+I109
+IGNORE
+0
+C49
+C46
+C44
+C42
+R64
+C54
+C53
+C52
+R82
+J14
+R96
+R71
+R73
+R72
+XTAL1
+C51
+R78
+C50
+R70
+C48
+R68
+U5
+R66
+C41
+C40
+C39
+R65
+C47
+C45
+C43
+R106
+C55
+R67
+R80
+R77
+R79
+C60
+C59
+C58
+C57
+C56
+R74
+R75
+R76
+PFBIN2
+PFBOUT
+RDM_B
+RDP_B
+TDM_A
+TDP_A
+PFBIN1
+AVDD33
+RBIAS
+RX_CLK
+RXD1
+RX_DV
+CRS
+RX_ER
+COL
+RXD0
+RXD2
+MDC
+MDIO
+LED_LINK
+RESET_N
+IOVDD33
+TLK11032PQFN
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+U6
+1
+2
+2
+1
+2
+1
+2
+1
+1
+2
+3
+4
+2
+1
+1
+2
+1
+2
+1
+2
+1
+2
+2
+1
+1
+2
+1
+2
+1
+2
+1
+2
+2
+1
+1
+2
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+OUT
+OUT
+OUT
+OUT
+OUT
+OUT
+OUT
+OUT
+OUT
+OUT
+IN
+OUT
+JUMPER
+OUT
+IN
+IN
+VDD_4
+OUTPUT_3
+GND_2
+E_D_1
+OUT
+OUT
+OUT
+OUT
+OUT
+OUT
+tlk110_32p_qfn_rev1
+VDD_PFBIN2_POWER_P24
+TXCLK_OUTPUT_P2
+RXD_3/PHYAD4_OUTPUT_P1
+TXEN_INPUT_P3
+TXD_0_INPUT_P4
+TXD_1_INPUT_P5
+TXD_2_INPUT_P6
+TXD_3_INPUT_P7
+INTN_INPUT_P8
+POWER_PAD_POWER_P33
+LED_LINK/AN0_OUTPUT_P17
+RESETN_INPUT_P18
+MDIO_BIDIR_P19
+MDC_INPUT_P20
+VDDS_3P3V_POWER_P21
+XO_OUTPUT_P22
+XI_INPUT_P23
+RXD_2/PHYAD3_OUTPUT_P32
+RXD_0/PHYAD1_OUTPUT_P30
+COL/PHYAD0_OUTPUT_P29
+RX_ER/MDIX_EN_OUTPUT_P28
+CRS/CRS_DV/LED_CFC_OUTPUT_P27
+MIRX_DV/MII_MODE_OUTPUT_P26
+RXD_1/PHYAD2_OUTPUT_P31
+RX_CLK_OUTPUT_P25
+RBIAS_POWER_P16
+AVDD33/AFE_TEST_POWER_P14
+VDD_PFBIN1_POWER_P13
+TD_P_BIDIR_P12
+TD_N_BIDIR_P11
+RD_P_BIDIR_P10
+RD_N_BIDIR_P9
+VDD_PFBOUT_POWER_P15
+OUT
+XTAL
+P1
+P2
+OUT
+OUT
+OUT
+OUT
+www.ti.com
+Schematics Example
+Figure 29. Schematic 5 of 6
+27
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 28 ===
+CFG_ANEG_SPD_0
+CFG_PHY_ID [2]
+CFG_PHY_ID [3]
+CONFIGURATION PINS
+CFG_PHY_ID [0]
+CFG_CROSSOVR
+MII/RMII
+CFG_PHY_ID [1]
+CFG_PHY_ID [4]
+LED_MODE_CONFIGURATION
+2.2K
+3_3V_PS
+2.2K
+IGNORE
+2.2K
+RXD3
+2.2K
+RXD2
+2.2K
+COL
+RX_DV
+RX_ER
+RXD0
+RXD1
+2.2K
+2.2K
+2.2K
+IGNORE
+CRS
+IGNORE
+LED_LINK
+470
+2.2K
+PN0035R
+MTLW-103-23-S-S-260
+I22
+2.2K
+17_21SYGC_S530
+I48
+470
+3_3V_PS
+17_21SYGC_S530
+R36
+R35
+R39
+R38
+R37
+R41
+LD4
+R49
+R48
+R46
+R47
+LD5
+J4
+J6
+J5
+R40
+J7
+J8
+J10
+R51
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+1
+2
+3
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+IN
+IN
+IN
+JUMPER
+JUMPER
+JUMPER
+JUMPER
+JUMPER
+3xjumper
+IN3
+IN2
+IN1
+K
+A
+IN
+K
+A
+IN
+IN
+IN
+IN
+IN
+IN
+Schematics Example
+www.ti.com
+Figure 30. Schematic 6 of 6
+28
+TLK1XX Design and Layout Guide
+SLVA531A–February 2013–Revised September 2013
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 29 ===
+www.ti.com
+Other Applicable Documents
+12
+Other Applicable Documents
+Use the following documents in conjunction with this document, to assist in designing with the TLK1XX
+products:
+•
+TLK110 datasheet
+•
+TLK105 and TLK106 Data Sheet (SLLSEB8)
+•
+Transformerless application note (SLLA327)
+•
+PBO application note (SLLA328)
+29
+SLVA531A–February 2013–Revised September 2013
+TLK1XX Design and Layout Guide
+Submit Documentation Feedback
+Copyright © 2013, Texas Instruments Incorporated
+
+=== PDF_INDEX_1BASED 30 ===
+IMPORTANT NOTICE
+Texas Instruments Incorporated and its subsidiaries (TI) reserve the right to make corrections, enhancements, improvements and other
+changes to its semiconductor products and services per JESD46, latest issue, and to discontinue any product or service per JESD48, latest
+issue. Buyers should obtain the latest relevant information before placing orders and should verify that such information is current and
+complete. All semiconductor products (also referred to herein as “components”) are sold subject to TI’s terms and conditions of sale
+supplied at the time of order acknowledgment.
+TI warrants performance of its components to the specifications applicable at the time of sale, in accordance with the warranty in TI’s terms
+and conditions of sale of semiconductor products. Testing and other quality control techniques are used to the extent TI deems necessary
+to support this warranty. Except where mandated by applicable law, testing of all parameters of each component is not necessarily
+performed.
+TI assumes no liability for applications assistance or the design of Buyers’ products. Buyers are responsible for their products and
+applications using TI components. To minimize the risks associated with Buyers’ products and applications, Buyers should provide
+adequate design and operating safeguards.
+TI does not warrant or represent that any license, either express or implied, is granted under any patent right, copyright, mask work right, or
+other intellectual property right relating to any combination, machine, or process in which TI components or services are used. Information
+published by TI regarding third-party products or services does not constitute a license to use such products or services or a warranty or
+endorsement thereof. Use of such information may require a license from a third party under the patents or other intellectual property of the
+third party, or a license from TI under the patents or other intellectual property of TI.
+Reproduction of significant portions of TI information in TI data books or data sheets is permissible only if reproduction is without alteration
+and is accompanied by all associated warranties, conditions, limitations, and notices. TI is not responsible or liable for such altered
+documentation. Information of third parties may be subject to additional restrictions.
+Resale of TI components or services with statements different from or beyond the parameters stated by TI for that component or service
+voids all express and any implied warranties for the associated TI component or service and is an unfair and deceptive business practice.
+TI is not responsible or liable for any such statements.
+Buyer acknowledges and agrees that it is solely responsible for compliance with all legal, regulatory and safety-related requirements
+concerning its products, and any use of TI components in its applications, notwithstanding any applications-related information or support
+that may be provided by TI. Buyer represents and agrees that it has all the necessary expertise to create and implement safeguards which
+anticipate dangerous consequences of failures, monitor failures and their consequences, lessen the likelihood of failures that might cause
+harm and take appropriate remedial actions. Buyer will fully indemnify TI and its representatives against any damages arising out of the use
+of any TI components in safety-critical applications.
+In some cases, TI components may be promoted specifically to facilitate safety-related applications. With such components, TI’s goal is to
+help enable customers to design and create their own end-product solutions that meet applicable functional safety standards and
+requirements. Nonetheless, such components are subject to these terms.
+No TI components are authorized for use in FDA Class III (or similar life-critical medical equipment) unless authorized officers of the parties
+have executed a special agreement specifically governing such use.
+Only those TI components which TI has specifically designated as military grade or “enhanced plastic” are designed and intended for use in
+military/aerospace applications or environments. Buyer acknowledges and agrees that any military or aerospace use of TI components
+which have not been so designated is solely at the Buyer's risk, and that Buyer is solely responsible for compliance with all legal and
+regulatory requirements in connection with such use.
+TI has specifically designated certain components as meeting ISO/TS16949 requirements, mainly for automotive use. In any case of use of
+non-designated products, TI will not be responsible for any failure to meet ISO/TS16949.
+Products
+Applications
+Audio
+www.ti.com/audio
+Automotive and Transportation
+www.ti.com/automotive
+Amplifiers
+amplifier.ti.com
+Communications and Telecom
+www.ti.com/communications
+Data Converters
+dataconverter.ti.com
+Computers and Peripherals
+www.ti.com/computers
+DLP® Products
+www.dlp.com
+Consumer Electronics
+www.ti.com/consumer-apps
+DSP
+dsp.ti.com
+Energy and Lighting
+www.ti.com/energy
+Clocks and Timers
+www.ti.com/clocks
+Industrial
+www.ti.com/industrial
+Interface
+interface.ti.com
+Medical
+www.ti.com/medical
+Logic
+logic.ti.com
+Security
+www.ti.com/security
+Power Mgmt
+power.ti.com
+Space, Avionics and Defense
+www.ti.com/space-avionics-defense
+Microcontrollers
+microcontroller.ti.com
+Video and Imaging
+www.ti.com/video
+RFID
+www.ti-rfid.com
+OMAP Applications Processors
+www.ti.com/omap
+TI E2E Community
+e2e.ti.com
+Wireless Connectivity
+www.ti.com/wirelessconnectivity
+Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+Copyright © 2013, Texas Instruments Incorporated

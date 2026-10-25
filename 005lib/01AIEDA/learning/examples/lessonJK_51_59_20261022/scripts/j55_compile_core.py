@@ -1,0 +1,252 @@
+"""Compile explicit J55 static plan and a non-saving native apply core. Does not launch Cadence."""
+from pathlib import Path
+import json,hashlib,shutil
+J=Path('D:/001DIY/005lib/01AIEDA/learning/examples/lessonJK_51_59_20261022');D=json.loads((J/'audits/j55_instance_correction_delta_b019.json').read_text());(J/'native').mkdir(exist_ok=True)
+def il(x):
+ if x is None or x is False:return 'nil'
+ if x is True:return 't'
+ if isinstance(x,str):return json.dumps(x,ensure_ascii=True)
+ if isinstance(x,(float,int)):return str(x)
+ if isinstance(x,list):return '('+' '.join(map(il,x))+')'
+ if isinstance(x,dict):return il([[k,v] for k,v in x.items()])
+ raise TypeError(type(x))
+parts=['; GENERATED from exact b019 instance contract. No native operation is executed by this generator.']
+for v in ['2L','4L']:
+ q=D['variants'][v]['instances'];assert len(q)==80
+ parts.append("jk55Plan%s = '("%v); parts.extend(il(inst) for inst in q); parts.append(")")
+(J/'native/j55_plan_static.il').write_text('\n'.join(parts)+'\n',encoding='utf8')
+core=r'''; J55 instance-only core. Caller owns transaction, invariant guard, save-as, fresh reopen.
+; Requires helper gComponent(ref) from existing actual native reader. No DRC/save/kill here.
+; Runtime old/style dbids are pre-resolved before any mutation and written to logFile.
+procedure(jk55Get(key pairs) cadr(assoc(key pairs)))
+procedure(jk55Equal(a b)
+ let((ok i)
+  cond(
+   (and(numberp(a) numberp(b)) abs(a-b)<0.00011)
+   (and(listp(a) listp(b))
+    if(length(a)!=length(b) then nil else
+     ok=t i=0
+     foreach(item a
+      unless(jk55Equal(item nth(i b)) ok=nil)
+      i=i+1
+     )
+     ok
+    )
+   )
+   (t equal(a b))
+  )
+ )
+)
+procedure(jk55Texts(symbol)
+ let((answer)
+  answer=nil
+  foreach(obj symbol->children
+   when(equal(obj->objType "text") unless(member(obj answer) answer=cons(obj answer)))
+  )
+  foreach(obj axlDBGetAttachedText(symbol)
+   unless(member(obj answer) answer=cons(obj answer))
+  )
+  reverse(answer)
+ )
+)
+procedure(jk55TextMatches(obj selector)
+ and(equal(obj->objType "text")
+  equal(obj->layer jk55Get("layer" selector))
+  equal(obj->text jk55Get("text" selector))
+  jk55Equal(obj->xy jk55Get("xy" selector))
+  jk55Equal(obj->rotation jk55Get("rotation" selector))
+  equal(if(obj->isMirrored then t else nil) if(jk55Get("mirrored" selector) then t else nil))
+  equal(upperCase(obj->justify) upperCase(jk55Get("justify" selector)))
+  equal(obj->textBlock jk55Get("textBlock" selector))
+  or(null(jk55Get("bbox" selector)) jk55Equal(obj->bBox jk55Get("bbox" selector)))
+ )
+)
+procedure(jk55FindText(symbol selector tag out)
+ let((found)
+  found=nil
+  foreach(obj jk55Texts(symbol) when(jk55TextMatches(obj selector) found=cons(obj found)))
+  fprintf(out "RESOLVE\t%s\t%L\t%L\n" tag found selector) fflush(out)
+  unless(length(found)==1 error("JK55 selector not unique: %s count=%d\n" tag length(found)))
+  car(found)
+ )
+)
+procedure(jk55Prop(obj key)
+ let((all)
+  all=axlDBGetProperties(obj '("user" "allegro"))
+  or(assoc(concat(key) all) assoc(key all))
+ )
+)
+procedure(jk55PropsMatch(obj old)
+ let((ok got)
+  ok=t
+  unless(length(axlDBGetProperties(obj '("user" "allegro")))==length(old) ok=nil)
+  foreach(prop old
+   got=jk55Prop(obj car(prop))
+   unless(and(got jk55Equal(cadr(got) cadr(prop))) ok=nil)
+  )
+  ok
+ )
+)
+procedure(jk55Shapes(symbol)
+ let((answer)
+  answer=nil
+  foreach(obj symbol->children
+   when(and(equal(obj->objType "shape") equal(obj->layer "PACKAGE GEOMETRY/PLACE_BOUND_TOP")) answer=cons(obj answer))
+  )
+  reverse(answer)
+ )
+)
+procedure(jk55TextFromResult(ret tag)
+ let((obj)
+  unless(ret error("JK55 nil text result %s\n" tag))
+  obj=car(ret)
+  when(listp(obj) obj=car(obj))
+  unless(and(obj equal(obj->objType "text")) error("JK55 unexpected text result %s %L\n" tag ret))
+  obj
+ )
+)
+procedure(jk55Orientation(target)
+ make_axlTextOrientation(?textBlock jk55Get("textBlock" target)
+  ?rotation jk55Get("rotation" target) ?mirrored jk55Get("mirrored" target)
+  ?justify lowerCase(jk55Get("justify" target)))
+)
+procedure(jk55Apply(variant logFile)
+ let((plan out prepared component symbol ref oldobj styleobj allTextBefore allTextAfter pkgTextCount beforeShapes beforePaths heightAdds heightPreserves resolvedTexts resolvedShapes candidates oldShapes height action oldsel stylesel target result obj delta pair row record current reqTexts afterShapes allNeedCount legacyPackageTexts bnds desired layer missing oldprops minBefore pmax)
+  out=outfile(logFile)
+  unless(out error("JK55 cannot open log %s\n" logFile))
+  plan=cond((equal(variant "2L") jk55Plan2L) (equal(variant "4L") jk55Plan4L) (t error("JK55 invalid variant\n")))
+  unless(length(plan)==80 error("JK55 plan must have80 instances\n"))
+  prepared=nil allTextBefore=0 allTextAfter=0 pkgTextCount=0 beforeShapes=0 beforePaths=0 heightAdds=0 heightPreserves=0 allNeedCount=0
+  fprintf(out "BEGIN_PREFLIGHT\t%s\t80\n" variant) fflush(out)
+  ; Complete preflight, including style templates, before making a single database edit.
+  foreach(inst plan
+   ref=jk55Get("ref" inst) component=gComponent(ref)
+   unless(component error("JK55 no component %s\n" ref))
+   symbol=component->symbol
+   unless(and(symbol equal(symbol->definition->name jk55Get("package" inst))) error("JK55 package mismatch %s\n" ref))
+   unless(and(jk55Equal(symbol->xy jk55Get("originXY" inst)) jk55Equal(symbol->rotation jk55Get("rotation" inst)) equal(if(symbol->isMirrored then t else nil) jk55Get("mirrored" inst))) error("JK55 placement mismatch %s\n" ref))
+   allTextBefore=allTextBefore+length(jk55Texts(symbol))
+   legacyPackageTexts=nil
+   foreach(tx jk55Texts(symbol)
+    when(equal(tx->layer "PACKAGE GEOMETRY/SILKSCREEN_TOP")
+     legacyPackageTexts=cons(list(tx tx->text tx->xy tx->rotation tx->textBlock tx->justify tx->bBox) legacyPackageTexts)
+     pkgTextCount=pkgTextCount+1
+    )
+   )
+   resolvedTexts=nil
+   foreach(edit jk55Get("texts" inst)
+    oldsel=jk55Get("oldSelector" edit) stylesel=jk55Get("styleTemplateSelector" edit)
+    oldobj=if(oldsel then jk55FindText(symbol oldsel strcat(ref " OLD") out) else nil)
+    styleobj=jk55FindText(symbol stylesel strcat(ref " STYLE") out)
+    target=jk55Get("target" edit)
+    unless(and(equal(styleobj->textBlock jk55Get("textBlock" target)) equal(upperCase(styleobj->justify) upperCase(jk55Get("justify" target)))) error("JK55 style contract changed %s\n" ref))
+    resolvedTexts=cons(list(edit oldobj styleobj) resolvedTexts)
+   )
+   height=jk55Get("height" inst) bnds=jk55Shapes(symbol) oldShapes=nil
+   beforeShapes=beforeShapes+length(bnds)
+   foreach(ch symbol->children when(and(equal(ch->objType "path") equal(ch->layer "PACKAGE GEOMETRY/PLACE_BOUND_TOP")) beforePaths=beforePaths+1))
+   foreach(expected jk55Get("existingPlaceBounds" height)
+    when(equal(jk55Get("type" expected) "shape") oldShapes=cons(expected oldShapes))
+   )
+   unless(length(bnds)==length(oldShapes) error("JK55 shape count differs %s\n" ref))
+   resolvedShapes=nil
+   foreach(expected oldShapes
+    candidates=nil
+    foreach(sh bnds
+     when(and(jk55Equal(sh->bBox jk55Get("bbox" expected)) jk55PropsMatch(sh jk55Get("props" expected))) candidates=cons(sh candidates))
+    )
+    unless(length(candidates)==1 error("JK55 bound selector not unique %s %L\n" ref candidates))
+    obj=car(candidates) pmax=jk55Prop(obj "PACKAGE_HEIGHT_MAX") minBefore=jk55Prop(obj "PACKAGE_HEIGHT_MIN")
+    when(equal(jk55Get("action" height) "ADD_DEFAULT_ON_EXISTING_PLACE_BOUND") when(pmax error("JK55 refuse to overwrite MAX %s\n" ref)))
+    when(equal(jk55Get("action" height) "PRESERVE_EXPLICIT") unless(and(pmax equal(cadr(pmax) jk55Get("targetMax" height))) error("JK55 explicit MAX mismatch %s\n" ref)))
+    resolvedShapes=cons(list(obj pmax minBefore) resolvedShapes)
+    fprintf(out "BOUND_RESOLVE\t%s\t%L\t%L\t%L\n" ref obj pmax minBefore) fflush(out)
+   )
+   prepared=cons(list(inst symbol reverse(resolvedTexts) resolvedShapes legacyPackageTexts) prepared)
+  )
+  unless(and(allTextBefore==215 pkgTextCount==7 beforeShapes==80 beforePaths==4) error("JK55 baseline counts unexpected texts=%d pkg=%d shape=%d path=%d\n" allTextBefore pkgTextCount beforeShapes beforePaths))
+  fprintf(out "PREFLIGHT_COMPLETE\t80\t215TEXT\t7PKG\t80SHAPE\t4PATH\n") fflush(out)
+  foreach(record reverse(prepared)
+   inst=car(record) symbol=cadr(record) ref=jk55Get("ref" inst)
+   foreach(row caddr(record)
+    action=jk55Get("action" car(row)) oldobj=cadr(row) target=jk55Get("target" car(row))
+    if(equal(action "CREATE_FROM_REFDES_STYLE") then
+     result=axlDBCreateText(jk55Get("text" target) jk55Get("xy" target) jk55Orientation(target) jk55Get("layer" target) symbol)
+     obj=jk55TextFromResult(result strcat(ref " CREATE"))
+    else
+     obj=oldobj
+     unless(equal(obj->layer jk55Get("layer" target)) unless(axlChangeLayer(obj jk55Get("layer" target)) error("JK55 change layer failed %s\n" ref)))
+     result=axlDBChangeText(obj jk55Get("text" target) jk55Orientation(target))
+     obj=jk55TextFromResult(result strcat(ref " CHANGE"))
+     delta=list(car(jk55Get("xy" target))-car(obj->xy) cadr(jk55Get("xy" target))-cadr(obj->xy))
+     unless(jk55Equal(delta '(0.0 0.0))
+      result=axlTransformObject(obj ?move delta ?allOrNone t)
+      unless(result error("JK55 text move failed %s\n" ref))
+     )
+    )
+    obj=jk55FindText(symbol target strcat(ref " TARGET") out)
+    unless(equal(obj->parent symbol) error("JK55 created text has wrong parent %s\n" ref))
+    fprintf(out "TEXT_APPLIED\t%s\t%s\t%L\t%L\n" ref action obj target) fflush(out)
+   )
+   foreach(tx jk55Texts(symbol)
+    when(equal(tx->layer "COMPONENT VALUE/SILKSCREEN_TOP")
+     fprintf(out "REMOVE_DUP_VALUE_SILK\t%s\t%L\n" ref tx) fflush(out)
+     unless(axlDeleteObject(tx) error("JK55 cannot remove duplicate value silk %s\n" ref))
+    )
+   )
+   height=jk55Get("height" inst)
+   foreach(pair cadddr(record)
+    obj=car(pair) oldprops=cadr(pair) minBefore=caddr(pair)
+    if(equal(jk55Get("action" height) "ADD_DEFAULT_ON_EXISTING_PLACE_BOUND") then
+     unless(axlDBAddProp(list(obj) list(list("PACKAGE_HEIGHT_MAX" "1 MM"))) error("JK55 height add returned nil %s\n" ref))
+     unless(equal(cadr(jk55Prop(obj "PACKAGE_HEIGHT_MAX")) "1 MM") error("JK55 height add readback failed %s\n" ref))
+     heightAdds=heightAdds+1
+    else
+     unless(equal(jk55Prop(obj "PACKAGE_HEIGHT_MAX") oldprops) error("JK55 explicit height changed %s\n" ref))
+     heightPreserves=heightPreserves+1
+    )
+    unless(equal(jk55Prop(obj "PACKAGE_HEIGHT_MIN") minBefore) error("JK55 min-height changed %s\n" ref))
+    fprintf(out "HEIGHT_APPLIED\t%s\t%L\t%L\n" ref obj axlDBGetProperties(obj '("user" "allegro"))) fflush(out)
+   )
+   foreach(saved nth(4 record)
+    obj=car(saved)
+    unless(and(equal(obj->text cadr(saved)) jk55Equal(obj->xy caddr(saved)) jk55Equal(obj->rotation nth(3 saved)) equal(obj->textBlock nth(4 saved)) equal(obj->justify nth(5 saved)) jk55Equal(obj->bBox nth(6 saved))) error("JK55 package silk changed %s\n" ref))
+   )
+   current=jk55Texts(symbol) allTextAfter=allTextAfter+length(current)
+   foreach(edit jk55Get("texts" inst)
+    target=jk55Get("target" edit)
+    obj=jk55FindText(symbol target strcat(ref " FINAL") out) allNeedCount=allNeedCount+1
+   )
+   foreach(tx current when(equal(tx->layer "COMPONENT VALUE/SILKSCREEN_TOP") error("JK55 leftover value silk %s\n" ref)))
+   unless(and(jk55Equal(symbol->xy jk55Get("originXY" inst)) jk55Equal(symbol->rotation jk55Get("rotation" inst))) error("JK55 placement changed %s\n" ref))
+  )
+  unless(and(allNeedCount==240 allTextAfter==247 heightAdds==72 heightPreserves==8) error("JK55 final counts unexpected need=%d all=%d added=%d preserved=%d\n" allNeedCount allTextAfter heightAdds heightPreserves))
+  fprintf(out "JK55_APPLY_CORE_COMPLETE\t%s\t240REQUIRED\t247ALLTEXT\t72DEFAULT\t8PRESERVED\t4PATH_UNCHANGED\n" variant) fflush(out)
+  close(out)
+  t
+ )
+)
+'''
+(J/'native/j55_apply_core.il').write_text(core,encoding='utf8')
+# Pure parenthesis/string balance preflight. This is not claimed as a native compiler run.
+def balance(s):
+ depth=0;quoted=False;escaped=False;comment=False
+ for c in s:
+  if comment:
+   if c=='\n':comment=False
+   continue
+  if quoted:
+   if escaped:escaped=False
+   elif c=='\\':escaped=True
+   elif c=='"':quoted=False
+   continue
+  if c==';':comment=True
+  elif c=='"':quoted=True
+  elif c=='(':depth+=1
+  elif c==')':depth-=1;assert depth>=0
+ assert depth==0 and not quoted
+for f in ['j55_apply_core.il','j55_plan_static.il']:balance((J/'native'/f).read_text())
+FUN=Path('C:/Program0/Cadence/SPB172/share/pcb/examples/skill/DOC/FUNCS');out=J/'source/j55_official';out.mkdir(exist_ok=True)
+for fn in ['axlDBChangeText.txt','axlDBCreateText.txt','axlDBGetAttachedText.txt','axlChangeLayer.txt','axlTransformObject.txt','axlDBAddProp.txt','axlDBGetProperties.txt']:shutil.copy2(FUN/fn,out/fn)
+manifest=dict(status='STATIC_BALANCE_ONLY_NOT_NATIVE_EXECUTED',function='jk55Apply(variant logFile)',requires='Caller loads j55_plan_static.il and existing gComponent(ref) helper, manages transaction/save-as/fresh readback. Core does not save/runDRC/kill.',planSHA256=hashlib.sha256((J/'audits/j55_instance_correction_delta_b019.json').read_bytes()).hexdigest().upper(),files=[dict(path=str(J/'native'/f),sha256=hashlib.sha256((J/'native'/f).read_bytes()).hexdigest().upper()) for f in ['j55_apply_core.il','j55_plan_static.il']],expected=dict(components=80,textBefore=215,textAfter=247,requiredTexts=240,packageSilkTextsPreserved=7,shapeBounds=80,legacyPathBoundsPreserved=4,heightShapeDefaultsAdded=72,heightExplicitPreserved=8))
+(J/'audits/j55_core_static_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');print(json.dumps(manifest,indent=2))

@@ -1,0 +1,115 @@
+{
+  "batchId": "J2_GND_entry_2L_02",
+  "variant": "2L",
+  "status": "CORRECTED_PHYSICAL_PIN_CENTER_ENDPOINTS_REQUIRES_NATIVE",
+  "operations": [
+    {
+      "type": "route",
+      "id": "J2_LEFT_GND_PIN_NECK",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          36.8,
+          7.355
+        ],
+        [
+          35.9,
+          7.355
+        ]
+      ],
+      "width": 0.35,
+      "purpose": "Explicit connector GND pin to existing through-shell common-ground land. .35neck.9mm within global1.0 neck budget; foreignVBUSpad copper gap.325mm, no new waiver."
+    },
+    {
+      "type": "route",
+      "id": "J2_LEFT_GND_SHELL_WIDE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          35.9,
+          7.355
+        ],
+        [
+          35.68,
+          7.355
+        ],
+        [
+          35.68,
+          6.78
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "NormalGNDwidth enters actualSH1/SH2throughland; no signal current assumed through shield before physicalconnection proof."
+    },
+    {
+      "type": "route",
+      "id": "J2_RIGHT_GND_PIN_NECK",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          43.2,
+          7.355
+        ],
+        [
+          44.1,
+          7.355
+        ]
+      ],
+      "width": 0.35,
+      "purpose": "Explicit connector GND pin to existing through-shell common-ground land. .35neck.9mm within global1.0 neck budget; foreignVBUSpad copper gap.325mm, no new waiver."
+    },
+    {
+      "type": "route",
+      "id": "J2_RIGHT_GND_SHELL_WIDE",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          44.1,
+          7.355
+        ],
+        [
+          44.32,
+          7.355
+        ],
+        [
+          44.32,
+          6.78
+        ]
+      ],
+      "width": 0.6,
+      "purpose": "NormalGNDwidth enters actualSH1/SH2throughland; no signal current assumed through shield before physicalconnection proof."
+    }
+  ],
+  "proofs": [
+    {
+      "from": "J2.A1_B12",
+      "to": "J2.SH1",
+      "connected": true
+    },
+    {
+      "from": "J2.B1_A12",
+      "to": "J2.SH2",
+      "connected": true
+    },
+    {
+      "from": "J2.A1_B12",
+      "to": "C10.2",
+      "connected": true
+    },
+    {
+      "from": "J2.B1_A12",
+      "to": "C10.2",
+      "connected": true
+    }
+  ],
+  "basis": "Actualb014 terminal graph showed both GNDpin groups isolated despite groundedthrough-shellpads. Follow existing circuit GNDnet (no chassisECO). Explicitgeometry readback/shortneck/current-return/keepout check required, not final globalpour assumption.",
+  "supersedes": {
+    "path": "plans/J2_GND_entry_2L_01.json",
+    "sha256": "C3A688B2307488AE6FBCC86FD681CC60DD1401357A04304BC2C7D4235BAAC0C0",
+    "reason": "Actual4L creation and GND net identity did not establish SH pin connectivity at old offset endpoint. Explicitly end at original SH1/SH2 physical pin center, preserve .35neck .9mm/normal .6 width and all keepouts; actual native graph remains authoritative."
+  }
+}

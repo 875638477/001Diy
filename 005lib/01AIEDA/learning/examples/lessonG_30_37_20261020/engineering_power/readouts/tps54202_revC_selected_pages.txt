@@ -1,0 +1,158 @@
+===== PDF page 3 =====
+4 Pin Configuration and Functions
+1
+GND
+6
+ BOOT
+2
+SW
+5
+ EN
+3
+VIN
+4
+ FB
+Figure 4-1. 6-Pin SOT-23 DDC Package (Top View) 
+Table 4-1. Pin Functions
+PIN
+TYPE(1)
+DESCRIPTION
+NAME
+NO.
+BOOT
+6
+O
+Supply input for the high-side NFET gate drive circuit. Connect a 0.1μF capacitor between BOOT and 
+SW pins.
+EN
+5
+I
+This pin is the enable pin. Float the EN pin to enable.
+FB
+4
+I
+Converter feedback input. Connect to output voltage with feedback resistor divider.
+GND
+1
+–
+Ground pin. Source terminal of low-side power NFET as well as the ground terminal for controller circuit. 
+Connect sensitive VFB to this GND at a single point.
+SW
+2
+O
+Switch node connection between high-side NFET and low-side NFET.
+VIN
+3
+–
+Input voltage supply pin. The drain terminal of high-side power NFET.
+(1)
+O = Output; I = Input
+www.ti.com
+TPS54202
+SLVSD26C – APRIL 2016 – REVISED FEBRUARY 2026
+Copyright © 2026 Texas Instruments Incorporated
+Submit Document Feedback
+3
+Product Folder Links: TPS54202
+
+===== PDF page 20 =====
+Time - 2 ms/div
+V
+= 10 V/div
+IN
+V
+= 2 V/div
+OUT
+EN = 2 V/div
+Figure 7-14. Start-Up Relative to EN
+Time - 2 ms/div
+V
+= 10 V/div
+IN
+V
+= 2 V/div
+OUT
+EN = 2 V/div
+Figure 7-15. Shutdown Relative to EN
+7.3 Power Supply Recommendations
+The devices are designed to operate from an input voltage supply range between 4.5V and 28V. This input 
+supply must be well regulated. If the input supply is located more than a few inches from the device or converter, 
+additional bulk capacitance can be required in addition to the ceramic bypass capacitors. An electrolytic 
+capacitor with a value of 47µF is a typical choice.
+7.4 Layout
+7.4.1 Layout Guidelines
+•
+VIN and GND traces must be as wide as possible to reduce trace impedance. The wide areas are also of 
+advantage from the view point of heat dissipation.
+•
+The input capacitor and output capacitor must be placed as close to the device as possible to minimize trace 
+impedance.
+•
+Provide sufficient vias for the input capacitor and output capacitor.
+•
+Keep the SW trace as physically short and wide as practical to minimize radiated emissions.
+•
+Do not allow switching current to flow under the device.
+•
+A separate VOUT path must be connected to the upper feedback resistor.
+•
+Make a Kelvin connection to the GND pin for the feedback path.
+•
+Voltage feedback loop must be placed away from the high-voltage switching trace, and preferably has ground 
+shield.
+•
+The trace of the VFB node must be as small as possible to avoid noise coupling.
+•
+The GND trace between the output capacitor and the GND pin must be as wide as possible to minimize its 
+trace impedance.
+TPS54202
+SLVSD26C – APRIL 2016 – REVISED FEBRUARY 2026
+www.ti.com
+20
+Submit Document Feedback
+Copyright © 2026 Texas Instruments Incorporated
+Product Folder Links: TPS54202
+
+===== PDF page 21 =====
+7.4.2 Layout Example
+EN
+VFB
+VBST
+GND
+SW
+FEEDBACK
+RESISTORS
+TO ENABLE
+CONTROL
+VIN
+GND
+BOOST
+CAPACITOR
+OUTPUT
+INDUCTOR
+OUTPUT
+CAPACITOR
+VOUT
+INPUT BYPAS
+CAPACITOR
+VIN
+SW node copper 
+pour area on internal 
+or bottom layer
+Additional
+Vias to the 
+GND plane
+Vias to the 
+internal SW 
+node copper
+Vias to the 
+internal SW 
+node copper
+Figure 7-16. Board Layout
+www.ti.com
+TPS54202
+SLVSD26C – APRIL 2016 – REVISED FEBRUARY 2026
+Copyright © 2026 Texas Instruments Incorporated
+Submit Document Feedback
+21
+Product Folder Links: TPS54202

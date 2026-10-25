@@ -1,0 +1,58 @@
+{
+  "root": "01AIEDA",
+  "local_date": "2026-10-23",
+  "second_physical_computer_test_performed_by_source_group": false,
+  "dependencies": [
+    {
+      "id": "L60-PDF-TEXT-001",
+      "kind": "internal_root_source",
+      "source_path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\source\\usb4105.pdf",
+      "root_relative_path": "learning\\examples\\lesson10_connector_20261018\\source\\usb4105.pdf",
+      "sha256": "FB331FBABEE8392ED2937ED757C1610CB0F174B84625147C0B580A18EEA8C0E5",
+      "copied_by_lesson60": false,
+      "migration_required": "resolve relative to 01AIEDA root"
+    },
+    {
+      "id": "L60-PDF-SCAN-001",
+      "kind": "external_existing_source",
+      "source_path": "D:\\005study\\CADENCE 17.2电路设计与仿真 从入门到精通 云课版 (李鹏) (z-library.sk, 1lib.sk, z-lib.saak).pdf",
+      "root_relative_path": null,
+      "sha256": "FB16EE05893C976F8E71706B4A2EFC29AB6179C0F4BD66336B90FB90C1AD44B3",
+      "copied_by_lesson60": false,
+      "migration_required": "provide existing source separately on target and verify SHA before binding a new path"
+    },
+    {
+      "id": "indexed_current_video_1",
+      "kind": "external_existing_video",
+      "source_path": "D:\\005study\\72讲速成视频【Cadence Allegro16.6视频教程】完整版\\第01讲 Allegro常用组件介绍.avi",
+      "sha256": "C2B82635FBF112DEAADEB8FA7AD1EC6AEE5ED3603992DCA13F0F02B523F7310E",
+      "copied_by_lesson60": false,
+      "migration_required": "provide existing video separately; no complete playback verification in lesson60"
+    },
+    {
+      "id": "indexed_current_video_2",
+      "kind": "external_existing_video",
+      "source_path": "D:\\005study\\72讲速成视频【Cadence Allegro16.6视频教程】完整版\\第02讲 以电源IC为例建立封装：一.avi",
+      "sha256": "11219A1DB6176551EA6B144AAF164169C355F61E2472B28DDE2373A0FD5AE47C",
+      "copied_by_lesson60": false,
+      "migration_required": "provide existing video separately; no complete playback verification in lesson60"
+    },
+    {
+      "id": "CADENCE_INSTALLED_HELP",
+      "kind": "installed_software_dependency",
+      "source_path": "C:\\Program0\\Cadence\\SPB172\\doc\\algrolibdev\\chap5.html",
+      "sha256": "70652BE4E75A2050F0486ACFFAA6AB72B295E753EA870D6A9C4B86504CE9E1B2",
+      "migration_required": "locate matching Cadence installed help and verify version; not bundled in lesson60"
+    },
+    {
+      "id": "PDF_RENDER_RUNTIME",
+      "kind": "internal_root_tooling",
+      "python_relative": "learning/tools/python_3_14_0/python.exe",
+      "python_version": "3.14.0",
+      "package_relative": "learning/tools/pymupdf_1_28_2",
+      "package_version": "1.28.2",
+      "migration_required": "keep runtime directories or re-install compatible versions and verify renderer; no cross-PC execution performed by this source group"
+    }
+  ],
+  "record_only_files_are_not_complete_source_material_bundle": true
+}

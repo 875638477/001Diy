@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "status": "SELECTED_SOURCE_READING_ONLY",
+  "records": [
+    {
+      "schema_version": 1,
+      "record_id": "L60-PDF-TEXT-001",
+      "stage": "READ_SCOPED",
+      "date_local": "2026-10-23",
+      "timezone": "Asia/Shanghai",
+      "source": {
+        "kind": "native_text_pdf",
+        "title": "USB4105",
+        "software_or_document_revision": "B4, 18/12/23",
+        "original_absolute_path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\source\\usb4105.pdf",
+        "root_relative_path": "learning\\examples\\lesson10_connector_20261018\\source\\usb4105.pdf",
+        "sha256": "FB331FBABEE8392ED2937ED757C1610CB0F174B84625147C0B580A18EEA8C0E5",
+        "page_count": 2
+      },
+      "locator": {
+        "pdf_physical_page_1based": 1,
+        "pdf_api_index_0based": 0,
+        "printed_page_or_sheet": "Sheet 1/2",
+        "section_or_figures": [
+          "Recommended PCB Layout; title block; alternate mechanical views"
+        ],
+        "page_mapping_verified_here": true
+      },
+      "reading": {
+        "text_layer_characters": 2529,
+        "ocr": {
+          "executed": false,
+          "engine": null,
+          "version": null,
+          "language": null,
+          "raw_result_path": null,
+          "corrected_result_path": null
+        },
+        "render_path": "usb4105_pdf001.png",
+        "render_sha256": "00B725BC5B6CA3D5825ADEB79C68418FDED0E66F5965B89647AE29F578E46073",
+        "full_selected_page_visually_viewed": true
+      },
+      "facts_from_source": [
+        "Units: Metric (mm).",
+        "Drawing is not to scale.",
+        "Recommended PCB layout is viewed from component side.",
+        "Recommended layout local tolerance is +/-0.05 mm; use its own context."
+      ],
+      "geometry_context": [
+        {
+          "value": "0.50 mm",
+          "context": "pin pitch dimension on recommended PCB layout"
+        },
+        {
+          "value": "2 x diameter 0.65 mm",
+          "context": "two holes in recommended PCB layout"
+        },
+        {
+          "value": "2 x diameter 0.50 mm",
+          "context": "different mechanical view; do not substitute for the recommended PCB hole callout"
+        }
+      ],
+      "units_and_conversions": [
+        {
+          "source_units": "mm",
+          "normalized_units": "mm",
+          "scale_factor": 1
+        }
+      ],
+      "warnings": {
+        "observed_in_source": [
+          "Not to Scale; do not measure dimensions from screenshot pixels.",
+          "Component-side view and local tolerance must be retained."
+        ],
+        "actually_generated_by_this_run": [],
+        "unresolved": []
+      },
+      "procedure_prepared": {
+        "done": false,
+        "steps": [],
+        "software_version_to_recheck": null,
+        "expected_input": null,
+        "expected_output": null
+      },
+      "native_execution": {
+        "executed": false,
+        "machine_identity": null,
+        "software_version": null,
+        "command_log": null,
+        "input_sha256": null,
+        "output_sha256": null,
+        "fresh_reopen_evidence": null
+      },
+      "migration": {
+        "executed_on_second_computer": false,
+        "dependencies": [
+          "source_dependencies.json"
+        ],
+        "new_path_binding": null,
+        "verification_evidence": null
+      },
+      "limitations": [
+        "This lesson reads one source page only and does not modify or validate a footprint.",
+        "Manufacturer drawing revision and exact connector variant remain prerequisites for production use."
+      ]
+    },
+    {
+      "schema_version": 1,
+      "record_id": "L60-PDF-SCAN-001",
+      "stage": "READ_SCOPED",
+      "date_local": "2026-10-23",
+      "timezone": "Asia/Shanghai",
+      "source": {
+        "kind": "actual_scanned_pdf_page",
+        "title": "Cadence 17.2 circuit design and simulation textbook",
+        "software_or_document_revision": "17.2 textbook; existing locally supplied scanned copy",
+        "original_absolute_path": "D:\\005study\\CADENCE 17.2电路设计与仿真 从入门到精通 云课版 (李鹏) (z-library.sk, 1lib.sk, z-lib.saak).pdf",
+        "root_relative_path": null,
+        "sha256": "FB16EE05893C976F8E71706B4A2EFC29AB6179C0F4BD66336B90FB90C1AD44B3",
+        "page_count": 492
+      },
+      "locator": {
+        "pdf_physical_page_1based": 281,
+        "pdf_api_index_0based": 280,
+        "printed_page_or_sheet": "262",
+        "section_or_figures": [
+          "Figure 9-188 Start",
+          "Figure 9-189 Drill"
+        ],
+        "page_mapping_verified_here": true
+      },
+      "reading": {
+        "text_layer_characters": 0,
+        "ocr": {
+          "executed": false,
+          "engine": null,
+          "version": null,
+          "language": null,
+          "raw_result_path": null,
+          "corrected_result_path": null
+        },
+        "render_path": "cadence_book_pdf281.png",
+        "render_sha256": "EE206EE0FA05613D929D5714BD2BAB408B05BCFEB78248EDDB90E8709674A2F6",
+        "full_selected_page_visually_viewed": true
+      },
+      "facts_from_source": [
+        "Figure 9-188 shows Slot usage, Oblong default geometry and Mils units.",
+        "Figure 9-189 shows Oval slot, X size 60, Y size 140 and Plated.",
+        "Each positive and negative X/Y tolerance entry shows magnitude 3.",
+        "Prose on this page specifies zero Drill Offset X/Y and Regular Pad Oblong 100 x 180; this is not saved native readback."
+      ],
+      "geometry_context": [
+        {
+          "field": "Slot X/Y",
+          "value": [
+            60,
+            140
+          ],
+          "units": "mil",
+          "evidence": "Figure 9-189 screenshot"
+        },
+        {
+          "field": "positive/negative X/Y tolerance",
+          "value": 3,
+          "units": "mil",
+          "interpretation": "magnitude in separately signed boxes"
+        },
+        {
+          "field": "Regular Pad width/height",
+          "value": [
+            100,
+            180
+          ],
+          "units": "mil",
+          "evidence": "prose on selected page, not a verified native object"
+        }
+      ],
+      "units_and_conversions": [
+        {
+          "mil": [
+            60,
+            140
+          ],
+          "mm": [
+            1.524,
+            3.556
+          ]
+        },
+        {
+          "mil": 3,
+          "mm": 0.0762,
+          "meaning": "tolerance magnitude"
+        },
+        {
+          "mil": [
+            100,
+            180
+          ],
+          "mm": [
+            2.54,
+            4.572
+          ]
+        }
+      ],
+      "warnings": {
+        "observed_in_source": [
+          "No native software warning dialog on this page was observed; field and unit interpretation requires care."
+        ],
+        "actually_generated_by_this_run": [],
+        "unresolved": []
+      },
+      "procedure_prepared": {
+        "done": false,
+        "steps": [],
+        "software_version_to_recheck": null,
+        "expected_input": null,
+        "expected_output": null
+      },
+      "native_execution": {
+        "executed": false,
+        "machine_identity": null,
+        "software_version": null,
+        "command_log": null,
+        "input_sha256": null,
+        "output_sha256": null,
+        "fresh_reopen_evidence": null
+      },
+      "migration": {
+        "executed_on_second_computer": false,
+        "dependencies": [
+          "source_dependencies.json"
+        ],
+        "new_path_binding": null,
+        "verification_evidence": null
+      },
+      "limitations": [
+        "True scanned PDF page with 0 extracted characters and 1 image object; OCR was not run.",
+        "Page offset +19 is checked for this specific body page and source SHA, not every page of every edition.",
+        "All numeric dimensions are textbook examples, not current board manufacturing rules."
+      ]
+    }
+  ]
+}

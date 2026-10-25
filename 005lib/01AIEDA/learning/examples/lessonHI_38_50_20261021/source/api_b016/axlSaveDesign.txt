@@ -1,0 +1,38 @@
+
+  NAME
+         axlSaveDesign - save the current design and leave open for editing.
+  FUNCTION
+         axlSaveDesign(
+             ?design t_design
+             ?mode t_option
+             ?noMru g_noMru
+             ?noConfirm g_noConfirm
+             ?writeModel g_write
+         )
+         ==> t_design/nil
+  SYNOPSIS
+         Save the design with name specified (t_design). If ?design is not
+         specified, then the current design name is used). If ?design is
+         provided but the value is nil, then the user is prompted for the name.
+         if t_option is "nocheck", then the database "quick check" is not
+         provided. This should only be used, when there is a very compelling
+         reason.
+  NOTES
+         - This is essentially the Allegro "save" command. 
+         - This will clear all axl dbid handles and the selection set.
+         - Use axlRunBatchDBProgram, if the intent is to save the design to run another program.
+  NEEDS
+         t_design                - The name for the saved design
+         t_option                - "nocheck" - no database check performed
+         g_noMru                 - if t does not update Most Recently
+                                   Used file list (default is to update)
+         g_noConfirm             - if t does not present a confirmer if overwriting 
+                                   an existing design. File is overwritten.
+         g_write                 - if t uses allegro write file model. This means file
+                                   is written to disk with provided name but current
+                                   drawing name is not updated.
+  RETURNS
+         axlSaveDesign           - t_design if saved, or nil if error
+  SEE ALSO
+         axlOpenDesign, axlRenameDesign, axlRunBatchDBProgram
+

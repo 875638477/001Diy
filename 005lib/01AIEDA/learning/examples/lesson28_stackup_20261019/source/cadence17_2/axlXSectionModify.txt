@@ -1,0 +1,27 @@
+
+  NAME
+         axlXSectionModify - for modification of an existing xsection alayer
+  SYNOPSIS
+         axlXSectionModify(
+                 <list of defstruct attributes and values>
+         ) -> g_xsectionDefstruct/nil
+  FUNCTION
+         This is a wrapper for make_axlXSection() function to create
+         a new defstruct. For certain fields (e.g. boolean and some string
+         fields) a 'none symbol is used to indicate the field should not be 
+         changed, other fields can used the default nil symbol.
+  NEEDS
+         Arguments are the same as make_axlXSection().
+  RETURNS
+         g_xsectionDefstruct - a defstruct with its attribute data copied
+            from provided arguments
+  SEE ALSO
+         axlXSectionCreate, axlXSectionModify
+  EXAMPLES
+         - Modify a layer to be negative artwork assume a layer named GND exists
+           All other layer characturistics will remain the same
+              xs = axlXSectionGet(nil "GND")
+              negative = axlXSectionModify(?negativeArtwork t)
+              ret = axlXSectionSet(xs negative)
+         - see <cdsroot>/share/pcb/examples/skill/dbcreate/xsection.il
+

@@ -1,0 +1,10 @@
+source {D:/001DIY/005lib/01AIEDA/learning/scripts/c13_helpers.tcl}
+namespace eval ::C13 {
+ set p "$root/examples/lesson13_capture/c13_scope_v2.dsn"
+ set ds [$session GetOpenDesign [cs $p] $s]
+ set out [list designPointer $ds path $p]
+ lappend out cast [catch {DboDesign -this $ds} res] $res
+ lappend out roots [catch {$ds GetRootSchematic $s} res] $res
+ lappend out views [catch {$ds NewViewsIter $s $::IterDefs_SCHEMATICS} res] $res
+}
+set ::C13::out

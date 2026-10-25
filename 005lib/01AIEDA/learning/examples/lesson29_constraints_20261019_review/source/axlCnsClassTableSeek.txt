@@ -1,0 +1,35 @@
+
+  NAME
+         axlCnsClassTableSeek - Seek class table entry matching exactly the provided dbids 
+  SYNOPSIS
+         axlCnsClassTableSeek(
+                 g_class1
+                 g_class2
+                 g_region
+         ) -> o_dbidClassTable/nil
+  FUNCTION
+         This seeks a specific class table entry.  Order of class1 and class2 
+         does not matter since C1/C2 is the same as C2/C1 and only one entry
+         exists in the table.
+  TIP 
+         Constraint overrides may exist on a table entry via the "prop" attribute.
+         If fetching multiple table entries, best performance is achieved by 
+         using dbids or using axlCnsClassTableFind.
+  NEEDS
+         g_class1 = NETCLASS dbid, name of net class or nil
+         g_class2 = NETCLASS dbid, name of net class or nil
+         g_region = REGION dbid, name of region or nil
+  RETURNS
+         Class table entry matching search criteria or nil if none found.
+  SEE ALSO
+         axlCnsClassTableCreate
+  EXAMPLES
+         Prep by executing example code in axlCnsClassTableCreate
+         1) Return class table entry for a netclass called VOLTAGE and region called
+            ANALOG 
+                 tbl = axlCnsClassTableSeek("VOLTAGE" nil "ANALOG")
+         2) Altertive way using dbids
+                 region = car( axlSelectByName("REGION" "ANALOG"))
+                 netclass = car( axlSelectByName("NETCLASS" "VOLTAGE"))
+                 tbl = axlCnsClassTableSeek(netclass nil region)
+

@@ -1,0 +1,223 @@
+
+  NAME
+         axlDBCreatePadStack
+  FUNCTION
+         axlDBCreatePadStack(
+                 t_name
+                 r_drill
+                 l_pad
+                 [g_nocheck]
+                 )
+         ==> l_result/nil
+  SYNOPSIS
+         Adds a padstack t_name, using drill hole r_drill and pad definition l_pad.
+ 
+         Defstructs used to create padstack:
+             Drill (r_drill) use make_axlPadStackPad. Elements are:
+                 usage         = (string) padstack usage. See axlPadstackUsageTypes()
+                                 If not provided, code determines type based on
+                                 padstack characteristics.
+                 fixed         = (t/nil) internal fixed flag   
+                 spanLockCount = (t/nil) default to nil. If t padstack does not expand
+                                 or contract if layers are added or deleted. Default
+                                 it expands/contracts. 
+                 uvia          = (t/nil) if padstack is of type bbvia set
+                                 as sub-type micro-via. Superseeded by usage type.
+                 keepout       = (t/nil) Obsolete for 17.0.
+                                 Use new 'KEEPOUT pad layer type.
+ 
+                 holeType      = (symbol) the hole type. Allowed symbols are
+                                 'CIRCLE_DRILL, 'SQUARE_DRILL, 'OVAL_SLOT, 'RECTANGLE_SLOT.
+                                 Defaults to CIRCLE_DRILL if drill diameter is provided.
+                 plating       = (symbol) plate status of drill hole
+                                 Symbols are: 'PLATED, 'NON_PLATED or nil
+                 drillDiameter = (float) drill hole finished diameter.
+                 drillToolSize = (string) Drill tool size, which is used as an identifier.
+                                 Default is blank.
+                 slotSize      = ( (f_width f_height) ) size of slot hole.
+                                   Use this instead of drillDiameter for SLOT types
+                                   The f_width or "Y size" is the drill size.
+                                   The f_height or "X size" or drill travel.
+                 holeTolerance = ( (f_pos f_neg) ) +/- hole tolerance
+                                 When a slot defines the X tolerance or route tolerance
+                 holeToleranceY = ( (f_pos f_neg) ) +/- hole tolerance
+                                 Applies only to slots and defines the Y or drill
+                                 tolerance.
+                 offset        = ( (f_x f_y) ) drill hole offset
+                 multiDrillData = list for multiple drill data which is:
+                                 ( (x_num_rows nx_um_columns f_clearance_x 
+                                                 [f_clearance_y ["staggered"]]) ) 
+                                 data type is (int  int  float  [float])
+                 drillNonStandard = (symbol) non-standard drill hole. Supported symbols:
+                                    'LASER_DRILL, 'PLASMA_DRILL, 'PUNCH_DRILL, 
+                                    'PHOTO_DRILL, 'COND_INK_DRILL, 'WET_DRY_DRILL,
+                                    'OTHER_DRILL.
+ 
+                 figure        = (symbol) the drill figure. Allowed symbols 
+                                 are: NULL, CIRCLE, SQUARE, HEXAGON, HEXAGON_X,
+                                 HEXAGON_Y, OCTAGON, CROSS, DIAMOND, TRIANGLE,
+                                 OBLONG_X, OBLONG_Y, RECTANGLE. Note nil is
+                                 treated as NULL.
+                 figureSize    = ( (f_width f_height) ) size of drill figure 
+                 drillChar    = (string) drill characters. Maximum 3 characters.
+ 
+                 holeCounterType - (string) Counter hole type: "bore", "sink" or nil
+                 holeCounterAngle - (integer) Applies to Counter sink and indicates an 
+                                 angle between 1 and 90 degrees.
+                 holeCounterDiameter (float) - Counter hole diameter in design units
+                 holeCounterDepth = (float) Applies to Counter bore and indicates depth
+                                 of the bore. Accuracy is maintained at a higher level
+                                 then the current design.
+                 holeCounterTolerance - ( (f_pos f_neg) ) +/- counter hole tolerance.
+ 
+                 backdrillDiameter - (float) diameter in design units of backdrill finished hole
+                 backdrillFigureName - (symbol) the drill figure  (see figure for allowed types)
+                 backdrillFigureChar - (string) backdrill characters (3 max)
+                 backdrillFigureWidth - (float) width of backdrill figure in design units
+                 backdrillFigureHeight - (float) height of backdrill figure in design units
+ 
+ 
+             Pad (l_pad) structure (up to 4 for each layer indicated by attribute type):
+                 layer         = (string) etch layer name (e.g. "TOP") or 
+                                 "DEFAULT_INTERNAL" if you want one pad
+                                 layer to map to all internal layers between
+                                 the top and bottom of the padstack.
+                 type          = (symbol) pad type
+                                 Allowed symbols: KEEPOUT, ANTIPAD, THERMAL or REGULAR.
+                                 nil is treated as REGULAR.
+                 figure        = (symbol) the pad figure
+                                 Allowed symbols: see axlPadFigureTypes API.
+                                 If NULL we check the figureSize and 
+                                 automatically assign a figure type. If you 
+                                 assign a type the figureSize must match 
+                                 that type. For example, a SQUARE must have 
+                                 both width and height of the same value.
+ 
+                                 For shape symbol use the name of the
+                                 ssm (minus extension and path) to figure
+                                 For example if you have a shape symbol
+                                 called "myshape" then it would be
+                                 '?figure "myshape"'.
+ 
+                                 For an Anti-pad shape (fsm) assign the
+                                 symbol 'FLASH and assign the fsm file
+                                 (minus extension and path to the flash
+                                 name. For example symbol "myflash" would
+                                 be '?figure 'FLASH ?flash "myflash"'
+ 
+                                 For either a shape or flash, the symbol must
+                                 be located via PADPATH Also the ?figureSize
+                                 attribute must be the extents of the symbol
+                                 or larger.
+                 flash         = (string) the pad aperture flash name. 
+                                 Reference a flash shape symbol name or nil
+                                 for no flash (fsm file). 
+                 figureSize    = ( (f_width f_height) ) height and width of 
+                                 the figure. For a circle you only need
+                                 to assign diameter to either height/width,
+                                 the other can be 0.
+                 offset        = ( (f_x f_y) ) offset from the padstack origin
+                 sides           Octagon pad only: Number of sides.
+                                 Ranges between 6 and 64 as an even integer..
+                 inside          Donut pad only: inside dimension as a floating point user unit
+                 radius          ROUNDED_RECTANGLE and CHAMFERED_RECTANGLE pad only,
+                                 corner radius as a floating point user unit.
+                 corners         ROUNDED_RECTANGLE and CHAMFERED_RECTANGLE pad only,
+                                 a dash separated string indicating corners chamfered:
+                                         UR - upper right
+                                         UL - upper left
+                                         LR - lower right
+                                         LL - lower left
+                                 nil if pad type does not support
+                                 Example: "UR-LR" means chamfer Upper Right and Lower 
+                                         Left corners.
+  PROGRAMMING NOTES:
+         -) N_SIDED_POLY - figureSize uses the smaller of width and height
+                     and this maps to diameter. Requires sides and if not present 
+                     pad is turned into a circle. Sides must be an even number 
+                     between 6 and 64. If sides is 0 a CIRCLE pad is created.
+         -) ROUNDED_RECTANGLE 
+                CHAMFERED_RECTANGLE -
+                     Requires radius and corners string. Radius cannot be larger 
+                     then half the smaller of height or width.  If radius is 0 or 
+                     corners string does not match any corners then a RECTANGLE pad 
+                     is created.
+         -) DONUT - figureSize uses the smaller of width and height and
+                     This maps to outside diameter. Requires an inside diameter that
+                     must be smaller then the outside diameter. If inside diameter
+                     is zero then a CIRCLE pad is created
+                 
+         -) To create an adjacent layer route keep-out pad, use the following 
+            options for make_axlPadStackPad
+                         ?layer 'adjacent
+                         ?type  'KEEPOUT
+         -) To create create Coverlay pad layers 
+                 - use strings for ?layer "COVERLAY_TOP" or "COVERLAY_BOTTOM"
+                 - ?type is ignore
+         -) To create backdrill pad layers use:
+               ?layer 'backdrillStart
+                     ?type "REGULAR"  - larger pad for drill start layer  (positive)
+                     ?type "ANTI"     - larger pad for drill start layer (negative layers)
+                ?layer 'backdrillClearance
+                     ?type "ANTI"     - pad size for internal backdrill layers for negative layers
+                     ?type "KEEPOUT"  - generate a KEEPOUT for positive layers for backdrill layers.
+               ?layer 'backdrillSoldermask    - soldermask pad to substitute for drill 
+         -) Shapes and flash assignment symbol rules:
+                  'REGULAR - shape symbols (flash symbol name can be set of legacy Gerber support)
+                  'THERMAL - flash symbols
+                  'ANTIPAD - shape symbol (flash symbol name can be set of legacy Gerber support)
+                  'KEEPOUT - shape symbol
+                   Mask layers - either flash or shape symbols
+ 
+            A shape symbol can contain one shape with NO voids. 
+            A flash symbol supports multiple shapes with voids.
+         -) User mask layer support requires a call to axlPadUserMaskLayers
+            with the 'create option to insure a user mask layer exists in the
+            design. If you know that the user mask layer already exists, you do
+            not need to make the call.
+ 
+         -) Backdrill data can be seeded by the global design parameters. Padstacks
+            with their backdrill data obtained this way show these values but they
+            are not saved to the disk padstack file (.pad).
+  NEEDS
+         t_name:         Padstack name
+         r_drill:        Drill hole data for the padstack.
+ 
+                         Note: As with all Skill defstructs, use the 
+                         constructor function make_axlPadStackPad to create 
+                         instances of axlPadStackPad.  See the examples below.
+ 
+         l_pad:          Pad definition data for the padstack.
+ 
+                         Note: As with all Skill defstructs, use the 
+                         constructor function make_axlPadStackPad to create 
+                         instances of axlPadStackPad. See the examples below.
+         g_nocheck:      Optional.  t disables checks of the padstack 
+                         definition. nil executes the following checks of the 
+                         padstack definition:
+                             - Contiguous pad definitions
+                             - Anti-pad/thermal-relief pad definitions
+                             - Existence of two pads with a drilled hole
+                             - A drilled hole with the existence of two pads
+  RETURNS
+         l_result/nil:   nil if nothing was created. Otherwise it returns a 
+                         dbid of the padstack created.
+  SEE ALSO
+         axlPadstackEdit axlLoadPadstack axlDBCopyPadstack
+         axlPadstackToDisk axlDBGetPad 
+         axlPadUserMaskLayers axlPadFigureTypes axlPadstackUsageTypes
+         axlPadDbidDoc
+  EXAMPLES
+         1) Surface Mount Padstack example  
+            Adds a surface mount padstack having a 25 by 60 rectangular pad.
+ 
+            pad_list = cons(make_axlPadStackPad(
+                         ?layer "TOP", ?type 'REGULAR,
+                         ?figure 'RECTANGLE, ?figureSize 25:60) nil)
+            ps_id = axlDBCreatePadStack("smt_pad", nil, pad_list t)
+ 
+         2) Additional examples in:
+              <cdsroot>/share/pcb/examples/skill/dbcreate/pad.il
+ 
+ +*/
+

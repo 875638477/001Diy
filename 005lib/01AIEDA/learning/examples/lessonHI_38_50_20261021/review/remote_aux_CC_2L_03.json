@@ -1,0 +1,176 @@
+{
+  "status": "NO_DEFINITE_OVERLAP_SPACING_AND_NATIVE_REVIEW_PENDING",
+  "checkpoint": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\postcritical_2L_b010",
+  "plans": [
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\ordinary_remote_2L_v7.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\aux_remote_2L_v8.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\CC_entry_2L_v3.json"
+  ],
+  "placementChanges": [],
+  "deletedSegments": [],
+  "operations": 33,
+  "piecesChecked": 91,
+  "definiteOverlapPieces": 0,
+  "spacingWarningPieces": 2,
+  "issues": [
+    {
+      "operation": "CC1_ENTRY",
+      "net": "USB_CC1",
+      "type": "line",
+      "segment": 0,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "USB_DM",
+          "otherSource": "J2.B7",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            39.1,
+            6.78,
+            39.4,
+            7.93
+          ],
+          "actualCopperGapMM": 0.25,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "USB_DM",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            39.15,
+            7.255000000000001,
+            39.35,
+            8.7
+          ],
+          "actualCopperGapMM": 0.3,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "USB_DM",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            39.15,
+            8.5,
+            40.35,
+            8.7
+          ],
+          "actualCopperGapMM": 0.383458,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "USB_DM",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            39.15,
+            8.5,
+            39.4,
+            8.75
+          ],
+          "actualCopperGapMM": 0.383458,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "USB_DM",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            39.199999999999996,
+            8.55,
+            39.4,
+            10.2
+          ],
+          "actualCopperGapMM": 0.452212,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        }
+      ]
+    },
+    {
+      "operation": "CC1_ENTRY",
+      "net": "USB_CC1",
+      "type": "line",
+      "segment": 1,
+      "layer": "TOP",
+      "issues": [
+        {
+          "otherNet": "USB_DM",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            39.15,
+            7.255000000000001,
+            39.35,
+            8.7
+          ],
+          "actualCopperGapMM": 0.3,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "USB_DM",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            39.15,
+            8.5,
+            40.35,
+            8.7
+          ],
+          "actualCopperGapMM": 0.383458,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "USB_DM",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            39.15,
+            8.5,
+            39.4,
+            8.75
+          ],
+          "actualCopperGapMM": 0.383458,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "USB_DM",
+          "otherSource": "J2.B7",
+          "otherKind": "smdpin",
+          "otherBounds": [
+            39.1,
+            6.78,
+            39.4,
+            7.93
+          ],
+          "actualCopperGapMM": 0.409361,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        },
+        {
+          "otherNet": "USB_DM",
+          "otherSource": "native_route",
+          "otherKind": "line",
+          "otherBounds": [
+            39.199999999999996,
+            8.55,
+            39.4,
+            10.2
+          ],
+          "actualCopperGapMM": 0.452212,
+          "baseRuleMM": 0.5,
+          "actualOverlap": false
+        }
+      ]
+    }
+  ],
+  "scope": "Conservative native pad BBOX plus actual cline-width copper; bbox rounded/circle corners may overestimate. New candidate rules/regions not fully resolved, so spacing warnings are BASE-rule diagnostics, not native errors. No-overlap does not certify clearance, conductive graph, neck counts, dynamic/reference copper, thermal/EMI or manufacturing."
+}

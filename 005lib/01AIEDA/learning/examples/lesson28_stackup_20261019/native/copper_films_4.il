@@ -1,0 +1,5 @@
+unless(axlFilmCreate("TOP" ?negative nil ?undefineLineWidth 0.0025 ?sequence 1 ?vectorBasedPad t ?domains '(ipc2581 pdf artwork visibility) ?layers '("ETCH/TOP" "PIN/TOP" "VIA CLASS/TOP" "BOARD GEOMETRY/OUTLINE")) error("Copper film failed\n"))
+unless(axlFilmCreate("L2" ?negative nil ?undefineLineWidth 0.0025 ?sequence 25 ?vectorBasedPad t ?domains '(ipc2581 pdf artwork visibility) ?layers '("ETCH/L2" "PIN/L2" "VIA CLASS/L2" "BOARD GEOMETRY/OUTLINE")) error("Copper film failed\n"))
+unless(axlFilmCreate("L3" ?negative nil ?undefineLineWidth 0.0025 ?sequence 20 ?vectorBasedPad t ?domains '(ipc2581 pdf artwork visibility) ?layers '("ETCH/L3" "PIN/L3" "VIA CLASS/L3" "BOARD GEOMETRY/OUTLINE")) error("Copper film failed\n"))
+unless(axlFilmCreate("BOTTOM" ?negative nil ?undefineLineWidth 0.0025 ?sequence 27 ?vectorBasedPad t ?domains '(ipc2581 pdf artwork visibility) ?layers '("ETCH/BOTTOM" "PIN/BOTTOM" "VIA CLASS/BOTTOM" "BOARD GEOMETRY/OUTLINE")) error("Copper film failed\n"))
+unless(axlFilmCreate("F28_DESIGN_OUTLINE" ?negative nil ?undefineLineWidth 0.0025 ?sequence 100 ?layers '("BOARD GEOMETRY/DESIGN_OUTLINE")) error("Design outline film failed\n"))

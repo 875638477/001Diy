@@ -1,0 +1,28 @@
+{
+  "status": "FAILED_UNSAVED_NATIVE_CHALLENGE_RESTORATION_REVEALED_SIX_REAL_DRC",
+  "batch": "USB_aux_2L_b013",
+  "nativeProcessExit": 0,
+  "skillError": "Restored scoped CC rule did not recover zeroDRC",
+  "savedBoard": false,
+  "sourceSHAUnchanged": true,
+  "strictChallengeActual030Caught": false,
+  "restoredDRCs": [
+    "DRC_DETAIL\tCC1_RESTORED_020\t(prop nil bBox ((35.2325 11.3589) (35.8675 11.9939)) readOnly t objType \"drc\" waived nil layer \"DRC ERROR CLASS/TOP\" xy (35.55 11.6764) violations (dbid:00000195BF1E9BD8) type \"PHYSICAL CONSTRAINTS\" source \"HI2L_P_GROUND\" fixed t parent dbid:00000195AF9D5380 expected \"1 MM\" actual \"1.1 MM\" name \"Maximum Neck Length\")",
+    "DRC_DETAIL\tCC1_RESTORED_020\t(prop nil bBox ((44.3825 11.3589) (45.0175 11.9939)) readOnly t objType \"drc\" waived nil layer \"DRC ERROR CLASS/TOP\" xy (44.7 11.6764) violations (dbid:00000195BF1EE2A8) type \"PHYSICAL CONSTRAINTS\" source \"HI2L_P_GROUND\" fixed t parent dbid:00000195AF9D5380 expected \"1 MM\" actual \"1.7414 MM\" name \"Maximum Neck Length\")",
+    "DRC_DETAIL\tCC1_RESTORED_020\t(prop nil bBox ((43.5325 11.3089) (44.1675 11.9439)) readOnly t objType \"drc\" waived nil layer \"DRC ERROR CLASS/TOP\" xy (43.85 11.6264) violations (dbid:00000195BF1EE2F8) type \"PHYSICAL CONSTRAINTS\" source \"HI2L_P_GROUND\" fixed t parent dbid:00000195AF9D5380 expected \"1 MM\" actual \"1.7414 MM\" name \"Maximum Neck Length\")",
+    "DRC_DETAIL\tCC1_RESTORED_020\t(prop nil bBox ((42.0825 6.5225) (42.7175 7.1575)) readOnly t objType \"drc\" waived nil layer \"DRC ERROR CLASS/TOP\" xy (42.4 6.84) violations (dbid:00000195BF1F7808 dbid:00000195BF118260) type \"NET SPACING CONSTRAINTS\" source \"DEFAULT\" fixed t parent dbid:00000195AF9D5380 expected \"0 MM\" actual \"0 MM\" name \"Line to Route Keepout Spacing\")",
+    "DRC_DETAIL\tCC1_RESTORED_020\t(prop nil bBox ((38.4325 7.9825) (39.0675 8.6175)) readOnly t objType \"drc\" waived nil layer \"DRC ERROR CLASS/TOP\" xy (38.75 8.3) violations (dbid:00000195BF1E9718 dbid:00000195BF170140) type \"NET SPACING CONSTRAINTS\" source \"HI_USB_J2_SOURCE_S_2L\" fixed t parent dbid:00000195AF9D5380 expected \"0.5 MM\" actual \"0.3 MM\" name \"Line to Line Spacing\")",
+    "DRC_DETAIL\tCC1_RESTORED_020\t(prop nil bBox ((38.4325 7.51) (39.0675 8.145)) readOnly t objType \"drc\" waived nil layer \"DRC ERROR CLASS/TOP\" xy (38.75 7.8275) violations (dbid:00000195BF1E96C8 dbid:00000195BF170140) type \"NET SPACING CONSTRAINTS\" source \"HI_USB_J2_SOURCE_S_2L\" fixed t parent dbid:00000195AF9D5380 expected \"0.5 MM\" actual \"0.3 MM\" name \"Line to Line Spacing\")"
+  ],
+  "lessons": [
+    "SKILL error can coexist with process exit0; must inspect COMPLETE and assertions.",
+    "Normal .6mm GND routes at .4mm are necks subject to1mm budget, not exempt lowcurrent wires.",
+    "Native rectangular package route keepout must be screened in addition to actual circular drill.",
+    "Overlapping constraint regions use conservative rule; new .2 does not override old overlap .5 line_line."
+  ],
+  "scopedRetryOfficialAPI": {
+    "path": "C:\\Program0\\Cadence\\SPB172\\share\\pcb\\examples\\skill\\DOC\\FUNCS\\axlDRCItem.txt",
+    "sha256": "8F27E75086180451DE445F6A7AB7CA20734AAEA345164FA30EB725FE98AC90CE",
+    "scope": "Strict/restored CC1 only; fullboard axlDRCUpdate(t) still mandatory in hiFinalize; allmodes unchanged."
+  }
+}

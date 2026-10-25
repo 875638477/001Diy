@@ -1,0 +1,1294 @@
+{
+  "status": "B016_BOTH_NATIVE_CSET_FIELD_DIFF_VALIDATED",
+  "variants": {
+    "2L": {
+      "sourceExistingCSetKeyDifferencesExactly": [
+        {
+          "domain": "spacing",
+          "cset": "HI_JS_S027_2L",
+          "layer": "TOP",
+          "key": "smdpin_line",
+          "before": 0.5,
+          "after": 0.2
+        }
+      ],
+      "copiedCSets": [
+        {
+          "domain": "physical",
+          "new": "HI_B016_P004_2L",
+          "staticCopyFromActual": "HI2L_P_GPIO",
+          "onlyValues": {
+            "vias": [
+              "L28_VIA030_C060",
+              "HI_VIA026_C052_TENT"
+            ]
+          },
+          "onlyLayerValues": {},
+          "allOtherKeysEveryLayerExactlyEqualSource": true
+        },
+        {
+          "domain": "physical",
+          "new": "HI_B016_VF_P002_2L",
+          "staticCopyFromActual": "HI_JS_P006_2L",
+          "onlyValues": {
+            "vias": [
+              "L28_VIA030_C060",
+              "HI_VIA026_C052_TENT"
+            ]
+          },
+          "onlyLayerValues": {},
+          "allOtherKeysEveryLayerExactlyEqualSource": true
+        },
+        {
+          "domain": "spacing",
+          "new": "HI_B016_S001_2L",
+          "staticCopyFromActual": "HI_USB_MCU_S_1_2L",
+          "onlyValues": {},
+          "onlyLayerValues": {
+            "TOP": {
+              "smdpin_line": 0.2
+            }
+          },
+          "allOtherKeysEveryLayerExactlyEqualSource": true
+        }
+      ],
+      "allExistingPhysicalCSetsUnchanged": true,
+      "allOtherExistingSpacingKeysAllLayersUnchanged": true,
+      "createdNativePaths": 34,
+      "everyCreatedPathNativeNetMatchesDeclared": true,
+      "scopeAudit": [
+        {
+          "region": "HI_B016_R002_2L",
+          "layer": "TOP",
+          "polygon": [
+            [
+              39.8,
+              22.15
+            ],
+            [
+              40.55,
+              22.15
+            ],
+            [
+              40.55,
+              23.4
+            ],
+            [
+              39.8,
+              23.4
+            ]
+          ],
+          "engineeringRequestedNets": [
+            "PA10_UART_RX",
+            "PA11_SHARED",
+            "PA12_SHARED"
+          ],
+          "actualNativeClassScope": [
+            {
+              "class1": "HI2L_UART_CAN_DIGITAL_S",
+              "allClass1NetMembers": [
+                "CAN_RXD",
+                "CAN_TXD",
+                "PA10_UART_RX",
+                "PA9_UART_TX",
+                "UART_RX",
+                "UART_TX"
+              ],
+              "class2": "HI2L_USB_FS_S",
+              "allClass2NetMembers": [
+                "PA11_SHARED",
+                "PA12_SHARED",
+                "USB_DM",
+                "USB_DP"
+              ],
+              "domain": "spacing",
+              "cset": "HI_B016_S001_2L"
+            }
+          ],
+          "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+        },
+        {
+          "region": "HI_B016_R003_2L",
+          "layer": "BOTTOM",
+          "polygon": [
+            [
+              37.99,
+              26.29
+            ],
+            [
+              38.01,
+              26.29
+            ],
+            [
+              38.01,
+              26.31
+            ],
+            [
+              37.99,
+              26.31
+            ]
+          ],
+          "engineeringRequestedNets": [
+            "GPIO_PB10"
+          ],
+          "actualNativeClassScope": [
+            {
+              "class1": "HI2L_GPIO_P",
+              "allClass1NetMembers": [
+                "GPIO_PA1",
+                "GPIO_PA15",
+                "GPIO_PA2",
+                "GPIO_PA3",
+                "GPIO_PB1",
+                "GPIO_PB10",
+                "GPIO_PB11",
+                "GPIO_PB12",
+                "GPIO_PB13",
+                "GPIO_PB14",
+                "GPIO_PB15",
+                "GPIO_PB4",
+                "GPIO_PB5",
+                "GPIO_PB8",
+                "GPIO_PB9",
+                "GPIO_PC13",
+                "GPIO_PC14",
+                "GPIO_PC15"
+              ],
+              "class2": null,
+              "allClass2NetMembers": null,
+              "domain": "physical",
+              "cset": "HI_B016_P004_2L"
+            }
+          ],
+          "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+        },
+        {
+          "region": "HI_B016_VF_R001_2L",
+          "layer": "BOTTOM",
+          "polygon": [
+            [
+              38.49,
+              20.69
+            ],
+            [
+              38.51,
+              20.69
+            ],
+            [
+              38.51,
+              20.71
+            ],
+            [
+              38.49,
+              20.71
+            ]
+          ],
+          "engineeringRequestedNets": [
+            "GPIO_PB15"
+          ],
+          "actualNativeClassScope": [
+            {
+              "class1": "HI2L_GPIO_P",
+              "allClass1NetMembers": [
+                "GPIO_PA1",
+                "GPIO_PA15",
+                "GPIO_PA2",
+                "GPIO_PA3",
+                "GPIO_PB1",
+                "GPIO_PB10",
+                "GPIO_PB11",
+                "GPIO_PB12",
+                "GPIO_PB13",
+                "GPIO_PB14",
+                "GPIO_PB15",
+                "GPIO_PB4",
+                "GPIO_PB5",
+                "GPIO_PB8",
+                "GPIO_PB9",
+                "GPIO_PC13",
+                "GPIO_PC14",
+                "GPIO_PC15"
+              ],
+              "class2": null,
+              "allClass2NetMembers": null,
+              "domain": "physical",
+              "cset": "HI_B016_VF_P002_2L"
+            }
+          ],
+          "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+        }
+      ]
+    },
+    "4L": {
+      "sourceExistingCSetKeyDifferencesExactly": [
+        {
+          "domain": "spacing",
+          "cset": "HI_JS_S006_4L",
+          "layer": "TOP",
+          "key": "smdpin_line",
+          "before": 0.5,
+          "after": 0.2
+        }
+      ],
+      "copiedCSets": [
+        {
+          "domain": "physical",
+          "new": "HI_B016_P004_4L",
+          "staticCopyFromActual": "P_SIGNAL_020",
+          "onlyValues": {
+            "vias": [
+              "L28_VIA030_C060",
+              "HI_VIA026_C052_TENT"
+            ]
+          },
+          "onlyLayerValues": {},
+          "allOtherKeysEveryLayerExactlyEqualSource": true
+        },
+        {
+          "domain": "physical",
+          "new": "HI_B016_P006_4L",
+          "staticCopyFromActual": "P_SIGNAL_020",
+          "onlyValues": {
+            "vias": [
+              "L28_VIA030_C060",
+              "HI_VIA026_C052_TENT"
+            ]
+          },
+          "onlyLayerValues": {},
+          "allOtherKeysEveryLayerExactlyEqualSource": true
+        },
+        {
+          "domain": "physical",
+          "new": "HI_B016_P008_4L",
+          "staticCopyFromActual": "P_SIGNAL_020",
+          "onlyValues": {
+            "vias": [
+              "L28_VIA030_C060",
+              "HI_VIA026_C052_TENT"
+            ]
+          },
+          "onlyLayerValues": {},
+          "allOtherKeysEveryLayerExactlyEqualSource": true
+        },
+        {
+          "domain": "physical",
+          "new": "HI_B016_P010_4L",
+          "staticCopyFromActual": "P_SIGNAL_020",
+          "onlyValues": {
+            "vias": [
+              "L28_VIA030_C060",
+              "HI_VIA026_C052_TENT"
+            ]
+          },
+          "onlyLayerValues": {},
+          "allOtherKeysEveryLayerExactlyEqualSource": true
+        },
+        {
+          "domain": "physical",
+          "new": "HI_B016_P012_4L",
+          "staticCopyFromActual": "P_SIGNAL_020",
+          "onlyValues": {
+            "vias": [
+              "L28_VIA030_C060",
+              "HI_VIA026_C052_TENT"
+            ]
+          },
+          "onlyLayerValues": {},
+          "allOtherKeysEveryLayerExactlyEqualSource": true
+        },
+        {
+          "domain": "physical",
+          "new": "HI_B016_P014_4L",
+          "staticCopyFromActual": "P_SIGNAL_020",
+          "onlyValues": {
+            "vias": [
+              "L28_VIA030_C060",
+              "HI_VIA026_C052_TENT"
+            ]
+          },
+          "onlyLayerValues": {},
+          "allOtherKeysEveryLayerExactlyEqualSource": true
+        },
+        {
+          "domain": "physical",
+          "new": "HI_B016_P016_4L",
+          "staticCopyFromActual": "P_SIGNAL_020",
+          "onlyValues": {
+            "vias": [
+              "L28_VIA030_C060",
+              "HI_VIA026_C052_TENT"
+            ]
+          },
+          "onlyLayerValues": {},
+          "allOtherKeysEveryLayerExactlyEqualSource": true
+        },
+        {
+          "domain": "physical",
+          "new": "HI_B016_P018_4L",
+          "staticCopyFromActual": "P_SIGNAL_020",
+          "onlyValues": {
+            "vias": [
+              "L28_VIA030_C060",
+              "HI_VIA026_C052_TENT"
+            ]
+          },
+          "onlyLayerValues": {},
+          "allOtherKeysEveryLayerExactlyEqualSource": true
+        },
+        {
+          "domain": "physical",
+          "new": "HI_B016_P020_4L",
+          "staticCopyFromActual": "P_SIGNAL_020",
+          "onlyValues": {
+            "vias": [
+              "L28_VIA030_C060",
+              "HI_VIA026_C052_TENT"
+            ]
+          },
+          "onlyLayerValues": {},
+          "allOtherKeysEveryLayerExactlyEqualSource": true
+        },
+        {
+          "domain": "physical",
+          "new": "HI_B016_P022_4L",
+          "staticCopyFromActual": "HI_JS_P003_4L",
+          "onlyValues": {
+            "vias": [
+              "L28_VIA030_C060",
+              "HI_VIA026_C052_TENT"
+            ]
+          },
+          "onlyLayerValues": {},
+          "allOtherKeysEveryLayerExactlyEqualSource": true
+        },
+        {
+          "domain": "spacing",
+          "new": "HI_B016_S001_4L",
+          "staticCopyFromActual": "HI_USB_MCU_S_1_4L",
+          "onlyValues": {},
+          "onlyLayerValues": {
+            "TOP": {
+              "smdpin_line": 0.2
+            }
+          },
+          "allOtherKeysEveryLayerExactlyEqualSource": true
+        }
+      ],
+      "allExistingPhysicalCSetsUnchanged": true,
+      "allOtherExistingSpacingKeysAllLayersUnchanged": true,
+      "createdNativePaths": 36,
+      "everyCreatedPathNativeNetMatchesDeclared": true,
+      "scopeAudit": [
+        {
+          "region": "HI_B016_R002_4L",
+          "layer": "TOP",
+          "polygon": [
+            [
+              39.8,
+              22.15
+            ],
+            [
+              40.55,
+              22.15
+            ],
+            [
+              40.55,
+              23.4
+            ],
+            [
+              39.8,
+              23.4
+            ]
+          ],
+          "engineeringRequestedNets": [
+            "PA10_UART_RX",
+            "PA11_SHARED",
+            "PA12_SHARED"
+          ],
+          "actualNativeClassScope": [
+            {
+              "class1": "NC_DIGITAL_GENERAL_S",
+              "allClass1NetMembers": [
+                "BOOT0",
+                "BOOT1",
+                "BOOT_SERVICE",
+                "CAN_RXD",
+                "CAN_TXD",
+                "GPIO_PA1",
+                "GPIO_PA15",
+                "GPIO_PA2",
+                "GPIO_PA3",
+                "GPIO_PB1",
+                "GPIO_PB10",
+                "GPIO_PB11",
+                "GPIO_PB12",
+                "GPIO_PB13",
+                "GPIO_PB14",
+                "GPIO_PB15",
+                "GPIO_PB4",
+                "GPIO_PB5",
+                "GPIO_PB8",
+                "GPIO_PB9",
+                "GPIO_PC13",
+                "GPIO_PC14",
+                "GPIO_PC15",
+                "I2C_SCL",
+                "I2C_SDA",
+                "NRST",
+                "PA10_UART_RX",
+                "PA4_SPI_NSS",
+                "PA5_SPI_SCK",
+                "PA6_SPI_MISO",
+                "PA7_SPI_MOSI",
+                "PA9_UART_TX",
+                "SPI_MISO",
+                "SPI_MOSI",
+                "SPI_NSS",
+                "SPI_SCK",
+                "SWCLK",
+                "SWDIO",
+                "SWO",
+                "UART_RX",
+                "UART_TX",
+                "USB_ATTACH_N",
+                "USB_PULLUP_SRC",
+                "VBUS_GATE",
+                "VBUS_PRESENT_N"
+              ],
+              "class2": "NC_USB_FS_S",
+              "allClass2NetMembers": [
+                "PA11_SHARED",
+                "PA12_SHARED",
+                "USB_DM",
+                "USB_DP"
+              ],
+              "domain": "spacing",
+              "cset": "HI_B016_S001_4L"
+            }
+          ],
+          "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+        },
+        {
+          "region": "HI_B016_R003_4L",
+          "layer": "L2",
+          "polygon": [
+            [
+              37.99,
+              26.29
+            ],
+            [
+              38.01,
+              26.29
+            ],
+            [
+              38.01,
+              26.31
+            ],
+            [
+              37.99,
+              26.31
+            ]
+          ],
+          "engineeringRequestedNets": [
+            "GPIO_PB10"
+          ],
+          "actualNativeClassScope": [
+            {
+              "class1": "NC_DIGITAL_GENERAL_P",
+              "allClass1NetMembers": [
+                "BOOT0",
+                "BOOT1",
+                "BOOT_SERVICE",
+                "CAN_RXD",
+                "CAN_TXD",
+                "GPIO_PA1",
+                "GPIO_PA15",
+                "GPIO_PA2",
+                "GPIO_PA3",
+                "GPIO_PB1",
+                "GPIO_PB10",
+                "GPIO_PB11",
+                "GPIO_PB12",
+                "GPIO_PB13",
+                "GPIO_PB14",
+                "GPIO_PB15",
+                "GPIO_PB4",
+                "GPIO_PB5",
+                "GPIO_PB8",
+                "GPIO_PB9",
+                "GPIO_PC13",
+                "GPIO_PC14",
+                "GPIO_PC15",
+                "I2C_SCL",
+                "I2C_SDA",
+                "NRST",
+                "PA10_UART_RX",
+                "PA4_SPI_NSS",
+                "PA5_SPI_SCK",
+                "PA6_SPI_MISO",
+                "PA7_SPI_MOSI",
+                "PA9_UART_TX",
+                "SPI_MISO",
+                "SPI_MOSI",
+                "SPI_NSS",
+                "SPI_SCK",
+                "SWCLK",
+                "SWDIO",
+                "SWO",
+                "UART_RX",
+                "UART_TX",
+                "USB_ATTACH_N",
+                "USB_PULLUP_SRC",
+                "VBUS_GATE",
+                "VBUS_PRESENT_N"
+              ],
+              "class2": null,
+              "allClass2NetMembers": null,
+              "domain": "physical",
+              "cset": "HI_B016_P004_4L"
+            }
+          ],
+          "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+        },
+        {
+          "region": "HI_B016_R005_4L",
+          "layer": "L3",
+          "polygon": [
+            [
+              37.99,
+              26.29
+            ],
+            [
+              38.01,
+              26.29
+            ],
+            [
+              38.01,
+              26.31
+            ],
+            [
+              37.99,
+              26.31
+            ]
+          ],
+          "engineeringRequestedNets": [
+            "GPIO_PB10"
+          ],
+          "actualNativeClassScope": [
+            {
+              "class1": "NC_DIGITAL_GENERAL_P",
+              "allClass1NetMembers": [
+                "BOOT0",
+                "BOOT1",
+                "BOOT_SERVICE",
+                "CAN_RXD",
+                "CAN_TXD",
+                "GPIO_PA1",
+                "GPIO_PA15",
+                "GPIO_PA2",
+                "GPIO_PA3",
+                "GPIO_PB1",
+                "GPIO_PB10",
+                "GPIO_PB11",
+                "GPIO_PB12",
+                "GPIO_PB13",
+                "GPIO_PB14",
+                "GPIO_PB15",
+                "GPIO_PB4",
+                "GPIO_PB5",
+                "GPIO_PB8",
+                "GPIO_PB9",
+                "GPIO_PC13",
+                "GPIO_PC14",
+                "GPIO_PC15",
+                "I2C_SCL",
+                "I2C_SDA",
+                "NRST",
+                "PA10_UART_RX",
+                "PA4_SPI_NSS",
+                "PA5_SPI_SCK",
+                "PA6_SPI_MISO",
+                "PA7_SPI_MOSI",
+                "PA9_UART_TX",
+                "SPI_MISO",
+                "SPI_MOSI",
+                "SPI_NSS",
+                "SPI_SCK",
+                "SWCLK",
+                "SWDIO",
+                "SWO",
+                "UART_RX",
+                "UART_TX",
+                "USB_ATTACH_N",
+                "USB_PULLUP_SRC",
+                "VBUS_GATE",
+                "VBUS_PRESENT_N"
+              ],
+              "class2": null,
+              "allClass2NetMembers": null,
+              "domain": "physical",
+              "cset": "HI_B016_P006_4L"
+            }
+          ],
+          "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+        },
+        {
+          "region": "HI_B016_R007_4L",
+          "layer": "BOTTOM",
+          "polygon": [
+            [
+              37.99,
+              26.29
+            ],
+            [
+              38.01,
+              26.29
+            ],
+            [
+              38.01,
+              26.31
+            ],
+            [
+              37.99,
+              26.31
+            ]
+          ],
+          "engineeringRequestedNets": [
+            "GPIO_PB10"
+          ],
+          "actualNativeClassScope": [
+            {
+              "class1": "NC_DIGITAL_GENERAL_P",
+              "allClass1NetMembers": [
+                "BOOT0",
+                "BOOT1",
+                "BOOT_SERVICE",
+                "CAN_RXD",
+                "CAN_TXD",
+                "GPIO_PA1",
+                "GPIO_PA15",
+                "GPIO_PA2",
+                "GPIO_PA3",
+                "GPIO_PB1",
+                "GPIO_PB10",
+                "GPIO_PB11",
+                "GPIO_PB12",
+                "GPIO_PB13",
+                "GPIO_PB14",
+                "GPIO_PB15",
+                "GPIO_PB4",
+                "GPIO_PB5",
+                "GPIO_PB8",
+                "GPIO_PB9",
+                "GPIO_PC13",
+                "GPIO_PC14",
+                "GPIO_PC15",
+                "I2C_SCL",
+                "I2C_SDA",
+                "NRST",
+                "PA10_UART_RX",
+                "PA4_SPI_NSS",
+                "PA5_SPI_SCK",
+                "PA6_SPI_MISO",
+                "PA7_SPI_MOSI",
+                "PA9_UART_TX",
+                "SPI_MISO",
+                "SPI_MOSI",
+                "SPI_NSS",
+                "SPI_SCK",
+                "SWCLK",
+                "SWDIO",
+                "SWO",
+                "UART_RX",
+                "UART_TX",
+                "USB_ATTACH_N",
+                "USB_PULLUP_SRC",
+                "VBUS_GATE",
+                "VBUS_PRESENT_N"
+              ],
+              "class2": null,
+              "allClass2NetMembers": null,
+              "domain": "physical",
+              "cset": "HI_B016_P008_4L"
+            }
+          ],
+          "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+        },
+        {
+          "region": "HI_B016_R009_4L",
+          "layer": "L2",
+          "polygon": [
+            [
+              45.64,
+              28.64
+            ],
+            [
+              45.66,
+              28.64
+            ],
+            [
+              45.66,
+              28.66
+            ],
+            [
+              45.64,
+              28.66
+            ]
+          ],
+          "engineeringRequestedNets": [
+            "GPIO_PB9"
+          ],
+          "actualNativeClassScope": [
+            {
+              "class1": "NC_DIGITAL_GENERAL_P",
+              "allClass1NetMembers": [
+                "BOOT0",
+                "BOOT1",
+                "BOOT_SERVICE",
+                "CAN_RXD",
+                "CAN_TXD",
+                "GPIO_PA1",
+                "GPIO_PA15",
+                "GPIO_PA2",
+                "GPIO_PA3",
+                "GPIO_PB1",
+                "GPIO_PB10",
+                "GPIO_PB11",
+                "GPIO_PB12",
+                "GPIO_PB13",
+                "GPIO_PB14",
+                "GPIO_PB15",
+                "GPIO_PB4",
+                "GPIO_PB5",
+                "GPIO_PB8",
+                "GPIO_PB9",
+                "GPIO_PC13",
+                "GPIO_PC14",
+                "GPIO_PC15",
+                "I2C_SCL",
+                "I2C_SDA",
+                "NRST",
+                "PA10_UART_RX",
+                "PA4_SPI_NSS",
+                "PA5_SPI_SCK",
+                "PA6_SPI_MISO",
+                "PA7_SPI_MOSI",
+                "PA9_UART_TX",
+                "SPI_MISO",
+                "SPI_MOSI",
+                "SPI_NSS",
+                "SPI_SCK",
+                "SWCLK",
+                "SWDIO",
+                "SWO",
+                "UART_RX",
+                "UART_TX",
+                "USB_ATTACH_N",
+                "USB_PULLUP_SRC",
+                "VBUS_GATE",
+                "VBUS_PRESENT_N"
+              ],
+              "class2": null,
+              "allClass2NetMembers": null,
+              "domain": "physical",
+              "cset": "HI_B016_P010_4L"
+            }
+          ],
+          "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+        },
+        {
+          "region": "HI_B016_R011_4L",
+          "layer": "L3",
+          "polygon": [
+            [
+              45.64,
+              28.64
+            ],
+            [
+              45.66,
+              28.64
+            ],
+            [
+              45.66,
+              28.66
+            ],
+            [
+              45.64,
+              28.66
+            ]
+          ],
+          "engineeringRequestedNets": [
+            "GPIO_PB9"
+          ],
+          "actualNativeClassScope": [
+            {
+              "class1": "NC_DIGITAL_GENERAL_P",
+              "allClass1NetMembers": [
+                "BOOT0",
+                "BOOT1",
+                "BOOT_SERVICE",
+                "CAN_RXD",
+                "CAN_TXD",
+                "GPIO_PA1",
+                "GPIO_PA15",
+                "GPIO_PA2",
+                "GPIO_PA3",
+                "GPIO_PB1",
+                "GPIO_PB10",
+                "GPIO_PB11",
+                "GPIO_PB12",
+                "GPIO_PB13",
+                "GPIO_PB14",
+                "GPIO_PB15",
+                "GPIO_PB4",
+                "GPIO_PB5",
+                "GPIO_PB8",
+                "GPIO_PB9",
+                "GPIO_PC13",
+                "GPIO_PC14",
+                "GPIO_PC15",
+                "I2C_SCL",
+                "I2C_SDA",
+                "NRST",
+                "PA10_UART_RX",
+                "PA4_SPI_NSS",
+                "PA5_SPI_SCK",
+                "PA6_SPI_MISO",
+                "PA7_SPI_MOSI",
+                "PA9_UART_TX",
+                "SPI_MISO",
+                "SPI_MOSI",
+                "SPI_NSS",
+                "SPI_SCK",
+                "SWCLK",
+                "SWDIO",
+                "SWO",
+                "UART_RX",
+                "UART_TX",
+                "USB_ATTACH_N",
+                "USB_PULLUP_SRC",
+                "VBUS_GATE",
+                "VBUS_PRESENT_N"
+              ],
+              "class2": null,
+              "allClass2NetMembers": null,
+              "domain": "physical",
+              "cset": "HI_B016_P012_4L"
+            }
+          ],
+          "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+        },
+        {
+          "region": "HI_B016_R013_4L",
+          "layer": "L2",
+          "polygon": [
+            [
+              37.49,
+              20.715
+            ],
+            [
+              37.51,
+              20.715
+            ],
+            [
+              37.51,
+              20.735
+            ],
+            [
+              37.49,
+              20.735
+            ]
+          ],
+          "engineeringRequestedNets": [
+            "GPIO_PB13"
+          ],
+          "actualNativeClassScope": [
+            {
+              "class1": "NC_DIGITAL_GENERAL_P",
+              "allClass1NetMembers": [
+                "BOOT0",
+                "BOOT1",
+                "BOOT_SERVICE",
+                "CAN_RXD",
+                "CAN_TXD",
+                "GPIO_PA1",
+                "GPIO_PA15",
+                "GPIO_PA2",
+                "GPIO_PA3",
+                "GPIO_PB1",
+                "GPIO_PB10",
+                "GPIO_PB11",
+                "GPIO_PB12",
+                "GPIO_PB13",
+                "GPIO_PB14",
+                "GPIO_PB15",
+                "GPIO_PB4",
+                "GPIO_PB5",
+                "GPIO_PB8",
+                "GPIO_PB9",
+                "GPIO_PC13",
+                "GPIO_PC14",
+                "GPIO_PC15",
+                "I2C_SCL",
+                "I2C_SDA",
+                "NRST",
+                "PA10_UART_RX",
+                "PA4_SPI_NSS",
+                "PA5_SPI_SCK",
+                "PA6_SPI_MISO",
+                "PA7_SPI_MOSI",
+                "PA9_UART_TX",
+                "SPI_MISO",
+                "SPI_MOSI",
+                "SPI_NSS",
+                "SPI_SCK",
+                "SWCLK",
+                "SWDIO",
+                "SWO",
+                "UART_RX",
+                "UART_TX",
+                "USB_ATTACH_N",
+                "USB_PULLUP_SRC",
+                "VBUS_GATE",
+                "VBUS_PRESENT_N"
+              ],
+              "class2": null,
+              "allClass2NetMembers": null,
+              "domain": "physical",
+              "cset": "HI_B016_P014_4L"
+            }
+          ],
+          "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+        },
+        {
+          "region": "HI_B016_R015_4L",
+          "layer": "L3",
+          "polygon": [
+            [
+              37.49,
+              20.715
+            ],
+            [
+              37.51,
+              20.715
+            ],
+            [
+              37.51,
+              20.735
+            ],
+            [
+              37.49,
+              20.735
+            ]
+          ],
+          "engineeringRequestedNets": [
+            "GPIO_PB13"
+          ],
+          "actualNativeClassScope": [
+            {
+              "class1": "NC_DIGITAL_GENERAL_P",
+              "allClass1NetMembers": [
+                "BOOT0",
+                "BOOT1",
+                "BOOT_SERVICE",
+                "CAN_RXD",
+                "CAN_TXD",
+                "GPIO_PA1",
+                "GPIO_PA15",
+                "GPIO_PA2",
+                "GPIO_PA3",
+                "GPIO_PB1",
+                "GPIO_PB10",
+                "GPIO_PB11",
+                "GPIO_PB12",
+                "GPIO_PB13",
+                "GPIO_PB14",
+                "GPIO_PB15",
+                "GPIO_PB4",
+                "GPIO_PB5",
+                "GPIO_PB8",
+                "GPIO_PB9",
+                "GPIO_PC13",
+                "GPIO_PC14",
+                "GPIO_PC15",
+                "I2C_SCL",
+                "I2C_SDA",
+                "NRST",
+                "PA10_UART_RX",
+                "PA4_SPI_NSS",
+                "PA5_SPI_SCK",
+                "PA6_SPI_MISO",
+                "PA7_SPI_MOSI",
+                "PA9_UART_TX",
+                "SPI_MISO",
+                "SPI_MOSI",
+                "SPI_NSS",
+                "SPI_SCK",
+                "SWCLK",
+                "SWDIO",
+                "SWO",
+                "UART_RX",
+                "UART_TX",
+                "USB_ATTACH_N",
+                "USB_PULLUP_SRC",
+                "VBUS_GATE",
+                "VBUS_PRESENT_N"
+              ],
+              "class2": null,
+              "allClass2NetMembers": null,
+              "domain": "physical",
+              "cset": "HI_B016_P016_4L"
+            }
+          ],
+          "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+        },
+        {
+          "region": "HI_B016_R017_4L",
+          "layer": "L2",
+          "polygon": [
+            [
+              38.49,
+              20.665
+            ],
+            [
+              38.51,
+              20.665
+            ],
+            [
+              38.51,
+              20.685
+            ],
+            [
+              38.49,
+              20.685
+            ]
+          ],
+          "engineeringRequestedNets": [
+            "GPIO_PB15"
+          ],
+          "actualNativeClassScope": [
+            {
+              "class1": "NC_DIGITAL_GENERAL_P",
+              "allClass1NetMembers": [
+                "BOOT0",
+                "BOOT1",
+                "BOOT_SERVICE",
+                "CAN_RXD",
+                "CAN_TXD",
+                "GPIO_PA1",
+                "GPIO_PA15",
+                "GPIO_PA2",
+                "GPIO_PA3",
+                "GPIO_PB1",
+                "GPIO_PB10",
+                "GPIO_PB11",
+                "GPIO_PB12",
+                "GPIO_PB13",
+                "GPIO_PB14",
+                "GPIO_PB15",
+                "GPIO_PB4",
+                "GPIO_PB5",
+                "GPIO_PB8",
+                "GPIO_PB9",
+                "GPIO_PC13",
+                "GPIO_PC14",
+                "GPIO_PC15",
+                "I2C_SCL",
+                "I2C_SDA",
+                "NRST",
+                "PA10_UART_RX",
+                "PA4_SPI_NSS",
+                "PA5_SPI_SCK",
+                "PA6_SPI_MISO",
+                "PA7_SPI_MOSI",
+                "PA9_UART_TX",
+                "SPI_MISO",
+                "SPI_MOSI",
+                "SPI_NSS",
+                "SPI_SCK",
+                "SWCLK",
+                "SWDIO",
+                "SWO",
+                "UART_RX",
+                "UART_TX",
+                "USB_ATTACH_N",
+                "USB_PULLUP_SRC",
+                "VBUS_GATE",
+                "VBUS_PRESENT_N"
+              ],
+              "class2": null,
+              "allClass2NetMembers": null,
+              "domain": "physical",
+              "cset": "HI_B016_P018_4L"
+            }
+          ],
+          "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+        },
+        {
+          "region": "HI_B016_R019_4L",
+          "layer": "L3",
+          "polygon": [
+            [
+              38.49,
+              20.665
+            ],
+            [
+              38.51,
+              20.665
+            ],
+            [
+              38.51,
+              20.685
+            ],
+            [
+              38.49,
+              20.685
+            ]
+          ],
+          "engineeringRequestedNets": [
+            "GPIO_PB15"
+          ],
+          "actualNativeClassScope": [
+            {
+              "class1": "NC_DIGITAL_GENERAL_P",
+              "allClass1NetMembers": [
+                "BOOT0",
+                "BOOT1",
+                "BOOT_SERVICE",
+                "CAN_RXD",
+                "CAN_TXD",
+                "GPIO_PA1",
+                "GPIO_PA15",
+                "GPIO_PA2",
+                "GPIO_PA3",
+                "GPIO_PB1",
+                "GPIO_PB10",
+                "GPIO_PB11",
+                "GPIO_PB12",
+                "GPIO_PB13",
+                "GPIO_PB14",
+                "GPIO_PB15",
+                "GPIO_PB4",
+                "GPIO_PB5",
+                "GPIO_PB8",
+                "GPIO_PB9",
+                "GPIO_PC13",
+                "GPIO_PC14",
+                "GPIO_PC15",
+                "I2C_SCL",
+                "I2C_SDA",
+                "NRST",
+                "PA10_UART_RX",
+                "PA4_SPI_NSS",
+                "PA5_SPI_SCK",
+                "PA6_SPI_MISO",
+                "PA7_SPI_MOSI",
+                "PA9_UART_TX",
+                "SPI_MISO",
+                "SPI_MOSI",
+                "SPI_NSS",
+                "SPI_SCK",
+                "SWCLK",
+                "SWDIO",
+                "SWO",
+                "UART_RX",
+                "UART_TX",
+                "USB_ATTACH_N",
+                "USB_PULLUP_SRC",
+                "VBUS_GATE",
+                "VBUS_PRESENT_N"
+              ],
+              "class2": null,
+              "allClass2NetMembers": null,
+              "domain": "physical",
+              "cset": "HI_B016_P020_4L"
+            }
+          ],
+          "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+        },
+        {
+          "region": "HI_B016_R021_4L",
+          "layer": "BOTTOM",
+          "polygon": [
+            [
+              38.49,
+              20.665
+            ],
+            [
+              38.51,
+              20.665
+            ],
+            [
+              38.51,
+              20.685
+            ],
+            [
+              38.49,
+              20.685
+            ]
+          ],
+          "engineeringRequestedNets": [
+            "GPIO_PB15"
+          ],
+          "actualNativeClassScope": [
+            {
+              "class1": "NC_DIGITAL_GENERAL_P",
+              "allClass1NetMembers": [
+                "BOOT0",
+                "BOOT1",
+                "BOOT_SERVICE",
+                "CAN_RXD",
+                "CAN_TXD",
+                "GPIO_PA1",
+                "GPIO_PA15",
+                "GPIO_PA2",
+                "GPIO_PA3",
+                "GPIO_PB1",
+                "GPIO_PB10",
+                "GPIO_PB11",
+                "GPIO_PB12",
+                "GPIO_PB13",
+                "GPIO_PB14",
+                "GPIO_PB15",
+                "GPIO_PB4",
+                "GPIO_PB5",
+                "GPIO_PB8",
+                "GPIO_PB9",
+                "GPIO_PC13",
+                "GPIO_PC14",
+                "GPIO_PC15",
+                "I2C_SCL",
+                "I2C_SDA",
+                "NRST",
+                "PA10_UART_RX",
+                "PA4_SPI_NSS",
+                "PA5_SPI_SCK",
+                "PA6_SPI_MISO",
+                "PA7_SPI_MOSI",
+                "PA9_UART_TX",
+                "SPI_MISO",
+                "SPI_MOSI",
+                "SPI_NSS",
+                "SPI_SCK",
+                "SWCLK",
+                "SWDIO",
+                "SWO",
+                "UART_RX",
+                "UART_TX",
+                "USB_ATTACH_N",
+                "USB_PULLUP_SRC",
+                "VBUS_GATE",
+                "VBUS_PRESENT_N"
+              ],
+              "class2": null,
+              "allClass2NetMembers": null,
+              "domain": "physical",
+              "cset": "HI_B016_P022_4L"
+            }
+          ],
+          "warning": "Existing class membership is deliberately retained. Every listed class member is subject to this region if its actual copper enters; this is not a per-pin or per-net-only override."
+        }
+      ]
+    }
+  }
+}

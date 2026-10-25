@@ -1,0 +1,71 @@
+{
+  "status": "READ_ONLY_DERIVED_SINGLE_STITCH_COMPARISON_NOT_NATIVE",
+  "batchId": "USB_COMMON_RETURN_STITCH_2L_01",
+  "variant": "2L",
+  "sourceExpectedSHA256": "AA3BFC0E01B06CB1058462439C71E56BC316F1F2929859B6A224320BE1013420",
+  "operations": [
+    {
+      "type": "via",
+      "id": "USB_COMMON_RETURN_SHORTCUT_STITCH",
+      "net": "GND",
+      "xy": [
+        42.35,
+        17.0
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "JoinexistingactualTOPgroundcorridorbetweenR5/R12totheBOTTOMgroundsouthofATTACHslot; nativeC1.2common/actualCuandshortenedlocalreturnmustbeproved"
+    }
+  ],
+  "placementChanges": [],
+  "constraintOperations": [],
+  "connectivityProofs": [
+    {
+      "id": "USB_RETURN_NEW_STITCH_C1_COMMON",
+      "from": "C1.2",
+      "toAlias": "USB_COMMON_RETURN_SHORTCUT_STITCH",
+      "connected": true
+    },
+    {
+      "id": "USB_RETURN_STITCH_C14",
+      "from": "C14.2",
+      "toAlias": "USB_COMMON_RETURN_SHORTCUT_STITCH",
+      "connected": true
+    }
+  ],
+  "geometryEvidence": {
+    "TOP": {
+      "diskAreaMM2": 0.28271495258394963,
+      "currentCommonCopperIntersectionMM2": 0.28271495258394974,
+      "fullDiskCovered": true,
+      "candidateStitchNotYetNative": true
+    },
+    "BOTTOM": {
+      "diskAreaMM2": 0.28271495258394963,
+      "currentCommonCopperIntersectionMM2": 0.28271495258394974,
+      "fullDiskCovered": true,
+      "candidateStitchNotYetNative": true
+    },
+    "narrowActualTOPcorridor": {
+      "geometry": [
+        [
+          41.97,
+          17.6
+        ],
+        [
+          41.97,
+          19.3
+        ]
+      ],
+      "testWidthMM": 0.25,
+      "actualCommonCovered": false,
+      "missingAreaMM2": 0.20009999999999994,
+      "meaning": "A testwindowonly,notachosennewtraceortotalreturnpath"
+    }
+  },
+  "pending": [
+    "FullallfieldspacingprecheckandSouthfuturemerge",
+    "NochangecriticalUSB/C14/HSE/controlsourceorP/S/Ebudgets; globalstockviaalreadyapproved",
+    "ActualpostfillGNDallpins/vias/shapes/health/oldedges/HSEnegative",
+    "ReturncorridormeshcomparisonisnotHFsolutionor90ohmcertification"
+  ]
+}

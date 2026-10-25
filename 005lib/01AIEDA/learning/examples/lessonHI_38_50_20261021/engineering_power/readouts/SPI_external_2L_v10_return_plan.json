@@ -1,0 +1,265 @@
+{
+  "status": "CANDIDATE_RETURN_ENGINEERING_REVIEW_NEEDS_NATIVE_REFILL",
+  "sourceSHA256": "76ED85DA3999A7DAFBDF9EB99EEC425B480A5EAEB49843BF970F8664707DE0AF",
+  "candidateSHA256": "466bebfb6f010385298a3dc0979eb8420528058ac07ce398c1d4cb12a6100cfc",
+  "signalTransitions": [
+    {
+      "id": "SPI_SCK_EAST",
+      "net": "SPI_SCK",
+      "xy": [
+        30.8,
+        29.95
+      ],
+      "nearestGND": "SPI_RETURN_SCK_E",
+      "groundXY": [
+        30.9,
+        29.1
+      ],
+      "distance_mm": 0.8558621384311821
+    },
+    {
+      "id": "SPI_SCK_WEST",
+      "net": "SPI_SCK",
+      "xy": [
+        21.85,
+        29.95
+      ],
+      "nearestGND": "SPI_RETURN_SCK_W",
+      "groundXY": [
+        20.5,
+        29.32
+      ],
+      "distance_mm": 1.4897650821522173
+    },
+    {
+      "id": "SPI_MOSI_EAST",
+      "net": "SPI_MOSI",
+      "xy": [
+        31.65,
+        27.8
+      ],
+      "nearestGND": "SPI_RETURN_MISO_E",
+      "groundXY": [
+        32.85,
+        28.1
+      ],
+      "distance_mm": 1.2369316876853012
+    },
+    {
+      "id": "SPI_MOSI_WEST",
+      "net": "SPI_MOSI",
+      "xy": [
+        14,
+        29.3
+      ],
+      "nearestGND": "SPI_RETURN_MOSI_W",
+      "groundXY": [
+        14,
+        30.6
+      ],
+      "distance_mm": 1.3000000000000007
+    },
+    {
+      "id": "SPI_MISO_EAST",
+      "net": "SPI_MISO",
+      "xy": [
+        31.65,
+        29.77
+      ],
+      "nearestGND": "SPI_RETURN_SCK_E",
+      "groundXY": [
+        30.9,
+        29.1
+      ],
+      "distance_mm": 1.0056838469419689
+    },
+    {
+      "id": "SPI_MISO_WEST",
+      "net": "SPI_MISO",
+      "xy": [
+        20.5,
+        30.8
+      ],
+      "nearestGND": "SPI_RETURN_GUARD_W",
+      "groundXY": [
+        21,
+        31.55
+      ],
+      "distance_mm": 0.9013878188659973
+    },
+    {
+      "id": "SPI_NSS_EAST",
+      "net": "SPI_NSS",
+      "xy": [
+        29.6,
+        32.46
+      ],
+      "nearestGND": "SPI_RETURN_NSS_E",
+      "groundXY": [
+        29,
+        33.2
+      ],
+      "distance_mm": 0.9526804291051667
+    },
+    {
+      "id": "SPI_NSS_WEST",
+      "net": "SPI_NSS",
+      "xy": [
+        20.3,
+        32.4
+      ],
+      "nearestGND": "SPI_RETURN_GUARD_W",
+      "groundXY": [
+        21,
+        31.55
+      ],
+      "distance_mm": 1.1011357772772599
+    }
+  ],
+  "allSignalsHaveGNDWithin1_5mm": true,
+  "bottomBridges": [
+    {
+      "id": "SPI_SCK_BOTTOM_BRIDGE",
+      "net": "SPI_SCK",
+      "length_mm": 8.95,
+      "potentialTOPGroundUnavailableLength_mm": 5.700000000000003,
+      "unavailableBBox": [
+        22.2,
+        29.95,
+        29.25,
+        29.95
+      ],
+      "note": "Projected foreign TOP copper plus .3mm halo upper-bound; TOP global GND has not been poured. These are deliberate coplanar-return bridges, not certified opposite-plane routes.",
+      "maxDistanceToWidth0598GroundCore_mm": 0.6989999999999981,
+      "worstGroundCoreSample": [
+        30.1,
+        29.95
+      ],
+      "groundCoreProofScope": "Predicted BOTTOM common GND eroded by0.299mm. Distance is to center set of >=0.598mm ground corridor; candidate-generated native shape still unverified."
+    },
+    {
+      "id": "SPI_MOSI_BOTTOM_BRIDGE",
+      "net": "SPI_MOSI",
+      "length_mm": 18.27132034355964,
+      "potentialTOPGroundUnavailableLength_mm": 12.533276769760134,
+      "unavailableBBox": [
+        15.408999081166634,
+        28.3,
+        29.25,
+        28.5
+      ],
+      "note": "Projected foreign TOP copper plus .3mm halo upper-bound; TOP global GND has not been poured. These are deliberate coplanar-return bridges, not certified opposite-plane routes.",
+      "maxDistanceToWidth0598GroundCore_mm": 0.7140860492971359,
+      "worstGroundCoreSample": [
+        26.498959235991432,
+        28.401040764008567
+      ],
+      "groundCoreProofScope": "Predicted BOTTOM common GND eroded by0.299mm. Distance is to center set of >=0.598mm ground corridor; candidate-generated native shape still unverified."
+    },
+    {
+      "id": "SPI_MISO_BOTTOM_BRIDGE",
+      "net": "SPI_MISO",
+      "length_mm": 11.711370849898476,
+      "potentialTOPGroundUnavailableLength_mm": 6.802394414328148,
+      "unavailableBBox": [
+        22.2,
+        30.8,
+        30.735,
+        30.8
+      ],
+      "note": "Projected foreign TOP copper plus .3mm halo upper-bound; TOP global GND has not been poured. These are deliberate coplanar-return bridges, not certified opposite-plane routes.",
+      "maxDistanceToWidth0598GroundCore_mm": 1.453146045132206,
+      "worstGroundCoreSample": [
+        31.10552777848636,
+        30.544472221513644
+      ],
+      "groundCoreProofScope": "Predicted BOTTOM common GND eroded by0.299mm. Distance is to center set of >=0.598mm ground corridor; candidate-generated native shape still unverified."
+    },
+    {
+      "id": "SPI_NSS_BOTTOM_BRIDGE",
+      "net": "SPI_NSS",
+      "length_mm": 9.40769552621701,
+      "potentialTOPGroundUnavailableLength_mm": 7.843212133253324,
+      "unavailableBBox": [
+        21.455316004170534,
+        32.3,
+        29.298528137423858,
+        32.3
+      ],
+      "note": "Projected foreign TOP copper plus .3mm halo upper-bound; TOP global GND has not been poured. These are deliberate coplanar-return bridges, not certified opposite-plane routes.",
+      "maxDistanceToWidth0598GroundCore_mm": 0.6989999999999981,
+      "worstGroundCoreSample": [
+        28.966274169979698,
+        32.3
+      ],
+      "groundCoreProofScope": "Predicted BOTTOM common GND eroded by0.299mm. Distance is to center set of >=0.598mm ground corridor; candidate-generated native shape still unverified."
+    }
+  ],
+  "predictedCopperConnections": [
+    {
+      "id": "SPI_GUARD_CLOCK_MOSI",
+      "explicitWidth_mm": 0.6,
+      "fullGuardInPredictedCommonGND": true
+    },
+    {
+      "id": "SPI_GUARD_MISO_NSS",
+      "explicitWidth_mm": 0.6,
+      "fullGuardInPredictedCommonGND": true
+    },
+    {
+      "id": "SPI_RETURN_SCK_E",
+      "viaAnnulusInPredictedCommonGND": true
+    },
+    {
+      "id": "SPI_RETURN_SCK_W",
+      "viaAnnulusInPredictedCommonGND": true
+    },
+    {
+      "id": "SPI_RETURN_MOSI_E",
+      "viaAnnulusInPredictedCommonGND": true
+    },
+    {
+      "id": "SPI_RETURN_MOSI_W",
+      "viaAnnulusInPredictedCommonGND": true
+    },
+    {
+      "id": "SPI_RETURN_MISO_E",
+      "viaAnnulusInPredictedCommonGND": true
+    },
+    {
+      "id": "SPI_RETURN_GUARD_E",
+      "viaAnnulusInPredictedCommonGND": true
+    },
+    {
+      "id": "SPI_RETURN_GUARD_W",
+      "viaAnnulusInPredictedCommonGND": true
+    },
+    {
+      "id": "SPI_RETURN_NSS_E",
+      "viaAnnulusInPredictedCommonGND": true
+    },
+    {
+      "id": "SPI_RETURN_NSS_W",
+      "viaAnnulusInPredictedCommonGND": true
+    }
+  ],
+  "guardConnectionsAllInCommon": true,
+  "guardReturnIntent": [
+    "SCK: existing C9 GND via (28.6,29) feeds .6mm guard y29.25 beside local 8.95mm BOTTOM bridge. Opposite TOP has unavoidable LDO VIN/EN/VOUT gap.",
+    "MISO and NSS: .6mm guard y31.55 connected by two offpad through vias; row31.55 is between signal30.8 and32.3 with .35mm nominal edge spacing. NSS still lies below TOP low-current V3 prefilter shifted to32.55, explicitly not opposite GND.",
+    "MOSI: BOTTOM x26.6..31.15 at y28.3 then x14.8..26.4 at28.5 avoids SW land projection. Closest ground vias and global BOTTOM plane provide coplanar return; TOP V5 projection locally remains.",
+    "Predicted common-ground proof conservatively subtracts .3mm halos for all new signal BOTTOM copper and .6mm radius signal-via antipads from frozen actual BOTTOM ground. It is a planning proof, not native regeneration acceptance."
+  ],
+  "manufacturingLimits": [
+    "New vias are off actual SMD copper and no drill intersects SMD pad. BodyExtent/PlaceBound is not a verified MPN body; C9 nearby via requires physical component/tenting review.",
+    "L28 through-via mask aperture/tent and annular ring are existing library process conditions; no in-pad approval implied.",
+    "J6 has one GND at pin6 and external cable length/edge/return is outside board DRC."
+  ],
+  "requiredNativeAcceptance": [
+    "0 DRC and fresh readback source hash unchanged",
+    "new GND via annular copper and both .6mm guard corridors in same actual common ground after all other digital routes and actual plane refill",
+    "No unexpected isolated copper or slit at SPI/GPIO crossings; record local minimum GND neck instead of relying on plane area",
+    "All source resistor -> SPI output -> correct J6 pin connectivity proven; no branch bypassing series resistor",
+    "Report actual parallel/coplanar return state and leave waveform/EMI/manufacturing conditions open"
+  ]
+}

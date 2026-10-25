@@ -1,0 +1,81 @@
+HI_PLACEMENT "U4" before=((40.25 10.0) 180.0 nil) actual=((40.25 11.4) 180.0 nil)
+HI_PLACEMENT "R5" before=((41.4 18.5) 270.0 nil) actual=((41.1 18.5) 270.0 nil)
+HI_PLACEMENT "R12" before=((43.4 18.3) 0.0 nil) actual=((42.8 18.3) 0.0 nil)
+HI_PLACEMENT "R13" before=((37.4 18.3) 180.0 nil) actual=((38.0 18.3) 180.0 nil)
+HI_PLACEMENT "R11" before=((46.0 16.2) 180.0 nil) actual=((42.9764 14.6) 180.0 nil)
+HI_CLASS_REASSIGN net="USB_DP" domain=physical old="NC_USB_FS_P" new="HI_USB_DP_P_4L" baseCSet="P_USB_PROVISIONAL" directNetProperties=((LOGICAL_PATH "@de_control.top(sch_1):usb_dp"))
+HI_CSET_COPY domain=physical name="HI_USB_MIRROR_P_4L" copyTemplate="P_USB_PROVISIONAL" changes=nil
+HI_CSET_LAYER_VALUE domain=physical cset="HI_USB_MIRROR_P_4L" layer="BOTTOM" key=allow_etch requested=t actual=t
+HI_REGION_CLASS region="HI_J2_MIRROR_BOTTOM" class1="HI_USB_DP_P_4L" class2=nil domain=physical cset="HI_USB_MIRROR_P_4L" table=(objType "classTable" readOnly t prop propList:00000207462C5020 assembly nil sameNet nil spacing nil physical "HI_USB_MIRROR_P_4L" region dbid:0000020752BFA740 netclass2 nil netclass1 dbid:0000020752BF9F68)
+HI_REGION_GEOMETRY (prop nil bBox ((39.35 5.3) (41.15 6.7)) readOnly t net nil objType "polygon" segments (dbid:0000020752BFAB60 dbid:0000020752BFABB0 dbid:0000020752BFAC00 dbid:0000020752BFAC50) nSegs 4 isRect nil layer "CONSTRAINT REGION/BOTTOM" parent nil parentGroups (dbid:0000020752BFA740))
+HI_ECSET_VALUE name="HI_E_USB_CONNECTOR_4L" key=Differential_Pair_Phase_Tolerance requested="4 MM" actual="4 MM"
+HI_ECSET_VALUE name="HI_E_USB_CONNECTOR_4L" key=Differential_Pair_Max_Uncoupled_Length requested="13.5 MM" actual=13.5
+HI_PAIR_ECSET_COPY pair="DP_USB_CONNECTOR" sourceTemplate="E_USB_FS_BUDGET" newCSet="HI_E_USB_CONNECTOR_4L" properties=((ELECTRICAL_CONSTRAINT_SET "HI_E_USB_CONNECTOR_4L")) pairAttributes=(userDefined t readOnly t objType "group" parentGroups nil groupMembers (dbid:0000020752B11158 dbid:0000020752B0FDD8) type "DIFF_PAIR" name "DP_USB_CONNECTOR")
+HI_CSET_COPY domain=spacing name="HI_USB_MCU_S_1_4L" copyTemplate="S_USB_OTHER_050" changes=((smdpin_line "0.2 MM") (line_line "0.2 MM"))
+HI_REGION_CLASS region="HI_USB_MCU_ESCAPE" class1="NC_USB_FS_S" class2="NC_DIGITAL_GENERAL_S" domain=spacing cset="HI_USB_MCU_S_1_4L" table=(objType "classTable" readOnly t prop propList:00000207462C5038 assembly nil sameNet nil physical nil spacing "HI_USB_MCU_S_1_4L" region dbid:0000020752BFBCB8 netclass2 dbid:0000020752B6D8A0 netclass1 dbid:0000020752B6A978)
+HI_REGION_GEOMETRY (prop nil bBox ((39.8 21.2) (41.6 23.4)) readOnly t net nil objType "polygon" segments (dbid:0000020752BFC0D8 dbid:0000020752BFC128 dbid:0000020752BFC178 dbid:0000020752BFC1C8) nSegs 4 isRect nil layer "CONSTRAINT REGION/TOP" parent nil parentGroups (dbid:0000020752BFBCB8))
+HI_VIA id="USB_DP_MIRROR_A" net="USB_DP" xy=(39.75 5.8) padstack="L28_VIA030_C060" result=(dbid:0000020752BFC298 nil)
+HI_VIA id="USB_DP_MIRROR_B" net="USB_DP" xy=(40.75 5.8) padstack="L28_VIA030_C060" result=(dbid:0000020755CB6840 nil)
+LOCAL_ROUTE	USB_DP_A6_TO_MIRROR	"USB_DP"	"ETCH/TOP"	((39.75 7.355) (39.75 5.8))	(0.2)	((dbid:0000020755CB7BB8) nil)
+LOCAL_ROUTE	USB_DP_B6_TO_MIRROR	"USB_DP"	"ETCH/TOP"	((40.75 7.355) (40.75 5.8))	(0.2)	((dbid:0000020755CB7FD0) nil)
+LOCAL_ROUTE	USB_DP_MIRROR_BOTTOM	"USB_DP"	"ETCH/BOTTOM"	((39.75 5.8) (40.75 5.8))	(0.2)	((dbid:0000020755CB83E8) nil)
+LOCAL_ROUTE	USB_DM_A7_MERGE	"USB_DM"	"ETCH/TOP"	((40.25 7.355) (40.25 8.6) (39.25 8.6) (39.25 7.355))	(0.2 0.2 0.2)	((dbid:0000020755CB8800) nil)
+LOCAL_ROUTE	USB_DP_ENTRY	"USB_DP"	"ETCH/TOP"	((40.75 7.355) (40.75 8.6) (41.2 9.05) (41.2 10.1))	(0.2 0.2 0.2)	((dbid:0000020755CB8C18) nil)
+LOCAL_ROUTE	USB_DM_ENTRY	"USB_DM"	"ETCH/TOP"	((39.25 7.355) (39.25 8.6) (39.3 8.65) (39.3 10.1))	(0.2 0.2 0.2)	((dbid:0000020755CB9310 dbid:0000020755CB90D0) nil)
+LOCAL_ROUTE	USB_SHARED_DP	"PA12_SHARED"	"ETCH/TOP"	((41.1 18.3984) (41.1 19.85) (40.95 20.0) (40.95 21.6) (41.25 21.9) (41.25 22.75))	(0.2 0.2 0.2 0.2 0.2)	((dbid:0000020755CB9960) nil)
+LOCAL_ROUTE	USB_DNP_STUB_DP	"PA12_SHARED"	"ETCH/TOP"	((41.1 18.3984) (42.8032 18.3984) (42.9016 18.3))	(0.2 0.2)	((dbid:0000020755CB9CD8) nil)
+LOCAL_ROUTE	USB_DNP_STUB_DM	"PA11_SHARED"	"ETCH/TOP"	((39.4 18.3984) (37.9968 18.3984) (37.8984 18.3))	(0.2 0.2)	((dbid:0000020755CB9F60) nil)
+HI_VIA id="USB_RETURN_LEFT" net="GND" xy=(38.15 5.8) padstack="L28_VIA030_C060" result=(dbid:0000020755CBA1E8 nil)
+HI_VIA id="USB_RETURN_RIGHT" net="GND" xy=(41.7 5.8) padstack="L28_VIA030_C060" result=(dbid:0000020755CBC5C0 nil)
+LOCAL_ROUTE	USB_U4_DP_FLOW	"USB_DP"	"ETCH/TOP"	((41.2 10.1) (41.2 12.7))	(0.2)	((dbid:0000020755CBE998) nil)
+LOCAL_ROUTE	USB_U4_DM_FLOW	"USB_DM"	"ETCH/TOP"	((39.3 10.1) (39.3 12.7))	(0.2)	((dbid:0000020755CBEDB0) nil)
+LOCAL_ROUTE	USB4L_PROTECTED_DP	"USB_DP"	"ETCH/TOP"	((41.2 12.7) (41.2 13.3) (40.455 14.045) (40.455 15.7) (41.1 16.345) (41.1 16.8236))	(0.26 0.26 0.26 0.26 0.26)	((dbid:0000020755CBF128) nil)
+LOCAL_ROUTE	USB4L_PROTECTED_DM	"USB_DM"	"ETCH/TOP"	((39.3 12.7) (39.3 13.3) (40.045 14.045) (40.045 15.7) (39.4 16.345) (39.4 16.8236))	(0.26 0.26 0.26 0.26 0.26)	((dbid:0000020755CBF680) nil)
+LOCAL_ROUTE	USB_PULLUP_BRANCH	"USB_DP"	"ETCH/TOP"	((40.455 14.6) (41.3 14.6))	(0.2)	((dbid:0000020755CBFB38 dbid:0000020755CBF128 dbid:0000020755CBFCA8) nil)
+LOCAL_ROUTE	USB_SHARED_DM	"PA11_SHARED"	"ETCH/TOP"	((39.4 18.3984) (39.4 18.95) (40.6 20.15) (40.6 21.745) (40.75 21.895) (40.75 22.75))	(0.2 0.2 0.2 0.2 0.2)	((dbid:0000020755CC2910) nil)
+LOCAL_ROUTE	ESD_U4_RETURN	"GND"	"ETCH/TOP"	((40.25 12.7) (40.25 11.8) (40.0 11.4))	(0.6 0.6)	((dbid:0000020755CC3E08) nil)
+HI_VIA id="V_HI_ESD_A" net="GND" xy=(40.0 11.4) padstack="L28_VIA030_C060" result=(dbid:0000020755CC3F50 nil)
+LOCAL_ROUTE	ESD_U4_SECOND_VIA	"GND"	"ETCH/TOP"	((40.25 11.8) (40.5 11.6))	(0.6)	((dbid:0000020755CC8588) nil)
+HI_VIA id="V_HI_ESD_B" net="GND" xy=(40.5 11.6) padstack="L28_VIA030_C060" result=(dbid:0000020755CC8750 nil)
+LOCAL_ROUTE	ESD_C10_RETURN	"GND"	"ETCH/TOP"	((42.7 10.7764) (43.8 10.7764) (43.8 11.5764))	(0.6 0.6)	((dbid:0000020755CCAB28) nil)
+HI_VIA id="V_HI_C10_A" net="GND" xy=(43.8 10.7764) padstack="L28_VIA030_C060" result=(dbid:0000020755CCAC70 nil)
+HI_VIA id="V_HI_C10_B" net="GND" xy=(43.8 11.5764) padstack="L28_VIA030_C060" result=(dbid:0000020755CCF350 nil)
+LOCAL_ROUTE	ESD_VBUS_U4_ESCAPE	"USB_VBUS"	"ETCH/TOP"	((40.25 10.1) (40.25 9.3))	(0.4)	((dbid:0000020755CD1728) nil)
+HI_VIA id="V_HI_ESD_VBUS_LEFT" net="USB_VBUS" xy=(40.25 9.3) padstack="L28_VIA030_C060" result=(dbid:0000020755CD1820 nil)
+LOCAL_ROUTE	ESD_VBUS_BOTTOM_BRIDGE	"USB_VBUS"	"ETCH/BOTTOM"	((40.25 9.3) (43.8 9.2016))	(0.6)	((dbid:0000020755CD2378) nil)
+HI_VIA id="V_HI_C10_VBUS" net="USB_VBUS" xy=(43.8 9.2016) padstack="L28_VIA030_C060" result=(dbid:0000020755CD2470 nil)
+LOCAL_ROUTE	ESD_VBUS_C10	"USB_VBUS"	"ETCH/TOP"	((43.8 9.2016) (42.7 9.2016))	(0.6)	((dbid:0000020755CD3788) nil)
+DRC_STATUS	HI_BATCH_FINAL	0	t
+HI_ENDPOINT_PROOF from="J2.A6" to="USB_DP_MIRROR_A" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="J2.B6" to="USB_DP_MIRROR_B" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="USB_DP_MIRROR_A" to="USB_DP_MIRROR_B" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="J2.A7" to="J2.B7" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="J2.B6" to="U4.6" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="J2.B7" to="U4.4" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="R5.1" to="U1.33" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R5.1" to="R12.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R6.1" to="R13.1" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U4.6" to="U4.1" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="U4.4" to="U4.3" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="U4.1" to="R5.2" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="U4.3" to="R6.2" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="USB_DP_TRUNK_NODE" to="R11.2" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="R6.1" to="U1.32" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U4.2" to="V_HI_ESD_A" expected=t actual=t objects=264
+HI_ENDPOINT_PROOF from="ESD_U4_RETURN" to="V_HI_ESD_B" expected=t actual=t objects=264
+HI_ENDPOINT_PROOF from="C10.2" to="V_HI_C10_B" expected=t actual=t objects=264
+HI_ENDPOINT_PROOF from="U4.5" to="V_HI_ESD_VBUS_LEFT" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="V_HI_ESD_VBUS_LEFT" to="V_HI_C10_VBUS" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="V_HI_C10_VBUS" to="C10.1" expected=t actual=t objects=7
+HI_ENDPOINT_PROOF from="J2.A6" to="U4.6" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="J2.B6" to="U4.6" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="J2.A7" to="U4.4" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="J2.B7" to="U4.4" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="U4.1" to="R5.2" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="U4.3" to="R6.2" expected=t actual=t objects=11
+HI_ENDPOINT_PROOF from="R11.2" to="R5.2" expected=t actual=t objects=17
+HI_ENDPOINT_PROOF from="R5.1" to="U1.33" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="R6.1" to="U1.32" expected=t actual=t objects=5
+HI_ENDPOINT_PROOF from="U4.2" to="U1.47" expected=t actual=t objects=264
+HI_ENDPOINT_PROOF from="C10.2" to="U1.47" expected=t actual=t objects=264
+HI_BATCH_COMPLETED drcCount=0 status=CANDIDATE_DRC_ZERO_NOT_ENGINEERING_RELEASE board="D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native/HI_4L_usb_esd_4L_b008.brd"

@@ -1,0 +1,1541 @@
+{
+  "date_client": "2026-10-19 Asia/Shanghai",
+  "review_scope": "IndependentoriginalMCUpintable+nativeTSVtopology+nativeassemblyattributes+BOMprofile+ECOdiff; noCadenceAPI",
+  "pass": true,
+  "check_count": 53,
+  "checks": [
+    {
+      "section": "single:nativeinventory",
+      "check": "Reference and module identity unique",
+      "pass": true,
+      "evidence": {
+        "instances": 80,
+        "ref_unique": 80,
+        "module_unique": 80
+      }
+    },
+    {
+      "section": "single:nativeinventory",
+      "check": "Every native pin belongs to a known instance and has a unique physical key",
+      "pass": true,
+      "evidence": {
+        "physical_pins": 272
+      }
+    },
+    {
+      "section": "single:nativeinventory",
+      "check": "Connected and explicit NC pins partition the design",
+      "pass": true,
+      "evidence": {
+        "connected": 266,
+        "NC": [
+          [
+            "J2",
+            "A8"
+          ],
+          [
+            "J2",
+            "B8"
+          ],
+          [
+            "U2",
+            "5"
+          ],
+          [
+            "U3",
+            "4"
+          ],
+          [
+            "U5",
+            "5"
+          ],
+          [
+            "U5",
+            "8"
+          ]
+        ],
+        "flatnets": 69
+      }
+    },
+    {
+      "section": "single:nativeinventory",
+      "check": "MCU physical package and MPN",
+      "pass": true,
+      "evidence": {
+        "page": "DE_CONTROL",
+        "reference": "U1",
+        "module_id": "U_MCU",
+        "value": "STM32F103C8T6",
+        "footprint": "l09_stm32f103c8_lqfp48",
+        "mpn": "STM32F103C8T6",
+        "x": "500",
+        "y": "160"
+      }
+    },
+    {
+      "section": "single:nativeinventory",
+      "check": "Exactly 48 physical MCU pins, all connected",
+      "pass": true,
+      "evidence": {
+        "count": 48,
+        "source": "DS5319 Rev20 Figure8 PDF26"
+      }
+    },
+    {
+      "section": "single:nativeinventory",
+      "check": "Every MCU pin name, electrical type and assigned net agrees with original source pin table",
+      "pass": true,
+      "evidence": {
+        "source": "mcu_spec.json pins; DS5319 Rev20 Figure8/Table5 visually reviewed independently before integration",
+        "pin_checks": [
+          {
+            "pin": 1,
+            "name": "VBAT",
+            "type": "7",
+            "net": "V3V3",
+            "expected_net": "V3V3",
+            "pass": true
+          },
+          {
+            "pin": 2,
+            "name": "PC13-TAMPER-RTC",
+            "type": "1",
+            "net": "GPIO_PC13",
+            "expected_net": "GPIO_PC13",
+            "pass": true
+          },
+          {
+            "pin": 3,
+            "name": "PC14-OSC32_IN",
+            "type": "1",
+            "net": "GPIO_PC14",
+            "expected_net": "GPIO_PC14",
+            "pass": true
+          },
+          {
+            "pin": 4,
+            "name": "PC15-OSC32_OUT",
+            "type": "1",
+            "net": "GPIO_PC15",
+            "expected_net": "GPIO_PC15",
+            "pass": true
+          },
+          {
+            "pin": 5,
+            "name": "PD0-OSC_IN",
+            "type": "0",
+            "net": "OSC_IN",
+            "expected_net": "OSC_IN",
+            "pass": true
+          },
+          {
+            "pin": 6,
+            "name": "PD1-OSC_OUT",
+            "type": "2",
+            "net": "OSC_OUT",
+            "expected_net": "OSC_OUT",
+            "pass": true
+          },
+          {
+            "pin": 7,
+            "name": "NRST",
+            "type": "1",
+            "net": "NRST",
+            "expected_net": "NRST",
+            "pass": true
+          },
+          {
+            "pin": 8,
+            "name": "VSSA",
+            "type": "7",
+            "net": "GND",
+            "expected_net": "GND",
+            "pass": true
+          },
+          {
+            "pin": 9,
+            "name": "VDDA",
+            "type": "7",
+            "net": "VDDA",
+            "expected_net": "VDDA",
+            "pass": true
+          },
+          {
+            "pin": 10,
+            "name": "PA0-WKUP",
+            "type": "1",
+            "net": "ADC0",
+            "expected_net": "ADC0",
+            "pass": true
+          },
+          {
+            "pin": 11,
+            "name": "PA1",
+            "type": "1",
+            "net": "GPIO_PA1",
+            "expected_net": "GPIO_PA1",
+            "pass": true
+          },
+          {
+            "pin": 12,
+            "name": "PA2",
+            "type": "1",
+            "net": "GPIO_PA2",
+            "expected_net": "GPIO_PA2",
+            "pass": true
+          },
+          {
+            "pin": 13,
+            "name": "PA3",
+            "type": "1",
+            "net": "GPIO_PA3",
+            "expected_net": "GPIO_PA3",
+            "pass": true
+          },
+          {
+            "pin": 14,
+            "name": "PA4",
+            "type": "1",
+            "net": "PA4_SPI_NSS",
+            "expected_net": "PA4_SPI_NSS",
+            "pass": true
+          },
+          {
+            "pin": 15,
+            "name": "PA5",
+            "type": "1",
+            "net": "PA5_SPI_SCK",
+            "expected_net": "PA5_SPI_SCK",
+            "pass": true
+          },
+          {
+            "pin": 16,
+            "name": "PA6",
+            "type": "1",
+            "net": "PA6_SPI_MISO",
+            "expected_net": "PA6_SPI_MISO",
+            "pass": true
+          },
+          {
+            "pin": 17,
+            "name": "PA7",
+            "type": "1",
+            "net": "PA7_SPI_MOSI",
+            "expected_net": "PA7_SPI_MOSI",
+            "pass": true
+          },
+          {
+            "pin": 18,
+            "name": "PB0",
+            "type": "1",
+            "net": "VBUS_PRESENT_N",
+            "expected_net": "VBUS_PRESENT_N",
+            "pass": true
+          },
+          {
+            "pin": 19,
+            "name": "PB1",
+            "type": "1",
+            "net": "GPIO_PB1",
+            "expected_net": "GPIO_PB1",
+            "pass": true
+          },
+          {
+            "pin": 20,
+            "name": "PB2-BOOT1",
+            "type": "1",
+            "net": "BOOT1",
+            "expected_net": "BOOT1",
+            "pass": true
+          },
+          {
+            "pin": 21,
+            "name": "PB10",
+            "type": "1",
+            "net": "GPIO_PB10",
+            "expected_net": "GPIO_PB10",
+            "pass": true
+          },
+          {
+            "pin": 22,
+            "name": "PB11",
+            "type": "1",
+            "net": "GPIO_PB11",
+            "expected_net": "GPIO_PB11",
+            "pass": true
+          },
+          {
+            "pin": 23,
+            "name": "VSS_1",
+            "type": "7",
+            "net": "GND",
+            "expected_net": "GND",
+            "pass": true
+          },
+          {
+            "pin": 24,
+            "name": "VDD_1",
+            "type": "7",
+            "net": "V3V3",
+            "expected_net": "V3V3",
+            "pass": true
+          },
+          {
+            "pin": 25,
+            "name": "PB12",
+            "type": "1",
+            "net": "GPIO_PB12",
+            "expected_net": "GPIO_PB12",
+            "pass": true
+          },
+          {
+            "pin": 26,
+            "name": "PB13",
+            "type": "1",
+            "net": "GPIO_PB13",
+            "expected_net": "GPIO_PB13",
+            "pass": true
+          },
+          {
+            "pin": 27,
+            "name": "PB14",
+            "type": "1",
+            "net": "GPIO_PB14",
+            "expected_net": "GPIO_PB14",
+            "pass": true
+          },
+          {
+            "pin": 28,
+            "name": "PB15",
+            "type": "1",
+            "net": "GPIO_PB15",
+            "expected_net": "GPIO_PB15",
+            "pass": true
+          },
+          {
+            "pin": 29,
+            "name": "PA8",
+            "type": "1",
+            "net": "USB_ATTACH_N",
+            "expected_net": "USB_ATTACH_N",
+            "pass": true
+          },
+          {
+            "pin": 30,
+            "name": "PA9",
+            "type": "1",
+            "net": "PA9_UART_TX",
+            "expected_net": "PA9_UART_TX",
+            "pass": true
+          },
+          {
+            "pin": 31,
+            "name": "PA10",
+            "type": "1",
+            "net": "PA10_UART_RX",
+            "expected_net": "PA10_UART_RX",
+            "pass": true
+          },
+          {
+            "pin": 32,
+            "name": "PA11",
+            "type": "1",
+            "net": "PA11_SHARED",
+            "expected_net": "PA11_SHARED",
+            "pass": true
+          },
+          {
+            "pin": 33,
+            "name": "PA12",
+            "type": "1",
+            "net": "PA12_SHARED",
+            "expected_net": "PA12_SHARED",
+            "pass": true
+          },
+          {
+            "pin": 34,
+            "name": "PA13-JTMS-SWDIO",
+            "type": "1",
+            "net": "SWDIO",
+            "expected_net": "SWDIO",
+            "pass": true
+          },
+          {
+            "pin": 35,
+            "name": "VSS_2",
+            "type": "7",
+            "net": "GND",
+            "expected_net": "GND",
+            "pass": true
+          },
+          {
+            "pin": 36,
+            "name": "VDD_2",
+            "type": "7",
+            "net": "V3V3",
+            "expected_net": "V3V3",
+            "pass": true
+          },
+          {
+            "pin": 37,
+            "name": "PA14-JTCK-SWCLK",
+            "type": "1",
+            "net": "SWCLK",
+            "expected_net": "SWCLK",
+            "pass": true
+          },
+          {
+            "pin": 38,
+            "name": "PA15-JTDI",
+            "type": "1",
+            "net": "GPIO_PA15",
+            "expected_net": "GPIO_PA15",
+            "pass": true
+          },
+          {
+            "pin": 39,
+            "name": "PB3-JTDO-TRACESWO",
+            "type": "1",
+            "net": "SWO",
+            "expected_net": "SWO",
+            "pass": true
+          },
+          {
+            "pin": 40,
+            "name": "PB4-JNTRST",
+            "type": "1",
+            "net": "GPIO_PB4",
+            "expected_net": "GPIO_PB4",
+            "pass": true
+          },
+          {
+            "pin": 41,
+            "name": "PB5",
+            "type": "1",
+            "net": "GPIO_PB5",
+            "expected_net": "GPIO_PB5",
+            "pass": true
+          },
+          {
+            "pin": 42,
+            "name": "PB6",
+            "type": "1",
+            "net": "I2C_SCL",
+            "expected_net": "I2C_SCL",
+            "pass": true
+          },
+          {
+            "pin": 43,
+            "name": "PB7",
+            "type": "1",
+            "net": "I2C_SDA",
+            "expected_net": "I2C_SDA",
+            "pass": true
+          },
+          {
+            "pin": 44,
+            "name": "BOOT0",
+            "type": "0",
+            "net": "BOOT0",
+            "expected_net": "BOOT0",
+            "pass": true
+          },
+          {
+            "pin": 45,
+            "name": "PB8",
+            "type": "1",
+            "net": "GPIO_PB8",
+            "expected_net": "GPIO_PB8",
+            "pass": true
+          },
+          {
+            "pin": 46,
+            "name": "PB9",
+            "type": "1",
+            "net": "GPIO_PB9",
+            "expected_net": "GPIO_PB9",
+            "pass": true
+          },
+          {
+            "pin": 47,
+            "name": "VSS_3",
+            "type": "7",
+            "net": "GND",
+            "expected_net": "GND",
+            "pass": true
+          },
+          {
+            "pin": 48,
+            "name": "VDD_3",
+            "type": "7",
+            "net": "V3V3",
+            "expected_net": "V3V3",
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "section": "eco:nativeinventory",
+      "check": "Reference and module identity unique",
+      "pass": true,
+      "evidence": {
+        "instances": 80,
+        "ref_unique": 80,
+        "module_unique": 80
+      }
+    },
+    {
+      "section": "eco:nativeinventory",
+      "check": "Every native pin belongs to a known instance and has a unique physical key",
+      "pass": true,
+      "evidence": {
+        "physical_pins": 272
+      }
+    },
+    {
+      "section": "eco:nativeinventory",
+      "check": "Connected and explicit NC pins partition the design",
+      "pass": true,
+      "evidence": {
+        "connected": 266,
+        "NC": [
+          [
+            "J2",
+            "A8"
+          ],
+          [
+            "J2",
+            "B8"
+          ],
+          [
+            "U2",
+            "5"
+          ],
+          [
+            "U3",
+            "4"
+          ],
+          [
+            "U5",
+            "5"
+          ],
+          [
+            "U5",
+            "8"
+          ]
+        ],
+        "flatnets": 69
+      }
+    },
+    {
+      "section": "eco:nativeinventory",
+      "check": "MCU physical package and MPN",
+      "pass": true,
+      "evidence": {
+        "page": "DE_CONTROL",
+        "reference": "U1",
+        "module_id": "U_MCU",
+        "value": "STM32F103C8T6",
+        "footprint": "l09_stm32f103c8_lqfp48",
+        "mpn": "STM32F103C8T6",
+        "x": "500",
+        "y": "160"
+      }
+    },
+    {
+      "section": "eco:nativeinventory",
+      "check": "Exactly 48 physical MCU pins, all connected",
+      "pass": true,
+      "evidence": {
+        "count": 48,
+        "source": "DS5319 Rev20 Figure8 PDF26"
+      }
+    },
+    {
+      "section": "eco:nativeinventory",
+      "check": "Every MCU pin name, electrical type and assigned net agrees with original source pin table",
+      "pass": true,
+      "evidence": {
+        "source": "mcu_spec.json pins; DS5319 Rev20 Figure8/Table5 visually reviewed independently before integration",
+        "pin_checks": [
+          {
+            "pin": 1,
+            "name": "VBAT",
+            "type": "7",
+            "net": "V3V3",
+            "expected_net": "V3V3",
+            "pass": true
+          },
+          {
+            "pin": 2,
+            "name": "PC13-TAMPER-RTC",
+            "type": "1",
+            "net": "GPIO_PC13",
+            "expected_net": "GPIO_PC13",
+            "pass": true
+          },
+          {
+            "pin": 3,
+            "name": "PC14-OSC32_IN",
+            "type": "1",
+            "net": "GPIO_PC14",
+            "expected_net": "GPIO_PC14",
+            "pass": true
+          },
+          {
+            "pin": 4,
+            "name": "PC15-OSC32_OUT",
+            "type": "1",
+            "net": "GPIO_PC15",
+            "expected_net": "GPIO_PC15",
+            "pass": true
+          },
+          {
+            "pin": 5,
+            "name": "PD0-OSC_IN",
+            "type": "0",
+            "net": "OSC_IN",
+            "expected_net": "OSC_IN",
+            "pass": true
+          },
+          {
+            "pin": 6,
+            "name": "PD1-OSC_OUT",
+            "type": "2",
+            "net": "OSC_OUT",
+            "expected_net": "OSC_OUT",
+            "pass": true
+          },
+          {
+            "pin": 7,
+            "name": "NRST",
+            "type": "1",
+            "net": "NRST",
+            "expected_net": "NRST",
+            "pass": true
+          },
+          {
+            "pin": 8,
+            "name": "VSSA",
+            "type": "7",
+            "net": "GND",
+            "expected_net": "GND",
+            "pass": true
+          },
+          {
+            "pin": 9,
+            "name": "VDDA",
+            "type": "7",
+            "net": "VDDA",
+            "expected_net": "VDDA",
+            "pass": true
+          },
+          {
+            "pin": 10,
+            "name": "PA0-WKUP",
+            "type": "1",
+            "net": "ADC0",
+            "expected_net": "ADC0",
+            "pass": true
+          },
+          {
+            "pin": 11,
+            "name": "PA1",
+            "type": "1",
+            "net": "GPIO_PA1",
+            "expected_net": "GPIO_PA1",
+            "pass": true
+          },
+          {
+            "pin": 12,
+            "name": "PA2",
+            "type": "1",
+            "net": "GPIO_PA2",
+            "expected_net": "GPIO_PA2",
+            "pass": true
+          },
+          {
+            "pin": 13,
+            "name": "PA3",
+            "type": "1",
+            "net": "GPIO_PA3",
+            "expected_net": "GPIO_PA3",
+            "pass": true
+          },
+          {
+            "pin": 14,
+            "name": "PA4",
+            "type": "1",
+            "net": "PA4_SPI_NSS",
+            "expected_net": "PA4_SPI_NSS",
+            "pass": true
+          },
+          {
+            "pin": 15,
+            "name": "PA5",
+            "type": "1",
+            "net": "PA5_SPI_SCK",
+            "expected_net": "PA5_SPI_SCK",
+            "pass": true
+          },
+          {
+            "pin": 16,
+            "name": "PA6",
+            "type": "1",
+            "net": "PA6_SPI_MISO",
+            "expected_net": "PA6_SPI_MISO",
+            "pass": true
+          },
+          {
+            "pin": 17,
+            "name": "PA7",
+            "type": "1",
+            "net": "PA7_SPI_MOSI",
+            "expected_net": "PA7_SPI_MOSI",
+            "pass": true
+          },
+          {
+            "pin": 18,
+            "name": "PB0",
+            "type": "1",
+            "net": "VBUS_PRESENT_N",
+            "expected_net": "VBUS_PRESENT_N",
+            "pass": true
+          },
+          {
+            "pin": 19,
+            "name": "PB1",
+            "type": "1",
+            "net": "GPIO_PB1",
+            "expected_net": "GPIO_PB1",
+            "pass": true
+          },
+          {
+            "pin": 20,
+            "name": "PB2-BOOT1",
+            "type": "1",
+            "net": "BOOT1",
+            "expected_net": "BOOT1",
+            "pass": true
+          },
+          {
+            "pin": 21,
+            "name": "PB10",
+            "type": "1",
+            "net": "GPIO_PB10",
+            "expected_net": "GPIO_PB10",
+            "pass": true
+          },
+          {
+            "pin": 22,
+            "name": "PB11",
+            "type": "1",
+            "net": "GPIO_PB11",
+            "expected_net": "GPIO_PB11",
+            "pass": true
+          },
+          {
+            "pin": 23,
+            "name": "VSS_1",
+            "type": "7",
+            "net": "GND",
+            "expected_net": "GND",
+            "pass": true
+          },
+          {
+            "pin": 24,
+            "name": "VDD_1",
+            "type": "7",
+            "net": "V3V3",
+            "expected_net": "V3V3",
+            "pass": true
+          },
+          {
+            "pin": 25,
+            "name": "PB12",
+            "type": "1",
+            "net": "GPIO_PB12",
+            "expected_net": "GPIO_PB12",
+            "pass": true
+          },
+          {
+            "pin": 26,
+            "name": "PB13",
+            "type": "1",
+            "net": "GPIO_PB13",
+            "expected_net": "GPIO_PB13",
+            "pass": true
+          },
+          {
+            "pin": 27,
+            "name": "PB14",
+            "type": "1",
+            "net": "GPIO_PB14",
+            "expected_net": "GPIO_PB14",
+            "pass": true
+          },
+          {
+            "pin": 28,
+            "name": "PB15",
+            "type": "1",
+            "net": "GPIO_PB15",
+            "expected_net": "GPIO_PB15",
+            "pass": true
+          },
+          {
+            "pin": 29,
+            "name": "PA8",
+            "type": "1",
+            "net": "USB_ATTACH_N",
+            "expected_net": "USB_ATTACH_N",
+            "pass": true
+          },
+          {
+            "pin": 30,
+            "name": "PA9",
+            "type": "1",
+            "net": "PA9_UART_TX",
+            "expected_net": "PA9_UART_TX",
+            "pass": true
+          },
+          {
+            "pin": 31,
+            "name": "PA10",
+            "type": "1",
+            "net": "PA10_UART_RX",
+            "expected_net": "PA10_UART_RX",
+            "pass": true
+          },
+          {
+            "pin": 32,
+            "name": "PA11",
+            "type": "1",
+            "net": "PA11_SHARED",
+            "expected_net": "PA11_SHARED",
+            "pass": true
+          },
+          {
+            "pin": 33,
+            "name": "PA12",
+            "type": "1",
+            "net": "PA12_SHARED",
+            "expected_net": "PA12_SHARED",
+            "pass": true
+          },
+          {
+            "pin": 34,
+            "name": "PA13-JTMS-SWDIO",
+            "type": "1",
+            "net": "SWDIO",
+            "expected_net": "SWDIO",
+            "pass": true
+          },
+          {
+            "pin": 35,
+            "name": "VSS_2",
+            "type": "7",
+            "net": "GND",
+            "expected_net": "GND",
+            "pass": true
+          },
+          {
+            "pin": 36,
+            "name": "VDD_2",
+            "type": "7",
+            "net": "V3V3",
+            "expected_net": "V3V3",
+            "pass": true
+          },
+          {
+            "pin": 37,
+            "name": "PA14-JTCK-SWCLK",
+            "type": "1",
+            "net": "SWCLK",
+            "expected_net": "SWCLK",
+            "pass": true
+          },
+          {
+            "pin": 38,
+            "name": "PA15-JTDI",
+            "type": "1",
+            "net": "GPIO_PA15",
+            "expected_net": "GPIO_PA15",
+            "pass": true
+          },
+          {
+            "pin": 39,
+            "name": "PB3-JTDO-TRACESWO",
+            "type": "1",
+            "net": "SWO",
+            "expected_net": "SWO",
+            "pass": true
+          },
+          {
+            "pin": 40,
+            "name": "PB4-JNTRST",
+            "type": "1",
+            "net": "GPIO_PB4",
+            "expected_net": "GPIO_PB4",
+            "pass": true
+          },
+          {
+            "pin": 41,
+            "name": "PB5",
+            "type": "1",
+            "net": "GPIO_PB5",
+            "expected_net": "GPIO_PB5",
+            "pass": true
+          },
+          {
+            "pin": 42,
+            "name": "PB6",
+            "type": "1",
+            "net": "I2C_SCL",
+            "expected_net": "I2C_SCL",
+            "pass": true
+          },
+          {
+            "pin": 43,
+            "name": "PB7",
+            "type": "1",
+            "net": "I2C_SDA",
+            "expected_net": "I2C_SDA",
+            "pass": true
+          },
+          {
+            "pin": 44,
+            "name": "BOOT0",
+            "type": "0",
+            "net": "BOOT0",
+            "expected_net": "BOOT0",
+            "pass": true
+          },
+          {
+            "pin": 45,
+            "name": "PB8",
+            "type": "1",
+            "net": "GPIO_PB8",
+            "expected_net": "GPIO_PB8",
+            "pass": true
+          },
+          {
+            "pin": 46,
+            "name": "PB9",
+            "type": "1",
+            "net": "GPIO_PB9",
+            "expected_net": "GPIO_PB9",
+            "pass": true
+          },
+          {
+            "pin": 47,
+            "name": "VSS_3",
+            "type": "7",
+            "net": "GND",
+            "expected_net": "GND",
+            "pass": true
+          },
+          {
+            "pin": 48,
+            "name": "VDD_3",
+            "type": "7",
+            "net": "V3V3",
+            "expected_net": "V3V3",
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "section": "single:MCUtopology",
+      "check": "VBAT and all three VDD/VSS pairs plus VDDA/VSSA are correctly connected",
+      "pass": true,
+      "evidence": {
+        "physical_pin_nets": {
+          "1": "V3V3",
+          "8": "GND",
+          "9": "VDDA",
+          "23": "GND",
+          "24": "V3V3",
+          "35": "GND",
+          "36": "V3V3",
+          "47": "GND",
+          "48": "V3V3"
+        },
+        "source": "DS5319 PDF26/36/74"
+      }
+    },
+    {
+      "section": "single:MCUtopology",
+      "check": "100nF bypass for VDD24",
+      "pass": true,
+      "evidence": {
+        "module": "C_VDD24",
+        "ref": "C13",
+        "scope": "electrical presence only; own pin-local PCB loop remains layout requirement"
+      }
+    },
+    {
+      "section": "single:MCUtopology",
+      "check": "100nF bypass for VDD36",
+      "pass": true,
+      "evidence": {
+        "module": "C_VDD36",
+        "ref": "C14",
+        "scope": "electrical presence only; own pin-local PCB loop remains layout requirement"
+      }
+    },
+    {
+      "section": "single:MCUtopology",
+      "check": "100nF bypass for VDD48",
+      "pass": true,
+      "evidence": {
+        "module": "C_VDD48",
+        "ref": "C15",
+        "scope": "electrical presence only; own pin-local PCB loop remains layout requirement"
+      }
+    },
+    {
+      "section": "single:MCUtopology",
+      "check": "VDD3 bulk and VBAT bypass exist",
+      "pass": true,
+      "evidence": {
+        "bulk": "10uF nominal/effective>=4.7uF requirement",
+        "VBAT": "tied V3V3; notfloating",
+        "placement_at_pin48": "constraint recorded, PCB placement not claimed"
+      }
+    },
+    {
+      "section": "single:MCUtopology",
+      "check": "Analog supply link and all local analog bypass capacitors",
+      "pass": true,
+      "evidence": {
+        "bulk": "2.2uF nominal; effective>=1uF still a component-selection condition",
+        "source": "DS5319 Figure14/40 and AN2586 Figure2; no exposedVCAP/VREF pins"
+      }
+    },
+    {
+      "section": "single:MCUtopology",
+      "check": "Reset pull-up, ground capacitor and normally-open service shunt",
+      "pass": true,
+      "evidence": {
+        "R": "10k optional external to internal30-50k",
+        "C": "100nF",
+        "service_shunt": "header is normally open by user practice; no pushbutton model",
+        "timing": "20us external reset requirement not measured"
+      }
+    },
+    {
+      "section": "single:MCUtopology",
+      "check": "BOOT defaults and service selection correct",
+      "pass": true,
+      "evidence": {
+        "open": "Flash default",
+        "short": "BOOT0high/BOOT1low USART1systemROM",
+        "source": "AN2586 PDF16-17; noROMUSBDFU claim"
+      }
+    },
+    {
+      "section": "single:MCUtopology",
+      "check": "SWD header voltage, ground, data, clock, reset and optional trace",
+      "pass": true,
+      "evidence": {
+        "connector": "local6pin2.54mm exactpinmap; notARM10 compatible",
+        "VTREF": "sense/output contract; no hardwarereverseblock inferred",
+        "source": "DS5319 Figure8/Table5, AN2586 PDF18-20"
+      }
+    },
+    {
+      "section": "single:MCUtopology",
+      "check": "Crystal resonator and case-ground pin topology",
+      "pass": true,
+      "evidence": {
+        "crystal_mpn": "ABM3B-8.000MHZ-D2Y-T",
+        "source": "AbraconABM3B RevU PDF3 TOPVIEW:1/3 resonator,2/4ground",
+        "physical_land_orientation": "separate footprint acceptance; TSVdoesnotrevalidategeometry"
+      }
+    },
+    {
+      "section": "single:MCUtopology",
+      "check": "Crystal load capacitors follow calculated initial values",
+      "pass": true,
+      "evidence": {
+        "CL_pF": 18,
+        "stray_assumed_pF": 10,
+        "calculated_equal_cap_pF": 16,
+        "startup_gain_margin": 19.7892936801441,
+        "drive_frequency_startup_measurement": "pending"
+      }
+    },
+    {
+      "section": "single:MCUtopology",
+      "check": "ADC physical input, series resistor and shunt filter",
+      "pass": true,
+      "evidence": {
+        "source_limits": "0..3.0V <=1Hz, Rout<=1k, poweredboard",
+        "100Sps": "firmwareintent, notrun",
+        "RC_antialias": "notclaimed:fc796..1592Hz exceeds50HzNyquist",
+        "ADC_clock_sampling": "12MHz/71.5cycles designcondition, nothardwaremeasured"
+      }
+    },
+    {
+      "section": "single:MCUtopology",
+      "check": "VBUS sensing isolates 5V from PB0 and attach is off by pull-up",
+      "pass": true,
+      "evidence": {
+        "PB0": "no direct USB5V connection",
+        "PA8": "P-channel gate; highoff",
+        "VBUS_logic": "firmwaremustdetachwhenVBUSabsent; notruntimevalidated"
+      }
+    },
+    {
+      "section": "single:MCUtopology",
+      "check": "USB and CAN branch selectors connect intended shared MCU pins",
+      "pass": true,
+      "evidence": {
+        "USB": "nativeR5/R6 22ohm",
+        "CAN": "nativeR12/R13 0ohm; DNPdefault",
+        "CANidle": "TXDpulledrecessivewhileMCUbranchopen",
+        "sharedRAM": "RM0008 Rev21 PDF622 +AN4879 cannotconcurrentlyenable"
+      }
+    },
+    {
+      "section": "eco:MCUtopology",
+      "check": "VBAT and all three VDD/VSS pairs plus VDDA/VSSA are correctly connected",
+      "pass": true,
+      "evidence": {
+        "physical_pin_nets": {
+          "1": "V3V3",
+          "8": "GND",
+          "9": "VDDA",
+          "23": "GND",
+          "24": "V3V3",
+          "35": "GND",
+          "36": "V3V3",
+          "47": "GND",
+          "48": "V3V3"
+        },
+        "source": "DS5319 PDF26/36/74"
+      }
+    },
+    {
+      "section": "eco:MCUtopology",
+      "check": "100nF bypass for VDD24",
+      "pass": true,
+      "evidence": {
+        "module": "C_VDD24",
+        "ref": "C13",
+        "scope": "electrical presence only; own pin-local PCB loop remains layout requirement"
+      }
+    },
+    {
+      "section": "eco:MCUtopology",
+      "check": "100nF bypass for VDD36",
+      "pass": true,
+      "evidence": {
+        "module": "C_VDD36",
+        "ref": "C14",
+        "scope": "electrical presence only; own pin-local PCB loop remains layout requirement"
+      }
+    },
+    {
+      "section": "eco:MCUtopology",
+      "check": "100nF bypass for VDD48",
+      "pass": true,
+      "evidence": {
+        "module": "C_VDD48",
+        "ref": "C15",
+        "scope": "electrical presence only; own pin-local PCB loop remains layout requirement"
+      }
+    },
+    {
+      "section": "eco:MCUtopology",
+      "check": "VDD3 bulk and VBAT bypass exist",
+      "pass": true,
+      "evidence": {
+        "bulk": "10uF nominal/effective>=4.7uF requirement",
+        "VBAT": "tied V3V3; notfloating",
+        "placement_at_pin48": "constraint recorded, PCB placement not claimed"
+      }
+    },
+    {
+      "section": "eco:MCUtopology",
+      "check": "Analog supply link and all local analog bypass capacitors",
+      "pass": true,
+      "evidence": {
+        "bulk": "2.2uF nominal; effective>=1uF still a component-selection condition",
+        "source": "DS5319 Figure14/40 and AN2586 Figure2; no exposedVCAP/VREF pins"
+      }
+    },
+    {
+      "section": "eco:MCUtopology",
+      "check": "Reset pull-up, ground capacitor and normally-open service shunt",
+      "pass": true,
+      "evidence": {
+        "R": "10k optional external to internal30-50k",
+        "C": "100nF",
+        "service_shunt": "header is normally open by user practice; no pushbutton model",
+        "timing": "20us external reset requirement not measured"
+      }
+    },
+    {
+      "section": "eco:MCUtopology",
+      "check": "BOOT defaults and service selection correct",
+      "pass": true,
+      "evidence": {
+        "open": "Flash default",
+        "short": "BOOT0high/BOOT1low USART1systemROM",
+        "source": "AN2586 PDF16-17; noROMUSBDFU claim"
+      }
+    },
+    {
+      "section": "eco:MCUtopology",
+      "check": "SWD header voltage, ground, data, clock, reset and optional trace",
+      "pass": true,
+      "evidence": {
+        "connector": "local6pin2.54mm exactpinmap; notARM10 compatible",
+        "VTREF": "sense/output contract; no hardwarereverseblock inferred",
+        "source": "DS5319 Figure8/Table5, AN2586 PDF18-20"
+      }
+    },
+    {
+      "section": "eco:MCUtopology",
+      "check": "Crystal resonator and case-ground pin topology",
+      "pass": true,
+      "evidence": {
+        "crystal_mpn": "ABM3B-8.000MHZ-D2Y-T",
+        "source": "AbraconABM3B RevU PDF3 TOPVIEW:1/3 resonator,2/4ground",
+        "physical_land_orientation": "separate footprint acceptance; TSVdoesnotrevalidategeometry"
+      }
+    },
+    {
+      "section": "eco:MCUtopology",
+      "check": "Crystal load capacitors follow calculated initial values",
+      "pass": true,
+      "evidence": {
+        "CL_pF": 18,
+        "stray_assumed_pF": 10,
+        "calculated_equal_cap_pF": 16,
+        "startup_gain_margin": 19.7892936801441,
+        "drive_frequency_startup_measurement": "pending"
+      }
+    },
+    {
+      "section": "eco:MCUtopology",
+      "check": "ADC physical input, series resistor and shunt filter",
+      "pass": true,
+      "evidence": {
+        "source_limits": "0..3.0V <=1Hz, Rout<=1k, poweredboard",
+        "100Sps": "firmwareintent, notrun",
+        "RC_antialias": "notclaimed:fc796..1592Hz exceeds50HzNyquist",
+        "ADC_clock_sampling": "12MHz/71.5cycles designcondition, nothardwaremeasured"
+      }
+    },
+    {
+      "section": "eco:MCUtopology",
+      "check": "VBUS sensing isolates 5V from PB0 and attach is off by pull-up",
+      "pass": true,
+      "evidence": {
+        "PB0": "no direct USB5V connection",
+        "PA8": "P-channel gate; highoff",
+        "VBUS_logic": "firmwaremustdetachwhenVBUSabsent; notruntimevalidated"
+      }
+    },
+    {
+      "section": "eco:MCUtopology",
+      "check": "USB and CAN branch selectors connect intended shared MCU pins",
+      "pass": true,
+      "evidence": {
+        "USB": "nativeR5/R6 22ohm",
+        "CAN": "nativeR12/R13 0ohm; DNPdefault",
+        "CANidle": "TXDpulledrecessivewhileMCUbranchopen",
+        "sharedRAM": "RM0008 Rev21 PDF622 +AN4879 cannotconcurrentlyenable"
+      }
+    },
+    {
+      "section": "assembly",
+      "check": "BOM reference identity agrees with native instances",
+      "pass": true,
+      "evidence": {
+        "BOM_count": 80,
+        "source": "native instance identities independently joined to BOM, no generated wiring comparison"
+      }
+    },
+    {
+      "section": "assembly",
+      "check": "Default USB selectors fitted and CAN selectors DNP",
+      "pass": true,
+      "evidence": {
+        "R_USB_DP": {
+          "ref": "R5",
+          "assembly": "yes"
+        },
+        "R_USB_DM": {
+          "ref": "R6",
+          "assembly": "yes"
+        },
+        "R_CAN_TX": {
+          "ref": "R12",
+          "assembly": "DNP default USB mode"
+        },
+        "R_CAN_RX": {
+          "ref": "R13",
+          "assembly": "DNP default USB mode"
+        }
+      }
+    },
+    {
+      "section": "assembly",
+      "check": "Alternative USB/CAN population profiles are mutually exclusive",
+      "pass": true,
+      "evidence": {
+        "USB": {
+          "fit": [
+            "R_USB_DP",
+            "R_USB_DM"
+          ],
+          "DNP": [
+            "R_CAN_TX",
+            "R_CAN_RX"
+          ],
+          "firmware": "enable USB only, PB0=0 and V3V3 valid then PA8=0; PB0=1 => PA8=1. At reset Q_ATTACH off."
+        },
+        "CAN": {
+          "fit": [
+            "R_CAN_TX",
+            "R_CAN_RX"
+          ],
+          "DNP": [
+            "R_USB_DP",
+            "R_USB_DM"
+          ],
+          "firmware": "enable CAN only, PA8 always high; USB and CAN share MCU SRAM and cannot operate simultaneously even with remapping"
+        }
+      }
+    },
+    {
+      "section": "ECO",
+      "check": "MCU all48 pin names/types/nets stay identical",
+      "pass": true,
+      "evidence": {
+        "scope": "physicalMCU identity andwiring, notflatIDstableassumption"
+      }
+    },
+    {
+      "section": "ECO",
+      "check": "Only intended two I2C pull-up values change",
+      "pass": true,
+      "evidence": [
+        {
+          "reference": "R19",
+          "before": "2.2k",
+          "after": "3.3k"
+        },
+        {
+          "reference": "R20",
+          "before": "2.2k",
+          "after": "3.3k"
+        }
+      ]
+    },
+    {
+      "section": "ECO",
+      "check": "Only intended spare-header PB8/PB9 positions exchange",
+      "pass": true,
+      "evidence": [
+        {
+          "reference": "J13",
+          "pin": "7",
+          "before": "GPIO_PB8",
+          "after": "GPIO_PB9"
+        },
+        {
+          "reference": "J13",
+          "pin": "8",
+          "before": "GPIO_PB9",
+          "after": "GPIO_PB8"
+        }
+      ]
+    },
+    {
+      "section": "ECO",
+      "check": "All80 reference/module/footprint/MPN identities retained",
+      "pass": true,
+      "evidence": {
+        "components": 80,
+        "footprint_changes": []
+      }
+    },
+    {
+      "section": "assembly",
+      "check": "single native ASSEMBLY and assembly_group persisted correctly",
+      "pass": true,
+      "evidence": {
+        "source": "properties_single.tsv",
+        "native_selectors": {
+          "R5": {
+            "ASSEMBLY": "yes",
+            "assembly_group": "USB_ONLY"
+          },
+          "R6": {
+            "ASSEMBLY": "yes",
+            "assembly_group": "USB_ONLY"
+          },
+          "R12": {
+            "ASSEMBLY": "DNP default USB mode",
+            "assembly_group": "CAN_ONLY"
+          },
+          "R13": {
+            "ASSEMBLY": "DNP default USB mode",
+            "assembly_group": "CAN_ONLY"
+          }
+        }
+      }
+    },
+    {
+      "section": "assembly",
+      "check": "single all80 assembly attributes agree with baseline policy",
+      "pass": true,
+      "evidence": {
+        "count": 80,
+        "source": "native properties_single.tsv vs assembly BOM"
+      }
+    },
+    {
+      "section": "assembly",
+      "check": "eco native ASSEMBLY and assembly_group persisted correctly",
+      "pass": true,
+      "evidence": {
+        "source": "properties_eco.tsv",
+        "native_selectors": {
+          "R5": {
+            "ASSEMBLY": "yes",
+            "assembly_group": "USB_ONLY"
+          },
+          "R6": {
+            "ASSEMBLY": "yes",
+            "assembly_group": "USB_ONLY"
+          },
+          "R12": {
+            "ASSEMBLY": "DNP default USB mode",
+            "assembly_group": "CAN_ONLY"
+          },
+          "R13": {
+            "ASSEMBLY": "DNP default USB mode",
+            "assembly_group": "CAN_ONLY"
+          }
+        }
+      }
+    },
+    {
+      "section": "assembly",
+      "check": "eco all80 assembly attributes agree with baseline policy",
+      "pass": true,
+      "evidence": {
+        "count": 80,
+        "source": "native properties_eco.tsv vs assembly BOM"
+      }
+    },
+    {
+      "section": "ECO",
+      "check": "Native I2C source_description, Value and procurement Specification agree",
+      "pass": true,
+      "evidence": {
+        "R19": {
+          "native_value": "3.3k",
+          "native_source_description": "3.3k 1%",
+          "BOM_specification": "3.3k 1%",
+          "ECO_JSON_description": "3.3k 1%",
+          "native_ECO_reason": "I2C pullup change; rise time rechecked at100pF"
+        },
+        "R20": {
+          "native_value": "3.3k",
+          "native_source_description": "3.3k 1%",
+          "BOM_specification": "3.3k 1%",
+          "ECO_JSON_description": "3.3k 1%",
+          "native_ECO_reason": "I2C pullup change; rise time rechecked at100pF"
+        }
+      }
+    },
+    {
+      "section": "ECO",
+      "check": "3.3k 1pct I2C pull-up meets300ns RC rise condition only within100pF budget",
+      "pass": true,
+      "evidence": {
+        "formula": "30-70pct RC rise=0.8473*R*C",
+        "R_max_ohm": 3333,
+        "C_bus_max_F": 1e-10,
+        "worst_R_rise_ns": 282.40509000000003,
+        "criterion_ns": 300,
+        "scope": "notphysicalI2Cmeasurement; buscapmustincludeMCU/header/cable/receiver; sinkcurrentandVOLcheckedseparately"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "path": "examples\\de_15_26_20261019\\mcu_spec.json",
+      "sha256": "ca2b115bb33297cf9d88edb7486bc0ad33817b5dcca0d7032a9036e80dcc0c7d"
+    },
+    {
+      "path": "examples\\de_15_26_20261019\\BOM_baseline.csv",
+      "sha256": "3851d68981b21f2bf5a663adaac29006beff6fd1fcbabbbd15c7fd4a9f4dd59c"
+    },
+    {
+      "path": "examples\\de_15_26_20261019\\BOM_eco.csv",
+      "sha256": "9de70c5bd542f80846bd56b4c18816558afbec20a2f1f8fba80407bf2a9fa72e"
+    },
+    {
+      "path": "examples\\de_15_26_20261019\\integrated_circuit_eco.json",
+      "sha256": "51b18987f00a9546eae8369c27868dee278d53d3a612f162e2bf108df81ebcc9"
+    },
+    {
+      "path": "examples\\de_15_26_20261019\\native\\de_integrated_single.dsn",
+      "sha256": "eea3f9f698b4062f1acef8d609105994a90a4161645a9c53ee77914790333a5d"
+    },
+    {
+      "path": "examples\\de_15_26_20261019\\native\\de_integrated_eco_final.dsn",
+      "sha256": "ca222d42e8a0c430305a88b831dfc1754eba8cf0d3ebf4d85106080998dd4799"
+    },
+    {
+      "path": "logs\\de_15_26_20261019\\instances_single.tsv",
+      "sha256": "dae4144c92c711ee0087ef3cd57b0263f0088909f70bcde31ec147b1fb3282bc"
+    },
+    {
+      "path": "logs\\de_15_26_20261019\\instances_eco.tsv",
+      "sha256": "ebf64138dd2f29305af3f4750199a0cae2c318e81be5ac3ad167133ea7823ca7"
+    },
+    {
+      "path": "logs\\de_15_26_20261019\\pins_single.tsv",
+      "sha256": "cef8acbe8f7db8c820c7e2dabc00ad7d3c5d3b0676a21b085a77eafd995cfc61"
+    },
+    {
+      "path": "logs\\de_15_26_20261019\\pins_eco.tsv",
+      "sha256": "cef8acbe8f7db8c820c7e2dabc00ad7d3c5d3b0676a21b085a77eafd995cfc61"
+    },
+    {
+      "path": "logs\\de_15_26_20261019\\connectivity_single.tsv",
+      "sha256": "f0bbdcd78340600f2b59885b5efb20012c83825dd2528aab51d82ccff3ac1c91"
+    },
+    {
+      "path": "logs\\de_15_26_20261019\\connectivity_eco.tsv",
+      "sha256": "1cc1460d3fbce119d98abb811069222a2e41be309a2bde831a12b95fb6306275"
+    },
+    {
+      "path": "logs\\de_15_26_20261019\\properties_single.tsv",
+      "sha256": "02e9fdbd319086c13fd1fa940e99b0bc2fe807ebbb30c4de3d26288d38c256c6"
+    },
+    {
+      "path": "logs\\de_15_26_20261019\\properties_eco.tsv",
+      "sha256": "51bc7c292a86e81c74aae5b89cd96a74f623fbd7cb1cfcab03d557acbbc8c835"
+    }
+  ],
+  "limitations": [
+    "NoGPIO/clock/ADCfirmwareexecution",
+    "Nocrystaldrive/frequency/startup, analognoise, thermal, EMC orhardwaremeasurement",
+    "Decouplingloopposition/returngeometryandVDD3bulkplacementarePCBconstraints, notprovedbycommonV3V3net",
+    "NominalbulkvaluesdonotproveeffectivecapacitanceafterDCbias/tolerance/temperature",
+    "NativeCADcontainsallDNPcomponents; preservedassemblyattributesdo notproveassembledhardwarepopulation",
+    "StandardGUIERCstillnotverified; thisisindependentpin/topologyreview"
+  ],
+  "unsafe_calls_executed": false
+}

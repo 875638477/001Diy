@@ -1,0 +1,145 @@
+{
+  "status": "FROZEN_REFERENCE_PROJECTION_PRECHECK_NOT_NATIVE_FINAL",
+  "source": "inventory/checkpoints/postcritical_4L_b010/normalized.json",
+  "sourceJSON_SHA256": "a457329e80bb5b01641331ae60f1a4959f9211c64c791ed2728487a235e142bf",
+  "candidate": "plans/SPI_external_4L_candidate_v5.json",
+  "checks": [
+    {
+      "id": "HI_4L_SPI_SCK_1_R1",
+      "net": "SPI_SCK",
+      "layer": "TOP",
+      "reference": "L2",
+      "length_mm": 1.5097242404917475,
+      "footprintArea_mm2": 0.3298995553325125,
+      "uncoveredArea_mm2": 0.0,
+      "uncoveredOutsideOwnHeaderAntipad_mm2": 0.0,
+      "uncoveredBBox": null
+    },
+    {
+      "id": "HI_4L_SPI_SCK_1_R2",
+      "net": "SPI_SCK",
+      "layer": "BOTTOM",
+      "reference": "L3",
+      "length_mm": 24.589898987322336,
+      "footprintArea_mm2": 4.9489782215890585,
+      "uncoveredArea_mm2": 0.2082295131856369,
+      "uncoveredOutsideOwnHeaderAntipad_mm2": 0.0,
+      "uncoveredBBox": [
+        6.9,
+        28.439999999999998,
+        7.74297728605407,
+        29.291929890310033
+      ]
+    },
+    {
+      "id": "HI_4L_SPI_MISO_1_R1",
+      "net": "SPI_MISO",
+      "layer": "TOP",
+      "reference": "L2",
+      "length_mm": 0.9904854249492372,
+      "footprintArea_mm2": 0.225830342213462,
+      "uncoveredArea_mm2": 0.0,
+      "uncoveredOutsideOwnHeaderAntipad_mm2": 0.0,
+      "uncoveredBBox": null
+    },
+    {
+      "id": "HI_4L_SPI_MISO_1_R2",
+      "net": "SPI_MISO",
+      "layer": "BOTTOM",
+      "reference": "L3",
+      "length_mm": 16.405634918610403,
+      "footprintArea_mm2": 3.312049568606485,
+      "uncoveredArea_mm2": 0.0,
+      "uncoveredOutsideOwnHeaderAntipad_mm2": 0.0,
+      "uncoveredBBox": null
+    },
+    {
+      "id": "HI_4L_SPI_MISO_1_R3",
+      "net": "SPI_MISO",
+      "layer": "TOP",
+      "reference": "L2",
+      "length_mm": 10.501118318204306,
+      "footprintArea_mm2": 2.1311682482969605,
+      "uncoveredArea_mm2": 0.2087457900059914,
+      "uncoveredOutsideOwnHeaderAntipad_mm2": 0.0,
+      "uncoveredBBox": [
+        6.9,
+        32.86365024476223,
+        7.738441059662322,
+        33.72
+      ]
+    },
+    {
+      "id": "HI_4L_SPI_MOSI_1_R1",
+      "net": "SPI_MOSI",
+      "layer": "TOP",
+      "reference": "L2",
+      "length_mm": 1.0440388155425153,
+      "footprintArea_mm2": 0.23858615888427873,
+      "uncoveredArea_mm2": 0.0,
+      "uncoveredOutsideOwnHeaderAntipad_mm2": 0.0,
+      "uncoveredBBox": null
+    },
+    {
+      "id": "HI_4L_SPI_MOSI_1_R2",
+      "net": "SPI_MOSI",
+      "layer": "BOTTOM",
+      "reference": "L3",
+      "length_mm": 21.04411254969543,
+      "footprintArea_mm2": 4.239966544834048,
+      "uncoveredArea_mm2": 0.0,
+      "uncoveredOutsideOwnHeaderAntipad_mm2": 0.0,
+      "uncoveredBBox": null
+    },
+    {
+      "id": "HI_4L_SPI_MOSI_1_R3",
+      "net": "SPI_MOSI",
+      "layer": "TOP",
+      "reference": "L2",
+      "length_mm": 6.684823227814089,
+      "footprintArea_mm2": 1.3652808030941515,
+      "uncoveredArea_mm2": 0.2117742171307339,
+      "uncoveredOutsideOwnHeaderAntipad_mm2": 0.0,
+      "uncoveredBBox": [
+        6.9,
+        30.34155894033768,
+        7.756349755237761,
+        31.200000000000003
+      ]
+    },
+    {
+      "id": "HI_4L_SPI_NSS_1_R1",
+      "net": "SPI_NSS",
+      "layer": "TOP",
+      "reference": "L2",
+      "length_mm": 1.7208842637427473,
+      "footprintArea_mm2": 0.3751635365143437,
+      "uncoveredArea_mm2": 0.0,
+      "uncoveredOutsideOwnHeaderAntipad_mm2": 0.0,
+      "uncoveredBBox": null
+    },
+    {
+      "id": "HI_4L_SPI_NSS_1_R2",
+      "net": "SPI_NSS",
+      "layer": "BOTTOM",
+      "reference": "L3",
+      "length_mm": 25.126042558696057,
+      "footprintArea_mm2": 5.055505789267762,
+      "uncoveredArea_mm2": 0.208229513185641,
+      "uncoveredOutsideOwnHeaderAntipad_mm2": 0.0,
+      "uncoveredBBox": [
+        6.9,
+        35.408070109689966,
+        7.742977286054072,
+        36.26
+      ]
+    }
+  ],
+  "passes_all_new_path_footprints": true,
+  "limits": [
+    "Actual pre-route native L2/L3 GND copper projection, converted with official signed arc semantics and conservative tolerance. New signal-via antipads are not present yet, final fill must be rechecked.",
+    "Own signal THT landing necessarily has a ground antipad, excluded only with its own actual pad AABB +0.301mm. This is not a remote reference hole. Header has only one GND at pin6; external cable return/edge limits remain explicit.",
+    "Return via within 1.5mm at each signal transition still required. No 90ohm or SPI timing/simulation certification.",
+    "MOSI BOTTOM y26.25 passes under TOP SW/inductor region: intervening actual L3 is present, but switching noise/EMI tradeoff remains; exact edge/return checks mandatory."
+  ]
+}

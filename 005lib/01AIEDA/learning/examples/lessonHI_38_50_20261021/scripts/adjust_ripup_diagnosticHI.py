@@ -1,0 +1,4 @@
+﻿from pathlib import Path
+R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+p=R/'scripts/batchHI_exact_ripup_v2.il';s=p.read_text();s=s.replace('objects=axlExtractMap(', 'fprintf(f "HI_EXACT_RIPUP_ENTER\\n") drain(f)\n  objects=axlExtractMap(').replace('seen=nil targets=nil complete=nil','fprintf(f "HI_EXACT_RIPUP_EXTRACTED_COUNT=%d\\n" length(objects)) drain(f)\n  seen=nil targets=nil complete=nil').replace('matches=nil seen=nil','fprintf(f "HI_EXACT_RIPUP_MATCHING_ID=%L\\n" id) drain(f)\n   matches=nil seen=nil').replace('selected->?? if(selected->parent then selected->parent->?? else nil)', 'selected selected->objType');p.write_text(s,encoding='ascii')
+p=R/'scripts/prepare_exact_ripup_pilotHI.py';s=p.read_text(encoding='utf-8-sig').replace('exact_batch_ripup_pilot_2L_02','exact_batch_ripup_pilot_2L_03');p.write_text(s,encoding='utf8')

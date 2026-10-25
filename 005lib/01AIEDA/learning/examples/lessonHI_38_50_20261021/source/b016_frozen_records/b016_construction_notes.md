@@ -1,0 +1,28 @@
+# b016 閺傝棄浼愭稉搴ㄧ崣鐠囦浇顔囪ぐ鏇礄2026-10-22閿涘矂妯佸▓鍨弓閸愯崵绮ㄩ敍?
+閺堫剚澹掗崣顏勬躬閸忋劍鏌婇崣顖氬晸鐠侇厾绮屽銉ょ稊閸擃垱婀扮紓鏍帆閿涘瓘閵嗕攻014閵嗕攻015 閸忣厺鍞ゆ潏鎾冲弳娑撳秴婀崘娆忓弳鏉╂稓鈻奸幍鎾崇磻閿涘HA 閸撳秴鎮楅弽鎼佺崣閿涙稖绶崙鍝勫涧閸忎浇顔忔稉宥呯摠閸︺劎娈戦弬?candidate閵嗗倸鎮庨弽?current 娴犲秳璐?b014閵嗗倹鏆ｆ担?DRC 娴犲秳璐?UNRECOMPUTED_PENDING閿涘矂娼?DP 闁劗缍?scoped 濡偓閺屻儰绗夌粵澶夌艾閺佸瓨婢橀悽鍨毜婢跺秶鐣婚妴?
+## 鐎圭偞绁存径杈Е娑撳簼鎱ㄥ?
+1. 閸樼喎鐡欑划鎯у灩閸氬函绱漃A10_UART_RX 閺冦垺婀?BOTTOM 閸ユ稒顔岄崪灞艰⒈缁?via 閸ョ姳琚辩粩顖氭倱閺冭埖濯跺鈧懓灞炬畯瑜?GND閵嗗€€ry01/02 缁墽鈥樼€孤ゎ吀閸欐垹骞囬獮?rollback閿涘苯鍤戞担鏇炴嫲閺佷即鍣洪張顏勫綁閵嗗倸鍘涢幐澶婂斧 dbid+net+閸戠姳缍嶇紒鎴濈暰閸忣厼顕挒鈩冩煢瀹搞儳娅ч崥宥呭礋閿涘本浠径宥呮倵娴犲秴绻€妞よ鐤勯梽?PA10閿?L try02 鐠囥儱鍙氱€电钖勯張顏勫弿閹垹顦查敍灞界暓閸楊偅瀚嗙紒婵呯箽鐎涙ǜ鈧倹娓剁紒鍫ュ櫚閻劋琚遍梼鑸殿唽閺傝棄浼愰敍姘箽閻?R17.1 閺冄冨毉閸欙綇绱濋崗鍫ュ櫢閹?U1.31 閸忋儱褰涢敍灞藉晙閹?R17 閺冄冨毉閸欙絻鈧胶些閸斻劌鑻熼柌宥呯紦閺傛澘鍤崣锝冣偓鍌涚槨闂冭埖顔屾穱婵囨箒娑撯偓娑擃亞婀＄€?PA10 瀵洝鍓奸柨姘暰閿涙稐绗夌拫鍐暏瀵搫鍩?AssignNet閵?2. 2L 閺傝棄浼愰弳鍌氬祻鐎圭偤妾?3 TOP + 1 BOTTOM application dynamic mother閿涘苯褰ч柅澶嬪鏉堝湱鏅敍灞肩瑝閸?manual 闁炬粍鍨ㄩ棃娆愨偓?quiet island閵嗗€€ry03 閸欐垹骞?static void 閸︺劏娴嗛幑?dynamic 閺冩儼顫﹂崚鐙呯礉閹锋帊绻氱€涙ǜ鈧倸鐣奸弬?axlShapeChangeDynamicType.txt 閺勫海鈥樺銈堫攽娑撴亽鈧倹顒滅涵顕€銆庢惔蹇庤礋閸忓牆缂撶粩?dynamic BOUNDARY閿涘苯鍟€閸︺劌鍙炬稉?axlDBCreateVoid 閸旂姴甯闀愮畽 void閿涙盯鈧劙銆婇悙?閺佷即鍣洪妴浣哥潣閹佲偓浣稿弿鐏炩偓 thermal/shape 閸欏倹鏆熼崣濠傛倱鐏炲倻娴夌€甸€涚喘閸忓牆绨稉鈧懛鏉戞倵 force fill閵嗗倻绮风€?priority 閺佹澘鐡ф稉宥嗘Ц閹镐椒绠欓煬顐″敜閵嗗倸甯崶娑楅嚋濮?boundary 閻?prop 閸?nil閵?3. scoped 濡偓閺屻儱澧犻弰搴ｂ€?axlDBControl('drcEnable t)閿涘畺inally 娑旂喐浠径?t閵?L try04 閻喐顥呴弻銉ュ絺閻?U1.24閳摕13.1 閺冦垺婀?.25 缁愬嫰顣€圭偤妾?1.3192mm閿涘瞼顏柈銊ㄦ硶閸戝搫鐪柈銊潐閸掓瑥灏懓宀勪海閸忋劌鐪?1mm 娑撳﹪妾洪妴鍌涙付閸掓繂鐨?DRC 鐎规矮缍呴悙纭咁嚖閻氭粈璐?R21 閻㈠灚绨鏇″壖瀹歌尙绫傚锝忕窗R21.1 鐎圭偘璐?PA5_SPI_SCK閵嗗倹婀伴幍褰掑櫚閻劌鍑￠崗銊╂憪婢跺秵鐗抽惃鍕嚱閸戠姳缍嶆穱顔碱槻閿?5.1,23.6閳?5.1,23.2 閸氬矁鐭惧鍕矤 .25 閹碘晛鍩屽锝呯埗 .6閿涙稐缍戦弬婊勵唽 .919239mm閿涘奔绗夐弬鏉款杻缁撅附娼笟瀣樆閵嗗倸鎮楃紒顓濊⒈閺夊灝褰夐弴瀵哥秹 scoped 閸?0閵?4. 閺堝妾?PA10 vs USB SMT 鐟欏嫬鍨稉銉︾壐 .4 / 濮濓絽鐖?.2 閸撳秴鎮楃€靛湱鍙庣涵顔芥箒閸樼喓鏁?Line to SMD Pin Spacing閿涘ld 閸?gap .27/.284/.3408閿涘本鏌?extension gap .27/.3436/.3178/.25閵嗕繘xlDRCItem 鐠佲剝鏆熼崥顐﹀櫢婢跺稄绱漵tored DRC 閺佹澘褰查弴鏉戠毌閿涘奔绗夐懗鑺ヨ穿缁夎埇鈧倹妫?try07 閸︺劌甯悽鐔风潣閹呯处鐎涙ɑ婀€瑰本鏆ｇ€电厧鍤弮鎯扮箖缁?source 閸氬秷绻冨銈堫嚖閹躲儻绱濇穱婵堟殌閺堫亪鈧俺绻冪拋鏉跨秿閿涙稒鏌婂ù浣衡柤閸忓牆顕遍崙鍝勫斧閻?DRC 閸忋劌鐫橀幀褝绱濋獮鑸靛瘻閻喎鐤勬潻婵婎潐缁鐎烽妴涔獂pected/actual閵嗕胶澧块悶鍡楊嚠鐠炩€茬瑢閸撳秴鎮楅崬顖欑 field 瀹割喖绱撴宀冪槈閿涘本浠径宥嗗閺堝鐡у▓鍏哥瑬濮濓絽鐖?scoped 0閵?5. 2L try08/09 缁鳖垵顓搁弮?proof 閹凤箑鍤?SOUTH_RETURN_WEST GNDvia(35.8,21.95) 娑?U1.23 婢惰精绻涢敍娑欐纯閺傛澘鎮楅惃鍕埂鐎?plane 鐏忓棗鍙鹃崚鍡涘櫤闂呮梻顬囬敍灞肩瑝閼宠棄娲?DRC 0 韫囩晫鏆愭潻鏂挎礀鐠侯垰绶為妴鍌氱毣瀵板懎鐤勯梽鍛付鐏忓繗绻戦崶鐐此夋穱顔碱槻閿涘本婀穱婵嗙摠閵?6. 4L try03 缁鳖垵顓搁悧鈺冩倞 pin 鏉?C11.1閳壊27.1 婢惰精瑙﹂妴鍌濈槚閺傤厾鈥樼拋銈嗘拱閹电懓鈧瑩鈧鐨㈡稉銈嗘蒋 LIVE NRST 娑撳﹥濯烘笟娑氭暩鐠囶垱鐖ｉ垾婊勬＋ R25 濮濈粯鐏婇垾婵撶窗31.11,55閳?1.11,47閳?8.1016,47閳壊27.1(38.1016,41.3)閵?L try09 native 缂冩垹绮堕崚鍡涘櫤娑旂喕鐦夌€圭偛鎮撴稉鈧拠顖涙焽閿涙11.1/U3.5/R25.1 component1閿涘27.1 component2閵嗗倷琚遍弶鍧楀厴妞よ褰囧☉鍫ｇ箹娑撱倖娼崚鐘绘珟閵嗗倷绗夐懗鐣屾暠閺屾劖娼?terminal-free branch 閺佷即鍣洪幒銊︽焽娴犵粯鍓伴崥宀€缍夌痪鎸庮唽閸欘垰鍨归敍宀勩€忛弽绋跨杽闂勫懓鐭惧鍕瑓濞撳憡澧嶉張澶屽⒖閻炲棛绮撶粩顖樷偓鍌氥亼鐠愩儲婢橀柈鑺ユ弓娣囨繂鐡ㄩ敍娑欐降濠ф劖妲搁張顒冪枂閸婃瑩鈧鍨介弬顓ㄧ礉娑撳秵妲搁悽銊﹀煕 EDA 鎼存挶鈧?
+## 鐠囦焦宓侀崗銉ュ經
+
+- b015 鏉堟挸鍙嗛敍姝﹏ventory/checkpoints/source_2L_b015_DRC_PENDING 娑?source_4L_b015_DRC_PENDING閵?- 婢惰精瑙﹂弮銉ョ箶閿涙ogs/clearance_remaining_*_b016_DRC_PENDING_try*閵?- 婢惰精瑙﹂崘鍛摠鐠囧﹥鏌囬敍姝砮view/PROVISIONAL_UNSAVED_b016_2L_try09.json閵嗕购eview/PROVISIONAL_UNSAVED_b016_4L_try03.json閵嗗倸鐣犳禒顑跨瑝閺勵垰鍑℃穱婵嗙摠 PCB閿涘奔绡冩稉宥嗘Ц瑜版挸澧犻崗銉ュ經閵?- 鐎规ɑ鏌熼張顒€婀撮崢鐔告瀮閿涙ource/api_b016/manifest.json閿涘苯鎯堢€瑰顥婂┃鎰熅瀵板嫪绗?SHA閿涙稐绗夋径宥呭煑閺佺繝閲滄潪顖欐鎼存挶鈧?- 閺堫剝鐤嗘潏鎾冲弳閸愯崵绮ㄩ敍姝磑urce/engineering_snapshots/clearance_remaining_*_b016_DRC_PENDING閵?
+閺堚偓缂佸牆鈧瑩鈧鈧線鍣搁弬鐗堝ⅵ瀵偓閵嗕礁鍙忛柈銊︽＋/閺?proof閵嗕笭SE 閸?anchor 鐠愮喐绁寸拠鏇樷偓浣界箾閹恒儱鍨庨柌蹇嬧偓浣筋潐閸?field diff 娑撳孩绨?SHA 鏉╂﹢銆忛崷銊ユ倵缂侇參鍣哥拠鏇⑩偓姘崇箖閸氬骸宕熼悪顒傛鐠佽埇鈧倽绻栭柌灞肩瑝鐏忓棔鑵戦梻鏉戙亼鐠愩儲鍨?scoped 0 鐠侀璐熼弫瀛樻緲鐎瑰本鍨氶妴
+## b016 当前已保存且独立重开（2026-10-22）
+
+本节只冻结本批实际几何、物理端点、规则差异及 scoped 检查，不代表整板13课已全部完成。两个合格 current 别名仍为 b014，后续只对显式 DRC_PENDING 快照重基。
+
+| 变体 | 当前新候选板 | 板 SHA256 | 实际铜段（manual + generated thermal） | via / 实际铜多边形 | 累计 native proof |
+| --- | --- | --- | --- | --- | --- |
+| 2L | native_candidates/HI_2L_clearance_remaining_b016_DRC_PENDING.brd | 4AC553CF77DA21A3BA7E2B4E9142DDE1707571B7E4A80B17FCA975C46876D6A5 | 788 = 731 + 57 | 153 / 8 | 304 |
+| 4L | native_candidates/HI_4L_clearance_remaining_b016_DRC_PENDING.brd | FD5D93BED7E64FEF14CEBB17FF103443FA29E0CEDF60EEA26B79D9F8D091B1B7 | 837 = 709 + 128 | 143 / 3 | 299 |
+
+两板均保69net、266有网终端+6NC、272实际电气pin身份、172个b015原已连接物理pin边；现剩16个连接/14网（13GPIO与GND3），整板 DRCPENDING 未解除。2L18个普通网 scoped 0；4L15个普通网 scoped 0，fresh再独立PB1/PB10 scoped 0。两板均完成有限SMT字段严格.4→真违规→恢复.2/全部字段相同/正常0，以及quiet唯一anchor负测试。原native modes及主DRC开关t保留。fresh只读重新验证全部身份/证明与源SHA；raw stored0单独列为取证，不是fresh全板重算0。
+
+后续真实修复包含：两板保留误判live R27 feed；J2普通.6地线显式延至真实SH1/SH2 pin中心，原孔内偏置终点未连接的失败保持；南PB12—15八段无硬件终端教学尾线精删，四个虚拟端点证明透明退役至原真实sourcevia，任何实际pin合同不删。2L WEST返回自然恢复，工程审查过的额外WEST桥/孔方案未使用。2L PB15 BOTTOM现存privatevia原缺许可，单.02mm点框复制实际P006只增via-list，其余字段不动；PB1/PB10重叠区域由实际native检查0证实，静态resolver不猜父。
+
+2L剩J2.SH2孤片由一条真实TOP GND .6铜桥(44.32,6.78)→已共地SH4(44.32,2.6)修复，无新增via、无PIN_SHORT或内部金属假设。旧C1.2↔SH2及左右dataGND↔shell↔C10.2、所有新返回均实际通过。2L唯一terminal-free对象仍为旧generated TOP GND岛，最终TOP母边界替换后必须消失或真接地；4L无terminal-free分量。
+
+正式只读输入/后续规划入口：inventory/checkpoints/clearance_{2L,4L}_b016_DRC_PENDING。阶段报告review/b016_native_report.json；逐旧CSet/all-layer及新静态copy差异review/b016_constraint_field_diff.json；4个原2L母边界/永久void/thermal参数/相对priority复验review/b016_2L_reference_preservation.json；根纠正canonical02与实际已执行几何一一对应review/b016_corrected_canonical02_mapping.json。旧01及失败试次保原字节；跨机器复放使用纠正后的最终batch，不能直接重放已退役的01。
+
+复放原生load顺序以source/batch_snapshots/clearance_remaining_2L_b016_DRC_PENDING_try12/inputs_manifest.json及四层try05对应文件为准；这些已冻结helper复制包含所需原始SKILL函数。标准可写工作副本必须新建，原板只作SHA保护，SaveAs只允许不存在的新candidate；官方axlKillDesign丢弃工作内存防fallback保存。不要用只读打开后试图SaveAs，17.2已实证不支持。
+
+最终TOP候选仅只读重基并校验，无实际铺铜：plans/native_prepared/final_TOP_GND_b016_{v}_PREPARED.json；GPIO后须再次锁源SHA与母形/quietguard。NoGroundPlane官方文档研究未找到经验证PCB-DRC专用修复/禁用路径，未改env或关闭检查：review/NoGroundPlane_official_readonly_research.json。

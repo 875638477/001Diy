@@ -1,0 +1,48 @@
+
+  NAME
+         axlCNSCreate - create a new contraint set
+  FUNCTION
+         axlCNSCreate(
+                 g_domain
+                 t_name
+                 t_copyName
+         )
+         ==> t/nil
+  SYNOPSIS
+         This creates a new cset in the domain specified. For spacing and
+         physical csets, you must supply an existing cset as the copy
+         cset. If the copy name is nil, the DEFAULT cset is used.
+         Electrical csets will be created empty if a nil copyName is
+         supplied.
+ 
+         By default ecset is created empty, if you provide a second
+         argument it will copy the contents of the ecset.
+ 
+         To assign a cset to a logical object such as a net, bus, netclass
+         assign a PHYSICAL_CONSTRAINT_SET, SPACING_CONSTRAINT_SET, 
+         SAME_NET_SPACING_CONSTRAINT_SET or ELECTRICAL_CONSTRAINT_SET property to 
+         the logical object where the value of the property is the cset name.
+ 
+         Cannot create electrical csets in PCB L.
+  NEEDS
+         g_domain: domain of cset; 'physical, 'spacing, 'electrical, `sameNet
+         t_name: name of new cset (will be chanted to upper case)
+                 string must pass allowed character set
+         t_copyName: Name of cset to use as template
+                 nil: spacing and physical domains use name DEFAULT
+                      electrical, create and emtpy ecset
+ 
+  RETURNS
+         t: cset created
+         nil: failed 
+              - domain name not legal
+              - name of cset is not legal
+              - cset already exists
+              - copy name cset does not exist
+  SEE ALSO
+         axlCNSEcsetCreate, axlCNSDelete, axlCnsList, axlDBAddProp
+         axlNetClassCreate
+  EXAMPLES
+         1) create a new physical cset foo 
+             axlCNSCreate('physical "foo" nil)
+

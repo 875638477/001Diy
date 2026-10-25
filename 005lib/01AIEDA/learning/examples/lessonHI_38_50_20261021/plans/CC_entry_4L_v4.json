@@ -1,0 +1,195 @@
+{
+  "status": "ENGINEERING_CANDIDATE_ONLY",
+  "variant": "4L",
+  "operations": [
+    {
+      "type": "route",
+      "id": "CC1_ENTRY",
+      "net": "USB_CC1",
+      "layer": "TOP",
+      "points": [
+        [
+          38.75,
+          7.355
+        ],
+        [
+          38.75,
+          8.3
+        ],
+        [
+          36.9484,
+          10.1016
+        ],
+        [
+          35.0,
+          10.1016
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit connector auxiliary topology candidate; combined actual-copper/native spacing/return review pending."
+    },
+    {
+      "type": "route",
+      "id": "CC2_ENTRY",
+      "net": "USB_CC2",
+      "layer": "TOP",
+      "points": [
+        [
+          41.75,
+          7.355
+        ],
+        [
+          41.75,
+          8.3
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Explicit connector auxiliary topology candidate; combined actual-copper/native spacing/return review pending."
+    },
+    {
+      "type": "route",
+      "id": "CC_R3_GND",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          35,
+          11.6764
+        ],
+        [
+          36.1,
+          11.6764
+        ]
+      ],
+      "width": 0.4,
+      "purpose": "Explicit connector auxiliary topology candidate; combined actual-copper/native spacing/return review pending."
+    },
+    {
+      "type": "via",
+      "id": "CC_R3_GND_V",
+      "net": "GND",
+      "xy": [
+        36.1,
+        11.6764
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "CC_R4_GND",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          45.5,
+          11.6764
+        ],
+        [
+          43.9,
+          11.6764
+        ],
+        [
+          43.8,
+          11.5764
+        ]
+      ],
+      "width": 0.4,
+      "purpose": "Explicit connector auxiliary topology candidate; combined actual-copper/native spacing/return review pending."
+    },
+    {
+      "type": "via",
+      "id": "CC2_ENTRY_V",
+      "net": "USB_CC2",
+      "xy": [
+        41.75,
+        8.3
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "CC2_BOTTOM_CROSSOVER",
+      "net": "USB_CC2",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          41.75,
+          8.3
+        ],
+        [
+          41.95,
+          8.5
+        ],
+        [
+          44,
+          8.5
+        ],
+        [
+          44.7,
+          9.2
+        ],
+        [
+          44.7,
+          10.1016
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "CC2_RECEIVER_V",
+      "net": "USB_CC2",
+      "xy": [
+        44.7,
+        10.1016
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "CC2_RECEIVER_TOP",
+      "net": "USB_CC2",
+      "layer": "TOP",
+      "points": [
+        [
+          44.7,
+          10.1016
+        ],
+        [
+          45.5,
+          10.1016
+        ]
+      ],
+      "width": 0.2
+    }
+  ],
+  "proofs": [
+    {
+      "from": "R3.2",
+      "to": "U1.23",
+      "connected": true
+    },
+    {
+      "from": "R4.2",
+      "to": "U1.23",
+      "connected": true
+    },
+    {
+      "from": "J2.A5",
+      "to": "R3.1",
+      "connected": true
+    },
+    {
+      "from": "J2.B5",
+      "to": "R4.1",
+      "connected": true
+    }
+  ],
+  "scope": "No widening global USB spacing; finite connector .2mm Class-Class line_line region may be required and must be explicitly proven.",
+  "constraintOperations": [],
+  "notes": [
+    "v1 rejected actual C10 and Q2 overlap; v2 rejected .196985<.20 connector edge gap and GND via touching V3 perimeter, corrected geometry instead of loosening rules.",
+    "2L sole new finite J2 CC escape copies full existing Class-Class CSet and lowers line_line/smdpin_line to.20mm here only; outside.50 and DP internal gaps unchanged. Native negative challenge plus actual return/reference review required.",
+    "Four-layer CC2 uses a two-via low-speed crossover backed by actual L3; this gives VBUS a short TOP path and avoids adding a reference cut below the DP entrance. Via1.75,8.3 antipad projection must be checked against actual DP entry/ref plane after update."
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "created": "2026-10-22T23:35:07.465028+08:00",
+  "sources": [
+    {
+      "id": "TI_TPS54202_C",
+      "url": "https://www.ti.com/lit/ds/symlink/tps54202.pdf",
+      "revision": "SLVSD26C, Rev C",
+      "sections": "Layout Guidelines / Layout Example, input/output capacitor and feedback placement",
+      "local": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\source\\tps54202_revC.pdf",
+      "localSHA256": "297FAE8754121E09DD3290B748865282A7F594800D742E86F92DFCFC54B4DEEA",
+      "onlineVerificationDate": "2026-10-22",
+      "onlineVerification": "Official primary PDF page re-opened in this J audit; local archive remains unchanged; revisions are explicit, no silent replacement."
+    },
+    {
+      "id": "TI_TLV755P_D",
+      "url": "https://www.ti.com/lit/ds/symlink/tlv755p.pdf",
+      "revision": "SBVS320D Rev D",
+      "sections": "7.1.1 capacitor selection;7.4 layout; package-specific thermal data",
+      "local": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\source\\tlv755p_revD.pdf",
+      "localSHA256": "945E5BA0323ADDCDA19FCCC311B6791EDC843725B25A62CA128E5CCDF0988EF1",
+      "onlineVerificationDate": "2026-10-22",
+      "onlineVerification": "Official primary PDF page re-opened in this J audit; local archive remains unchanged; revisions are explicit, no silent replacement."
+    },
+    {
+      "id": "TI_TCAN33x_F",
+      "url": "https://www.ti.com/lit/ds/symlink/tcan332.pdf",
+      "revision": "SLLSEQ7F Rev F",
+      "sections": "Application, power supply and layout; termination/stub/decoupling",
+      "local": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_power\\source\\tcan332_revF.pdf",
+      "localSHA256": "BB89F067E6A7902867BF6B82EAAB762167F403AE8464A29EC4F318AB0C71628F",
+      "onlineVerificationDate": "2026-10-22",
+      "onlineVerification": "Official primary PDF page re-opened in this J audit; local archive remains unchanged; revisions are explicit, no silent replacement."
+    },
+    {
+      "id": "ST_DS5319_20",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf",
+      "revision": "DS5319 Rev20 July2025",
+      "sections": "Pinouts footnote5 p33; GPIO/I2C/SPI characteristics; supply/USB",
+      "local": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\source\\DS5319_Rev20_STM32F103x8xB_ST_20261022.pdf",
+      "localSHA256": "1E54CE18E6C34C5B4A78986F26E245E143748C721009FC9AF5953795C30686BC",
+      "onlineVerificationDate": "2026-10-22",
+      "onlineVerification": "Official primary PDF page re-opened in this J audit; local archive remains unchanged; revisions are explicit, no silent replacement."
+    },
+    {
+      "id": "ST_DS4260",
+      "url": "https://www.st.com/resource/en/datasheet/usblc6-2.pdf",
+      "revision": "Local inherited DS4260; online official currently20pages; no claim bytes match",
+      "sections": "PCB layout/ESD return; pin1/6 IO1,3/4 IO2,2GND,5VBUS",
+      "local": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\engineering_mcu\\source\\USBLC6_DS4260.pdf",
+      "localSHA256": "BC30154F310CD631043214ED52571DAEFE04270587EC55072D49A23BD18B9068",
+      "onlineVerificationDate": "2026-10-22",
+      "onlineVerification": "Official primary PDF page re-opened in this J audit; local archive remains unchanged; revisions are explicit, no silent replacement."
+    }
+  ],
+  "localSpecification": {
+    "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\power_interface_spec.json",
+    "supplyLimits": {
+      "input_V": [
+        9,
+        16
+      ],
+      "V3V3_load_max_A": 0.15,
+      "ambient_C": [
+        0,
+        40
+      ],
+      "header_combined_load_max_A": 0.01,
+      "external_GPIO_plus_header_load_max_A": 0.01,
+      "USB_VBUS": "sense+ESD only; must never connect to V5 or V3V3",
+      "no_external_backfeed": "SWD and headers are reference outputs only; probe Vtarget must sense, not power; TLV755 has no reverse blocking",
+      "current_budget_revision": "Final normal150mA/Ta0-40C supersedes initial120mA/Ta0-50C after MCU50mA+CAN60mA+external10mA leaves no pullup margin. Fault180mA not normal guarantee.",
+      "native_historical_L1_requirement": "L1 saved REQUIREMENTS still says covers nominal120mA as original design context; not inductor current rating. Actual Isat5.8A/Irms4.5A unchanged and final150mA load/thermal review controls. No native rerun needed."
+    },
+    "normalCurrentBudget_mA": {
+      "MCU_72MHz_all_peripherals_DS5319_Table13_max_85C": 50.0,
+      "TCAN332_dominant_RL50_max": 60.0,
+      "external_GPIO_plus_header_combined_ceiling": 10.0,
+      "two_I2C_pullups_2k2_minR_conservative": 3.2,
+      "other_bias_resistors_reserve": 3.0,
+      "analog_current_conservative_reserve": 5.0,
+      "internal_switching_unmodelled_reserve": 5.0,
+      "allocated_subtotal": 136.2,
+      "remaining_margin_to150": 13.8,
+      "USB_profile_total_including2V4mA_attach_reserve": 82.1,
+      "note": "Reserve rows are design allocations, not quoted IC specifications; CAN term load already included in transceiver ICC, not double-added."
+    }
+  },
+  "interfacePolicy": {
+    "status": "ENGINEERING_POLICY_FOR_CONSTRAINED_GEOMETRY_PLANNING",
+    "units": "mm",
+    "sources": [
+      {
+        "id": "TI_TCAN33x_RevF",
+        "url": "https://www.ti.com/lit/ds/symlink/tcan332.pdf",
+        "revision": "SLLSEQ7F May2025",
+        "sections": [
+          "7.4 Power supply",
+          "7.5 Layout",
+          "7.3 application and termination"
+        ],
+        "checked": "2026-10-21",
+        "usage": "100nF local decoupling, layout/short stubs and reference; source evidence distinct from our chosen coordinates."
+      },
+      {
+        "id": "ST_DS5319_Rev20",
+        "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf",
+        "revision": "DS5319Rev20 July2025",
+        "sections": [
+          "I/O characteristics",
+          "I2C characteristics Tables41/42",
+          "SPI characteristics",
+          "pin assignment"
+        ],
+        "checked": "2026-10-21",
+        "usage": "Pin functionality/electrical boundaries. Interface speed limits below are teaching system contracts, not IC maxima."
+      },
+      {
+        "id": "ST_AN2586_Rev8",
+        "url": "https://www.st.com/resource/en/application_note/an2586-getting-started-with-stm32f10xxx-hardware-development-stmicroelectronics.pdf",
+        "revision": "AN2586Rev8 Dec2022",
+        "sections": [
+          "reset",
+          "boot",
+          "debug"
+        ],
+        "checked": "2026-10-21",
+        "usage": "Reset/boot/SWD hardware requirements. J9 custom pinout remains different from Cortex10."
+      },
+      {
+        "id": "DE_FINAL_CONTRACT",
+        "path": "learning/examples/de_15_26_20261019/power_interface_spec.json",
+        "usage": "Existing500kbps<=1m CAN, SPI<=1MHz<=10cm, I2C default100kHz and total100pF envelope; original component values/assembly populations."
+      },
+      {
+        "id": "HI2L_PROFILE",
+        "path": "engineering_power/rules_profile_2L_69nets.json",
+        "usage": "All69 nets classified; physical width/space/neck explicit, not DEFAULT fallback."
+      }
+    ],
+    "common": {
+      "layers": {
+        "2L": [
+          "TOP",
+          "BOTTOM"
+        ],
+        "4L": [
+          "TOP",
+          "BOTTOM"
+        ],
+        "nonGNDInnerRouting": false
+      },
+      "preferredLayer": "TOP",
+      "bottomUse": "Only deliberate short crossover or documented corridor. Avoid bottom route under critical TOP clocks/data and do not turn solid2L ground into long parallel slots.",
+      "reference": {
+        "2L": "Actual BOTTOM GND. Every new signal/power slot requires regenerated connected ground and nearby TOP GND crossing/ground stitching where needed; no quiet-island crossing.",
+        "4L": "Actual L2 GND forTOP. BOTTOM requires actual L3 GND after02d, not layer-name intent. Crossing reference/island boundary is forbidden unless explicit return reviewed."
+      },
+      "layerTransition": "L28_VIA030_C060 only; add nearbyGNDvia that reaches same actual common reference, avoid isolated HSE island. Via targetdistance<=1.5mm is teachingreviewtarget notSI/EMIcert; export actual offset and plane path.",
+      "spacing": "Use actual group CSet/classclass; normaldigital .2, power.3, SW.5 and SW-sensitive1.0; USB-digitalisolation .5 unless expressly reviewed finepitchregion. No global spacing relaxation to clear congestion.",
+      "edgeRate": "Baud/clock frequency alone does not set edge rate. Firmware must choose lowest adequate GPIO outputspeed and verify voltage/timing; no firmware implemented, no assumed2MHz slew guarantee.",
+      "length": "Direct, few bends, avoid coils. Report actual net/pin-to-pin path lengths and branch lengths. No universal matching on unrelated UART/I2C/SWD nets.",
+      "forbiddenCorridors": [
+        "TPS54202 SW/L/BOOT reserved area",
+        "HSE quietground island and its moat",
+        "ADC input/filter region",
+        "USB paired corridor",
+        "mounting-hole and connector mating keepouts"
+      ],
+      "powerSeparation": "No digital main supply through .25 MCU pad escapes. Header combined external current remains10mA total; V3V3 normal150mA/Ta0..40C thermal unverified."
+    },
+    "interfaces": [
+      {
+        "id": "CAN_BUS",
+        "nets": [
+          "CAN_H",
+          "CAN_L"
+        ],
+        "contract": "500kbps<=1m bench; controller bit timing/physical cable not yet verified.",
+        "drivers": "U5.7H/U5.6L bidirectional transceiver; J3.1H/J3.2L/J3.3GND.",
+        "topology": "Use interface_CAN_routes_04: U5 -> short R15 end termination junction -> J3. End-only120ohm, intermediateDNP.",
+        "preferredCorridor": [
+          69,
+          11,
+          75,
+          16
+        ],
+        "width": 0.3,
+        "space": "actualCANclass:2L.2,4L.25; do not weaken4L class to.2",
+        "viasPlanned": 0,
+        "lengthPolicy": "No deliberate serpentine. Short paired local routes, expose actual H/L imbalance; no claim120ohm PCB impedance.",
+        "spaceByVariant": {
+          "2L": 0.2,
+          "4L": 0.25
+        }
+      },
+      {
+        "id": "CAN_DIGITAL",
+        "nets": [
+          "CAN_TXD",
+          "CAN_RXD"
+        ],
+        "contract": "OnlyCAN assembly profile. R12/R13 populate and USB R5/R6/R11 DNP; PA8 attach heldhigh. No simultaneousUSB/CAN.",
+        "topology": "PA12_SHARED->R12->U5.1TXD. U5.4RXD->R13->PA11_SHARED. R14.2idle10k short branch nearU5.1; no arbitrary source damping role for0ohmselectors.",
+        "preferredCorridor": [
+          44.8,
+          16.5,
+          64,
+          19.7
+        ],
+        "width": 0.2,
+        "space": 0.2,
+        "branchAudit": "Both selected and unselected PCB selection footprints/branches physically exist. Measure residual PA11/12 stubs, retain USB branch limits; DNP does not delete copper.",
+        "avoid": "USB pair area x38..42 belowR5/R6 and buck/FB left side; a shortBOTTOM bridge allowed only with return."
+      },
+      {
+        "id": "UART",
+        "nets": [
+          "PA9_UART_TX",
+          "UART_TX",
+          "PA10_UART_RX",
+          "UART_RX"
+        ],
+        "contract": "3.3V logic, UART baud/cable not finalized. Proposed bringup115200bps<=10cm with adjacentGND is a condition for initial test, not original approved performance.",
+        "sourceSeries": "U1.30PA9->R16.1, R16=33ohm nearMCU, R16.2->J4.2 long route. Preserve R16 as source-first, value requires real edge/receiver/cable test.",
+        "receive": "J4.3->R17.2->R17.1->U1.31. R17=0 at MCU is selection/debug, not source termination for external transmitter. R18=10k idle pullup atconnector-sideUART_RX can shortbranch.",
+        "preferredCorridor": [
+          36,
+          19.5,
+          74,
+          26.5
+        ],
+        "width": 0.2,
+        "space": 0.2,
+        "matching": "NoTX/RX lengthmatch; neither signal crossesUSB/HSE/ADC.",
+        "ground": "ConnectJ4.4 tocommonGND, noRS232levels, no probe/header power injection."
+      },
+      {
+        "id": "SPI",
+        "nets": [
+          "PA5_SPI_SCK",
+          "SPI_SCK",
+          "PA7_SPI_MOSI",
+          "SPI_MOSI",
+          "PA4_SPI_NSS",
+          "SPI_NSS",
+          "PA6_SPI_MISO",
+          "SPI_MISO"
+        ],
+        "contract": "ExistingSPI<=1MHz, externalcable<=10cm; actualGPIOedge/loadandreceive setup/hold unverified.",
+        "sourceFirst": [
+          "U1.15->R21.1(33R)->R21.2->J6.2SCK",
+          "U1.17->R22.1(33R)->R22.2->J6.3MOSI",
+          "U1.14->R23.1(33R)->R23.2->J6.5NSS"
+        ],
+        "receive": "J6.4MISO->R24.2(0R)->R24.1->U1.16. R24 nearMCU not source termination for external driver.",
+        "preferredCorridor": [
+          7,
+          27,
+          34,
+          36.8
+        ],
+        "width": 0.2,
+        "space": 0.2,
+        "topology": "Pointtopoint each, SCK noTbranch. RouteSCK with continuousreference; do not thread beneathinductor/SW. Put source-side short routes before long header segments.",
+        "matching": "No arbitrary equal lengths. DocumentSCK/MOSI flighttime/skew vs externalreceiver setuphold only after cable/edge/delay known. R25pullup belongs PA4NSS short branch, not extra long clockbus.",
+        "return": "J6.6GND is physicalheaderreturn; cable<=10cm is teaching envelope, singleGNDpin insufficient to certify fastedges/EMI."
+      },
+      {
+        "id": "I2C",
+        "nets": [
+          "I2C_SCL",
+          "I2C_SDA"
+        ],
+        "contract": "Default100kHz. <=400kHz is RC envelope only: DS5319Rev20 Table41footnote2 vsTable42 timing condition discrepancy retained. No400k certification.",
+        "topology": "U1PB6/7 -> R19/20 pullup junction -> J5SCL/SDA. Pullups2.2k toV3V3, no pushpull driver assumption; branch to pullup keptshort.",
+        "preferredCorridor": [
+          45,
+          27,
+          74,
+          41
+        ],
+        "width": 0.2,
+        "space": 0.2,
+        "lengthPolicy": "NoSCL/SDAmatching. Short common corridor withcontinuousGND; budget totalC<=100pF including MCU/PCB/connector/cable/externaldevice, checkVol/Iol and tR.",
+        "return": "J5.4GND actualreturn, noarbitrary external additionalpullups without recalculation."
+      },
+      {
+        "id": "SWD_RESET_BOOT",
+        "nets": [
+          "SWDIO",
+          "SWCLK",
+          "SWO",
+          "NRST",
+          "BOOT0",
+          "BOOT1",
+          "BOOT_SERVICE"
+        ],
+        "contract": "No final debugger clock. ProposedinitialSWCLK<=1MHz shortprobe cable is bringupcondition, notproven limit. KeepSWDenabled, JTAGmaybedisabledwhenusingPA15/PB3/PB4.",
+        "topology": "J9 custom1x6 VTREF,GND,SWDIO,SWCLK,NRST,SWO. VTREFsenseonly; SWDIO/SWCLK freeofnormalGPIOloads. SWO optional, no blanketmatching.",
+        "preferredCorridor": [
+          44.8,
+          20,
+          64,
+          28
+        ],
+        "width": 0.2,
+        "space": 0.2,
+        "reset": "NRSTcap localatMCU; J7isresetjumper/header, notphysicalpushbutton. Shortservicebranch J9NRST connectsunderreset; no PORdelay claim fromRC.",
+        "boot": "10kpulldowns nearestpinsBOOT0/1. ServiceJ8via1k to3V3. F103C8ROMUSART1boot, noROMUSBDFU claim.",
+        "return": "J9.2GND continuousreference, do not carrydebuggerreturn throughquietHSEisland."
+      },
+      {
+        "id": "USB_AUX",
+        "nets": [
+          "USB_CC1",
+          "USB_CC2",
+          "VBUS_GATE",
+          "VBUS_PRESENT_N",
+          "USB_ATTACH_N",
+          "USB_PULLUP_SRC",
+          "USB_VBUS"
+        ],
+        "contract": "USBdatasignals handled separately byf27. NoUSBpoweredboard:USBVBUS onlydetect/ESDrail; cannotshortVBUSintoV5.",
+        "cc": "CC1/2 each own5.1kRd toGND nearJ2; nojoiningCC1/2. ESDarray protectsD+/D- only, no inventedCC/SBU systemESDcoverage.",
+        "attach": "Q2PMOS sourceV3V3, drainUSB_PULLUP_SRC->R11->USB_DP; gatepulluptosource defaultdetach, PA8active-lowattach. R11branch keptshort byf27, controlroutes .2 awayfromdatapair.",
+        "sense": "Q1VBUSgate viaR7 etc preserve positive/negative logic and powerofflimit; slow gate/controlpreferTOP nearJ2 side, avoidrouting underdatapair.",
+        "width": 0.2,
+        "USB_VBUS_width": 0.4,
+        "space": 0.2,
+        "ESDground": "Separateground04plan follows actualU4position. Bodyvias40.0/11.4 and40.5/11.6 underreview, old40.9/11.5 discardedbecauseflowthroughDPcollision."
+      }
+    ],
+    "acceptance": [
+      "All ordinary nets retain correct pin endpoints, source resistor order and assembly profile.",
+      "Every layerchange/via explicitlylisted and connected to actual reference; regenerateplanes/OOD0 and export geometry.",
+      "Actual DRCallcategories0 plus independentgeometry/no copperoverlap, 69net272logicalpins/6NC identity, remaining count/BFS agree.",
+      "Longest .25powerneck, plane/thermal bottleneck, groundslotdetours reviewed separately; DRC0 is not electrical/EMI/USB certification."
+    ],
+    "errata": [
+      "BOOT_SERVICE is the actual native service net; earlier draftBOOT0_SEL was not a real net and has been corrected before ordinary routing."
+    ]
+  }
+}

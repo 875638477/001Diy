@@ -1,0 +1,62 @@
+
+  NAME
+         axlDBCreateSymbol - place a symbol instance in the design
+  SYNOPSIS
+         axlDBCreateSymbol(
+             t_refdes
+             l_anchorPoint
+             [g_mirror]
+             [f_rotation]
+             [t_embeddedLayer]
+         )
+         ==> l_result/nil
+ 
+         axlDBCreateSymbol(
+             l_symbolData
+             l_anchorPoint
+             [g_mirror]
+             [f_rotation]
+             [t_embeddedLayer]
+         )
+         ==> l_result/nil
+ 
+  FUNCTION
+         Verify arguments.
+         Add the symbol via dba_syminst_create.
+         Check out the Allegro database id.
+ 
+  NEEDS
+         t_refdes                - The refdes of the component.
+                 or
+         l_symbolData            - a list of (t_symbolName [t_symbolType])
+                                         t_symbolName - name of the symbol
+                                         t_symbolType - "PACKAGE" (default)
+                                                         "MECHANICAL", 
+                                                         or "FORMAT",
+                                         t_refdes - (optional) refdes
+         l_anchorPoint           - The location of the symbol
+         g_mirror                - nil --> not (default)
+                                   t --> symbol is mirrored, 
+                                  'GEOMETRY --> geometry is mirrored.
+         f_rotation              - The rotation angle in degrees (default 0).
+         t_embeddedLayer         - Place on embedded layer. Layer must be enabled for
+                                   embedded. Mirror option is ignored.
+                                   Layer may either be fully qualified ("ETCH/GND")
+                                   or just the subclass ("GND"). May not use the
+                                   top or bottom layer.
+  RETURNS
+         l_result - nil if not created, 
+                 or a list containing (car) DBID of the symbol
+                                      (cadr) t if DRCs created or nil.
+  NOTE
+         The symbol definition in the drawing is used. If there is none in the
+         drawing, then the symbol libary is searched and the definition loaded.
+  EXAMPLES:
+         - Typical component driven symbol placement:
+                 p = axlDBCreateSymbol("U1" 2175:1000)
+         - Place an embedded compoent. Assumes a layer, SIGNAL_2 is enabled for embedded.
+                 p = axlDBCreateSymbol("R1" 2175:1000 nil nil "SIGNAL_2")
+         - Place non-logical package symbol with rotation of 90
+                 p = axlDBCreateSymbol('("R_0402" "PACKAGE") 2000:800.1 nil 90.0)
+ 
+

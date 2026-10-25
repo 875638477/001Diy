@@ -1,0 +1,214 @@
+{
+  "status": "FROZEN_MINIMUM_GEOMETRY_DELTA_PENDING_NATIVE",
+  "batchId": "GPIO_LEFT_NORTH_spacing_fix_09",
+  "date": "2026-10-22",
+  "sourceExpectedSHA256": "D022917C5F893A104A6C5A98D71326D17FDCA7791750077F54B0B3B6A002BD29",
+  "sourceSnapshot": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\inventory\\checkpoints\\source_2L_b015_DRC_PENDING\\normalized.json",
+  "sourceSnapshotSHA256": "915ab1c1fc2bce8d98cf15343065339d28976945c8dc34eee5a8543327552f88",
+  "variants": [
+    "2L",
+    "4L"
+  ],
+  "operations": [
+    {
+      "type": "deleteSegment",
+      "id": "LEFT08_RIP_PB10_DIAG",
+      "net": "GPIO_PB10",
+      "layer": "TOP",
+      "points": [
+        [
+          36.65,
+          25.75
+        ],
+        [
+          37.3,
+          26.4
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "deleteSegment",
+      "id": "LEFT08_RIP_PB10_TAIL",
+      "net": "GPIO_PB10",
+      "layer": "TOP",
+      "points": [
+        [
+          37.3,
+          26.4
+        ],
+        [
+          38,
+          26.4
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "deleteVia",
+      "id": "LEFT08_RIP_PB10_VIA",
+      "net": "GPIO_PB10",
+      "xy": [
+        38,
+        26.4
+      ]
+    },
+    {
+      "type": "route",
+      "id": "LEFT08_PB10_REVISED_TAIL",
+      "net": "GPIO_PB10",
+      "layer": "TOP",
+      "points": [
+        [
+          36.65,
+          25.75
+        ],
+        [
+          37.3,
+          26.3
+        ],
+        [
+          38,
+          26.3
+        ]
+      ],
+      "width": 0.16,
+      "purpose": "Native DRC geometry correction; retain existing spacing constraints."
+    },
+    {
+      "type": "via",
+      "id": "LEFT08_PB10_REVISED_VIA",
+      "net": "GPIO_PB10",
+      "xy": [
+        38,
+        26.3
+      ],
+      "padstack": "HI_VIA026_C052_TENT",
+      "padDiameterMM": 0.52,
+      "drillDiameterMM": 0.26,
+      "purpose": "Same validated private .26/.52 tented through via moved0.1mm south to retain GPIO pair spacing."
+    },
+    {
+      "type": "deleteSegment",
+      "id": "NORTH08_RIP_PC15_BAR",
+      "net": "GPIO_PC15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.3,
+          28.9
+        ],
+        [
+          35.4,
+          28.9
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "route",
+      "id": "NORTH09_PC15_BETWEEN_GND_VIAS",
+      "net": "GPIO_PC15",
+      "layer": "BOTTOM",
+      "points": [
+        [
+          40.3,
+          28.9
+        ],
+        [
+          40.15,
+          28.75
+        ],
+        [
+          35.4,
+          28.75
+        ]
+      ],
+      "width": 0.2,
+      "purpose": "Native DRC geometry correction; retain existing spacing constraints."
+    }
+  ],
+  "partialEndpoints": {
+    "GPIO_PB10": {
+      "connectedTo": "U1.21",
+      "xy": [
+        38,
+        26.3
+      ],
+      "layer": "BOTTOM"
+    },
+    "GPIO_PC15": {
+      "connectedTo": "U1.4",
+      "xy": [
+        35.4,
+        28.75
+      ],
+      "layer": "BOTTOM"
+    }
+  },
+  "proofs": [
+    {
+      "fromTerminal": "U1.21",
+      "toVia": [
+        38,
+        26.3
+      ],
+      "net": "GPIO_PB10",
+      "required": true
+    },
+    {
+      "fromTerminal": "U1.4",
+      "toPoint": [
+        35.4,
+        28.75
+      ],
+      "layer": "BOTTOM",
+      "net": "GPIO_PC15",
+      "required": true
+    }
+  ],
+  "ruleChanges": "No spacing/width/neck relaxation. New private via permission at38,26.3 must inherit native actual physical parent separately on all actual conductive layers; old38,26.4 permission may be removed after no-instance check.",
+  "engineeringBasis": {
+    "PB1vsPB10": "Actual native .19mm failed .20mm; move PB10 tail/via0.1mm south, new parallel gap.29mm.",
+    "PC15vsGNDvia": "Native original gap.20mm fails.30mm. New midpoint bar y28.75 gives Cu gap.35mm to both actual GNDvia38.7,29.5 and39.5,28; via40.3,28.9 retained, short diagonal to40.15,28.75.",
+    "mistake": "Old min-copper/no-overlap screens did not validate each actual class spacing. Preserve native14DRC evidence; no zeroDRC claim."
+  },
+  "independent2LGeometry": {
+    "baseRuleConservativeWarnings": [
+      {
+        "new": "LEFT08_PB10_REVISED_TAIL",
+        "net": "GPIO_PB10",
+        "other": "native_route",
+        "otherNet": "GND",
+        "layer": "TOP",
+        "distanceMM": 0.22828234964735608,
+        "requiredMM": 0.3
+      }
+    ],
+    "finiteRegionAwareRouteChecks": [
+      {
+        "id": "LEFT08_PB10_REVISED_TAIL",
+        "classAwarePathClear": true
+      },
+      {
+        "id": "NORTH09_PC15_BETWEEN_GND_VIAS",
+        "classAwarePathClear": true
+      }
+    ],
+    "warningResolution": "One conservative .3mm PB10-vs-GND warning is inside inherited HI_LEFT_GND_SOURCE_S TOP polygon x36.4..37,y25.4..26.9, already .2mm for line_line; actual new gap .22828mm. This delta does not add/relax that scope. Native actual binding/0DRC remains required.",
+    "pc15ActualViaCopperGapsMM": {
+      "GND38.7_29.5": 0.35,
+      "GND39.5_28.0": 0.35
+    },
+    "minimumsHistoricalOnly": "08 lower y28.7 conservative values retained in 08;09 uses midpoint and checks below."
+  },
+  "pending": [
+    "4L actual source checkpoint same unique delete matching",
+    "Native creates/DRC/fresh readonly",
+    "All-layer private via scope inside/outside challenge",
+    "GPIO long-route rebase to new anchors",
+    "HSE single-anchor negative challenge preservation"
+  ],
+  "supersedesCandidate": "GPIO_LEFT_NORTH_spacing_fix_08.json",
+  "supersededReason": "28.7mm PC15 bar retained exactly.3000mm to second GNDvia39.5,28; choose midpoint28.75 for.35mm to both relevant GNDvia rows instead."
+}

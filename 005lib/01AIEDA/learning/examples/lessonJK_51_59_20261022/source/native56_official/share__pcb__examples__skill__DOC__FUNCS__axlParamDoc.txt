@@ -1,0 +1,161 @@
+
+  NAME
+         axlParamDoc - allegro database parameter representation
+  SYNOPSIS
+         Objects represented here are the Allegro parameter records.
+         These are miscellaneous objects typically representing 
+         process controls kept in the Allegro database
+ 
+         Only objects added/modified are currently documented
+         here. See AXL Skill Reference manual for others
+  SEE ALSO
+         axlDbidDoc  - rest of Allegro database objects
+ 
+  ==============================================================
+  ARTWORK Attributes:    
+ 
+     NAME                TYPE            DESCRIPTION
+     ------------------------------------------------
+    objType              string          "artwork"
+    nChildren            number          number of films
+    groupMembers         l_string        list of film names
+ 
+  ==============================================================
+  ARTWORK film Attributes:    
+ 
+     NAME                TYPE            DESCRIPTION
+     ------------------------------------------------
+    objType              string          "artwork"
+    name                 string          Name of film.
+    domains              l_string        List of domains where film is visible.
+                                         Values are ipc2581, pdf, artwork
+                                         and visibility.
+    groupMembers         l_string        list of layers comprising film
+    drawHolesOnly        t/nil           For pins and vias draw only the holes.
+    drawMissingPadApertures t/nil        Specifies the apertures that are 
+                                         available to draw (fillin) the shape
+                                         of any pad for which there is no 
+                                         exactly matching pad aperture in 
+                                         art_aper.txt. Not selecting this 
+                                         option means that such pads are 
+                                         not drawn.
+    fullContact          t/nil           Applies to negative film. 
+                                         When t, a pin or via that is 
+                                         connected to a shape uses no flash, 
+                                         which causes a solid mass of copper 
+                                         to cover the pad. When you do not 
+                                         select this field, a pin or via 
+                                         connected to a shape uses a 
+                                         thermal-relief flash. 
+    ipc2581              l_string        List of IPC2581 Layer mappings.
+                                         Indicates where film should be used
+                                         in IPC25281 output.
+                                         Values are inner, outer, misc, doc
+                                         and soldermask.
+    mirrored             t/nil           Specifies whether the photoplot 
+                                         output is to be mirrored.
+    negative             t/nil           Is film positive (nil) or 
+                                         negative (t).
+    offset               point           Specifies the x and y offset to 
+                                         add to each photoplot coordinate. 
+                                         If you enter positive x and y 
+                                         offsets, all photoplotted lines 
+                                         shift in the positive direction on 
+                                         the film.
+    rotation             integer         Rotation of the plotted film image. 
+                                         Choices are 0, 90, 180, and 270 
+                                         degrees.
+    shapeBoundingBox     float           Applies to negative film. Adds 
+                                         another outline around the design 
+                                         outline, extending the shape boundary
+                                         of the filled area.This new artwork 
+                                         outline extends by default 100 mils 
+                                         in all directions beyond the design 
+                                         outline.
+    suppressShapeFill    t/nil           Area outside the shapes is not 
+                                         to be filled on a negative film.
+                                         You must replace the filled 
+                                         areas with separation lines 
+                                         before running artwork.
+    suppressUnconnectPads t/nil          Specifies that the pads of pins and 
+                                         vias that have no connection to a 
+                                         connect line in a gerber data file 
+                                         are not plotted. This option applies
+                                         only to internal layers and to pins 
+                                         whose padstack flags the pads as 
+                                         optional.
+                                         Selecting this button also suppresses
+                                         donut antipads in raster based 
+                                         negative artwork.
+                                         See additional cautions in doc for
+                                         artwork param form.
+    undefineLineWidth    float           Determines the width of any line 
+                                         that is 0.
+    useApertureRotation  t/nil           Specifies whether or not to 
+                                         use the aperture rotation. 
+    vectorBasedPad       t/nil           raster artwork uses gerber
+                                         behavior to determine which
+                                         type of pad to flash
+    sequence             integer         sequance number for PDF ordering.
+                                         Range is 0 to 255. If two films share
+                                         the same number the database ordering
+                                         determines ties.
+ 
+  ==============================================================
+  Layer Group Parameter Attributes (Allegro Classes):    
+     NAME         Set?   TYPE            DESCRIPTION
+     ------------------------------------------------
+    objType       No     string          "paramLayerGroup"
+    color         Yes    integer         Layer color index; -1 if all child layers
+                                         not the same color
+    groupMember   No     l_string        List of subclasses belonging to this class
+    isEtch        No     t/nil           Is an etch layer
+    name                 string          Name of this class
+    nChildren     No     integer         Number of subclasses in class
+    pattern       Yes    integer         Pattern for layer; -1 if all child layers
+                                         not the same pattern (see Layer Parameter Attributes )
+    visible       Yes    t/nil           All subclasses of this class are visible
+ 
+ 
+  ==============================================================
+  Layer Parameter Attributes (Allegro Subclasses):    
+     NAME         Set?   TYPE            DESCRIPTION
+     ------------------------------------------------
+    objType       No     string          "paramLayer"
+    color         Yes    integer         Subclass color number
+    drcPhotoType  No     string          "Postive" or Negative (etch only)
+    isEtch        No     t/nil           Is an etch layer
+    material      No     string          Layer material (etch only)
+    name          No     string          Name of this subclass 
+    number        No     integer         Layer number, while this is reported for both 
+                                         etch and non-etch layers it is only meaningful 
+                                         for etch layers where it shows the stackup order.
+    nextLayer     No     string          Name of next layer in stackup (etch only)
+    parentName    No     string          Name of owning class
+    pattern       Yes    integer         Pattern of layer where 0 is default solid pattern.
+                                         For maximum patterns see axlColorGet('pattern)
+                                         Pattern style for each pattern number can be found
+                                         in the color192 dialog.
+    thickness     No     string          Layer thickness (etch only)
+    type          No     string          "Postive" or Negative (etch only)
+    userDefined   No     t/nil           Is layer user defined. User defined layers can
+                                         have been added by the user. Note for etch layers
+                                         all are user defined but you typically cannot
+                                         delete or rename the TOP or BOTTOM.
+    visible       Yes    t/nil           All subclasses of this class are visible
+ 
+ 
+  ==============================================================
+  Text block Parameter Attributes:
+     NAME         Set?   TYPE            DESCRIPTION
+     ------------------------------------------------
+    objType       No     string          "paramTextBlock"
+    charSpace     Yes    float           character spacing in design units
+    height        Yes    float           character height in design units (includes descender)
+    lineSpace     Yes    float           character line to line space in design units
+    name          No     string          character block number
+    photoWidth    Yes    float           character line width in design units
+    width         Yes    float           character width in design units
+ 
+ 
+

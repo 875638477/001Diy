@@ -1,0 +1,13 @@
+CREATE	("T_ALL" all)	dbid:0000029D99E04EE0	(prop nil spacing nil physical nil electrical nil readOnly t objType "group" type "NETCLASS" name "T_ALL" groupMembers nil)
+ADD	t	(prop nil spacing nil physical nil electrical nil readOnly t objType "group" type "NETCLASS" name "T_ALL" groupMembers (dbid:0000029D99DAAFA8))
+PROP	(nil nil)	(prop nil spacing nil physical nil electrical nil readOnly t objType "group" type "NETCLASS" name "T_ALL" groupMembers (dbid:0000029D99DAAFA8))	nil
+EFFECTIVE	nil	nil	nil
+CREATE	("T_LIST" (physical spacing electrical))	dbid:0000029D99E052A0	(prop nil spacing nil physical nil electrical nil readOnly t objType "group" type "NETCLASS" name "T_LIST" groupMembers nil)
+ADD	t	(prop nil spacing nil physical nil electrical nil readOnly t objType "group" type "NETCLASS" name "T_LIST" groupMembers (dbid:0000029D99DAAFA8))
+PROP	(nil nil)	(prop nil spacing nil physical nil electrical nil readOnly t objType "group" type "NETCLASS" name "T_LIST" groupMembers (dbid:0000029D99DAAFA8))	nil
+EFFECTIVE	nil	nil	nil
+CREATE	("T_PHYS" physical)	dbid:0000029D99E05688	(prop propList:0000029D8D952020 spacing nil physical t electrical nil readOnly t objType "group" type "NETCLASS" name "T_PHYS" groupMembers nil)
+ADD	t	(prop propList:0000029D8D952038 spacing nil physical t electrical nil readOnly t objType "group" type "NETCLASS" name "T_PHYS" groupMembers (dbid:0000029D99DAAFA8))
+PROP	((dbid:0000029D99E05688) nil)	(prop propList:0000029D8D952038 spacing nil physical t electrical nil readOnly t objType "group" type "NETCLASS" name "T_PHYS" groupMembers (dbid:0000029D99DAAFA8))	((NETCLASS_DOMAIN "2") (PHYSICAL_CONSTRAINT_SET "P_SIGNAL_020") (SPACING_CONSTRAINT_SET "DEFAULT"))
+EFFECTIVE	dbid:0000029D99E05688	nil	nil
+PROBE_COMPLETE

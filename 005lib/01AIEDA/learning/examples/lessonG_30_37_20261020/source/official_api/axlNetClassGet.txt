@@ -1,0 +1,37 @@
+
+  NAME
+         axlNetClassGet - find object's netclass
+  SYNOPSIS
+         axlNetClassGet(
+                 o_dbid
+                 s_domain
+                 g_hierarchal
+         )==> o_netclass
+  FUNCTION
+         Given a dbid (net, xnet, diffpair or bus ) and a domain
+         (spacing, physical or electrical) return its netclass.
+ 
+         If g_hierarchal is nil, returns object's netclass if
+         a direct member. If g_hierarchal=t returns first netclass 
+         encountered in logical hierarchy. For example, if a net is 
+         a member of a bus and the bus is assigned to netclass, 
+         BUSCLASS and you pass a net of the bus to this API:
+            - will return nil if g_hierarchy=nil 
+            - will return netclass dbid, BUSCLASS, if g_hierarchy=t
+  NEEDS
+         o_dbid: dbid may be net, xnet, diffpair or bus
+         s_domain: netclass domain; spacing, physical or electrical
+         g_hierarchal
+  RETURNS
+         o_netclass - dbid of netclass
+         nil - object not part of a netclass in the domain or 
+                 an invalid object
+  SEE ALSO
+         axlNetClassCreate
+  EXAMPLES
+         Using example in axlNetClassAdd 
+         1) From example in (should return netclass in both cases)
+           nets = car(axlSelectByName("NET" "NET8"))
+           axlNetClassGet(nets 'physical nil)
+           axlNetClassGet(nets 'physical t)
+

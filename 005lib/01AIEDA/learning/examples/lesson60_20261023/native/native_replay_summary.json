@@ -1,0 +1,137 @@
+{
+  "status": "PASS_TWO_PATH_RELOCATION_42_CHECKS_EACH",
+  "dateAsiaShanghai": "2026-10-23",
+  "acceptedRunPaths": [
+    "package/runs/final03",
+    "native/R Space/runs/move01"
+  ],
+  "scope": "one text on copied 4L training board; fresh native readback; same physical Windows machine",
+  "secondPhysicalComputerTested": false,
+  "fixtureSHA256": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+  "originalJKBoardUnchanged": true,
+  "sourceManifestSHA256": "92D5C74A3F8B20C557C6616FB2D763E026972B75F63570A542B06BAF169602BB",
+  "sourceFilesFrozen": true,
+  "sourceManifest": {
+    "replay.py": "3DF86D85AE9190CD4BF66FE7793FD7E5CD80E93CC8948C124E59ABAFE94E7FCA",
+    "scripts/replay.il": "3B7EE87D435244D486042588F8E0CCD37BC007D578E1607A3B31D64FBF54D187",
+    "fixture/training_4L.brd": "471176A9B25BA8DEF9F117AEFB1E9220CBCBEBBAC5191BCBC6E228F52831F3F9",
+    "README.md": "10E07C07D629C785EAF3278F83FF1F097B74937DEA586419B61953813A5C5CA7",
+    "config.example.json": "2B55D9D0FB8EA33B5200F1F87ACE8E6E1C753C08770B357DD7EB7ED7C2A2B43F"
+  },
+  "destinationInitiallyClean": true,
+  "runs": [
+    {
+      "root": "package/runs/final03",
+      "reportSHA256": "C48E6722026E049D7D8A27729C00091E4484F4690060A9A873CCC04DB409207A",
+      "boardRelativePath": "package/runs/final03/work/L60_replayed.brd",
+      "boardSHA256": "D8EF6A3C9A0E78AA51728F10D3700F75B6EC07535E2062C598E88D90182AFF89",
+      "nativeGeometrySHA256": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+      "checkCount": 42,
+      "readbackRowCounts": {
+        "COMP": 80,
+        "COPPER": 21,
+        "ETCH_LINE": 932,
+        "LAYERS": 1,
+        "LOGICAL_PIN": 272,
+        "NET": 69,
+        "PHYSICAL_PIN": 278,
+        "POSE": 84,
+        "UNITS": 1,
+        "VIA": 150
+      },
+      "actualSegments": {
+        "total": 932,
+        "manual": 750,
+        "generatedThermal": 182
+      },
+      "exactFinalSourceVersionUsed": true,
+      "nativeProcesses": [
+        {
+          "pid": 17824,
+          "parent": 17804,
+          "exe": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe",
+          "created": "2026-10-23T08:47:13.8038530Z",
+          "command": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe -product Allegro_performance -safe -nographic -s D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\runs\\final03\\build.scr -p D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\runs\\final03\\build D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\runs\\final03\\work\\INPUT_COPY.brd"
+        },
+        {
+          "pid": 7660,
+          "parent": 17804,
+          "exe": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe",
+          "created": "2026-10-23T08:47:23.6055830Z",
+          "command": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe -product Allegro_performance -safe -nographic -s D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\runs\\final03\\fresh.scr -p D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\runs\\final03\\fresh -readonly D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\package\\runs\\final03\\work\\L60_replayed.brd"
+        }
+      ]
+    },
+    {
+      "root": "native/R Space/runs/move01",
+      "reportSHA256": "4E9A45877CA7DE3E37C19F925861910BD5C3D0DB6F11A63BDB3EC9A10319AEB5",
+      "boardRelativePath": "native/R Space/runs/move01/work/L60_replayed.brd",
+      "boardSHA256": "C4B7ADA6244EB4B7861DFD0933C5EF48FA5DD20FD5372432BD27A01AE1C6A781",
+      "nativeGeometrySHA256": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+      "checkCount": 42,
+      "readbackRowCounts": {
+        "COMP": 80,
+        "COPPER": 21,
+        "ETCH_LINE": 932,
+        "LAYERS": 1,
+        "LOGICAL_PIN": 272,
+        "NET": 69,
+        "PHYSICAL_PIN": 278,
+        "POSE": 84,
+        "UNITS": 1,
+        "VIA": 150
+      },
+      "actualSegments": {
+        "total": 932,
+        "manual": 750,
+        "generatedThermal": 182
+      },
+      "exactFinalSourceVersionUsed": true,
+      "nativeProcesses": [
+        {
+          "pid": 8076,
+          "parent": 16840,
+          "exe": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe",
+          "created": "2026-10-23T08:47:30.5307840Z",
+          "command": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe -product Allegro_performance -safe -nographic -s \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\R Space\\runs\\move01\\build.scr\" -p \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\R Space\\runs\\move01\\build\" \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\R Space\\runs\\move01\\work\\INPUT_COPY.brd\""
+        },
+        {
+          "pid": 15616,
+          "parent": 16840,
+          "exe": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe",
+          "created": "2026-10-23T08:47:40.2245420Z",
+          "command": "C:\\Program0\\Cadence\\SPB172\\tools\\bin\\allegro.exe -product Allegro_performance -safe -nographic -s \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\R Space\\runs\\move01\\fresh.scr\" -p \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\R Space\\runs\\move01\\fresh\" -readonly \"D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson60_20261023\\native\\R Space\\runs\\move01\\work\\L60_replayed.brd\""
+        }
+      ]
+    }
+  ],
+  "uniqueGeometrySHA256": "AE038C95DF6CC1CDDE9A91029DA01B2C37068A28A85365DE78AA644AC57D55DC",
+  "sourceCode": {
+    "pythonLines": 174,
+    "skillLines": 75
+  },
+  "negativeChecks": [
+    "Repeated tag refuses overwrite before launch"
+  ],
+  "limits": [
+    "ASCII native paths only; Chinese/non-ASCII paths rejected before launch",
+    "Conservative package native command-line length <=500 characters, not a Cadence official limit or proven AV root cause",
+    "Python -I required; child PYTHONPATH/PYTHONHOME removed and PYTHONNOUSERSITE=1; OS/license environment otherwise inherited without values logged",
+    "No GUI automation or GUI mastery demonstrated",
+    "No new copper/rule/DRC edits or hardware signoff",
+    "No cross-physical-machine or new Cadence installation test"
+  ],
+  "supersededRunPaths": [
+    "package/runs/first01",
+    "package/runs/first02",
+    "package/runs/final01",
+    "package/runs/final02",
+    "native/Relocated Space/portable package/runs/relocated01",
+    "native/Relocated Final Space/portable package/runs/relocated02",
+    "native/Relocated Final Space/portable package/runs/relocated03"
+  ],
+  "importantFailureLearning": [
+    "The initial 33 checks omitted path subsegments and were insufficient manual-copper evidence; retained, not accepted",
+    "Two 526-character fresh startup commands AV before any journal output; a previous 508-character command worked; correlation is not proof of causation"
+  ]
+}

@@ -1,0 +1,1942 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html xmlns="http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Allegro SI SigXplorer User Guide -- 3</title>
+<META NAME="Approver" CONTENT="Technical Publications">
+<META NAME="Author" CONTENT="Technical Publications">
+<META NAME="CreateDate" CONTENT="2017-08-02">
+<META NAME="CreateTime" CONTENT="1501659531">
+<META NAME="DataType" CONTENT="Manuals">
+<META NAME="Description" CONTENT="This user guide familiarizes you with the SigXplorer tool.">
+<META NAME="DocTitle" CONTENT="Allegro SI SigXplorer User Guide">
+<META NAME="DocType" CONTENT="User Guide">
+<META NAME="EdmsRelease" CONTENT="FM-Wiki-1.0_P005">
+<META NAME="FileTitle" CONTENT="3">
+<META NAME="FileType" CONTENT="Chapter">
+<META NAME="Group" CONTENT="Signal Integrity">
+<META NAME="Keyword" CONTENT="sigxpug">
+<META NAME="Language" CONTENT="English">
+<META NAME="ModifiedDate" CONTENT="2017-08-02">
+<META NAME="ModifiedTime" CONTENT="1501659531">
+<META NAME="NextFile" CONTENT="constraints.html">
+<META NAME="PageCount" CONTENT="30">
+<META NAME="Platform" CONTENT="ALL">
+<META NAME="PrevFile" CONTENT="top.html">
+<META NAME="Product" CONTENT="Allegro PCB SI">
+<META NAME="ProductFamily" CONTENT="Silicon-Package-Board Co-Design">
+<META NAME="ProductVersion" CONTENT="17.2-2016">
+<META NAME="RightsManagement" CONTENT="Copyright 1991Ð2017 Cadence Design Systems Inc.">
+<META NAME="Title" CONTENT="Allegro SI SigXplorer User Guide -- 3">
+<META NAME="TopicTags" CONTENT="FALSE">
+<META NAME="Version" CONTENT="17.2-2016">
+  </head>
+  <body style="margin-left: 5%;">
+    <a name="pagetop"></a>
+    <a name="firstpage"></a>
+    <!-- Begin Buttons -->
+    <table width="650" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td height="36" width="650" colspan="10">
+          <img src="images/header_doc.gif" width="650" height="34">
+        </td>
+      </tr>
+      <tr>
+        <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+                </td>
+<td height="20" width="73">
+<a href="sigxpugTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+        <td>
+          <a href="top.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+        </td>
+        <td>
+          <a href="constraints.html"><img src="images/nav_next.gif" alt="Next" border="0"></a>
+        </td>
+        <td height="20">
+          <a>
+<a href="sigxpug.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+          </a>
+        </td>
+        <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+        </td>
+        <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+        </td>
+        <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+        </td>
+        <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+        </td>
+      </tr>
+    </table>
+    <!-- End Buttons -->
+    <p>
+    <hr>
+    <p>
+      <h3>
+        <center>
+          <font >
+            <div>Allegro&#174; SI SigXplorer User Guide</div>
+            <font >
+              <div>Product Version 17.2&#45;2016  April 2016</div>
+            </font>
+          </font>
+        </center>
+      </h3>
+      <br>
+    </p>
+    <div>
+      <h1>3<a name="998645">&nbsp;</a></h1>
+      <h1><a name="1003052">Preparing for Simulations</a></h1>
+      <p><a name="998646">Topics in this chapter include:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1008033" title="3" name="1003646"><font color="Blue"><u>Exploring the SigXplorer User Interface</u></font></a><a href="#1008033" title="3"> </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1008020" title="3" name="1008126"><font color="Blue"><u>Common Clock Simulation</u></font></a><a href="#1008020" title="3"> </a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a href="#1004354" title="3" name="1008116"><font color="Blue"><u>Performing Parametric Sweeps</u></font></a><a href="#1004354" title="3"> </a></td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1008033">Exploring the SigXplorer User Interface</a></h2>
+      <p><a name="1008034">Using SigXplorer you can create a circuit topology in the canvas and create or modify the supporting data in the integrated spreadsheet.</a></p>
+      <p><a name="1008036">For more information on menu commands and procedures, see </a><a href="../sigxpref/sigxprefTOC.html" target="external_window"><font color="#0000ff"><u><em>Allegro SI SigXplorer Command Reference</em></u></font></a>.</p>
+      <p><a name="1008037">To set up and perform simulations, you need to use commands accessed through menus and the toolbar, as shown in </a><font color="#0000ff"><u>Table </u></font><a href="#1008042" title="3"><font color="#0000ff"><u>3&#45;1</u></font></a>.</p>
+      <p align="left">
+        <strong><font color="#000000"><strong>Table 3&#45;1&nbsp; </strong></font></strong>
+        <strong><a name="1008042">Performing Simulations</a></strong>
+      </p>
+      <p align="left"><a name="1008064">&nbsp;</a></p>
+      <table summary="" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF" width="648">
+        <caption>
+        <tr>
+          <td cellpadding="4" border="0" valign="top" >
+            <p><a name="1008045"><font color="#000000"><strong>To...</strong></font></a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top" >
+            <p><a name="1008047"><font color="#000000"><strong>Choose...</strong></font></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1008049">Prepare for simulation</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1008051"><font color="#000000"><em> Set - Defaults</em></font></a> from the Menu or the Parameters tab</p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1008053">Perform simulation</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1008055"> </a><font color="#000000"><em>Analyze - Simulate</em></font></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1008057">Monitor progress of the simulation</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1008059"> Command tab</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1008061">View simulation results</a></p>
+          </td>
+          <td cellpadding="4" border="0" valign="top">
+            <p><a name="1008063"> Results tab or open SigWave to view the waveforms</a></p>
+          </td>
+        </tr>
+      </table>
+      <h2><a name="1008020">Common Clock Simulation</a></h2>
+      <h3><a name="1008583">Introduction</a></h3>
+      <p><a name="1008584">Once you have a valid topology displayed in the canvas, you are ready to simulate. You can use default simulation parameters to control how the simulation performs, or you can modify the simulation parameters before you start the simulation.</a></p>
+      <p><a name="1004469">The simulation results appear as data in spreadsheet format and as waveforms. After viewing the simulation results, you can modify the circuit topology and simulation parameters and then re&#45;simulate to examine the effects of your changes.</a></p>
+      <p><a name="1004427">Repeat this process until the circuit meets your requirements. For information on simulation and analysis, see the</a><a href="../squg/squgTOC.html" target="external_window"><font color="#0000ff"><u><em> Allegro PCB SI User Guide</em></u></font></a>.</p>
+      <h2><a name="1004418">Setting Analysis Preferences</a></h2>
+      <p><a name="1004457">To set the simulation preferences or to modify the simulation results, choose </a><font color="#000000"><em>Analyze - Preferences</em></font> from the SigXplorer menu.</p>
+      <p><a name="1004472">The Analysis Preferences dialog consists of the following tabs:</a></p>
+      <p><a name="1004486">&nbsp;</a></p>
+      <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="619">
+        <caption>
+        <tr>
+          <td cellpadding="4" valign="top" width="297">
+            <p><a name="1008690"><font color="#000000"><em>Pulse Stimulus</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top" width="322">
+            <p><a name="1008692">Determines values for the pulse stimulus, including: </a></p>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008693">Measurement Cycle</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008694">Switching Frequency</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008695">Duty Cycle</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008696">Offset</a></td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1008740">S&#45;Parameters</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1008749">Determine:</a></p>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008750">Transient Simulation Method</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008751">DC Extrapolation Method</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008752">(Enforce) Impulse Response Causality</a></td>
+                </tr>
+              </table>
+            </div>
+            <p><a name="1008742">&nbsp;</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1008698"><font color="#000000"><em>Simulation Parameters</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1008700">Determine simulation parameters, including:</a></p>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008701">Fixed Duration</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008702">Waveform Resolution</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008703">(Default) Cutoff Frequency</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008704">Buffer Delays</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008705">(Save) Sweep Cases</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008706">Algorithm Model Generation</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008707">Simulator</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008766">Solver</a></td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="simulationmodes"></a><a name="1008709"><font color="#000000"><em>Simulation Modes</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1008711">Select simulation modes to perform a single simulation or simulation sweeping, including:</a></p>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008712">FTS Modes(s): Fast, Typical, Slow, Fast&#47;Slow, Slow&#47;Fast</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008713">Driver Excitation: Active_Driver, All_Drivers</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008794">Fast&#47;Typical&#47;Slow Definitions</a></td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1008722"><font color="#000000"><em>Measurement Modes</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1008724">Select Measurement Modes to specify:</a></p>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008725">Measure Delays At</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008726">Receiver Selection</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008727">Custom Simulation</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008728">Drvr Measurement Location</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008808">Rcvr Measurement Location</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008815">Report Source Sampling Data</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008729">Advanced Settings for: </a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.872">
+                    <div>&nbsp;</div>
+                  </td>
+                  <td width="32.128319999999995">
+                    <div>
+                      <nobr>
+                        <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008730">Glitch control</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.872">
+                    <div>&nbsp;</div>
+                  </td>
+                  <td width="32.128319999999995">
+                    <div>
+                      <nobr>
+                        <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008731">Eye diagram measurements</a></td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1008733"><font color="#000000"><em>EMI</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1008735">Set preferences and defaults for EMI single net simulation, including:</a></p>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008736">EMI Regulation</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008737">Design Margin</a></td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table border="0" cellspacing="0" cellpadding="3" summary="">
+                <tr valign="baseline">
+                  <td width="31.999679999999998">
+                    <div>
+                      <nobr>
+                        <img src="images/b_bullet.gif" alt="*" border="0" width="8" height="8">
+                      </nobr>
+                    </div>
+                  </td>
+                  <td><a name="1008738">Analysis Distance</a></td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <h4><a name="1004871">Measurement Location</a></h4>
+      <p><a name="1004872">Pin and&#47;or die measurement location for driver and receiver can be determined from the DML model defined in the setup, from the external pin node, or from the internal die node, if present. You can set these choices in the </a><font color="#0000ff"><u>A</u></font><a href="../sigxpref/analyze.html#preferences" target="external_window"><font color="#0000ff"><u>nalysis Preferences</u></font></a> dialog (<font color="#000000"><em>Analyze - Preferences</em></font>) or by using the <a href="../scoms/schap.html#signoise" target="external_window"><font size="2" face="'Courier New'" color="#0000ff"><u>signoise</u></font></a> batch command.</p>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1004875">Editing measurement locations in the defined DML model involves manually changing the DML file by adding or deleting the appropriate keywords using the correct syntax in the appropriate section. Pin and die measurement locations are made at the external pin node and internal die node, respectively.</a></p>
+      <p><a name="1004876">The following convention is used in the Results spreadsheet to distinguish whether the measurement is being made at the pin pad or the die pad:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004877">If taken at the pin pad, the pin pad measurement name is identical to the pin name (for example, PIN5).</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004878">If taken at the die pad location, the pin name is displayed with an i appended to it (for example, Pin5i).</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1004879">The following examples illustrate these results.</a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;1&nbsp; </strong></font></strong>
+        <strong><a name="1004880">Pin Measurement Selection Report</a></strong>
+      </p>
+      <p align="left"><a name="1004885"><img src="images/sim.05.1.01.png" alt=""><br></a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;2&nbsp; </strong></font></strong>
+        <strong><a name="1004886">Die Measurement Selection Report</a></strong>
+      </p>
+      <p align="left"><a name="1004891"><img src="images/sim.05.1.02.png" alt=""><br></a></p>
+      <p><a name="1004869">For more information, see the </a><a href="../sigxpref/analyze.html#preferences" target="external_window"><font color="#0000ff"><u><em>Allegro SI SigXplorer Command Reference</em></u></font></a>.</p>
+      <h2><a name="1004204">Setting Stimuli and Running Simulations</a></h2>
+      <p><a name="1004205">When you have added all the parts to (or extracted the parts into) the topology, you need to choose a stimulus type for the driver. You can specify only one IOCell at a time to be the driver. All the other IOCells must be set to </a><font size="2" face="'Courier New'" color="#000000">tri&#45;state</font>.</p>
+      <p><a name="1004291">There are several types of stimulus for a driver:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004292">Pulse</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004293">Rise</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004294">Fall</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004295">Custom</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004296">Quiet Hi</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004297">Quiet Lo</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004298">Tristate</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1004289">You choose a stimulus based on the AC input used for simulation. The driver output for a pulse starts at the circuit low DC point, so you use the stimulus to determine the low point.</a></p>
+      <p><a name="1004167">You then extract a selected net (ratsnest) from the board layout for exploration and topology development. This unrouted interconnect models after Manhattan distance estimates based on your initial placement.</a></p>
+      <p><a name="1004201">You simulate and analyze the topology, making trade&#45;off decisions that involve:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004169">target impedance</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004170">min&#47;max length (or propagation delay)</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004171">pin ordering</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004172">termination strategy (and location on net)</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1004313">When the simulation finishes, the Results tab pops to the top of the Spreadsheet and the SigWave window opens. The Results tab displays data for the simulation, and the SigWave window displays waveforms resulting from the simulation. You can examine the simulation results in the spreadsheet and in SigWave.</a></p>
+      <p><a name="1004173">You then note what changes to make in the board design. You can modify the board by:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004174">adding components (terminators, etc.)</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004175">swapping components</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004176">moving components</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004177">moving nets on microstrip layers to stripline layers</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004178">adding shield or etch layers to the stackup</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004179">varying trace geometry</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004165">re&#45;routing to a new pin order</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1004352">When the simulation results are satisfactory, you can do one of the following: </a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004361">If you have extracted the topology into SigXplorer, you can upload the design into Allegro SI.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1004363">If you have created a new topology or opened a previous topology in SigXplorer, you can proceed by saving the constraints with the topology (see </a><a href="constraints.html#1002956" title="4"><font color="Blue"><u>Defining Constraints</u></font></a><a href="constraints.html#1002956" title="4"> </a>).</td>
+          </tr>
+        </table>
+      </div>
+      <h2><a name="1004354">Performing Parametric Sweeps</a></h2>
+      <p><a name="1003173">Simulation sweeping relies on combinations of the following criteria:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003174">Varying part parameter values</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003175">Varying driver slew rates</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003176">Sequencing active drivers</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1003177">Sweeping by part parameter values involves covering a set or range of values (sweep count points) that you specify for eligible sweep parameters through a set of simulations. SigXplorer calculates the total number of simulations based on the number of sweep count points required for each sweep parameter.</a></p>
+      <p><a name="1003178">You sweep by driver slew rate by selecting a set of FTS Mode target rates from the </a><a href="#simulationmodes" title="3"><font color="#0000ff"><u><em>S</em></u></font></a><font color="#0000ff"><u><em>imulation Modes</em></u></font> tab in the Analysis Preferences dialog.</p>
+      <p><a name="1003179">You accomplish sweeping by sequencing active drivers by selecting </a><font color="#000000"><em>All Drivers</em></font> sweep mode to sequence through eligible IOCells with each one, in turn, driving a simulation.</p>
+      <p>
+<blockquote><blockquote>        <font color="#000000"><a name="1009950"><img src="images/ana_pre_sim.gif" alt=""><br></a></font></blockquote></blockquote>
+      </p>
+      <p><a name="1003180">When you specify multiple sweep criteria, SigXplorer uses a hierarchical ordering when performing the simulations. For example, if you select multiple FTS Modes, as well as several part parameter values for sweeping, then all part parameter sweeps execute for each selected FTS Mode. Additionally, if you also select All Drivers, then part parameter sweeps for each selected FTS Mode execute as each driver activates in sequence.</a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;3&nbsp; </strong></font></strong>
+        <strong><a name="1003184">Sweep Parameter Setup</a></strong>
+      </p>
+      <p align="left"><a name="1003198"><img src="images/sim.05.1.04.png" alt=""><br></a></p>
+      <h3><a name="1003199">Specifying Part Parameter Values for Sweeping</a></h3>
+      <p><a name="1003200">All parameter attributes, including parameter that you can sweep, are accessible for viewing and editing through the Parameters tab of the SigXplorer spreadsheet.</a></p>
+      <p><a name="1003201">Parameters that you can sweep include:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003202">single number value</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003203">linear range of number values specified as start and stop values and a step size for iterating from start (the minimum value) to stop (the maximum value).</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003204">list of discrete number values</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003205">expression string composed of operators, functions, and references to other parameters.</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1003206">When you use an expression to define a parameter attribute that references a second parameter attribute defined as a range or list, the first parameter tracks the second parameter as it changes during simulation sweeping.</a></p>
+      <p><a name="1003707">By defining an expression that references another parameter and adds a constant, you can track the first parameter with an offset. </a></p>
+      <p><a name="1003207">When you delete a part, any references to the part parameter are no longer valid and appear in red within the spreadsheet. </a></p>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1003208">You can save a topology that contains invalid references, but you cannot simulate it.</a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;4&nbsp; </strong></font></strong>
+        <strong><a name="set_params_db"></a><a name="1003209">Setting Sweep Parameters using the Set Parameters Dialog</a></strong>
+      </p>
+      <p align="left"><a name="1003254"><img src="images/sim.05.1.05.png" alt=""><br></a></p>
+      <h3><a name="1003255">Controlling Sweep Sampling and Coverage</a></h3>
+      <p><a name="1003256">After you have set up to perform simulation sweeps, you can choose </a><font color="#000000"><em>Analyze -- Simulate </em></font>to control sweep sampling in SigXplorer. The Sweep Sampling dialog appears before an active sweep begins.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;5&nbsp; </strong></font></strong>
+        <strong><a name="1010281">The Sweep Sampling Dialog </a></strong>
+      </p>
+      <p><a name="1010272"><img src="images/sim.05.1.06.png" alt=""><br></a></p>
+      <p><a name="1010351">You can specify full or partial sweep coverage in this dialog by:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1010352">defining sweep samples as a percentage of full coverage.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1010353">specifying an explicit number of simulations.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1010354">specifying a seed number for random sampling.</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><a name="1010237">You obtain partial sweep coverage by randomly sampling the full solution space using Monte Carlo methods. To vary sample point sets, SigXplorer selects sweep count points based on the specified random number seed.</a></p>
+      <h3><a name="1010265">Sweep Results</a></h3>
+      <p><a name="1003290">When you click </a><font color="#000000"><em>Continue</em></font> on the Sweep Sampling dialog, the simulation begins and the Simulation progress dialog appears:</p>
+      <p>
+<blockquote><blockquote>        <font color="#000000"><a name="1010437"><img src="images/sim_progress.gif" alt=""><br>\</a></font></blockquote></blockquote>
+      </p>
+      <p><a name="1010460">When you invoke parametric sweeping, SigXplorer initializes SigNoise which sweeps through the required series of simulations. Sweep results appear in the Results tab of the SigXplorer spreadsheet.</a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;6&nbsp; </strong></font></strong>
+        <strong><a name="1010592"><img src="images/sweep_result.gif" alt=""><br></a> Sweep Results</strong>
+      </p>
+      <p><a name="1003291">The sweep report contains information on topology, swept elements, driver and load names, impedance, and delay variables. You can save simulation sweep results in a (Spreadsheet Tabbed Text) tab&#45;delimited text file using the </a><font color="#000000"><em>File - Export - Spreadsheet - Results</em></font><font color="#000000"><em> </em></font>menu command. The contents of this file can be imported into an external spreadsheet program such as Microsoft Office Excel as shown in <a href="#1010526" title="3"><font color="Blue"><u>Figure&nbsp;3&#45;7</u></font></a><a href="#1010526" title="3"> </a>.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;7&nbsp; </strong></font></strong>
+        <strong><a name="1010526"><img src="images/sweep_rprt_exported.png" alt=""><br>Sweep Results Exported to a Tab&#45;Delimited Text File</a></strong>
+      </p>
+      <h4><a name="1003292">Viewing Waveforms</a></h4>
+      <p><a name="1003293">The parametric sweep function does not produce waveforms directly. However, when viewing the sweep results in the Results tab, you can right&#45;click a row in the spreadsheet and choose </a><font color="#000000"><em>View Waveform</em></font>. This will re&#45;run that single simulation and open SigWave to display the resulting waveforms.</p>
+      <blockquote>
+        <strong><font color="#000000"><strong>Figure 3&#45;8&nbsp; </strong></font></strong>
+        <strong><a name="1010691"><img src="images/waveform_sigwave.gif" alt=""><br>Waveform in SigWave</a></strong>
+      </blockquote>
+      <p><a name="1010693">You can save and restore sweep simulation data. This enables you to view waveforms from any prior sweep iteration, eliminating the need to manually reset simulation parameters and perform re&#45;simulations. You save the waveforms (</a><font color="#000000"><em>File - Save As</em></font> in SigWave) and the environment details in a case directory. Upon restoring the sweep case, you return to the same state, ensuring the data accuracy of the waveforms.</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="13.333333333333332">
+              <div>&nbsp;</div>
+            </td>
+            <td width="133.33333333333331">
+              <div>
+                <nobr>
+                  <strong><em><img src="images/caution.gif" alt="ParagraphBullet" border="0"></em></strong>
+                </nobr>
+              </div>
+            </td>
+            <td>
+              <strong><em><a name="1003342">Saving waveforms from sweeps can consume large amounts of disk space.</a></em></strong>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h3><a name="1003343">About Sweep Case Data</a></h3>
+      <p><a name="1003344">Saved sweep cases comprise the following data:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003345">Waveforms</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003346">Topology file</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003347">SigNoise</a> preferences</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003348">Results spreadsheet</a></td>
+          </tr>
+        </table>
+      </div>
+      <h3><a name="1003349">Saving Sweep Cases</a></h3>
+      <p><a name="1010751">When you start SigXplorer, it uses a default case directory to save (single or sweep) simulation results. The data in the default case is temporary as it is automatically overwritten with the data from the next simulation. Before running a sweep simulation, you can elect to save sweep case data using the Analysis Preferences dialog illustrated in </a><font color="#0000ff"><u>Figure </u></font><a href="#1010837" title="3"><font color="#0000ff"><u>3&#45;9</u></font></a>. </p>
+      <h4><a name="1010761">To save sweep cases</a></h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1003356">Choose </a>Analyze - Preferences in SigXplorer.</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1003782">The Analysis Preferences dialog appears.</a></blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1003357">Select the </a><font color="#000000"><em>Simulation Parameters</em></font> tab.</td>
+          </tr>
+        </table>
+      </div>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;9&nbsp; </strong></font></strong>
+        <strong><a name="1010837"><img src="images/anal_prefs_sim_param.jpg" alt=""><br>Analysis Preferences Dialog</a></strong>
+      </p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1003358">Click </a>Save Sweep Cases.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	4.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1003359">Select other tabs to set additional preferences for simulation sweeps.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	5.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1003360">Click </a>OK.</td>
+          </tr>
+        </table>
+      </div>
+      <h4><a name="1003361">Running the Simulation</a></h4>
+      <p><a name="1003362">Running a sweep simulation opens the </a><strong>Sweep Sampling with Case Control </strong>dialog as shown in <font color="#0000ff"><u>Figure </u></font><a href="#1003366" title="3"><font color="#0000ff"><u>3&#45;10</u></font></a>.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;10&nbsp; </strong></font></strong>
+        <strong><a name="1003366"><img src="images/sweep_sampling_db.gif" alt=""><br>Sweep Sampling Dialog</a></strong>
+      </p>
+      <p><a name="1003367">Within the Sweep Case area, the assigned case number appears along with a case description field to use to enter text regarding the sweep.</a></p>
+      <p><a name="1003368">When you click </a>Continue, the following events are triggered to preserve the current sweep simulation data and environment details:</p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003369">Current topology file and SigNoise preferences are saved in the current case directory.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.999679999999998">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/b_bullet.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003370">Sweep simulation starts, saving the resultant waveforms in the case directory. After the sweep finishes, the data from the Results spreadsheet is also saved in the case directory.</a></td>
+          </tr>
+        </table>
+      </div>
+      <p><font color="#000000"><strong>Note: </strong></font><a name="1003371">Initiating a sweep simulation with the </a><font color="#000000"><em>Save Sweep Cases</em></font> preference enabled, the system assigns the next unused case (in this example, case2) as the directory for the saved sweep data. </p>
+      <h3><a name="1003373">Restoring and Deleting Sweep Cases</a></h3>
+      <p><a name="1010943">You can restore a saved sweep in the Import Sweep Case dialog illustrated in </a><a href="#1011210" title="3"><font color="Blue"><u>Figure&nbsp;3&#45;11</u></font></a><a href="#1011210" title="3"> </a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1010945">Choose </a><font color="#000000"><em>File - Import - Sweep Case</em></font>.</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1011205">The Import Sweep Case dialog appears.</a></blockquote>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;11&nbsp; </strong></font></strong>
+        <strong><a name="1011210"><img src="images/import-sweep-case_db.gif" alt=""><br>Import Sweep Case Dialog</a></strong>
+      </p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1011033">Select the sweep case you want to restore from the list and click </a><font color="#000000"><em>Import Case</em></font>.</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1011091">A message appears prompting you to save the current topology in SigXplorer</a></blockquote>
+      <p>
+<blockquote><blockquote>        <font color="#000000"><a name="1011131"><img src="images/imp_case_msg.png" alt=""><br></a></font></blockquote></blockquote>
+      </p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1011132">Click </a><font color="#000000"><em>Yes</em></font>.</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+<blockquote>        <font color="#000000"><a name="1011150">The topology file from the selected case is loaded into SigXplorer, the Results spreadsheet data from the selected case is imported, and the SigNoise preferences are also restored from the selected case.</a></font></blockquote>
+      </blockquote>
+      <h4><a name="1003384">To delete a sweep case:</a></h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1003389">Click the sweep case you wish to delete from the list.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1003390">Click </a>Delete Case. </td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1011233">The case data is deleted and the case entry removed from the list.</a></blockquote>
+      <h3><a name="1003391">Viewing Sweep Case Waveforms</a></h3>
+      <h4><a name="1003392">To view a sweep case waveform:</a></h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1003393"><font color="#000000"><em>Right&#45;click on the desired simulation row within the Results</em></font></a><font color="#000000"><em> </em></font><font color="#000000"><em>spreadshee</em></font>t.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1003862"><font color="#000000"><em>Click the </em></font></a><font color="#000000"><em>View Waveform</em></font><font color="#000000"><em> button.</em></font></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1003394">The SigWave window appears displaying the resultant waveform of the selected simulation.</a></blockquote>
+      <h3><a name="1003865">Waveform Labels</a></h3>
+      <p><a name="1003866">Each waveform has its own label to assist you in mapping the data in the SigXplorer spreadsheet and the SigWave window. The label is based on the topology and case names, as well as the spreadsheet row and simulation ID number of the respective waveform. </a><font color="#0000ff"><u>Figure </u></font><a href="#1003412" title="3"><font color="#0000ff"><u>3&#45;12</u></font></a> shows a waveform label.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;12&nbsp; </strong></font></strong>
+        <strong><a name="1003412"><img src="images/sim.05.1.15.png" alt=""><br>Waveform Labeling</a></strong>
+      </p>
+      <h3><a name="1003414">Crossprobing</a></h3>
+      <p><a name="1011298">Between two compatible applications, crossprobing enables you to highlight a design object in one application when you select the object in the other. You can crossprobe waveform objects in the SigWave window and simulation rows in the SigXplorer Results spreadsheet to enable quick and reliable identification of waveforms and the related spreadsheet data.</a></p>
+      <h4><a name="1003417">To crossprobe a SigXplorer Results Spreadsheet Row from SigWave</a></h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1003418">View a sweep case waveform from the Results spreadsheet.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1003419">If necessary, re&#45;position the </a>SigWave window so that the Results spreadsheet in SigXplorer and SigWave are displayed simultaneously.</blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1003420">Click any one of the following waveform objects in the </a>SigWave window:</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.872">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.128319999999995">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003421">Curve in the graphics pane.</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.872">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.128319999999995">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003422">Legend symbol (bottom of the graphics pane).</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="31.872">
+              <div>&nbsp;</div>
+            </td>
+            <td width="32.128319999999995">
+              <div>
+                <nobr>
+                  <font color="#000000"><img src="images/bs_bullet_sub.gif" alt="ParagraphBullet" border="0"></font>
+                </nobr>
+              </div>
+            </td>
+            <td><a name="1003423">Symbol in the tree pane.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1003424">The corresponding Results spreadsheet row for the selected waveform is highlighted.</a></blockquote>
+      <h4><a name="1003425">To crossprobe a</a> SigWave waveform from a SigXplorer Results Spreadsheet Row</h4>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1003426">View a sweep case waveform from the Results spreadsheet.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1003427">If necessary, re&#45;position the </a>SigWave window so that the Results spreadsheet in SigXplorer and SigWave displays simultaneously.</blockquote>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1003428">Click on a simulation row within the Results spreadsheet of SigXplorer.</a></td>
+          </tr>
+        </table>
+      </div>
+      <blockquote><a name="1011521">The corresponding waveform object in SigWave is highlighted.</a></blockquote>
+      <h2><a name="1011522">Setting Advanced Measurement Parameters</a></h2>
+      <p><a name="1011523">You can set measurement parameters which assist you in finding correct cycles in your waveform, such as governing glitch tolerance, and measuring eye opening and peak&#45;to&#45;peak jitter. You specify these settings in the Set Advanced Measurement Parameters dialog.</a></p>
+      <p><a name="1011548">To access the Set Advanced Measurement Parameters dialog:</a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	1.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1011599">Choose </a><font color="#000000"><em>Analyze - Preferences</em></font>.</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	2.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1012078">Select the </a><font color="#000000"><em>Measurement Modes</em></font> tab in the Analysis Preferences dialog.</td>
+          </tr>
+        </table>
+      </div>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;13&nbsp; </strong></font></strong>
+        <strong><a name="1012079">Measurement Modes - Advanced Settings Control</a></strong>
+      </p>
+      <p align="left"><a name="1012083"><img src="images/anal_prefs_measure_modes.jpg" alt=""><br></a></p>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="3" summary="">
+          <tr valign="baseline">
+            <td width="28.8" align="center">
+              <div>
+                <nobr><font color="#000000"><strong>	3.	</strong></font></nobr>
+              </div>
+            </td>
+            <td><a name="1011638">Click the </a><font color="#000000"><em>Advanced Settings</em></font> button.</td>
+          </tr>
+        </table>
+      </div>
+      <blockquote>
+<blockquote>        <font color="#000000"><a name="1011639">The Set Advanced Measurement Parameters dialog is displayed.</a></font></blockquote>
+      </blockquote>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;14&nbsp; </strong></font></strong>
+        <strong><a name="1004731">Set Advanced Measurement Parameters Dialog</a></strong>
+      </p>
+      <p align="left"><a name="1004735"><img src="images/twotabadvanceddb.gif" alt=""><br></a></p>
+      <h3><a name="1013965">Measuring and Controlling Glitch</a></h3>
+      <p><a name="1012136">You can control glitch by setting a glitch tolerance percentage that can assist you in finding correct cycles in your waveform. The glitch tolerance setting is a relative percentage of the faster of the rising and falling edges of each IO cell buffer model you need to measure.</a></p>
+      <p><a name="1011737">When a glitch occurs between the starting and ending points of a cycle, a glitch violation is reported if the value of the glitch exceeds the tolerance percentage specified in the </a><font color="#000000"><em>Glitch Tolerance</em></font> field (<a href="#1004731" title="3"><font color="Blue"><u>Figure&nbsp;3&#45;14</u></font></a><a href="#1004731" title="3"> </a>). The glitch is <font color="#000000"><em>not</em></font> reported as a cycle.</p>
+      <p><a name="1012189">When you import your board design as a topology file in SigXplorer, you can specify the glitch measurements you want to measure by selecting them in the </a><font color="#000000"><em>Reflection</em></font> category of the <font color="#000000"><em>Measurements</em></font> spreadsheet tab of SigXplorer:</p>
+      <blockquote>
+        <strong><font color="#000000"><strong>Figure 3&#45;15&nbsp; </strong></font></strong>
+        <strong><a name="1012510"><img src="images/glitch.png" alt=""><br>Measurement Spreadsheet &#45; Glitch Controls</a></strong>
+      </blockquote>
+      <p align="left">
+        <strong><font color="#000000"><strong>Table 3&#45;2&nbsp; </strong></font></strong>
+        <strong><a name="1012528">Glitch Controls Description</a></strong>
+      </p>
+      <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="644">
+        <caption>
+        <tr>
+          <td cellpadding="4" border="0" bordercolor="#D3D3D3" valign="middle" width="192">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1012513">Option</a></strong></font>
+            </p>
+          </td>
+          <td cellpadding="4" border="0" bordercolor="#D3D3D3" valign="middle" width="451">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1012515">Description</a></strong></font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1012517"><font color="#000000"><em>Glitch</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1012519">Is the tolerance check of the rising and falling waveform.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1012521"><font color="#000000"><em>GlitchRise</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1012523">Is the tolerance check on the rising waveform. If no glitch occurs in the rising waveform, the Results spreadsheet denotes a PASS in the GlitchRise column. If one does occur, it reports a FAIL.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1012525"><font color="#000000"><em>GlitchFall</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1012527">Is the tolerance check on the falling waveform. If no glitch occurs in the falling waveform, the Results spreadsheet denotes a PASS in the GlitchFall column. If one does occur, it reports a FAIL</a></p>
+          </td>
+        </tr>
+      </table>
+      <p><a name="1012529">Glitch tolerance values are saved in the topology file and in the </a><font size="2" face="'Courier New'" color="#000000">sigxp.run</font> case management directory. If the tolerance values in these locations differ, the tolerance in the topology file takes precedence.</p>
+      <h3><a name="eye_diagram_measurements"></a><a name="1011920">Eye Diagram Measurements</a></h3>
+      <p><a name="1011921">Eye diagrams are a quick way of intuitively assessing the quality of a digital signal. Eye diagrams provide an accessible and intuitive view of parametric performance.</a></p>
+      <p><a name="1011922">To measure the eye diagrams of drivers which have a custom stimulus (that is, a stimulus other than pulse, rise, fall, etc.), the horizontal and vertical eye opening, and peak&#45;to&#45;peak jitter within wave forms are included in the eye diagram measurements.</a></p>
+      <p><a name="1011956">When you check the EyeHeight, EyeJitter, and EyeWidth items in the Reflection section of the </a><font color="#000000"><em>Measurements</em></font> spreadsheet, the measurements are displayed in the <font color="#000000"><em>Results</em></font> spreadsheet following the simulation. </p>
+      <p><a name="1012436">The Eye Diagram tab in the Set Advanced Measurement Parameters dialog displays the current eye diagram parameter settings for the combinations of the drivers and receivers of the topology.</a></p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;16&nbsp; </strong></font></strong>
+        <strong><a name="1004820">Eye Diagram Tab</a></strong>
+      </p>
+      <p align="left"><a name="1004821"><img src="images/eyediagramadvanceddb.gif" alt=""><br></a></p>
+      <p align="left">
+        <strong><font color="#000000"><strong>Table 3&#45;3&nbsp; </strong></font></strong>
+        <strong><a name="1012567">Eye Diagram Controls Description</a></strong>
+      </p>
+      <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="644">
+        <caption>
+        <tr>
+          <td cellpadding="4" border="0" bordercolor="#D3D3D3" valign="middle" width="192">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1012552">Option</a></strong></font>
+            </p>
+          </td>
+          <td cellpadding="4" border="0" bordercolor="#D3D3D3" valign="middle" width="451">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1012554">Description</a></strong></font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1012556"><font color="#000000"><em>Driver&#47;Receiver</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1012558">Display the driver&#47;receiver combinations in the topology</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1012560"><font color="#000000"><em>ClockFreq</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1012562">Displays the value of the Custom Stimulus state set in the IOCell Stimulus Edit dialog.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1012564"><font color="#000000"><em>ClockOffset</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1012566">Displays the value in nanoseconds of 1&#47;2 the clock frequency value.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1012668"><font color="#000000"><em>ClockStart</em></font></a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1012670">Lets you define the point in time when the eye pattern data should start. The default value is </a><font color="#000000"><em>0ns</em></font>. This field is editable.</p>
+          </td>
+        </tr>
+      </table>
+      <p><a name="1011988">When you select the </a><font color="#000000"><em>EyeHeight</em></font>, <font color="#000000"><em>EyeJitter</em></font>, and <font color="#000000"><em>EyeWidth</em></font> options in the <font color="#000000"><em>Reflections</em></font> section of the <font color="#000000"><em>Measurements</em></font> spreadsheet, and run the simulation, the Results spreadsheet is populated with the simulation result values.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;17&nbsp; </strong></font></strong>
+        <strong><a name="1012791">Eye Diagram Measurements in the Results Spreadsheet</a></strong>
+      </p>
+      <p align="left"><a name="1012795"><img src="images/results_tab_eys.png" alt=""><br></a></p>
+      <p><a name="1012743">See the procedure for performing eye diagram measurement in the </a><a href="../sigxpref/analyze.html#eyediagram_measure" target="external_window"><font color="#0000ff"><u><em>SigXplorer Command Reference</em></u></font></a>.</p>
+      <h3><a name="1004831">Weak Driving Control</a></h3>
+      <p><a name="1004848">The weak driving control functionality automatically determines whether a cycle affected by a weak driver is counted or ignored. When the maximum point of the rising edge does not cross </a><font size="2" face="'Courier New'" color="#000000">Vih</font> (input logic high) but the differential of <font size="2" face="'Courier New'" color="#000000">Vih</font> to the maximum point is smaller than the crossing tolerance, the cycle is counted. When this differential is larger, the cycle is ignored. This is illustrated in Figure <a href="#1004853" title="3"><font color="#0000ff"><u>3&#45;18</u></font></a>.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;18&nbsp; </strong></font></strong>
+        <strong><a name="1004853">Weak Driving Control</a></strong>
+      </p>
+      <p align="left"><a name="1004857"><img src="images/weak_driver.png" alt=""><br></a></p>
+      <h2><a name="1004752">Full Wave Field Solvers</a></h2>
+      <p><a name="1004996">SigXplorer supports two field solvers, </a><font color="#000000"><em>Bem2d</em></font> and <font color="#000000"><em>Ems2d</em></font>. New models that you place in SigXplorer, either from PCB SI or by way of the <font color="#000000"><em>Add Element</em></font> functionality, attempt to use the solver selected in the <font color="#000000"><em>Simulation Parameters</em></font> tab of the Analysis Preferences dialog (shown in Figure <a href="#1005022" title="3"><font color="#0000ff"><u>3&#45;19</u></font></a>). Pre&#45;existing models will attempt to use the field solver type initially used to solve the model.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;19&nbsp; </strong></font></strong>
+        <strong><a name="1005022">Field Solver Selection Control</a></strong>
+      </p>
+      <p align="left"><a name="1005023"><img src="images/sim.05.1.22.png" alt=""><br></a></p>
+      <p><a name="1005109">Bem2d runs largely automatically, using default parameters. Ems2d allows you to set more preferences, by way of the EMS2D Preferences form. For details on all the controls and options in both these forms, see the online documentation available from the </a><font color="#000000"><em>Help</em></font> buttons.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;20&nbsp; </strong></font></strong>
+        <strong><a name="1005052">EMS2D Preferences Form</a></strong>
+      </p>
+      <p align="left"><a name="1005053"><img src="images/ems2d_prefs.gif" alt=""><br></a></p>
+      <p><a name="1013138">(For complete details on Edms2d and supporting components, see </a><a href="../squg/11_EMS2D.html" target="external_window"><font color="#0000ff"><u><em>"Dynamic Analysis with the EMS2D Full Wave Field Solver"</em></u></font></a> in the PCB SI User Guide.)</p>
+      <h3><a name="1005171">Coplanar Waveguide Support</a></h3>
+      <p><a name="1014030">SigXplorer provides full&#45;time support for coplanar waveguide (CPW) structures in a topology, whether extracted from a board layout or added directly to the canvas from the Add Element Browser (</a><font color="#000000"><em>Edit - Add Element</em></font>), shown in Figure <a href="#1014035" title="3"><font color="#0000ff"><u>3&#45;21</u></font></a>.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;21&nbsp; </strong></font></strong>
+        <strong><a name="1014035">CPW Support in the Model Browser Form</a></strong>
+      </p>
+      <p align="left"><a name="1013416"><img src="images/cpw_support.gif" alt=""><br></a></p>
+      <p><a name="1013417">Six CPW structures are supported in SigXplorer:</a></p>
+      <p>
+<blockquote><blockquote>        <font color="#000000"><a name="1013429">&nbsp;</a></font></blockquote></blockquote>
+      </p>
+      <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="644">
+        <caption>
+        <tr>
+          <td cellpadding="4" border="0" bordercolor="#D3D3D3" valign="middle" width="192">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1013442">CPW Structure</a></strong></font>
+            </p>
+          </td>
+          <td cellpadding="4" border="0" bordercolor="#D3D3D3" valign="middle" width="451">
+            <p>
+              <font face="Verdana, Arial, Helvetica, sans-serif" color="#003366"><strong><a name="1013444">Description</a></strong></font>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1013446">Single microstrip</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1013448">CPWMS1 two&#45;pin symbol containing top and bottom dielectrics</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1013450">Coupled microstrip</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1013452">CPWMS2 four&#45;pin symbol containing a bottom dielectric</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1013454">Single stripline</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1013456">CPWSL1 two&#45;pin symbol containing top and bottom dielectrics</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1013458">Coupled stripline</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1013460">CPWSL2 four&#45;pin symbol containing top and bottom dielectrics</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1013462">SingleCPW </a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1013464">CPW1 two&#45;pin symbol containing no dielectrics</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td cellpadding="4" valign="top">
+            <p><a name="1013466">DiffPair CPW</a></p>
+          </td>
+          <td cellpadding="4" valign="top">
+            <p><a name="1013468">CPW2 four&#45;pin symbol containing no dielectrics</a></p>
+          </td>
+        </tr>
+      </table>
+      <p><a name="1005232">The symbols for each are illustrated in Figure </a><a href="#1005213" title="3"><font color="#0000ff"><u>3&#45;22</u></font></a>.</p>
+      <p>
+        <strong><font color="#000000"><strong>Figure 3&#45;22&nbsp; </strong></font></strong>
+        <strong><a name="1005213">Coplanar Waveguide Symbols</a></strong>
+      </p>
+      <p align="left"><a name="1005214"><img src="images/CPW_structures_in_sigxp.gif" alt=""><br></a></p>
+    </div>
+    <br>
+    <a href="#pagetop">Return to top of page</a>
+    <hr>
+    <hr align="left">
+    <div style="text-align: left;">
+      <!-- Begin Buttons -->
+      <table width="650" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td height="20" width="59">
+<a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+                    </td>
+<td height="20" width="73">
+<a href="sigxpugTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
+</td>
+
+<td height="20" width="46">
+<img src="../support/nav2_index_b.gif" border="0">
+</td>
+          <td>
+            <a href="top.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
+          </td>
+          <td>
+            <a href="constraints.html"><img src="images/nav_next.gif" alt="Next" border="0"></a>
+          </td>
+          <td>
+            <a>
+<a href="sigxpug.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+            </a>
+          </td>
+          <td height="20" width="61">
+<img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+          </td>
+          <td height="20" width="76">
+<a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+          </td>
+          <td height="20" width="43">
+<a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+          </td>
+          <td height="20" width="37">
+<a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+          </td>
+        </tr>
+      </table>
+      <!-- End Buttons -->
+    </div>
+    <br>
+    <font size="-1" >
+For support, see <a href="http://support.cadence.com" target="_blank">Cadence Online Support</a> service.</font>
+    <br>
+    <br>
+    <font size="-1" >
+<font size="-1"><i>Copyright &#169; 2016, <a href ="http://www.cadence.com">Cadence Design Systems, Inc.</a></i></font>
+    </font>
+    <br>
+    <font size="-1" >
+All rights reserved.</font>
+    <br>
+    <br>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+﻿{
+    "date":  "2026-10-17",
+    "timezone":  "Asia/Shanghai",
+    "lesson":  4,
+    "status":  "created_pad_dra_psm_and_verified_fresh_reopen",
+    "trainingOnly":  true,
+    "specification":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\training_spec.json",
+    "units":  "millimeters",
+    "accuracy":  3,
+    "pinCount":  2,
+    "pinCenterDistance":  2,
+    "topCopper":  [
+                      1,
+                      1.5
+                  ],
+    "topSolderMask":  [
+                          1.1,
+                          1.6
+                      ],
+    "topPasteMask":  [
+                         0.9,
+                         1.4
+                     ],
+    "outlineSegments":  8,
+    "placeBound":  {
+                       "bbox":  [
+                                    [
+                                        -1.8,
+                                        -1.1
+                                    ],
+                                    [
+                                        1.8,
+                                        1.1
+                                    ]
+                                ],
+                       "filled":  true
+                   },
+    "refdes":  {
+                   "placeholder":  "U*",
+                   "layer":  "REF DES/SILKSCREEN_TOP",
+                   "xy":  [
+                              0,
+                              1.6
+                          ]
+               },
+    "checks":  {
+                   "pinCount":  true,
+                   "pin1PositionAndType":  true,
+                   "pin1 ETCH/TOP":  true,
+                   "pin1 PIN/SOLDERMASK_TOP":  true,
+                   "pin1 PIN/PASTEMASK_TOP":  true,
+                   "pin2PositionAndType":  true,
+                   "pin2 ETCH/TOP":  true,
+                   "pin2 PIN/SOLDERMASK_TOP":  true,
+                   "pin2 PIN/PASTEMASK_TOP":  true,
+                   "bottomPadsAreNull":  true,
+                   "silkscreenOutline":  true,
+                   "assemblyOutline":  true,
+                   "placeBound":  true,
+                   "refdes":  true,
+                   "createComplete":  true,
+                   "reopenComplete":  true,
+                   "libraryHashesUnchanged":  true,
+                   "allNativeProcessesExited":  true
+               },
+    "libraryArtifacts":  {
+                             "value":  [
+                                           {
+                                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\library\\eda_l04_smd_1000x1500.pad",
+                                               "sha256":  "032BD46D936451F723FA3C7E17F2A9DA4BA4346F84247E34C23F63ACD02C8632"
+                                           },
+                                           {
+                                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\library\\eda_l04_two_pin_training.dra",
+                                               "sha256":  "F3866391446086B7B7B41DDACF6A64E0BAB1D3E33BD495EBF54650E87DD9DCCE"
+                                           },
+                                           {
+                                               "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson04_package\\library\\eda_l04_two_pin_training.psm",
+                                               "sha256":  "0228B1681C88D7A48C22A6A5E3B8C69CC9DB9B7E610A41C3F8A20BEAEB0FFD76"
+                                           }
+                                       ],
+                             "Count":  3
+                         },
+    "failedAttempts":  [
+                           {
+                               "run":  "run02_create",
+                               "reason":  "pin outside drawing extents",
+                               "saved":  false
+                           },
+                           {
+                               "run":  "run03_create",
+                               "reason":  "REF** text rejected with illegal characters",
+                               "saved":  false
+                           }
+                       ],
+    "corrections":  [
+                        "Explicit drawing extents -10,-10 to 10,10 mm",
+                        "Use documented U* reference placeholder",
+                        "Read direct line objects as well as path segments",
+                        "Identify old process by PID, executable and start time; PID19604 reused by msedge"
+                    ],
+    "nativeDrcStored":  0,
+    "nativeDrcState":  "t",
+    "nativeCompile":  "completed",
+    "knownWarning":  "SPMHUT-48: Scaled value has been rounded off during initial unit setup; affected field not specified; queried specification items match",
+    "previousLessonPrecisionIssueResolved":  false,
+    "compiledPsmPlacedOnBoard":  false,
+    "datasheetQualified":  false,
+    "siPiEmiReviewed":  false,
+    "realProjectModified":  false,
+    "globalHomeOrStartupFileChangeRequested":  false,
+    "desktopControlRetested":  false,
+    "bridgeLoaded":  false,
+    "nextLesson":  "Load compiled package into a training board, rotate and mirror instances, verify pins and layer mapping"
+}

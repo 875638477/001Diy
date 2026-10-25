@@ -1,0 +1,917 @@
+{
+  "status": "ACTUAL_CAP_PLANE_REACH_VERIFIED_HF_TRANSITION_RETURN_NOT_ACCEPTED",
+  "caps": [
+    {
+      "ref": "C9",
+      "powerPin": [
+        29.8,
+        30.95
+      ],
+      "groundPin": [
+        29.8,
+        28.918
+      ],
+      "nativeV3L3Reached": true,
+      "nativeGNDL2Reached": true,
+      "scope": "Native terminal graph and actual plane membership. Does not prove short low-L return/effective capacitance or mounting."
+    },
+    {
+      "ref": "C11",
+      "powerPin": [
+        61.8,
+        13.46
+      ],
+      "groundPin": [
+        61.8,
+        15.0348
+      ],
+      "nativeV3L3Reached": true,
+      "nativeGNDL2Reached": true,
+      "scope": "Native terminal graph and actual plane membership. Does not prove short low-L return/effective capacitance or mounting."
+    },
+    {
+      "ref": "C12",
+      "powerPin": [
+        59.8,
+        13.46
+      ],
+      "groundPin": [
+        59.8,
+        15.0348
+      ],
+      "nativeV3L3Reached": true,
+      "nativeGNDL2Reached": true,
+      "scope": "Native terminal graph and actual plane membership. Does not prove short low-L return/effective capacitance or mounting."
+    },
+    {
+      "ref": "C13",
+      "powerPin": [
+        34.0,
+        22.6
+      ],
+      "groundPin": [
+        34.0,
+        24.1748
+      ],
+      "nativeV3L3Reached": true,
+      "nativeGNDL2Reached": true,
+      "scope": "Native terminal graph and actual plane membership. Does not prove short low-L return/effective capacitance or mounting."
+    },
+    {
+      "ref": "C14",
+      "powerPin": [
+        43.9,
+        20.3
+      ],
+      "groundPin": [
+        42.3252,
+        20.3
+      ],
+      "nativeV3L3Reached": true,
+      "nativeGNDL2Reached": true,
+      "scope": "Native terminal graph and actual plane membership. Does not prove short low-L return/effective capacitance or mounting."
+    },
+    {
+      "ref": "C15",
+      "powerPin": [
+        47.3,
+        30.3
+      ],
+      "groundPin": [
+        47.3,
+        28.7252
+      ],
+      "nativeV3L3Reached": true,
+      "nativeGNDL2Reached": true,
+      "scope": "Native terminal graph and actual plane membership. Does not prove short low-L return/effective capacitance or mounting."
+    },
+    {
+      "ref": "C16",
+      "powerPin": [
+        49.5,
+        30.3
+      ],
+      "groundPin": [
+        49.5,
+        28.268
+      ],
+      "nativeV3L3Reached": true,
+      "nativeGNDL2Reached": true,
+      "scope": "Native terminal graph and actual plane membership. Does not prove short low-L return/effective capacitance or mounting."
+    },
+    {
+      "ref": "C17",
+      "powerPin": [
+        46.2016,
+        32.4
+      ],
+      "groundPin": [
+        47.7764,
+        32.4
+      ],
+      "nativeV3L3Reached": true,
+      "nativeGNDL2Reached": true,
+      "scope": "Native terminal graph and actual plane membership. Does not prove short low-L return/effective capacitance or mounting."
+    }
+  ],
+  "signalViaReviews": [
+    {
+      "net": "CAN_RXD",
+      "signalVia": [
+        61.45,
+        12.2
+      ],
+      "nearestExistingReferenceCap": "C11",
+      "maxDistanceToBothCapPinsMM": 2.8563247434421744,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "CAN_RXD",
+      "signalVia": [
+        37.65,
+        16.7
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 7.212662476506162,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "SWO",
+      "signalVia": [
+        46.2,
+        25.15
+      ],
+      "nearestExistingReferenceCap": "C15",
+      "maxDistanceToBothCapPinsMM": 5.266165587977652,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "SWO",
+      "signalVia": [
+        54.0,
+        23.5
+      ],
+      "nearestExistingReferenceCap": "C16",
+      "maxDistanceToBothCapPinsMM": 8.154140052758477,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "BOOT1",
+      "signalVia": [
+        34.4,
+        26.0
+      ],
+      "nearestExistingReferenceCap": "C13",
+      "maxDistanceToBothCapPinsMM": 3.4234485537247363,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "BOOT1",
+      "signalVia": [
+        32.35,
+        23.85
+      ],
+      "nearestExistingReferenceCap": "C13",
+      "maxDistanceToBothCapPinsMM": 2.070024154448444,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "SPI_SCK",
+      "signalVia": [
+        31.0,
+        29.95
+      ],
+      "nearestExistingReferenceCap": "C9",
+      "maxDistanceToBothCapPinsMM": 1.582726761004564,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "BOOT_SERVICE",
+      "signalVia": [
+        57.4,
+        33.4
+      ],
+      "nearestExistingReferenceCap": "C16",
+      "maxDistanceToBothCapPinsMM": 9.420585119831992,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB9",
+      "signalVia": [
+        49.8,
+        31.8
+      ],
+      "nearestExistingReferenceCap": "C16",
+      "maxDistanceToBothCapPinsMM": 3.5447177602737288,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB9",
+      "signalVia": [
+        45.65,
+        28.65
+      ],
+      "nearestExistingReferenceCap": "C15",
+      "maxDistanceToBothCapPinsMM": 2.333452377915607,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB13",
+      "signalVia": [
+        37.5,
+        20.725
+      ],
+      "nearestExistingReferenceCap": "C13",
+      "maxDistanceToBothCapPinsMM": 4.914378906840619,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "USB_DP",
+      "signalVia": [
+        39.75,
+        5.8
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 15.082191485324671,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "USB_DP",
+      "signalVia": [
+        40.75,
+        5.8
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 14.838210808584705,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB5",
+      "signalVia": [
+        46.2,
+        26.15
+      ],
+      "nearestExistingReferenceCap": "C15",
+      "maxDistanceToBothCapPinsMM": 4.293308747341612,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB5",
+      "signalVia": [
+        56.5,
+        26.55
+      ],
+      "nearestExistingReferenceCap": "C16",
+      "maxDistanceToBothCapPinsMM": 7.941190087134295,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB5",
+      "signalVia": [
+        62.6,
+        26.55
+      ],
+      "nearestExistingReferenceCap": "C11",
+      "maxDistanceToBothCapPinsMM": 13.114423357509853,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "USB_ATTACH_N",
+      "signalVia": [
+        39.0,
+        21.2
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 4.9819674828324585,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "USB_ATTACH_N",
+      "signalVia": [
+        50.8,
+        16.3
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 9.371351825643934,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "USB_ATTACH_N",
+      "signalVia": [
+        47.95,
+        13.45
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 8.863457284829662,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "CAN_TXD",
+      "signalVia": [
+        47.7,
+        18.3
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 5.734847429531147,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "CAN_TXD",
+      "signalVia": [
+        50.25,
+        18.3
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 8.173276885068802,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PA3",
+      "signalVia": [
+        35.2,
+        31.65
+      ],
+      "nearestExistingReferenceCap": "C9",
+      "maxDistanceToBothCapPinsMM": 6.051762057450707,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PA15",
+      "signalVia": [
+        61.0,
+        24.25
+      ],
+      "nearestExistingReferenceCap": "C11",
+      "maxDistanceToBothCapPinsMM": 10.819616444218342,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB4",
+      "signalVia": [
+        61.8,
+        25.85
+      ],
+      "nearestExistingReferenceCap": "C11",
+      "maxDistanceToBothCapPinsMM": 12.39,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "USB_CC2",
+      "signalVia": [
+        41.75,
+        8.3
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 12.191082806707533,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "USB_CC2",
+      "signalVia": [
+        44.7,
+        10.1016
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 10.471248139548601,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB10",
+      "signalVia": [
+        38.0,
+        26.3
+      ],
+      "nearestExistingReferenceCap": "C13",
+      "maxDistanceToBothCapPinsMM": 5.44885309033011,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB1",
+      "signalVia": [
+        38.3,
+        27.35
+      ],
+      "nearestExistingReferenceCap": "C13",
+      "maxDistanceToBothCapPinsMM": 6.407222487162435,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB12",
+      "signalVia": [
+        37.0,
+        21.25
+      ],
+      "nearestExistingReferenceCap": "C13",
+      "maxDistanceToBothCapPinsMM": 4.189803699458962,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB15",
+      "signalVia": [
+        38.5,
+        20.675
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 5.4130051727298385,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB14",
+      "signalVia": [
+        38.0,
+        21.25
+      ],
+      "nearestExistingReferenceCap": "C13",
+      "maxDistanceToBothCapPinsMM": 4.9552452048309386,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "UART_RX",
+      "signalVia": [
+        55.7,
+        25.05
+      ],
+      "nearestExistingReferenceCap": "C16",
+      "maxDistanceToBothCapPinsMM": 8.124192267542666,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "UART_RX",
+      "signalVia": [
+        57.8,
+        25.05
+      ],
+      "nearestExistingReferenceCap": "C16",
+      "maxDistanceToBothCapPinsMM": 9.821023368264632,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "SWDIO",
+      "signalVia": [
+        41.52,
+        21.25
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 2.562596339652419,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "SWDIO",
+      "signalVia": [
+        44.4,
+        21.95
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 2.650904570142045,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PC13",
+      "signalVia": [
+        42.0,
+        28.9
+      ],
+      "nearestExistingReferenceCap": "C15",
+      "maxDistanceToBothCapPinsMM": 5.481788029466296,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PC13",
+      "signalVia": [
+        29.45,
+        39.55
+      ],
+      "nearestExistingReferenceCap": "C9",
+      "maxDistanceToBothCapPinsMM": 10.637759350539941,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "VBUS_PRESENT_N",
+      "signalVia": [
+        34.6,
+        26.85
+      ],
+      "nearestExistingReferenceCap": "C13",
+      "maxDistanceToBothCapPinsMM": 4.292143986401202,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "VBUS_PRESENT_N",
+      "signalVia": [
+        50.85,
+        12.85
+      ],
+      "nearestExistingReferenceCap": "C12",
+      "maxDistanceToBothCapPinsMM": 9.212809074326891,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB8",
+      "signalVia": [
+        46.2,
+        28.15
+      ],
+      "nearestExistingReferenceCap": "C15",
+      "maxDistanceToBothCapPinsMM": 2.4150569351466635,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB8",
+      "signalVia": [
+        59.0,
+        27.95
+      ],
+      "nearestExistingReferenceCap": "C16",
+      "maxDistanceToBothCapPinsMM": 9.786342524150685,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB8",
+      "signalVia": [
+        64.0,
+        27.95
+      ],
+      "nearestExistingReferenceCap": "C11",
+      "maxDistanceToBothCapPinsMM": 14.656060180007449,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "SPI_NSS",
+      "signalVia": [
+        29.8,
+        32.3
+      ],
+      "nearestExistingReferenceCap": "C9",
+      "maxDistanceToBothCapPinsMM": 3.381999999999998,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "SPI_MOSI",
+      "signalVia": [
+        32.7,
+        26.25
+      ],
+      "nearestExistingReferenceCap": "C13",
+      "maxDistanceToBothCapPinsMM": 3.8745967532118724,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "SPI_MOSI",
+      "signalVia": [
+        12.65,
+        28.65
+      ],
+      "nearestExistingReferenceCap": "C9",
+      "maxDistanceToBothCapPinsMM": 17.303540100222264,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "PA9_UART_TX",
+      "signalVia": [
+        39.7,
+        21.7
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 4.427188724235727,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "PA9_UART_TX",
+      "signalVia": [
+        46.3,
+        21.1
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 4.054507989879902,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PB11",
+      "signalVia": [
+        33.7,
+        25.3
+      ],
+      "nearestExistingReferenceCap": "C13",
+      "maxDistanceToBothCapPinsMM": 2.716615541441224,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PC15",
+      "signalVia": [
+        40.3,
+        28.9
+      ],
+      "nearestExistingReferenceCap": "C15",
+      "maxDistanceToBothCapPinsMM": 7.138627319029899,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "SPI_MISO",
+      "signalVia": [
+        31.65,
+        28.2
+      ],
+      "nearestExistingReferenceCap": "C9",
+      "maxDistanceToBothCapPinsMM": 3.314362683835309,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "SPI_MISO",
+      "signalVia": [
+        15.7,
+        29.3
+      ],
+      "nearestExistingReferenceCap": "C9",
+      "maxDistanceToBothCapPinsMM": 14.196214284097012,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "I2C_SDA",
+      "signalVia": [
+        46.2,
+        27.15
+      ],
+      "nearestExistingReferenceCap": "C15",
+      "maxDistanceToBothCapPinsMM": 3.3365401241405745,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "I2C_SDA",
+      "signalVia": [
+        59.2,
+        36.8
+      ],
+      "nearestExistingReferenceCap": "C16",
+      "maxDistanceToBothCapPinsMM": 12.91839866237298,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PA1",
+      "signalVia": [
+        37.5,
+        29.6
+      ],
+      "nearestExistingReferenceCap": "C9",
+      "maxDistanceToBothCapPinsMM": 7.817448432832799,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "SWCLK",
+      "signalVia": [
+        47.95,
+        22.4
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 6.004029899992171,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "SWCLK",
+      "signalVia": [
+        57.4,
+        20.8
+      ],
+      "nearestExistingReferenceCap": "C12",
+      "maxDistanceToBothCapPinsMM": 7.722408950580123,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PC14",
+      "signalVia": [
+        41.5,
+        29.65
+      ],
+      "nearestExistingReferenceCap": "C15",
+      "maxDistanceToBothCapPinsMM": 5.873266130527371,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PC14",
+      "signalVia": [
+        31.2,
+        39.95
+      ],
+      "nearestExistingReferenceCap": "C9",
+      "maxDistanceToBothCapPinsMM": 11.120477687581594,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "UART_TX",
+      "signalVia": [
+        54.85,
+        18.95
+      ],
+      "nearestExistingReferenceCap": "C12",
+      "maxDistanceToBothCapPinsMM": 7.392063311417181,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "NRST",
+      "signalVia": [
+        39.05,
+        42.1
+      ],
+      "nearestExistingReferenceCap": "C17",
+      "maxDistanceToBothCapPinsMM": 13.047607327015944,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "NRST",
+      "signalVia": [
+        38.7,
+        35.3
+      ],
+      "nearestExistingReferenceCap": "C17",
+      "maxDistanceToBothCapPinsMM": 9.52843307999799,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PA2",
+      "signalVia": [
+        36.6,
+        30.4
+      ],
+      "nearestExistingReferenceCap": "C9",
+      "maxDistanceToBothCapPinsMM": 6.959620966690643,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PA2",
+      "signalVia": [
+        17.5,
+        52.6
+      ],
+      "nearestExistingReferenceCap": "C9",
+      "maxDistanceToBothCapPinsMM": 26.685710108595575,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "GPIO_PA2",
+      "signalVia": [
+        19.9,
+        50.95
+      ],
+      "nearestExistingReferenceCap": "C9",
+      "maxDistanceToBothCapPinsMM": 24.154068477173784,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "PA10_UART_RX",
+      "signalVia": [
+        40.0,
+        20.5
+      ],
+      "nearestExistingReferenceCap": "C14",
+      "maxDistanceToBothCapPinsMM": 3.9051248379533257,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    },
+    {
+      "net": "PA10_UART_RX",
+      "signalVia": [
+        50.1,
+        22.4
+      ],
+      "nearestExistingReferenceCap": "C16",
+      "maxDistanceToBothCapPinsMM": 7.9227520471109045,
+      "nativeBothPlanesReached": true,
+      "status": "REFERENCE_CONVERSION_ENGINEERING_REVIEW_OPEN",
+      "reason": "GNDstitchvia alone cannot couple L2GND to L3V3. Existing cap common connectivity plus distance does not establish actual HF path/loop; inspect local trace/via/thermal geometry and real C/ESR. No blanket1.5mm acceptance."
+    }
+  ],
+  "unknowns": [
+    "actualedge/driver/cable/load",
+    "effectivecapMPN/DCbias/ESR",
+    "return path/loop/thermal impedance",
+    "USB4/wholeDRC/SI/PI/EMIhardware"
+  ]
+}

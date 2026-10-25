@@ -1,0 +1,3 @@
+from pathlib import Path
+import json
+O=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power');p=json.loads((O/'N37_2L_policy.json').read_text());q=json.loads((O/'N37_2L_search01.json').read_text());p['pendingOperations']=[a for a in q['operations'] if a['net']=='GPIO_PA3'];p['pendingConnectivityProofs']=[a for a in q['proofs'] if a['from']=='U1.13'];(O/'N38_2L_policy.json').write_text(json.dumps(p,indent=2))

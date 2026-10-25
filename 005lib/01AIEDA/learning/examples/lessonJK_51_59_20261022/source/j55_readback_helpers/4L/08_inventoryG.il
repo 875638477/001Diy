@@ -1,0 +1,37 @@
+
+procedure(gInventory(out lib)
+ let((f pf df gf sf comp pin def defs obj ps poly p layer kind)
+  fcorRead(out)
+  fcorOutline(out)
+  f=outfile(strcat(out "/g_inventory_summary.txt"))
+  pf=outfile(strcat(out "/g_package_pins.tsv"))
+  df=outfile(strcat(out "/g_package_definitions.tsv"))
+  gf=outfile(strcat(out "/g_package_geometry.tsv"))
+  sf=outfile(strcat(out "/g_actual_symbols.tsv"))
+  fprintf(f "BEFORE_SYMDEFS=%L\n" axlDBGetDesign()->symdefs~>name)
+  axlSetVariable("psmpath" list(lib))
+  axlSetVariable("padpath" list(lib))
+  fprintf(pf "package\tpin\txy\trotation\tpadstack\tmechanical\tthrough\tlayer\tfigure\tpadbbox\n")
+  fprintf(df "package\tbodyExtent\tbbox\tattributes\n")
+  fprintf(gf "package\ttype\tlayer\tbbox\tprops\tvertices\n")
+  fprintf(sf "refdes\tpackage\txy\trotation\tmirrored\tbodyExtent\tbbox\tprops\n")
+  foreach(obj axlDBGetDesign()->symbols
+   fprintf(sf "%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\n" obj->refdes obj->name obj->xy obj->rotation obj->isMirrored axlDBGetSymbolBodyExtent(obj) obj->bBox axlDBGetProperties(obj)))
+  defs=nil
+  foreach(comp axlDBGetDesign()->components
+   unless(member(comp->package defs)
+    defs=cons(comp->package defs)
+    def=axlLoadSymbol("PACKAGE" lowerCase(comp->package))
+    fprintf(f "LOAD_PACKAGE\t%L\t%L\n" comp->package def)
+    unless(def error("Cannot load package %s\n" comp->package))
+    fprintf(df "%L\t%L\t%L\t%L\n" comp->package axlDBGetSymbolBodyExtent(def) def->bBox def->??)
+    foreach(obj def->children
+     when(member(obj->objType list("shape" "polygon" "rectangle" "line" "path" "text" "circle"))
+      poly=if(equal(obj->objType "shape") then car(axlPolyFromDB(obj)) else nil)
+      fprintf(gf "%L\t%L\t%L\t%L\t%L\t%L\n" comp->package obj->objType obj->layer obj->bBox axlDBGetProperties(obj) if(poly then poly->vertices else nil))))
+    foreach(pin def->pins
+     foreach(layer list("ETCH/TOP" "PIN/SOLDERMASK_TOP" "PIN/PASTEMASK_TOP")
+      p=axlDBGetPad(pin layer "REGULAR")
+      fprintf(pf "%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\n" comp->package pin->number pin->xy pin->rotation pin->name pin->isMech pin->isThrough layer if(p then p->figureName else nil) if(p then p->bBox else nil))))))
+  fprintf(f "PACKAGES=%d\nCOMPONENTS=%d\nNETS=%d\nG_INVENTORY_COMPLETE\n" length(defs) length(axlDBGetDesign()->components) length(axlDBGetDesign()->nets))
+  foreach(o list(f pf df gf sf) close(o)) t))

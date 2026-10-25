@@ -1,0 +1,17 @@
+from pathlib import Path
+B=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019')
+s=(B/'scripts/lesson27.il').read_text()
+(B/'logs/create04/first_complete_source.il').write_text(s)
+a=s.index('  b=car(axlDBCreateShape')
+z=s.index('  axlDBCreateCircle',a)
+s=s[:a]+'  ; Pure drill geometry: no fictional solid component or package height.\n'+s[z:]
+s=s.replace('l27_npth_d200','l27_npth_d200_v2')
+s=s.replace('procedure(l27DumpDRC(f label)\n','procedure(l27DumpDRC(f label)\n axlDBRefreshId(nil)\n')
+s=s.replace('46:0 34:0 34:-12','46:-0.5 34:-0.5 34:-12')
+(B/'scripts/lesson27.il').write_text(s)
+scr=(B/'scripts/package.scr').read_text().replace('/logs/package01','/logs/package02')
+(B/'scripts/package.scr').write_text(scr)
+p=B/'scripts/run27.py';r=p.read_text().replace('library/l27_npth_d200.dra','library/l27_npth_d200_v2.dra').replace("'package01')","'package02')")
+p.write_text(r)
+p=B/'scripts/create.scr';p.write_text(p.read_text().replace('/logs/create04','/logs/create05'))
+(B/'F27_MECHANICAL.brd').rename(B/'logs/create04/F27_REJECTED_04.brd')

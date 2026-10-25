@@ -1,0 +1,158 @@
+{
+  "status": "REVISE_CANDIDATE",
+  "tests": 29353,
+  "issueCount": 15,
+  "issues": [
+    {
+      "a": "BASE_R330",
+      "b": "SPI_RETURN_MISO_W",
+      "netA": "V5",
+      "netB": "GND",
+      "layer": "TOP",
+      "gap": 0.1617,
+      "overlap": 0.0,
+      "required": 0.3
+    },
+    {
+      "a": "BASE_R331",
+      "b": "SPI_RETURN_MISO_W",
+      "netA": "V5",
+      "netB": "GND",
+      "layer": "TOP",
+      "gap": 0.1617,
+      "overlap": 0.0,
+      "required": 0.3
+    },
+    {
+      "a": "SPI_PREFILTER_ROW_SHIFT:1",
+      "b": "SPI_RETURN_MISO_W",
+      "netA": "V3V3",
+      "netB": "GND",
+      "layer": "TOP",
+      "gap": 0.25,
+      "overlap": 0.0,
+      "required": 0.3
+    },
+    {
+      "a": "SPI_SCK_EAST",
+      "b": "SPI_MISO_BOTTOM_BRIDGE:0",
+      "netA": "SPI_SCK",
+      "netB": "SPI_MISO",
+      "layer": "BOTTOM",
+      "gap": 0.170207,
+      "overlap": 0.0,
+      "required": 0.2
+    },
+    {
+      "a": "SPI_SCK_EAST",
+      "b": "SPI_MISO_BOTTOM_BRIDGE:1",
+      "netA": "SPI_SCK",
+      "netB": "SPI_MISO",
+      "layer": "BOTTOM",
+      "gap": 0.170207,
+      "overlap": 0.0,
+      "required": 0.2
+    },
+    {
+      "a": "SPI_SCK_WEST",
+      "b": "SPI_GUARD_CLOCK_MOSI:1",
+      "netA": "SPI_SCK",
+      "netB": "GND",
+      "layer": "BOTTOM",
+      "gap": 0.1,
+      "overlap": 0.0,
+      "required": 0.3
+    },
+    {
+      "a": "SPI_MOSI_BOTTOM_BRIDGE:0",
+      "b": "SPI_RETURN_SCK_E",
+      "netA": "SPI_MOSI",
+      "netB": "GND",
+      "layer": "BOTTOM",
+      "gap": 0.250002,
+      "overlap": 0.0,
+      "required": 0.3
+    },
+    {
+      "a": "SPI_MOSI_BOTTOM_BRIDGE:1",
+      "b": "SPI_RETURN_SCK_E",
+      "netA": "SPI_MOSI",
+      "netB": "GND",
+      "layer": "BOTTOM",
+      "gap": 0.2,
+      "overlap": 0.0,
+      "required": 0.3
+    },
+    {
+      "a": "SPI_MISO_WEST",
+      "b": "SPI_GUARD_MISO_NSS:0",
+      "netA": "SPI_MISO",
+      "netB": "GND",
+      "layer": "BOTTOM",
+      "gap": 0.15,
+      "overlap": 0.0,
+      "required": 0.3
+    },
+    {
+      "a": "SPI_MISO_WEST_TOP:0",
+      "b": "SPI_NSS_WEST",
+      "netA": "SPI_MISO",
+      "netB": "SPI_NSS",
+      "layer": "TOP",
+      "gap": 0.024264,
+      "overlap": 0.0,
+      "required": 0.2
+    },
+    {
+      "a": "SPI_MISO_WEST_TOP:0",
+      "b": "SPI_RETURN_GUARD_W",
+      "netA": "SPI_MISO",
+      "netB": "GND",
+      "layer": "TOP",
+      "gap": 0.0,
+      "overlap": 0.117714,
+      "required": 0.3
+    },
+    {
+      "a": "SPI_NSS_WEST",
+      "b": "SPI_RETURN_GUARD_W",
+      "netA": "SPI_NSS",
+      "netB": "GND",
+      "layer": "TOP",
+      "gap": 0.164854,
+      "overlap": 0.0,
+      "required": 0.2
+    },
+    {
+      "a": "SPI_NSS_WEST",
+      "b": "SPI_RETURN_GUARD_W",
+      "netA": "SPI_NSS",
+      "netB": "GND",
+      "layer": "BOTTOM",
+      "gap": 0.164854,
+      "overlap": 0.0,
+      "required": 0.2
+    },
+    {
+      "a": "SPI_NSS_WEST",
+      "b": "SPI_GUARD_MISO_NSS:0",
+      "netA": "SPI_NSS",
+      "netB": "GND",
+      "layer": "BOTTOM",
+      "gap": 0.164854,
+      "overlap": 0.0,
+      "required": 0.3
+    },
+    {
+      "a": "SPI_NSS_BOTTOM_BRIDGE:0",
+      "b": "SPI_RETURN_MISO_W",
+      "netA": "SPI_NSS",
+      "netB": "GND",
+      "layer": "BOTTOM",
+      "gap": 0.2,
+      "overlap": 0.0,
+      "required": 0.3
+    }
+  ],
+  "note": "Actual b010 routes/vias plus conservative pad AABB. Spacing uses engineering conservative line .2/power .3; pair pad minima .16. Native full rules/plane refill still required."
+}

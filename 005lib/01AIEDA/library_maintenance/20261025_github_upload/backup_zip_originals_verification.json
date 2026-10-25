@@ -1,0 +1,47 @@
+{
+  "status": "PASS_ALL_ORIGINALS_REVERIFIED_READY_TO_REMOVE_DUPLICATE_ZIP",
+  "started_utc": "2026-10-25T05:01:34.609496+00:00",
+  "source_manifest": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pad_psm_merge\\archive_manifest.csv",
+  "source_manifest_sha256": "ad5280f53fb2dbdc58efd77e74632e4baad27dd27fcde87e7fb838ff53864710",
+  "original_files_verified": 26476,
+  "original_bytes_verified": 1955833097,
+  "verification": "Every source file in the immutable historical manifest was reopened and compared by byte count and SHA256; all match.",
+  "source_roots": [
+    {
+      "path": "D:\\001DIY\\004computer\\lga1700\\cadence_library_cleanup_20261025",
+      "files": 5716,
+      "bytes": 82119209
+    },
+    {
+      "path": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025",
+      "files": 20395,
+      "bytes": 1858060504
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\_library_suffix_backup_20261025",
+      "files": 23,
+      "bytes": 642404
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\_library_merge_backup_20261025",
+      "files": 195,
+      "bytes": 10213156
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\_library_geometry_backup_20261025",
+      "files": 147,
+      "bytes": 4797824
+    }
+  ],
+  "archive": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pad_psm_merge\\cadence_library_maintenance_20261025_full.zip",
+  "archive_sha256_before_deletion": "d544cd9d1c1facffd630b03cc915487bf2c5912165e441271be19ef48272d5eb",
+  "archive_bytes_before_deletion": 375805598,
+  "classification": "Duplicate ZIP copy of two full maintenance evidence trees and three rollback backup trees, not a live Cadence library file.",
+  "archive_top_roots": [
+    "backups",
+    "cadence_geometry_merge_20261025",
+    "cadence_library_cleanup_20261025"
+  ],
+  "user_authorization": "User instructed: inspect large files and delete if they are backup files (2026-10-25).",
+  "scope": "Only the exact named ZIP is removed. All 26476 originals, all readable records and all three rollback directories are retained."
+}

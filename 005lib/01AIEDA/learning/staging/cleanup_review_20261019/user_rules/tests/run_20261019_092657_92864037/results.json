@@ -1,0 +1,1832 @@
+{
+    "policy":  "B_expand_only_TXT_XML_CSV_DAT",
+    "fixture_root":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\cleanup_review_20261019\\user_rules\\tests\\run_20261019_092657_92864037",
+    "production_payload_sha256":  "415EB21259EB69550818441D4C8BDF14DAE7707BC0C91421A031C8091FD7D785",
+    "checks":  364,
+    "failures":  0,
+    "skips":  [
+                  "File symlink fixture unavailable: Administrator privilege required for this operation."
+              ],
+    "results":  [
+                    {
+                        "name":  "Production refuses roots anywhere below 01AIEDA",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Production refuses the drive root",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Boundary guard rejects sibling with matching prefix",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Boundary guard accepts a literal child path",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Fixture-only override refuses the real workspace",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Preview leaves all files byte-identical",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file allegro.log",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file allegro.log,1",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file custom.log",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file CUSTOM.LOG,9",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file netrev.lst",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file custom.lst",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file report.rpt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file report.rpt,2",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file allegro.jrl",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file capture.jrl",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file custom.jrl,8",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file cache.tmp",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file cache.tmp,2",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file dump.dmp",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file extract.iex",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file checks.drc",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file tags.tag",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file notes.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file netlist.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file parts.csv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default removes Cadence generated file ordinary.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data pstxnet.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data allegro.cfg",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data constraints.sct",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data linker.xcl",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data firmware.hex",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data firmware.bin",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data firmware.elf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data firmware.axf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data source.zip",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data backup.dbk",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data orphan_library.obk",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data devices.dml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data memory.iml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data stackup.dcf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data converter.cnv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data board.pro",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data control.ctl",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data batch.baf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data output.out",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data source.c",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data design.opj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data parts.bom",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data design.edf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data library.olb",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data board.brd",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data symbol.dra",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data shape.psm",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data pin.pad",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Default preserves design or current data footprint.lib",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory remains untouched backup",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory remains untouched Backups",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory remains untouched archive",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory remains untouched archives",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory remains untouched history",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory remains untouched original",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory remains untouched release",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory remains untouched 01AIEDA",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory remains untouched 01env",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory remains untouched .git",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory remains untouched lib",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory remains untouched library",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Standalone four-suffix preview preserves all bytes",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B deletes requested data suffix without EDA context notes.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B deletes requested data suffix without EDA context table.csv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B deletes requested data suffix without EDA context data.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B deletes requested data suffix without EDA context export.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B deletes requested data suffix without EDA context child\\notes.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B deletes requested data suffix without EDA context child\\table.csv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B deletes requested data suffix without EDA context child\\data.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B deletes requested data suffix without EDA context child\\export.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy settings.cfg",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy model.dml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy memory.iml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy linker.sct",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy linker.xcl",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy constraints.dcf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy layer.cnv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy plot.ctl",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy feedback.baf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy board.pro",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy job.OutJob",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy project.PrjGrp",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy parts.BOM",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy ordinary.edf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy unknown.db",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy orphan.opj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy orphan.dbk",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy orphan.obk",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy orphan.sav",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy source.c",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy source.h",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy design.dsn",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy board.brd",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy library.olb",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B preserves unaffected suffix and conditional old policy Objects\\unowned.obj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains 01AIEDA\\notes.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains 01AIEDA\\notes.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains 01AIEDA\\notes.csv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains 01AIEDA\\notes.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains 01env\\notes.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains 01env\\notes.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains 01env\\notes.csv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains 01env\\notes.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains backup\\notes.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains backup\\notes.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains backup\\notes.csv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains backup\\notes.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains archive\\notes.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains archive\\notes.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains archive\\notes.csv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains archive\\notes.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains release\\notes.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains release\\notes.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains release\\notes.csv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains release\\notes.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains lib\\notes.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains lib\\notes.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains lib\\notes.csv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains lib\\notes.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains library\\notes.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains library\\notes.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains library\\notes.csv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Protected directory retains library\\notes.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized pstchip.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized pstxnet.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized pstxprt.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized pstdmlmodels.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized renamed_chip.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized renamed_parts.csv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized renamed_net.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized lower_case_header.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized schematic.edf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized renamed_edif.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized renamed_edif.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized boundary_edif.edf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized large_edif.edf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized pads_export.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized pads_export.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized telesis_export.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized telesis_export.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized kicad_export.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized renamed_xml.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized renamed_xml.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Structured or exact-name netlist is recognized structured_netlist.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Ordinary content or numbered copy is not a netlist netlist_is_only_a_name.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Ordinary content or numbered copy is not a netlist netlist.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Ordinary content or numbered copy is not a netlist ordinary.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Ordinary content or numbered copy is not a netlist malformed.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Ordinary content or numbered copy is not a netlist only_components.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Ordinary content or numbered copy is not a netlist only_nets.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Ordinary content or numbered copy is not a netlist wrong_root.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Ordinary content or numbered copy is not a netlist only_edif.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Ordinary content or numbered copy is not a netlist partial_pads.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Ordinary content or numbered copy is not a netlist partial_telesis.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Ordinary content or numbered copy is not a netlist large_ordinary.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Unaffected suffix or numbered copy is not misidentified as netlist pstchip.dat,1",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Unaffected suffix or numbered copy is not misidentified as netlist pstxnet.dat,2",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Unaffected suffix or numbered copy is not misidentified as netlist pstxprt.dat,3",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Unaffected suffix or numbered copy is not misidentified as netlist pstdmlmodels.dat,1",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Unaffected suffix or numbered copy is not misidentified as netlist ordinary.edf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Unaffected suffix or numbered copy is not misidentified as netlist symbol_view.edf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Unaffected suffix or numbered copy is not misidentified as netlist ordinary.cfg",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Unaffected suffix or numbered copy is not misidentified as netlist ordinary.dml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Netlist preview preserves all file bytes",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file pstchip.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file pstxnet.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file pstxprt.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file pstdmlmodels.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file renamed_chip.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file renamed_parts.csv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file renamed_net.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file lower_case_header.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file schematic.edf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file renamed_edif.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file renamed_edif.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file boundary_edif.edf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file large_edif.edf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file pads_export.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file pads_export.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file telesis_export.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file telesis_export.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file kicad_export.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file renamed_xml.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file renamed_xml.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Schematic netlist exception preserves file structured_netlist.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Matching ordinary data or numbered old copy is deleted netlist_is_only_a_name.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Matching ordinary data or numbered old copy is deleted netlist.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Matching ordinary data or numbered old copy is deleted ordinary.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Matching ordinary data or numbered old copy is deleted malformed.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Matching ordinary data or numbered old copy is deleted only_components.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Matching ordinary data or numbered old copy is deleted only_nets.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Matching ordinary data or numbered old copy is deleted wrong_root.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Matching ordinary data or numbered old copy is deleted only_edif.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Matching ordinary data or numbered old copy is deleted partial_pads.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Matching ordinary data or numbered old copy is deleted partial_telesis.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Matching ordinary data or numbered old copy is deleted large_ordinary.dat",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B retains unaffected suffix or orphan/empty-main numbered copy pstchip.dat,1",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B retains unaffected suffix or orphan/empty-main numbered copy pstxnet.dat,2",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B retains unaffected suffix or orphan/empty-main numbered copy pstxprt.dat,3",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B retains unaffected suffix or orphan/empty-main numbered copy pstdmlmodels.dat,1",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B retains unaffected suffix or orphan/empty-main numbered copy ordinary.edf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B retains unaffected suffix or orphan/empty-main numbered copy symbol_view.edf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B retains unaffected suffix or orphan/empty-main numbered copy ordinary.cfg",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "B retains unaffected suffix or orphan/empty-main numbered copy ordinary.dml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Legacy positive flags remain accepted custom.jrl",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Legacy positive flags remain accepted custom.log",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Unknown option fails before deleting",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Unknown option retains candidate",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Help does not modify any files",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Standalone temporary file removed scratch.tmp",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Standalone temporary file removed Objects\\scratch.tmp",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Standalone temporary file removed JLinkLog.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "No recognized project preserves other files Objects\\test.obj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "No recognized project preserves other files custom.log",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "No recognized project preserves other files custom.jrl",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.obj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.o",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.d",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.dep",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.crf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.lnp",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.lst",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.pbi",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.pbd",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.browse",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.linf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.pbw",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.plg",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.__i",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.axf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.omf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.map",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\generated.htm",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Listings\\generated.lst",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Debug\\generated.obj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Build\\generated.axf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Obj_Debug\\generated.o",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output JLinkLog.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output JLinkARM.log",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx default removes rebuildable output Objects\\notes.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx preserves source final firmware and config Objects\\firmware.hex",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx preserves source final firmware and config Objects\\firmware.bin",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx preserves source final firmware and config Objects\\library.lib",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx preserves source final firmware and config Objects\\library.a",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx preserves source final firmware and config Objects\\linker.xcl",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx preserves source final firmware and config Objects\\linker.sct",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx preserves source final firmware and config Objects\\linker.icf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx preserves source final firmware and config Objects\\settings.cfg",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx preserves source final firmware and config source\\manual.obj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx preserves source final firmware and config source\\memory.map",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx preserves source final firmware and config source\\generated.c",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx preserves source final firmware and config include\\generated.h",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx preserves source final firmware and config release\\generated.axf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "keil.uvprojx preserves source final firmware and config release\\custom.log",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.obj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.o",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.d",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.dep",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.crf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.lnp",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.lst",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.pbi",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.pbd",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.browse",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.linf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.pbw",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.plg",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.__i",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.axf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.omf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.map",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\generated.htm",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Listings\\generated.lst",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Debug\\generated.obj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Build\\generated.axf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Obj_Debug\\generated.o",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output JLinkLog.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output JLinkARM.log",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp default removes rebuildable output Objects\\notes.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp preserves source final firmware and config Objects\\firmware.hex",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp preserves source final firmware and config Objects\\firmware.bin",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp preserves source final firmware and config Objects\\library.lib",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp preserves source final firmware and config Objects\\library.a",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp preserves source final firmware and config Objects\\linker.xcl",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp preserves source final firmware and config Objects\\linker.sct",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp preserves source final firmware and config Objects\\linker.icf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp preserves source final firmware and config Objects\\settings.cfg",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp preserves source final firmware and config source\\manual.obj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp preserves source final firmware and config source\\memory.map",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp preserves source final firmware and config source\\generated.c",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp preserves source final firmware and config include\\generated.h",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp preserves source final firmware and config release\\generated.axf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "iar.ewp preserves source final firmware and config release\\custom.log",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Altium preview cache removed board.PcbDocPreview",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Altium preview cache removed sheet.SchDocPreview",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Altium preview cache removed board.pcbdoc_viewstate",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Altium preview cache removed board.PCBPreview",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Altium preview cache removed sheet.SchPreview",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Altium preview cache removed project.PrjPCBStructure",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Altium preview cache removed cache.$$$Preview",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Altium preview cache removed settings.xml",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Altium preview cache removed component.csv",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Altium project current data or orphan archive retained job.OutJob",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Altium project current data or orphan archive retained project.PrjGrp",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Altium project current data or orphan archive retained board.PcbDoc.Zip",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Altium project current data or orphan archive retained netlist.edf",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Pure schematic OPJ is removed only with existing DSN",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Ordinary GUI-saved OPJ with window and MRU state is removed",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "OPJ policy preserves unproven or specialized project missing.opj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "OPJ policy preserves unproven or specialized project simulation.opj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "OPJ policy preserves unproven or specialized project cis.opj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "OPJ policy preserves unproven or specialized project toolsettings.opj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "OPJ policy preserves unproven or specialized project unknown.opj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "OPJ policy preserves unproven or specialized project malformed.opj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "OPJ policy preserves unproven or specialized project empty.opj",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "OPJ policy preserves unproven or specialized project design.dsn",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "OPJ policy preserves unproven or specialized project library.olb",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Backup with nonempty newer main file removed design.dbk",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Backup with nonempty newer main file removed symbols.obk",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Backup with nonempty newer main file removed board.brd,1",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Backup with nonempty newer main file removed board.brd.bak",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Backup with nonempty newer main file removed drawing.sav",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Backup with nonempty newer main file removed report.txt,1",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Backup with nonempty newer main file removed report.txt",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Backup with nonempty newer main file removed board.PcbDoc.Zip",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Orphan newer recovery backup empty-main backup or main retained orphan.dbk",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Orphan newer recovery backup empty-main backup or main retained orphan.obk",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Orphan newer recovery backup empty-main backup or main retained orphan.brd,1",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Orphan newer recovery backup empty-main backup or main retained orphan.txt,1",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Orphan newer recovery backup empty-main backup or main retained orphan.PcbDoc.Zip",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Orphan newer recovery backup empty-main backup or main retained novel.dbk",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Orphan newer recovery backup empty-main backup or main retained novel.brd,1",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Orphan newer recovery backup empty-main backup or main retained empty.dbk",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Orphan newer recovery backup empty-main backup or main retained zero.brd,1",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Orphan newer recovery backup empty-main backup or main retained design.dsn",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Orphan newer recovery backup empty-main backup or main retained symbols.olb",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Orphan newer recovery backup empty-main backup or main retained board.brd",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Orphan newer recovery backup empty-main backup or main retained board.PcbDoc",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Preview prevents template copies",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Listed TXT is cleaned and copying entry restores source BOM template",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Template copy creates missing report",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Template copy creates missing drill",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Template source is unchanged",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Candidate modified since enumeration is rejected",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Modified candidate is retained",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Reliable old backup is initially selected",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Main file becoming empty invalidates backup deletion",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Recovery backup remains after empty-main rejection",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Main file becoming older invalidates backup deletion",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Recovery backup remains after older-main rejection",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Pure OPJ is initially selected before reference change",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "DSN becoming empty invalidates OPJ deletion",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "OPJ remains after reference-change rejection",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Netlist replacement fixture preserves original size and timestamp",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Deletion rechecks netlist protection after scan even with identical metadata",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Newly identified netlist remains present",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "name":  "Directory junction target is never traversed or deleted",
+                        "pass":  true,
+                        "detail":  ""
+                    }
+                ]
+}

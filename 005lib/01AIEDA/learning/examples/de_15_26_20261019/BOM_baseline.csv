@@ -1,0 +1,81 @@
+﻿Reference,Module_ID,Value,Specification,MPN,Procurement_Status,Footprint,Assembly,Page,Requirements
+U1,U_MCU,STM32F103C8T6,STM32F103C8T6,STM32F103C8T6,REAL_PART,l09_stm32f103c8_lqfp48,yes,MCU_SUPPLY,
+J1,J_PWR,9-16V,9-16V DC IN,,SPEC_ONLY_PROCUREMENT_PENDING,pin02_2d54MM_1x2,yes,POWER,">=24V >=0.5A connector, exact MPN before mechanical release"
+F1,F_IN,500mA,500mA fast 32VDC,0467.500NR,REAL_PART,0603,yes,POWER,
+D1,D_REV,SS14,SS14,SS14-E3/61T,REAL_PART,do-214ac_sma,yes,POWER,40V VRRM 1A; local pin1=K pin2=A
+C1,C_IN_BULK,47uF,47uF 35V,,SPEC_ONLY_PROCUREMENT_PENDING,de_capradial_6d3_p2d5,yes,POWER,electrolytic ESR provides source-cable resonance damping; polarity pin1+
+C2,C_IN,22uF,22uF 35V X7R,,SPEC_ONLY_PROCUREMENT_PENDING,1206,yes,POWER,effective >=10uF at16V including tolerance/temp/DC bias
+C3,C_IN_HF,100nF,100nF 50V X7R,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,POWER,
+U2,U_BUCK,TPS54202,TPS54202,TPS54202DDCR,REAL_PART,sot23-6,yes,POWER,
+C4,C_BOOT,100nF,100nF 16V X7R,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,POWER,
+L1,L_BUCK,15uH +/-20%,15uH +/-20%,XAL6060-153MEC,REAL_PART,de_xal6060_2land,yes,POWER,"DCRmax43.75mohm@25C, Isat5.8A typ (30% L drop), Irms4.5A at20C rise; covers nominal120mA and is above TPS54202 current-limit maximum3.9/4.3A at25C; temperature/current curves and actual PCB heat remain validation"
+C5,C5_A,22uF,22uF 10V X7R,,SPEC_ONLY_PROCUREMENT_PENDING,1206,yes,POWER,pair effective >=30uF total at5V; verify selected MPN bias data; Cff75pF starting value requires stability test
+C6,C5_B,22uF,22uF 10V X7R,,SPEC_ONLY_PROCUREMENT_PENDING,1206,yes,POWER,same as C5_A
+R1,R_FB_HI,100k,100k 0.1%,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,POWER,
+R2,R_FB_LO,13.5k,13.5k 0.1%,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,POWER,
+C7,C_FF,75pF,75pF C0G,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,POWER,"feedforward across upper FB resistor; official 5V low-ESR starting point, verify loop after actual C/L selected"
+U3,U_LDO,TLV75533P,TLV75533P,TLV75533PDBVR,REAL_PART,sot23-5,yes,POWER,
+C8,C_LDO_IN,2.2uF,2.2uF 10V X7R,,SPEC_ONLY_PROCUREMENT_PENDING,0805,yes,POWER,effective >=0.47uF worst case; pin-local
+C9,C_LDO_OUT,4.7uF,4.7uF 10V X7R,,SPEC_ONLY_PROCUREMENT_PENDING,0805,yes,POWER,effective >=0.47uF worst case; pin-local
+J2,J_USB,USB-C USB2 DEVICE,USB-C USB2 DEVICE,USB4105-GF-A,REAL_PART,l10_gct_usb4105_gf_a_12land,yes,USB_CAN,
+R3,R_CC1,5.1k,5.1k 1%,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,USB_CAN,
+R4,R_CC2,5.1k,5.1k 1%,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,USB_CAN,
+U4,U_USB_ESD,USBLC6-2SC6,USBLC6-2SC6,USBLC6-2SC6,REAL_PART,sot23-6,yes,USB_CAN,
+C10,C_USB_VBUS,100nF,100nF 10V X7R,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,USB_CAN,no board power from USB VBUS; cap supplies ESD rail HF return
+R5,R_USB_DP,22R,22R 1%,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,USB_CAN,
+R6,R_USB_DM,22R,22R 1%,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,USB_CAN,
+R7,R_VBUS_GATE,10k,10k 1%,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,USB_CAN,
+R8,R_VBUS_GPD,1M,1M 1%,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,USB_CAN,
+Q1,Q_VBUS,2N7002,2N7002,2N7002,REAL_PART,sot23-3,yes,USB_CAN,
+R9,R_VBUS_READ,10k,10k 1%,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,USB_CAN,
+Q2,Q_ATTACH,DMP2035U,DMP2035U,DMP2035U-7,REAL_PART,sot23-3,yes,USB_CAN,
+R10,R_ATTACH_OFF,100k,100k 1%,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,USB_CAN,
+R11,R_DP_PULLUP,1.5k,1.5k 1%,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,USB_CAN,
+U5,U_CAN,TCAN332,TCAN332,TCAN332DR,REAL_PART,so8,yes,USB_CAN,
+C11,C_CAN,100nF,100nF 10V X7R,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,USB_CAN,
+C12,C_CAN_BULK,1uF,1uF 10V X7R,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,USB_CAN,
+R12,R_CAN_TX,0R,0R,,SPEC_ONLY_PROCUREMENT_PENDING,0603,DNP default USB mode,USB_CAN,
+R13,R_CAN_RX,0R,0R,,SPEC_ONLY_PROCUREMENT_PENDING,0603,DNP default USB mode,USB_CAN,
+R14,R_CAN_TX_IDLE,10k,10k,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,USB_CAN,explicit recessive default complements internal pull-up; no output contention at3.3V
+R15,R_CAN_TERM,120R,120R 1% >=0.25W,,SPEC_ONLY_PROCUREMENT_PENDING,1206,yes,USB_CAN,fit at physical two bus ends only; DNP for intermediate node
+J3,J_CAN,CAN,CAN 500kbps <=1m BENCH,,SPEC_ONLY_PROCUREMENT_PENDING,pin03_2d54MM_1x3,yes,USB_CAN,
+J4,J_UART,3V3,3V3 UART,,SPEC_ONLY_PROCUREMENT_PENDING,pin04_2d54MM_1x4,yes,INTERFACES,V3V3 is OUT/reference <=10mA combined connector load; no external power injection
+R16,R_UART_TX,33R,33R,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,INTERFACES,
+R17,R_UART_RX,0R,0R,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,INTERFACES,
+R18,R_UART_IDLE,10k,10k,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,INTERFACES,
+J5,J_I2C,3V3,3V3 I2C <=400kHz <=100pF,,SPEC_ONLY_PROCUREMENT_PENDING,pin04_2d54MM_1x4,yes,INTERFACES,short bench interconnect; no hot plug; <=10mA total header load
+R19,R_I2C_SCL,2.2k,2.2k 1%,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,INTERFACES,
+R20,R_I2C_SDA,2.2k,2.2k 1%,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,INTERFACES,
+J6,J_SPI,3V3,3V3 SPI <=1MHz <=10cm,,SPEC_ONLY_PROCUREMENT_PENDING,pin06_2d54MM_1x6,yes,INTERFACES,exact receiver setup/hold and edge spec needed before faster/longer interface
+R21,R_SPI_SCK,33R,33R,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,INTERFACES,
+R22,R_SPI_MOSI,33R,33R,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,INTERFACES,
+R23,R_SPI_NSS,33R,33R,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,INTERFACES,
+R24,R_SPI_MISO,0R,0R,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,INTERFACES,
+R25,R_SPI_NSS_PU,10k,10k,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,INTERFACES,
+C13,C_VDD24,100nF,100nF X7R +/-20% >=10V; effective value and bias review required,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,MCU_SUPPLY,X7R >=10V; own pin-local return loop at VDD24
+C14,C_VDD36,100nF,100nF X7R +/-20% >=10V; effective value and bias review required,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,MCU_SUPPLY,X7R >=10V; own pin-local return loop at VDD36
+C15,C_VDD48,100nF,100nF X7R +/-20% >=10V; effective value and bias review required,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,MCU_SUPPLY,X7R >=10V; own pin-local return loop at VDD48
+C16,C_MCU_BULK,10uF,10uF X7R +/-20% >=10V; effective value and bias review required,,SPEC_ONLY_PROCUREMENT_PENDING,0805,yes,MCU_SUPPLY,Effective >=4.7uF; at VDD3 pin48 per DS5319 Figure14
+C17,C_VBAT,100nF,100nF X7R +/-20% >=10V; effective value and bias review required,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,MCU_SUPPLY,"No battery; VBAT1 tied to V3V3, local capacitor"
+R26,R_VDDA_LINK,0R,0R +/-1% unless explicit tighter source requirement,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,MCU_SUPPLY,Default zero-ohm link; no automatic ferrite substitution; continuous GND
+C18,C_VDDA_HF,10nF,10nF X7R +/-20% >=10V; effective value and bias review required,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,MCU_SUPPLY,Local VDDA9/VSSA8 loop; bulk effective>=1uF
+C19,C_VDDA_MID,100nF,100nF X7R +/-20% >=10V; effective value and bias review required,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,MCU_SUPPLY,Local VDDA9/VSSA8 loop; bulk effective>=1uF
+C20,C_VDDA_BULK,2.2uF,2.2uF X7R +/-20% >=10V; effective value and bias review required,,SPEC_ONLY_PROCUREMENT_PENDING,0805,yes,MCU_SUPPLY,Local VDDA9/VSSA8 loop; bulk effective>=1uF
+R27,R_NRST,10k,10k +/-1% unless explicit tighter source requirement,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,CLOCK_RESET,External optional pull-up; internal pull-up remains
+C21,C_NRST,100nF,100nF X7R +/-20% >=10V; effective value and bias review required,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,CLOCK_RESET,Does not guarantee reset release delay; debugger must sink reset
+J7,J_RESET,RESET_SHUNT,RESET_SHUNT,,SPEC_ONLY_PROCUREMENT_PENDING,pin02_2d54MM_1x2,yes,CLOCK_RESET,Normally open service shunt; >=20us low; not pushbutton footprint
+R28,R_BOOT0_PD,10k,10k +/-1% unless explicit tighter source requirement,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,CLOCK_RESET,
+R29,R_BOOT1_PD,10k,10k +/-1% unless explicit tighter source requirement,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,CLOCK_RESET,
+R30,R_BOOT_SERVICE,1k,1k +/-1% unless explicit tighter source requirement,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,CLOCK_RESET,
+J8,J_BOOT,BOOT0_SERVICE,BOOT0_SERVICE,,SPEC_ONLY_PROCUREMENT_PENDING,pin02_2d54MM_1x2,yes,CLOCK_RESET,Open=flash default; short with BOOT1 low=USART1 ROM loader; no USB ROM DFU
+J9,J_SWD,SWD_LOCAL_1X6,SWD_LOCAL_1X6,,SPEC_ONLY_PROCUREMENT_PENDING,pin06_2d54MM_1x6,yes,CLOCK_RESET,"Local labelled 2.54mm header, not standard keyed ARM10; pin1 VTREF output/sense only; no back-power"
+Y1,Y_HSE,8MHz,8MHz,ABM3B-8.000MHZ-D2Y-T,REAL_PART,de_abm3b_5032,yes,CLOCK_RESET,
+R31,R_HSE_SER,0R,0R +/-1% unless explicit tighter source requirement,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,CLOCK_RESET,Drive-level tuning position; do not raise without startup/drive measurement
+C22,C_HSE_IN,16pF,16pF C0G +/-5% >=10V,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,CLOCK_RESET,"C0G +/-5%; stray10pF assumption, prototype tuning required"
+C23,C_HSE_OUT,16pF,16pF C0G +/-5% >=10V,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,CLOCK_RESET,Same as C_HSE_IN
+J10,J_ADC,ADC_0_TO_3V0,ADC_0_TO_3V0,,SPEC_ONLY_PROCUREMENT_PENDING,pin02_2d54MM_1x2,yes,ADC_GPIO,"Only controlled <=1Hz 0..3.0V source, Rout<=1k, board powered, no hotplug/negative input"
+R32,R_ADC,1k,1k +/-1% unless explicit tighter source requirement,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,ADC_GPIO,
+C24,C_ADC,100nF,100nF X7R +/-20% >=10V; effective value and bias review required,,SPEC_ONLY_PROCUREMENT_PENDING,0603,yes,ADC_GPIO,"X7R >=10V, low-frequency source only; not 100Sps anti-alias filter"
+J11,J_GPIO1,GPIO_3V3,GPIO_3V3,,SPEC_ONLY_PROCUREMENT_PENDING,pin08_2d54MM_1x8,yes,ADC_GPIO,"3.3V logic only, combined header load<=10mA; PA15/PB4 require JTAG disabled with SWD kept; PC13-15 limited drive"
+J12,J_GPIO2,GPIO_3V3,GPIO_3V3,,SPEC_ONLY_PROCUREMENT_PENDING,pin08_2d54MM_1x8,yes,ADC_GPIO,"3.3V logic only, combined header load<=10mA; PA15/PB4 require JTAG disabled with SWD kept; PC13-15 limited drive"
+J13,J_GPIO3,GPIO_3V3,GPIO_3V3,,SPEC_ONLY_PROCUREMENT_PENDING,pin08_2d54MM_1x8,yes,ADC_GPIO,"3.3V logic only, combined header load<=10mA; PA15/PB4 require JTAG disabled with SWD kept; PC13-15 limited drive"

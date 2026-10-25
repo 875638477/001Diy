@@ -1,0 +1,712 @@
+{
+  "status": "PROPOSED_COMPLETE_2L_69NET_PROFILE_REQUIRE_NATIVE_READBACK",
+  "netCount": 69,
+  "assignedNetCount": 69,
+  "duplicates": [],
+  "groups": [
+    {
+      "id": "HI2L_POWER_INPUT",
+      "nets": [
+        "VIN_RAW",
+        "VIN_FUSED",
+        "VIN_PROT"
+      ],
+      "physicalClass": "HI2L_POWER_INPUT_P",
+      "spacingClass": "HI2L_POWER_INPUT_S",
+      "electricalClass": "HI2L_POWER_INPUT_E",
+      "physicalCSet": "HI2L_P_POWER_INPUT",
+      "spacingCSet": "HI2L_S_POWER_INPUT",
+      "width_min_mm": 0.6,
+      "neckwidth_min_mm": 0.25,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.3,
+        "line_line": 0.3,
+        "via_line": 0.3,
+        "line_shape": 0.3,
+        "via_shape": 0.3,
+        "shape_shape": 0.3
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "input protection and buck input; .6mm is engineering distribution minimum at bench current, not an ampacity certification"
+    },
+    {
+      "id": "HI2L_POWER_LV",
+      "nets": [
+        "V5",
+        "V3V3"
+      ],
+      "physicalClass": "HI2L_POWER_LV_P",
+      "spacingClass": "HI2L_POWER_LV_S",
+      "electricalClass": "HI2L_POWER_LV_E",
+      "physicalCSet": "HI2L_P_POWER_LV",
+      "spacingCSet": "HI2L_S_POWER_LV",
+      "width_min_mm": 0.6,
+      "neckwidth_min_mm": 0.25,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.3,
+        "line_line": 0.3,
+        "via_line": 0.3,
+        "line_shape": 0.3,
+        "via_shape": 0.3,
+        "shape_shape": 0.3
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "150mA total distribution, TOP first; no long .25 substitute"
+    },
+    {
+      "id": "HI2L_VDDA",
+      "nets": [
+        "VDDA"
+      ],
+      "physicalClass": "HI2L_VDDA_P",
+      "spacingClass": "HI2L_VDDA_S",
+      "electricalClass": "HI2L_VDDA_E",
+      "physicalCSet": "HI2L_P_VDDA",
+      "spacingCSet": "HI2L_S_VDDA",
+      "width_min_mm": 0.3,
+      "neckwidth_min_mm": 0.2,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.3,
+        "line_line": 0.3,
+        "via_line": 0.3,
+        "line_shape": 0.3,
+        "via_shape": 0.3,
+        "shape_shape": 0.3
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "filtered analog supply only, no digital load current"
+    },
+    {
+      "id": "HI2L_GROUND",
+      "nets": [
+        "GND"
+      ],
+      "physicalClass": "HI2L_GROUND_P",
+      "spacingClass": "HI2L_GROUND_S",
+      "electricalClass": "HI2L_GROUND_E",
+      "physicalCSet": "HI2L_P_GROUND",
+      "spacingCSet": "HI2L_S_GROUND",
+      "width_min_mm": 0.6,
+      "neckwidth_min_mm": 0.25,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.3,
+        "line_line": 0.3,
+        "via_line": 0.3,
+        "line_shape": 0.3,
+        "via_shape": 0.3,
+        "shape_shape": 0.3
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "broad TOP local returns and continuous BOTTOM plane; local quiet-return special paths separately documented"
+    },
+    {
+      "id": "HI2L_SWITCH",
+      "nets": [
+        "BUCK_SW",
+        "BUCK_BOOT"
+      ],
+      "physicalClass": "HI2L_SWITCH_P",
+      "spacingClass": "HI2L_SWITCH_S",
+      "electricalClass": "HI2L_SWITCH_E",
+      "physicalCSet": "HI2L_P_SWITCH",
+      "spacingCSet": "HI2L_S_SWITCH",
+      "width_min_mm": 0.6,
+      "neckwidth_min_mm": 0.25,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.5,
+        "line_line": 0.5,
+        "via_line": 0.5,
+        "line_shape": 0.5,
+        "via_shape": 0.5,
+        "shape_shape": 0.5
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "TOP only by plan; SW compact and BOOT return to SW, not GND"
+    },
+    {
+      "id": "HI2L_FEEDBACK",
+      "nets": [
+        "BUCK_FB"
+      ],
+      "physicalClass": "HI2L_FEEDBACK_P",
+      "spacingClass": "HI2L_FEEDBACK_S",
+      "electricalClass": "HI2L_FEEDBACK_E",
+      "physicalCSet": "HI2L_P_FEEDBACK",
+      "spacingCSet": "HI2L_S_FEEDBACK",
+      "width_min_mm": 0.2,
+      "neckwidth_min_mm": 0.16,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.3,
+        "line_line": 0.3,
+        "via_line": 0.3,
+        "line_shape": 0.3,
+        "via_shape": 0.3,
+        "shape_shape": 0.3
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "quiet TOP feedback small node, no autorouter/no test branch"
+    },
+    {
+      "id": "HI2L_USB_FS",
+      "nets": [
+        "USB_DP",
+        "USB_DM",
+        "PA11_SHARED",
+        "PA12_SHARED"
+      ],
+      "physicalClass": "HI2L_USB_FS_P",
+      "spacingClass": "HI2L_USB_FS_S",
+      "electricalClass": "HI2L_USB_FS_E",
+      "physicalCSet": "HI2L_P_USB_FS",
+      "spacingCSet": "HI2L_S_USB_FS",
+      "width_min_mm": 0.2,
+      "neckwidth_min_mm": 0.16,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.16,
+        "line_line": 0.16,
+        "via_line": 0.16,
+        "line_shape": 0.16,
+        "via_shape": 0.16,
+        "shape_shape": 0.16
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "provisional manufacturable geometry only, not90ohm certification; pair coupling/branches handled explicit USB plan"
+    },
+    {
+      "id": "HI2L_OSCILLATOR",
+      "nets": [
+        "OSC_IN",
+        "OSC_OUT",
+        "XTAL_OUT"
+      ],
+      "physicalClass": "HI2L_OSCILLATOR_P",
+      "spacingClass": "HI2L_OSCILLATOR_S",
+      "electricalClass": "HI2L_OSCILLATOR_E",
+      "physicalCSet": "HI2L_P_OSCILLATOR",
+      "spacingCSet": "HI2L_S_OSCILLATOR",
+      "width_min_mm": 0.2,
+      "neckwidth_min_mm": 0.16,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.3,
+        "line_line": 0.3,
+        "via_line": 0.3,
+        "line_shape": 0.3,
+        "via_shape": 0.3,
+        "shape_shape": 0.3
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "TOP sensitive loop, no general bus crossing; ground strategy explicit"
+    },
+    {
+      "id": "HI2L_ADC",
+      "nets": [
+        "ADC_IN",
+        "ADC0"
+      ],
+      "physicalClass": "HI2L_ADC_P",
+      "spacingClass": "HI2L_ADC_S",
+      "electricalClass": "HI2L_ADC_E",
+      "physicalCSet": "HI2L_P_ADC",
+      "spacingCSet": "HI2L_S_ADC",
+      "width_min_mm": 0.2,
+      "neckwidth_min_mm": 0.16,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.3,
+        "line_line": 0.3,
+        "via_line": 0.3,
+        "line_shape": 0.3,
+        "via_shape": 0.3,
+        "shape_shape": 0.3
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "TOP analog route; no digital common return"
+    },
+    {
+      "id": "HI2L_CAN_BUS",
+      "nets": [
+        "CAN_H",
+        "CAN_L"
+      ],
+      "physicalClass": "HI2L_CAN_BUS_P",
+      "spacingClass": "HI2L_CAN_BUS_S",
+      "electricalClass": "HI2L_CAN_BUS_E",
+      "physicalCSet": "HI2L_P_CAN_BUS",
+      "spacingCSet": "HI2L_S_CAN_BUS",
+      "width_min_mm": 0.3,
+      "neckwidth_min_mm": 0.2,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.2,
+        "line_line": 0.2,
+        "via_line": 0.2,
+        "line_shape": 0.2,
+        "via_shape": 0.2,
+        "shape_shape": 0.2
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "short PCB bus pair; external120ohm termination, no impedance claim"
+    },
+    {
+      "id": "HI2L_USB_VBUS",
+      "nets": [
+        "USB_VBUS"
+      ],
+      "physicalClass": "HI2L_USB_VBUS_P",
+      "spacingClass": "HI2L_USB_VBUS_S",
+      "electricalClass": "HI2L_USB_VBUS_E",
+      "physicalCSet": "HI2L_P_USB_VBUS",
+      "spacingCSet": "HI2L_S_USB_VBUS",
+      "width_min_mm": 0.4,
+      "neckwidth_min_mm": 0.2,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.2,
+        "line_line": 0.2,
+        "via_line": 0.2,
+        "line_shape": 0.2,
+        "via_shape": 0.2,
+        "shape_shape": 0.2
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "sense+rail ESD only, never V5/V3V3; clamp ground path broad"
+    },
+    {
+      "id": "HI2L_USB_AUX",
+      "nets": [
+        "USB_CC1",
+        "USB_CC2",
+        "VBUS_GATE",
+        "VBUS_PRESENT_N",
+        "USB_ATTACH_N",
+        "USB_PULLUP_SRC"
+      ],
+      "physicalClass": "HI2L_USB_AUX_P",
+      "spacingClass": "HI2L_USB_AUX_S",
+      "electricalClass": "HI2L_USB_AUX_E",
+      "physicalCSet": "HI2L_P_USB_AUX",
+      "spacingCSet": "HI2L_S_USB_AUX",
+      "width_min_mm": 0.2,
+      "neckwidth_min_mm": 0.16,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.2,
+        "line_line": 0.2,
+        "via_line": 0.2,
+        "line_shape": 0.2,
+        "via_shape": 0.2,
+        "shape_shape": 0.2
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "CC independent Rd and slow sense/attach paths"
+    },
+    {
+      "id": "HI2L_RESET_BOOT_SWD",
+      "nets": [
+        "NRST",
+        "BOOT0",
+        "BOOT1",
+        "BOOT_SERVICE",
+        "SWDIO",
+        "SWCLK",
+        "SWO"
+      ],
+      "physicalClass": "HI2L_RESET_BOOT_SWD_P",
+      "spacingClass": "HI2L_RESET_BOOT_SWD_S",
+      "electricalClass": "HI2L_RESET_BOOT_SWD_E",
+      "physicalCSet": "HI2L_P_RESET_BOOT_SWD",
+      "spacingCSet": "HI2L_S_RESET_BOOT_SWD",
+      "width_min_mm": 0.2,
+      "neckwidth_min_mm": 0.16,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.2,
+        "line_line": 0.2,
+        "via_line": 0.2,
+        "line_shape": 0.2,
+        "via_shape": 0.2,
+        "shape_shape": 0.2
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "source and pullup/down topology; SWD Vref sense only"
+    },
+    {
+      "id": "HI2L_I2C",
+      "nets": [
+        "I2C_SCL",
+        "I2C_SDA"
+      ],
+      "physicalClass": "HI2L_I2C_P",
+      "spacingClass": "HI2L_I2C_S",
+      "electricalClass": "HI2L_I2C_E",
+      "physicalCSet": "HI2L_P_I2C",
+      "spacingCSet": "HI2L_S_I2C",
+      "width_min_mm": 0.2,
+      "neckwidth_min_mm": 0.16,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.2,
+        "line_line": 0.2,
+        "via_line": 0.2,
+        "line_shape": 0.2,
+        "via_shape": 0.2,
+        "shape_shape": 0.2
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "2.2k baseline; rise/capacitance and external cable budget not route matching"
+    },
+    {
+      "id": "HI2L_SPI",
+      "nets": [
+        "PA4_SPI_NSS",
+        "PA5_SPI_SCK",
+        "PA6_SPI_MISO",
+        "PA7_SPI_MOSI",
+        "SPI_NSS",
+        "SPI_SCK",
+        "SPI_MISO",
+        "SPI_MOSI"
+      ],
+      "physicalClass": "HI2L_SPI_P",
+      "spacingClass": "HI2L_SPI_S",
+      "electricalClass": "HI2L_SPI_E",
+      "physicalCSet": "HI2L_P_SPI",
+      "spacingCSet": "HI2L_S_SPI",
+      "width_min_mm": 0.2,
+      "neckwidth_min_mm": 0.16,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.2,
+        "line_line": 0.2,
+        "via_line": 0.2,
+        "line_shape": 0.2,
+        "via_shape": 0.2,
+        "shape_shape": 0.2
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "R21/22/23 source MCU, R24 zero path with external MISO driver; no arbitrary equal length"
+    },
+    {
+      "id": "HI2L_UART_CAN_DIGITAL",
+      "nets": [
+        "PA9_UART_TX",
+        "PA10_UART_RX",
+        "UART_TX",
+        "UART_RX",
+        "CAN_TXD",
+        "CAN_RXD"
+      ],
+      "physicalClass": "HI2L_UART_CAN_DIGITAL_P",
+      "spacingClass": "HI2L_UART_CAN_DIGITAL_S",
+      "electricalClass": "HI2L_UART_CAN_DIGITAL_E",
+      "physicalCSet": "HI2L_P_UART_CAN_DIGITAL",
+      "spacingCSet": "HI2L_S_UART_CAN_DIGITAL",
+      "width_min_mm": 0.2,
+      "neckwidth_min_mm": 0.16,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.2,
+        "line_line": 0.2,
+        "via_line": 0.2,
+        "line_shape": 0.2,
+        "via_shape": 0.2,
+        "shape_shape": 0.2
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "UART R16 source damping; CAN DNP profile branches controlled"
+    },
+    {
+      "id": "HI2L_GPIO",
+      "nets": [
+        "GPIO_PA1",
+        "GPIO_PA15",
+        "GPIO_PA2",
+        "GPIO_PA3",
+        "GPIO_PB1",
+        "GPIO_PB10",
+        "GPIO_PB11",
+        "GPIO_PB12",
+        "GPIO_PB13",
+        "GPIO_PB14",
+        "GPIO_PB15",
+        "GPIO_PB4",
+        "GPIO_PB5",
+        "GPIO_PB8",
+        "GPIO_PB9",
+        "GPIO_PC13",
+        "GPIO_PC14",
+        "GPIO_PC15"
+      ],
+      "physicalClass": "HI2L_GPIO_P",
+      "spacingClass": "HI2L_GPIO_S",
+      "electricalClass": "HI2L_GPIO_E",
+      "physicalCSet": "HI2L_P_GPIO",
+      "spacingCSet": "HI2L_S_GPIO",
+      "width_min_mm": 0.2,
+      "neckwidth_min_mm": 0.16,
+      "necklength_max_mm": 1.0,
+      "allowed_layers": [
+        "TOP",
+        "BOTTOM"
+      ],
+      "preferred_layer": "TOP",
+      "viaList": [
+        "L28_VIA030_C060"
+      ],
+      "spacingFields_mm": {
+        "smdpin_line": 0.2,
+        "line_line": 0.2,
+        "via_line": 0.2,
+        "line_shape": 0.2,
+        "via_shape": 0.2,
+        "shape_shape": 0.2
+      },
+      "preserveOtherPairFields": "copy local2L manufacturing baseline, not entire4L CSet",
+      "purpose": "remaining low-load GPIO routed only after critical corridors"
+    }
+  ],
+  "classClass": [
+    {
+      "a": "SWITCH",
+      "b": "USB_FS",
+      "spacing_mm": 1.0
+    },
+    {
+      "a": "SWITCH",
+      "b": "OSCILLATOR",
+      "spacing_mm": 1.0
+    },
+    {
+      "a": "SWITCH",
+      "b": "ADC",
+      "spacing_mm": 1.0
+    },
+    {
+      "a": "SWITCH",
+      "b": "FEEDBACK",
+      "spacing_mm": 1.0
+    },
+    {
+      "a": "USB_FS",
+      "b": "GPIO",
+      "spacing_mm": 0.5
+    },
+    {
+      "a": "USB_FS",
+      "b": "RESET_BOOT_SWD",
+      "spacing_mm": 0.5
+    },
+    {
+      "a": "USB_FS",
+      "b": "SPI",
+      "spacing_mm": 0.5
+    },
+    {
+      "a": "USB_FS",
+      "b": "UART_CAN_DIGITAL",
+      "spacing_mm": 0.5
+    },
+    {
+      "a": "USB_FS",
+      "b": "I2C",
+      "spacing_mm": 0.5
+    },
+    {
+      "a": "USB_FS",
+      "b": "USB_AUX",
+      "spacing_mm": 0.5
+    }
+  ],
+  "retainedG31Exceptions": "rebind/recreate from new2L POWER_LV/GROUND CSet, only original3TOP rectangles maxneck1.4; newCSet copies not dynamic-parent; validate fields and challenge inside/outside",
+  "newBuckException": {
+    "id": "HI_U2_SW_ESCAPE",
+    "group": "SWITCH",
+    "layer": "TOP",
+    "polygon": [
+      [
+        22.95,
+        20.55
+      ],
+      [
+        24.9,
+        20.55
+      ],
+      [
+        24.9,
+        21.45
+      ],
+      [
+        22.95,
+        21.45
+      ]
+    ],
+    "onlyDelta": {
+      "necklength_max_mm": [
+        1.0,
+        1.2
+      ]
+    },
+    "plannedNeck_mm": 1.15
+  },
+  "manufacturingBasis": {
+    "twoLayerTarget": "existing OSH2L teaching target in F28, not fabrication approval",
+    "publicMinimumTrackGap_mm": 0.1524,
+    "chosenGeneralNeck_mm": 0.16,
+    "reason": ".16 stays above .1524; do not inherit4L .15 blindly",
+    "throughViaDrillCopper_mm": [
+      0.3,
+      0.6
+    ],
+    "unresolved": "USB footprint .100 mask web vs published.1016 remains open, and connector stake/1.6board assembly not qualified"
+  },
+  "USBTarget": {
+    "impedance": "90ohm target pending approved stackup/geometry",
+    "outerWidth_mm": 0.2,
+    "minimumGap_mm": 0.16,
+    "notValidatedImpedance": true,
+    "electrical": {
+      "maxVia": 2,
+      "phaseTolerance_mm": 1,
+      "uncoupledMax_mm": 6
+    },
+    "note": "Keep existing design intent but USB author may require justified local breakout exception; no length-only certification"
+  },
+  "viaAndPlaneRules": [
+    "BOTTOM copper is real GND, every added signal slot requires connected-component/neck/detour review",
+    "through via not blind, verify padstack TOP/BOTTOM span and layer names",
+    "no physicalMASK, full15Film unchanged"
+  ],
+  "noDefaultFallback": true
+}

@@ -1,0 +1,4653 @@
+{
+  "status": "TRAINING_REVIEW_COMPLETE_PRODUCTION_AND_FULL_COURSE_RELEASE_NOT_APPROVED",
+  "createdUTC": "2026-10-22T16:55:06.544167+00:00",
+  "scope": "New derived register only. Original J51-54/J55 issue files, sealed manifests, notes and CAD are unchanged. Each inherited payload/status is retained exactly; source nature versus status is explicit.",
+  "counts": {
+    "total": 77,
+    "inherited": 71,
+    "sourceJ51_54": 54,
+    "sourceJ55_57": 17,
+    "additionalGates": 6,
+    "sourceStatusCounts": {
+      "J51_54": {
+        "EVIDENCE_VERIFIED": 3,
+        "CONFIRMED_OPEN": 14,
+        "EVIDENCE_VERIFIED_WITH_OPEN_SCOPE": 1,
+        "CLOSED_REPRESENTATION_ISSUE": 1,
+        "CHECK_SCOPE_LIMIT": 1,
+        "CONFIRMED_GEOMETRIC_RISK": 1,
+        "CONFIRMED_LOCAL_REFERENCE_OPENING": 1,
+        "CONFIRMED_REFERENCE_DISCONTINUITY": 1,
+        "ASSEMBLY_AND_BRANCH_RISK": 1,
+        "PARTIAL_EVIDENCE_WITH_EDGE_UNKNOWNS": 1,
+        "EVIDENCE_VERIFIED_WITH_RETURN_REVIEW": 1,
+        "OPERATING_ENVELOPE_UNKNOWN": 1,
+        "TOPOLOGY_VERIFIED_EDGE_UNKNOWN": 1,
+        "OPERATING_AND_PINOUT_CONDITION": 1,
+        "DATASHEET_CONDITION_NOT_TESTED": 1,
+        "STORED_NEGATIVE_CHALLENGE_PASSED": 1,
+        "ANALOG_SOURCE_UNKNOWN": 1,
+        "CONFIRMED_PROJECTED_OPENINGS": 1,
+        "ACTUAL_LOOP_GEOMETRY_REQUIRES_LOAD_VALIDATION": 1,
+        "CONNECTION_VERIFIED_EMI_REMAINS": 1,
+        "TOPOLOGY_VERIFIED_COUPLING_UNKNOWN": 1,
+        "CONNECTION_VERIFIED_COMPONENT_EFFECTIVE_VALUE_UNKNOWN": 1,
+        "LOAD_AND_THERMAL_NOT_MEASURED": 1,
+        "LOCAL_EXCEPTIONS_WITH_CURRENT_UNKNOWN": 1,
+        "LOCAL_LOOP_CONNECTIVITY_VERIFIED": 1,
+        "TOPOLOGY_VERIFIED_FILTER_PERFORMANCE_UNKNOWN": 1,
+        "HISTORICAL_MISCLASSIFICATION_CLOSED": 1,
+        "GEOMETRY_VERIFIED_CURRENT_LIMIT_UNKNOWN": 1,
+        "NET_SEPARATION_VERIFIED_BENCH_TEST_PENDING": 1,
+        "CONFIRMED_EMI_SENSITIVE_GEOMETRY": 1,
+        "PROTECTION_PATH_ASSEMBLY_AND_RETURN_RISK": 1,
+        "CONNECTION_VERIFIED_CHASSIS_UNKNOWN": 1,
+        "CABLE_AND_PROTECTION_UNKNOWN": 1,
+        "WORKLOAD_EDGE_CABLE_UNKNOWN": 1,
+        "PROTECTION_ENVELOPE_INCOMPLETE": 1,
+        "ENGINEERING_COMPARISON_WITH_LIMITS": 1,
+        "SYSTEM_REQUIREMENT_UNKNOWN": 1,
+        "USER_REQUIREMENT_NOT_APPLIED": 1,
+        "NEW_POWER_PLANE_DESIGN_PENDING": 1
+      },
+      "J55_57": {
+        "OPEN_RELEASE": 11,
+        "OPEN_PROCESS": 2,
+        "CLOSED_JK_INSTANCE_CORRECTION_FRESH_VERIFIED": 3,
+        "CONFIRMED_GEOMETRY_DFM_RELEASE_OPEN": 1
+      }
+    }
+  },
+  "courseCompletion": {
+    "fullTwoBoardConclusion": false,
+    "manufacturingRelease": false,
+    "physicalMeasurementRun": false,
+    "sourceSnapshotMeaning": "Evidence and local fixes completed; unresolved gates remain. New4L work is not prematurely closed."
+  },
+  "entries": [
+    {
+      "stableID": "JK51-001",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "2L+4L",
+      "title": "输入版本与一致性证据",
+      "status": "EVIDENCE_VERIFIED",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "EVIDENCE_VERIFIED",
+      "sourcePriority": "INFO",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/0",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_54_input_integrity.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_input_integrity.json",
+            "bytes": 219165,
+            "sha256": "39E1898987B26C30825E6D103D358E1D22329D7358B0C856996570B7A8BCC227"
+          }
+        },
+        {
+          "originalReference": "j51_consistency_and_drc.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_consistency_and_drc.json",
+            "bytes": 62407,
+            "sha256": "D7ACF0AC269F55A4D17E0B3475CD57FEC915AD36C3B343E7A46FEF35D375E17F"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-001",
+        "lesson": 51,
+        "title": "输入版本与一致性证据",
+        "variant": "2L+4L",
+        "nature": "EVIDENCE_VERIFIED",
+        "priority": "INFO",
+        "evidence": [
+          "j51_54_input_integrity.json",
+          "j51_consistency_and_drc.json"
+        ],
+        "conclusion": "本轮重新计算封存清单、BRD与JSON SHA；80件/272引脚/266有网/6NC/69网逐项对应DE网表。",
+        "nextAction": "后续修改使用新版本及before/after清单。",
+        "nextAcceptance": "全部预期SHA一致；不得覆盖封存输入。",
+        "nets": [],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-OPEN-2L-GPIO_PB13",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "2L",
+      "title": "实际未接 GPIO_PB13",
+      "status": "CONFIRMED_OPEN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_OPEN",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/1",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-OPEN-2L-GPIO_PB13",
+        "lesson": 51,
+        "title": "实际未接 GPIO_PB13",
+        "variant": "2L",
+        "nature": "CONFIRMED_OPEN",
+        "priority": "BLOCKS_COMPLETION",
+        "evidence": [
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "2.0个实际端点组，尚需1.0条最少连接；该网逐网DRC0不表示连通。",
+        "nextAction": "按真实source/header路径完成；重新填铜，所有旧物理边及GND/HSE必须保持。",
+        "nextAcceptance": "原生未接与独立terminal joins均0，真实U1↔目标排针证明通过；新逐网及全板DRC另验。",
+        "nets": [
+          "GPIO_PB13"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-OPEN-2L-GPIO_PB10",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "2L",
+      "title": "实际未接 GPIO_PB10",
+      "status": "CONFIRMED_OPEN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_OPEN",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/2",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-OPEN-2L-GPIO_PB10",
+        "lesson": 51,
+        "title": "实际未接 GPIO_PB10",
+        "variant": "2L",
+        "nature": "CONFIRMED_OPEN",
+        "priority": "BLOCKS_COMPLETION",
+        "evidence": [
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "2.0个实际端点组，尚需1.0条最少连接；该网逐网DRC0不表示连通。",
+        "nextAction": "按真实source/header路径完成；重新填铜，所有旧物理边及GND/HSE必须保持。",
+        "nextAcceptance": "原生未接与独立terminal joins均0，真实U1↔目标排针证明通过；新逐网及全板DRC另验。",
+        "nets": [
+          "GPIO_PB10"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-OPEN-2L-GPIO_PB1",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "2L",
+      "title": "实际未接 GPIO_PB1",
+      "status": "CONFIRMED_OPEN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_OPEN",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/3",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-OPEN-2L-GPIO_PB1",
+        "lesson": 51,
+        "title": "实际未接 GPIO_PB1",
+        "variant": "2L",
+        "nature": "CONFIRMED_OPEN",
+        "priority": "BLOCKS_COMPLETION",
+        "evidence": [
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "2.0个实际端点组，尚需1.0条最少连接；该网逐网DRC0不表示连通。",
+        "nextAction": "按真实source/header路径完成；重新填铜，所有旧物理边及GND/HSE必须保持。",
+        "nextAcceptance": "原生未接与独立terminal joins均0，真实U1↔目标排针证明通过；新逐网及全板DRC另验。",
+        "nets": [
+          "GPIO_PB1"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-OPEN-2L-GPIO_PB12",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "2L",
+      "title": "实际未接 GPIO_PB12",
+      "status": "CONFIRMED_OPEN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_OPEN",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/4",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-OPEN-2L-GPIO_PB12",
+        "lesson": 51,
+        "title": "实际未接 GPIO_PB12",
+        "variant": "2L",
+        "nature": "CONFIRMED_OPEN",
+        "priority": "BLOCKS_COMPLETION",
+        "evidence": [
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "2.0个实际端点组，尚需1.0条最少连接；该网逐网DRC0不表示连通。",
+        "nextAction": "按真实source/header路径完成；重新填铜，所有旧物理边及GND/HSE必须保持。",
+        "nextAcceptance": "原生未接与独立terminal joins均0，真实U1↔目标排针证明通过；新逐网及全板DRC另验。",
+        "nets": [
+          "GPIO_PB12"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-OPEN-2L-GPIO_PB15",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "2L",
+      "title": "实际未接 GPIO_PB15",
+      "status": "CONFIRMED_OPEN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_OPEN",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/5",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-OPEN-2L-GPIO_PB15",
+        "lesson": 51,
+        "title": "实际未接 GPIO_PB15",
+        "variant": "2L",
+        "nature": "CONFIRMED_OPEN",
+        "priority": "BLOCKS_COMPLETION",
+        "evidence": [
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "2.0个实际端点组，尚需1.0条最少连接；该网逐网DRC0不表示连通。",
+        "nextAction": "按真实source/header路径完成；重新填铜，所有旧物理边及GND/HSE必须保持。",
+        "nextAcceptance": "原生未接与独立terminal joins均0，真实U1↔目标排针证明通过；新逐网及全板DRC另验。",
+        "nets": [
+          "GPIO_PB15"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-OPEN-2L-GPIO_PB14",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "2L",
+      "title": "实际未接 GPIO_PB14",
+      "status": "CONFIRMED_OPEN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_OPEN",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/6",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-OPEN-2L-GPIO_PB14",
+        "lesson": 51,
+        "title": "实际未接 GPIO_PB14",
+        "variant": "2L",
+        "nature": "CONFIRMED_OPEN",
+        "priority": "BLOCKS_COMPLETION",
+        "evidence": [
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "2.0个实际端点组，尚需1.0条最少连接；该网逐网DRC0不表示连通。",
+        "nextAction": "按真实source/header路径完成；重新填铜，所有旧物理边及GND/HSE必须保持。",
+        "nextAcceptance": "原生未接与独立terminal joins均0，真实U1↔目标排针证明通过；新逐网及全板DRC另验。",
+        "nets": [
+          "GPIO_PB14"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-OPEN-2L-GPIO_PB11",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "2L",
+      "title": "实际未接 GPIO_PB11",
+      "status": "CONFIRMED_OPEN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_OPEN",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/7",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-OPEN-2L-GPIO_PB11",
+        "lesson": 51,
+        "title": "实际未接 GPIO_PB11",
+        "variant": "2L",
+        "nature": "CONFIRMED_OPEN",
+        "priority": "BLOCKS_COMPLETION",
+        "evidence": [
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "2.0个实际端点组，尚需1.0条最少连接；该网逐网DRC0不表示连通。",
+        "nextAction": "按真实source/header路径完成；重新填铜，所有旧物理边及GND/HSE必须保持。",
+        "nextAcceptance": "原生未接与独立terminal joins均0，真实U1↔目标排针证明通过；新逐网及全板DRC另验。",
+        "nets": [
+          "GPIO_PB11"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-OPEN-4L-GPIO_PB13",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "4L",
+      "title": "实际未接 GPIO_PB13",
+      "status": "CONFIRMED_OPEN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_OPEN",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/8",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-OPEN-4L-GPIO_PB13",
+        "lesson": 51,
+        "title": "实际未接 GPIO_PB13",
+        "variant": "4L",
+        "nature": "CONFIRMED_OPEN",
+        "priority": "BLOCKS_COMPLETION",
+        "evidence": [
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "2.0个实际端点组，尚需1.0条最少连接；该网逐网DRC0不表示连通。",
+        "nextAction": "按真实source/header路径完成；重新填铜，所有旧物理边及GND/HSE必须保持。",
+        "nextAcceptance": "原生未接与独立terminal joins均0，真实U1↔目标排针证明通过；新逐网及全板DRC另验。",
+        "nets": [
+          "GPIO_PB13"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-OPEN-4L-GPIO_PB10",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "4L",
+      "title": "实际未接 GPIO_PB10",
+      "status": "CONFIRMED_OPEN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_OPEN",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/9",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-OPEN-4L-GPIO_PB10",
+        "lesson": 51,
+        "title": "实际未接 GPIO_PB10",
+        "variant": "4L",
+        "nature": "CONFIRMED_OPEN",
+        "priority": "BLOCKS_COMPLETION",
+        "evidence": [
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "2.0个实际端点组，尚需1.0条最少连接；该网逐网DRC0不表示连通。",
+        "nextAction": "按真实source/header路径完成；重新填铜，所有旧物理边及GND/HSE必须保持。",
+        "nextAcceptance": "原生未接与独立terminal joins均0，真实U1↔目标排针证明通过；新逐网及全板DRC另验。",
+        "nets": [
+          "GPIO_PB10"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-OPEN-4L-GPIO_PB1",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "4L",
+      "title": "实际未接 GPIO_PB1",
+      "status": "CONFIRMED_OPEN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_OPEN",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/10",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-OPEN-4L-GPIO_PB1",
+        "lesson": 51,
+        "title": "实际未接 GPIO_PB1",
+        "variant": "4L",
+        "nature": "CONFIRMED_OPEN",
+        "priority": "BLOCKS_COMPLETION",
+        "evidence": [
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "2.0个实际端点组，尚需1.0条最少连接；该网逐网DRC0不表示连通。",
+        "nextAction": "按真实source/header路径完成；重新填铜，所有旧物理边及GND/HSE必须保持。",
+        "nextAcceptance": "原生未接与独立terminal joins均0，真实U1↔目标排针证明通过；新逐网及全板DRC另验。",
+        "nets": [
+          "GPIO_PB1"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-OPEN-4L-GPIO_PB12",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "4L",
+      "title": "实际未接 GPIO_PB12",
+      "status": "CONFIRMED_OPEN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_OPEN",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/11",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-OPEN-4L-GPIO_PB12",
+        "lesson": 51,
+        "title": "实际未接 GPIO_PB12",
+        "variant": "4L",
+        "nature": "CONFIRMED_OPEN",
+        "priority": "BLOCKS_COMPLETION",
+        "evidence": [
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "2.0个实际端点组，尚需1.0条最少连接；该网逐网DRC0不表示连通。",
+        "nextAction": "按真实source/header路径完成；重新填铜，所有旧物理边及GND/HSE必须保持。",
+        "nextAcceptance": "原生未接与独立terminal joins均0，真实U1↔目标排针证明通过；新逐网及全板DRC另验。",
+        "nets": [
+          "GPIO_PB12"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-OPEN-4L-GPIO_PB15",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "4L",
+      "title": "实际未接 GPIO_PB15",
+      "status": "CONFIRMED_OPEN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_OPEN",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/12",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-OPEN-4L-GPIO_PB15",
+        "lesson": 51,
+        "title": "实际未接 GPIO_PB15",
+        "variant": "4L",
+        "nature": "CONFIRMED_OPEN",
+        "priority": "BLOCKS_COMPLETION",
+        "evidence": [
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "2.0个实际端点组，尚需1.0条最少连接；该网逐网DRC0不表示连通。",
+        "nextAction": "按真实source/header路径完成；重新填铜，所有旧物理边及GND/HSE必须保持。",
+        "nextAcceptance": "原生未接与独立terminal joins均0，真实U1↔目标排针证明通过；新逐网及全板DRC另验。",
+        "nets": [
+          "GPIO_PB15"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-OPEN-4L-GPIO_PB14",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "4L",
+      "title": "实际未接 GPIO_PB14",
+      "status": "CONFIRMED_OPEN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_OPEN",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/13",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-OPEN-4L-GPIO_PB14",
+        "lesson": 51,
+        "title": "实际未接 GPIO_PB14",
+        "variant": "4L",
+        "nature": "CONFIRMED_OPEN",
+        "priority": "BLOCKS_COMPLETION",
+        "evidence": [
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "2.0个实际端点组，尚需1.0条最少连接；该网逐网DRC0不表示连通。",
+        "nextAction": "按真实source/header路径完成；重新填铜，所有旧物理边及GND/HSE必须保持。",
+        "nextAcceptance": "原生未接与独立terminal joins均0，真实U1↔目标排针证明通过；新逐网及全板DRC另验。",
+        "nets": [
+          "GPIO_PB14"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-OPEN-4L-GPIO_PB11",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "4L",
+      "title": "实际未接 GPIO_PB11",
+      "status": "CONFIRMED_OPEN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_OPEN",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/14",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-OPEN-4L-GPIO_PB11",
+        "lesson": 51,
+        "title": "实际未接 GPIO_PB11",
+        "variant": "4L",
+        "nature": "CONFIRMED_OPEN",
+        "priority": "BLOCKS_COMPLETION",
+        "evidence": [
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "2.0个实际端点组，尚需1.0条最少连接；该网逐网DRC0不表示连通。",
+        "nextAction": "按真实source/header路径完成；重新填铜，所有旧物理边及GND/HSE必须保持。",
+        "nextAcceptance": "原生未接与独立terminal joins均0，真实U1↔目标排针证明通过；新逐网及全板DRC另验。",
+        "nets": [
+          "GPIO_PB11"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-002",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "2L+4L",
+      "title": "65个非USB逐网检查的真实范围",
+      "status": "EVIDENCE_VERIFIED_WITH_OPEN_SCOPE",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "EVIDENCE_VERIFIED_WITH_OPEN_SCOPE",
+      "sourcePriority": "BLOCKS_RELEASE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/15",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_consistency_and_drc.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_consistency_and_drc.json",
+            "bytes": 62407,
+            "sha256": "D7ACF0AC269F55A4D17E0B3475CD57FEC915AD36C3B343E7A46FEF35D375E17F"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-002",
+        "lesson": 51,
+        "title": "65个非USB逐网检查的真实范围",
+        "variant": "2L+4L",
+        "nature": "EVIDENCE_VERIFIED_WITH_OPEN_SCOPE",
+        "priority": "BLOCKS_RELEASE",
+        "evidence": [
+          "j51_consistency_and_drc.json"
+        ],
+        "conclusion": "原始日志逐条解析65/65结果0；四个USB网未完成、wholeBoardDRC=null。存量rawStored0仅取证，不能替代更新。",
+        "nextAction": "不重复触发已挂起的USB solver；将4USB与整板检查作为独立未完成项。",
+        "nextAcceptance": "明确检查对象、规则/modes、时间、返回、DRC详情及更新后全板状态。",
+        "nets": [
+          "USB_DP",
+          "USB_DM",
+          "PA11_SHARED",
+          "PA12_SHARED"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-003",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "2L+4L",
+      "title": "对象计长与物理外露窄颈的区分",
+      "status": "CLOSED_REPRESENTATION_ISSUE",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CLOSED_REPRESENTATION_ISSUE",
+      "sourcePriority": "INFO",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/16",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_consistency_and_drc.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_consistency_and_drc.json",
+            "bytes": 62407,
+            "sha256": "D7ACF0AC269F55A4D17E0B3475CD57FEC915AD36C3B343E7A46FEF35D375E17F"
+          }
+        },
+        {
+          "originalReference": "HI/review/b019_native_report.json",
+          "resolved": null
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-003",
+        "lesson": 51,
+        "title": "对象计长与物理外露窄颈的区分",
+        "variant": "2L+4L",
+        "nature": "CLOSED_REPRESENTATION_ISSUE",
+        "priority": "INFO",
+        "evidence": [
+          "j51_consistency_and_drc.json",
+          "HI/review/b019_native_report.json"
+        ],
+        "conclusion": "四网原对象2.1414>2mm；pad内改.20后对象1.7414，实际外露1.5414未变，实际Cu并集差0；strict1.7触发后2.0整字段恢复，非增加预算。",
+        "nextAction": "保留原/新/外露三种量与原生挑战日志。",
+        "nextAcceptance": "后续几何不改变该事实；不得将对象规范化描述为物理回路缩短。",
+        "nets": [
+          "BOOT0",
+          "GPIO_PA15",
+          "GPIO_PB4",
+          "I2C_SCL"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-004",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "2L+4L",
+      "title": "DRC模式和坐标有效规则的边界",
+      "status": "CHECK_SCOPE_LIMIT",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CHECK_SCOPE_LIMIT",
+      "sourcePriority": "BLOCKS_RELEASE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/17",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_consistency_and_drc.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_consistency_and_drc.json",
+            "bytes": 62407,
+            "sha256": "D7ACF0AC269F55A4D17E0B3475CD57FEC915AD36C3B343E7A46FEF35D375E17F"
+          }
+        },
+        {
+          "originalReference": "j51_all56_ground_pins_and_all_vias.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all56_ground_pins_and_all_vias.json",
+            "bytes": 56202,
+            "sha256": "543398184D46A18CEE5BD049BF86BD12B389A55C33EEB299BAEA459EE1FAB2CA"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-004",
+        "lesson": 51,
+        "title": "DRC模式和坐标有效规则的边界",
+        "variant": "2L+4L",
+        "nature": "CHECK_SCOPE_LIMIT",
+        "priority": "BLOCKS_RELEASE",
+        "evidence": [
+          "j51_consistency_and_drc.json",
+          "j51_all56_ground_pins_and_all_vias.json"
+        ],
+        "conclusion": "有模式关闭（如Via_at_SMD、阻焊对齐等）；base_net_rules不是坐标有效getter，区域/类对/属性例外需另看。",
+        "nextAction": "制造/装配和局部例外分别审，不用base值或0overlap冒充全部native规则通过。",
+        "nextAcceptance": "完整modes、P/S/E继承/区域/局部via许可/属性全可追溯，关闭检查有替代证据。",
+        "nets": [],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-005",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "2L+4L",
+      "title": "GND及所有端点证据范围",
+      "status": "EVIDENCE_VERIFIED",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "EVIDENCE_VERIFIED",
+      "sourcePriority": "INFO",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/18",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all56_ground_pins_and_all_vias.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all56_ground_pins_and_all_vias.json",
+            "bytes": 56202,
+            "sha256": "543398184D46A18CEE5BD049BF86BD12B389A55C33EEB299BAEA459EE1FAB2CA"
+          }
+        },
+        {
+          "originalReference": "j51_consistency_and_drc.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_consistency_and_drc.json",
+            "bytes": 62407,
+            "sha256": "D7ACF0AC269F55A4D17E0B3475CD57FEC915AD36C3B343E7A46FEF35D375E17F"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-005",
+        "lesson": 51,
+        "title": "GND及所有端点证据范围",
+        "variant": "2L+4L",
+        "nature": "EVIDENCE_VERIFIED",
+        "priority": "INFO",
+        "evidence": [
+          "j51_all56_ground_pins_and_all_vias.json",
+          "j51_consistency_and_drc.json"
+        ],
+        "conclusion": "两板各56实GNDpin全共C1.2；2L84/4L76 GNDvia及全部GND铜形共地；fresh两层475/四层465条唯一证明保持。",
+        "nextAction": "每次新铜/覆铜修改后重查；HF回流另审。",
+        "nextAcceptance": "共地、无孤岛/OOD/无端枝与HSE反测均保持；不能仅颜色/最近距离判定。",
+        "nets": [
+          "GND"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK51-006",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 51,
+      "variant": "2L+4L",
+      "title": "层叠、完整Film与机械原点保持",
+      "status": "EVIDENCE_VERIFIED",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "EVIDENCE_VERIFIED",
+      "sourcePriority": "INFO",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/19",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_consistency_and_drc.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_consistency_and_drc.json",
+            "bytes": 62407,
+            "sha256": "D7ACF0AC269F55A4D17E0B3475CD57FEC915AD36C3B343E7A46FEF35D375E17F"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK51-006",
+        "lesson": 51,
+        "title": "层叠、完整Film与机械原点保持",
+        "variant": "2L+4L",
+        "nature": "EVIDENCE_VERIFIED",
+        "priority": "INFO",
+        "evidence": [
+          "j51_consistency_and_drc.json"
+        ],
+        "conclusion": "实际大写TOP-BOTTOM或TOP-L2-L3-BOTTOM；物理MASK为0；完整Film15/17及真实root与OUTLINE均在；本轮未改01env。",
+        "nextAction": "输出由K阶段独立验证Gerber/钻孔，不把Film定义当生产文件已核。",
+        "nextAcceptance": "全部Film/Options及实际制造文件一一对应，保留非导电阻焊开窗。",
+        "nets": [],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK52-001",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 52,
+      "variant": "2L",
+      "title": "两层USB共享线长参考缺口",
+      "status": "CONFIRMED_GEOMETRIC_RISK",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_GEOMETRIC_RISK",
+      "sourcePriority": "BLOCKS_RELEASE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/20",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j52_USB14_gap_piece_register.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_USB14_gap_piece_register.json",
+            "bytes": 694665,
+            "sha256": "C178A43E719FAD49EA2A75B020285251A2DC056184759B7114C40F619301A208"
+          }
+        },
+        {
+          "originalReference": "j52_actual_reference_projection.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_actual_reference_projection.json",
+            "bytes": 159496,
+            "sha256": "8CA862317241F7223C624D064F79F1018A515D40839F39E5FFB7420013875E6E"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK52-001",
+        "lesson": 52,
+        "title": "两层USB共享线长参考缺口",
+        "variant": "2L",
+        "nature": "CONFIRMED_GEOMETRIC_RISK",
+        "priority": "BLOCKS_RELEASE",
+        "evidence": [
+          "j52_USB14_gap_piece_register.json",
+          "j52_actual_reference_projection.json"
+        ],
+        "conclusion": "PA11_SHARED约6.4531mm，BOTTOM中心投影缺3.8235mm、足迹缺.7691mm²；PA12_SHARED约6.3804mm，缺4.6208mm/.9224mm²。TOP全铺地未修复TOP信号下BOTTOM开口。",
+        "nextAction": "按14段实际坐标/ATTACH、PA9、PA10、SWDIO及反焊盘逐一修或明确回流走廊/用途限制；未采用候选不可视作完成。",
+        "nextAcceptance": "实际参考足迹、同层共地边/窄颈/换层返回及USB实测条件全部闭环；不能以centerline单指标认证。",
+        "nets": [
+          "PA11_SHARED",
+          "PA12_SHARED"
+        ],
+        "areaXY": [
+          38,
+          17.5,
+          43,
+          23.4
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK52-002",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 52,
+      "variant": "4L",
+      "title": "四层共享线中心覆盖与全宽足迹差异",
+      "status": "CONFIRMED_LOCAL_REFERENCE_OPENING",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_LOCAL_REFERENCE_OPENING",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/21",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j52_USB14_gap_piece_register.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_USB14_gap_piece_register.json",
+            "bytes": 694665,
+            "sha256": "C178A43E719FAD49EA2A75B020285251A2DC056184759B7114C40F619301A208"
+          }
+        },
+        {
+          "originalReference": "j52_actual_reference_projection.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_actual_reference_projection.json",
+            "bytes": 159496,
+            "sha256": "8CA862317241F7223C624D064F79F1018A515D40839F39E5FFB7420013875E6E"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK52-002",
+        "lesson": 52,
+        "title": "四层共享线中心覆盖与全宽足迹差异",
+        "variant": "4L",
+        "nature": "CONFIRMED_LOCAL_REFERENCE_OPENING",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j52_USB14_gap_piece_register.json",
+          "j52_actual_reference_projection.json"
+        ],
+        "conclusion": "共享线中心L2覆盖，但PA11全宽被PA10小via反焊盘咬边约.0602mm，缺.02045mm²；PA12受SWDIO反焊盘缺.03854mm²。",
+        "nextAction": "局部调整必须同时审所有层via铜、现有USB/C14/HSE和旧pin证明；不能仅中心覆盖称完整。",
+        "nextAcceptance": "重生L2/L3并核全宽、反焊盘与真实共地返回；不存在无证据90Ω认可。",
+        "nets": [
+          "PA11_SHARED",
+          "PA12_SHARED"
+        ],
+        "areaXY": [
+          39.5,
+          20,
+          42.2,
+          22.1
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK52-003",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 52,
+      "variant": "2L+4L",
+      "title": "USB入口换层与ESD供电桥",
+      "status": "CONFIRMED_REFERENCE_DISCONTINUITY",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_REFERENCE_DISCONTINUITY",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/22",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j52_actual_reference_projection.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_actual_reference_projection.json",
+            "bytes": 159496,
+            "sha256": "8CA862317241F7223C624D064F79F1018A515D40839F39E5FFB7420013875E6E"
+          }
+        },
+        {
+          "originalReference": "j52_signal_via_return_candidates_actual.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_signal_via_return_candidates_actual.json",
+            "bytes": 86133,
+            "sha256": "CC5822BAB8B75D26C9522415CB8F09DE40953DF9790B5A85A2AC867B22444F34"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK52-003",
+        "lesson": 52,
+        "title": "USB入口换层与ESD供电桥",
+        "variant": "2L+4L",
+        "nature": "CONFIRMED_REFERENCE_DISCONTINUITY",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j52_actual_reference_projection.json",
+          "j52_signal_via_return_candidates_actual.json"
+        ],
+        "conclusion": "USB_DP接口1mm BOTTOM桥处于反焊盘区；2L TOP另有VBUS桥造成有限参考开口；4L需分别看L2/L3。入口两signalvia附近实际GNDvia距离约1.60/.95mm不是合规证。",
+        "nextAction": "保入口真实GND脚/SH1..4与U4 GND路径；审局部反焊盘和返回绕行。",
+        "nextAcceptance": "入口实际填铜、换层返回及USB全路几何/测试证据闭环，1.5mm只作审查目标。",
+        "nets": [
+          "USB_DP",
+          "USB_DM",
+          "USB_VBUS"
+        ],
+        "areaXY": [
+          38,
+          5,
+          44,
+          12.9
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK52-004",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 52,
+      "variant": "2L+4L",
+      "title": "USB/CAN选择电阻和DNP残桩",
+      "status": "ASSEMBLY_AND_BRANCH_RISK",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "ASSEMBLY_AND_BRANCH_RISK",
+      "sourcePriority": "BLOCKS_RELEASE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/23",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        },
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        },
+        {
+          "originalReference": "j51_54_sources.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_sources.json",
+            "bytes": 17544,
+            "sha256": "A83FC99399AE15E9BC63324FC6672344ACCE04627BC62F0A57770A732ADA97CE"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK52-004",
+        "lesson": 52,
+        "title": "USB/CAN选择电阻和DNP残桩",
+        "variant": "2L+4L",
+        "nature": "ASSEMBLY_AND_BRANCH_RISK",
+        "priority": "BLOCKS_RELEASE",
+        "evidence": [
+          "j51_all69_net_matrix.json",
+          "j53_actual_power_domains.json",
+          "j51_54_sources.json"
+        ],
+        "conclusion": "R5/R6=22Ω和R12/R13=0Ω构成互斥装配；DNP不删除其板上支路铜。R5/6值来自历史设计，不是整路阻抗匹配证明。",
+        "nextAction": "锁USB或CAN装配档及固件，不同时启用；对未选分支保留真实残桩长度。",
+        "nextAcceptance": "BOM/装配/PCB三者同档，边沿与端接值、USB信号质量依实际器件/线缆验证。",
+        "nets": [
+          "PA11_SHARED",
+          "PA12_SHARED",
+          "CAN_RXD",
+          "CAN_TXD",
+          "USB_DP",
+          "USB_DM"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK52-005",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 52,
+      "variant": "2L+4L",
+      "title": "SPI源端顺序与两层返回限制",
+      "status": "PARTIAL_EVIDENCE_WITH_EDGE_UNKNOWNS",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "PARTIAL_EVIDENCE_WITH_EDGE_UNKNOWNS",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/24",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        },
+        {
+          "originalReference": "j52_actual_reference_projection.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_actual_reference_projection.json",
+            "bytes": 159496,
+            "sha256": "8CA862317241F7223C624D064F79F1018A515D40839F39E5FFB7420013875E6E"
+          }
+        },
+        {
+          "originalReference": "j51_54_sources.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_sources.json",
+            "bytes": 17544,
+            "sha256": "A83FC99399AE15E9BC63324FC6672344ACCE04627BC62F0A57770A732ADA97CE"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK52-005",
+        "lesson": 52,
+        "title": "SPI源端顺序与两层返回限制",
+        "variant": "2L+4L",
+        "nature": "PARTIAL_EVIDENCE_WITH_EDGE_UNKNOWNS",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j51_all69_net_matrix.json",
+          "j52_actual_reference_projection.json",
+          "j51_54_sources.json"
+        ],
+        "conclusion": "R21/R22/R23为源侧33Ω；R24=0Ω位于MCU接收侧，不能算外部MISO驱动端接。两层BOTTOM桥的TOP投影并非全部连续，已有同层地guard需按实际common评估。",
+        "nextAction": "保source→R→header顺序；基于<=1MHz/<=10cm教学约定核GPIO边沿、负载和对端setup/hold。",
+        "nextAcceptance": "实际SCK/MOSI/NSS/MISO路径/支路及返回和测试条件记录；不做无依据统一等长。",
+        "nets": [
+          "PA5_SPI_SCK",
+          "SPI_SCK",
+          "SPI_MOSI",
+          "SPI_NSS",
+          "SPI_MISO"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK52-006",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 52,
+      "variant": "2L+4L",
+      "title": "NSS上拉短支路的真实版本",
+      "status": "EVIDENCE_VERIFIED_WITH_RETURN_REVIEW",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "EVIDENCE_VERIFIED_WITH_RETURN_REVIEW",
+      "sourcePriority": "INFO",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/25",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        },
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK52-006",
+        "lesson": 52,
+        "title": "NSS上拉短支路的真实版本",
+        "variant": "2L+4L",
+        "nature": "EVIDENCE_VERIFIED_WITH_RETURN_REVIEW",
+        "priority": "INFO",
+        "evidence": [
+          "j51_all69_net_matrix.json",
+          "j53_actual_power_domains.json"
+        ],
+        "conclusion": "R25实际已移至(31,33.7)，不应沿历史19mm旧支路描述；R27北向供电是LIVE，不是R25死枝。",
+        "nextAction": "后续只删由实际graph/端点证明无硬件用途的枝线；维持R27供电。",
+        "nextAcceptance": "实际R25引脚到NSS路径/支长及原R27真实V3连接保持。",
+        "nets": [
+          "PA4_SPI_NSS",
+          "V3V3"
+        ],
+        "areaXY": [
+          29,
+          30,
+          39,
+          48
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK52-007",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 52,
+      "variant": "2L+4L",
+      "title": "I2C上拉、负载与边沿未实测",
+      "status": "OPERATING_ENVELOPE_UNKNOWN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "OPERATING_ENVELOPE_UNKNOWN",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/26",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_54_sources.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_sources.json",
+            "bytes": 17544,
+            "sha256": "A83FC99399AE15E9BC63324FC6672344ACCE04627BC62F0A57770A732ADA97CE"
+          }
+        },
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK52-007",
+        "lesson": 52,
+        "title": "I2C上拉、负载与边沿未实测",
+        "variant": "2L+4L",
+        "nature": "OPERATING_ENVELOPE_UNKNOWN",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j51_54_sources.json",
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "实际R19/R20=2.2k；默认100kHz，总负载100pF是教学边界，不能由线通/400k公式替代tR、VOL和对端附加上拉。",
+        "nextAction": "补PCB+引脚+连接器+线缆+设备总C；实测边沿与电平。",
+        "nextAcceptance": "所用速度下时序及VOL/IOL满足器件规格，记录实际外部负载。",
+        "nets": [
+          "I2C_SCL",
+          "I2C_SDA"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK52-008",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 52,
+      "variant": "2L+4L",
+      "title": "UART接收端电阻与绕路",
+      "status": "TOPOLOGY_VERIFIED_EDGE_UNKNOWN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "TOPOLOGY_VERIFIED_EDGE_UNKNOWN",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/27",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        },
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK52-008",
+        "lesson": 52,
+        "title": "UART接收端电阻与绕路",
+        "variant": "2L+4L",
+        "nature": "TOPOLOGY_VERIFIED_EDGE_UNKNOWN",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j51_all69_net_matrix.json",
+          "j53_actual_power_domains.json"
+        ],
+        "conclusion": "R16=33Ω靠MCU发送侧；R17=0Ω在MCU接收端，不是远端源匹配。RX因真实GND/其它信号障碍做过接收端改位与跨层桥，需保真实返回。",
+        "nextAction": "115200/短线只作上电试验条件，不视为已证速率；禁止RS232电平及外部倒灌。",
+        "nextAcceptance": "实际驱动边沿/线缆/接收裕量及共地审查通过。",
+        "nets": [
+          "PA9_UART_TX",
+          "UART_TX",
+          "PA10_UART_RX",
+          "UART_RX"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK52-009",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 52,
+      "variant": "2L+4L",
+      "title": "SWD/复位/BOOT接口条件",
+      "status": "OPERATING_AND_PINOUT_CONDITION",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "OPERATING_AND_PINOUT_CONDITION",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/28",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_54_sources.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_sources.json",
+            "bytes": 17544,
+            "sha256": "A83FC99399AE15E9BC63324FC6672344ACCE04627BC62F0A57770A732ADA97CE"
+          }
+        },
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK52-009",
+        "lesson": 52,
+        "title": "SWD/复位/BOOT接口条件",
+        "variant": "2L+4L",
+        "nature": "OPERATING_AND_PINOUT_CONDITION",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j51_54_sources.json",
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "J9为自定义1x6而非Cortex10；Vtarget只检测。SWCLK初测<=1MHz/短探针线为建议条件；J7是复位跳帽非按键；BOOT0实际R28和GND已改位。",
+        "nextAction": "锁连接线pinout、调试器供电模式和时钟；不声称F103C8 ROM USB DFU。",
+        "nextAcceptance": "连接前逐pin核对，外供电/复位/下载与返回条件实测。",
+        "nets": [
+          "SWDIO",
+          "SWCLK",
+          "SWO",
+          "NRST",
+          "BOOT0",
+          "BOOT1",
+          "BOOT_SERVICE"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK52-010",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 52,
+      "variant": "2L+4L",
+      "title": "PC13/14/15专用限制",
+      "status": "DATASHEET_CONDITION_NOT_TESTED",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "DATASHEET_CONDITION_NOT_TESTED",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/29",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_54_sources.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_sources.json",
+            "bytes": 17544,
+            "sha256": "A83FC99399AE15E9BC63324FC6672344ACCE04627BC62F0A57770A732ADA97CE"
+          }
+        },
+        {
+          "originalReference": "j52_actual_reference_projection.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_actual_reference_projection.json",
+            "bytes": 159496,
+            "sha256": "8CA862317241F7223C624D064F79F1018A515D40839F39E5FFB7420013875E6E"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK52-010",
+        "lesson": 52,
+        "title": "PC13/14/15专用限制",
+        "variant": "2L+4L",
+        "nature": "DATASHEET_CONDITION_NOT_TESTED",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j51_54_sources.json",
+          "j52_actual_reference_projection.json"
+        ],
+        "conclusion": "STM32F103C8T6 DS5319Rev20规定PC13..15输出<=2MHz、负载<=30pF，并受backup power switch3mA限制，不可作电流源驱LED。实际J11/外线负载未证实。",
+        "nextAction": "固件选最低适用输出速度；核外部负载/线缆/保护寄生，不凭普通GPIO频率假设。",
+        "nextAcceptance": "输出模式、边沿、总负载与器件限制均有具体记录。",
+        "nets": [
+          "GPIO_PC13",
+          "GPIO_PC14",
+          "GPIO_PC15"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK52-011",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 52,
+      "variant": "2L+4L",
+      "title": "HSE地岛与单桥的证据边界",
+      "status": "STORED_NEGATIVE_CHALLENGE_PASSED",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "STORED_NEGATIVE_CHALLENGE_PASSED",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/30",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        },
+        {
+          "originalReference": "j51_consistency_and_drc.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_consistency_and_drc.json",
+            "bytes": 62407,
+            "sha256": "D7ACF0AC269F55A4D17E0B3475CD57FEC915AD36C3B343E7A46FEF35D375E17F"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK52-011",
+        "lesson": 52,
+        "title": "HSE地岛与单桥的证据边界",
+        "variant": "2L+4L",
+        "nature": "STORED_NEGATIVE_CHALLENGE_PASSED",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j53_actual_power_domains.json",
+          "j51_consistency_and_drc.json"
+        ],
+        "conclusion": "HSE岛/永久void、三guard及唯一anchor的实际正负测试已有记录；VDD48/VBAT支路有限投影是例外，不能称岛投影无其它铜。",
+        "nextAction": "任何新铺铜/源重布需保持quiet void与删anchor反测，不让TOP全铺造成第二桥。",
+        "nextAcceptance": "HSE负测、所有旧GND证明保持；晶振启动/负载/裕量仍待实物。",
+        "nets": [
+          "OSC_IN",
+          "OSC_OUT",
+          "XTAL_OUT"
+        ],
+        "areaXY": [
+          37,
+          28.5,
+          48,
+          40.5
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK52-012",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 52,
+      "variant": "2L+4L",
+      "title": "ADC与模拟返回条件",
+      "status": "ANALOG_SOURCE_UNKNOWN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "ANALOG_SOURCE_UNKNOWN",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/31",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        },
+        {
+          "originalReference": "j52_actual_reference_projection.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_actual_reference_projection.json",
+            "bytes": 159496,
+            "sha256": "8CA862317241F7223C624D064F79F1018A515D40839F39E5FFB7420013875E6E"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK52-012",
+        "lesson": 52,
+        "title": "ADC与模拟返回条件",
+        "variant": "2L+4L",
+        "nature": "ANALOG_SOURCE_UNKNOWN",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j53_actual_power_domains.json",
+          "j52_actual_reference_projection.json"
+        ],
+        "conclusion": "ADC输入滤波靠MCU，R32/C24和VDDA本地电容已连接；实际外部源阻抗、采样时钟/采样时间、输入幅度和噪声未给定。",
+        "nextAction": "按真实源阻抗与采样配置核RC settling，保持HSE/开关电源隔离。",
+        "nextAcceptance": "既有连接/参考不丢，源阻抗与采样误差/噪声实测满足目标。",
+        "nets": [
+          "ADC_IN",
+          "ADC0",
+          "VDDA"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK52-013",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 52,
+      "variant": "2L",
+      "title": "North六网的两层参考限制",
+      "status": "CONFIRMED_PROJECTED_OPENINGS",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_PROJECTED_OPENINGS",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/32",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j52_actual_reference_projection.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_actual_reference_projection.json",
+            "bytes": 159496,
+            "sha256": "8CA862317241F7223C624D064F79F1018A515D40839F39E5FFB7420013875E6E"
+          }
+        },
+        {
+          "originalReference": "j52_signal_via_return_candidates_actual.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_signal_via_return_candidates_actual.json",
+            "bytes": 86133,
+            "sha256": "CC5822BAB8B75D26C9522415CB8F09DE40953DF9790B5A85A2AC867B22444F34"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK52-013",
+        "lesson": 52,
+        "title": "North六网的两层参考限制",
+        "variant": "2L",
+        "nature": "CONFIRMED_PROJECTED_OPENINGS",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j52_actual_reference_projection.json",
+          "j52_signal_via_return_candidates_actual.json"
+        ],
+        "conclusion": "North六网虽真实连接，BOTTOM路径在TOP电源/信号/焊盘区存在较长投影开口；最近共地via和整体共地不能代替HF返回审查。",
+        "nextAction": "按投影JSON精确段定位同层地边、跨槽地桥和换层返回；依据实际GPIO边沿/负载决定必要改动。",
+        "nextAcceptance": "记录每段实际可用返回及狭颈/绕行，后续South布线后重新填铜复查。",
+        "nets": [
+          "GPIO_PA1",
+          "GPIO_PA2",
+          "GPIO_PA3",
+          "GPIO_PC13",
+          "GPIO_PC14",
+          "GPIO_PC15"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK53-001",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 53,
+      "variant": "2L+4L",
+      "title": "输入保护及高di/dt回路",
+      "status": "ACTUAL_LOOP_GEOMETRY_REQUIRES_LOAD_VALIDATION",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "ACTUAL_LOOP_GEOMETRY_REQUIRES_LOAD_VALIDATION",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/33",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        },
+        {
+          "originalReference": "j51_54_sources.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_sources.json",
+            "bytes": 17544,
+            "sha256": "A83FC99399AE15E9BC63324FC6672344ACCE04627BC62F0A57770A732ADA97CE"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK53-001",
+        "lesson": 53,
+        "title": "输入保护及高di/dt回路",
+        "variant": "2L+4L",
+        "nature": "ACTUAL_LOOP_GEOMETRY_REQUIRES_LOAD_VALIDATION",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j53_actual_power_domains.json",
+          "j51_54_sources.json"
+        ],
+        "conclusion": "C3+=(26.0984,18)→U2.VIN(24.2,20.05)，负端(24.5236,18)经局部双GNDvia；U2.GND(24.2,21.95)另双via。两层回参考间距1.524mm与四层.2104mm不同，不可只看电容中心接近。",
+        "nextAction": "审实际TOP地桥/plane并联返回、温升、输入线缆源阻抗及负载跃变；不假设电流必经某两via。",
+        "nextAcceptance": "VIN/CIN/GND完整回路与实际有效电容、供电瞬态/纹波满足系统目标。",
+        "nets": [
+          "VIN_PROT",
+          "GND"
+        ],
+        "areaXY": [
+          22,
+          17.5,
+          27,
+          24
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK53-002",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 53,
+      "variant": "2L+4L",
+      "title": "SW与BOOT正确网别和局部铜",
+      "status": "CONNECTION_VERIFIED_EMI_REMAINS",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONNECTION_VERIFIED_EMI_REMAINS",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/34",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        },
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK53-002",
+        "lesson": 53,
+        "title": "SW与BOOT正确网别和局部铜",
+        "variant": "2L+4L",
+        "nature": "CONNECTION_VERIFIED_EMI_REMAINS",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j53_actual_power_domains.json",
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "U2.2接L1.1，C4两端是BOOT/SW而非GND；SW/BOOT保持TOP，源短neck有有限区域依据。SW铜不能因载流就任意放大。",
+        "nextAction": "保短回路与FB隔离，测实际SW振铃/EMI；不要让普通线穿SW或依全铺地自动合格。",
+        "nextAcceptance": "相邻敏感线、铜面积、回流及开关波形按真实布局验证。",
+        "nets": [
+          "BUCK_SW",
+          "BUCK_BOOT"
+        ],
+        "areaXY": [
+          21.5,
+          20.5,
+          27.5,
+          25
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK53-003",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 53,
+      "variant": "2L+4L",
+      "title": "反馈采样与安静地",
+      "status": "TOPOLOGY_VERIFIED_COUPLING_UNKNOWN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "TOPOLOGY_VERIFIED_COUPLING_UNKNOWN",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/35",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        },
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK53-003",
+        "lesson": 53,
+        "title": "反馈采样与安静地",
+        "variant": "2L+4L",
+        "nature": "TOPOLOGY_VERIFIED_COUPLING_UNKNOWN",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j53_actual_power_domains.json",
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "R1.1采样滤波后V5；R1/R2分压到U2.FB；反馈地与输入高脉冲地共网但不能视为同一零阻抗点。C7=75pF起始值不是闭环稳定认证。",
+        "nextAction": "按实际FB路径到R2/GND铜核开关耦合，实际L/C/ESR确定后验证稳定性与跃变。",
+        "nextAcceptance": "采样来自L1输出侧，安静返回/实际电容与环路响应有证据。",
+        "nets": [
+          "BUCK_FB",
+          "V5",
+          "GND"
+        ],
+        "areaXY": [
+          26,
+          18.5,
+          32,
+          22
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK53-004",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 53,
+      "variant": "2L+4L",
+      "title": "LDO输入输出电容回路",
+      "status": "CONNECTION_VERIFIED_COMPONENT_EFFECTIVE_VALUE_UNKNOWN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONNECTION_VERIFIED_COMPONENT_EFFECTIVE_VALUE_UNKNOWN",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/36",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        },
+        {
+          "originalReference": "j51_54_sources.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_sources.json",
+            "bytes": 17544,
+            "sha256": "A83FC99399AE15E9BC63324FC6672344ACCE04627BC62F0A57770A732ADA97CE"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK53-004",
+        "lesson": 53,
+        "title": "LDO输入输出电容回路",
+        "variant": "2L+4L",
+        "nature": "CONNECTION_VERIFIED_COMPONENT_EFFECTIVE_VALUE_UNKNOWN",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j53_actual_power_domains.json",
+          "j51_54_sources.json"
+        ],
+        "conclusion": "U3.IN1=(25.7,29.95)、GND2=(25.7,29)、OUT5=(28.3,29.95)；C8/C9为各自本地旁路并保真实共地；MPN/偏压后有效C/ESR尚未锁定。",
+        "nextAction": "按DBV具体封装核最坏有效电容及实际回路，不沿用DYD热焊盘数据。",
+        "nextAcceptance": "输入/输出有效电容及输入瞬态、稳定与掉电反流条件验证。",
+        "nets": [
+          "V5",
+          "V3V3",
+          "GND"
+        ],
+        "areaXY": [
+          23.5,
+          27.5,
+          31,
+          32.2
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK53-005",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 53,
+      "variant": "2L+4L",
+      "title": "3V3负载与LDO热边界",
+      "status": "LOAD_AND_THERMAL_NOT_MEASURED",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "LOAD_AND_THERMAL_NOT_MEASURED",
+      "sourcePriority": "BLOCKS_RELEASE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/37",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        },
+        {
+          "originalReference": "j51_54_sources.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_sources.json",
+            "bytes": 17544,
+            "sha256": "A83FC99399AE15E9BC63324FC6672344ACCE04627BC62F0A57770A732ADA97CE"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK53-005",
+        "lesson": 53,
+        "title": "3V3负载与LDO热边界",
+        "variant": "2L+4L",
+        "nature": "LOAD_AND_THERMAL_NOT_MEASURED",
+        "priority": "BLOCKS_RELEASE",
+        "evidence": [
+          "j53_actual_power_domains.json",
+          "j51_54_sources.json"
+        ],
+        "conclusion": "设计正常150mA/Ta0–40℃、外部GPIO+header合计10mA；分配136.2mA留13.8mA。5→3.3V在150mA仅算耗散.255W，不是Tj认可。",
+        "nextAction": "确认实际并发工作负载/外设/上拉/峰值、实板铜与温度；禁止把IC500mA额定当板可供500mA。",
+        "nextAcceptance": "最坏输入/负载/环境下温度与电压余量合格，掉电/反流可控。",
+        "nets": [
+          "V3V3",
+          "V5"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK53-006",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 53,
+      "variant": "2L+4L",
+      "title": "主供电铜宽与MCU细颈",
+      "status": "LOCAL_EXCEPTIONS_WITH_CURRENT_UNKNOWN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "LOCAL_EXCEPTIONS_WITH_CURRENT_UNKNOWN",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/38",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        },
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK53-006",
+        "lesson": 53,
+        "title": "主供电铜宽与MCU细颈",
+        "variant": "2L+4L",
+        "nature": "LOCAL_EXCEPTIONS_WITH_CURRENT_UNKNOWN",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j51_all69_net_matrix.json",
+          "j53_actual_power_domains.json"
+        ],
+        "conclusion": "主干采用.6及局部.8，MCU焊盘细颈.25与有限1.4区域是局部逃线，不得把全板/排针主电流经它。实际网总长度含多支路，不能拿总长直接算单路压降。",
+        "nextAction": "以每条真实负载路径分配电流，连同via/thermal/铜厚/温度计算最坏压降与温升。",
+        "nextAcceptance": "局部颈缩有区域/长度/电流依据，主干分支保持低阻，实测电压及温升满足目标。",
+        "nets": [
+          "V3V3",
+          "V5",
+          "VIN_PROT"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK53-007",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 53,
+      "variant": "2L+4L",
+      "title": "MCU三个VDD去耦与VBAT",
+      "status": "LOCAL_LOOP_CONNECTIVITY_VERIFIED",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "LOCAL_LOOP_CONNECTIVITY_VERIFIED",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/39",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK53-007",
+        "lesson": 53,
+        "title": "MCU三个VDD去耦与VBAT",
+        "variant": "2L+4L",
+        "nature": "LOCAL_LOOP_CONNECTIVITY_VERIFIED",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j53_actual_power_domains.json"
+        ],
+        "conclusion": "VDD24/36/48与C13/14/15保直接TOP局部回路、cap侧GNDvia到实际面；C16储能支路、VBAT C17另核。不能把refReached解释成HF电流必经面。",
+        "nextAction": "后续源门户不得短VDD36或拉长GND/电源细颈；移动电容须完整loop/negative/DRC对比。",
+        "nextAcceptance": "三个供电引脚及真实VSS回路、旁路有效C、瞬态电压均验收。",
+        "nets": [
+          "V3V3",
+          "GND"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK53-008",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 53,
+      "variant": "2L+4L",
+      "title": "VDDA为0Ω供电支路不是已完成LC",
+      "status": "TOPOLOGY_VERIFIED_FILTER_PERFORMANCE_UNKNOWN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "TOPOLOGY_VERIFIED_FILTER_PERFORMANCE_UNKNOWN",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/40",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK53-008",
+        "lesson": 53,
+        "title": "VDDA为0Ω供电支路不是已完成LC",
+        "variant": "2L+4L",
+        "nature": "TOPOLOGY_VERIFIED_FILTER_PERFORMANCE_UNKNOWN",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j53_actual_power_domains.json"
+        ],
+        "conclusion": "R26当前0Ω，后接C18/C19/C20和U1.9；VSSA8实际回地。不能称已装电感滤波或理想无噪声模拟岛。",
+        "nextAction": "锁定负载/ADC误差需求，决定是否保0Ω；任何换磁珠/LC先核DC压降、谐振阻尼与上电斜率。",
+        "nextAcceptance": "VDDA电压/噪声、VSSA返回与采样误差满足实际需求。",
+        "nets": [
+          "VDDA",
+          "V3V3",
+          "GND"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK53-009",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 53,
+      "variant": "2L+4L",
+      "title": "R27供电LIVE枝必须保留",
+      "status": "HISTORICAL_MISCLASSIFICATION_CLOSED",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "HISTORICAL_MISCLASSIFICATION_CLOSED",
+      "sourcePriority": "INFO",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/41",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        },
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK53-009",
+        "lesson": 53,
+        "title": "R27供电LIVE枝必须保留",
+        "variant": "2L+4L",
+        "nature": "HISTORICAL_MISCLASSIFICATION_CLOSED",
+        "priority": "INFO",
+        "evidence": [
+          "j53_actual_power_domains.json",
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "31.11,55→31.11,47→38.1016,47延伸到R27.1(38.1016,41.3)，现已全保；曾误认旧R25死枝，原生累计证明抓出。",
+        "nextAction": "删除任何铜前同时检查完整branch物理端点/后续连接，不以无pin拐点判死枝。",
+        "nextAcceptance": "R27.1↔实际V3源的图证明持续通过。",
+        "nets": [
+          "V3V3",
+          "NRST"
+        ],
+        "areaXY": [
+          30.5,
+          41,
+          39,
+          58.5
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK53-010",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 53,
+      "variant": "2L+4L",
+      "title": "通孔与热焊盘瓶颈",
+      "status": "GEOMETRY_VERIFIED_CURRENT_LIMIT_UNKNOWN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "GEOMETRY_VERIFIED_CURRENT_LIMIT_UNKNOWN",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/42",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j52_signal_via_return_candidates_actual.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_signal_via_return_candidates_actual.json",
+            "bytes": 86133,
+            "sha256": "CC5822BAB8B75D26C9522415CB8F09DE40953DF9790B5A85A2AC867B22444F34"
+          }
+        },
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK53-010",
+        "lesson": 53,
+        "title": "通孔与热焊盘瓶颈",
+        "variant": "2L+4L",
+        "nature": "GEOMETRY_VERIFIED_CURRENT_LIMIT_UNKNOWN",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j52_signal_via_return_candidates_actual.json",
+          "j51_all69_net_matrix.json"
+        ],
+        "conclusion": "库存stock .30钻/.60铜及private .26/.52为机械PTH；私孔已限区逐真实导体许可，不是全局激光孔。共地铜中thermal/细颈也需审。",
+        "nextAction": "依据孔壁镀铜/铜厚及分配电流审PI瓶颈；不能按盘径或tented外观推载流/焊接。",
+        "nextAcceptance": "实际板厂孔壁/环宽及电流/压降/温升证据确认；局部规则全字段保真。",
+        "nets": [],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK53-011",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 53,
+      "variant": "2L+4L",
+      "title": "VBUS隔离与倒灌",
+      "status": "NET_SEPARATION_VERIFIED_BENCH_TEST_PENDING",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "NET_SEPARATION_VERIFIED_BENCH_TEST_PENDING",
+      "sourcePriority": "BLOCKS_RELEASE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/43",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        },
+        {
+          "originalReference": "j51_54_sources.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_sources.json",
+            "bytes": 17544,
+            "sha256": "A83FC99399AE15E9BC63324FC6672344ACCE04627BC62F0A57770A732ADA97CE"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK53-011",
+        "lesson": 53,
+        "title": "VBUS隔离与倒灌",
+        "variant": "2L+4L",
+        "nature": "NET_SEPARATION_VERIFIED_BENCH_TEST_PENDING",
+        "priority": "BLOCKS_RELEASE",
+        "evidence": [
+          "j53_actual_power_domains.json",
+          "j51_54_sources.json"
+        ],
+        "conclusion": "USB_VBUS是sense+ESD，不是V5或V3电源；现网表隔离成立。LDO无反向阻断；SWD/header为输出/检测不得反供。",
+        "nextAction": "测试无USB/有USB、外供开关及掉电组合；核Q1/Q2 attach逻辑。",
+        "nextAcceptance": "各状态不误供/反流，V3有效后attach，掉电可靠断开。",
+        "nets": [
+          "USB_VBUS",
+          "V3V3",
+          "V5",
+          "USB_ATTACH_N"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK54-001",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 54,
+      "variant": "2L+4L",
+      "title": "Buck脉冲环与辐射源",
+      "status": "CONFIRMED_EMI_SENSITIVE_GEOMETRY",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONFIRMED_EMI_SENSITIVE_GEOMETRY",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/44",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        },
+        {
+          "originalReference": "j51_54_sources.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_sources.json",
+            "bytes": 17544,
+            "sha256": "A83FC99399AE15E9BC63324FC6672344ACCE04627BC62F0A57770A732ADA97CE"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK54-001",
+        "lesson": 54,
+        "title": "Buck脉冲环与辐射源",
+        "variant": "2L+4L",
+        "nature": "CONFIRMED_EMI_SENSITIVE_GEOMETRY",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j53_actual_power_domains.json",
+          "j51_54_sources.json"
+        ],
+        "conclusion": "高di/dt重点是CIN—内部高低侧开关—GND；SW/L/BOOT为dv/dt区域，.6宽并不等于EMI合格。",
+        "nextAction": "依据实际loop/回地、SW波形、输入线缆与负载规划近场/传导测试；spread-spectrum器件特性不替代板级检查。",
+        "nextAcceptance": "预定工作状态下纹波/开关振铃/近场/端口骚扰按目标验证。",
+        "nets": [
+          "VIN_PROT",
+          "BUCK_SW",
+          "BUCK_BOOT",
+          "GND"
+        ],
+        "areaXY": [
+          21,
+          17,
+          29,
+          25
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK54-002",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 54,
+      "variant": "2L+4L",
+      "title": "USB保护件接地和供电开窗",
+      "status": "PROTECTION_PATH_ASSEMBLY_AND_RETURN_RISK",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "PROTECTION_PATH_ASSEMBLY_AND_RETURN_RISK",
+      "sourcePriority": "BLOCKS_RELEASE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/45",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        },
+        {
+          "originalReference": "j52_USB14_gap_piece_register.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_USB14_gap_piece_register.json",
+            "bytes": 694665,
+            "sha256": "C178A43E719FAD49EA2A75B020285251A2DC056184759B7114C40F619301A208"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK54-002",
+        "lesson": 54,
+        "title": "USB保护件接地和供电开窗",
+        "variant": "2L+4L",
+        "nature": "PROTECTION_PATH_ASSEMBLY_AND_RETURN_RISK",
+        "priority": "BLOCKS_RELEASE",
+        "evidence": [
+          "j53_actual_power_domains.json",
+          "j52_USB14_gap_piece_register.json"
+        ],
+        "conclusion": "U4实际USBLC6-2SC6，pin1/6为DP、3/4为DM，2GND、5VBUS；两body内地via与C10返回已真实连接；VBUSvia(40.25,9.3)靠U4.5 land开窗仍装配开放项。",
+        "nextAction": "按真实封装mask/钻孔与连接器→U4→MCU路径核ESD泄放；不把芯片IEC等级当整板ESD认证。",
+        "nextAcceptance": "实际焊接/防锡流、保护电流返回和系统ESD测试通过，USB几何保持。",
+        "nets": [
+          "USB_DP",
+          "USB_DM",
+          "USB_VBUS",
+          "GND"
+        ],
+        "areaXY": [
+          39,
+          8.5,
+          44.2,
+          13.3
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK54-003",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 54,
+      "variant": "2L+4L",
+      "title": "USB壳与信号地实际连接",
+      "status": "CONNECTION_VERIFIED_CHASSIS_UNKNOWN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CONNECTION_VERIFIED_CHASSIS_UNKNOWN",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/46",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all56_ground_pins_and_all_vias.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all56_ground_pins_and_all_vias.json",
+            "bytes": 56202,
+            "sha256": "543398184D46A18CEE5BD049BF86BD12B389A55C33EEB299BAEA459EE1FAB2CA"
+          }
+        },
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK54-003",
+        "lesson": 54,
+        "title": "USB壳与信号地实际连接",
+        "variant": "2L+4L",
+        "nature": "CONNECTION_VERIFIED_CHASSIS_UNKNOWN",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j51_all56_ground_pins_and_all_vias.json",
+          "j53_actual_power_domains.json"
+        ],
+        "conclusion": "SH1..4及两个dataGND确有板铜共地证明；2L曾因BOTTOM槽隔SH2后以真TOP桥修复。教学板无已定义金属机壳/机壳地网络，不能假装已有chassis方案。",
+        "nextAction": "明确外壳/线缆屏蔽接法和ESD回路，未来机械边界变化再审。",
+        "nextAcceptance": "实装屏蔽/壳/信号地关系与ESD/共模测试有证据。",
+        "nets": [
+          "GND"
+        ],
+        "areaXY": [
+          34,
+          1.5,
+          46,
+          8.5
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK54-004",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 54,
+      "variant": "2L+4L",
+      "title": "CAN终端与外线故障边界",
+      "status": "CABLE_AND_PROTECTION_UNKNOWN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "CABLE_AND_PROTECTION_UNKNOWN",
+      "sourcePriority": "BLOCKS_RELEASE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/47",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_all69_net_matrix.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+            "bytes": 171013,
+            "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+          }
+        },
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        },
+        {
+          "originalReference": "j51_54_sources.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_sources.json",
+            "bytes": 17544,
+            "sha256": "A83FC99399AE15E9BC63324FC6672344ACCE04627BC62F0A57770A732ADA97CE"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK54-004",
+        "lesson": 54,
+        "title": "CAN终端与外线故障边界",
+        "variant": "2L+4L",
+        "nature": "CABLE_AND_PROTECTION_UNKNOWN",
+        "priority": "BLOCKS_RELEASE",
+        "evidence": [
+          "j51_all69_net_matrix.json",
+          "j53_actual_power_domains.json",
+          "j51_54_sources.json"
+        ],
+        "conclusion": "R15=120Ω仅总线末端装，CAN_H/L本地短分支至J3；当前未装外置CAN TVS。500kbps/<=1m为教学目标，内部IEC额定非系统浪涌许可。",
+        "nextAction": "锁总线拓扑/终端位置/线缆/接地与TCAN332故障电压范围，按应用决定保护。",
+        "nextAcceptance": "bit timing、总线电平/反射/共模、误接/ESD环境按实际需求验证。",
+        "nets": [
+          "CAN_H",
+          "CAN_L"
+        ],
+        "areaXY": [
+          63,
+          10.5,
+          75,
+          16.5
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK54-005",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 54,
+      "variant": "2L+4L",
+      "title": "GPIO排针和线缆天线风险",
+      "status": "WORKLOAD_EDGE_CABLE_UNKNOWN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "WORKLOAD_EDGE_CABLE_UNKNOWN",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/48",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j52_actual_reference_projection.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_actual_reference_projection.json",
+            "bytes": 159496,
+            "sha256": "8CA862317241F7223C624D064F79F1018A515D40839F39E5FFB7420013875E6E"
+          }
+        },
+        {
+          "originalReference": "j52_signal_via_return_candidates_actual.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_signal_via_return_candidates_actual.json",
+            "bytes": 86133,
+            "sha256": "CC5822BAB8B75D26C9522415CB8F09DE40953DF9790B5A85A2AC867B22444F34"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK54-005",
+        "lesson": 54,
+        "title": "GPIO排针和线缆天线风险",
+        "variant": "2L+4L",
+        "nature": "WORKLOAD_EDGE_CABLE_UNKNOWN",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j52_actual_reference_projection.json",
+          "j52_signal_via_return_candidates_actual.json"
+        ],
+        "conclusion": "普通GPIO/调试/串行口真实长线及换层数量已按网列出；时钟频率低不保证边沿慢，单个GNDpin也非EMI保证。South七网仍未完成。",
+        "nextAction": "最低适用slew、实际线缆回路/相邻GND和负载定义后，针对性审串扰/辐射，不把所有网强制等长。",
+        "nextAcceptance": "输出模式、线缆、负载、回流及接口波形/噪声实测闭环。",
+        "nets": [],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK54-006",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 54,
+      "variant": "2L+4L",
+      "title": "输入浪涌和保险丝不是过压认证",
+      "status": "PROTECTION_ENVELOPE_INCOMPLETE",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "PROTECTION_ENVELOPE_INCOMPLETE",
+      "sourcePriority": "BLOCKS_RELEASE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/49",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_54_sources.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_sources.json",
+            "bytes": 17544,
+            "sha256": "A83FC99399AE15E9BC63324FC6672344ACCE04627BC62F0A57770A732ADA97CE"
+          }
+        },
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK54-006",
+        "lesson": 54,
+        "title": "输入浪涌和保险丝不是过压认证",
+        "variant": "2L+4L",
+        "nature": "PROTECTION_ENVELOPE_INCOMPLETE",
+        "priority": "BLOCKS_RELEASE",
+        "evidence": [
+          "j51_54_sources.json",
+          "j53_actual_power_domains.json"
+        ],
+        "conclusion": "J1→500mA快断F1→SS14是现保护；无输入TVS，保险丝I²t/热插拔及源限流未配合实测；9–16V约定不能扩为buck IC最大范围。",
+        "nextAction": "确认真实源、线缆、极性和故障能量，实际电容MPN耐压/偏压曲线锁定；必要保护按器件钳位而非名称选择。",
+        "nextAcceptance": "正常/反接/上电浪涌/异常关闭方案与实测一致，不任填安全限流值。",
+        "nets": [
+          "VIN_RAW",
+          "VIN_FUSED",
+          "VIN_PROT"
+        ],
+        "areaXY": [
+          4,
+          10,
+          28,
+          20
+        ],
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK54-007",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 54,
+      "variant": "2L+4L",
+      "title": "两层与四层不能混用参考策略",
+      "status": "ENGINEERING_COMPARISON_WITH_LIMITS",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "ENGINEERING_COMPARISON_WITH_LIMITS",
+      "sourcePriority": "REVIEW_REQUIRED",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/50",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j52_actual_reference_projection.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_actual_reference_projection.json",
+            "bytes": 159496,
+            "sha256": "8CA862317241F7223C624D064F79F1018A515D40839F39E5FFB7420013875E6E"
+          }
+        },
+        {
+          "originalReference": "j51_consistency_and_drc.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_consistency_and_drc.json",
+            "bytes": 62407,
+            "sha256": "D7ACF0AC269F55A4D17E0B3475CD57FEC915AD36C3B343E7A46FEF35D375E17F"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK54-007",
+        "lesson": 54,
+        "title": "两层与四层不能混用参考策略",
+        "variant": "2L+4L",
+        "nature": "ENGINEERING_COMPARISON_WITH_LIMITS",
+        "priority": "REVIEW_REQUIRED",
+        "evidence": [
+          "j52_actual_reference_projection.json",
+          "j51_consistency_and_drc.json"
+        ],
+        "conclusion": "b019旧四层TOP看L2/BOTTOM看L3GND的结论是旧输入证据；新默认L3电源后BOTTOM必须按真实电源域/分割重评。through-via仍开所有参考反焊盘，2L限制不能直接移植。",
+        "nextAction": "按真实铜层/孔/槽审每个交叉，HSE双层quiet限制保留。",
+        "nextAcceptance": "2L/4L独立逐段实际参考审查，不移植不适用的禁止区或放宽。",
+        "nets": [],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK54-008",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 54,
+      "variant": "2L+4L",
+      "title": "系统EMI/ESD测试目标未冻结",
+      "status": "SYSTEM_REQUIREMENT_UNKNOWN",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "SYSTEM_REQUIREMENT_UNKNOWN",
+      "sourcePriority": "BLOCKS_RELEASE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/51",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_54_sources.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_sources.json",
+            "bytes": 17544,
+            "sha256": "A83FC99399AE15E9BC63324FC6672344ACCE04627BC62F0A57770A732ADA97CE"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK54-008",
+        "lesson": 54,
+        "title": "系统EMI/ESD测试目标未冻结",
+        "variant": "2L+4L",
+        "nature": "SYSTEM_REQUIREMENT_UNKNOWN",
+        "priority": "BLOCKS_RELEASE",
+        "evidence": [
+          "j51_54_sources.json"
+        ],
+        "conclusion": "尚无最终机壳/线缆/供电源、工作负载、目标法规/试验等级和实物测量。本课完成实际风险定位，不等于SI/PI/EMI认证。",
+        "nextAction": "第59课制定条件化实物测试矩阵，记录未测；不得用软件仿真或datasheet器件等级代替本板。",
+        "nextAcceptance": "目标明确、实物/仪器/设置/版本/结果可追溯；问题驱动回改。",
+        "nets": [],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK52_STACK_LEGACY",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 52,
+      "variant": "4L",
+      "title": "旧四层参考架构与用户新默认不一致",
+      "status": "USER_REQUIREMENT_NOT_APPLIED",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "USER_REQUIREMENT_NOT_APPLIED",
+      "sourcePriority": "BLOCKS_RELEASE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/52",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j51_consistency_and_drc.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_consistency_and_drc.json",
+            "bytes": 62407,
+            "sha256": "D7ACF0AC269F55A4D17E0B3475CD57FEC915AD36C3B343E7A46FEF35D375E17F"
+          }
+        },
+        {
+          "originalReference": "j52_actual_reference_projection.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_actual_reference_projection.json",
+            "bytes": 159496,
+            "sha256": "8CA862317241F7223C624D064F79F1018A515D40839F39E5FFB7420013875E6E"
+          }
+        },
+        {
+          "originalReference": "j52_53_fourlayer_default_application_review.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_53_fourlayer_default_application_review.json",
+            "bytes": 3182,
+            "sha256": "8E247425E93323D494361E78CA5615E45C08E0D0F6556FF995ABDF8A24BD60AB"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK52_STACK_LEGACY",
+        "lesson": 52,
+        "title": "旧四层参考架构与用户新默认不一致",
+        "variant": "4L",
+        "nature": "USER_REQUIREMENT_NOT_APPLIED",
+        "priority": "BLOCKS_RELEASE",
+        "evidence": [
+          "j51_consistency_and_drc.json",
+          "j52_actual_reference_projection.json",
+          "j52_53_fourlayer_default_application_review.json"
+        ],
+        "conclusion": "b019实际L2/L3均为GND；用户当前默认是TOP器件信号/L2完整GND/L3电源/BOTTOM信号。既有BOTTOM→L3 GND参考检查仅对旧输入有效。",
+        "nextAction": "新版本实建L3电源域并重评BOTTOM所有参考；L2不采用signal桥。检查旧HSE L2岛/void与完整地定义是否兼容。",
+        "nextAcceptance": "实际L2完整GND与L3电源polygon/net已生成、重开读回；全pin/旧边/DRC/返回/输出重验，不能仅改用途文字。",
+        "nets": [],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK53_STACK_LEGACY",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J51_54",
+      "lesson": 53,
+      "variant": "4L",
+      "title": "L3电源域和跨参考返回尚未建立",
+      "status": "NEW_POWER_PLANE_DESIGN_PENDING",
+      "sourceStatusField": "nature",
+      "sourceStatusValue": "NEW_POWER_PLANE_DESIGN_PENDING",
+      "sourcePriority": "BLOCKS_RELEASE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+        "bytes": 52585,
+        "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+      },
+      "sourceJSONPointer": "/issues/53",
+      "sourceEvidenceReferences": [
+        {
+          "originalReference": "j53_actual_power_domains.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+            "bytes": 526171,
+            "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+          }
+        },
+        {
+          "originalReference": "j52_53_fourlayer_default_application_review.json",
+          "resolved": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_53_fourlayer_default_application_review.json",
+            "bytes": 3182,
+            "sha256": "8E247425E93323D494361E78CA5615E45C08E0D0F6556FF995ABDF8A24BD60AB"
+          }
+        }
+      ],
+      "originalIssue": {
+        "id": "JK53_STACK_LEGACY",
+        "lesson": 53,
+        "title": "L3电源域和跨参考返回尚未建立",
+        "variant": "4L",
+        "nature": "NEW_POWER_PLANE_DESIGN_PENDING",
+        "priority": "BLOCKS_RELEASE",
+        "evidence": [
+          "j53_actual_power_domains.json",
+          "j52_53_fourlayer_default_application_review.json"
+        ],
+        "conclusion": "新L3电源并非将旧GND层改名；需要按真实V3V3/V5/VIN负载选择铜区与分割。BOTTOM参考电源平面时，跨域/换参考需要实际去耦和回流通路，单添GNDvia不等于参考转换。",
+        "nextAction": "定义每电源域poly/net/馈入/去耦/边界；保持buck热回路本地。规划BOTTOM避免裂缝；必要改走TOP或有实际短返回桥。",
+        "nextAcceptance": "实际电源铜及GND隔离、供电电流/压降、去耦位置与返回、所有新反焊盘和制造输出有版本对应；未知负载仍保留。",
+        "nets": [
+          "V3V3",
+          "V5",
+          "VIN_PROT",
+          "GND"
+        ],
+        "areaXY": null,
+        "owner": "后续设计/审查任务；本轮只读，不自动改板",
+        "releaseDecision": "NOT_RELEASE_APPROVAL"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK57-001",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "采购料号及生产旋转标准未定",
+      "status": "OPEN_RELEASE",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "OPEN_RELEASE",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/0",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK57-001",
+        "title": "采购料号及生产旋转标准未定",
+        "status": "OPEN_RELEASE",
+        "nextAction": "逐件定MPN并与装配厂确认封装零度、吸取中心和顶底镜像转换；当前CSV保留CAD原点/原生角度。",
+        "evidenceByScope": {
+          "BOTH": {
+            "mpnSpecified": 12,
+            "mpnPending": 68
+          }
+        }
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK57-002",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "默认USB和CAN备选料互斥",
+      "status": "OPEN_RELEASE",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "OPEN_RELEASE",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/1",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK57-002",
+        "title": "默认USB和CAN备选料互斥",
+        "status": "OPEN_RELEASE",
+        "nextAction": "本轮输出默认USB：R5/R6装22R，R12/R13 DNP；22R为历史工程值，未硬件验证；CAN配置只能受控另出BOM和固件。",
+        "evidenceByScope": {
+          "BOTH": {
+            "USB": {
+              "fit": [
+                "R_USB_DP",
+                "R_USB_DM"
+              ],
+              "DNP": [
+                "R_CAN_TX",
+                "R_CAN_RX"
+              ],
+              "firmware": "enable USB only, PB0=0 and V3V3 valid then PA8=0; PB0=1 => PA8=1. At reset Q_ATTACH off."
+            },
+            "CAN": {
+              "fit": [
+                "R_CAN_TX",
+                "R_CAN_RX"
+              ],
+              "DNP": [
+                "R_USB_DP",
+                "R_USB_DM"
+              ],
+              "firmware": "enable CAN only, PA8 always high; USB and CAN share MCU SRAM and cannot operate simultaneously even with remapping"
+            }
+          }
+        }
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK55-005",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "USB安装脚长与约1.6mm板厚装配尚未匹配",
+      "status": "OPEN_RELEASE",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "OPEN_RELEASE",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/2",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK55-005",
+        "title": "USB安装脚长与约1.6mm板厚装配尚未匹配",
+        "status": "OPEN_RELEASE",
+        "nextAction": "确认座高/成品板厚公差/壳脚焊接工艺，不将S误解为板底突出量。",
+        "evidenceByScope": {
+          "BOTH": {
+            "connector": "USB4105-GF-A",
+            "stakeLengthBelowSeatingPlaneMM": "0.95 ±0.15",
+            "note": "D:\\001DIY\\005lib\\01AIEDA\\learning\\notes\\lessonF_source_corrections_20261019.md"
+          }
+        }
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK55-006",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "USB两层阻焊桥0.100mm小于所选公开目标0.1016mm",
+      "status": "OPEN_RELEASE",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "OPEN_RELEASE",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/3",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK55-006",
+        "title": "USB两层阻焊桥0.100mm小于所选公开目标0.1016mm",
+        "status": "OPEN_RELEASE",
+        "nextAction": "与板厂确认可行工艺或受控改开窗/厂商；不能以差1.6um忽略。",
+        "evidenceByScope": {
+          "2L": {
+            "nominalMaskBridgeMM": 0.1,
+            "publicMinimumMM": 0.1016
+          }
+        }
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK55-007",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "DNP焊盘仍在原生钢网定义中",
+      "status": "OPEN_PROCESS",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "OPEN_PROCESS",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/4",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK55-007",
+        "title": "DNP焊盘仍在原生钢网定义中",
+        "status": "OPEN_PROCESS",
+        "nextAction": "根据不装位焊料策略决定是否屏蔽钢网开口；当前全PAD钢网并非已批准装配变体。",
+        "evidenceByScope": {
+          "BOTH": {
+            "DNP": [
+              "R12",
+              "R13"
+            ]
+          },
+          "ACTUAL_STENCIL": {
+            "R12_1": 1,
+            "R12_2": 1,
+            "R13_1": 1,
+            "R13_2": 1,
+            "source": "independent_CAM actual_mask_stencil_review.json"
+          }
+        }
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK55-008",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "默认高度和PlaceBound不等实物尺寸",
+      "status": "OPEN_RELEASE",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "OPEN_RELEASE",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/5",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK55-008",
+        "title": "默认高度和PlaceBound不等实物尺寸",
+        "status": "OPEN_RELEASE",
+        "nextAction": "1mm缺省只代表教学占位；68件无MPN及实际courtyard/连接器插拔/装配公差仍待核，不把PlaceBound叫真实器件body。",
+        "evidenceByScope": {
+          "BOTH": {
+            "defaultHeightMM": 1,
+            "heightSource": "User default / existing explicit library properties"
+          }
+        }
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK55-009",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "测试点/极性/定位与生产装配输出待确认",
+      "status": "OPEN_RELEASE",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "OPEN_RELEASE",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/6",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK55-009",
+        "title": "测试点/极性/定位与生产装配输出待确认",
+        "status": "OPEN_RELEASE",
+        "nextAction": "导出每件pin1实际坐标并按原理图极性核对；排针/裸pad不能自动作为量产探针方案；需测试夹具/接触/可达性。",
+        "evidenceByScope": {
+          "BOTH": {
+            "dedicatedTestPointApproval": false
+          }
+        }
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK55-001",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "三文字层缺失",
+      "status": "CLOSED_JK_INSTANCE_CORRECTION_FRESH_VERIFIED",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "CLOSED_JK_INSTANCE_CORRECTION_FRESH_VERIFIED",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/7",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK55-001",
+        "title": "三文字层缺失",
+        "status": "CLOSED_JK_INSTANCE_CORRECTION_FRESH_VERIFIED",
+        "nextAction": "本轮JK实例已整改并独立fresh验收；公共库不改，未来refresh/ECO需复核。",
+        "evidenceByScope": {
+          "2L": {
+            "REF DES/SILKSCREEN_TOP": 20,
+            "COMPONENT VALUE/ASSEMBLY_TOP": 78
+          },
+          "4L": {
+            "REF DES/SILKSCREEN_TOP": 20,
+            "COMPONENT VALUE/ASSEMBLY_TOP": 78
+          },
+          "JK_FRESH": {
+            "report": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_corrected_independent_summary.json",
+            "sha256": "F7535B9EF3C9B71AC7B001AAFC8ADCFE712D0FA24D72F975CA6D210963DFEDA7",
+            "checks": 1644,
+            "variants": {
+              "2L": {
+                "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\2L\\JK_2L_J55_text_height_review_NOT_RELEASED.brd",
+                "sha256": "EAA65005B80694AB58617CBF3637815484C7510F2CC0693BF0FFC3D41BDC5FBD",
+                "checks": 822,
+                "failed": 0,
+                "requiredTexts": 240,
+                "allInstanceTexts": 247,
+                "userDefaultHeightShapes": 72,
+                "preservedExplicitHeightShapes": 8,
+                "preservedLegacyBoundPaths": 4,
+                "assemblyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\assembly\\JK55_2L_corrected_TRAINING"
+              },
+              "4L": {
+                "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\4L\\JK_4L_J55_text_height_review_NOT_RELEASED.brd",
+                "sha256": "9DEC773FE106E09C9844FEF5F160E1A1B3348BFC693926579F0CAF0A6A18DCF0",
+                "checks": 822,
+                "failed": 0,
+                "requiredTexts": 240,
+                "allInstanceTexts": 247,
+                "userDefaultHeightShapes": 72,
+                "preservedExplicitHeightShapes": 8,
+                "preservedLegacyBoundPaths": 4,
+                "assemblyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\assembly\\JK55_4L_corrected_TRAINING"
+              }
+            }
+          }
+        }
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK55-002",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "必要文字锚点偏离器件原点",
+      "status": "CLOSED_JK_INSTANCE_CORRECTION_FRESH_VERIFIED",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "CLOSED_JK_INSTANCE_CORRECTION_FRESH_VERIFIED",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/8",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK55-002",
+        "title": "必要文字锚点偏离器件原点",
+        "status": "CLOSED_JK_INSTANCE_CORRECTION_FRESH_VERIFIED",
+        "nextAction": "本轮JK实例已整改并独立fresh验收；公共库不改，未来refresh/ECO需复核。",
+        "evidenceByScope": {
+          "2L": {
+            "REF DES/SILKSCREEN_TOP": 58,
+            "REF DES/ASSEMBLY_TOP": 64
+          },
+          "4L": {
+            "REF DES/SILKSCREEN_TOP": 58,
+            "REF DES/ASSEMBLY_TOP": 64
+          },
+          "JK_FRESH": {
+            "report": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_corrected_independent_summary.json",
+            "sha256": "F7535B9EF3C9B71AC7B001AAFC8ADCFE712D0FA24D72F975CA6D210963DFEDA7",
+            "checks": 1644,
+            "variants": {
+              "2L": {
+                "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\2L\\JK_2L_J55_text_height_review_NOT_RELEASED.brd",
+                "sha256": "EAA65005B80694AB58617CBF3637815484C7510F2CC0693BF0FFC3D41BDC5FBD",
+                "checks": 822,
+                "failed": 0,
+                "requiredTexts": 240,
+                "allInstanceTexts": 247,
+                "userDefaultHeightShapes": 72,
+                "preservedExplicitHeightShapes": 8,
+                "preservedLegacyBoundPaths": 4,
+                "assemblyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\assembly\\JK55_2L_corrected_TRAINING"
+              },
+              "4L": {
+                "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\4L\\JK_4L_J55_text_height_review_NOT_RELEASED.brd",
+                "sha256": "9DEC773FE106E09C9844FEF5F160E1A1B3348BFC693926579F0CAF0A6A18DCF0",
+                "checks": 822,
+                "failed": 0,
+                "requiredTexts": 240,
+                "allInstanceTexts": 247,
+                "userDefaultHeightShapes": 72,
+                "preservedExplicitHeightShapes": 8,
+                "preservedLegacyBoundPaths": 4,
+                "assemblyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\assembly\\JK55_4L_corrected_TRAINING"
+              }
+            }
+          }
+        }
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK55-003",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "72件缺省高度未实际写入",
+      "status": "CLOSED_JK_INSTANCE_CORRECTION_FRESH_VERIFIED",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "CLOSED_JK_INSTANCE_CORRECTION_FRESH_VERIFIED",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/9",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK55-003",
+        "title": "72件缺省高度未实际写入",
+        "status": "CLOSED_JK_INSTANCE_CORRECTION_FRESH_VERIFIED",
+        "nextAction": "本轮JK实例已整改并独立fresh验收；公共库不改，未来refresh/ECO需复核。",
+        "evidenceByScope": {
+          "2L": {
+            "missingCount": 72,
+            "explicitCount": 8
+          },
+          "4L": {
+            "missingCount": 72,
+            "explicitCount": 8
+          },
+          "JK_FRESH": {
+            "report": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_corrected_independent_summary.json",
+            "sha256": "F7535B9EF3C9B71AC7B001AAFC8ADCFE712D0FA24D72F975CA6D210963DFEDA7",
+            "checks": 1644,
+            "variants": {
+              "2L": {
+                "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\2L\\JK_2L_J55_text_height_review_NOT_RELEASED.brd",
+                "sha256": "EAA65005B80694AB58617CBF3637815484C7510F2CC0693BF0FFC3D41BDC5FBD",
+                "checks": 822,
+                "failed": 0,
+                "requiredTexts": 240,
+                "allInstanceTexts": 247,
+                "userDefaultHeightShapes": 72,
+                "preservedExplicitHeightShapes": 8,
+                "preservedLegacyBoundPaths": 4,
+                "assemblyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\assembly\\JK55_2L_corrected_TRAINING"
+              },
+              "4L": {
+                "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\4L\\JK_4L_J55_text_height_review_NOT_RELEASED.brd",
+                "sha256": "9DEC773FE106E09C9844FEF5F160E1A1B3348BFC693926579F0CAF0A6A18DCF0",
+                "checks": 822,
+                "failed": 0,
+                "requiredTexts": 240,
+                "allInstanceTexts": 247,
+                "userDefaultHeightShapes": 72,
+                "preservedExplicitHeightShapes": 8,
+                "preservedLegacyBoundPaths": 4,
+                "assemblyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\assembly\\JK55_4L_corrected_TRAINING"
+              }
+            }
+          }
+        }
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK57-003",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "原01env PDFTOP并非完整装配图",
+      "status": "OPEN_PROCESS",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "OPEN_PROCESS",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/10",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK57-003",
+        "title": "原01env PDFTOP并非完整装配图",
+        "status": "OPEN_PROCESS",
+        "nextAction": "原Film保留；JK独立装配输出另包含PACKAGE GEOMETRY/ASSEMBLY_TOP、REF DES/ASSEMBLY_TOP、COMPONENT VALUE/ASSEMBLY_TOP及板框/孔，不称旧PDFTOP已输出value。",
+        "evidenceByScope": {
+          "2L": {
+            "PDFTOPGroups": [
+              "REF DES/ASSEMBLY_TOP",
+              "PACKAGE GEOMETRY/SILKSCREEN_TOP",
+              "BOARD GEOMETRY/OUTLINE"
+            ]
+          },
+          "4L": {
+            "PDFTOPGroups": [
+              "REF DES/ASSEMBLY_TOP",
+              "PACKAGE GEOMETRY/SILKSCREEN_TOP",
+              "BOARD GEOMETRY/OUTLINE"
+            ]
+          }
+        }
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK55-004",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "丝印文字到开窗仍须真实字形审核",
+      "status": "OPEN_RELEASE",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "OPEN_RELEASE",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/11",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK55-004",
+        "title": "丝印文字到开窗仍须真实字形审核",
+        "status": "OPEN_RELEASE",
+        "evidenceByScope": {
+          "BOTH": {
+            "b019TextBBoxCandidatesPerBoard": 190,
+            "bboxIntersectionsAreNotInkViolations": true
+          }
+        },
+        "nextAction": "三文字按用户原点修正后重新审核实际Gerber字形；不擅自挪到器件外侧。"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK55-010",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "真实SOLDTOP窄阻焊桥低于所选公开工艺目标",
+      "status": "CONFIRMED_GEOMETRY_DFM_RELEASE_OPEN",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "CONFIRMED_GEOMETRY_DFM_RELEASE_OPEN",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/12",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK55-010",
+        "title": "真实SOLDTOP窄阻焊桥低于所选公开工艺目标",
+        "status": "CONFIRMED_GEOMETRY_DFM_RELEASE_OPEN",
+        "evidenceByScope": {
+          "BOTH": {
+            "C8_2_to_U3_2_3_and_C9_2_to_U3_4_BBoxLowerBoundMM": 0.0635,
+            "roundedRectangleRadiusAvailable": false,
+            "J2_NPTH_to_GND_nominalWebMM": 0.075,
+            "source": "j55_{v}_nominal_mask_web_under025_b019.csv"
+          },
+          "ACTUAL_GERBER": {
+            "2L": {
+              "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_CAM\\2L\\actual_mask_stencil_review.json",
+              "sha256": "54151C1419722A32C313369B0A3DEDB382FD5B0397F4E6134A9A1DC6469921CB",
+              "actual": {
+                "actualGaps": [
+                  {
+                    "a": "C8.2",
+                    "b": "U3.2",
+                    "actualGerberMaskEdgeDistanceMM": 0.06350000000000122,
+                    "arcApproximationErrorMM": 5e-05,
+                    "productionAcceptable": null
+                  },
+                  {
+                    "a": "C9.2",
+                    "b": "U3.4",
+                    "actualGerberMaskEdgeDistanceMM": 0.08542688673095572,
+                    "arcApproximationErrorMM": 5e-05,
+                    "productionAcceptable": null
+                  },
+                  {
+                    "a": "U3.2",
+                    "b": "U3.3",
+                    "actualGerberMaskEdgeDistanceMM": 0.24999999999999645,
+                    "arcApproximationErrorMM": 5e-05,
+                    "productionAcceptable": null
+                  },
+                  {
+                    "a": "J2.A6",
+                    "b": "J2.A7",
+                    "actualGerberMaskEdgeDistanceMM": 0.09999999999999432,
+                    "arcApproximationErrorMM": 5e-05,
+                    "productionAcceptable": null
+                  }
+                ],
+                "stencilDNPOpenings": [
+                  {
+                    "pin": "R12.1",
+                    "openingCount": 1
+                  },
+                  {
+                    "pin": "R12.2",
+                    "openingCount": 1
+                  },
+                  {
+                    "pin": "R13.1",
+                    "openingCount": 1
+                  },
+                  {
+                    "pin": "R13.2",
+                    "openingCount": 1
+                  }
+                ],
+                "maskRepresentation": "Dark Gerber features are mask openings under this template convention, not painted resist.",
+                "release": "NOT_APPROVED_FAB_CAPABILITY_AND_ASSEMBLY_PROFILE_PENDING"
+              }
+            },
+            "4L": {
+              "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_CAM\\4L\\actual_mask_stencil_review.json",
+              "sha256": "54151C1419722A32C313369B0A3DEDB382FD5B0397F4E6134A9A1DC6469921CB",
+              "actual": {
+                "actualGaps": [
+                  {
+                    "a": "C8.2",
+                    "b": "U3.2",
+                    "actualGerberMaskEdgeDistanceMM": 0.06350000000000122,
+                    "arcApproximationErrorMM": 5e-05,
+                    "productionAcceptable": null
+                  },
+                  {
+                    "a": "C9.2",
+                    "b": "U3.4",
+                    "actualGerberMaskEdgeDistanceMM": 0.08542688673095572,
+                    "arcApproximationErrorMM": 5e-05,
+                    "productionAcceptable": null
+                  },
+                  {
+                    "a": "U3.2",
+                    "b": "U3.3",
+                    "actualGerberMaskEdgeDistanceMM": 0.24999999999999645,
+                    "arcApproximationErrorMM": 5e-05,
+                    "productionAcceptable": null
+                  },
+                  {
+                    "a": "J2.A6",
+                    "b": "J2.A7",
+                    "actualGerberMaskEdgeDistanceMM": 0.09999999999999432,
+                    "arcApproximationErrorMM": 5e-05,
+                    "productionAcceptable": null
+                  }
+                ],
+                "stencilDNPOpenings": [
+                  {
+                    "pin": "R12.1",
+                    "openingCount": 1
+                  },
+                  {
+                    "pin": "R12.2",
+                    "openingCount": 1
+                  },
+                  {
+                    "pin": "R13.1",
+                    "openingCount": 1
+                  },
+                  {
+                    "pin": "R13.2",
+                    "openingCount": 1
+                  }
+                ],
+                "maskRepresentation": "Dark Gerber features are mask openings under this template convention, not painted resist.",
+                "release": "NOT_APPROVED_FAB_CAPABILITY_AND_ASSEMBLY_PROFILE_PENDING"
+              }
+            }
+          },
+          "FACTORY_CONDITIONS": {
+            "OSH2L_minBridgeMM": 0.1016,
+            "JLC4L_1oz_colours_green_red_yellow_blue_purple_minMM": 0.1,
+            "JLC4L_blackWhite_1oz_minMM": 0.13,
+            "JLC2oz_minMM": 0.2,
+            "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\source\\jlc_capabilities_20261019.txt"
+          }
+        },
+        "nextAction": "真实Gerber边界C8.2/U3.2=.0635、C9.2/U3.4=.0854268867mm低于所选最低目标；生产前需板厂确认或受控改padmask/位置。保留bbox下界历史，本次只文字高度批不改开窗或公库。"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK55-011",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "继承丝印字体低于JLC所选公开高度",
+      "status": "OPEN_RELEASE",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "OPEN_RELEASE",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/13",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK55-011",
+        "title": "继承丝印字体低于JLC所选公开高度",
+        "status": "OPEN_RELEASE",
+        "evidenceByScope": {
+          "BOTH": {
+            "officialSource": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\source\\jlc_capabilities_20261019.txt",
+            "sourceLineRange": "345..361",
+            "minimumTextHeightMM": 1.0,
+            "minimumLineWidthMM": 0.15,
+            "padToSilkscreenMM": 0.15,
+            "CADFonts": "Real35TEXTBLOCK parameters retained; common0.508/0.635/0.7874mm; photoWidth0 is native inherited behavior, not assumed zero ink."
+          }
+        },
+        "nextAction": "本次保持字体实现来源一致；制造版另行决定字体/原点重叠与工厂细字能力，不能把1mm器件缺省高度当文字高度。"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK57-004",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "CAD符号原点不是已核准的吸取中心",
+      "status": "OPEN_RELEASE",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "OPEN_RELEASE",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/14",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK57-004",
+        "title": "CAD符号原点不是已核准的吸取中心",
+        "status": "OPEN_RELEASE",
+        "evidenceByScope": {
+          "BOTH": {
+            "coordinateMeaning": "unchanged native symbol origin",
+            "nonCentredLibraryOrigins": "0603 local pads1=.1016,2=1.6764mm; not symmetric about origin0",
+            "factoryAngleMapping": "unavailable"
+          }
+        },
+        "nextAction": "以最终选定MPN吸取位置和机器零度作受控转换，保持CAD原始坐标另列，实机首件方向核准。"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK57-005",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "三文字同原点不能直接作为可读叠印装配图",
+      "status": "OPEN_RELEASE",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "OPEN_RELEASE",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/15",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK57-005",
+        "title": "三文字同原点不能直接作为可读叠印装配图",
+        "status": "OPEN_RELEASE",
+        "evidenceByScope": {
+          "BOTH": {
+            "userConvention": "REFDES ASSEMBLY and VALUE ASSEMBLY both anchor at symbol origin"
+          }
+        },
+        "nextAction": "出分别显示REF与VALUE的装配核对视图或与BOM配套；不要为图面清晰擅改用户要求的CAD锚点。"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "JK57-006",
+      "recordType": "INHERITED_SOURCE_RECORD",
+      "sourceGroup": "J55_57",
+      "lesson": null,
+      "variant": "BOTH_OR_PER_SOURCE_EVIDENCE",
+      "title": "四层本轮源为L3_GND历史栈",
+      "status": "OPEN_RELEASE",
+      "sourceStatusField": "status",
+      "sourceStatusValue": "OPEN_RELEASE",
+      "sourcePriority": null,
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+        "bytes": 20245,
+        "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+      },
+      "sourceJSONPointer": "/issues/16",
+      "sourceEvidenceReferences": [],
+      "originalIssue": {
+        "issueID": "JK57-006",
+        "title": "四层本轮源为L3_GND历史栈",
+        "status": "OPEN_RELEASE",
+        "evidenceByScope": {
+          "BOTH": {
+            "currentJ55Source": "LEGACY_4L_L3_GND",
+            "newUserPreferredStack": "TOP parts/signals - L2 GND - L3 power - BOTTOM signals",
+            "L2SignalBridge95": "HISTORY_ONLY_NOT_ADOPTED"
+          }
+        },
+        "nextAction": "本轮文字/高度和制造导出练习保历史铜层身份；真正L3电源层重建、返回和输出必须另行完整验证，不以本次输出冒充新默认实现。"
+      },
+      "releaseInterpretation": "Inherit original source status. Evidence-verified or locally closed is not overall manufacturing/lesson completion approval."
+    },
+    {
+      "stableID": "K56_TEMPLATE_TEXT",
+      "recordType": "ADDITIONAL_RELEASE_OR_COMPLETION_GATE",
+      "sourceGroup": "JK_RELEASE_GATE_20261023",
+      "lesson": 56,
+      "variant": "2L+4L",
+      "title": "三文字伴随Film已出，原模板未自动包含全部文字",
+      "status": "COMPANION_EXPORT_VERIFIED_TEMPLATE_HANDOFF_OPEN",
+      "sourceStatusField": "NEW_GATE_STATUS",
+      "sourceStatusValue": "COMPANION_EXPORT_VERIFIED_TEMPLATE_HANDOFF_OPEN",
+      "sourcePriority": "BLOCKS_RELEASE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_CAM_J55\\2L\\report.json",
+        "bytes": 19300,
+        "sha256": "0A450D719C1A0B2CA8101451696854504E941E7F1A82200FABA94412CFD2DDED"
+      },
+      "sourceJSONPointer": "",
+      "sourceEvidenceFiles": [
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_CAM_J55\\2L\\report.json",
+          "bytes": 19300,
+          "sha256": "0A450D719C1A0B2CA8101451696854504E941E7F1A82200FABA94412CFD2DDED"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_CAM_J55\\4L\\report.json",
+          "bytes": 20793,
+          "sha256": "9C2C61F11833133C22D1C93E4E4CFF5F765C85693041210CD02DF61888BDDA99"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\companion_and_J55_CAM\\2L\\report.json",
+          "bytes": 4524,
+          "sha256": "19EA6140EF249FD2C7711A8DB76021EC1329749BC03EBBD567B9872566F8BD1A"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\companion_and_J55_CAM\\4L\\report.json",
+          "bytes": 4736,
+          "sha256": "FD114484DD42BE88D7923C6F7FED83298C743EDF91B40FA25173CB4FBC806157"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_corrected_independent_summary.json",
+          "bytes": 1395,
+          "sha256": "F7535B9EF3C9B71AC7B001AAFC8ADCFE712D0FA24D72F975CA6D210963DFEDA7"
+        }
+      ],
+      "evidence": {
+        "correctedCAMPassed": {
+          "2L": 77,
+          "4L": 85
+        },
+        "perFilmActualGeometryChecksPassed": {
+          "2L": 22,
+          "4L": 24
+        },
+        "changedOriginalFilms": [
+          "PDFTOP"
+        ],
+        "allOtherOriginalFilmGeometryUnchanged": true,
+        "originalSKILTOP": [
+          "PACKAGE GEOMETRY/SILKSCREEN_TOP"
+        ],
+        "originalPDFTOP": [
+          "REF DES/ASSEMBLY_TOP",
+          "PACKAGE GEOMETRY/SILKSCREEN_TOP",
+          "BOARD GEOMETRY/OUTLINE"
+        ],
+        "companionFilms": {
+          "2L": [
+            {
+              "file": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\supplement_2L_THREE_TEXTS_TRAINING\\REFDES_SILK_TOP.art",
+              "sha256": "47509baa62bc388e966aedc659fded2432cd8ac361772f8883d2e51cc3dbc26d",
+              "headerLayers": [
+                "REF DES/SILKSCREEN_TOP"
+              ],
+              "objects": 2339
+            },
+            {
+              "file": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\supplement_2L_THREE_TEXTS_TRAINING\\REFDES_ASSEMBLY_TOP.art",
+              "sha256": "b04b2d03f9a8e4c13fb13a7e36835f3d7584bf9ec8e81b340f22ea0ec45c5d5b",
+              "headerLayers": [
+                "REF DES/ASSEMBLY_TOP"
+              ],
+              "objects": 2339
+            },
+            {
+              "file": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\supplement_2L_THREE_TEXTS_TRAINING\\VALUE_ASSEMBLY_TOP.art",
+              "sha256": "80f906de7702f316e88e06f010342a2a3c1b99ca20a2f8a6886e991fa023ce8c",
+              "headerLayers": [
+                "COMPONENT VALUE/ASSEMBLY_TOP"
+              ],
+              "objects": 4130
+            }
+          ],
+          "4L": [
+            {
+              "file": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\supplement_4L_THREE_TEXTS_TRAINING\\REFDES_SILK_TOP.art",
+              "sha256": "7619cec649b88524027e44ef0d809b78bf36b7b1f8775b8c05679312c5ff2938",
+              "headerLayers": [
+                "REF DES/SILKSCREEN_TOP"
+              ],
+              "objects": 2339
+            },
+            {
+              "file": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\supplement_4L_THREE_TEXTS_TRAINING\\REFDES_ASSEMBLY_TOP.art",
+              "sha256": "f385c2493dfb91717b68fc696a8c40e08da7d82f2901611a95cca06a17d3519d",
+              "headerLayers": [
+                "REF DES/ASSEMBLY_TOP"
+              ],
+              "objects": 2339
+            },
+            {
+              "file": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\supplement_4L_THREE_TEXTS_TRAINING\\VALUE_ASSEMBLY_TOP.art",
+              "sha256": "b46f860245921313950bbcab6bfefa74189f6ffe35f70e48933df08c38da6209",
+              "headerLayers": [
+                "COMPONENT VALUE/ASSEMBLY_TOP"
+              ],
+              "objects": 4130
+            }
+          ]
+        },
+        "nativeInstancesPerRequestedLayer": 80,
+        "strokeObjectsAreNotTextCount": true,
+        "originalTemplateChanged": false
+      },
+      "nextAction": "生产包须明确纳入三份补充图或经批准形成完整输出约定；原01env/主15或17Film保持。",
+      "nextAcceptance": "最终生产包目录、三文字class映射、源BRD SHA和对应独立CAM/目视核对一致；不能只发原SKILTOP就称REF丝印齐全。",
+      "relatedStableIDs": [
+        "JK55-001",
+        "JK55-002",
+        "JK57-003",
+        "JK57-005",
+        "JK56-TEMPLATE-TEXT"
+      ],
+      "releaseInterpretation": "Training evidence may pass while this manufacturing/completion gate remains open."
+    },
+    {
+      "stableID": "K56_NATIVE_OOD",
+      "recordType": "ADDITIONAL_RELEASE_OR_COMPLETION_GATE",
+      "sourceGroup": "JK_RELEASE_GATE_20261023",
+      "lesson": 56,
+      "variant": "2L+4L",
+      "title": "原生光绘有DRC_OUT_OF_DATE，整板当前检查待完成",
+      "status": "OPEN_NATIVE_OOD_AND_WHOLE_BOARD_DRC",
+      "sourceStatusField": "NEW_GATE_STATUS",
+      "sourceStatusValue": "OPEN_NATIVE_OOD_AND_WHOLE_BOARD_DRC",
+      "sourcePriority": "BLOCKS_RELEASE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\J55_corrected_2L_TRAINING_NOT_FOR_FAB\\photoplot.log",
+        "bytes": 57223,
+        "sha256": "ABCE77FDBCAD18AE6B85D4AD45327694FF5FEF7612A131B5C80E5D262DCFD933"
+      },
+      "sourceJSONPointer": "",
+      "sourceEvidenceFiles": [
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\J55_corrected_2L_TRAINING_NOT_FOR_FAB\\photoplot.log",
+          "bytes": 57223,
+          "sha256": "ABCE77FDBCAD18AE6B85D4AD45327694FF5FEF7612A131B5C80E5D262DCFD933"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\J55_corrected_4L_TRAINING_NOT_FOR_FAB\\photoplot.log",
+          "bytes": 60583,
+          "sha256": "C0FCCAA1CA54B75546B04DE63DE89C754BB34823C1970B9E357B795EC218943F"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_summary.json",
+          "bytes": 938,
+          "sha256": "144F7917418DA793886EC25AC42D98EC46B2A907C6C6BE2A38CE149D9BE61E25"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_CAM_J55\\2L\\report.json",
+          "bytes": 19300,
+          "sha256": "0A450D719C1A0B2CA8101451696854504E941E7F1A82200FABA94412CFD2DDED"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_CAM_J55\\4L\\report.json",
+          "bytes": 20793,
+          "sha256": "9C2C61F11833133C22D1C93E4E4CFF5F765C85693041210CD02DF61888BDDA99"
+        }
+      ],
+      "evidence": {
+        "nativePhotoplotWarnings": [
+          {
+            "variant": "2L",
+            "source": {
+              "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\J55_corrected_2L_TRAINING_NOT_FOR_FAB\\photoplot.log",
+              "bytes": 57223,
+              "sha256": "ABCE77FDBCAD18AE6B85D4AD45327694FF5FEF7612A131B5C80E5D262DCFD933"
+            },
+            "warningLines": [
+              " WARNING: DRC OUT OF DATE on this layout."
+            ]
+          },
+          {
+            "variant": "4L",
+            "source": {
+              "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\J55_corrected_4L_TRAINING_NOT_FOR_FAB\\photoplot.log",
+              "bytes": 60583,
+              "sha256": "C0FCCAA1CA54B75546B04DE63DE89C754BB34823C1970B9E357B795EC218943F"
+            },
+            "warningLines": [
+              " WARNING: DRC OUT OF DATE on this layout."
+            ]
+          }
+        ],
+        "wholeBoardDRC": {
+          "2L": null,
+          "4L": null
+        },
+        "boardConnectionComplete": {
+          "2L": false,
+          "4L": false
+        },
+        "filesDecodeSuccessfully": true
+      },
+      "nextAction": "完成剩余布线/铜更新/实际原生检查和问题闭环，再从最终源版重出CAM。",
+      "nextAcceptance": "最终原生更新检查有明确通过/处置记录、实际连接完成；新制造包绑定该版SHA，OOD原因关闭。",
+      "relatedStableIDs": [
+        "JK51-002",
+        "JK51-003"
+      ],
+      "releaseInterpretation": "Training evidence may pass while this manufacturing/completion gate remains open."
+    },
+    {
+      "stableID": "K58_FULL_TWO_BOARD_COMPLETION",
+      "recordType": "ADDITIONAL_RELEASE_OR_COMPLETION_GATE",
+      "sourceGroup": "JK_RELEASE_GATE_20261023",
+      "lesson": 58,
+      "variant": "2L+4L",
+      "title": "两套完整PCB工程尚未综合结课",
+      "status": "NOT_COMPLETE_TWO_BOARDS",
+      "sourceStatusField": "NEW_GATE_STATUS",
+      "sourceStatusValue": "NOT_COMPLETE_TWO_BOARDS",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_summary.json",
+        "bytes": 938,
+        "sha256": "144F7917418DA793886EC25AC42D98EC46B2A907C6C6BE2A38CE149D9BE61E25"
+      },
+      "sourceJSONPointer": "",
+      "sourceEvidenceFiles": [
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_summary.json",
+          "bytes": 938,
+          "sha256": "144F7917418DA793886EC25AC42D98EC46B2A907C6C6BE2A38CE149D9BE61E25"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+          "bytes": 171013,
+          "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_corrected_independent_summary.json",
+          "bytes": 1395,
+          "sha256": "F7535B9EF3C9B71AC7B001AAFC8ADCFE712D0FA24D72F975CA6D210963DFEDA7"
+        }
+      ],
+      "evidence": {
+        "currentReviewBasis": "b019 lineage and J55 instance-corrected copies",
+        "sevenGPIOJoinsPerBoard": true,
+        "wholeBoardDRCStillNone": true,
+        "instanceFix1644ChecksPassed": true,
+        "scope": "J55 text/height and CAM format success do not complete remaining routing/SI/PI/EMI/manufacturing gates."
+      },
+      "nextAction": "完成13课程遗留的7GPIO网/板、USB及整板DRC、真实回路/参考与工艺问题闭环，并形成两套源和输出一致的版本包。",
+      "nextAcceptance": "两板需求→库→原理图→PCB→BOM/坐标/CAM全链可复现且最终电气/几何/制造验收有证据。",
+      "relatedStableIDs": [
+        "K56_NATIVE_OOD",
+        "K4L_NEW_STACK_REQUIRED"
+      ],
+      "releaseInterpretation": "Training evidence may pass while this manufacturing/completion gate remains open."
+    },
+    {
+      "stableID": "K58_ISOLATED_ECO_REPLAY",
+      "recordType": "ADDITIONAL_RELEASE_OR_COMPLETION_GATE",
+      "sourceGroup": "JK_RELEASE_GATE_20261023",
+      "lesson": 58,
+      "variant": "DE_REPLAY_ONLY",
+      "title": "隔离DE原生ECO示范已通过，完整两板结课仍开放",
+      "status": "VERIFIED_ISOLATED_ECO_REPLAY_NOT_FULL_BOARD_COMPLETION",
+      "sourceStatusField": "NEW_GATE_STATUS",
+      "sourceStatusValue": "VERIFIED_ISOLATED_ECO_REPLAY_NOT_FULL_BOARD_COMPLETION",
+      "sourcePriority": "INFO",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_K58\\review.json",
+        "bytes": 239987,
+        "sha256": "B4C58CD107EC5F28DCB032810A13E2D67B7C997D7EE4A38C3C0908A772B08862"
+      },
+      "sourceJSONPointer": "",
+      "sourceEvidenceFiles": [
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_K58\\review.json",
+          "bytes": 239987,
+          "sha256": "B4C58CD107EC5F28DCB032810A13E2D67B7C997D7EE4A38C3C0908A772B08862"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\DE_REPLAY_ONLY\\native_replay_result.json",
+          "bytes": 3893,
+          "sha256": "E3405F3F3A41D97875274FD7E7563C2B53C21FD1D27018697EC8EDB6FE4FEC09"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\expected_delta.json",
+          "bytes": 1765,
+          "sha256": "65B7FB2796F982471A686AE0F0A6CE3C8C3F313E89C82544021F0BDB6C692D3D"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\replay_input_manifest.json",
+          "bytes": 74482,
+          "sha256": "BD35AF3B717384175234BCDA25E29A61A9B8AE996DADC0A5A7D3B3A77C1076D8"
+        }
+      ],
+      "evidence": {
+        "independentStatus": "PASS_INDEPENDENT_THIS_ROUND_ECO_REPLAY",
+        "independentChecks": 1453,
+        "independentFailures": [],
+        "actualNativeValueMethod": "Perref axlWriteDeviceFile PACKAGEPROP VALUE independently matches raw native compdef property and expected requirement; never inferred from deviceType suffix.",
+        "allSource119Unchanged": true,
+        "actualPinChanges": [
+          {
+            "refdes": "J13",
+            "pin": "7",
+            "before": "GPIO_PB8",
+            "after": "GPIO_PB9"
+          },
+          {
+            "refdes": "J13",
+            "pin": "8",
+            "before": "GPIO_PB9",
+            "after": "GPIO_PB8"
+          }
+        ],
+        "actualValueChanges": [
+          {
+            "refdes": "R19",
+            "before": "2.2k",
+            "after": "3.3k"
+          },
+          {
+            "refdes": "R20",
+            "before": "2.2k",
+            "after": "3.3k"
+          }
+        ],
+        "nativeProcessReportStatus": "NATIVE_REPLAY_COMPLETED_FRESH_READBACK_PENDING_INDEPENDENT_DIFF",
+        "output": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\DE_REPLAY_ONLY\\DE_ECO_REPLAY.brd",
+        "outputSHA256": "C1F5DF07547330977BFCE2C7296219F07691EE3793122F7BF99E475DBAB4F984",
+        "allProtectedOriginalsAndCopiesUnchanged": true,
+        "processes": [
+          {
+            "stage": "baseline_readonly",
+            "exitCode": 0,
+            "pid": 25568
+          },
+          {
+            "stage": "import_eco",
+            "exitCode": 0,
+            "pid": 9684
+          },
+          {
+            "stage": "eco_readonly",
+            "exitCode": 0,
+            "pid": 25920
+          }
+        ],
+        "scope": "Imported/unplaced DE replay. Not a routed J55 two-board ECO and not proof that current two boards are complete."
+      },
+      "nextAction": "保留本轮1453项独立比对和受保护119源身份；任何应用到真实已布线板的新ECO须重新完整验收。",
+      "nextAcceptance": "本轮已确认80件/272针/69网/6NC/placed0，仅2个VALUE+2个PIN变化；通过范围限定隔离未布局DE示范，不关闭完整两板门槛。",
+      "relatedStableIDs": [
+        "K58_FULL_TWO_BOARD_COMPLETION"
+      ],
+      "releaseInterpretation": "Training evidence may pass while this manufacturing/completion gate remains open."
+    },
+    {
+      "stableID": "K59_NOT_RUN",
+      "recordType": "ADDITIONAL_RELEASE_OR_COMPLETION_GATE",
+      "sourceGroup": "JK_RELEASE_GATE_20261023",
+      "lesson": 59,
+      "variant": "2L+4L",
+      "title": "打样、限流上电与功能测量尚未执行",
+      "status": "NOT_RUN_PHYSICAL_MEASUREMENTS",
+      "sourceStatusField": "NEW_GATE_STATUS",
+      "sourceStatusValue": "NOT_RUN_PHYSICAL_MEASUREMENTS",
+      "sourcePriority": "BLOCKS_PHYSICAL_CLOSURE",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\bench\\2L_bench_plan.json",
+        "bytes": 7427,
+        "sha256": "F4086377FC14328D3571094D89328B15CE2BA4FEBF8F32E3D008E5386319E8FD"
+      },
+      "sourceJSONPointer": "",
+      "sourceEvidenceFiles": [
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\bench\\2L_bench_plan.json",
+          "bytes": 7427,
+          "sha256": "F4086377FC14328D3571094D89328B15CE2BA4FEBF8F32E3D008E5386319E8FD"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\bench\\4L_bench_plan.json",
+          "bytes": 7427,
+          "sha256": "55B76CE54006E05C759D8202707EABCCADFDAAD19800A6620BD63C48882851A6"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\bench\\2L_measurement_sheet_NOT_RUN.csv",
+          "bytes": 3753,
+          "sha256": "22F424C293FFEB40CEDE16F4B20CF41CC4C4E73FEE89DDFD51D511D66C617245"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\bench\\4L_measurement_sheet_NOT_RUN.csv",
+          "bytes": 3753,
+          "sha256": "27A1B9E55C597E12916D4C7513C24020DDFEAD51DB6963768711235482C7DF9B"
+        }
+      ],
+      "evidence": {
+        "planStatus": {
+          "2L": "TEST_PLAN_ONLY_ALL_MEASUREMENTS_NOT_RUN",
+          "4L": "TEST_PLAN_ONLY_ALL_MEASUREMENTS_NOT_RUN"
+        },
+        "measurementPoints": {
+          "2L": 17,
+          "4L": 17
+        },
+        "actualMeasuredPoints": 0,
+        "initialCurrentLimitA": {
+          "2L": null,
+          "4L": null
+        },
+        "pointsAreCertifiedTestPoints": false,
+        "scope": "Test plans and probe candidates only; no physical board, instrument readings or hardware change closure is claimed."
+      },
+      "nextAction": "取得符合批准版本的实物及装配/上电前检查，基于真实启动和负载预算确定限流，再记录供电/时钟/复位/下载/接口测量。",
+      "nextAcceptance": "仪器、负载/线缆/环境、预期与实测值、波形/故障/回改版本可追溯；测量不得只写模拟PASS。",
+      "relatedStableIDs": [
+        "JK55-009"
+      ],
+      "releaseInterpretation": "Training evidence may pass while this manufacturing/completion gate remains open."
+    },
+    {
+      "stableID": "K4L_NEW_STACK_REQUIRED",
+      "recordType": "ADDITIONAL_RELEASE_OR_COMPLETION_GATE",
+      "sourceGroup": "JK_RELEASE_GATE_20261023",
+      "lesson": 52,
+      "variant": "4L",
+      "title": "新四层TOP/L2完整GND/L3电源/BOTTOM尚待最终验证",
+      "status": "OPEN_NEW_STACK_NATIVE_AND_REFERENCE_REVIEW",
+      "sourceStatusField": "NEW_GATE_STATUS",
+      "sourceStatusValue": "OPEN_NEW_STACK_NATIVE_AND_REFERENCE_REVIEW",
+      "sourcePriority": "BLOCKS_COMPLETION",
+      "source": {
+        "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_53_fourlayer_default_application_review.json",
+        "bytes": 3182,
+        "sha256": "8E247425E93323D494361E78CA5615E45C08E0D0F6556FF995ABDF8A24BD60AB"
+      },
+      "sourceJSONPointer": "",
+      "sourceEvidenceFiles": [
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_53_fourlayer_default_application_review.json",
+          "bytes": 3182,
+          "sha256": "8E247425E93323D494361E78CA5615E45C08E0D0F6556FF995ABDF8A24BD60AB"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_53_newstack_native_contract.json",
+          "bytes": 4489,
+          "sha256": "1B7DDAB7FE1F96D94A16A4BFBC502588989678042E53EB8B7B998987382CE28F"
+        },
+        {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\user_four_layer_function_rule_20261022.json",
+          "bytes": 1188,
+          "sha256": "121D022097B029EBB16198EC5A0726D4419DE89D30988A7C87244EFC1CCC8CD6"
+        }
+      ],
+      "evidence": {
+        "required": {
+          "TOP": "components/signals",
+          "L2": "continuous GND",
+          "L3": "power",
+          "BOTTOM": "signals"
+        },
+        "fixedLayerNames": [
+          "TOP",
+          "L2",
+          "L3",
+          "BOTTOM"
+        ],
+        "latestSealedJ55Role": "LEGACY_L2_GND_L3_GND",
+        "newNativeWork": "Preparation/approval retry per parent update; no completed new-stack native/fresh evidence consumed by this register",
+        "legacyReviewsAutomaticallyClose": false,
+        "L2SignalBridge95": "HISTORICAL_COMPARISON_NOT_ADOPTED"
+      },
+      "nextAction": "消费新板真实L3电源域/馈电/负载、L2实际连续地、BOTTOM参考/换层去耦和全铜/端点/规则/fresh/CAM证据后再逐项评审。",
+      "nextAcceptance": "独立实铜与回流复核通过并绑定新板SHA；保持原层名/原模板，不将旧L3_GND投影/共地结果套作L3电源版合格。",
+      "relatedStableIDs": [
+        "JK52_STACK_LEGACY",
+        "JK53_STACK_LEGACY",
+        "JK57-006"
+      ],
+      "releaseInterpretation": "Training evidence may pass while this manufacturing/completion gate remains open."
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_issues.json",
+      "bytes": 52585,
+      "sha256": "8E348F2A527841A5C3F290EC46C9AE93426F058E7152022D01B969E8161914BF"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_input_integrity.json",
+      "bytes": 219165,
+      "sha256": "39E1898987B26C30825E6D103D358E1D22329D7358B0C856996570B7A8BCC227"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_consistency_and_drc.json",
+      "bytes": 62407,
+      "sha256": "D7ACF0AC269F55A4D17E0B3475CD57FEC915AD36C3B343E7A46FEF35D375E17F"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all69_net_matrix.json",
+      "bytes": 171013,
+      "sha256": "67E18DACFBA2E000A9D8FB55E5AAFBA032E4904EFDA36FAB04D7BCF3A35491A3"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_all56_ground_pins_and_all_vias.json",
+      "bytes": 56202,
+      "sha256": "543398184D46A18CEE5BD049BF86BD12B389A55C33EEB299BAEA459EE1FAB2CA"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_USB14_gap_piece_register.json",
+      "bytes": 694665,
+      "sha256": "C178A43E719FAD49EA2A75B020285251A2DC056184759B7114C40F619301A208"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_actual_reference_projection.json",
+      "bytes": 159496,
+      "sha256": "8CA862317241F7223C624D064F79F1018A515D40839F39E5FFB7420013875E6E"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_signal_via_return_candidates_actual.json",
+      "bytes": 86133,
+      "sha256": "CC5822BAB8B75D26C9522415CB8F09DE40953DF9790B5A85A2AC867B22444F34"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j53_actual_power_domains.json",
+      "bytes": 526171,
+      "sha256": "8A532DDD7CDE8F2179FF96D4128E13945F6F15847847181211B4C7C699068BC3"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_sources.json",
+      "bytes": 17544,
+      "sha256": "A83FC99399AE15E9BC63324FC6672344ACCE04627BC62F0A57770A732ADA97CE"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_53_fourlayer_default_application_review.json",
+      "bytes": 3182,
+      "sha256": "8E247425E93323D494361E78CA5615E45C08E0D0F6556FF995ABDF8A24BD60AB"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_57_issue_registry.json",
+      "bytes": 20245,
+      "sha256": "16FB273176313231D5F26384C971BE9AB18929598A55321804F067300E563971"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_CAM_J55\\2L\\report.json",
+      "bytes": 19300,
+      "sha256": "0A450D719C1A0B2CA8101451696854504E941E7F1A82200FABA94412CFD2DDED"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_CAM_J55\\4L\\report.json",
+      "bytes": 20793,
+      "sha256": "9C2C61F11833133C22D1C93E4E4CFF5F765C85693041210CD02DF61888BDDA99"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\companion_and_J55_CAM\\2L\\report.json",
+      "bytes": 4524,
+      "sha256": "19EA6140EF249FD2C7711A8DB76021EC1329749BC03EBBD567B9872566F8BD1A"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\companion_and_J55_CAM\\4L\\report.json",
+      "bytes": 4736,
+      "sha256": "FD114484DD42BE88D7923C6F7FED83298C743EDF91B40FA25173CB4FBC806157"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_corrected_independent_summary.json",
+      "bytes": 1395,
+      "sha256": "F7535B9EF3C9B71AC7B001AAFC8ADCFE712D0FA24D72F975CA6D210963DFEDA7"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\J55_corrected_2L_TRAINING_NOT_FOR_FAB\\photoplot.log",
+      "bytes": 57223,
+      "sha256": "ABCE77FDBCAD18AE6B85D4AD45327694FF5FEF7612A131B5C80E5D262DCFD933"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\exports\\J55_corrected_4L_TRAINING_NOT_FOR_FAB\\photoplot.log",
+      "bytes": 60583,
+      "sha256": "C0FCCAA1CA54B75546B04DE63DE89C754BB34823C1970B9E357B795EC218943F"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j51_54_summary.json",
+      "bytes": 938,
+      "sha256": "144F7917418DA793886EC25AC42D98EC46B2A907C6C6BE2A38CE149D9BE61E25"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_K58\\review.json",
+      "bytes": 239987,
+      "sha256": "B4C58CD107EC5F28DCB032810A13E2D67B7C997D7EE4A38C3C0908A772B08862"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\DE_REPLAY_ONLY\\native_replay_result.json",
+      "bytes": 3893,
+      "sha256": "E3405F3F3A41D97875274FD7E7563C2B53C21FD1D27018697EC8EDB6FE4FEC09"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\expected_delta.json",
+      "bytes": 1765,
+      "sha256": "65B7FB2796F982471A686AE0F0A6CE3C8C3F313E89C82544021F0BDB6C692D3D"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\eco\\replay_input_manifest.json",
+      "bytes": 74482,
+      "sha256": "BD35AF3B717384175234BCDA25E29A61A9B8AE996DADC0A5A7D3B3A77C1076D8"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\bench\\2L_bench_plan.json",
+      "bytes": 7427,
+      "sha256": "F4086377FC14328D3571094D89328B15CE2BA4FEBF8F32E3D008E5386319E8FD"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\bench\\4L_bench_plan.json",
+      "bytes": 7427,
+      "sha256": "55B76CE54006E05C759D8202707EABCCADFDAAD19800A6620BD63C48882851A6"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\bench\\2L_measurement_sheet_NOT_RUN.csv",
+      "bytes": 3753,
+      "sha256": "22F424C293FFEB40CEDE16F4B20CF41CC4C4E73FEE89DDFD51D511D66C617245"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\bench\\4L_measurement_sheet_NOT_RUN.csv",
+      "bytes": 3753,
+      "sha256": "27A1B9E55C597E12916D4C7513C24020DDFEAD51DB6963768711235482C7DF9B"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j52_53_newstack_native_contract.json",
+      "bytes": 4489,
+      "sha256": "1B7DDAB7FE1F96D94A16A4BFBC502588989678042E53EB8B7B998987382CE28F"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\user_four_layer_function_rule_20261022.json",
+      "bytes": 1188,
+      "sha256": "121D022097B029EBB16198EC5A0726D4419DE89D30988A7C87244EFC1CCC8CD6"
+    }
+  ]
+}

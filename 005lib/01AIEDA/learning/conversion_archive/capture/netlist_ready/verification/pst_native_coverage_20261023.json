@@ -1,0 +1,175 @@
+{
+    "status":  "PASS_NATIVE_DSN_TO_PST_COVERAGE",
+    "inputs_sha256":  [
+                          {
+                              "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\lga1700_migration_20261022\\native_audit_after_device_20261023\\pins.tsv",
+                              "sha256":  "64FB339DF28B23E0FFBE3F2B4ED85DDA4D95A704FF756DC41AA00E40884A24C4"
+                          },
+                          {
+                              "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\lga1700_migration_20261022\\pst_export_fixed_20261023\\netlist\\pstchip.dat",
+                              "sha256":  "2E3EA4E28E26DEDC83F4F7F665213E71EDA439357E2410C89EFE4F78FB08DB0C"
+                          },
+                          {
+                              "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\lga1700_migration_20261022\\pst_export_fixed_20261023\\netlist\\pstxprt.dat",
+                              "sha256":  "A87DADB5F346B561D1286C03DC19D90EDF82998F37A89B824E033E34B9CBBF4F"
+                          },
+                          {
+                              "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\lga1700_migration_20261022\\pst_export_fixed_20261023\\netlist\\pstxnet.dat",
+                              "sha256":  "EFB469B651FD50F1CA884EF2D8145A878F162AFFEE83CE12B8D05CE06E806E5D"
+                          },
+                          {
+                              "path":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\staging\\lga1700_migration_20261022\\pst_export_fixed_20261023\\netlist\\netlist.log",
+                              "sha256":  "9AE609BFB5632EF0B5768465176AA116671471D08343624228C98A6700FDCB16"
+                          }
+                      ],
+    "counts":  {
+                   "native_pin_rows":  6608,
+                   "native_unique_physical_references":  1097,
+                   "native_unique_section_references":  1131,
+                   "native_unique_physical_pins":  6608,
+                   "native_duplicate_physical_pins":  0,
+                   "pst_part_references":  1097,
+                   "pst_section_records":  1131,
+                   "pst_primitive_definitions":  1097,
+                   "pst_duplicate_part_references":  0,
+                   "pst_duplicate_primitive_names":  0,
+                   "pstchip_physical_pins":  6608,
+                   "pstxnet_unique_nodes":  6608,
+                   "pst_net_records_including_reserved_NC":  1668,
+                   "native_connected_local_nets":  1785,
+                   "pst_connected_nets":  1667,
+                   "connected_pins_same_net_name":  5503,
+                   "connected_pins_numeric_suffix_disambiguation":  353,
+                   "renamed_local_net_groups":  301,
+                   "native_unconnected_pins_in_reserved_NC":  752
+               },
+    "differences":  {
+                        "missing_references":  [
+
+                                               ],
+                        "extra_references":  [
+
+                                             ],
+                        "missing_section_references":  [
+
+                                                       ],
+                        "extra_section_references":  [
+
+                                                     ],
+                        "missing_pins_in_pstchip":  [
+
+                                                    ],
+                        "extra_pins_in_pstchip":  [
+
+                                                  ],
+                        "missing_pins_in_pstxnet":  [
+
+                                                    ],
+                        "extra_pins_in_pstxnet":  [
+
+                                                  ],
+                        "missing_primitives":  [
+
+                                               ],
+                        "duplicate_nodes":  [
+
+                                            ],
+                        "split_native_local_nets":  [
+
+                                                    ],
+                        "merged_different_native_net_names":  [
+
+                                                              ],
+                        "unexpected_net_names":  [
+
+                                                 ],
+                        "unexpected_unconnected_pin_nets":  [
+
+                                                            ]
+                    },
+    "native_export_log_errors_or_warnings":  [
+                                                 null
+                                             ],
+    "naming_notes":  [
+                         "Comparison uses physical reference and pin number; multipart section references are checked separately.",
+                         "PST section pin lists contain zero placeholders; zero placeholders are ignored. The native input has no physical pin numbered zero.",
+                         "All 752 native pins with an empty net are in the reserved PST NC record; NC is excluded from connected-net counts.",
+                         "353 connected pins use the original local net name plus an underscore and decimal suffix. No native page-local net is split, and no PST connected net combines different native net names.",
+                         "Case-insensitive identifier comparison follows the exported CAD naming convention."
+                     ],
+    "scope_limit":  "Validates the native Capture DSN audit against the PST export. It does not independently prove AD-to-Capture connectivity equivalence, PCB footprint geometry, fabrication readiness, or PCB import.",
+    "renamed_net_examples":  [
+                                 {
+                                     "page":  "ADL S PCH 600 SPI_PM",
+                                     "native_net":  "+3P3V_ALW_PGD",
+                                     "pst_net":  "+3P3V_ALW_PGD_8753",
+                                     "pins":  1
+                                 },
+                                 {
+                                     "page":  "ADL S PCH 600 STRAP",
+                                     "native_net":  "CNVI_BRI_DT",
+                                     "pst_net":  "CNVI_BRI_DT_10382",
+                                     "pins":  1
+                                 },
+                                 {
+                                     "page":  "ADL S PCH 600 STRAP",
+                                     "native_net":  "CNVI_RGI_DT",
+                                     "pst_net":  "CNVI_RGI_DT_10386",
+                                     "pins":  1
+                                 },
+                                 {
+                                     "page":  "ADL S PCH 600 STRAP",
+                                     "native_net":  "DBG_PMODE",
+                                     "pst_net":  "DBG_PMODE_10390",
+                                     "pins":  1
+                                 },
+                                 {
+                                     "page":  "ADL S PCH 600 STRAP",
+                                     "native_net":  "GPD_7",
+                                     "pst_net":  "GPD_7_10400",
+                                     "pins":  1
+                                 },
+                                 {
+                                     "page":  "ADL S PCH 600 STRAP",
+                                     "native_net":  "GSPI1_MOSI",
+                                     "pst_net":  "GSPI1_MOSI_10404",
+                                     "pins":  1
+                                 },
+                                 {
+                                     "page":  "ADL S PCH 600 STRAP",
+                                     "native_net":  "IO_PME#",
+                                     "pst_net":  "IO_PME#_10408",
+                                     "pins":  1
+                                 },
+                                 {
+                                     "page":  "ADL S PCH 600 STRAP",
+                                     "native_net":  "SML0ALERT#",
+                                     "pst_net":  "SML0ALERT#_10412",
+                                     "pins":  1
+                                 },
+                                 {
+                                     "page":  "ADL S PCH 600 STRAP",
+                                     "native_net":  "SML1ALERT#",
+                                     "pst_net":  "SML1ALERT#_10416",
+                                     "pins":  1
+                                 },
+                                 {
+                                     "page":  "ADL S PCH 600 STRAP",
+                                     "native_net":  "SML2ALERT#",
+                                     "pst_net":  "SML2ALERT#_10420",
+                                     "pins":  1
+                                 },
+                                 {
+                                     "page":  "ADL S PCH 600 STRAP",
+                                     "native_net":  "SML3ALERT#",
+                                     "pst_net":  "SML3ALERT#_10424",
+                                     "pins":  1
+                                 },
+                                 {
+                                     "page":  "ADL S PCH 600 STRAP",
+                                     "native_net":  "SPI_MOSI",
+                                     "pst_net":  "SPI_MOSI_10428",
+                                     "pins":  1
+                                 }
+                             ]
+}

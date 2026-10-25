@@ -1,0 +1,245 @@
+{
+  "status": "UNEXECUTED_ROOT_SUGGESTION_GEOMETRY_REVIEW",
+  "batchId": "gpio_pb89_source_rework_01",
+  "operations": [
+    {
+      "type": "route",
+      "id": "PB89_VSS47_NECK",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          29.25
+        ],
+        [
+          45.35,
+          29.25
+        ],
+        [
+          45.4,
+          29.2
+        ]
+      ],
+      "width": 0.25
+    },
+    {
+      "type": "route",
+      "id": "PB89_C15_RETURN",
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          45.4,
+          29.2
+        ],
+        [
+          46.0252,
+          29.2
+        ],
+        [
+          46.5,
+          28.7252
+        ]
+      ],
+      "width": 0.6
+    },
+    {
+      "type": "via",
+      "id": "PB89_HSE_SINGLE_ANCHOR",
+      "net": "GND",
+      "xy": [
+        45.45,
+        28.95
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "PB9_SOURCE_NECK",
+      "net": "GPIO_PB9",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          28.75
+        ],
+        [
+          44.76,
+          28.75
+        ],
+        [
+          45.96,
+          27.55
+        ]
+      ],
+      "width": 0.16
+    },
+    {
+      "type": "route",
+      "id": "PB9_SOURCE_TO_VIA",
+      "net": "GPIO_PB9",
+      "layer": "TOP",
+      "points": [
+        [
+          45.96,
+          27.55
+        ],
+        [
+          46.5,
+          27.55
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "PB9_SOURCE_VIA",
+      "net": "GPIO_PB9",
+      "xy": [
+        46.5,
+        27.55
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "route",
+      "id": "PB8_SOURCE_TO_VIA",
+      "net": "GPIO_PB8",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          28.25
+        ],
+        [
+          44.6,
+          28.25
+        ],
+        [
+          45.6,
+          27.25
+        ],
+        [
+          45.6,
+          26.9
+        ]
+      ],
+      "width": 0.2
+    },
+    {
+      "type": "via",
+      "id": "PB8_SOURCE_VIA",
+      "net": "GPIO_PB8",
+      "xy": [
+        45.6,
+        26.9
+      ],
+      "padstack": "L28_VIA030_C060"
+    },
+    {
+      "type": "via",
+      "id": "PB89_GLOBAL_RETURN_VIA",
+      "net": "GND",
+      "xy": [
+        45.7,
+        26.0
+      ],
+      "padstack": "L28_VIA030_C060"
+    }
+  ],
+  "deleteSegments": [
+    {
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          44.25,
+          29.25
+        ],
+        [
+          45.05,
+          29.25
+        ]
+      ],
+      "width": 0.25
+    },
+    {
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          45.05,
+          29.25
+        ],
+        [
+          45.45,
+          28.85
+        ]
+      ],
+      "width": 0.25
+    },
+    {
+      "net": "GND",
+      "layer": "TOP",
+      "points": [
+        [
+          45.45,
+          28.85
+        ],
+        [
+          46.5,
+          28.7252
+        ]
+      ],
+      "width": 0.6
+    }
+  ],
+  "deleteVia": {
+    "net": "GND",
+    "xy": [
+      45.45,
+      28.85
+    ]
+  },
+  "preserved": [
+    "HSE island polygon and permanent application-ground void exactly unchanged.",
+    "All original power branch including VDD48 and C15 original globalvia preserved."
+  ],
+  "necessaryPhysicalExceptions": [
+    {
+      "net": "GPIO_PB9",
+      "layer": "TOP",
+      "polygon": [
+        [
+          43.5,
+          28.45
+        ],
+        [
+          44.65,
+          28.45
+        ],
+        [
+          46.3,
+          26.8
+        ],
+        [
+          46.3,
+          28.2
+        ],
+        [
+          44.85,
+          29.05
+        ],
+        [
+          43.5,
+          29.05
+        ]
+      ],
+      "neckWidthMinMM": 0.16,
+      "maxNeckMM": 2.25,
+      "basis": "0.51+sqrt(2)*1.2=2.207056mm actual proposed neck, manufacturing min152.4um two-layer/127um four-layer; local exception only, no global width/spacing waiver."
+    }
+  ],
+  "warning": "PB9 short source-mouth projection comes within 0.01mm of quiet island projection; not a zero-field-coupling claim. Must inspect native all-layer pad/DRC, unique-anchor deletion, actual return and final native path. Existing root generic HSE reservation excludes GPIO; explicit source-mouth-only allowance required, not global island release."
+}

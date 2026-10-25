@@ -1,0 +1,69 @@
+
+  NAME
+         axlCnsClassTableCreate - create or modify a class table entry
+  SYNOPSIS
+         axlCnsClassTableCreate(
+                 g_class1
+                 g_class2
+                 g_region
+                 s_csetType/ll_typeAndName
+                 [t_csetName]
+         ) -> o_dbidClassTable/nil
+  FUNCTION
+         This creates a class table entry that consists of any of the following:
+            - class to class     (spacing only)
+            - region to class    (spacing, same net and phsyical)
+            - region to class to class (spacing only)
+ 
+         Optionally, it associates a spacing, phsyical and/or same net cset with
+         that table entry.  If a class table entry already exists it is modified
+         with the provided csets.
+ 
+         Regions are not available in PCB L and lower products, command will
+         fail if you attempt to create a region based table entry in these products.
+         Class tables may not be created in symbol editor.
+  NOTES:
+         - The order of class1 and class2 does not matter.
+         - If an entry already exists it will return the existing entry. 
+         - Netclasses can be classified by domain (spacing and/or physical). If a
+           netclass is restricted to one domain, it is possible to create a
+           netclass to "whatever" entry that crosses domains. This table entry will
+           be ignored by DRC. For example, you have a netclass in both domains called
+           "ANY" and another restricted to the physical domain called "PHYS". It is 
+           possible to create a "ANY to "PHYS" relationship which is only appropriate in
+           the spacing domain but the PHYS netclass is not legal in that domain.
+           We may test and reject for this condition in future releases.
+         - DRC is set out-of-date, you must manually update the DRC.
+         - Unlike constraint manager, you can add cset names that don't yet exist in
+           the database. In these cases, we will automatically create a cset. Check
+           via axlCnsList if your cset exists if you don't wish to create new csets.
+         - Class table entries may also have constraint overrides attached via
+           property overrides (axlDBAddProp)
+ 
+         DRC is set out of date.
+  NEEDS
+         g_class1 = NETCLASS dbid or name of name class
+         g_class2 = NETCLASS dbid, name of name class or nil
+         g_region = REGION dbid, name of region or nil
+         s_csetType - symbol cset type one of 'spacing, 'physical or 'samenet
+         t_csetName - string cset name for given type
+         ll_typeAndName - option list of values where you have
+                         ((s_csetType t_csetName) (s_csetType t_csetName) ...)
+  RETURNS
+         returns dbid of type classTable for new or existing cset or nil if error
+  SEE ALSO
+         axlCnsClassTableFind, axlCnsClassTableSeek,
+         axlCnsClassTableChange, axlCnsClassTableDelete
+         axlCnsList
+         see also classTable dbid object description.
+  EXAMPLES
+         -) create appropriate entries in design
+                 region = axlRegionCreate("ANALOG")
+                 ncls = axlNetClassCreate("VOLTAGE" '(spacing physical))
+ 
+         1) add new spacing region-class table entry and give it the spacing cset "25MILS"
+                 tbl = axlCnsClassTableCreate("VOLTAGE" nil "ANALOG" 'spacing "25MILS")
+         2) alternative method plus also add a physical voltage cset
+                 props = '((spacing "25MILS") (physical "VOLTAGE"))
+                 tbl = axlCnsClassTableCreate(ncls nil region props)
+

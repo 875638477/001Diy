@@ -1,0 +1,146 @@
+{
+  "status": "RETURN_STITCH_CANDIDATE_NATIVE_AND_ACTUAL_REFERENCE_PENDING",
+  "variant": "2L",
+  "sourceExpectedSHA256": "24DDF112FFCC9B7A8F44401B406BBBCEC7523B3A5F42E73A816A7D3349BCF602",
+  "sourcePlans": [
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\aux_remote_2L_v9.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\CC_entry_2L_v4.json",
+    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\plans\\VBUS_entry_2L_v3.json"
+  ],
+  "operations": [
+    {
+      "type": "via",
+      "id": "APP_RETURN_HI_2L_USB_ATTACH_N_1_V1",
+      "net": "GND",
+      "xy": [
+        51.411,
+        17.028
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Nearby signal transition APP-GND stitch, both external copper layers screened. Native updated-copper common-GND connectivity and reference continuity still required."
+    },
+    {
+      "type": "via",
+      "id": "APP_RETURN_HI_2L_USB_ATTACH_N_1_V2",
+      "net": "GND",
+      "xy": [
+        47.0,
+        13.45
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Nearby signal transition APP-GND stitch, both external copper layers screened. Native updated-copper common-GND connectivity and reference continuity still required."
+    },
+    {
+      "type": "via",
+      "id": "APP_RETURN_VBUS_LEFT_V",
+      "net": "GND",
+      "xy": [
+        36.077,
+        8.725
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Nearby signal transition APP-GND stitch, both external copper layers screened. Native updated-copper common-GND connectivity and reference continuity still required."
+    },
+    {
+      "type": "via",
+      "id": "APP_RETURN_VBUS_SENSE_V",
+      "net": "GND",
+      "xy": [
+        46.907,
+        6.675
+      ],
+      "padstack": "L28_VIA030_C060",
+      "purpose": "Nearby signal transition APP-GND stitch, both external copper layers screened. Native updated-copper common-GND connectivity and reference continuity still required."
+    }
+  ],
+  "proofs": [],
+  "reviews": [
+    {
+      "signalVia": "HI_2L_USB_ATTACH_N_1_V1",
+      "net": "USB_ATTACH_N",
+      "xy": [
+        50.8,
+        16.3
+      ],
+      "return": {
+        "xy": [
+          51.411,
+          17.028
+        ],
+        "source": "APP_RETURN_HI_2L_USB_ATTACH_N_1_V1"
+      },
+      "distanceMM": 0.9504235897745816,
+      "newStitch": true
+    },
+    {
+      "signalVia": "HI_2L_USB_ATTACH_N_1_V2",
+      "net": "USB_ATTACH_N",
+      "xy": [
+        47.95,
+        13.45
+      ],
+      "return": {
+        "xy": [
+          47.0,
+          13.45
+        ],
+        "source": "APP_RETURN_HI_2L_USB_ATTACH_N_1_V2"
+      },
+      "distanceMM": 0.9500000000000028,
+      "newStitch": true
+    },
+    {
+      "signalVia": "VBUS_LEFT_V",
+      "net": "USB_VBUS",
+      "xy": [
+        36.9,
+        9.2
+      ],
+      "return": {
+        "xy": [
+          36.077,
+          8.725
+        ],
+        "source": "APP_RETURN_VBUS_LEFT_V"
+      },
+      "distanceMM": 0.9502389173255326,
+      "newStitch": true
+    },
+    {
+      "signalVia": "VBUS_RIGHT_V",
+      "net": "USB_VBUS",
+      "xy": [
+        41.86,
+        3.7
+      ],
+      "return": {
+        "xy": [
+          41,
+          4.7
+        ],
+        "source": "USB_RETURN_RIGHT_NEW"
+      },
+      "distanceMM": 1.3189389675038035,
+      "newStitch": false
+    },
+    {
+      "signalVia": "VBUS_SENSE_V",
+      "net": "USB_VBUS",
+      "xy": [
+        47.8,
+        7
+      ],
+      "return": {
+        "xy": [
+          46.907,
+          6.675
+        ],
+        "source": "APP_RETURN_VBUS_SENSE_V"
+      },
+      "distanceMM": 0.9503020572428544,
+      "newStitch": true
+    }
+  ],
+  "failures": [],
+  "scope": "Distance is a geometry screen only: not proof of reference continuity, return-current distribution, impedance or EMI. Excludes HSE quiet island and guard region. Drill/solder-mask/body/assembly assumptions remain."
+}

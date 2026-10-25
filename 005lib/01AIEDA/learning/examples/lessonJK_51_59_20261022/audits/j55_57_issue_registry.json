@@ -1,0 +1,483 @@
+{
+  "status": "TRAINING_NOT_FOR_ASSEMBLY",
+  "issues": [
+    {
+      "issueID": "JK57-001",
+      "title": "采购料号及生产旋转标准未定",
+      "status": "OPEN_RELEASE",
+      "nextAction": "逐件定MPN并与装配厂确认封装零度、吸取中心和顶底镜像转换；当前CSV保留CAD原点/原生角度。",
+      "evidenceByScope": {
+        "BOTH": {
+          "mpnSpecified": 12,
+          "mpnPending": 68
+        }
+      }
+    },
+    {
+      "issueID": "JK57-002",
+      "title": "默认USB和CAN备选料互斥",
+      "status": "OPEN_RELEASE",
+      "nextAction": "本轮输出默认USB：R5/R6装22R，R12/R13 DNP；22R为历史工程值，未硬件验证；CAN配置只能受控另出BOM和固件。",
+      "evidenceByScope": {
+        "BOTH": {
+          "USB": {
+            "fit": [
+              "R_USB_DP",
+              "R_USB_DM"
+            ],
+            "DNP": [
+              "R_CAN_TX",
+              "R_CAN_RX"
+            ],
+            "firmware": "enable USB only, PB0=0 and V3V3 valid then PA8=0; PB0=1 => PA8=1. At reset Q_ATTACH off."
+          },
+          "CAN": {
+            "fit": [
+              "R_CAN_TX",
+              "R_CAN_RX"
+            ],
+            "DNP": [
+              "R_USB_DP",
+              "R_USB_DM"
+            ],
+            "firmware": "enable CAN only, PA8 always high; USB and CAN share MCU SRAM and cannot operate simultaneously even with remapping"
+          }
+        }
+      }
+    },
+    {
+      "issueID": "JK55-005",
+      "title": "USB安装脚长与约1.6mm板厚装配尚未匹配",
+      "status": "OPEN_RELEASE",
+      "nextAction": "确认座高/成品板厚公差/壳脚焊接工艺，不将S误解为板底突出量。",
+      "evidenceByScope": {
+        "BOTH": {
+          "connector": "USB4105-GF-A",
+          "stakeLengthBelowSeatingPlaneMM": "0.95 ±0.15",
+          "note": "D:\\001DIY\\005lib\\01AIEDA\\learning\\notes\\lessonF_source_corrections_20261019.md"
+        }
+      }
+    },
+    {
+      "issueID": "JK55-006",
+      "title": "USB两层阻焊桥0.100mm小于所选公开目标0.1016mm",
+      "status": "OPEN_RELEASE",
+      "nextAction": "与板厂确认可行工艺或受控改开窗/厂商；不能以差1.6um忽略。",
+      "evidenceByScope": {
+        "2L": {
+          "nominalMaskBridgeMM": 0.1,
+          "publicMinimumMM": 0.1016
+        }
+      }
+    },
+    {
+      "issueID": "JK55-007",
+      "title": "DNP焊盘仍在原生钢网定义中",
+      "status": "OPEN_PROCESS",
+      "nextAction": "根据不装位焊料策略决定是否屏蔽钢网开口；当前全PAD钢网并非已批准装配变体。",
+      "evidenceByScope": {
+        "BOTH": {
+          "DNP": [
+            "R12",
+            "R13"
+          ]
+        },
+        "ACTUAL_STENCIL": {
+          "R12_1": 1,
+          "R12_2": 1,
+          "R13_1": 1,
+          "R13_2": 1,
+          "source": "independent_CAM actual_mask_stencil_review.json"
+        }
+      }
+    },
+    {
+      "issueID": "JK55-008",
+      "title": "默认高度和PlaceBound不等实物尺寸",
+      "status": "OPEN_RELEASE",
+      "nextAction": "1mm缺省只代表教学占位；68件无MPN及实际courtyard/连接器插拔/装配公差仍待核，不把PlaceBound叫真实器件body。",
+      "evidenceByScope": {
+        "BOTH": {
+          "defaultHeightMM": 1,
+          "heightSource": "User default / existing explicit library properties"
+        }
+      }
+    },
+    {
+      "issueID": "JK55-009",
+      "title": "测试点/极性/定位与生产装配输出待确认",
+      "status": "OPEN_RELEASE",
+      "nextAction": "导出每件pin1实际坐标并按原理图极性核对；排针/裸pad不能自动作为量产探针方案；需测试夹具/接触/可达性。",
+      "evidenceByScope": {
+        "BOTH": {
+          "dedicatedTestPointApproval": false
+        }
+      }
+    },
+    {
+      "issueID": "JK55-001",
+      "title": "三文字层缺失",
+      "status": "CLOSED_JK_INSTANCE_CORRECTION_FRESH_VERIFIED",
+      "nextAction": "本轮JK实例已整改并独立fresh验收；公共库不改，未来refresh/ECO需复核。",
+      "evidenceByScope": {
+        "2L": {
+          "REF DES/SILKSCREEN_TOP": 20,
+          "COMPONENT VALUE/ASSEMBLY_TOP": 78
+        },
+        "4L": {
+          "REF DES/SILKSCREEN_TOP": 20,
+          "COMPONENT VALUE/ASSEMBLY_TOP": 78
+        },
+        "JK_FRESH": {
+          "report": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_corrected_independent_summary.json",
+          "sha256": "F7535B9EF3C9B71AC7B001AAFC8ADCFE712D0FA24D72F975CA6D210963DFEDA7",
+          "checks": 1644,
+          "variants": {
+            "2L": {
+              "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\2L\\JK_2L_J55_text_height_review_NOT_RELEASED.brd",
+              "sha256": "EAA65005B80694AB58617CBF3637815484C7510F2CC0693BF0FFC3D41BDC5FBD",
+              "checks": 822,
+              "failed": 0,
+              "requiredTexts": 240,
+              "allInstanceTexts": 247,
+              "userDefaultHeightShapes": 72,
+              "preservedExplicitHeightShapes": 8,
+              "preservedLegacyBoundPaths": 4,
+              "assemblyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\assembly\\JK55_2L_corrected_TRAINING"
+            },
+            "4L": {
+              "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\4L\\JK_4L_J55_text_height_review_NOT_RELEASED.brd",
+              "sha256": "9DEC773FE106E09C9844FEF5F160E1A1B3348BFC693926579F0CAF0A6A18DCF0",
+              "checks": 822,
+              "failed": 0,
+              "requiredTexts": 240,
+              "allInstanceTexts": 247,
+              "userDefaultHeightShapes": 72,
+              "preservedExplicitHeightShapes": 8,
+              "preservedLegacyBoundPaths": 4,
+              "assemblyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\assembly\\JK55_4L_corrected_TRAINING"
+            }
+          }
+        }
+      }
+    },
+    {
+      "issueID": "JK55-002",
+      "title": "必要文字锚点偏离器件原点",
+      "status": "CLOSED_JK_INSTANCE_CORRECTION_FRESH_VERIFIED",
+      "nextAction": "本轮JK实例已整改并独立fresh验收；公共库不改，未来refresh/ECO需复核。",
+      "evidenceByScope": {
+        "2L": {
+          "REF DES/SILKSCREEN_TOP": 58,
+          "REF DES/ASSEMBLY_TOP": 64
+        },
+        "4L": {
+          "REF DES/SILKSCREEN_TOP": 58,
+          "REF DES/ASSEMBLY_TOP": 64
+        },
+        "JK_FRESH": {
+          "report": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_corrected_independent_summary.json",
+          "sha256": "F7535B9EF3C9B71AC7B001AAFC8ADCFE712D0FA24D72F975CA6D210963DFEDA7",
+          "checks": 1644,
+          "variants": {
+            "2L": {
+              "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\2L\\JK_2L_J55_text_height_review_NOT_RELEASED.brd",
+              "sha256": "EAA65005B80694AB58617CBF3637815484C7510F2CC0693BF0FFC3D41BDC5FBD",
+              "checks": 822,
+              "failed": 0,
+              "requiredTexts": 240,
+              "allInstanceTexts": 247,
+              "userDefaultHeightShapes": 72,
+              "preservedExplicitHeightShapes": 8,
+              "preservedLegacyBoundPaths": 4,
+              "assemblyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\assembly\\JK55_2L_corrected_TRAINING"
+            },
+            "4L": {
+              "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\4L\\JK_4L_J55_text_height_review_NOT_RELEASED.brd",
+              "sha256": "9DEC773FE106E09C9844FEF5F160E1A1B3348BFC693926579F0CAF0A6A18DCF0",
+              "checks": 822,
+              "failed": 0,
+              "requiredTexts": 240,
+              "allInstanceTexts": 247,
+              "userDefaultHeightShapes": 72,
+              "preservedExplicitHeightShapes": 8,
+              "preservedLegacyBoundPaths": 4,
+              "assemblyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\assembly\\JK55_4L_corrected_TRAINING"
+            }
+          }
+        }
+      }
+    },
+    {
+      "issueID": "JK55-003",
+      "title": "72件缺省高度未实际写入",
+      "status": "CLOSED_JK_INSTANCE_CORRECTION_FRESH_VERIFIED",
+      "nextAction": "本轮JK实例已整改并独立fresh验收；公共库不改，未来refresh/ECO需复核。",
+      "evidenceByScope": {
+        "2L": {
+          "missingCount": 72,
+          "explicitCount": 8
+        },
+        "4L": {
+          "missingCount": 72,
+          "explicitCount": 8
+        },
+        "JK_FRESH": {
+          "report": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\audits\\j55_corrected_independent_summary.json",
+          "sha256": "F7535B9EF3C9B71AC7B001AAFC8ADCFE712D0FA24D72F975CA6D210963DFEDA7",
+          "checks": 1644,
+          "variants": {
+            "2L": {
+              "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\2L\\JK_2L_J55_text_height_review_NOT_RELEASED.brd",
+              "sha256": "EAA65005B80694AB58617CBF3637815484C7510F2CC0693BF0FFC3D41BDC5FBD",
+              "checks": 822,
+              "failed": 0,
+              "requiredTexts": 240,
+              "allInstanceTexts": 247,
+              "userDefaultHeightShapes": 72,
+              "preservedExplicitHeightShapes": 8,
+              "preservedLegacyBoundPaths": 4,
+              "assemblyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\assembly\\JK55_2L_corrected_TRAINING"
+            },
+            "4L": {
+              "board": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\native\\4L\\JK_4L_J55_text_height_review_NOT_RELEASED.brd",
+              "sha256": "9DEC773FE106E09C9844FEF5F160E1A1B3348BFC693926579F0CAF0A6A18DCF0",
+              "checks": 822,
+              "failed": 0,
+              "requiredTexts": 240,
+              "allInstanceTexts": 247,
+              "userDefaultHeightShapes": 72,
+              "preservedExplicitHeightShapes": 8,
+              "preservedLegacyBoundPaths": 4,
+              "assemblyDirectory": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\assembly\\JK55_4L_corrected_TRAINING"
+            }
+          }
+        }
+      }
+    },
+    {
+      "issueID": "JK57-003",
+      "title": "原01env PDFTOP并非完整装配图",
+      "status": "OPEN_PROCESS",
+      "nextAction": "原Film保留；JK独立装配输出另包含PACKAGE GEOMETRY/ASSEMBLY_TOP、REF DES/ASSEMBLY_TOP、COMPONENT VALUE/ASSEMBLY_TOP及板框/孔，不称旧PDFTOP已输出value。",
+      "evidenceByScope": {
+        "2L": {
+          "PDFTOPGroups": [
+            "REF DES/ASSEMBLY_TOP",
+            "PACKAGE GEOMETRY/SILKSCREEN_TOP",
+            "BOARD GEOMETRY/OUTLINE"
+          ]
+        },
+        "4L": {
+          "PDFTOPGroups": [
+            "REF DES/ASSEMBLY_TOP",
+            "PACKAGE GEOMETRY/SILKSCREEN_TOP",
+            "BOARD GEOMETRY/OUTLINE"
+          ]
+        }
+      }
+    },
+    {
+      "issueID": "JK55-004",
+      "title": "丝印文字到开窗仍须真实字形审核",
+      "status": "OPEN_RELEASE",
+      "evidenceByScope": {
+        "BOTH": {
+          "b019TextBBoxCandidatesPerBoard": 190,
+          "bboxIntersectionsAreNotInkViolations": true
+        }
+      },
+      "nextAction": "三文字按用户原点修正后重新审核实际Gerber字形；不擅自挪到器件外侧。"
+    },
+    {
+      "issueID": "JK55-010",
+      "title": "真实SOLDTOP窄阻焊桥低于所选公开工艺目标",
+      "status": "CONFIRMED_GEOMETRY_DFM_RELEASE_OPEN",
+      "evidenceByScope": {
+        "BOTH": {
+          "C8_2_to_U3_2_3_and_C9_2_to_U3_4_BBoxLowerBoundMM": 0.0635,
+          "roundedRectangleRadiusAvailable": false,
+          "J2_NPTH_to_GND_nominalWebMM": 0.075,
+          "source": "j55_{v}_nominal_mask_web_under025_b019.csv"
+        },
+        "ACTUAL_GERBER": {
+          "2L": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_CAM\\2L\\actual_mask_stencil_review.json",
+            "sha256": "54151C1419722A32C313369B0A3DEDB382FD5B0397F4E6134A9A1DC6469921CB",
+            "actual": {
+              "actualGaps": [
+                {
+                  "a": "C8.2",
+                  "b": "U3.2",
+                  "actualGerberMaskEdgeDistanceMM": 0.06350000000000122,
+                  "arcApproximationErrorMM": 5e-05,
+                  "productionAcceptable": null
+                },
+                {
+                  "a": "C9.2",
+                  "b": "U3.4",
+                  "actualGerberMaskEdgeDistanceMM": 0.08542688673095572,
+                  "arcApproximationErrorMM": 5e-05,
+                  "productionAcceptable": null
+                },
+                {
+                  "a": "U3.2",
+                  "b": "U3.3",
+                  "actualGerberMaskEdgeDistanceMM": 0.24999999999999645,
+                  "arcApproximationErrorMM": 5e-05,
+                  "productionAcceptable": null
+                },
+                {
+                  "a": "J2.A6",
+                  "b": "J2.A7",
+                  "actualGerberMaskEdgeDistanceMM": 0.09999999999999432,
+                  "arcApproximationErrorMM": 5e-05,
+                  "productionAcceptable": null
+                }
+              ],
+              "stencilDNPOpenings": [
+                {
+                  "pin": "R12.1",
+                  "openingCount": 1
+                },
+                {
+                  "pin": "R12.2",
+                  "openingCount": 1
+                },
+                {
+                  "pin": "R13.1",
+                  "openingCount": 1
+                },
+                {
+                  "pin": "R13.2",
+                  "openingCount": 1
+                }
+              ],
+              "maskRepresentation": "Dark Gerber features are mask openings under this template convention, not painted resist.",
+              "release": "NOT_APPROVED_FAB_CAPABILITY_AND_ASSEMBLY_PROFILE_PENDING"
+            }
+          },
+          "4L": {
+            "path": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonJK_51_59_20261022\\review\\independent_CAM\\4L\\actual_mask_stencil_review.json",
+            "sha256": "54151C1419722A32C313369B0A3DEDB382FD5B0397F4E6134A9A1DC6469921CB",
+            "actual": {
+              "actualGaps": [
+                {
+                  "a": "C8.2",
+                  "b": "U3.2",
+                  "actualGerberMaskEdgeDistanceMM": 0.06350000000000122,
+                  "arcApproximationErrorMM": 5e-05,
+                  "productionAcceptable": null
+                },
+                {
+                  "a": "C9.2",
+                  "b": "U3.4",
+                  "actualGerberMaskEdgeDistanceMM": 0.08542688673095572,
+                  "arcApproximationErrorMM": 5e-05,
+                  "productionAcceptable": null
+                },
+                {
+                  "a": "U3.2",
+                  "b": "U3.3",
+                  "actualGerberMaskEdgeDistanceMM": 0.24999999999999645,
+                  "arcApproximationErrorMM": 5e-05,
+                  "productionAcceptable": null
+                },
+                {
+                  "a": "J2.A6",
+                  "b": "J2.A7",
+                  "actualGerberMaskEdgeDistanceMM": 0.09999999999999432,
+                  "arcApproximationErrorMM": 5e-05,
+                  "productionAcceptable": null
+                }
+              ],
+              "stencilDNPOpenings": [
+                {
+                  "pin": "R12.1",
+                  "openingCount": 1
+                },
+                {
+                  "pin": "R12.2",
+                  "openingCount": 1
+                },
+                {
+                  "pin": "R13.1",
+                  "openingCount": 1
+                },
+                {
+                  "pin": "R13.2",
+                  "openingCount": 1
+                }
+              ],
+              "maskRepresentation": "Dark Gerber features are mask openings under this template convention, not painted resist.",
+              "release": "NOT_APPROVED_FAB_CAPABILITY_AND_ASSEMBLY_PROFILE_PENDING"
+            }
+          }
+        },
+        "FACTORY_CONDITIONS": {
+          "OSH2L_minBridgeMM": 0.1016,
+          "JLC4L_1oz_colours_green_red_yellow_blue_purple_minMM": 0.1,
+          "JLC4L_blackWhite_1oz_minMM": 0.13,
+          "JLC2oz_minMM": 0.2,
+          "source": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\source\\jlc_capabilities_20261019.txt"
+        }
+      },
+      "nextAction": "真实Gerber边界C8.2/U3.2=.0635、C9.2/U3.4=.0854268867mm低于所选最低目标；生产前需板厂确认或受控改padmask/位置。保留bbox下界历史，本次只文字高度批不改开窗或公库。"
+    },
+    {
+      "issueID": "JK55-011",
+      "title": "继承丝印字体低于JLC所选公开高度",
+      "status": "OPEN_RELEASE",
+      "evidenceByScope": {
+        "BOTH": {
+          "officialSource": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\source\\jlc_capabilities_20261019.txt",
+          "sourceLineRange": "345..361",
+          "minimumTextHeightMM": 1.0,
+          "minimumLineWidthMM": 0.15,
+          "padToSilkscreenMM": 0.15,
+          "CADFonts": "Real35TEXTBLOCK parameters retained; common0.508/0.635/0.7874mm; photoWidth0 is native inherited behavior, not assumed zero ink."
+        }
+      },
+      "nextAction": "本次保持字体实现来源一致；制造版另行决定字体/原点重叠与工厂细字能力，不能把1mm器件缺省高度当文字高度。"
+    },
+    {
+      "issueID": "JK57-004",
+      "title": "CAD符号原点不是已核准的吸取中心",
+      "status": "OPEN_RELEASE",
+      "evidenceByScope": {
+        "BOTH": {
+          "coordinateMeaning": "unchanged native symbol origin",
+          "nonCentredLibraryOrigins": "0603 local pads1=.1016,2=1.6764mm; not symmetric about origin0",
+          "factoryAngleMapping": "unavailable"
+        }
+      },
+      "nextAction": "以最终选定MPN吸取位置和机器零度作受控转换，保持CAD原始坐标另列，实机首件方向核准。"
+    },
+    {
+      "issueID": "JK57-005",
+      "title": "三文字同原点不能直接作为可读叠印装配图",
+      "status": "OPEN_RELEASE",
+      "evidenceByScope": {
+        "BOTH": {
+          "userConvention": "REFDES ASSEMBLY and VALUE ASSEMBLY both anchor at symbol origin"
+        }
+      },
+      "nextAction": "出分别显示REF与VALUE的装配核对视图或与BOM配套；不要为图面清晰擅改用户要求的CAD锚点。"
+    },
+    {
+      "issueID": "JK57-006",
+      "title": "四层本轮源为L3_GND历史栈",
+      "status": "OPEN_RELEASE",
+      "evidenceByScope": {
+        "BOTH": {
+          "currentJ55Source": "LEGACY_4L_L3_GND",
+          "newUserPreferredStack": "TOP parts/signals - L2 GND - L3 power - BOTTOM signals",
+          "L2SignalBridge95": "HISTORY_ONLY_NOT_ADOPTED"
+        }
+      },
+      "nextAction": "本轮文字/高度和制造导出练习保历史铜层身份；真正L3电源层重建、返回和输出必须另行完整验证，不以本次输出冒充新默认实现。"
+    }
+  ],
+  "course55": "TRAINING_INSTANCE_CORRECTION_FRESH_PASS; MANUFACTURING_RELEASE_OPEN",
+  "course57": "TRAINING_CSV_RELOAD_AND_CURRENT_BOARD_IDENTITY_PASS; FACTORY_MAPPING_OPEN"
+}
