@@ -1,0 +1,79 @@
+{
+  "status": "READ_ONLY_FINAL_READINESS_CHECK_COMPLETED",
+  "checked_at_utc": "2026-10-25T10:01:34.523656+00:00",
+  "correct_repository": "875638477/001Diy",
+  "correct_main": "4324e08f199b7d21a533a9eabda51b8879091cac",
+  "correct_main_matches_verified_migration": true,
+  "wrong_repository": "875638477/005lib",
+  "wrong_repository_http_status": 200,
+  "wrong_repository_exists": true,
+  "wrong_repository_admin": true,
+  "wrong_repository_main": "98b94676da011958839790566d18575b5793a85f",
+  "wrong_main_matches_prepared_source": true,
+  "safe_oauth_response_headers": {
+    "x-oauth-scopes": "gist, read:org, repo, workflow",
+    "x-accepted-oauth-scopes": ""
+  },
+  "current_cli_oauth_scopes": [
+    "gist",
+    "read:org",
+    "repo",
+    "workflow"
+  ],
+  "delete_repo_scope_present": false,
+  "direct_cli_delete_permission_assessment": "NO_CURRENT_OAUTH_DELETE_REPO_SCOPE",
+  "strict_source_verification_passed": true,
+  "strict_verified_file_count": 39176,
+  "completion_required_files": [
+    "delete_wrong_repository.py",
+    "exact_source_file_hashes.json",
+    "exact_source_verification.json",
+    "helper_publication.json",
+    "helper_publication_attempt1.json",
+    "migration_actions_attempt1_logs.zip",
+    "migration_actions_logs.zip",
+    "migration_retry_record.json",
+    "migration_workflow.yml",
+    "migration_workflow_attempt1.yml",
+    "payload_manifest.json",
+    "post_migration_independent_review.json",
+    "preparation.json",
+    "prepare_fix_records.py",
+    "publish_completion.py",
+    "publish_helper.py",
+    "repository_deletion_result.json",
+    "retry_migration.py",
+    "runner.py",
+    "verification_result.json",
+    "verify_migration.py"
+  ],
+  "completion_missing_files": [
+    "repository_deletion_result.json"
+  ],
+  "only_missing_expected_postdelete_proof": true,
+  "completion_already_published": false,
+  "git_executable_exists": true,
+  "gh_executable_exists": true,
+  "script_syntax": {
+    "delete_wrong_repository.py": {
+      "ast": "PASS",
+      "sha256": "4eb290b8a81f229e324bcbcbffaef74881d175bd539fd1162362b1a5afbebadb"
+    },
+    "publish_completion.py": {
+      "ast": "PASS",
+      "sha256": "b83b9b55f14a91ee69f7947d5ad3d719a3b28c4ee0c3e1cdc5186c89ba9483c2"
+    },
+    "prepare_fix_records.py": {
+      "ast": "PASS",
+      "sha256": "f1001a79bff39a13576b88f79f80c97d9ce105de79082d1ea8e1019e19230d71"
+    },
+    "publish_helper.py": {
+      "ast": "PASS",
+      "sha256": "528597ba91c6f9c3b909a716ddb271cd3932a41d9f1a33459f7c7c67b8d05c25"
+    }
+  },
+  "get_request_count": 4,
+  "remote_mutations": false,
+  "source_writes": false,
+  "authorization_requirement_source": "https://docs.github.com/en/rest/repos/repos#delete-a-repository"
+}

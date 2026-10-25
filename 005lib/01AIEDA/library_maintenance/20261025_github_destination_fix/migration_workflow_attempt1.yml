@@ -1,0 +1,216 @@
+name: Correct library destination
+on:
+  push:
+    branches:
+      - 'codex/library-destination-fix-20261025-0800'
+permissions:
+  contents: write
+concurrency:
+  group: library-destination-fix-20261025
+  cancel-in-progress: false
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if: github.repository == '875638477/001Diy'
+    steps:
+      - name: Transfer and verify the fixed library snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          """GitHub-hosted runner template: migrate the verified library beneath 005lib.
+          
+          Review and inline in the one-time helper-branch workflow; never execute locally.
+          All network endpoints are GitHub. Only the destination main branch is published,
+          by a normal, non-force descendant push. The helper tree is never a main parent.
+          """
+          from __future__ import annotations
+          
+          import base64
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+          import re
+          import subprocess
+          import tempfile
+          
+          
+          TARGET_REPOSITORY = "875638477/001Diy"
+          SOURCE_REPOSITORY = "875638477/005lib"
+          HELPER_BRANCH = "codex/library-destination-fix-20261025-0800"  # Replace before publishing the workflow.
+          SOURCE_COMMIT = "98b94676da011958839790566d18575b5793a85f"
+          SOURCE_TREE = "96dbcfad837bd1cb2f24b6b16f55655d3c1e58ec"
+          EXPECTED_LIBRARY_TREE = "95032ed6bb334ea7a1776cecfc58cbaaddfb34ab"
+          EXPECTED_TARGET_MAIN = "30fbcf36722b39852fb24b254f3bc3f995149afb"
+          EXPECTED_LIBRARY_FILES = 39176
+          ROOTS = {"01aeLib", "01AIEDA", "01brdlib", "01captureLib", "01env", "01Pad_lib", "01Psm_lib", "01script_file", "01_3d_step_lib"}
+          MANIFEST_PATH = ".migration_payload/manifest.json"
+          PAYLOAD_PREFIX = ".migration_payload/"
+          HEX40 = re.compile(r"[0-9a-f]{40}\Z")
+          HEX64 = re.compile(r"[0-9a-f]{64}\Z")
+          
+          
+          def require(condition, message):
+              if not condition:
+                  raise RuntimeError(message)
+          
+          
+          def info(raw):
+              return {"bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest(),
+                      "blob": hashlib.sha1(b"blob " + str(len(raw)).encode("ascii") + b"\0" + raw).hexdigest()}
+          
+          
+          def entries(raw):
+              result = {}
+              for entry in raw.split(b"\0"):
+                  if not entry:
+                      continue
+                  attrs, name = entry.split(b"\t", 1)
+                  mode, kind, oid = attrs.split(b" ")
+                  require(name not in result, "Duplicate tree entry")
+                  result[name] = (mode, kind, oid)
+              return result
+          
+          
+          def validate_payload(row):
+              require(isinstance(row, dict) and {"path", "mode", "blob", "bytes", "sha256"}.issubset(row), "Payload is missing required fields")
+              path = row["path"]
+              require(isinstance(path, str) and "\\" not in path and not any(ord(c) < 32 for c in path), "Unsafe payload path")
+              parts = path.split("/")
+              require(parts[0] in ROOTS and all(p not in ("", ".", "..") and p.casefold() != ".git" for p in parts), "Payload path is outside the library or contains metadata")
+              path.encode("utf-8", "strict")
+              require(row["mode"] == "100644", "Only regular record files may be overlaid")
+              require(isinstance(row["bytes"], int) and 0 <= row["bytes"] <= 100 * 1024 * 1024, "Invalid payload byte count")
+              require(isinstance(row["blob"], str) and HEX40.fullmatch(row["blob"]), "Invalid payload blob")
+              require(isinstance(row["sha256"], str) and HEX64.fullmatch(row["sha256"]), "Invalid payload SHA256")
+          
+          
+          def main():
+              require(os.environ.get("GITHUB_ACTIONS") == "true", "This template runs only in GitHub Actions")
+              require(HELPER_BRANCH != "__HELPER_BRANCH__", "Replace the helper branch placeholder before publishing")
+              require(os.environ.get("GITHUB_REPOSITORY") == TARGET_REPOSITORY, "Unexpected workflow repository")
+              require(os.environ.get("GITHUB_REF") == "refs/heads/" + HELPER_BRANCH, "Unexpected workflow branch")
+              helper_sha = os.environ.get("GITHUB_SHA", "")
+              require(HEX40.fullmatch(helper_sha), "Invalid immutable helper commit")
+              token = os.environ.get("GH_TOKEN", "")
+              require(bool(token), "GH_TOKEN must be the job's short-lived GITHUB_TOKEN")
+              authorization = base64.b64encode(("x-access-token:" + token).encode("utf-8")).decode("ascii")
+              environment = os.environ.copy()
+              for key in list(environment):
+                  if key.startswith("GIT_TRACE") or key in ("GIT_CURL_VERBOSE", "GIT_DIR", "GIT_WORK_TREE", "GIT_INDEX_FILE"):
+                      environment.pop(key, None)
+              environment["GIT_TERMINAL_PROMPT"] = "0"
+              environment["GIT_AUTHOR_NAME"] = environment["GIT_COMMITTER_NAME"] = "github-actions[bot]"
+              environment["GIT_AUTHOR_EMAIL"] = environment["GIT_COMMITTER_EMAIL"] = "41898282+github-actions[bot]@users.noreply.github.com"
+          
+              def sanitize(message):
+                  return message.replace(token, "[REDACTED]").replace(authorization, "[REDACTED]")
+          
+              with tempfile.TemporaryDirectory(prefix="005lib-migrate-", dir=os.environ.get("RUNNER_TEMP")) as temporary:
+                  repository = Path(temporary) / "repository.git"
+                  result = subprocess.run(["git", "init", "--bare", str(repository)], env=environment, capture_output=True)
+                  require(result.returncode == 0, "Unable to initialize temporary Git database")
+                  environment["GIT_INDEX_FILE"] = str(Path(temporary) / "library.index")
+          
+                  def git(*arguments, raw=None, public=False):
+                      # Never log this command: its extraheader contains the ephemeral token.
+                      command = ["git", "--git-dir", str(repository), "-c", "gc.auto=0",
+                                 "-c", "core.autocrlf=false", "-c", "credential.helper="]
+                      if not public:
+                          command += ["-c", "http.https://github.com/.extraheader=AUTHORIZATION: basic " + authorization]
+                      command += list(arguments)
+                      completed = subprocess.run(command, env=environment, input=raw, capture_output=True)
+                      if completed.returncode:
+                          raise RuntimeError("Git operation " + arguments[0] + " failed: " + sanitize(completed.stderr.decode("utf-8", "replace")[-4000:]))
+                      return completed.stdout
+          
+                  def text(*arguments):
+                      return git(*arguments).decode("utf-8", "strict").strip()
+          
+                  def phase(name):
+                      print(json.dumps({"phase": name}), flush=True)
+          
+                  git("remote", "add", "origin", "https://github.com/" + TARGET_REPOSITORY + ".git")
+                  phase("fetch_immutable_helper_metadata")
+                  git("fetch", "--no-tags", "--filter=blob:none", "--depth=1", "origin", helper_sha + ":refs/migration/helper")
+                  # A shallow boundary hides parents from rev-list, so inspect the actual
+                  # commit header; helper publisher must use expected target main directly.
+                  helper_headers = git("cat-file", "commit", helper_sha).split(b"\n\n", 1)[0].splitlines()
+                  helper_parent_oids = [line[7:].decode("ascii") for line in helper_headers if line.startswith(b"parent ")]
+                  require(helper_parent_oids == [EXPECTED_TARGET_MAIN], "Helper must have exactly expected target main as parent")
+                  manifest_raw = git("show", helper_sha + ":" + MANIFEST_PATH)
+                  manifest = json.loads(manifest_raw.decode("utf-8"))
+                  for key, value in (("source_commit", SOURCE_COMMIT), ("source_tree", SOURCE_TREE),
+                                     ("expected_library_tree", EXPECTED_LIBRARY_TREE), ("expected_target_main", EXPECTED_TARGET_MAIN)):
+                      require(manifest.get(key) == value, "Migration manifest anchor differs: " + key)
+                  payload = manifest.get("payload")
+                  require(isinstance(payload, list) and bool(payload), "Missing explicit replacement payload")
+                  expected_library_files = manifest.get("expected_library_file_count", EXPECTED_LIBRARY_FILES)
+                  require(isinstance(expected_library_files, int) and expected_library_files > 0, "Invalid expected library file count")
+                  paths = set()
+                  for row in payload:
+                      validate_payload(row)
+                      require(row["path"].casefold() not in paths, "Duplicate/case-colliding payload path")
+                      paths.add(row["path"].casefold())
+                  phase("fetch_expected_target_main_metadata")
+                  git("fetch", "--no-tags", "--filter=blob:none", "--depth=1", "origin", "refs/heads/main:refs/migration/target")
+                  require(text("rev-parse", "refs/migration/target") == EXPECTED_TARGET_MAIN, "Target main changed; no migration published")
+                  before_root = entries(git("ls-tree", "-z", EXPECTED_TARGET_MAIN))
+                  phase("fetch_verified_public_source_objects_in_cloud")
+                  git("fetch", "--no-tags", "--depth=1", "https://github.com/" + SOURCE_REPOSITORY + ".git", SOURCE_COMMIT + ":refs/migration/source", public=True)
+                  require(text("rev-parse", "refs/migration/source^{tree}") == SOURCE_TREE, "Fetched source tree differs")
+                  git("read-tree", SOURCE_TREE)
+                  phase("apply_and_hash_explicit_record_payload")
+                  for row in payload:
+                      raw = git("show", helper_sha + ":" + PAYLOAD_PREFIX + row["path"])
+                      hashes = info(raw)
+                      require(all(hashes[key] == row[key] for key in ("bytes", "sha256", "blob")), "Payload byte count/SHA256/blob differs: " + row["path"])
+                      oid = git("hash-object", "-w", "--stdin", raw=raw).decode("ascii").strip()
+                      require(oid == row["blob"], "Git computed a different overlay blob")
+                      git("update-index", "--add", "--cacheinfo", row["mode"], oid, row["path"])
+                  library_tree = text("write-tree")
+                  require(library_tree == EXPECTED_LIBRARY_TREE, "Final library tree differs from the locally precomputed exact tree")
+                  library_roots = entries(git("ls-tree", "-z", library_tree))
+                  require({name.decode("utf-8") for name in library_roots} == ROOTS and all(mode == b"040000" and kind == b"tree" for mode, kind, _ in library_roots.values()), "Library root is not exactly nine directories")
+                  library_file_count = len([entry for entry in git("ls-tree", "-r", "-z", library_tree).split(b"\0") if entry])
+                  require(library_file_count == expected_library_files, "Final library file count differs")
+                  phase("construct_target_root_preserving_every_other_entry")
+                  target_entries = {name: value for name, value in before_root.items() if name != b"005lib"}
+                  target_entries[b"005lib"] = (b"040000", b"tree", library_tree.encode("ascii"))
+                  root_data = b"".join(mode + b" " + kind + b" " + oid + b"\t" + name + b"\0" for name, (mode, kind, oid) in target_entries.items())
+                  new_root = git("mktree", "-z", raw=root_data).decode("ascii").strip()
+                  require(entries(git("ls-tree", "-z", new_root)) == target_entries, "Constructed root differs; outside files must remain unchanged")
+                  new_commit = git("commit-tree", new_root, "-p", EXPECTED_TARGET_MAIN,
+                                   "-m", "Move verified Cadence libraries into 005lib under the correct 001Diy repository").decode("ascii").strip()
+                  require(text("rev-list", "--parents", "-n", "1", new_commit).split() == [new_commit, EXPECTED_TARGET_MAIN], "New main commit must have only original target main as parent")
+                  require(text("rev-parse", new_commit + ":005lib") == EXPECTED_LIBRARY_TREE, "Committed 005lib subtree differs")
+                  require(entries(git("ls-tree", "-z", new_commit)) == target_entries, "Committed root differs")
+                  current_remote = git("ls-remote", "--exit-code", "origin", "refs/heads/main").decode("ascii").split()
+                  require(current_remote and current_remote[0] == EXPECTED_TARGET_MAIN, "Target main advanced before push; no forced update allowed")
+                  phase("publish_normal_descendant_commit_to_main")
+                  git("push", "--porcelain", "origin", new_commit + ":refs/heads/main")
+                  after_remote = git("ls-remote", "--exit-code", "origin", "refs/heads/main").decode("ascii").split()
+                  require(after_remote and after_remote[0] == new_commit, "Remote main readback differs; reconcile before deleting the old repository")
+                  result = {"status": "PASS_MIGRATED_VERIFIED_LIBRARY_SUBTREE", "target_repository": TARGET_REPOSITORY,
+                            "target_branch": "main", "target_commit": new_commit, "target_root_tree": new_root,
+                            "target_parent": EXPECTED_TARGET_MAIN, "source_commit": SOURCE_COMMIT,
+                            "original_source_tree": SOURCE_TREE, "library_tree": library_tree,
+                            "library_files": library_file_count, "overlay_files": len(payload),
+                            "all_other_root_entries_unchanged": True, "other_root_entries": len(target_entries) - 1,
+                            "helper_commit": helper_sha, "helper_tree_not_parent_of_main": True,
+                            "manifest_sha256": hashlib.sha256(manifest_raw).hexdigest(),
+                            "incorrect_repository_deleted": False, "forced_push": False,
+                            "destination": "https://github.com/" + TARGET_REPOSITORY + "/tree/main/005lib"}
+                  encoded = json.dumps(result, ensure_ascii=False, sort_keys=True)
+                  print("MIGRATION_RESULT=" + encoded, flush=True)
+                  if os.environ.get("GITHUB_STEP_SUMMARY"):
+                      with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a", encoding="utf-8") as summary:
+                          summary.write("Verified 005lib migration completed.\n\n```json\n" + json.dumps(result, ensure_ascii=False, indent=2) + "\n```\n")
+          
+          
+          if __name__ == "__main__":
+              main()
+          PY
