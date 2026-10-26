@@ -1,0 +1,73 @@
+{
+  "status": "PASS_OFFLINE_SOURCE_BOUND_NOOP_PST_CANARY_NOT_NATIVE_APPROVED",
+  "native_roundtrip_required": true,
+  "source_board": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_genfeed13\\02_0010\\0010.brd",
+  "source_sha256": "680500B07BC97F2B9D47064F83A01D0376AE43ADD486171F9B46087109E1B898",
+  "model": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\verification\\public_brd_device_model13_0010_v2\\DEVICE_VIEW_EXACT_MODEL.json",
+  "model_sha256": "AA6CEDF852D7AFBEC95B85D005BFDA7696CB827AAFC9676723A34AF5EBF8C85D",
+  "primitive_declarations": 101,
+  "component_declarations": 572,
+  "source_functions": 684,
+  "physical_pins": 2582,
+  "named_nets_plus_reserved_NC": 657,
+  "reserved_NC_members": 143,
+  "all_original_source_values_packages_pin_names_pinuses_swaps_slots_paths_retained_offline": true,
+  "negative_controls": [
+    {
+      "name": "wrong_package",
+      "status": "PASS_REJECTED"
+    },
+    {
+      "name": "wrong_value",
+      "status": "PASS_REJECTED"
+    },
+    {
+      "name": "wrong_pinuse",
+      "status": "PASS_REJECTED"
+    },
+    {
+      "name": "wrong_swap",
+      "status": "PASS_REJECTED"
+    },
+    {
+      "name": "wrong_section",
+      "status": "PASS_REJECTED"
+    },
+    {
+      "name": "heterogeneous_slot_zero_omitted",
+      "status": "PASS_REJECTED"
+    },
+    {
+      "name": "heterogeneous_slot_swapped",
+      "status": "PASS_REJECTED"
+    },
+    {
+      "name": "wrong_nc_node",
+      "status": "PASS_REJECTED"
+    }
+  ],
+  "files": [
+    {
+      "name": "pstchip.dat",
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_pst_noop13_0010_v2\\netlist\\pstchip.dat",
+      "sha256": "460C48E9AA8C57368070E55E026174B18745BF26BF20E4DCE78781197EA83886",
+      "bytes": 79245
+    },
+    {
+      "name": "pstxprt.dat",
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_pst_noop13_0010_v2\\netlist\\pstxprt.dat",
+      "sha256": "9F605D4D876797B58D7452CE3DDE563F2FFB3C8720E03AEDAE3E43BAA9CB5EB7",
+      "bytes": 196936
+    },
+    {
+      "name": "pstxnet.dat",
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_pst_noop13_0010_v2\\netlist\\pstxnet.dat",
+      "sha256": "9338D1FDB0CE5E8D066CF53C40793D6CB30A3513EB33B4E5BB766F32FCBF4068",
+      "bytes": 401943
+    }
+  ],
+  "independent_PST_parser": "D:\\001DIY\\004computer\\lga1700\\12electrical_fixed_20261025\\tools\\verify_eco12.py",
+  "independent_PST_parser_sha256": "60757B0179FAC5E71CB036F3ECCC4DA7535DCFC3762708A3ACE187303E5854FC",
+  "script_sha256": "AA39A6904000BA55986084AF3349FF4018212D3E6363B03163DBB791F31FA08D",
+  "strict_native_acceptance": "Run protected fresh-board no-op netrev before mapping or any public replacement. Require complete source/candidate CFX/TCFX constraints, all device primitive and slot identity semantics, original geometry/placement/physical pin numbers/net assignments and typed NC, manual copper/generated copper topology+actual contours, full view optional properties and all per-ref values/package/device unchanged. No checksum/name-only acceptance. Do not publish this offline reconstruction until complete native no-op proof closes."
+}

@@ -1,0 +1,24 @@
+procedure(pc13MainFontContextApply(s)
+ let((f row rows p i expected a)
+  unless(equal(axlDBGetDesignUnits() '("mils" 2)) error("Main font context requires exactmils2\n"))
+  unless(null(axlDBGetDesign()->symdefs) && null(axlDBGetDesign()->padstacks) error("Font context may only be applied to an empty cold fixture\n"))
+  f=infile("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/project6_mainfont_plan13_v2/MAIN_SOURCE64_FONT_CONTEXT.ilist") rows=nil while(row=lineread(f) rows=cons(car(row) rows)) close(f) rows=reverse(rows)
+  unless(length(rows)==64 error("Full unchanged source64 font context missing\n"))
+  ; Allocate all missing slots first, before setting source user-defined names.
+  for(i 1 64
+   p=axlGetParam(sprintf(nil "paramTextBlock:%d" i))
+   ; axlGetParam can return a truthy objType-only placeholder for absent slots.
+   unless(p && equal(p->name sprintf(nil "%d" i))
+    unless(equal(axlDBTextBlockCreate(1) i) error("Cannot allocate exact source font slot\n"))))
+  foreach(row rows
+   expected=cadr(row) p=axlGetParam(strcat("paramTextBlock:" car(row)))
+   p->width=cadr(memq('width expected)) p->height=cadr(memq('height expected))
+   p->lineSpace=cadr(memq('lineSpace expected)) p->charSpace=cadr(memq('charSpace expected)) p->photoWidth=cadr(memq('photoWidth expected))
+   unless(axlSetParam(p) error("Official source font parameter copy failed\n"))
+   p=axlGetParam(strcat("paramTextBlock:" car(row)))
+   unless(equal(p->userDefined cadr(memq('userDefined expected)))
+    unless(axlDBTextBlockSetName(atoi(car(row)) cadr(memq('userDefined expected))) error("Source font user-defined name copy failed\n")))
+   p=axlGetParam(strcat("paramTextBlock:" car(row)))
+   unless(equal(p->?? expected) error("Complete original source font spec mismatch at slot%s %L %L\n" car(row) expected p->??))
+   fprintf(s "MAIN_SOURCE_FONT_EXACT\t%s\t%L\n" car(row) p->??) drain(s))
+  fprintf(s "MAIN_SOURCE_ALL64_FONT_CONTEXT_EXACT_COMPLETE\n") drain(s) t))

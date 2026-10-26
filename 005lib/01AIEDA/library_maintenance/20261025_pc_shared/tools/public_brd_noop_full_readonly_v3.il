@@ -1,0 +1,77 @@
+; Public board-library audit, definitions only. No save, DRC/fill setter or ECO.
+load("D:/001DIY/004computer/lga1700/12electrical_fixed_20261025/tools/native_audit/helpers_readonly.il")
+load("D:/001DIY/004computer/lga1700/12electrical_fixed_20261025/tools/native_audit/geometry_compact_readonly.il")
+load("D:/001DIY/004computer/lga1700/12electrical_fixed_20261025/tools/native_audit/read_all_pins.il")
+load("D:/001DIY/004computer/lga1700/12electrical_fixed_20261025/tools/native_audit/additional_readonly.il")
+load("D:/001DIY/004computer/lga1700/12electrical_fixed_20261025/rules/replay/native_constraints_helpers.il")
+load("D:/001DIY/004computer/lga1700/13shared_libraries_pc_20261025/w/pcb_migration/pc13_export_board_definitions.il")
+load("D:/001DIY/004computer/lga1700/12electrical_fixed_20261025/tools/shape_power_repair/shape_snapshot.il")
+load("D:/001DIY/005lib/01AIEDA/learning/scripts/allegro_value_text_owner_readonly.il")
+
+procedure(spRing(f vertices)
+ let((first v xy r)
+  fprintf(f "[") first=t
+  foreach(v vertices unless(first fprintf(f ",")) first=nil xy=car(v) r=cadr(v)
+   fprintf(f "[%L,%L,%L]" car(xy) cadr(xy) if(numberp(r) then r else 0.0))) fprintf(f "]")))
+procedure(spBBox(f box) fprintf(f "[[%L,%L],[%L,%L]]" caar(box) cadar(box) caadr(box) cadadr(box)))
+
+procedure(pub13FullShapeSnapshot(dir)
+ let((f meta d s ids i n b seen p)
+  d=axlDBGetDesign() ids=makeTable('pub13ShapeIds nil) i=0
+  f=outfile(strcat(dir "/shape_polygons.jsonl")) meta=outfile(strcat(dir "/shape_metadata.tsv"))
+  fprintf(meta "id\tlayer\tnet\trole\tpriority\tproperties\tdynamic_group_properties\n")
+  foreach(s axlDBGetShapes(nil)
+   when(member(car(parseString(s->layer "/")) '("ETCH" "BOUNDARY")) && !s->isHole
+    unless(ids[s] i=i+1 ids[s]=i)))
+  foreach(s axlDBGetShapes(nil) when(ids[s] spDumpShape(f meta s ids))) close(f) close(meta)
+  f=outfile(strcat(dir "/dynamic_settings.txt"))
+  fprintf(f "FILL_MODE=%L\nOOD=%L\n" axlDBControl('dynamicFillMode) axlDBDynamicShapes(nil))
+  p=axlGetParam("shapeDynamic") fprintf(f "DYNAMIC=%L\n" if(p then p->?? else nil))
+  p=axlGetParam("shapeStatic") fprintf(f "STATIC=%L\n" if(p then p->?? else nil)) close(f)
+  f=outfile(strcat(dir "/via_properties.tsv")) seen=makeTable('pub13ViaSeen nil)
+  fprintf(f "id\txy\tpadstack\tnet\tproperties\n")
+  foreach(n d->nets foreach(b n->branches spViaWalk(b f seen)))
+  foreach(b axlDBGetLonelyBranches() spViaWalk(b f seen)) close(f)
+  f=outfile(strcat(dir "/SHAPE_SNAPSHOT_COMPLETE.txt")) fprintf(f "COMPLETE_READ_ONLY_ALL_ACTUAL_ETCH_AND_BOUNDARY_LAYERS\nSHAPES=%d\n" i) close(f) t))
+
+procedure(pub13PlacedDefinitions(dir)
+ let((f s def seen count file)
+  seen=makeTable('pub13CachedDefs nil) count=0 f=outfile(strcat(dir "/manifest.tsv"))
+  fprintf(f "name\tfile\tunits\n")
+  foreach(s axlDBGetDesign()->symbols
+   def=s->definition
+   when(def
+   unless(seen[def->name]
+    seen[def->name]=t file=sprintf(nil "%s/def_%04d.sexp" dir count)
+    pc13ExportOneDefinition(def file)
+    fprintf(f "%L\t%L\t%L\n" def->name file axlDBGetDesignUnits()) drain(f) count=count+1)))
+  close(f) count))
+
+procedure(pub13FullReadOnly(dir)
+ let((d f c s p n defs geo originalClass exitCode dc tc counts initialCounts initialPads)
+  sstatus(fullPrecision t) d=axlDBGetDesign() unless(d error("No active public board source\n"))
+  initialPads=0 foreach(s d->symbols initialPads=initialPads+length(s->pins))
+  initialCounts=list(length(d->components) length(d->symbols) initialPads length(d->nets))
+  lgaRefTextID=nil lgaGeoSnapshot(dir)
+  procedure(lgaGeoClass(obj) "EXPLICIT_OR_BOUNDARY") lgaGeoSnapshot(strcat(dir "/before"))
+  lgaAllPinsAudit(dir) lgaPostAudit(dir nil) rcTextAudit(dir)
+  f=outfile(strcat(dir "/components_full.ilist"))
+  foreach(c d->components fprintf(f "(component %L %L %L %L %L)\n" c->name c->deviceType c->package if(c->symbol then t else nil) axlDBGetProperties(c '("user" "allegro")))) close(f)
+  f=outfile(strcat(dir "/physical_object_properties.ilist"))
+  foreach(s d->symbols
+   fprintf(f "(symbol %L %L %L %L)\n" s->refdes s->name s->xy axlDBGetProperties(s '("user" "allegro")))
+   foreach(p s->pins fprintf(f "(pin %L %L %L %L %L %L %L)\n" s->refdes p->number p->xy edaL3NetName(p->net) p->name p->isMech axlDBGetProperties(p '("user" "allegro"))))) close(f)
+  f=outfile(strcat(dir "/native_constraints_result.txt"))
+  fprintf(f "CMXL_INIT=%L\n" axlCMDBInit()) n=cmxlFindObject(REDS_DESIGN_OBJ) unless(n error("Missing native CMDB design\n"))
+  fprintf(f "CMXL_SKILL_INIT=%L\n" cmxlDBSkillInit(n))
+  dc=cmxlExportFile(n strcat(dir "/ACTUAL_SUPPLEMENT.dcfx")) tc=cmxlExportFile(n strcat(dir "/ACTUAL_SUPPLEMENT.tcfx"))
+  exitCode=axlCMDBExit() fprintf(f "DCFX=%L\nTCFX=%L\nCMXL_EXIT=%L\n" dc tc exitCode) close(f)
+  unless(dc==1 && tc==1 && exitCode==0 error("Full native CFX export failed\n"))
+  pub13FullShapeSnapshot(dir) defs=pub13PlacedDefinitions(dir)
+  ; CMXL exit invalidates prior dbids. Reacquire the design, never dereference d
+  ; captured before axlCMDBInit/Exit. All post-CMXL helpers use fresh DB lookups.
+  d=axlDBGetDesign() unless(d error("No fresh design after CMXL exit\n"))
+  counts=0 foreach(s d->symbols counts=counts+length(s->pins))
+  unless(equal(initialCounts list(length(d->components) length(d->symbols) counts length(d->nets))) error("Read-only source object counts changed or stale dbids\n"))
+  f=outfile(strcat(dir "/PUBLIC_BOARD_COMPLETE.txt"))
+  fprintf(f "COMPLETE_READ_ONLY_PUBLIC_LIBRARY_BOARD\nCOMPONENTS=%d\nSYMBOLS=%d\nPHYSICAL_PAD_OBJECTS=%d\nNETS=%d\nACTUAL_CACHED_PLACED_DEFINITIONS=%d\nSAVE_CALLS=0\nFILL_SETTERS=0\nDRC_SETTERS=0\n" length(d->components) length(d->symbols) counts length(d->nets) defs) close(f) t))

@@ -1,0 +1,16 @@
+"""Compare complete native warning/error diagnostic multiplicities against source-value control."""
+from pathlib import Path
+from collections import Counter
+import json,hashlib,re
+M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
+def parse(p):return Counter(line.strip() for line in p.read_text(encoding='utf-8-sig',errors='replace').splitlines() if re.search(r'\b(?:WARNING|ERROR)\(SPM[A-Z]+-\d+\):',line))
+out=M/'public_module_warning_baseline_review13';out.mkdir(exist_ok=False);reports=[]
+for board,target in [('00012','module00012_mapped13'),('008','module008_mapped14')]:
+ base=M/'w'/('module'+board+'_source_warning_control13');control=json.loads((base/'SOURCE_VALUE_BASELINE_DIAGNOSTIC.json').read_text(encoding='utf-8-sig'));source=base/'netrev.lst';candidate=M/'w'/target/'netrev.lst';x=parse(source);y=parse(candidate)
+ if not(control['source_unchanged'] and control['independent_input_unchanged'] and control['source_and_staged_PST_exact']):raise ValueError('Control native guard failed')
+ if x!=Counter(r['text'] for r in control['diagnostics']):raise ValueError('Native control diagnostic parse diverged')
+ result={'board':board,'status':'PASS_EXACT_COMPLETE_ORIGINAL_DIAGNOSTICS_NO_NEW_REGRESSION' if x==y else 'FAIL_ADDED_OR_REMOVED_NATIVE_DIAGNOSTICS','source_control':str(base/'SOURCE_VALUE_BASELINE_DIAGNOSTIC.json'),'source_control_sha256':sha(base/'SOURCE_VALUE_BASELINE_DIAGNOSTIC.json'),'source_netrev_log':str(source),'source_netrev_log_sha256':sha(source),'candidate_netrev_log':str(candidate),'candidate_netrev_log_sha256':sha(candidate),'source_diagnostic_total':sum(x.values()),'candidate_diagnostic_total':sum(y.values()),'source_warning_error_codes':dict(Counter({code:sum(n for t,n in x.items() if ('('+code+')') in t) for code in sorted(set(re.findall(r'\((SPM[A-Z]+-\d+)\)',t)[0] for t in x))})),'complete_exact_diagnostics':[{'text':t,'multiplicity':n} for t,n in x.items()],'removed_diagnostics':dict(x-y),'added_diagnostics':dict(y-x),'candidate_board':str(candidate.parent/'LIVE_IMPORTED.brd'),'candidate_board_sha256':sha(candidate.parent/'LIVE_IMPORTED.brd')}
+ reports.append(result)
+report={'status':'PASS_ALL_BASELINE_NATIVE_WARNINGS_ERRORS_EXACT_NO_NEW_DIAGNOSTICS' if all(r['status'].startswith('PASS') for r in reports) else 'FAIL_DIAGNOSTIC_REGRESSION','cases':reports,'scope':'Exact diagnostic text and multiplicity only. Existing missing legacy symbols/shapes, LED A/C versus1/2 incompatibilities, missing signal models and single-pin swap warnings remain unresolved old-module issues. This evidence proves no new native diagnostic regression from the planned package renames; it does not approve device, copper, constraints or connectivity semantics and does not turn original errors into success.','public_files_changed':0,'script_sha256':sha(__file__)}
+p=out/'PUBLIC_MODULE_WARNING_BASELINE_REVIEW.json';p.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps({'status':report['status'],'cases':[{'board':r['board'],'source':r['source_diagnostic_total'],'candidate':r['candidate_diagnostic_total'],'status':r['status']} for r in reports],'report':str(p)}))

@@ -1,0 +1,366 @@
+{
+  "status": "FAIL_NATIVE_REVERSE_PST_EXPORT_PUBLIC_FILES_NOT_REPLACED",
+  "plan": {
+    "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\global_suffix_reference_audit_v1\\PUBLIC_BRD_REFERENCE_AUDIT.json",
+    "sha256": "C09ED929BA55CDDF6FB56702F9835F48B482D6A3BE3453B812BE3737DE2BE1DD"
+  },
+  "native_executable": {
+    "path": "C:\\Program0\\cadence\\SPB172\\tools\\bin\\genfeedformat.exe",
+    "sha256": "98240FD23891CDCADDB402436EDFBF15035DA2E900CCE21B67C8384E330698F7"
+  },
+  "official_help": {
+    "path": "C:\\Program0\\cadence\\SPB172\\share\\pcb\\batchhelp\\genfeedformat.txt",
+    "sha256": "93FE9817697FF2572447DF9D3CD33847A45321139CB42DD35A6CA7A6CA2B0EF9"
+  },
+  "all_seven_public_sources_before": {
+    "D:\\001DIY\\005lib\\01brdlib\\00012.brd": "B55FA5B127F41949EB6EF60EE6796954D0B030B59603B4E41DA83585B258A60F",
+    "D:\\001DIY\\005lib\\01brdlib\\0010.brd": "680500B07BC97F2B9D47064F83A01D0376AE43ADD486171F9B46087109E1B898",
+    "D:\\001DIY\\005lib\\01brdlib\\002.brd": "A609E15FF8EA83EFE438540EB3EFD01EF42F308004622B1E4D09C248E15BE69D",
+    "D:\\001DIY\\005lib\\01brdlib\\004.brd": "0109D3E57416A1F2138DB7EDAB5EE9981520F69FB20764ADB5D3D4DF79F2E033",
+    "D:\\001DIY\\005lib\\01brdlib\\006.brd": "4C633CE2A9F101F0E95964F4F12134AB61F52E27074FF92508EA1EBE45181717",
+    "D:\\001DIY\\005lib\\01brdlib\\008.brd": "559AEC92E1CEC9BFD91EBFEF06C765BEC1F10E72F22F2FBF01F5AA348A7FCDA1",
+    "D:\\001DIY\\005lib\\01brdlib\\VCU16.brd": "90276B7EDBBBC341B10E78C198240A94ABD07BD8F63F78D8915DABB2E449ACA1"
+  },
+  "full_native_counts": {
+    "declared_components": 4335,
+    "placed_symbol_objects": 1466,
+    "candidate_declared_aliases": 2501,
+    "candidate_placed_symbols": 403
+  },
+  "boards": [
+    {
+      "source": "D:\\001DIY\\005lib\\01brdlib\\00012.brd",
+      "source_sha256": "B55FA5B127F41949EB6EF60EE6796954D0B030B59603B4E41DA83585B258A60F",
+      "declared_components_from_native_snapshot": 897,
+      "placed_symbols_from_native_snapshot": 9,
+      "status": "FAIL",
+      "native_output": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\01_00012\\native_output",
+      "custom_extract_config": {
+        "source": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\tools\\pxlBA_full_component_identity.txt",
+        "source_sha256": "F831B5BBB7F8165370A78E379930FB4094BDFCE292961CDD2EB1B4263676E329",
+        "independent_job_copy": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\01_00012\\pxlBA.txt"
+      },
+      "command": [
+        "C:\\Program0\\cadence\\SPB172\\tools\\bin\\genfeedformat.exe",
+        "-b",
+        "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\01_00012\\00012.brd",
+        "-o",
+        "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\01_00012\\native_output",
+        "-m",
+        "1",
+        "-c"
+      ],
+      "exit_code": 2,
+      "elapsed_seconds": 0.683,
+      "staged_copy_sha256_after": "B55FA5B127F41949EB6EF60EE6796954D0B030B59603B4E41DA83585B258A60F",
+      "source_sha256_after": "B55FA5B127F41949EB6EF60EE6796954D0B030B59603B4E41DA83585B258A60F",
+      "original_archive_sha256": "7B85EF5FF517605277D3BAF50A833C8DD5F60313A25552EB4EF5C934BB610947",
+      "error": "ValueError('Native genfeedformat nonzero/timeout')",
+      "all_output_hashes": {
+        "extract.log": "7B9183855CFA2895C38FD7AB745FEE1103C0B3D6C30A17A2270D6D958D6CC71E",
+        "genfeed.log": "9C0F75380633048D55138BA8BF0A466760A0B3C74BD42DF06AC65DD7E0B7EF70",
+        "ORIGINAL_BRD.zip": "7B85EF5FF517605277D3BAF50A833C8DD5F60313A25552EB4EF5C934BB610947",
+        "owned_process.json": "FFF676EA54AF952A45A7F5BB7204F5F2AABF0BCA7BB77299A7D5746CF80F48E7",
+        "pxlBA.txt": "F831B5BBB7F8165370A78E379930FB4094BDFCE292961CDD2EB1B4263676E329",
+        "stderr.txt": "7D9BB11AA3D35E20636C889A16606FF47D41488FE8F226A5A5BFA1183D117700",
+        "stdout.txt": "03847D0987636DED98A0AF01660673BC0AEC5D1854642615AA97F51A284CCDB6",
+        "native_output\\pinView.dat": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      }
+    },
+    {
+      "source": "D:\\001DIY\\005lib\\01brdlib\\0010.brd",
+      "source_sha256": "680500B07BC97F2B9D47064F83A01D0376AE43ADD486171F9B46087109E1B898",
+      "declared_components_from_native_snapshot": 572,
+      "placed_symbols_from_native_snapshot": 593,
+      "status": "FAIL",
+      "native_output": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\02_0010\\native_output",
+      "custom_extract_config": {
+        "source": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\tools\\pxlBA_full_component_identity.txt",
+        "source_sha256": "F831B5BBB7F8165370A78E379930FB4094BDFCE292961CDD2EB1B4263676E329",
+        "independent_job_copy": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\02_0010\\pxlBA.txt"
+      },
+      "command": [
+        "C:\\Program0\\cadence\\SPB172\\tools\\bin\\genfeedformat.exe",
+        "-b",
+        "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\02_0010\\0010.brd",
+        "-o",
+        "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\02_0010\\native_output",
+        "-m",
+        "1",
+        "-c"
+      ],
+      "exit_code": 2,
+      "elapsed_seconds": 0.807,
+      "staged_copy_sha256_after": "680500B07BC97F2B9D47064F83A01D0376AE43ADD486171F9B46087109E1B898",
+      "source_sha256_after": "680500B07BC97F2B9D47064F83A01D0376AE43ADD486171F9B46087109E1B898",
+      "original_archive_sha256": "01B10362E7FFF4413F8E78739AF7FAA890578F238F0D0CB498583F52C73A95CE",
+      "error": "ValueError('Native genfeedformat nonzero/timeout')",
+      "all_output_hashes": {
+        "extract.log": "7B9183855CFA2895C38FD7AB745FEE1103C0B3D6C30A17A2270D6D958D6CC71E",
+        "genfeed.log": "1C90D72CE5399F80C44B764296D9EE9CF7311677189BE7EE794346BA17CAF0AF",
+        "ORIGINAL_BRD.zip": "01B10362E7FFF4413F8E78739AF7FAA890578F238F0D0CB498583F52C73A95CE",
+        "owned_process.json": "2A8FA0C6B4C115F981E0F1E741A32192FAD2813C916CC5B5269C8DBCC4EEE41B",
+        "pxlBA.txt": "F831B5BBB7F8165370A78E379930FB4094BDFCE292961CDD2EB1B4263676E329",
+        "stderr.txt": "7D9BB11AA3D35E20636C889A16606FF47D41488FE8F226A5A5BFA1183D117700",
+        "stdout.txt": "03847D0987636DED98A0AF01660673BC0AEC5D1854642615AA97F51A284CCDB6",
+        "native_output\\pinView.dat": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      }
+    },
+    {
+      "source": "D:\\001DIY\\005lib\\01brdlib\\002.brd",
+      "source_sha256": "A609E15FF8EA83EFE438540EB3EFD01EF42F308004622B1E4D09C248E15BE69D",
+      "declared_components_from_native_snapshot": 0,
+      "placed_symbols_from_native_snapshot": 0,
+      "status": "FAIL",
+      "native_output": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\03_002\\native_output",
+      "custom_extract_config": {
+        "source": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\tools\\pxlBA_full_component_identity.txt",
+        "source_sha256": "F831B5BBB7F8165370A78E379930FB4094BDFCE292961CDD2EB1B4263676E329",
+        "independent_job_copy": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\03_002\\pxlBA.txt"
+      },
+      "command": [
+        "C:\\Program0\\cadence\\SPB172\\tools\\bin\\genfeedformat.exe",
+        "-b",
+        "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\03_002\\002.brd",
+        "-o",
+        "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\03_002\\native_output",
+        "-m",
+        "1",
+        "-c"
+      ],
+      "exit_code": 2,
+      "elapsed_seconds": 0.657,
+      "staged_copy_sha256_after": "A609E15FF8EA83EFE438540EB3EFD01EF42F308004622B1E4D09C248E15BE69D",
+      "source_sha256_after": "A609E15FF8EA83EFE438540EB3EFD01EF42F308004622B1E4D09C248E15BE69D",
+      "original_archive_sha256": "5BDF60DBD7ABB5AFC9406B2FD1FA0810FAEF10B106A1780C7C2E0DCF9B6A4CF0",
+      "error": "ValueError('Native genfeedformat nonzero/timeout')",
+      "all_output_hashes": {
+        "extract.log": "7B9183855CFA2895C38FD7AB745FEE1103C0B3D6C30A17A2270D6D958D6CC71E",
+        "genfeed.log": "9803151BC726DFA342E2120E17823AA8C7E1BD5F22EC8E42B4D5F2A477289D33",
+        "ORIGINAL_BRD.zip": "5BDF60DBD7ABB5AFC9406B2FD1FA0810FAEF10B106A1780C7C2E0DCF9B6A4CF0",
+        "owned_process.json": "551F519FD1CBE86B9B5E677ABEDE680B8B02CF52368E67B72C6FF59113699D58",
+        "pxlBA.txt": "F831B5BBB7F8165370A78E379930FB4094BDFCE292961CDD2EB1B4263676E329",
+        "stderr.txt": "7D9BB11AA3D35E20636C889A16606FF47D41488FE8F226A5A5BFA1183D117700",
+        "stdout.txt": "03847D0987636DED98A0AF01660673BC0AEC5D1854642615AA97F51A284CCDB6",
+        "native_output\\pinView.dat": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      }
+    },
+    {
+      "source": "D:\\001DIY\\005lib\\01brdlib\\004.brd",
+      "source_sha256": "0109D3E57416A1F2138DB7EDAB5EE9981520F69FB20764ADB5D3D4DF79F2E033",
+      "declared_components_from_native_snapshot": 0,
+      "placed_symbols_from_native_snapshot": 0,
+      "status": "FAIL",
+      "native_output": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\04_004\\native_output",
+      "custom_extract_config": {
+        "source": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\tools\\pxlBA_full_component_identity.txt",
+        "source_sha256": "F831B5BBB7F8165370A78E379930FB4094BDFCE292961CDD2EB1B4263676E329",
+        "independent_job_copy": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\04_004\\pxlBA.txt"
+      },
+      "command": [
+        "C:\\Program0\\cadence\\SPB172\\tools\\bin\\genfeedformat.exe",
+        "-b",
+        "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\04_004\\004.brd",
+        "-o",
+        "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\04_004\\native_output",
+        "-m",
+        "1",
+        "-c"
+      ],
+      "exit_code": 2,
+      "elapsed_seconds": 0.665,
+      "staged_copy_sha256_after": "0109D3E57416A1F2138DB7EDAB5EE9981520F69FB20764ADB5D3D4DF79F2E033",
+      "source_sha256_after": "0109D3E57416A1F2138DB7EDAB5EE9981520F69FB20764ADB5D3D4DF79F2E033",
+      "original_archive_sha256": "6D7C5F18FD111B250A22A16EDEB09CB6649E9421DE55B6874F0B626D900773BD",
+      "error": "ValueError('Native genfeedformat nonzero/timeout')",
+      "all_output_hashes": {
+        "extract.log": "7B9183855CFA2895C38FD7AB745FEE1103C0B3D6C30A17A2270D6D958D6CC71E",
+        "genfeed.log": "684ABFBAA85FE4C531B1378F2705588C4B58CCA7BC7C466F16A7E079DA2E405D",
+        "ORIGINAL_BRD.zip": "6D7C5F18FD111B250A22A16EDEB09CB6649E9421DE55B6874F0B626D900773BD",
+        "owned_process.json": "495628C9025A896FEAC42499F64182E021BE0D7F247531AEAA4715BE29801188",
+        "pxlBA.txt": "F831B5BBB7F8165370A78E379930FB4094BDFCE292961CDD2EB1B4263676E329",
+        "stderr.txt": "7D9BB11AA3D35E20636C889A16606FF47D41488FE8F226A5A5BFA1183D117700",
+        "stdout.txt": "03847D0987636DED98A0AF01660673BC0AEC5D1854642615AA97F51A284CCDB6",
+        "native_output\\pinview.dat": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      }
+    },
+    {
+      "source": "D:\\001DIY\\005lib\\01brdlib\\006.brd",
+      "source_sha256": "4C633CE2A9F101F0E95964F4F12134AB61F52E27074FF92508EA1EBE45181717",
+      "declared_components_from_native_snapshot": 361,
+      "placed_symbols_from_native_snapshot": 0,
+      "status": "PASS_NATIVE_GENFEED_VIEWS_SOURCE_PROTECTED_PST_NOT_GENERATED_OR_APPROVED",
+      "native_output": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\05_006\\native_output",
+      "custom_extract_config": {
+        "source": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\tools\\pxlBA_full_component_identity.txt",
+        "source_sha256": "F831B5BBB7F8165370A78E379930FB4094BDFCE292961CDD2EB1B4263676E329",
+        "independent_job_copy": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\05_006\\pxlBA.txt"
+      },
+      "command": [
+        "C:\\Program0\\cadence\\SPB172\\tools\\bin\\genfeedformat.exe",
+        "-b",
+        "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\05_006\\006.brd",
+        "-o",
+        "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\05_006\\native_output",
+        "-m",
+        "1",
+        "-c"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.458,
+      "staged_copy_sha256_after": "4C633CE2A9F101F0E95964F4F12134AB61F52E27074FF92508EA1EBE45181717",
+      "source_sha256_after": "4C633CE2A9F101F0E95964F4F12134AB61F52E27074FF92508EA1EBE45181717",
+      "original_archive_sha256": "715675AF3B187741E0D5FBE34DED2761D45033F8B2E7B971628A4B451D26E19E",
+      "native_view_files": {
+        "compView.dat": {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\05_006\\native_output\\compView.dat",
+          "sha256": "2893BB4D6ECC6580775E46FF8A2F7EA315CCEC6CDDE9DCC574DFD986A44C2694",
+          "bytes": 41157,
+          "S_record_count": 361
+        },
+        "funcView.dat": {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\05_006\\native_output\\funcView.dat",
+          "sha256": "1706A5D4027E3C140A8F9A73E21AD4B00A99B483BC0FDDE6CD1B03BC7CD66A7C",
+          "bytes": 55106,
+          "S_record_count": 366
+        },
+        "netView.dat": {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\05_006\\native_output\\netView.dat",
+          "sha256": "AD35C8035E467F3879202C4E12A36B1B1A7715C8097083E5DE8731B93601E9F1",
+          "bytes": 26926,
+          "S_record_count": 363
+        },
+        "pinView.dat": {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\05_006\\native_output\\pinView.dat",
+          "sha256": "39DB22E40D7389CE2446C4B09FAD684504C9E6691F514C047FC98337B906C2E0",
+          "bytes": 232448,
+          "S_record_count": 1613
+        },
+        "chipsView.dat": {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\05_006\\native_output\\chipsView.dat",
+          "sha256": "C4903E5182E0D5F2482F92BC030E41F7882A2E411D8E20D904FC1D2567C9A324",
+          "bytes": 30,
+          "S_record_count": 0
+        },
+        "cmdbView.dat": {
+          "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\05_006\\native_output\\cmdbView.dat",
+          "sha256": "110A2E2C3950431001BB85013F0779BD86D5B20DE03B17377EBF2E631C5CD2F7",
+          "bytes": 173508,
+          "S_record_count": 0
+        }
+      },
+      "all_output_hashes": {
+        "genfeed.log": "2AEE1AD6D91C5061817AF8670C4944BE3F18D42D464670F3DCEE9A381073A5D0",
+        "ORIGINAL_BRD.zip": "715675AF3B187741E0D5FBE34DED2761D45033F8B2E7B971628A4B451D26E19E",
+        "owned_process.json": "2772F8D28B23EDD5CE01D6FDBD8EFC8C41251934A1C518AF6D61D2782EB4ECCB",
+        "pxlBA.txt": "F831B5BBB7F8165370A78E379930FB4094BDFCE292961CDD2EB1B4263676E329",
+        "stderr.txt": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "stdout.txt": "03847D0987636DED98A0AF01660673BC0AEC5D1854642615AA97F51A284CCDB6",
+        "native_output\\chipsView.dat": "C4903E5182E0D5F2482F92BC030E41F7882A2E411D8E20D904FC1D2567C9A324",
+        "native_output\\cmdbview.dat": "110A2E2C3950431001BB85013F0779BD86D5B20DE03B17377EBF2E631C5CD2F7",
+        "native_output\\compView.dat": "2893BB4D6ECC6580775E46FF8A2F7EA315CCEC6CDDE9DCC574DFD986A44C2694",
+        "native_output\\funcView.dat": "1706A5D4027E3C140A8F9A73E21AD4B00A99B483BC0FDDE6CD1B03BC7CD66A7C",
+        "native_output\\netView.dat": "AD35C8035E467F3879202C4E12A36B1B1A7715C8097083E5DE8731B93601E9F1",
+        "native_output\\pinView.dat": "39DB22E40D7389CE2446C4B09FAD684504C9E6691F514C047FC98337B906C2E0",
+        "signoise.run\\cases.cfg": "9E212D2076B6389184D93D70BDB19E588052C1B75D89DC735BD5E18A5BE38A4E",
+        "signoise.run\\cases.cfg,1": "0AA316D1D7DD4E17BAA0691E10A6A4B21F6098B4E72824CF806401CE2BF79818"
+      }
+    },
+    {
+      "source": "D:\\001DIY\\005lib\\01brdlib\\008.brd",
+      "source_sha256": "559AEC92E1CEC9BFD91EBFEF06C765BEC1F10E72F22F2FBF01F5AA348A7FCDA1",
+      "declared_components_from_native_snapshot": 1643,
+      "placed_symbols_from_native_snapshot": 0,
+      "status": "FAIL",
+      "native_output": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\06_008\\native_output",
+      "custom_extract_config": {
+        "source": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\tools\\pxlBA_full_component_identity.txt",
+        "source_sha256": "F831B5BBB7F8165370A78E379930FB4094BDFCE292961CDD2EB1B4263676E329",
+        "independent_job_copy": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\06_008\\pxlBA.txt"
+      },
+      "command": [
+        "C:\\Program0\\cadence\\SPB172\\tools\\bin\\genfeedformat.exe",
+        "-b",
+        "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\06_008\\008.brd",
+        "-o",
+        "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\06_008\\native_output",
+        "-m",
+        "1",
+        "-c"
+      ],
+      "exit_code": 2,
+      "elapsed_seconds": 0.658,
+      "staged_copy_sha256_after": "559AEC92E1CEC9BFD91EBFEF06C765BEC1F10E72F22F2FBF01F5AA348A7FCDA1",
+      "source_sha256_after": "559AEC92E1CEC9BFD91EBFEF06C765BEC1F10E72F22F2FBF01F5AA348A7FCDA1",
+      "original_archive_sha256": "A47781746C429D19E307D6735CE37CC6729000EA40036DAD38AC66EC1A31CDCA",
+      "error": "ValueError('Native genfeedformat nonzero/timeout')",
+      "all_output_hashes": {
+        "extract.log": "7B9183855CFA2895C38FD7AB745FEE1103C0B3D6C30A17A2270D6D958D6CC71E",
+        "genfeed.log": "9BFD067ED1B51578BFB1A2C4D0CD525C69C64998D9117BC621ACF6C88AD184CC",
+        "ORIGINAL_BRD.zip": "A47781746C429D19E307D6735CE37CC6729000EA40036DAD38AC66EC1A31CDCA",
+        "owned_process.json": "CB6CAE9AE239B32E55593155CD23467AD2875415B9EEA8020411623D3D3BF283",
+        "pxlBA.txt": "F831B5BBB7F8165370A78E379930FB4094BDFCE292961CDD2EB1B4263676E329",
+        "stderr.txt": "7D9BB11AA3D35E20636C889A16606FF47D41488FE8F226A5A5BFA1183D117700",
+        "stdout.txt": "03847D0987636DED98A0AF01660673BC0AEC5D1854642615AA97F51A284CCDB6",
+        "native_output\\pinView.dat": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      }
+    },
+    {
+      "source": "D:\\001DIY\\005lib\\01brdlib\\VCU16.brd",
+      "source_sha256": "90276B7EDBBBC341B10E78C198240A94ABD07BD8F63F78D8915DABB2E449ACA1",
+      "declared_components_from_native_snapshot": 862,
+      "placed_symbols_from_native_snapshot": 864,
+      "status": "FAIL",
+      "native_output": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\07_VCU16\\native_output",
+      "custom_extract_config": {
+        "source": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\tools\\pxlBA_full_component_identity.txt",
+        "source_sha256": "F831B5BBB7F8165370A78E379930FB4094BDFCE292961CDD2EB1B4263676E329",
+        "independent_job_copy": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\07_VCU16\\pxlBA.txt"
+      },
+      "command": [
+        "C:\\Program0\\cadence\\SPB172\\tools\\bin\\genfeedformat.exe",
+        "-b",
+        "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\07_VCU16\\VCU16.brd",
+        "-o",
+        "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_identity_views13\\07_VCU16\\native_output",
+        "-m",
+        "1",
+        "-c"
+      ],
+      "exit_code": 2,
+      "elapsed_seconds": 0.708,
+      "staged_copy_sha256_after": "90276B7EDBBBC341B10E78C198240A94ABD07BD8F63F78D8915DABB2E449ACA1",
+      "source_sha256_after": "90276B7EDBBBC341B10E78C198240A94ABD07BD8F63F78D8915DABB2E449ACA1",
+      "original_archive_sha256": "EDBCC3D15489E25EBF40BA217F39470F5001AC514DF840B72A79343C1F65EF47",
+      "error": "ValueError('Native genfeedformat nonzero/timeout')",
+      "all_output_hashes": {
+        "extract.log": "7B9183855CFA2895C38FD7AB745FEE1103C0B3D6C30A17A2270D6D958D6CC71E",
+        "genfeed.log": "8FD809CC5C845C87EAE9965A2323DCEF444E45566B58E1D8F3AF1BF541E61B3B",
+        "ORIGINAL_BRD.zip": "EDBCC3D15489E25EBF40BA217F39470F5001AC514DF840B72A79343C1F65EF47",
+        "owned_process.json": "E3FE1F093AB7D82625C4147AF0D5E4F2E83A28FEFD0269BB9A4CA91CD0380197",
+        "pxlBA.txt": "F831B5BBB7F8165370A78E379930FB4094BDFCE292961CDD2EB1B4263676E329",
+        "stderr.txt": "7D9BB11AA3D35E20636C889A16606FF47D41488FE8F226A5A5BFA1183D117700",
+        "stdout.txt": "03847D0987636DED98A0AF01660673BC0AEC5D1854642615AA97F51A284CCDB6",
+        "native_output\\pinView.dat": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      }
+    }
+  ],
+  "public_files_written": 0,
+  "public_files_replaced": 0,
+  "timeout_seconds_each": 60,
+  "all_seven_public_sources_after": {
+    "D:\\001DIY\\005lib\\01brdlib\\00012.brd": "B55FA5B127F41949EB6EF60EE6796954D0B030B59603B4E41DA83585B258A60F",
+    "D:\\001DIY\\005lib\\01brdlib\\0010.brd": "680500B07BC97F2B9D47064F83A01D0376AE43ADD486171F9B46087109E1B898",
+    "D:\\001DIY\\005lib\\01brdlib\\002.brd": "A609E15FF8EA83EFE438540EB3EFD01EF42F308004622B1E4D09C248E15BE69D",
+    "D:\\001DIY\\005lib\\01brdlib\\004.brd": "0109D3E57416A1F2138DB7EDAB5EE9981520F69FB20764ADB5D3D4DF79F2E033",
+    "D:\\001DIY\\005lib\\01brdlib\\006.brd": "4C633CE2A9F101F0E95964F4F12134AB61F52E27074FF92508EA1EBE45181717",
+    "D:\\001DIY\\005lib\\01brdlib\\008.brd": "559AEC92E1CEC9BFD91EBFEF06C765BEC1F10E72F22F2FBF01F5AA348A7FCDA1",
+    "D:\\001DIY\\005lib\\01brdlib\\VCU16.brd": "90276B7EDBBBC341B10E78C198240A94ABD07BD8F63F78D8915DABB2E449ACA1"
+  },
+  "all_seven_public_sources_unchanged": true,
+  "requested_output_kind": "native-views",
+  "chips_mode": "1",
+  "electrical_data": true,
+  "script_sha256": "45AEFA3AD6EE2A51AFF77A77B86AAEC48410484E8B6D79B75430F4DBD472329C",
+  "scope": "Official reverse-netlist export only; no native board save/update, no package property setters, no suffix renaming, no public overwrite. Must independently prove all2501 declarations/403 placed parts, primitive identities, effective values, full pin-net connectivity and via/rules before any later board-library migration."
+}

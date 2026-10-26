@@ -1,0 +1,40 @@
+{
+  "schema": "GLOBAL_SUFFIX_COLD_PER_ASSET_NATIVE_V3",
+  "plan": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\nonpassive_exact_additions13\\CANONICAL_TARGET_NATIVE_AUDIT_PLAN.json",
+  "plan_sha256": "3664C61E654408AA8E014B31DA7DD57CCCCCDD671BD35CF7E7F0730499DBFDC3",
+  "guard_manifest": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\nonpassive_exact_additions13\\PUBLIC_OLD_PLUS_NEW_GUARD.json",
+  "guard_manifest_sha256": "8C9B60DFC35514EB6AC90E6929CAB7B07D8B2CA07EDBF6AD4DC240DB04F66151",
+  "guarded_files": 13433,
+  "helpers": [
+    {
+      "path": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\w\\pcb_migration\\run_pc_native_audit.py",
+      "sha256": "E180FD9BB33FF70FBB91D61F32447818A40673F02412044401D38CB0F5933CC3"
+    },
+    {
+      "path": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_native_units.il",
+      "sha256": "3744B847BCA91E56F60A27FB48DC4053A50A20FDB2485E39E913D0DFF3D21897"
+    },
+    {
+      "path": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_export.il",
+      "sha256": "5145A5641DDF36EE06E9C4C25EEB936BE7B12C59437FE46835BF51BEAF48F51E"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\fixture4\\EMPTY4.brd",
+      "sha256": "4601DA63EE69F9ABBB8B61FE4EA887B1E16812C69805AD50B669FF15A93F0324"
+    },
+    {
+      "path": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\symbol_probe\\units_view.txt",
+      "sha256": "66F80C58E74FDD6BC2584020E35EE47012695588DA2C7A227431612B204C776D"
+    }
+  ],
+  "runner": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\run_global_suffix_psm_native_audit_v3_cold.py",
+  "runner_sha256": "04277A51B5467C994F584B433CF7B889FE8B35BE3D652C7716108714B80CDF3A",
+  "first_only_native_helper": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\psm_native_units_alternating_v2.il",
+  "first_only_native_helper_sha256": "39093B4E3AB7EE0691115B64736FD0B112438F7E353561EB7FD8F3006DD8CCFC",
+  "workers": 4,
+  "timeout_per_asset": 60,
+  "planned": 6,
+  "selected": 6,
+  "selected_start_index": 0,
+  "cold_process_policy": "Exactly one PSM per process. Current startup EMPTY4 is used without any axlOpenDesignForBatch call; distinct isolated temp/pcbenv/output per source."
+}

@@ -1,0 +1,70 @@
+{
+  "status": "READONLY_INTENT_INFERENCE_WITH_EXACT_NATIVE_GEOMETRY_EVIDENCE_NO_APPLY",
+  "scope_authority": "User permits ordinary two-terminal same-size R/C/L/FB to one standard; root explicitly requested distinguish broken PAD collisions from real TH functional variants.",
+  "overrides": [
+    {
+      "stem": "c0201_fcs",
+      "source_sha256": "28CD9CF4313D30BC17DF649957486E367391F01D35A486649D28DA38C43536EF",
+      "native_sha256": "42CB3A12178AB0DC2BE52D3668FDFA855D53F5CC62978DA41D076F2273DA9604",
+      "native_path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\global_suffix_native_v3\\e00008\\output\\0000.sexp",
+      "canonical": "c0201_pc",
+      "classification": "ORDINARY_TWO_TERMINAL_PAD_NAME_COLLISION_RETIRE_TO_STANDARD_WITH_EXPLICIT_PHYSICAL_DELTA",
+      "intent_is_inference": true,
+      "intent_evidence": {
+        "package_name": "C0201_FCS",
+        "native_pin_numbers": [
+          "1",
+          "2"
+        ],
+        "native_local_xy_mm": [
+          [
+            "-0.2286",
+            "0"
+          ],
+          [
+            "0.2286",
+            "0"
+          ]
+        ],
+        "native_pitch_mm": "0.4572",
+        "place_bound_top_bbox_mm": [
+          [
+            "-0.381",
+            "-0.1524"
+          ],
+          [
+            "0.381",
+            "0.1524"
+          ]
+        ],
+        "place_bound_body_size_mm": [
+          "0.762",
+          "0.3048"
+        ],
+        "silkscreen_centerline_extents_mm": [
+          [
+            "-0.5334",
+            "-0.3048"
+          ],
+          [
+            "0.5334",
+            "0.3048"
+          ]
+        ],
+        "native_loaded_pad": "D:/001DIY/005lib/01Pad_lib/pad47.pad",
+        "native_loaded_pad_sha256": "8E2E8BDD23CA7C58D66568C94CFE1DC4FBEAFC9292A0C855090FC48EBEFB400B",
+        "actual_plated_slot_mm": [
+          "0.8889",
+          "2.1589"
+        ],
+        "actual_pad_top_size_mm": [
+          "1.651",
+          "2.921"
+        ]
+      },
+      "reason": "Two terminals numbered1/2 at a0201-scale0.4572mm pitch plus0.762x0.3048mm package body support ordinary0201 intent. Loaded plated slot diameter and1.651x2.921mm pads exceed even body and overlap each other; treat native publicPAD47 resolution as anomalous, not a legitimate TH functional form.",
+      "boundary": "Source DRA was not opened natively in this read-only offline check; this intent inference uses package retained body geometry and exact native pin schema. Never claim old and canonical geometry identical. New c0201_pc must be verified as SMT and physical delta retained.",
+      "required_action": "After global postguard and reference gates, retire oldPSM/DRA into approved backup and use verified standard c0201_pc. Do not silently rewrite shared pad47.pad because other packages may require it."
+    }
+  ]
+}

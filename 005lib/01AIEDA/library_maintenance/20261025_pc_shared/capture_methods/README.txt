@@ -1,0 +1,11 @@
+Capture通用方法副本与本次实际脚本索引
+日期：2026-10-25（Asia/Shanghai）
+
+本目录保留小型通用函数和完整库比较器，SHA与学习侧源文件一一对应，见SCRIPTS_AND_SOURCES.json。
+Tcl文件是纯函数定义，不自动加载DLL、不打开设计、不保存；调用方必须拥有独立原生会话并显式给出对象、输入和全新输出。不能直接对用户GUI设计运行。
+compare_shared_public_library.py是纯Python离线比较器，接受明确expected/actual XML和全新报告目录；不加载CAD。当前实际公库59对象及6个反测均通过，详见上一级capture_public_full_review_generic。
+
+本次工程的输入、冻结计划、专用脚本和设计读回继续留工程根；SCRIPTS_AND_SOURCES.json仅引用路径与SHA，不复制工程大XML、DSN、网表或PCB。
+公共库新增/克隆/重开原始作业仍留上一级capture_*目录。本文不表示13版PCB或最终整工程已完成。
+
+EXISTING_PUBLIC_OLB_PROTECTION.json是当前原有36个OLB逐文件SHA复查，全部保持初始清单SHA；COMMON_PC.OLB是新增文件。没有改旧库或通过已有硬链接编辑它们。

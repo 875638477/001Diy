@@ -1,0 +1,40 @@
+{
+  "status": "PASS_BOUNDED_FROZEN_IDENTITY_CONTROLS_ALL_REJECTED",
+  "controls": [
+    {
+      "name": "wrong_frozen_XML_SHA",
+      "status": "PASS_REJECTED",
+      "reason": "Bounded source identity artifact changed source_xml"
+    },
+    {
+      "name": "wrong_stage_OLB_SHA",
+      "status": "PASS_REJECTED",
+      "reason": "Bounded source identity artifact changed opened_olb"
+    },
+    {
+      "name": "different_public_library_even_identical_bytes",
+      "status": "PASS_REJECTED",
+      "reason": "Bounded evidence names another public library"
+    },
+    {
+      "name": "different_library_name_in_XML",
+      "status": "PASS_REJECTED",
+      "reason": "Native XML opened a different library identity"
+    },
+    {
+      "name": "native_job_argv_opened_other_library",
+      "status": "PASS_REJECTED",
+      "reason": "Native export argv opened another OLB"
+    },
+    {
+      "name": "native_job_argv_wrote_other_XML_directory",
+      "status": "PASS_REJECTED",
+      "reason": "Native export argv wrote another output"
+    }
+  ],
+  "count": 6,
+  "original_case_sha256": "8952402F32F7A0548FF9BC1E643A06BA1783663677957C59B2F762A78D6DEB4B",
+  "identity_evidence_sha256": "FE0A3F17FF5F45A68B40A8E86F90C2CD49617E5957A3A02D05563B976C7A9992",
+  "checker_sha256": "8BC10EE8E47E5A08E4D8A9B80093CD5C2775F6C2ADBA8DBB43DAFFF328BBEE54",
+  "public_files_modified": 0
+}

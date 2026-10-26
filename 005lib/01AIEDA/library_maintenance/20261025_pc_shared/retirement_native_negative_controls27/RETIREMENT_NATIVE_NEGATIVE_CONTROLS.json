@@ -1,0 +1,145 @@
+{
+  "status": "PASS_RETIREMENT_NATIVE_PARSERS_AND127_TARGET_BOUNDED_NEGATIVE_CONTROLS",
+  "tests": [
+    {
+      "name": "DETECT_RETIRED_REFERENCE_package_default",
+      "result": "ACTUAL_REFERENCE_OBSERVED"
+    },
+    {
+      "name": "DETECT_RETIRED_REFERENCE_cell_userprop",
+      "result": "ACTUAL_REFERENCE_OBSERVED"
+    },
+    {
+      "name": "DETECT_RETIRED_REFERENCE_nested_cache_default",
+      "result": "ACTUAL_REFERENCE_OBSERVED"
+    },
+    {
+      "name": "DETECT_RETIRED_REFERENCE_placed_override",
+      "result": "ACTUAL_REFERENCE_OBSERVED"
+    },
+    {
+      "name": "NAME_ONLY_DISPLAY_SELECTOR_IS_PRESENTATION_NOT_VALUE",
+      "result": "CLASSIFIED_BY_OFFICIAL_OLB_XSD"
+    },
+    {
+      "name": "HISTORICAL_TRACE_REMAINS_EXPLICIT_AND_SEPARATE",
+      "result": "TRACE_OBSERVED_NOT_ACTIVE_FP"
+    },
+    {
+      "name": "REAL_USERPROP_MISSING_VALUE",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Named native footprint UserProp has missing/ambiguous value field /Lib[1]/SymbolUserProp[1]/Defn[1]"
+    },
+    {
+      "name": "REAL_USERPROP_AMBIGUOUS_VALUE",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Named native footprint UserProp has missing/ambiguous value field /Lib[1]/SymbolUserProp[1]/Defn[1]"
+    },
+    {
+      "name": "MISSING_NATIVE_DEFINITION_CLASS",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Complete native Capture definitions absent"
+    },
+    {
+      "name": "NATIVE_NIL_AND_EMPTY_STRING_REMAIN_DISTINCT",
+      "result": "EXACT_TYPED_VALUE_PRESERVED"
+    },
+    {
+      "name": "INVALID_NATIVE_SCALAR",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Unexpected non-string footprint reference"
+    },
+    {
+      "name": "UNUSED_CACHE_AND_MULTIPLICITY_NOT_DROPPED",
+      "result": "BOTH_REAL_NATIVE_ROWS_PRESERVED"
+    },
+    {
+      "name": "WRONG_COMPLETE_NATIVE_HEADER",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Exact complete native fields missing D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\retirement_native_negative_controls27\\duplicate_native_rows.tsv"
+    },
+    {
+      "name": "MISSING_TARGET",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Canonical target127 complete unique coverage missing"
+    },
+    {
+      "name": "DUPLICATE_TARGET",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Canonical target127 complete unique coverage missing"
+    },
+    {
+      "name": "TARGET_PSM_SHA_CHANGED",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Target current/guard/cold source PSM binding changed bwipx-1"
+    },
+    {
+      "name": "TARGET_NATIVE_INPUT_SHA_CHANGED",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Target current/guard/cold source PSM binding changed bwipx-1"
+    },
+    {
+      "name": "FULL_NATIVE_GRAPH_SHA_CHANGED",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Cold full-native graph changed"
+    },
+    {
+      "name": "FULL_NATIVE_GRAPH_FINGERPRINT_CHANGED",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Target full graph/schema no longer identical"
+    },
+    {
+      "name": "PAD_CURRENT_SHA_CHANGED",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Target complete loaded PAD dependency set differs"
+    },
+    {
+      "name": "PAD_COMPLETE_XML_SHA_CHANGED",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Full native PAD XML changed"
+    },
+    {
+      "name": "PAD_MANUFACTURING_PAYLOAD_CHANGED",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Full PAD manufacturing signature/payload changed"
+    },
+    {
+      "name": "PAD_DEPENDENCY_REMOVED",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Target complete loaded PAD dependency set differs"
+    },
+    {
+      "name": "PAD_DEPENDENCY_DUPLICATED",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "Target complete loaded PAD dependency set differs"
+    },
+    {
+      "name": "CANONICALIZER_CODE_IDENTITY_CHANGED",
+      "result": "REJECTED_AS_REQUIRED",
+      "error": "PAD canonicalizer code changed"
+    }
+  ],
+  "test_count": 25,
+  "positive_current_native_and_PAD_recheck": {
+    "status": "PASS_EXACT127_TARGETS_RECOMPUTED_CURRENT_FULL_NATIVE_AND_PAD",
+    "targets": 127,
+    "unique_PAD_objects": 154,
+    "evidence_files": 411
+  },
+  "current_unmodified_file_hash_cache": 699,
+  "cache_note": "Only repeated reads of immutable evidence bytes are cached; stat identity checked on every access and after tests. No public file is edited.",
+  "target_index": {
+    "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\canonical_retirement_target127_v127\\REQUIRED_CANONICAL_NATIVE_TARGET_INDEX.json",
+    "sha256": "B5612B007352C131A35784EC2308F5309CE55C320E9E624CE87A4A85B1F2DFEC"
+  },
+  "scanner": {
+    "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\tools\\scan_retirement_native_references_v6_27.py",
+    "sha256": "D95984832889AC5A3612F76F7F3E15DF80C235B4F1261565C55BC5044DEE2047"
+  },
+  "target_validator": {
+    "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\tools\\verify_retirement_canonical_targets_v2_27.py",
+    "sha256": "FD712C38DEB4F195E2AE391E0EA6D501A5FAD676FF24498C441B4560375F7AA4"
+  },
+  "CAD_started": false,
+  "public_files_written": 0
+}

@@ -1,0 +1,72 @@
+{
+  "status": "PASS_ALL_FRESH79_TYPED_BIJECTION_NEGATIVE_CONTROLS_REJECTED",
+  "negative_controls": [
+    {
+      "mutation": "new_unknown_attribute_is_not_ignored",
+      "result": "REJECTED",
+      "reason": "Attribute keys changed 10LAYERS_SMALL"
+    },
+    {
+      "mutation": "unclassified_external_DBID_may_not_remap",
+      "result": "REJECTED",
+      "reason": "Literal changed 10LAYERS_SMALL/UNCLASSIFIED_EXTERNAL_POINTER ('dbid:00ABCDEF11111111', 'dbid:00ABCDEF22222222')"
+    },
+    {
+      "mutation": "unique_design_parent_cannot_split_or_alias",
+      "result": "REJECTED",
+      "reason": "Expected unique design parent for79symdefs+92padstacks"
+    },
+    {
+      "mutation": "external_instance_bijection_duplicate_target_is_rejected",
+      "result": "REJECTED",
+      "reason": "External ID reverse collision at FIDUCIAL_2MM_ADETEL/instances/1"
+    },
+    {
+      "mutation": "external_instance_cardinality_is_exact",
+      "result": "REJECTED",
+      "reason": "List cardinality changed FIDUCIAL_2MM_ADETEL/instances"
+    },
+    {
+      "mutation": "one_mm4_pad_geometry_step_is_rejected",
+      "result": "REJECTED",
+      "reason": "Literal changed FIDUCIAL_2MM_ADETEL/pins/0/definition/pads/0/bBox/0/0 (Decimal('-1.0'), Decimal('-0.9999'))"
+    },
+    {
+      "mutation": "complete_opaque_figure_coordinates_are_not_ignored",
+      "result": "REJECTED",
+      "reason": "Literal changed FIDUCIAL_2MM_ADETEL/pins/0/definition/pads/0/COMPLETE_FIGURE_PATHS/0/2/0/0/0 (Decimal('1.0'), Decimal('1.0001'))"
+    },
+    {
+      "mutation": "full_unknown_property_payload_is_not_ignored",
+      "result": "REJECTED",
+      "reason": "List cardinality changed 10LAYERS_SMALL/COMPLETE_PROPERTIES"
+    },
+    {
+      "mutation": "global_textblock_all_fields_are_exact",
+      "result": "REJECTED",
+      "reason": ""
+    },
+    {
+      "mutation": "unused_symbol_definition_cannot_be_omitted",
+      "result": "REJECTED",
+      "reason": ""
+    }
+  ],
+  "positive_control_full_restored_graph": {
+    "full_objects": 20080,
+    "full_roots": 79,
+    "all_global_textblocks_exact": 43,
+    "explicit_pointer_bijection_nodes": 1671,
+    "complete_recursive_values_compared": 554973,
+    "zero_ignored_attributes": true,
+    "zero_numeric_tolerance": true
+  },
+  "before": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public0010_original_thermal_restore_run13_v5_pending\\BEFORE_ALL_CACHED_DEFINITION_GRAPHS.ilist",
+  "before_sha256": "4FC7662077C45E45DC5F8D80F907D5E33AE1CCE0957A7D2120E8253678D6CDA6",
+  "after": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\w\\module0010_final_full28\\FINAL_ALL_CACHED_DEFINITION_GRAPHS.ilist",
+  "after_sha256": "61A4F25EFAB59302E10D8C66117A70391DA4740AC54E9D90DD07E50C28537644",
+  "tests_mutate_memory_only": true,
+  "files_unchanged": true,
+  "comparator_sha256": "EE228EEBB0F47143ECDF98DCBAA1EFEE799D2415B4F9F754C41E21CDFA14F859",
+  "test_sha256": "67161E6BBFB595E96937C166C4E79C840220D58FB5903AC9AFD2E0CB5E778102"
+}

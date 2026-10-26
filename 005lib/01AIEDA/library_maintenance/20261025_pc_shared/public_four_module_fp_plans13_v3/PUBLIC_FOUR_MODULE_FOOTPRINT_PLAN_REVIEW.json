@@ -1,0 +1,344 @@
+{
+  "status": "PARTIAL_EXACT_PLANS_UNRESOLVED_ROWS_RETAIN_OLD_ALIASES",
+  "modules": [
+    {
+      "board": "00012",
+      "components": 897,
+      "old941_matched": 655,
+      "planned_changes": 655,
+      "preserved": 0,
+      "unresolved": 0,
+      "source_model": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\verification\\public_brd_device_model13_00012_v3\\DEVICE_VIEW_EXACT_MODEL.json"
+    },
+    {
+      "board": "0010",
+      "components": 572,
+      "old941_matched": 403,
+      "planned_changes": 403,
+      "preserved": 0,
+      "unresolved": 0,
+      "source_model": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\verification\\public_brd_device_model13_0010_v2\\DEVICE_VIEW_EXACT_MODEL.json"
+    },
+    {
+      "board": "006",
+      "components": 361,
+      "old941_matched": 284,
+      "planned_changes": 284,
+      "preserved": 0,
+      "unresolved": 0,
+      "source_model": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\verification\\public_brd_device_model13_006_v2\\DEVICE_VIEW_EXACT_MODEL.json"
+    },
+    {
+      "board": "008",
+      "components": 1643,
+      "old941_matched": 1159,
+      "planned_changes": 1132,
+      "preserved": 16,
+      "unresolved": 11,
+      "source_model": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\verification\\public_brd_device_model13_008_v2\\DEVICE_VIEW_EXACT_MODEL.json"
+    }
+  ],
+  "plans": [
+    {
+      "board": "00012",
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_four_module_fp_plans13_v3\\00012_EXACT_FOOTPRINT_PLAN.json",
+      "sha256": "27E629FAECEF674D427CA9CBB51BC13EB2525CF41DA989EF30A8BADC7656C5AB"
+    },
+    {
+      "board": "0010",
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_four_module_fp_plans13_v3\\0010_EXACT_FOOTPRINT_PLAN.json",
+      "sha256": "3BB08414E1394D0C6D56B12BF8BD6D83E2C7C8CDB8DC3E5AA1CDDD131652BEF0"
+    },
+    {
+      "board": "006",
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_four_module_fp_plans13_v3\\006_EXACT_FOOTPRINT_PLAN.json",
+      "sha256": "40140144568BDDA12218F5E485C192888912FDE566C8B8C9ECFB55CCB390AE6A"
+    },
+    {
+      "board": "008",
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_four_module_fp_plans13_v3\\008_EXACT_FOOTPRINT_PLAN.json",
+      "sha256": "49900268EB75EDE62086ECBC8388115942624AD7DFB135F95024CC526936FADA"
+    }
+  ],
+  "total_old941_matched": 2501,
+  "total_changes": 2474,
+  "unresolved_rows": [
+    {
+      "board": "008",
+      "ref": "FB2",
+      "device_type": "CD42-2R2UH_L0805_0R/0805/1%",
+      "old_package": "L0805",
+      "original_value": "0R/0805/1%",
+      "source_PART_NAME": "CD42-2R2UH",
+      "source_model_sha256": "65E440F289B817BC08AF19924536DC1459A08BA594BB663D81BD72BAE3B5E1B0",
+      "source_alias_action": "MIGRATE_REFERENCES_THEN_RETIRE_OLD_ASSET_SET",
+      "source_alias_default_target": "l0805_pc",
+      "source_physical_pin_count": 2,
+      "new_package": "fb0805_pc",
+      "action": "UNRESOLVED_SOURCE_PRIMITIVE_HAS_DIFFERENT_CATEGORY_REFS",
+      "PART_NAME_category": null,
+      "ref_category": "fb",
+      "resolved_category": "fb",
+      "category_basis": "Actual native PART_NAME, then standard component ref category, then explicit frozen source-family target; never bare dimensions alone",
+      "target_public_psm": "D:\\001DIY\\005lib\\01Psm_lib\\fb0805_pc.psm",
+      "target_public_psm_sha256": "45DE0E41A71CC9AE3D97411891A8B27A9B44C0E48CCDA084DE86781B4ED9F472",
+      "geometry_equivalent_not_claimed": true,
+      "all_proposed_targets": [
+        "fb0805_pc",
+        "l0805_pc"
+      ]
+    },
+    {
+      "board": "008",
+      "ref": "L17",
+      "device_type": "CD42-2R2UH_L0805_0R/0805/1%",
+      "old_package": "L0805",
+      "original_value": "0R/0805/1%",
+      "source_PART_NAME": "CD42-2R2UH",
+      "source_model_sha256": "65E440F289B817BC08AF19924536DC1459A08BA594BB663D81BD72BAE3B5E1B0",
+      "source_alias_action": "MIGRATE_REFERENCES_THEN_RETIRE_OLD_ASSET_SET",
+      "source_alias_default_target": "l0805_pc",
+      "source_physical_pin_count": 2,
+      "new_package": "l0805_pc",
+      "action": "UNRESOLVED_SOURCE_PRIMITIVE_HAS_DIFFERENT_CATEGORY_REFS",
+      "PART_NAME_category": null,
+      "ref_category": "l",
+      "resolved_category": "l",
+      "category_basis": "Actual native PART_NAME, then standard component ref category, then explicit frozen source-family target; never bare dimensions alone",
+      "target_public_psm": "D:\\001DIY\\005lib\\01Psm_lib\\l0805_pc.psm",
+      "target_public_psm_sha256": "AAB44928C606274CC25AAF532ECF675F0E8380B5305858B3804D7FAA5CE53130",
+      "geometry_equivalent_not_claimed": true,
+      "all_proposed_targets": [
+        "fb0805_pc",
+        "l0805_pc"
+      ]
+    },
+    {
+      "board": "008",
+      "ref": "L18",
+      "device_type": "CD42-2R2UH_L0805_0R/0805/1%",
+      "old_package": "L0805",
+      "original_value": "0R/0805/1%",
+      "source_PART_NAME": "CD42-2R2UH",
+      "source_model_sha256": "65E440F289B817BC08AF19924536DC1459A08BA594BB663D81BD72BAE3B5E1B0",
+      "source_alias_action": "MIGRATE_REFERENCES_THEN_RETIRE_OLD_ASSET_SET",
+      "source_alias_default_target": "l0805_pc",
+      "source_physical_pin_count": 2,
+      "new_package": "l0805_pc",
+      "action": "UNRESOLVED_SOURCE_PRIMITIVE_HAS_DIFFERENT_CATEGORY_REFS",
+      "PART_NAME_category": null,
+      "ref_category": "l",
+      "resolved_category": "l",
+      "category_basis": "Actual native PART_NAME, then standard component ref category, then explicit frozen source-family target; never bare dimensions alone",
+      "target_public_psm": "D:\\001DIY\\005lib\\01Psm_lib\\l0805_pc.psm",
+      "target_public_psm_sha256": "AAB44928C606274CC25AAF532ECF675F0E8380B5305858B3804D7FAA5CE53130",
+      "geometry_equivalent_not_claimed": true,
+      "all_proposed_targets": [
+        "fb0805_pc",
+        "l0805_pc"
+      ]
+    },
+    {
+      "board": "008",
+      "ref": "L21",
+      "device_type": "CD42-2R2UH_L0805_0R/0805/1%",
+      "old_package": "L0805",
+      "original_value": "0R/0805/1%",
+      "source_PART_NAME": "CD42-2R2UH",
+      "source_model_sha256": "65E440F289B817BC08AF19924536DC1459A08BA594BB663D81BD72BAE3B5E1B0",
+      "source_alias_action": "MIGRATE_REFERENCES_THEN_RETIRE_OLD_ASSET_SET",
+      "source_alias_default_target": "l0805_pc",
+      "source_physical_pin_count": 2,
+      "new_package": "l0805_pc",
+      "action": "UNRESOLVED_SOURCE_PRIMITIVE_HAS_DIFFERENT_CATEGORY_REFS",
+      "PART_NAME_category": null,
+      "ref_category": "l",
+      "resolved_category": "l",
+      "category_basis": "Actual native PART_NAME, then standard component ref category, then explicit frozen source-family target; never bare dimensions alone",
+      "target_public_psm": "D:\\001DIY\\005lib\\01Psm_lib\\l0805_pc.psm",
+      "target_public_psm_sha256": "AAB44928C606274CC25AAF532ECF675F0E8380B5305858B3804D7FAA5CE53130",
+      "geometry_equivalent_not_claimed": true,
+      "all_proposed_targets": [
+        "fb0805_pc",
+        "l0805_pc"
+      ]
+    },
+    {
+      "board": "008",
+      "ref": "L19",
+      "device_type": "CD42-2R2UH_L0805_CVB2012E100T",
+      "old_package": "L0805",
+      "original_value": "CVB2012E100T",
+      "source_PART_NAME": "CD42-2R2UH",
+      "source_model_sha256": "65E440F289B817BC08AF19924536DC1459A08BA594BB663D81BD72BAE3B5E1B0",
+      "source_alias_action": "MIGRATE_REFERENCES_THEN_RETIRE_OLD_ASSET_SET",
+      "source_alias_default_target": "l0805_pc",
+      "source_physical_pin_count": 2,
+      "new_package": "l0805_pc",
+      "action": "UNRESOLVED_SOURCE_PRIMITIVE_HAS_DIFFERENT_CATEGORY_REFS",
+      "PART_NAME_category": null,
+      "ref_category": "l",
+      "resolved_category": "l",
+      "category_basis": "Actual native PART_NAME, then standard component ref category, then explicit frozen source-family target; never bare dimensions alone",
+      "target_public_psm": "D:\\001DIY\\005lib\\01Psm_lib\\l0805_pc.psm",
+      "target_public_psm_sha256": "AAB44928C606274CC25AAF532ECF675F0E8380B5305858B3804D7FAA5CE53130",
+      "geometry_equivalent_not_claimed": true,
+      "all_proposed_targets": [
+        "fb0805_pc",
+        "l0805_pc"
+      ]
+    },
+    {
+      "board": "008",
+      "ref": "L6",
+      "device_type": "CD42-2R2UH_L0805_CVB2012E100T",
+      "old_package": "L0805",
+      "original_value": "CVB2012E100T",
+      "source_PART_NAME": "CD42-2R2UH",
+      "source_model_sha256": "65E440F289B817BC08AF19924536DC1459A08BA594BB663D81BD72BAE3B5E1B0",
+      "source_alias_action": "MIGRATE_REFERENCES_THEN_RETIRE_OLD_ASSET_SET",
+      "source_alias_default_target": "l0805_pc",
+      "source_physical_pin_count": 2,
+      "new_package": "l0805_pc",
+      "action": "UNRESOLVED_SOURCE_PRIMITIVE_HAS_DIFFERENT_CATEGORY_REFS",
+      "PART_NAME_category": null,
+      "ref_category": "l",
+      "resolved_category": "l",
+      "category_basis": "Actual native PART_NAME, then standard component ref category, then explicit frozen source-family target; never bare dimensions alone",
+      "target_public_psm": "D:\\001DIY\\005lib\\01Psm_lib\\l0805_pc.psm",
+      "target_public_psm_sha256": "AAB44928C606274CC25AAF532ECF675F0E8380B5305858B3804D7FAA5CE53130",
+      "geometry_equivalent_not_claimed": true,
+      "all_proposed_targets": [
+        "fb0805_pc",
+        "l0805_pc"
+      ]
+    },
+    {
+      "board": "008",
+      "ref": "L7",
+      "device_type": "CD42-2R2UH_L0805_CVB2012E100T",
+      "old_package": "L0805",
+      "original_value": "CVB2012E100T",
+      "source_PART_NAME": "CD42-2R2UH",
+      "source_model_sha256": "65E440F289B817BC08AF19924536DC1459A08BA594BB663D81BD72BAE3B5E1B0",
+      "source_alias_action": "MIGRATE_REFERENCES_THEN_RETIRE_OLD_ASSET_SET",
+      "source_alias_default_target": "l0805_pc",
+      "source_physical_pin_count": 2,
+      "new_package": "l0805_pc",
+      "action": "UNRESOLVED_SOURCE_PRIMITIVE_HAS_DIFFERENT_CATEGORY_REFS",
+      "PART_NAME_category": null,
+      "ref_category": "l",
+      "resolved_category": "l",
+      "category_basis": "Actual native PART_NAME, then standard component ref category, then explicit frozen source-family target; never bare dimensions alone",
+      "target_public_psm": "D:\\001DIY\\005lib\\01Psm_lib\\l0805_pc.psm",
+      "target_public_psm_sha256": "AAB44928C606274CC25AAF532ECF675F0E8380B5305858B3804D7FAA5CE53130",
+      "geometry_equivalent_not_claimed": true,
+      "all_proposed_targets": [
+        "fb0805_pc",
+        "l0805_pc"
+      ]
+    },
+    {
+      "board": "008",
+      "ref": "L2",
+      "device_type": "CD42-2R2UH_L0805_CVB2012E100T",
+      "old_package": "L0805",
+      "original_value": "CVB2012E100T",
+      "source_PART_NAME": "CD42-2R2UH",
+      "source_model_sha256": "65E440F289B817BC08AF19924536DC1459A08BA594BB663D81BD72BAE3B5E1B0",
+      "source_alias_action": "MIGRATE_REFERENCES_THEN_RETIRE_OLD_ASSET_SET",
+      "source_alias_default_target": "l0805_pc",
+      "source_physical_pin_count": 2,
+      "new_package": "l0805_pc",
+      "action": "UNRESOLVED_SOURCE_PRIMITIVE_HAS_DIFFERENT_CATEGORY_REFS",
+      "PART_NAME_category": null,
+      "ref_category": "l",
+      "resolved_category": "l",
+      "category_basis": "Actual native PART_NAME, then standard component ref category, then explicit frozen source-family target; never bare dimensions alone",
+      "target_public_psm": "D:\\001DIY\\005lib\\01Psm_lib\\l0805_pc.psm",
+      "target_public_psm_sha256": "AAB44928C606274CC25AAF532ECF675F0E8380B5305858B3804D7FAA5CE53130",
+      "geometry_equivalent_not_claimed": true,
+      "all_proposed_targets": [
+        "fb0805_pc",
+        "l0805_pc"
+      ]
+    },
+    {
+      "board": "008",
+      "ref": "L5",
+      "device_type": "CD42-2R2UH_L0805_CVB2012E100T",
+      "old_package": "L0805",
+      "original_value": "CVB2012E100T",
+      "source_PART_NAME": "CD42-2R2UH",
+      "source_model_sha256": "65E440F289B817BC08AF19924536DC1459A08BA594BB663D81BD72BAE3B5E1B0",
+      "source_alias_action": "MIGRATE_REFERENCES_THEN_RETIRE_OLD_ASSET_SET",
+      "source_alias_default_target": "l0805_pc",
+      "source_physical_pin_count": 2,
+      "new_package": "l0805_pc",
+      "action": "UNRESOLVED_SOURCE_PRIMITIVE_HAS_DIFFERENT_CATEGORY_REFS",
+      "PART_NAME_category": null,
+      "ref_category": "l",
+      "resolved_category": "l",
+      "category_basis": "Actual native PART_NAME, then standard component ref category, then explicit frozen source-family target; never bare dimensions alone",
+      "target_public_psm": "D:\\001DIY\\005lib\\01Psm_lib\\l0805_pc.psm",
+      "target_public_psm_sha256": "AAB44928C606274CC25AAF532ECF675F0E8380B5305858B3804D7FAA5CE53130",
+      "geometry_equivalent_not_claimed": true,
+      "all_proposed_targets": [
+        "fb0805_pc",
+        "l0805_pc"
+      ]
+    },
+    {
+      "board": "008",
+      "ref": "FB5",
+      "device_type": "CD42-2R2UH_L0805_CVB2012E100T",
+      "old_package": "L0805",
+      "original_value": "CVB2012E100T",
+      "source_PART_NAME": "CD42-2R2UH",
+      "source_model_sha256": "65E440F289B817BC08AF19924536DC1459A08BA594BB663D81BD72BAE3B5E1B0",
+      "source_alias_action": "MIGRATE_REFERENCES_THEN_RETIRE_OLD_ASSET_SET",
+      "source_alias_default_target": "l0805_pc",
+      "source_physical_pin_count": 2,
+      "new_package": "fb0805_pc",
+      "action": "UNRESOLVED_SOURCE_PRIMITIVE_HAS_DIFFERENT_CATEGORY_REFS",
+      "PART_NAME_category": null,
+      "ref_category": "fb",
+      "resolved_category": "fb",
+      "category_basis": "Actual native PART_NAME, then standard component ref category, then explicit frozen source-family target; never bare dimensions alone",
+      "target_public_psm": "D:\\001DIY\\005lib\\01Psm_lib\\fb0805_pc.psm",
+      "target_public_psm_sha256": "45DE0E41A71CC9AE3D97411891A8B27A9B44C0E48CCDA084DE86781B4ED9F472",
+      "geometry_equivalent_not_claimed": true,
+      "all_proposed_targets": [
+        "fb0805_pc",
+        "l0805_pc"
+      ]
+    },
+    {
+      "board": "008",
+      "ref": "L1",
+      "device_type": "CD42-2R2UH_L0805_CVB2012E100T",
+      "old_package": "L0805",
+      "original_value": "CVB2012E100T",
+      "source_PART_NAME": "CD42-2R2UH",
+      "source_model_sha256": "65E440F289B817BC08AF19924536DC1459A08BA594BB663D81BD72BAE3B5E1B0",
+      "source_alias_action": "MIGRATE_REFERENCES_THEN_RETIRE_OLD_ASSET_SET",
+      "source_alias_default_target": "l0805_pc",
+      "source_physical_pin_count": 2,
+      "new_package": "l0805_pc",
+      "action": "UNRESOLVED_SOURCE_PRIMITIVE_HAS_DIFFERENT_CATEGORY_REFS",
+      "PART_NAME_category": null,
+      "ref_category": "l",
+      "resolved_category": "l",
+      "category_basis": "Actual native PART_NAME, then standard component ref category, then explicit frozen source-family target; never bare dimensions alone",
+      "target_public_psm": "D:\\001DIY\\005lib\\01Psm_lib\\l0805_pc.psm",
+      "target_public_psm_sha256": "AAB44928C606274CC25AAF532ECF675F0E8380B5305858B3804D7FAA5CE53130",
+      "geometry_equivalent_not_claimed": true,
+      "all_proposed_targets": [
+        "fb0805_pc",
+        "l0805_pc"
+      ]
+    }
+  ],
+  "script_sha256": "49F633AC64F69A4BF27B33988F94D720CECD7586173DA908BE762B2F0AF88CB0",
+  "public_files_changed": 0
+}

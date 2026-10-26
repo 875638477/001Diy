@@ -1,0 +1,40 @@
+load("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_stub_preflight_bundle13_v1/public0010_stub_preflight_v1.il")
+
+procedure(pub0010RouteGeomKey(kind layer width ends)
+ let((a b)
+  a=pc13StubGridPoint(car(ends)) b=pc13StubGridPoint(cadr(ends))
+  unless(alphalessp(sprintf(nil "%L" a) sprintf(nil "%L" b)) a=pc13StubGridPoint(cadr(ends)) b=pc13StubGridPoint(car(ends)))
+  sprintf(nil "%L" list(kind layer width a b))))
+procedure(pub0010RouteObjectsWalk(o)
+ let((attrs key)
+  when(o && !pub0010RouteSeen[o]
+   pub0010RouteSeen[o]=t
+   when(equal(o->objType "line")
+    key=pub0010RouteGeomKey(o->objType o->layer o->width o->startEnd)
+    pub0010ActualLines[key]=cons(o pub0010ActualLines[key]))
+   attrs=o->? when(member('children attrs) foreach(x o->children pub0010RouteObjectsWalk(x)))
+   when(member('segments attrs) foreach(x o->segments pub0010RouteObjectsWalk(x))))))
+procedure(pub0010RouteNetDiagnostic(dir)
+ let((f vf rows key matches count missing changed row actual viaCount expected actualVias)
+  sstatus(fullPrecision t) pub403ReadUnits()
+  pub403FullTypedGate(strcat(pub403Bundle "/TARGET_FULL2698_WITH_NONLOGICAL_IDENTITIES.ilist"))
+  pub403StateGate(strcat(pub403Bundle "/SOURCE_CONTROL_EXPECTED_ALL593_TEXT_PROPS.ilist")) pub403AllNameGate(nil)
+  pub0010RouteSeen=makeTable('pub0010RouteSeen nil) pub0010ActualLines=makeTable('pub0010ActualLines nil)
+  foreach(n axlDBGetDesign()->nets foreach(b n->branches pub0010RouteObjectsWalk(b)))
+  foreach(b axlDBGetLonelyBranches() pub0010RouteObjectsWalk(b))
+  rows=pub403Rows("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_path_stubs_plan13_v1/SOURCE_FROZEN_REAL_SEGMENTS.ilist") unless(length(rows)==2068 error("PUB0010 frozen2068 line ledger count differs\n"))
+  f=outfile(strcat(dir "/ACTUAL2068_SOURCE_LINE_CURRENT_OBJECT_NETS.ilist")) count=0 missing=0 changed=0
+  foreach(row rows
+   unless(equal(car(row) "line") error("PUB0010 geometry-only exact matching restricted to actual2068 straight lines\n"))
+   key=pub0010RouteGeomKey(car(row) nth(2 row) nth(3 row) nth(4 row)) matches=pub0010ActualLines[key]
+   unless(matches missing=missing+1)
+   unless(length(matches)==1 && equal(car(matches)->net->name nth(1 row)) changed=changed+1)
+   fprintf(f "%L\n" list(row foreach(mapcar o matches list(o o->objType o->net->name o->layer o->width o->startEnd o->parent o->parent->net->name o->parent->??)))) drain(f) count=count+1)
+  close(f) pub0010BuildCuIndex() actualVias=nil
+  vf=outfile(strcat(dir "/ACTUAL_ALL1739_VIAS.ilist"))
+  foreach(item pc13CuIndexRows when(equal(nth(4 item) "via")
+   actual=car(item) row=list(actual->xy actual->name if(actual->net then actual->net->name else "__NO_NET__") axlDBGetProperties(actual '("user" "allegro")))
+   actualVias=cons(row actualVias) fprintf(vf "%L\n" row))) close(vf)
+  unless(length(actualVias)==1739 error("PUB0010 actual via completeness differs from frozen1739\n"))
+  f=outfile(strcat(dir "/SOURCE_ROUTE_AND_VIA_DIAGNOSTIC_COMPLETE.txt"))
+  fprintf(f "PUB0010_EXACT2068_SOURCE_LINE_AND_ALL1739_VIA_NET_DIAGNOSTIC_COMPLETE_NO_SAVE\nSOURCE_LINES=%d\nNO_EXACT_CURRENT_LINE_MATCH=%d\nNON_UNIQUE_OR_CHANGED_CURRENT_NET=%d\nACTUAL_VIAS=%d\n" count missing changed length(actualVias)) close(f) t))

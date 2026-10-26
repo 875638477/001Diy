@@ -1,0 +1,95 @@
+{
+  "status": "SOURCE_VALUE_BASELINE_DIAGNOSTIC_ONLY_NOT_APPROVED",
+  "board": "008",
+  "source": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_devices_batch13\\008\\008.brd",
+  "source_sha256": "559AEC92E1CEC9BFD91EBFEF06C765BEC1F10E72F22F2FBF01F5AA348A7FCDA1",
+  "source_unchanged": true,
+  "independent_input_unchanged": true,
+  "source_and_staged_PST_exact": true,
+  "source_review": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_brd_pst_source13_008_v7\\OFFLINE_NOOP_PST_CANARY_REVIEW.json",
+  "source_review_sha256": "070E6E950F935F2F21916B9235641D356300661900BF325FE92AA4FA4B7D29C1",
+  "command": [
+    "C:\\Program0\\cadence\\SPB172\\tools\\bin\\netrev.exe",
+    "-y",
+    "2",
+    "-i",
+    "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\w\\module008_source_warning_control13\\netlist",
+    "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\w\\module008_source_warning_control13\\INPUT_COPY.brd",
+    "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\w\\module008_source_warning_control13\\BASELINE_CONTROL.brd"
+  ],
+  "exit_code": 1,
+  "timeout": false,
+  "elapsed_seconds": 1.3229827880859375,
+  "candidate_exists": true,
+  "candidate_sha256": "B2CEE20CF486261DA757D5D6910109D1D704F042DA8DD69AA20A2610A5FB3DA0",
+  "netrev_list_sha256": "E37F60E224973F11028543D6BE5BB91F6AD474F690838CBB71A53EA6E6A374BD",
+  "diagnostics": [
+    {
+      "line_number": 39,
+      "text": "WARNING(SPMHNI-363): Signal model 'R_R0402_0R/0402/5%__0R/0402/5%' not found; may effect xnets and electrical constraints."
+    },
+    {
+      "line_number": 41,
+      "text": "WARNING(SPMHNI-363): Signal model 'R_R0402_0R/0402/5%__0R/0402/5%' not found; may effect xnets and electrical constraints."
+    },
+    {
+      "line_number": 43,
+      "text": "WARNING(SPMHNI-363): Signal model 'R_R0402_0R/0402/5%__0R/0402/5%' not found; may effect xnets and electrical constraints."
+    },
+    {
+      "line_number": 45,
+      "text": "WARNING(SPMHNI-363): Signal model 'R_R0402_0R/0402/5%__0R/0402/5%' not found; may effect xnets and electrical constraints."
+    },
+    {
+      "line_number": 47,
+      "text": "WARNING(SPMHNI-363): Signal model 'R_R0402_0R/0402/5%__0R/0402/5%' not found; may effect xnets and electrical constraints."
+    },
+    {
+      "line_number": 49,
+      "text": "WARNING(SPMHNI-363): Signal model 'R_R0402_0R/0402/5%__0R/0402/5%' not found; may effect xnets and electrical constraints."
+    },
+    {
+      "line_number": 51,
+      "text": "#1   WARNING(SPMHNI-184): Device library warning detected."
+    },
+    {
+      "line_number": 53,
+      "text": "WARNING(SPMHUT-131): Pin 'JTG_TCK' for component 'X3_LPDDR4_V5_REF_200331A_X2A_(S' has no other swappable pins ... swapping ignored."
+    },
+    {
+      "line_number": 55,
+      "text": "#2   WARNING(SPMHNI-184): Device library warning detected."
+    },
+    {
+      "line_number": 57,
+      "text": "WARNING(SPMHUT-131): Pin 'JTG_TDI' for component 'X3_LPDDR4_V5_REF_200331A_X2A_(S' has no other swappable pins ... swapping ignored."
+    },
+    {
+      "line_number": 59,
+      "text": "#3   WARNING(SPMHNI-192): Device/Symbol check warning detected. [help]"
+    },
+    {
+      "line_number": 61,
+      "text": "WARNING(SPMHNI-194): Symbol 'R0402-1' used by RefDes R183 for device 'R_R0402-1_0R/R0402/1%_' not found in PSMPATH or must be \"dbdoctor\"ed."
+    },
+    {
+      "line_number": 63,
+      "text": "#4   WARNING(SPMHNI-192): Device/Symbol check warning detected. [help]"
+    },
+    {
+      "line_number": 65,
+      "text": "WARNING(SPMHNI-194): Symbol 'SOT-523' used by RefDes Q26 for device 'N-MOS2_SOT-523_NC_2SK3019' not found in PSMPATH or must be \"dbdoctor\"ed."
+    },
+    {
+      "line_number": 67,
+      "text": "#5   WARNING(SPMHNI-192): Device/Symbol check warning detected. [help]"
+    },
+    {
+      "line_number": 69,
+      "text": "WARNING(SPMHNI-194): Symbol 'SOT-523' used by RefDes Q15 for device 'N-MOS2_SOT-523_2SK3019' not found in PSMPATH or must be \"dbdoctor\"ed."
+    }
+  ],
+  "script_sha256": "B2BCB6FA4B83CBF7D7B9632F110326E85D353367BDA2F29F84C09C486677F3D3",
+  "public_files_written": 0,
+  "scope": "Unchanged source PST against independent existing-board copy, exact same pcbenv as mapped native run. Nonzero CLI and baseline errors remain reported; this result is not approval to publish either board."
+}

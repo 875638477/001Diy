@@ -1,0 +1,18 @@
+import pathlib,json,shutil,importlib.util
+p=pathlib.Path(r'D:/001DIY/004computer/lga1700/13shared_libraries_pc_20261025/w/pcb_migration');s=importlib.util.spec_from_file_location('b',p/'run_pc_native_audit.py');b=importlib.util.module_from_spec(s);s.loader.exec_module(b)
+r=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/fixture4');r.mkdir(exist_ok=False);seed=b.B/'symbol_jobs/probe9/blank.brd';h=b.sha(seed);shutil.copyfile(seed,r/'seed2.brd');e=b.envfor(r)
+il='''procedure(pc13Empty4(output report)
+ let((f name x)
+  unless(null(axlDBGetDesign()->symdefs) && null(axlDBGetDesign()->padstacks) error("Fixture is not empty"))
+  foreach(name '("L2" "L3")
+   unless(axlXSectionCreate(nil 'bottom axlXSectionModify(?name name ?layerType "CONDUCTOR" ?material "COPPER")) error("Fixture Cu create failed"))
+   unless(axlXSectionCreate(nil 'bottom nil) error("Fixture dielectric create failed")))
+  f=outfile(report)
+  foreach(x axlXSectionGet(nil 'all) fprintf(f "%L\\t%L\\n" x->name x->layerType))
+  fprintf(f "SYMBOLS=%L\\nPADSTACKS=%L\\n" axlDBGetDesign()->symdefs axlDBGetDesign()->padstacks) close(f)
+  unless(axlSaveDesign(?design output ?noMru t ?noConfirm t) error("Fixture save failed"))
+  t))
+'''
+(r/'create.il').write_text(il,encoding='ascii');(r/'run.scr').write_text('set NOCONFIRM\nskill errset(load('+b.q(r/'create.il')+') t)\nskill errset(pc13Empty4('+b.q(r/'EMPTY4.brd')+' '+b.q(r/'xsection.txt')+') t)\nquit\nfillin "yes"\n',encoding='ascii')
+result=b.launch([b.CAD/'tools/bin/allegro.exe','-product','Allegro_performance','-safe','-nographic','-s',r/'run.scr','-p',r,r/'seed2.brd'],r,e,90,'create');assert b.sha(seed)==h and (r/'EMPTY4.brd').is_file()
+b.dump(r/'report.json',dict(status='NEW_EMPTY4_FIXTURE_SAVED_REQUIRES_LAYER_REVIEW',seed=str(seed),source_sha256=h,source_unchanged=True,result=result));print((r/'xsection.txt').read_text());print((r/'create_stdout.txt').read_text())

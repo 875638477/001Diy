@@ -1,0 +1,48 @@
+﻿{
+    "schema":  "ROOT_FINITE_SOURCE_THERMAL_PATH_RESTORE_DECISION_V1",
+    "updated_local":  "2026-10-26T01:30:43.0727425+08:00",
+    "source_board_sha256":  "680500B07BC97F2B9D47064F83A01D0376AE43ADD486171F9B46087109E1B898",
+    "input_candidate_sha256":  "1ABA0FDC27DE553535CDE454840EA245CBEBB5FDC1392A0B07E0218D11CDE26A",
+    "approved_source_thermal_keys":  [
+                                         1,
+                                         2,
+                                         4,
+                                         5,
+                                         7,
+                                         8,
+                                         9,
+                                         10,
+                                         11,
+                                         13,
+                                         14,
+                                         15,
+                                         16,
+                                         17,
+                                         18,
+                                         19,
+                                         20,
+                                         21,
+                                         23,
+                                         24,
+                                         25
+                                     ],
+    "original_source_type":  "board-owned path thermal=t symbolEtch=nil props=nil, not source footprint land",
+    "reason":  "Clipped detached native polygons roundtrip through DBCreateShape failed strict actual/requested both-direction Cu comparison; no general tolerance is accepted. Reconstruct exactly representable source full small paths using source DB2Path width/round ends/actual original Cu instead.",
+    "bounded_scope":  "Only exact21 source small paths. Original trace copper inside oldpad is now explicitly retained as board routing; do not recreate complete old land, or alter canonical package/PAD definitions. Other4 wholly old-land cases remain unchanged.",
+    "requirements":  [
+                         "Actual restored material exactly source21 path Cu, no copper outside original source paths plus already-present candidate copper",
+                         "Actual other-net Cu intersections zero before/after",
+                         "All70 package/PAD/figure cache graphs unchanged and public6 wholegraph plus4 manufacturing PAD XML pass",
+                         "All2698 typed pads,593 poses/texts/fonts/properties,1739 typed vias preserved",
+                         "Fresh actual915 connection partitions exact against source",
+                         "Full rules and4feedback views/body/function/NC preserved with exact native administrative MAX ledger"
+                     ],
+    "metadata_boundary":  "Restored board traces may be static rather than generated thermal objects; document this instead of claiming dynamic thermal semantics retained",
+    "original_failures_retained":  [
+                                       "public0010_source25_owner_probe_run13_v2",
+                                       "public0010_external_thermal_restore_run13_v1",
+                                       "public0010_external_thermal_restore_run13_v2",
+                                       "public0010_external_thermal_restore_run13_v3"
+                                   ],
+    "formal_or_public_files_changed":  0
+}

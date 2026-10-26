@@ -1,0 +1,102 @@
+{
+  "status": "PASS_COMPLETE_ORDERED_OLB_FP_FIELDS_AND_NATIVE_ALL_FONT_FIELDS_STAGING_ONLY",
+  "CAD_started": false,
+  "input_modified": false,
+  "proof": {
+    "all_ordered_elements": 2560,
+    "original_objects": {
+      "Defn": 1,
+      "DefaultValues": 1,
+      "Package": 1
+    },
+    "inverse_full_library_sha256": "EF822608B21AC11FB28E1C3A608873753C9589A904695C30BDE8905558F2B998",
+    "source_full_library_sha256": "EF822608B21AC11FB28E1C3A608873753C9589A904695C30BDE8905558F2B998",
+    "field_ledger": [
+      {
+        "field": "/Lib[1]/Package[1]/Defn[1]/@pcbFootprint",
+        "before": "LQFP64_10X10_P0D5",
+        "after": "lqfp-64"
+      }
+    ],
+    "top_level_Package_native_serialization_order_inverse": {
+      "scope": "Only top-level Package object serialization order is inversed by exact unique Defn/@name; all full Package contents/child orders and Lib defaults/fonts remain strict.",
+      "package_count": 1,
+      "source_order": [
+        "HPM5361ICF1"
+      ],
+      "native_after_save_order": [
+        "HPM5361ICF1"
+      ],
+      "source_root_child_indices": [
+        2
+      ],
+      "position_changes": [],
+      "same_name_multiplicity_bijection": true
+    }
+  },
+  "native_fonts": {
+    "fonts": 24,
+    "LOGFONT_fields_each": 14,
+    "native_fields_equal": 337,
+    "report_sha256": "243B0BBC3C4039EB4B929A656D79D0B7B03B54CB4362CD188A9C4E80A8ABDB82"
+  },
+  "negative_controls": [
+    {
+      "name": "PCB_Footprint_wrong_target",
+      "status": "PASS_REJECTED",
+      "reason": "Candidate field not exact planned target /Lib[1]/Package[1]/Defn[1]/@pcbFootprint"
+    },
+    {
+      "name": "pin_hotspot_changed",
+      "status": "PASS_REJECTED",
+      "reason": "Full ordered library XML differs beyond exact PCB Footprint fields and opened path"
+    },
+    {
+      "name": "Package_removed",
+      "status": "PASS_REJECTED",
+      "reason": "Top-level Package cohort/names/multiplicity changed"
+    },
+    {
+      "name": "Package_name_changed",
+      "status": "PASS_REJECTED",
+      "reason": "Top-level Package cohort/names/multiplicity changed"
+    },
+    {
+      "name": "Package_duplicate_multiplicity",
+      "status": "PASS_REJECTED",
+      "reason": "Top-level Package name/multiplicity ambiguous"
+    },
+    {
+      "name": "Package_unrelated_field_changed",
+      "status": "PASS_REJECTED",
+      "reason": "Full ordered library XML differs beyond exact PCB Footprint fields and opened path"
+    },
+    {
+      "name": "pin_number_or_name_changed",
+      "status": "PASS_REJECTED",
+      "reason": "Full ordered library XML differs beyond exact PCB Footprint fields and opened path"
+    },
+    {
+      "name": "Package_internal_child_order_changed",
+      "status": "PASS_REJECTED",
+      "reason": "Full ordered library XML differs beyond exact PCB Footprint fields and opened path"
+    },
+    {
+      "name": "DefaultFont_changed",
+      "status": "PASS_REJECTED",
+      "reason": "Full ordered library XML differs beyond exact PCB Footprint fields and opened path"
+    },
+    {
+      "name": "unlisted_symbol_property_added",
+      "status": "PASS_REJECTED",
+      "reason": "Full ordered library XML differs beyond exact PCB Footprint fields and opened path"
+    }
+  ],
+  "public_original_unchanged_sha256": "82B349D96CB2192C5023A5DBA59E41EDCCEB0B3867C2A59AE608C172F32B0FE2",
+  "candidate_sha256": "C9B907382AAE692D68F87D08B2D5315DD81B2FC8CC9A65B9A94B3C50C8B98A30",
+  "public_files_replaced": 0,
+  "case": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\public_olb_remaining2_stage13\\02_2026-08-15_23-35-55\\STAGING_CASE.json",
+  "case_sha256": "9CD86CD1F9CF4FDCB50C261DCB29089E4204364B1273A88332C5FF55E65DFD84",
+  "script_sha256": "5301C65FE97A38D0E954A15D51453D49688F8E38AE4C86087894706A1E2707EE",
+  "scope": "Only independent staging validation. Does not publish any public library or supersede the full global native SHA guard."
+}

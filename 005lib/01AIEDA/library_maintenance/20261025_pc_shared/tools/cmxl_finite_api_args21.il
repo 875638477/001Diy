@@ -1,0 +1,7 @@
+procedure(pub21CMXLDeleteArgs(dir)
+ let((d f x)
+  axlCMDBInit() d=cmxlFindObject(REDS_DESIGN_OBJ) unless(d error("CMXL active design missing\n")) cmxlDBSkillInit(d)
+  f=outfile(strcat(dir "/CMXL_FINITE_DELETE_ORIGIN_API_ARGS.txt"))
+  foreach(x '(cmxlDeleteObject cmxlRemoveObject cmxlDeleteObjects cmxlDeleteAttribute cmxlGetAttribute cmxlPutAttribute cmxlSetAttributeOrigin cmxlGetAttributeOrigin cmxlFindObject cmxlGetObjInfo)
+   fprintf(f "FUNCTION=%L DEFINED=%L ARGLIST=%L\n" x getd(x) errset(arglist(x) t))) close(f) axlCMDBExit()
+  f=outfile(strcat(dir "/CMXL_API_ARGS_COMPLETE.txt")) fprintf(f "COMPLETE_READONLY_FUNCTION_SIGNATURE_PROBE_NO_SETTER_SAVE\n") close(f) t))

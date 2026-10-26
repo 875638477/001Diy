@@ -1,0 +1,16 @@
+; Definitions only. No class setter, design save, ECO or property changes.
+; Read complete component/compdef classes before and after loading signal.cxt.
+procedure(pub13ClassPhaseDump(path)
+ let((f d c)
+  f=outfile(path) d=axlDBGetDesign()
+  fprintf(f "refdes\tdevice_type\tpackage\tcomponent_class\tcompdef_class\tcompdef_device_type\n")
+  foreach(c d->components fprintf(f "%L\t%L\t%L\t%L\t%L\t%L\n" c->name c->deviceType c->package c->class c->compdef->class c->compdef->deviceType))
+  close(f) length(d->components)))
+procedure(pub13ClassPhasedReadonly(dir)
+ let((before after result f)
+  before=pub13ClassPhaseDump(strcat(dir "/PLAIN_NATIVE_COMPONENT_CLASSES.tsv"))
+  result=errset(load("signal.cxt") t)
+  after=pub13ClassPhaseDump(strcat(dir "/AFTER_SIGNAL_CONTEXT_COMPONENT_CLASSES.tsv"))
+  f=outfile(strcat(dir "/CLASS_PHASED_READONLY_COMPLETE.txt"))
+  fprintf(f "COMPLETE_PHASED_PLAIN_NATIVE_CLASS_READONLY\nBEFORE_COUNT=%d\nAFTER_COUNT=%d\nSIGNAL_CONTEXT_LOAD=%L\nCLASS_SETTERS=0\nSAVE_CALLS=0\n" before after result) close(f)
+  unless(before==after error("Native readonly component count changed across context load\n")) t))

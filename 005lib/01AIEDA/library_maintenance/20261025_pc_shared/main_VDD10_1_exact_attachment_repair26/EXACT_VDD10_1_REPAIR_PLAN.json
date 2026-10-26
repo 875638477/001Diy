@@ -1,0 +1,111 @@
+{
+  "schema": "MAIN13_EXACT_VDD10_1_EXISTING_ATTACHMENT_REPAIR_V1",
+  "source_board_sha256": "49AF5EE7252CA9E8C4C48D8F60AD4D1113DA559814585356B14F6150A195C063",
+  "touch_source_board_sha256": "06B8DD73EE20A4C01A0BF36E0BF6CD0FDDFE20CE2F89DA430A2C003414BE9405",
+  "candidate_board_sha256": "49B874ED98BD3F66EC23D115848C88E2F744195DEE9B35DC98F143674E055308",
+  "net": "VDD10_1",
+  "source_isolated_endpoint": [
+    "U5",
+    "3"
+  ],
+  "source_other_10_endpoints": [
+    [
+      "U5",
+      "8"
+    ],
+    [
+      "U5",
+      "30"
+    ],
+    [
+      "U5",
+      "22"
+    ],
+    [
+      "C232",
+      "2"
+    ],
+    [
+      "C233",
+      "2"
+    ],
+    [
+      "C234",
+      "2"
+    ],
+    [
+      "C235",
+      "2"
+    ],
+    [
+      "C236",
+      "2"
+    ],
+    [
+      "LL1",
+      "2"
+    ],
+    [
+      "LR3",
+      "2"
+    ]
+  ],
+  "source_stored_netstatus": {
+    "net": "VDD10_1",
+    "unconnected_stored": "1",
+    "unplaced_pins": "0",
+    "branch_count": "2"
+  },
+  "expected_candidate_stored_netstatus": {
+    "net": "VDD10_1",
+    "unconnected_stored": "0",
+    "unplaced_pins": "0",
+    "branch_count": "1"
+  },
+  "source_groups": 2020,
+  "expected_candidate_groups": 2019,
+  "other_full_groups_exact": 2018,
+  "other_full_stored_named_nets_exact": 1117,
+  "source_pstxnet_sha256": "03F7C4E77C2A0D531EB4D2E5AA5A85E782EFF4BD8154B0B0CF8DBD1416953C4F",
+  "candidate_pstxnet_sha256": "5B1F07D58AFFD6C7A6EB5BE50EA512B195F03083E0F127BA8361F83DD9AFF1FB",
+  "artifacts": {
+    "source_pstxnet": {
+      "path": "D:\\001DIY\\004computer\\lga1700\\12electrical_fixed_20261025\\sch\\netlist\\pstxnet.dat",
+      "sha256": "03F7C4E77C2A0D531EB4D2E5AA5A85E782EFF4BD8154B0B0CF8DBD1416953C4F"
+    },
+    "candidate_pstxnet": {
+      "path": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\w\\cache7_pst4\\20261025_231655_178b29bf\\netlist\\pstxnet.dat",
+      "sha256": "5B1F07D58AFFD6C7A6EB5BE50EA512B195F03083E0F127BA8361F83DD9AFF1FB"
+    },
+    "full_PST_inverse_proof": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\cache7_pst1031_full12_gate13\\PUBLIC_LIBRARY_PST_REVIEW.json",
+      "sha256": "55320A1E0CB876EEA3501B9D0DC08735A9072F0269CCC4E6A3AD13DABD9F529A"
+    },
+    "native_touch_launch": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\w\\main_vdd_original_touch_proof26\\launch_report.json",
+      "sha256": "33E3994EF477F39C16DB9725F3A618CF92B6DD878CD3175BD0DD551F94AD7858"
+    },
+    "native_touch_complete": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\w\\main_vdd_original_touch_proof26\\VDD_ORIGINAL_TOUCH_COMPLETE.txt",
+      "sha256": "D34420D22E9E4F308A72F785C019ECCECB601952BCCF6C1DFFADE973A4349348"
+    },
+    "native_touch_polygons": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\w\\main_vdd_original_touch_proof26\\VDD_SOURCE_ACTUAL_TOUCH.jsonl",
+      "sha256": "B9D0AFD114F0C93EAC3FAEBE2F236E01FC4F6A83105B0CC14242F90048A37C68"
+    },
+    "native_touch_attributes": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\w\\main_vdd_original_touch_proof26\\VDD_SOURCE_ACTUAL_TOUCH.ilist",
+      "sha256": "3F4B40195811536BFBCBEB034DE797D6F3C704C018F2E5123677FFEB723633CD"
+    },
+    "source49AF_to_touch_source06B8_full_typed_chain": {
+      "path": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\verification\\sot34_connectivity_full4\\SOT34_COMPLETE_TYPED_CONNECTIVITY_REVIEW.json",
+      "sha256": "F7BB3C6BFE0F44BFCEA3E581AD126A4C3357D1DDE6606856C27C3CAD9118218F"
+    },
+    "original_strict_FAIL_retained": {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\main_all81_final_connectivity25\\ALL81_COMPLETE_TYPED_CONNECTIVITY_REVIEW.json",
+      "sha256": "6AA050E918A8E2FFD2A880CFBC6FB7EB39D13BA9952E4383666434B4EB1B944A"
+    }
+  },
+  "authorization": "Root review26 explicitly accepts repairing this original same-logical-net native attachment defect, preserving original PST eleven-node supply connection; do not cut U5.3 supply to reproduce a stale source-native isolated island. No other group/netstatus allowance.",
+  "scope": "Exact one existing same-net attachment repair. Physical copper/pad/route geometry acceptance remains a separate required native gate; this checker does not infer source equivalence merely from group counts."
+}

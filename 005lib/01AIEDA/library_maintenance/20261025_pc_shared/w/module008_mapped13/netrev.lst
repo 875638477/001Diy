@@ -1,0 +1,110 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Allegro Netrev Import Logic                                      )
+(                                                                     )
+(    Drawing          : INPUT_COPY.brd                                )
+(    Software Version : 17.2S045                                      )
+(    Date/Time        : Sun Oct 25 23:03:50 2026                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+------ Directives ------------
+
+Ripup etch:                  No
+Ripup delete first segment:  No
+Ripup retain bondwire:       No
+Ripup symbols:               IfSame
+Missing symbol has error:    No
+DRC update:                  Yes
+Schematic directory:         'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared\public_four_module_mapped_pst13\008\netlist'
+Design Directory:            'D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/w/module008_mapped13'
+Old design name:             'D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/w/module008_mapped13/INPUT_COPY.brd'
+New design name:             'D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/w/module008_mapped13/LIVE_IMPORTED.brd'
+
+CmdLine: C:\Program0\Cadence\SPB172\tools\bin\netrev.exe -y 2 -i D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared\public_four_module_mapped_pst13\008\netlist D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared\w\module008_mapped13\INPUT_COPY.brd D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared\w\module008_mapped13\LIVE_IMPORTED.brd
+
+------ Preparing to read pst files ------
+
+Starting to read D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public_four_module_mapped_pst13/008/netlist/pstchip.dat 
+   Finished reading D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public_four_module_mapped_pst13/008/netlist/pstchip.dat (00:00:00.02)
+Starting to read D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public_four_module_mapped_pst13/008/netlist/pstxprt.dat 
+   Finished reading D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public_four_module_mapped_pst13/008/netlist/pstxprt.dat (00:00:00.06)
+Starting to read D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public_four_module_mapped_pst13/008/netlist/pstxnet.dat 
+   Finished reading D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public_four_module_mapped_pst13/008/netlist/pstxnet.dat (00:00:00.03)
+
+------ Oversights/Warnings/Errors ------
+
+
+WARNING(SPMHNI-363): Signal model 'R_R0402_0R/0402/5%__0R/0402/5%' not found; may effect xnets and electrical constraints.
+
+WARNING(SPMHNI-363): Signal model 'R_R0402_0R/0402/5%__0R/0402/5%' not found; may effect xnets and electrical constraints.
+
+WARNING(SPMHNI-363): Signal model 'R_R0402_0R/0402/5%__0R/0402/5%' not found; may effect xnets and electrical constraints.
+
+WARNING(SPMHNI-363): Signal model 'R_R0402_0R/0402/5%__0R/0402/5%' not found; may effect xnets and electrical constraints.
+
+WARNING(SPMHNI-363): Signal model 'R_R0402_0R/0402/5%__0R/0402/5%' not found; may effect xnets and electrical constraints.
+
+WARNING(SPMHNI-363): Signal model 'R_R0402_0R/0402/5%__0R/0402/5%' not found; may effect xnets and electrical constraints.
+
+#1   WARNING(SPMHNI-184): Device library warning detected.
+
+WARNING(SPMHUT-131): Pin 'JTG_TCK' for component 'X3_LPDDR4_V5_REF_200331A_X2A_(S' has no other swappable pins ... swapping ignored.
+
+#2   WARNING(SPMHNI-184): Device library warning detected.
+
+WARNING(SPMHUT-131): Pin 'JTG_TDI' for component 'X3_LPDDR4_V5_REF_200331A_X2A_(S' has no other swappable pins ... swapping ignored.
+
+#3   WARNING(SPMHNI-192): Device/Symbol check warning detected. [help]
+
+WARNING(SPMHNI-194): Symbol 'R0402-1' used by RefDes R183 for device 'R_R0402-1_0R/R0402/1%_' not found in PSMPATH or must be "dbdoctor"ed.
+
+#4   WARNING(SPMHNI-192): Device/Symbol check warning detected. [help]
+
+WARNING(SPMHNI-194): Symbol 'SOT-523' used by RefDes Q26 for device 'N-MOS2_SOT-523_NC_2SK3019' not found in PSMPATH or must be "dbdoctor"ed.
+
+#5   WARNING(SPMHNI-192): Device/Symbol check warning detected. [help]
+
+WARNING(SPMHNI-194): Symbol 'SOT-523' used by RefDes Q15 for device 'N-MOS2_SOT-523_2SK3019' not found in PSMPATH or must be "dbdoctor"ed.
+
+------ Library Paths ------
+MODULEPATH =  . 
+           C:/Program0/Cadence/SPB172/share/local/pcb/modules 
+
+PSMPATH =  D:/001DIY/005lib/01Psm_lib 
+
+PADPATH =  D:/001DIY/005lib/01Pad_lib 
+
+
+------ Summary Statistics ------
+
+
+netrev run on Oct 25 23:03:50 2026
+   DESIGN NAME : '01EBOXX3MV1_02_11'
+   PACKAGING ON Oct 25 2026 22:00:00
+
+   COMPILE 'logic'
+   CHECK_PIN_NAMES OFF
+   CROSS_REFERENCE OFF
+   FEEDBACK OFF
+   INCREMENTAL OFF
+   INTERFACE_TYPE PHYSICAL
+   MAX_ERRORS 500
+   MERGE_MINIMUM 5
+   NET_NAME_CHARS '#%&()*+-./:=>?@[]^_`|'
+   NET_NAME_LENGTH 24
+   OVERSIGHTS ON
+   REPLACE_CHECK OFF
+   SINGLE_NODE_NETS ON
+   SPLIT_MINIMUM 0
+   SUPPRESS   20
+   WARNINGS ON
+
+ No error detected
+ No oversight detected
+  5 warnings detected
+
+cpu time      0:02:53
+elapsed time  0:00:01
+

@@ -1,0 +1,602 @@
+{
+  "schema": "GLOBAL_SUFFIX_PUBLIC_NATIVE_AUDIT_PLAN_V1",
+  "status": "CURRENT81_ONLY_MISSING_EXPLICIT_TARGET_CANDIDATE_NATIVE_PLAN",
+  "roots": [
+    "D:\\001DIY\\005lib\\01Psm_lib",
+    "D:\\001DIY\\005lib\\01brdlib",
+    "D:\\001DIY\\005lib\\01Pad_lib",
+    "D:\\001DIY\\005lib\\01captureLib",
+    "D:\\001DIY\\005lib\\01script_file",
+    "D:\\001DIY\\005lib\\01env"
+  ],
+  "public_guard_manifest": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\project81_exact_additions13\\PUBLIC_GUARD_13425.json",
+  "selected_psm_count": 12,
+  "exact_byte_group_count": 12,
+  "native_representative_count": 12,
+  "grouping_policy": "Only full byte SHA256 equality can share a native representative. No PSM header/string/name normalization or geometry omission. Representatives still require complete native geometry/PAD/attribute comparison before any deletion.",
+  "canonical_policy": {
+    "policy": "Do not merge based on name. Preserve pin-number, G/S/D, thermal pad, drill/mask/paste/copper/SHAPE/full properties; functional/connector pin count and geometry require full native proof."
+  },
+  "psmpath": "D:\\001DIY\\005lib\\01Psm_lib",
+  "padpath": "D:\\001DIY\\005lib\\01Pad_lib",
+  "helpers": [
+    {
+      "path": "D:\\001DIY\\004computer\\lga1700\\13shared_libraries_pc_20261025\\w\\pcb_migration\\run_pc_native_audit.py",
+      "sha256": "E180FD9BB33FF70FBB91D61F32447818A40673F02412044401D38CB0F5933CC3"
+    },
+    {
+      "path": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_native_units.il",
+      "sha256": "3744B847BCA91E56F60A27FB48DC4053A50A20FDB2485E39E913D0DFF3D21897"
+    },
+    {
+      "path": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\psm_export.il",
+      "sha256": "5145A5641DDF36EE06E9C4C25EEB936BE7B12C59437FE46835BF51BEAF48F51E"
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\fixture4\\EMPTY4.brd",
+      "sha256": "4601DA63EE69F9ABBB8B61FE4EA887B1E16812C69805AD50B669FF15A93F0324"
+    },
+    {
+      "path": "D:\\001DIY\\004computer\\lga1700\\cadence_geometry_merge_20261025\\symbol_probe\\units_view.txt",
+      "sha256": "66F80C58E74FDD6BC2584020E35EE47012695588DA2C7A227431612B204C776D"
+    }
+  ],
+  "representatives": [
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\mount_156a_p4567_pc.psm",
+      "relative": "sop-8-e-150mil.psm",
+      "root": "D:\\001DIY\\005lib\\01Psm_lib",
+      "bytes": 59140,
+      "sha256": "9F1106428AD5A93EDACD3CDE20330F96F21A20F59F82C20EA282BCD102053027",
+      "stem": "mount_156a_p4567_pc",
+      "extension": ".psm",
+      "representative_index": 0,
+      "canonical_candidate": "mount_156a_p4567_pc",
+      "family": "FUNCTIONAL",
+      "size": "",
+      "suffix": "",
+      "native_audit": true,
+      "classification": "FROZEN_EXACT_FUNCTIONAL_CASE_CLONE",
+      "byte_identical_members": [
+        "D:\\001DIY\\005lib\\01Psm_lib\\mount_156a_p4567_pc.psm"
+      ]
+    },
+    {
+      "path": "D:\\001DIY\\005lib\\01Psm_lib\\ddr4_dimm_288p_pc.psm",
+      "relative": "sop-8-e-150mil.psm",
+      "root": "D:\\001DIY\\005lib\\01Psm_lib",
+      "bytes": 59140,
+      "sha256": "602712CF02B8A11A48B9341E479FB78166540C33FABC0B1F2377482D86BC6A7D",
+      "stem": "ddr4_dimm_288p_pc",
+      "extension": ".psm",
+      "representative_index": 0,
+      "canonical_candidate": "ddr4_dimm_288p_pc",
+      "family": "FUNCTIONAL",
+      "size": "",
+      "suffix": "",
+      "native_audit": true,
+      "classification": "FROZEN_EXACT_FUNCTIONAL_CASE_CLONE",
+      "byte_identical_members": [
+        "D:\\001DIY\\005lib\\01Psm_lib\\ddr4_dimm_288p_pc.psm"
+      ]
+    }
+  ],
+  "original_nonpassive_plan": "D:\\001DIY\\005lib\\01AIEDA\\library_maintenance\\20261025_pc_shared\\global_nonpassive_plan_review_v1\\NONPASSIVE_351_275_EXEC_PLAN.json",
+  "original_nonpassive_plan_sha256": "58C41036087E8B34DE39E7C6CF3CC2A3077D9A20321B587F06EE632A5A9DEE15",
+  "scope_original_candidate_files": 12,
+  "scope_native_representatives": 12,
+  "candidate_relations": [
+    {
+      "candidate": "1ss355_sod323-2",
+      "possible_base": "sod-323",
+      "kind": "MODEL_PREFIX_SOD2_WITH_EXISTING_GENERIC",
+      "evidence": "Named SOD model suffix with explicit 2/2p token; generic exists. Pin count/topology and actual pad differences still require native check.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "1ss355_sod323-2",
+      "possible_base": "sod323",
+      "kind": "MODEL_PREFIX_SOD2_WITH_EXISTING_GENERIC",
+      "evidence": "Named SOD model suffix with explicit 2/2p token; generic exists. Pin count/topology and actual pad differences still require native check.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "1ss355_sod323-2",
+      "possible_base": "sod_323",
+      "kind": "MODEL_PREFIX_SOD2_WITH_EXISTING_GENERIC",
+      "evidence": "Named SOD model suffix with explicit 2/2p token; generic exists. Pin count/topology and actual pad differences still require native check.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "ao4468_so8",
+      "possible_base": "so8",
+      "kind": "MODEL_PREFIX_EXISTING_EXPANDED_GENERIC",
+      "evidence": "Actual generic stem equals full suffix after punctuation normalization; no dimensional suffix was discarded.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "ch751h-40pt_sod323-2",
+      "possible_base": "sod-323",
+      "kind": "MODEL_PREFIX_SOD2_WITH_EXISTING_GENERIC",
+      "evidence": "Named SOD model suffix with explicit 2/2p token; generic exists. Pin count/topology and actual pad differences still require native check.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "ch751h-40pt_sod323-2",
+      "possible_base": "sod323",
+      "kind": "MODEL_PREFIX_SOD2_WITH_EXISTING_GENERIC",
+      "evidence": "Named SOD model suffix with explicit 2/2p token; generic exists. Pin count/topology and actual pad differences still require native check.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "ch751h-40pt_sod323-2",
+      "possible_base": "sod_323",
+      "kind": "MODEL_PREFIX_SOD2_WITH_EXISTING_GENERIC",
+      "evidence": "Named SOD model suffix with explicit 2/2p token; generic exists. Pin count/topology and actual pad differences still require native check.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "do-214aa_smb",
+      "possible_base": "smb",
+      "kind": "MODEL_PREFIX_EXISTING_EXPANDED_GENERIC",
+      "evidence": "Actual generic stem equals full suffix after punctuation normalization; no dimensional suffix was discarded.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "fds6675bz_so8",
+      "possible_base": "so8",
+      "kind": "MODEL_PREFIX_EXISTING_EXPANDED_GENERIC",
+      "evidence": "Actual generic stem equals full suffix after punctuation normalization; no dimensional suffix was discarded.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "g2992f1u_so8",
+      "possible_base": "so8",
+      "kind": "MODEL_PREFIX_EXISTING_EXPANDED_GENERIC",
+      "evidence": "Actual generic stem equals full suffix after punctuation normalization; no dimensional suffix was discarded.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "g545a1p1u_so8",
+      "possible_base": "so8",
+      "kind": "MODEL_PREFIX_EXISTING_EXPANDED_GENERIC",
+      "evidence": "Actual generic stem equals full suffix after punctuation normalization; no dimensional suffix was discarded.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "lm358dt_so8",
+      "possible_base": "so8",
+      "kind": "MODEL_PREFIX_EXISTING_EXPANDED_GENERIC",
+      "evidence": "Actual generic stem equals full suffix after punctuation normalization; no dimensional suffix was discarded.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "lm393dg_so8",
+      "possible_base": "so8",
+      "kind": "MODEL_PREFIX_EXISTING_EXPANDED_GENERIC",
+      "evidence": "Actual generic stem equals full suffix after punctuation normalization; no dimensional suffix was discarded.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "mx25l1605am2c-12g_so8",
+      "possible_base": "so8",
+      "kind": "MODEL_PREFIX_EXISTING_EXPANDED_GENERIC",
+      "evidence": "Actual generic stem equals full suffix after punctuation normalization; no dimensional suffix was discarded.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "rb751v-40_sod323-2",
+      "possible_base": "sod-323",
+      "kind": "MODEL_PREFIX_SOD2_WITH_EXISTING_GENERIC",
+      "evidence": "Named SOD model suffix with explicit 2/2p token; generic exists. Pin count/topology and actual pad differences still require native check.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "rb751v-40_sod323-2",
+      "possible_base": "sod323",
+      "kind": "MODEL_PREFIX_SOD2_WITH_EXISTING_GENERIC",
+      "evidence": "Named SOD model suffix with explicit 2/2p token; generic exists. Pin count/topology and actual pad differences still require native check.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "rb751v-40_sod323-2",
+      "possible_base": "sod_323",
+      "kind": "MODEL_PREFIX_SOD2_WITH_EXISTING_GENERIC",
+      "evidence": "Named SOD model suffix with explicit 2/2p token; generic exists. Pin count/topology and actual pad differences still require native check.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "rb751v-40te17_sod323-2",
+      "possible_base": "sod-323",
+      "kind": "MODEL_PREFIX_SOD2_WITH_EXISTING_GENERIC",
+      "evidence": "Named SOD model suffix with explicit 2/2p token; generic exists. Pin count/topology and actual pad differences still require native check.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "rb751v-40te17_sod323-2",
+      "possible_base": "sod323",
+      "kind": "MODEL_PREFIX_SOD2_WITH_EXISTING_GENERIC",
+      "evidence": "Named SOD model suffix with explicit 2/2p token; generic exists. Pin count/topology and actual pad differences still require native check.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "rb751v-40te17_sod323-2",
+      "possible_base": "sod_323",
+      "kind": "MODEL_PREFIX_SOD2_WITH_EXISTING_GENERIC",
+      "evidence": "Named SOD model suffix with explicit 2/2p token; generic exists. Pin count/topology and actual pad differences still require native check.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "si4686dy-t1-e3_so8",
+      "possible_base": "so8",
+      "kind": "MODEL_PREFIX_EXISTING_EXPANDED_GENERIC",
+      "evidence": "Actual generic stem equals full suffix after punctuation normalization; no dimensional suffix was discarded.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "si7840dp-t1-e3_so8",
+      "possible_base": "so8",
+      "kind": "MODEL_PREFIX_EXISTING_EXPANDED_GENERIC",
+      "evidence": "Actual generic stem equals full suffix after punctuation normalization; no dimensional suffix was discarded.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "w25x40avsnig_so8",
+      "possible_base": "so8",
+      "kind": "MODEL_PREFIX_EXISTING_EXPANDED_GENERIC",
+      "evidence": "Actual generic stem equals full suffix after punctuation normalization; no dimensional suffix was discarded.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "dfn10g3-3x3",
+      "possible_base": "dfn10g3",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '-3x3' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "dfn3x3-10-0-5",
+      "possible_base": "dfn3x3-10",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '-0-5' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "dfn3x3-10-0-5_1",
+      "possible_base": "dfn3x3-10",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '-0-5_1' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "dfn3x3-10-0-5_1_1",
+      "possible_base": "dfn3x3-10",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '-0-5_1_1' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "dfn3x3-10-0-5_2",
+      "possible_base": "dfn3x3-10",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '-0-5_2' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "dfn6-2x2-8p-2",
+      "possible_base": "dfn6-2x2-8p",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '-2' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "so8-25x75",
+      "possible_base": "so8",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '-25x75' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "so8_50_150gv",
+      "possible_base": "so8",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '_50_150gv' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "so8_50_150gv_1",
+      "possible_base": "so8",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '_50_150gv_1' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "so8_50_150gv_1_1",
+      "possible_base": "so8",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '_50_150gv_1_1' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "so8_50_150gv_2",
+      "possible_base": "so8",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '_50_150gv_2' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "so8_50_150gv_3",
+      "possible_base": "so8",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '_50_150gv_3' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "so8_50_150gv_3_1",
+      "possible_base": "so8",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '_50_150gv_3_1' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "sod-123_new",
+      "possible_base": "sod-123",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '_new' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "sod-123fl",
+      "possible_base": "sod-123",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix 'fl' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "sod-323f",
+      "possible_base": "sod-323",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix 'f' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "sod-323f_sc-90",
+      "possible_base": "sod-323f",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '_sc-90' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "sod-523-2p",
+      "possible_base": "sod-523",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '-2p' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "sod-523_sc-79",
+      "possible_base": "sod-523",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '_sc-79' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "sod323_bi",
+      "possible_base": "sod323",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '_bi' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "to-220-3p",
+      "possible_base": "to-220",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '-3p' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "to-220-7p",
+      "possible_base": "to-220",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '-7p' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "to-247-2",
+      "possible_base": "to-247",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '-2' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "to-252-2l",
+      "possible_base": "to-252",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '-2l' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "to-263-5",
+      "possible_base": "to-263",
+      "kind": "LITERAL_EXISTING_CASE_PARENT_PLUS_EXPLICIT_SUFFIX",
+      "evidence": "Parent is an actual full public stem; suffix '-5' may be functional and is never silently dropped.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "so8",
+      "possible_base": "sop-8-150mil",
+      "kind": "EXPLICIT_INDUSTRY_OR_SAME_LITERAL_DIMENSION_CANDIDATE",
+      "evidence": "Spelling/family/dimension suggests comparison only. Includes deliberately different pin-map/extra-pad risks; a native mismatch must preserve both definitions.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "so8-25x75",
+      "possible_base": "so8",
+      "kind": "EXPLICIT_INDUSTRY_OR_SAME_LITERAL_DIMENSION_CANDIDATE",
+      "evidence": "Spelling/family/dimension suggests comparison only. Includes deliberately different pin-map/extra-pad risks; a native mismatch must preserve both definitions.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "so-8w",
+      "possible_base": "so8",
+      "kind": "EXPLICIT_INDUSTRY_OR_SAME_LITERAL_DIMENSION_CANDIDATE",
+      "evidence": "Spelling/family/dimension suggests comparison only. Includes deliberately different pin-map/extra-pad risks; a native mismatch must preserve both definitions.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "do-214aa_smb",
+      "possible_base": "smb",
+      "kind": "EXPLICIT_INDUSTRY_OR_SAME_LITERAL_DIMENSION_CANDIDATE",
+      "evidence": "Spelling/family/dimension suggests comparison only. Includes deliberately different pin-map/extra-pad risks; a native mismatch must preserve both definitions.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "do-214ac_sma",
+      "possible_base": "do-214ac",
+      "kind": "EXPLICIT_INDUSTRY_OR_SAME_LITERAL_DIMENSION_CANDIDATE",
+      "evidence": "Spelling/family/dimension suggests comparison only. Includes deliberately different pin-map/extra-pad risks; a native mismatch must preserve both definitions.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "sod-323f_sc-90",
+      "possible_base": "sod-323f",
+      "kind": "EXPLICIT_INDUSTRY_OR_SAME_LITERAL_DIMENSION_CANDIDATE",
+      "evidence": "Spelling/family/dimension suggests comparison only. Includes deliberately different pin-map/extra-pad risks; a native mismatch must preserve both definitions.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "sod-523_sc-79",
+      "possible_base": "sod-523",
+      "kind": "EXPLICIT_INDUSTRY_OR_SAME_LITERAL_DIMENSION_CANDIDATE",
+      "evidence": "Spelling/family/dimension suggests comparison only. Includes deliberately different pin-map/extra-pad risks; a native mismatch must preserve both definitions.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "osc3225",
+      "possible_base": "osc_smd_3225",
+      "kind": "EXPLICIT_INDUSTRY_OR_SAME_LITERAL_DIMENSION_CANDIDATE",
+      "evidence": "Spelling/family/dimension suggests comparison only. Includes deliberately different pin-map/extra-pad risks; a native mismatch must preserve both definitions.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "xtal3225",
+      "possible_base": "xtal_32x25_4p",
+      "kind": "EXPLICIT_INDUSTRY_OR_SAME_LITERAL_DIMENSION_CANDIDATE",
+      "evidence": "Spelling/family/dimension suggests comparison only. Includes deliberately different pin-map/extra-pad risks; a native mismatch must preserve both definitions.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "xtal-smd_2f_3_2x2_5",
+      "possible_base": "xtal-smd_3_2x2_5",
+      "kind": "EXPLICIT_INDUSTRY_OR_SAME_LITERAL_DIMENSION_CANDIDATE",
+      "evidence": "Spelling/family/dimension suggests comparison only. Includes deliberately different pin-map/extra-pad risks; a native mismatch must preserve both definitions.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "son-8_5x6m-9pin",
+      "possible_base": "son-8p-5x6_9ps",
+      "kind": "EXPLICIT_INDUSTRY_OR_SAME_LITERAL_DIMENSION_CANDIDATE",
+      "evidence": "Spelling/family/dimension suggests comparison only. Includes deliberately different pin-map/extra-pad risks; a native mismatch must preserve both definitions.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "son-8p-5x6mm",
+      "possible_base": "son-8p-5x6_9ps",
+      "kind": "EXPLICIT_INDUSTRY_OR_SAME_LITERAL_DIMENSION_CANDIDATE",
+      "evidence": "Spelling/family/dimension suggests comparison only. Includes deliberately different pin-map/extra-pad risks; a native mismatch must preserve both definitions.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "to-92-1e2b3c",
+      "possible_base": "to-92-3",
+      "kind": "EXPLICIT_INDUSTRY_OR_SAME_LITERAL_DIMENSION_CANDIDATE",
+      "evidence": "Spelling/family/dimension suggests comparison only. Includes deliberately different pin-map/extra-pad risks; a native mismatch must preserve both definitions.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    },
+    {
+      "candidate": "to-92-1e2c3b",
+      "possible_base": "to-92-3",
+      "kind": "EXPLICIT_INDUSTRY_OR_SAME_LITERAL_DIMENSION_CANDIDATE",
+      "evidence": "Spelling/family/dimension suggests comparison only. Includes deliberately different pin-map/extra-pad risks; a native mismatch must preserve both definitions.",
+      "automatic_equivalence": false,
+      "required_gate": "Actual numbered-pin/complete geometry + PAD native manufacturing identity; topology/functional differences are preserved."
+    }
+  ],
+  "excluded_prior_native_sha256_count": 1205,
+  "current81_explicit_names": [
+    "sop-8-e-150mil",
+    "sop-8-e",
+    "sop-8e-spad",
+    "ot-23-3_l2_9-w1_3-p1_90-ls2_1",
+    "sot23-akak",
+    "smd_bd5_6-d3_6",
+    "smd_bd5_6-d3_6_1",
+    "smd_bd5_6-d3_6_2",
+    "qfn32_4x4",
+    "qfn32_4x4_minpad",
+    "qfn32_5x5",
+    "qfn32_5x5mm_ep3p3mm",
+    "rtl8111g_qfn32"
+  ]
+}

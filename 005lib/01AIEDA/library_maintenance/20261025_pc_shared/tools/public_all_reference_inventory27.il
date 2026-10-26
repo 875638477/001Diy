@@ -1,0 +1,15 @@
+; Complete read-only reference inventory. No CMXL initialization, setter or save.
+procedure(pub27AllReferenceInventory(dir)
+ let((d f g h c s z comps syms defs unused)
+  d=axlDBGetDesign() axlDBRefreshId(d) comps=0 syms=0 defs=0 unused=0
+  f=outfile(strcat(dir "/ALL_COMPONENT_PACKAGE_REFERENCES.tsv"))
+  fprintf(f "refdes\tdevice_type\tpackage\tplaced\n")
+  foreach(c d->components fprintf(f "%L\t%L\t%L\t%L\n" c->name c->deviceType c->package if(c->symbol t nil)) comps=comps+1) close(f)
+  g=outfile(strcat(dir "/ALL_SYMBOL_NAME_DEFINITION_REFERENCES.tsv"))
+  fprintf(g "symbol_name\tdefinition_name\trefdes\tobjType\n")
+  foreach(s d->symbols fprintf(g "%L\t%L\t%L\t%L\n" s->name s->definition->name if(s->component s->component->name nil) s->objType) syms=syms+1) close(g)
+  h=outfile(strcat(dir "/ALL_PACKAGE_DEFINITIONS.tsv"))
+  fprintf(h "name\tobjType\tusedCount\n")
+  foreach(z d->symdefs fprintf(h "%L\t%L\t%L\n" z->name z->objType length(z->instances)) defs=defs+1 when(null(z->instances) unused=unused+1)) close(h)
+  f=outfile(strcat(dir "/ALL_NATIVE_REFERENCE_INVENTORY_COMPLETE.txt"))
+  fprintf(f "COMPLETE_ALL_COMPONENTS_INCLUDING_UNPLACED_ALL_SYMBOLS_ALL_SAVED_SYMDEFS\nCOMPONENTS=%d\nSYMBOLS=%d\nDEFINITIONS=%d\nUNUSED_DEFINITIONS=%d\nREAD_ONLY_NO_CMXL_NO_DRC_NO_CREATE_NO_SAVE\n" comps syms defs unused) close(f) t))
