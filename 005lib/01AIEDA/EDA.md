@@ -1,6 +1,11 @@
 # AI 辅助 EDA 设计协作记录
 
+**四层电机板新增规范（2026-10-31）：** [分层、TOP 电机铜与 Kelvin 走线](learning/notes/pcb_layer_motor_routing_rules.md)，规定 L2 地、L3 电源主分配、BOTTOM 主信号；联合迁层后复核实际功率铜、孔间铜桥、敏感信号及原生连通/DRC。新规格归本学习库，按本次明确文件清单同步至既有 001Diy/005lib/01AIEDA；工程数据留工程根。
+
 > 2026-10-30 阻容排版规范：[水平放置、位号左侧、Value右侧及连接验收](learning/notes/capture_rc_horizontal_ref_value_layout_spec.md)。文字按实际空间避让网络和导线，不统一套用上方两格偏移。
+
+**PCB 信号与过孔规则（用户指定）：** [信号转角与过孔间内层铜皮](learning/notes/pcb_trace_angles_via_copper_continuity.md)：信号优先圆弧，折线内角严格大于 130°；过孔应保证所需内层连续铜皮，按实际避让及板厂能力检查。
+
 
 > 现行库保留规则（2026-10-26）：常规0402/0603/0805等与`_pc`主板专用库并存，不再按_pc替代关系删除通用库。详见[常规与_pc并存规则](learning/notes/common_and_pc_library_retention.md)。
 
