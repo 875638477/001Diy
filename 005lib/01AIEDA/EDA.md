@@ -1,5 +1,7 @@
 # AI 辅助 EDA 设计协作记录
 
+> 2026-10-30 阻容排版规范：[水平放置、位号左侧、Value右侧及连接验收](learning/notes/capture_rc_horizontal_ref_value_layout_spec.md)。文字按实际空间避让网络和导线，不统一套用上方两格偏移。
+
 > 现行库保留规则（2026-10-26）：常规0402/0603/0805等与`_pc`主板专用库并存，不再按_pc替代关系删除通用库。详见[常规与_pc并存规则](learning/notes/common_and_pc_library_retention.md)。
 
 
