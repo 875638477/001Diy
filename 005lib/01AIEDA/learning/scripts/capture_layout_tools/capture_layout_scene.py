@@ -52,6 +52,11 @@ class Scene:
     key=(val(package,'Defn','name'),val(package,'Defn','sourceLibName').replace('/','\\').casefold(),val(part,'Defn','CellName')+val(view,'Defn','suffix'))
     self.lib_by_source.setdefault(key,[]).append((package,part,view))
   self.sym={(x.tag,d(x).get('name')):x for x in self.root.find('Cache') if x.tag in ('OffPageSymbol','GlobalSymbol','PortSymbol')}
+  self.sym_by_source={}
+  for symbol in self.root.find('Cache'):
+   if symbol.tag not in ('OffPageSymbol','GlobalSymbol','PortSymbol'):continue
+   key=(symbol.tag,d(symbol).get('name',''),d(symbol).get('sourceLibName','').replace('/','\\').casefold())
+   self.sym_by_source.setdefault(key,[]).append(symbol)
   self.defaultfonts={val(x,'Defn','index'):font(x,'Defn') for x in self.root.findall('./DefaultValues/DefaultFont')}
   if a.font_cache and a.font_cache.exists():
    for line in a.font_cache.read_text(encoding='utf8').splitlines():
@@ -63,6 +68,12 @@ class Scene:
   key=(owner.get('pkgName',''),owner.get('libName','').replace('/','\\').casefold(),val(inst,'GraphicName/Defn','name'))
   matches=self.lib_by_source.get(key,[])
   if len(matches)!=1:raise ValueError('Missing or ambiguous exact cache source identity: '+str(key))
+  return matches[0]
+ def cache_symbol(self,kind,inst):
+  owner=d(inst)
+  key=(kind,owner.get('symbolName',''),owner.get('libName','').replace('/','\\').casefold())
+  matches=self.sym_by_source.get(key,[])
+  if len(matches)!=1:raise ValueError('Missing or ambiguous net-symbol source identity: '+str(key))
   return matches[0]
  def metric(self,txt,ft):
   k=(txt,json.dumps(ft,sort_keys=True))
@@ -152,7 +163,7 @@ class Scene:
          t=self.text[-1];o=transform(0,0,q);ex=transform(1,0,q);ey=transform(0,1,q);matrix=[ex[0]-o[0],ey[0]-o[0],ex[1]-o[1],ey[1]-o[1],o[0],o[1]]
          t['geometry']=affine_transform(t['geometry'],matrix);t['anchor']=transform(*anchor,q);t['rotation']=(localrot+int(q.get('rotation',0)))%4;t['bbox']=list(t['geometry'].bounds);t['preview_owner_mirror']=int(q.get('mirror',0))
     else:
-     st='OffPageSymbol' if inst.tag=='OffPageConnector' else 'GlobalSymbol';sym=self.sym.get((st,q.get('symbolName')))
+     st='OffPageSymbol' if inst.tag=='OffPageConnector' else 'GlobalSymbol';sym=self.cache_symbol(st,inst)
      if sym is not None:
       glyphowner=dict(q);nativehot=self.netsymbols.get((page,iid));sp=sym.find('SymbolPinScalar')
       if nativehot and sp is not None:
