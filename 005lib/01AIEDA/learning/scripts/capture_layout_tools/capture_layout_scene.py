@@ -44,6 +44,13 @@ class Scene:
   if frame_path is None and (a.native/'part_frames.tsv').exists():frame_path=a.native/'part_frames.tsv'
   self.part_frames=read_frames(frame_path)
   self.lib={val(lp,'Defn','CellName')+val(lp.find('NormalView'),'Defn','suffix'):(p,lp,lp.find('NormalView')) for p in self.root.findall('./Cache/Package') for lp in p.findall('LibPart')}
+  self.lib_by_source={}
+  for package in self.root.findall('./Cache/Package'):
+   for part in package.findall('LibPart'):
+    view=part.find('NormalView')
+    if view is None:continue
+    key=(val(package,'Defn','name'),val(package,'Defn','sourceLibName').replace('/','\\').casefold(),val(part,'Defn','CellName')+val(view,'Defn','suffix'))
+    self.lib_by_source.setdefault(key,[]).append((package,part,view))
   self.sym={(x.tag,d(x).get('name')):x for x in self.root.find('Cache') if x.tag in ('OffPageSymbol','GlobalSymbol','PortSymbol')}
   self.defaultfonts={val(x,'Defn','index'):font(x,'Defn') for x in self.root.findall('./DefaultValues/DefaultFont')}
   if a.font_cache and a.font_cache.exists():
@@ -51,6 +58,12 @@ class Scene:
     c=json.loads(line);self.metrics[tuple(c['key'])]=(c['metric'],from_wkb(bytes.fromhex(c['ink_wkb_hex'])))
  def part_owner(self,page,inst):
   return bind_part(d(inst),page,self.part_frames)
+ def cachepart(self,inst):
+  owner=d(inst)
+  key=(owner.get('pkgName',''),owner.get('libName','').replace('/','\\').casefold(),val(inst,'GraphicName/Defn','name'))
+  matches=self.lib_by_source.get(key,[])
+  if len(matches)!=1:raise ValueError('Missing or ambiguous exact cache source identity: '+str(key))
+  return matches[0]
  def metric(self,txt,ft):
   k=(txt,json.dumps(ft,sort_keys=True))
   if k not in self.metrics:
@@ -109,7 +122,7 @@ class Scene:
     if inst.tag=='GraphicCommentTextInst':self.addtext(page,'comment',iid,q.get('name',''),font(inst,'TextFont/Defn'),xy,int(q.get('textJustification',0)),int(q.get('rotation',0)));continue
     if inst.tag=='PartInst':
      q=self.part_owner(page,inst)
-     lib=self.lib.get(val(inst,'GraphicName/Defn','name'))
+     lib=self.cachepart(inst)
      if lib:
       for j,g in enumerate(lib[2]):self.graphic(page,'body_stroke',iid+':g'+str(j),g,q,ref,iid)
       numbers={d(z).get('position'):d(z).get('number') for z in lib[1].findall('PhysicalPart/PinNumber')}
