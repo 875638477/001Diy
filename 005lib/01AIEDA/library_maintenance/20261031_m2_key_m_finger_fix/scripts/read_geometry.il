@@ -1,0 +1,95 @@
+
+procedure(hcCreate(base out target variant)
+ let((f style p pintext result line input cases bound layer x)
+  unless(equal(axlCurrentDesign() target) error("Wrong task drawing\n"))
+  unless(equal(axlDesignType(t) "PACKAGE") error("Wrong design type\n"))
+  axlDBChangeDesignUnits("millimeters" 3)
+  unless(axlDBChangeDesignExtents(list(-50:-50 50:50)) error("Extents failed\n"))
+  axlSetVariable("padpath" list(strcat(base "/library")))
+  axlSetVariable("psmpath" list(strcat(base "/library")))
+  f=outfile(strcat(out "/create.txt"))
+  fprintf(f "HC_CREATE START\n")
+  style=make_axlTextOrientation(?textBlock "2" ?rotation 0 ?mirrored nil ?justify "center")
+  input=infile(strcat(base "/scripts/pins" variant ".il"))
+  while(gets(line input)
+   cases=evalstring(line)
+   p=axlLoadPadstack(car(cases))
+   unless(p error("Pad load failed\n"))
+   pintext=if(caddr(cases) then make_axlPinText(?number caddr(cases) ?offset 0:0 ?text style) else nil)
+   result=axlDBCreatePin(p cadr(cases) pintext 0.0)
+   unless(result error("Pin create failed\n"))
+   fprintf(f "PIN %L %L mechanical=%L\n" car(result)->number car(result)->xy car(result)->isMech)
+  )
+  close(input)
+  unless(axlDBCreateLine(list(-10.925:-2.85 10.925:-2.85 10.925:2.85 -10.925:2.85 -10.925:-2.85) 0.05 "PACKAGE GEOMETRY/ASSEMBLY_TOP" nil nil) error("Assembly failed\n"))
+  ; Side silk and short end strokes avoid every solder-mask opening.
+  foreach(x list(-11.125 11.125)
+   unless(axlDBCreateLine(list(x:-3.40 x:3.40) 0.12 "PACKAGE GEOMETRY/SILKSCREEN_TOP" nil nil) error("Side silk failed\n")))
+  unless(axlDBCreateLine(list(-11.125:3.40 -9.85:3.40) 0.12 "PACKAGE GEOMETRY/SILKSCREEN_TOP" nil nil) error("Pin1 silk failed\n"))
+  unless(axlDBCreateLine(list(-9.50:4.10 -9.25:3.90 -9.00:4.10) 0.10 "PACKAGE GEOMETRY/SILKSCREEN_TOP" nil nil) error("Pin1 marker failed\n"))
+  ; M-key slot center is x=6.125 mm (vendor page 1).
+  unless(axlDBCreateLine(list(5.575:-0.75 5.575:0.75 6.675:0.75 6.675:-0.75 5.575:-0.75) 0.05 "PACKAGE GEOMETRY/ASSEMBLY_TOP" nil nil) error("Key reference failed\n"))
+  result=axlDBCreateRectangle(list(-11.325:-4.03 11.325:4.03) t "PACKAGE GEOMETRY/PLACE_BOUND_TOP" nil nil)
+  unless(result error("Place bound failed\n"))
+  bound=car(result)
+  unless(axlDBAddProp(list(bound) list("PACKAGE_HEIGHT_MAX" "5.55 MM")) error("Height failed\n"))
+  ; Actual NPTHs already block drilling; explicit keepout includes 0.20 mm radial
+  ; task clearance, recorded as an engineering choice, not a vendor requirement.
+  unless(axlDBCreateRectangle(list(-10.75:-0.75 -9.25:0.75) t "ROUTE KEEPOUT/ALL" nil nil) error("Left hole keepout failed\n"))
+  unless(axlDBCreateRectangle(list(9.0:-1.0 11.0:1.0) t "ROUTE KEEPOUT/ALL" nil nil) error("Right hole keepout failed\n"))
+  foreach(layer list("REF DES/SILKSCREEN_TOP" "REF DES/ASSEMBLY_TOP")
+   unless(axlDBCreateText("J*" 0:0 style layer nil) error("Reference failed\n")))
+  unless(axlDBCreateText("VALUE" 0:0 style "COMPONENT VALUE/ASSEMBLY_TOP" nil) error("Value failed\n"))
+  unless(axlSaveDesign(?design strcat(base "/library/" target ".dra") ?noMru t ?noConfirm t) error("Save failed\n"))
+  unless(axlCompileSymbol(?symbol strcat(base "/library/" target)) error("Compile failed\n"))
+  fprintf(f "HC_CREATE COMPLETE\n")
+  close(f)
+  t
+ ))
+
+procedure(hcRead(out)
+ let((f pf gf sf pins p ps poly layer sym obj geom pad box x1 y1 x2 y2 segments seg)
+ f=outfile(strcat(out "/summary.txt"))
+ pf=outfile(strcat(out "/pins.tsv"))
+ gf=outfile(strcat(out "/geometry.tsv"))
+ sf=outfile(strcat(out "/symbols.tsv"))
+ unless(f && pf && gf && sf error("Readback output failed\n"))
+ fprintf(f "HC_READ START\ndesign=%L type=%L units=%L drcs=%d drcState=%L\n" axlCurrentDesign() axlDesignType(t) axlDBGetDesignUnits() length(axlDBGetDesign()->drcs) axlDBGetDesign()->drcState)
+ fprintf(pf "number\tpadstack\tx\ty\trelx\trely\trotation\tmirrored\tmechanical\thole_type\tplating\tdrill_x\tdrill_y\tdrill_diameter\tlayer\tfigure\tw\th\tpoly_bbox\tvertices\n")
+ fprintf(gf "type\tlayer\tx1\ty1\tx2\ty2\ttext\tx\ty\trotation\tmirrored\tfilled\tprops\n")
+ fprintf(sf "x\ty\trotation\tmirrored\tname\tpins\n")
+ pins=axlDBGetDesign()->pins
+ foreach(sym axlDBGetDesign()->symbols
+  pins=append(pins sym->pins)
+  fprintf(sf "%L\t%L\t%L\t%L\t%L\t%d\n" car(sym->xy) cadr(sym->xy) sym->rotation sym->isMirrored sym->name length(sym->pins)))
+ foreach(p pins
+  ps=p->definition
+  foreach(layer list("ETCH/TOP" "ETCH/BOTTOM" "PIN/SOLDERMASK_TOP" "PIN/SOLDERMASK_BOTTOM" "PIN/PASTEMASK_TOP" "PIN/PASTEMASK_BOTTOM")
+   pad=axlDBGetPad(p layer "REGULAR")
+   poly=car(axlPolyFromDB(p ?layer layer ?padType 'REGULAR))
+   box=if(pad then pad->bBox else nil)
+   fprintf(pf "%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\n"
+    p->number p->name car(p->xy) cadr(p->xy) car(p->relxy) cadr(p->relxy)
+    p->rotation p->isMirrored p->isMech ps->holeType ps->plating ps->drillSizeWidth ps->drillSizeHeight ps->drillDiameter layer
+    if(pad then pad->figureName else nil)
+    if(box then car(cadr(box))-car(car(box)) else nil)
+    if(box then cadr(cadr(box))-cadr(car(box)) else nil)
+    if(poly then poly->bBox else nil) if(poly then poly->vertices else nil))))
+ geom=axlExtractMap("C:/Program0/Cadence/SPB172/share/pcb/text/views/fgeo_bv.txt" nil)
+ foreach(obj geom
+  box=obj->bBox
+  when(box
+   fprintf(gf "%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\t%L\n"
+    obj->objType obj->layer car(car(box)) cadr(car(box)) car(cadr(box)) cadr(cadr(box))
+    if(equal(obj->objType "text") then obj->text else nil)
+    if(equal(obj->objType "text") then car(obj->xy) else nil)
+    if(equal(obj->objType "text") then cadr(obj->xy) else nil)
+    if(equal(obj->objType "text") then obj->rotation else nil)
+    if(equal(obj->objType "text") then obj->isMirrored else nil)
+    if(equal(obj->objType "shape") then obj->fill else nil)
+    axlDBGetProperties(obj nil))))
+ foreach(obj axlXSectionGet(nil 'all) fprintf(f "STACK %L %L %L\n" obj->name obj->layerType obj->thickness))
+ fprintf(f "PIN_COUNT=%d\nHC_READ COMPLETE\n" length(pins))
+ foreach(obj list(f pf gf sf) close(obj))
+ t
+))

@@ -21,5 +21,3 @@ description: Resume recorded Cadence 17.2 training, migrate the 01AIEDA learning
 技能文件是下一次可读取的操作说明；保存它不等于训练模型权重，也不保证新会话自动加载或获得桌面/许可证连接。
 
 可选--out只新建JSON报告并拒绝覆盖已有文件；不得把报告输出指向EDA、索引、源设计或历史证据。预检退出0只代表学习文件和固定fixture身份，不代表Cadence程序/许可/GUI就绪。
-
-- 阻容排版按[水平方向及位号/Value左右规范](../../notes/capture_rc_horizontal_ref_value_layout_spec.md)：普通阻容尽量1脚左、2脚右，位号左侧、Value右侧；文字避让网络、引脚和导线，必要时协调局部导线调整并原生重开逐脚验收，不固定上方两格。

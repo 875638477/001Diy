@@ -101,7 +101,3 @@ python normalize_rc_values.py --input <工程根>/rc_input.json --output <工程
 5. 独立检查铜、引脚、焊盘、放置、网络连通分区和规则。特定 Value 文本的有界放行不能放宽这些域，也不代表 DRC 或制造已通过。只有精确替换全部已批准文本记录后，剩余完整几何多重集仍相同，才能给出对应的有界几何结论。
 
 本机官方依据可在当前安装的 `doc/algroskill/02dbdesc.html` 中查 Symbol Attributes、Text Attributes、Textblock Parameter Attributes 与 figure bBox 定义；`doc/algroskill/14dsnctl.html` 的 `axlDBGetExtents` 明确支持 TEXT，第二参数 nil 读取完整对象范围。原生逐对象审计结果与案例数据保存在工程目录，学习库仅保留定义和上述方法。
-
-## 阻容方向与文字位置
-
-同时遵守[阻容方向、位号与Value排版规范](capture_rc_horizontal_ref_value_layout_spec.md)：普通阻容尽量1脚左、2脚右，位号靠左、Value靠右，文字根据实际空间避让网络和导线；禁止用固定上方两格替代逐器件布局检查。

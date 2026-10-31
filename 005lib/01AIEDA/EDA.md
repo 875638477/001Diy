@@ -1,5 +1,11 @@
 # AI 辅助 EDA 设计协作记录
 
+**2026-10-31 3D 模型添加与显示闭环：** [完整 STEP Mapping / Save / 3D Canvas 方法](learning/notes/allegro_step_model_mapping_and_3d_canvas.md)。用户已验证：数字键 4 打开映射界面，左下角点 Save，再用数字键 3 查看，真实模型正常；即使程序已写入关联也补做此界面保存。参数和键位按当前环境核对，不把 STEP 导出成功当作 GUI 已验。
+
+**2026-10-31 md2_NGFF_M_SMT 添加 3D：** [模型、备份与验证记录](library_maintenance/20261031_md2_ngff_m_smt_3d/README.md)。按用户改名后的 01Psm_lib 封装添加 PRIMARY STEP，模型位于 01_3d_step_lib；按原厂图建立简化立贴 M.2 M Key 名义外形。原生二维读回不变，PSM 三种姿态及 Allegro 实际 STEP 导出 405 实体通过；不是原厂精细模型或实物插合认证。
+
+**2026-10-31 HYCW19M-05NGFF-530B 立贴 NGFF M Key 建库：** [制作与验证记录](library_maintenance/20261031_hycw19m_ngff_mkey/README.md)。Cadence 17.2 原生 OLB/PAD/DRA/PSM 已生成至 AUTOlib/HYCW19M-05NGFF-530B；用户选定原厂推荐 0.30×1.55 mm 主版本，立创 0.30×1.20 mm 长圆尺寸另作对照。67 个电气接点和 2 个无铜 NPTH、独立重开、六个旋转/镜像实例已验证；GUI 像素、3D 和实物焊接不在本次验收范围。
+
 **四层电机板新增规范（2026-10-31）：** [分层、TOP 电机铜与 Kelvin 走线](learning/notes/pcb_layer_motor_routing_rules.md)，规定 L2 地、L3 电源主分配、BOTTOM 主信号；联合迁层后复核实际功率铜、孔间铜桥、敏感信号及原生连通/DRC。新规格归本学习库，按本次明确文件清单同步至既有 001Diy/005lib/01AIEDA；工程数据留工程根。
 
 > 2026-10-30 阻容排版规范：[水平放置、位号左侧、Value右侧及连接验收](learning/notes/capture_rc_horizontal_ref_value_layout_spec.md)。文字按实际空间避让网络和导线，不统一套用上方两格偏移。
@@ -1762,3 +1768,6 @@ ECO明确只有R19/R20上拉2.2k→3.3k和J13.7/J13.8的PB8/PB9互换，MCU45/46
 仍未完成整板走线：LDO主供电、buck热回路/反馈、USB/ESD、晶振/ADC等在H/I实现；后续所有信号加入后重审参考铜连续性。USB4105装配/板厚、22Ω与90Ω依据、有效电容、两层阻焊桥、热/反灌/起振/ADC及系统ESD/EMI仍为制造或硬件开放项，不据布局学习冻结作生产释放。下一主线第38课；GUI待验不变。
 
 - [公共被动器件后缀合并为唯一 _pc：原生证据、公共模块引用与连接验收](learning/notes/public_passive_suffix_consolidation_pc.md)
+
+
+**2026-10-31 M.2 Key M 金手指修正：** [库修改、备份与对插检查](library_maintenance/20261031_m2_key_m_finger_fix/README.txt)。M_2 KEY M 删除多余 76～80 占位脚，md2_key_m_Finger 保留 67 脚原铜，修正偶数脚阻焊至 Bottom 并清除金手指锡膏；J26 库封装名同步 md2_NGFF_M_SMT。原生库读回和六个旋转/镜像实例通过；工程导入及其数据另存工程根，仍需真实板外形与配插制造检查。
