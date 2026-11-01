@@ -1,5 +1,7 @@
 # AI 辅助 EDA 设计协作记录
 
+**表层铜皮与转角新增规范（2026-11-01）：** [TOP/BOTTOM 优先静态铜、铜皮不留直角](learning/notes/pcb_outer_static_copper_and_corners.md)。铜皮优先圆弧或 135° 倒角，检查实际生成铜的外露轮廓、连接和承流截面；保存后独立重开复核，不以 DRC=0 代替轮廓检查。
+
 **2026-10-31 3D 模型添加与显示闭环：** [完整 STEP Mapping / Save / 3D Canvas 方法](learning/notes/allegro_step_model_mapping_and_3d_canvas.md)。用户已验证：数字键 4 打开映射界面，左下角点 Save，再用数字键 3 查看，真实模型正常；即使程序已写入关联也补做此界面保存。参数和键位按当前环境核对，不把 STEP 导出成功当作 GUI 已验。
 
 **2026-10-31 md2_NGFF_M_SMT 添加 3D：** [模型、备份与验证记录](library_maintenance/20261031_md2_ngff_m_smt_3d/README.md)。按用户改名后的 01Psm_lib 封装添加 PRIMARY STEP，模型位于 01_3d_step_lib；按原厂图建立简化立贴 M.2 M Key 名义外形。原生二维读回不变，PSM 三种姿态及 Allegro 实际 STEP 导出 405 实体通过；不是原厂精细模型或实物插合认证。
