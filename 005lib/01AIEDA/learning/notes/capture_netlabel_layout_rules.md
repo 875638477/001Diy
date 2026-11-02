@@ -1,5 +1,8 @@
 # Capture 网络名称、端口与导线的排版方法
 
+> 统一执行入口：[清晰排版与简洁连接方案](capture_compact_schematic_layout_method.md)；结合本页细则使用。位号左、Value右并同行略偏上，按实际空间避让，不为文字制造长绕线。
+
+
 整理日期：2026-10-23。适用于转换后的整套 Capture 原理图检查。本文保存纯操作方法，不含项目数据、脚本或工程验收结论；所有工作副本、改动清单与证据归 `<工程根>`。
 
 相关入口：[人工转换教程](ad_to_cadence_gui_workflow.md)、[通用转换方法与验收](ad_to_cadence_conversion_workflow.md)、[网表导出与导入排错](capture_allegro_netlist_troubleshooting.md)。
