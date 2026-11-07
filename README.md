@@ -1,20 +1,9 @@
 # 001Diy
-D:\001DIY\005lib\01_3d_step_lib 3D模型
 
-D:\001DIY\005lib\01aeLib 数据库的库
+EDA 库已迁移到独立仓库：**[875638477/005lib](https://github.com/875638477/005lib)**。
 
-D:\001DIY\005lib\01AIEDA 是 ai接管cadence 路径文件
+正式本机库根目录为 `D:\005lib`。新仓库根目录直接包含 9 个 `01*` 库目录，不再套 `005lib/` 子目录。
 
-D:\001DIY\005lib\01brdlib pcb库路径文件
+2026-11-07 至 2026-11-08 完成迁移：新仓库已经通过全部文件清单、Git blob 标识、路径修改哈希和提交历史验证，再从本仓库当前 main 移出库目录。库的历史记录保留在新仓库，原仓库的旧提交也仍可追溯。
 
-D:\001DIY\005lib\01captureLib 原理图库路径
-
-D:\001DIY\005lib\01env  环境变量 快捷方式路径
-
-D:\001DIY\005lib\01Pad_lib 焊盘库路径
-
-D:\001DIY\005lib\01Psm_lib 封装库路径
-
-D:\001DIY\005lib\01script_file 用脚本的路径
-
-以上目录也是本地计算机的目录  目录一定要准确
+迁移前快照：[13f296b 的 005lib 目录](https://github.com/875638477/001Diy/tree/13f296b367587d4c416ca930fa4bb9388d1dcbe3/005lib)。
