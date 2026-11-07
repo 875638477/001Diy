@@ -1772,3 +1772,6 @@ ECO明确只有R19/R20上拉2.2k→3.3k和J13.7/J13.8的PB8/PB9互换，MCU45/46
 2026-11-02 技嘉 Z690I 封装补建：65 个原生封装、22 个异形形状、82 个焊盘已登记到公共库；制造审核限制与验证记录见 library_maintenance/20261102_z690i_native_packages/README.txt。
 
 2026-11-02 技嘉 Z690I 最终核对：103 个 TVW 补建封装、3 个安装焊盘适配版本、3 个编号适配版本归入公共库；网表和 Allegro 导入通过，2114 器件放置参考完成。制造审核限制见 library_maintenance/20261102_z690i_native_packages/README.txt。
+
+
+2026-11-07 强制网络规则：页内网络使用原生 Net Alias，跨页两端使用真实翻页符，禁止文本式 OffPage/Global 代替标签。格式修改后逐针核对分组和网名，新增跨页连接必须同步源页。见 learning/notes/capture_alias_offpage_mandatory.md。
